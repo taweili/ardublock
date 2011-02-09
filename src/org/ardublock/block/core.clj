@@ -1,3 +1,6 @@
-(ns org.ardublock.block.core)
+(ns org.ardublock.block.core (:gen-class))
 
-(edu.mit.blocks.controller.WorkspaceController/main (into-array String ["/org/ardublock/block/lang_def.xml"]))
+(defn -main
+  []
+  (edu.mit.blocks.controller.WorkspaceController/main (into-array String ["/org/ardublock/block/lang_def.xml"])))
+

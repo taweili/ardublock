@@ -3,9 +3,24 @@ ArduBlock
 
 ArduBlock is a Block Programming Language for Arduino.
 
-## Usage
+Installation
+----
 
-## License
+The ArduBlock is developed using Java and [Clojure](http://clojure.org/) and use [Leiningen](https://github.com/technomancy/leiningen) to manage. Install Leiningen first. 
+
+	$ lein deps # to install all the dependencies jars
+
+Usage
+----
+
+	$ lein repl
+	REPL started; server listening on localhost:43247.
+	org.ardublock.block.core=> (edu.mit.blocks.controller.WorkspaceController/main (into-array String ["./resources/org/ardublock/block/lang_def.xml"]))
+
+The Visual Block environment should show up. Happy Hacking! ;) 
+
+License
+----
 
 Copyright (C) 2011 David Li
 
