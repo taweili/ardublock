@@ -13,9 +13,7 @@ The ArduBlock is developed using Java and [Clojure](http://clojure.org/) and use
 Usage
 ----
 
-	$ lein repl
-	REPL started; server listening on localhost:43247.
-	org.ardublock.block.core=> (edu.mit.blocks.controller.WorkspaceController/main (into-array String ["./resources/org/ardublock/block/lang_def.xml"]))
+	$ lein run
 
 The Visual Block environment should show up. Happy Hacking! ;) 
 
