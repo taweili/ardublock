@@ -538,7 +538,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 				<BlockGenusMember>servo</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="255 255 0" name="logic" type="factory">
+			<BlockDrawer button-color="255 255 0" name="Logic" type="factory">
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
@@ -546,7 +546,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="255 125 0" name="number" type="factory">
+			<BlockDrawer button-color="255 125 0" name="Number/Constants" type="factory">
 				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
