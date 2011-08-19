@@ -25,7 +25,7 @@ The Visual Block environment should show up. Happy Hacking! ;)
 License
 ----
 
-Copyright (C) 2011 David Li and He Qicheng
+Copyright (C) 2011 David Li and He Qichen
 
 This file is part of ArduBlock.
 
