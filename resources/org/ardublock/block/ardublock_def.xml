@@ -595,7 +595,7 @@ BlockGenuses are first loaded.
 	
 	<BreedShapeMappings>
 		<BtoSMapping>
-			<BreedName>Turtles</BreedName>
+			<BreedName>Ardublock</BreedName>
 			<BreedShape>animals/turtle-default</BreedShape>
 		</BtoSMapping>
 	</BreedShapeMappings>

@@ -5,15 +5,18 @@ ArduBlock is a Block Programming Language for Arduino.
 
 Installation
 ----
+The project is managed by Maven.
 
-The ArduBlock is developed using Java and [Clojure](http://clojure.org/) and use [Leiningen](https://github.com/technomancy/leiningen) to manage. Install Leiningen first. 
-
-	$ lein deps # to install all the dependencies jars
+	$ mvn clean package
 
 Usage
 ----
 
-	$ lein run
+	$ mvn exec:java -Dexec.mainClass="com.ardublock.Main"
+
+Development
+----
+Change the resources/org/ardublock/block/ardublock_def.xml to add new blocks to ArduBlock
 
 The Visual Block environment should show up. Happy Hacking! ;) 
 
