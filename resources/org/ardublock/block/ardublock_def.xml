@@ -85,6 +85,28 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="digital-var" kind="data" initlabel="digital var name" editable-label="yes" is-label-value="yes" color="255 0 255">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="number-var" kind="data" initlabel="number var name" editable-label="yes" is-label-value="yes" color="255 0 255">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="pin-read-digital" kind="data" color="255 0 0" initlabel="digital pin">
 			<description>Read digital value from pin</description>
 			<BlockConnectors>
@@ -117,6 +139,22 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="set-digital-var" kind="command" color="255 0 0" initlabel="set digital var">
+			<description>write digital to pin</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="var"></BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="set-number-var" kind="command" color="255 0 0" initlabel="set number var">
+			<description>write digital to pin</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="var"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+			
 		<BlockGenus name="pin-write-analog" kind="command" color="255 0 0" initlabel="set analog pin">
 			<description>write analog to pin</description>
 			<BlockConnectors>
@@ -521,15 +559,20 @@ BlockGenuses are first loaded.
 	<BlockDrawerSets>	
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no" >
 			
-			<BlockDrawer name="Arduino" type="factory" is-open="yes" button-color="255 255 255">
+			<BlockDrawer name="Arduino" type="factory" is-open="yes" button-color="29 152 155">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>number-variable-setter</BlockGenusMember>
 				<BlockGenusMember>number-variable-getter</BlockGenusMember>
 				<BlockGenusMember>variable-name</BlockGenusMember>
-				<!-- 
+				<BlockGenusMember>digital-var</BlockGenusMember>
+				<BlockGenusMember>number-var</BlockGenusMember>
+				<BlockGenusMember>set-digital-var</BlockGenusMember>
+				<BlockGenusMember>set-number-var</BlockGenusMember>
+				
+<!--
 				<BlockGenusMember>set-variable</BlockGenusMember>
 				<BlockGenusMember>variable</BlockGenusMember>
-				 -->
+-->				
 			</BlockDrawer>
 			<BlockDrawer button-color="173 0 0" name="Pin" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
