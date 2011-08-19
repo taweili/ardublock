@@ -2,12 +2,15 @@
 <!DOCTYPE BlockLangDef SYSTEM "lang_def.dtd">
 
 <!-- 
+
+
 This describes every BlockGenus, BlockDrawer, BlockFamilies in Starlogo-TNG.
 
 Note: For BlockGenus, if genus A relies on another genus B, that genus B must be 
 specified in the xml file before genus A is specified.  We impose this requirement so 
 that sanity checks can be made regarding the validity of a default argument when the
 BlockGenuses are first loaded. 
+
 -->
 
 <BlockLangDef>
@@ -28,12 +31,12 @@ BlockGenuses are first loaded.
 		<BlockConnectorShape shape-type="proc-param" shape-number="13"></BlockConnectorShape>
 		<BlockConnectorShape shape-type="cmd" shape-number="14"></BlockConnectorShape>
 	</BlockConnectorShapes>
-
+	
 	<BlockGenuses>
 		<!-- Stub Genuses 
-		Do not remove unless you would like to remove the stub feature all together
+			Do not remove unless you would like to remove the stub feature all together
 		-->
-
+		
 		<BlockGenus name="getter" kind="data" initlabel="" color="0 0 0" >
 			<description>
 				<text>
@@ -47,7 +50,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>	
 		</BlockGenus>
-
+		
 		<BlockGenus name="setter" kind="command" initlabel="" color="0 0 0" label-prefix="set ">
 			<description>
 				<text>
@@ -58,7 +61,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-kind="socket" connector-type="poly" position-type="single"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
 		<BlockGenus name="caller" kind="command" initlabel="" color="0 0 0">
 			<description>
 				<text>
@@ -77,7 +80,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-kind="socket" connector-type="number" position-type="single"></BlockConnector>
 			</BlockConnectors>		
 		</BlockGenus>
-
+		
 		<BlockGenus name="agent" kind="function" initlabel="" color="0 0 0" label-suffix=" of" is-starter="yes" is-terminator="yes">
 			<description>
 				<text>
@@ -85,16 +88,16 @@ BlockGenuses are first loaded.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="poly" position-type="single"></BlockConnector>
+			    <BlockConnector connector-kind="plug" connector-type="poly" position-type="single"></BlockConnector>
 				<BlockConnector label="ID" connector-kind="socket" connector-type="number" position-type="single"></BlockConnector>
 			</BlockConnectors>	
 			<LangSpecProperties>
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>			
 		</BlockGenus>
-
+		
 		<!-- End of Stub Genuses -->
-
+	
 		<BlockGenus name="number" kind="data" initlabel="1" editable-label="yes" is-label-value="yes" color="255 0 255">
 			<description>
 				<text>
@@ -109,7 +112,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="string" kind="data" initlabel="abc" editable-label="yes" is-label-value="yes" color="255 0 255">
 			<description>
 				<text>
@@ -124,7 +127,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="true" kind="data" initlabel="true" color="255 0 255">
 			<description>
 				<text>
@@ -139,7 +142,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="false" kind="data" initlabel="false" color="255 0 255">
 			<description>
 				<text>
@@ -154,9 +157,9 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<!-- COLORS -->
-
+		
 		<BlockGenus name="random-color" kind="function" initlabel="random color" color="27 180 225">
 			<description>
 				<text>
@@ -170,7 +173,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="random-color"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="red" kind="data" initlabel="red" color="255 0 0">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -180,7 +183,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="15"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="black" kind="data" initlabel="black" color="0 0 0">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -190,7 +193,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="0"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="white" kind="data" initlabel="white" color="255 255 255">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -200,7 +203,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="9"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="gray" kind="data" initlabel="gray" color="128 128 128">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -210,7 +213,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="5"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="orange" kind="data" initlabel="orange" color="255 165 0">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -220,7 +223,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="25"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="brown" kind="data" initlabel="brown" color="165 42 42">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -230,7 +233,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="35"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="yellow" kind="data" initlabel="yellow" color="255 255 0">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -240,7 +243,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="45"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="green" kind="data" initlabel="green" color="50 205 50">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -250,7 +253,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="55"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="lime" kind="data" initlabel="lime" color="0 255 0">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -260,7 +263,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="65"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="turquoise" kind="data" initlabel="turquoise" color="64 224 208">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -270,7 +273,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="75"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="cyan" kind="data" initlabel="cyan" color="0 255 255">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -280,7 +283,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="85"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="purple" kind="data" initlabel="purple" color="128 0 128">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -290,7 +293,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="115"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="magenta" kind="data" initlabel="magenta" color="255 0 255">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -300,7 +303,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="125"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="sky" kind="data" initlabel="sky" color="135 206 255">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -310,7 +313,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="95"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="blue" kind="data" initlabel="blue" color="0 0 255">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -320,7 +323,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="105"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="pink" kind="data" initlabel="pink" color="255 192 203">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -330,9 +333,9 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="135"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<!-- MOVEMENT -->
-
+	
 		<BlockGenus name="fd" kind="command" initlabel="forward" color="255 0 0">
 			<description>
 				<text>
@@ -352,8 +355,8 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
-		<BlockGenus name="bk" kind="command" initlabel="back" color="255 0 0">
+		
+	    <BlockGenus name="bk" kind="command" initlabel="back" color="255 0 0">
 			<description>
 				<text>
 					Agents moves <arg n="1"/> steps backward.
@@ -372,7 +375,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="lt" kind="command" initlabel="left" color="255 0 0">
 			<description>
 				<text>
@@ -392,7 +395,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="rt" kind="command" initlabel="right" color="255 0 0">
 			<description>
 				<text>
@@ -412,7 +415,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="up" kind="command" initlabel="up" color="255 0 0">
 			<description>
 				<text>
@@ -432,7 +435,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="down" kind="command" initlabel="down" color="255 0 0">
 			<description>
 				<text>
@@ -452,7 +455,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="setxy" kind="command" initlabel="set xy" color="255 0 0">
 			<description>
 				<text>Sets the x and y coordinates (a.k.a. position) of an agent</text>
@@ -470,9 +473,9 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<!-- LOGIC -->
-
+		
 		<BlockGenus name="if" kind="command" initlabel="if" color="255 80 0">
 			<description>
 				<text>
@@ -481,7 +484,7 @@ BlockGenuses are first loaded.
 				<arg-description n="1" name="test">
 					The condition being tested.
 				</arg-description>
-
+				
 				<arg-description n="2" name="then">
 					The set of instructions that is done when the condition is true.
 				</arg-description>
@@ -494,7 +497,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="if"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="ifelse" kind="command" initlabel="ifelse" color="255 80 0">
 			<description>
 				<text>
@@ -503,11 +506,11 @@ BlockGenuses are first loaded.
 				<arg-description n="1" name="test">
 					The condition being tested.
 				</arg-description>
-
+				
 				<arg-description n="2" name="then">
 					The set of instructions that is done when the condition is true.
 				</arg-description>
-
+				
 				<arg-description n="3" name="else">
 					The set of instructions that is done when the condition is false.
 				</arg-description>
@@ -521,7 +524,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="ifelse"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="repeat" kind="command" initlabel="repeat" color="255 80 0">
 			<description>
 				<text>
@@ -530,7 +533,7 @@ BlockGenuses are first loaded.
 				<arg-description n="1" name="times">
 					The number of times to repeat the command.
 				</arg-description>
-
+				
 				<arg-description n="2" name="do">
 					The commands to do.
 				</arg-description>
@@ -543,8 +546,8 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="repeat"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
-
+			
+			
 		<BlockGenus name="or" kind="function" initlabel="or" color="15 20 220">
 			<description>
 				<text>
@@ -567,7 +570,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="and" kind="function" initlabel="and" color="15 20 220">
 			<description>
 				<text>
@@ -576,7 +579,7 @@ BlockGenuses are first loaded.
 				<arg-description n="2" doc-name="condition 1">
 					The first condition that must be true.
 				</arg-description>
-				<arg-description n="3" doc-name="condition 2">
+					<arg-description n="3" doc-name="condition 2">
 					The second condition that must be true.
 				</arg-description>
 			</description>
@@ -590,7 +593,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="not" kind="function" initlabel="not" color="15 20 220">
 			<description>
 				<text>
@@ -610,7 +613,7 @@ BlockGenuses are first loaded.
 			</LangSpecProperties>
 		</BlockGenus>
 
-
+		
 		<BlockGenus name="count-everyone-with" kind="function" initlabel="count everyone with" color="255 0 255">
 			<description>
 				<text>
@@ -632,7 +635,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="ask-arg" value="0"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="count-everyone" kind="function" initlabel="count everyone" color="255 0 255">
 			<description>
 				<text>
@@ -648,9 +651,9 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<!-- String Functions or Commands -->
-
+		
 		<BlockGenus name="say" kind="command" initlabel="say" color="45 201 255">
 			<description>
 				<text>
@@ -665,7 +668,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="set-status" kind="command" initlabel="set status" color="45 201 255">
 			<description>
 				<text>
@@ -679,7 +682,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="set-status"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="play" kind="command" initlabel="play sound" color="150 255 107">
 			<description>
 				<text>
@@ -696,7 +699,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="play"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>	
-
+		
 		<BlockGenus name="to-string" kind="function" initlabel="to text" color="45 201 255">
 			<description>
 				<text>
@@ -712,7 +715,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>	
-
+		
 		<BlockGenus name="string-append" kind="function" initlabel="+" color="45 201 255">
 			<description>
 				<text>
@@ -735,10 +738,10 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>	
-
-
+		
+	
 		<!-- MATH -->
-
+		
 		<BlockGenus name="pi" kind="function" initlabel="π" color="255 0 255">
 			<description>
 				<text>
@@ -753,7 +756,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="e" kind="function" initlabel="e" color="255 0 255">
 			<description>
 				<text>
@@ -768,7 +771,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="sum" kind="function" initlabel="+" color="15 20 220">
 			<description>
 				<text>
@@ -789,7 +792,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="difference" kind="function" initlabel="-" color="15 20 220">
 			<description>
 				<text>
@@ -810,7 +813,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="product" kind="function" initlabel="x" color="15 20 220">
 			<description>
 				<text>
@@ -831,7 +834,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="quotient" kind="function" initlabel="÷" color="15 20 220">
 			<description>
 				<text>
@@ -852,7 +855,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="equals" kind="function" initlabel="=" color="15 20 220">
 			<description>
 				<text>
@@ -873,17 +876,17 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="not-equals" kind="function" initlabel="≠" color="15 20 220">
 			<description>
 				<text>
 					Determines if two quantities are different (<arg n="1"/> != <arg n="2"/>).
 				</text>
 				<arg-description n="1" doc-name="left value">
-					The first thing to compare.
+				The first thing to compare.
 				</arg-description>
 				<arg-description n="2" doc-name="right value">
-					The second thing to compare.
+				The second thing to compare.
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -896,17 +899,17 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="lessthan" kind="function" initlabel="&lt;" color="15 20 220">
 			<description>
 				<text>
 					Reports whether the <arg n="1"/> is less than the <arg n="2"/>.
 				</text>
 				<arg-description n="1" doc-name="left value">
-					The first thing to compare.
+				The first thing to compare.
 				</arg-description>
 				<arg-description n="2" doc-name="right value">
-					The second thing to compare.
+				The second thing to compare.
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -919,17 +922,17 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="lessthanorequalto" kind="function" initlabel="≤" color="15 20 220">
 			<description>
 				<text>
 					Reports whether the <arg n="1"/> is less than or equal to the <arg n="2"/>.
 				</text>
 				<arg-description n="1" doc-name="left value">
-					The first thing to compare.
+				The first thing to compare.
 				</arg-description>
 				<arg-description n="2" doc-name="right value">
-					The second thing to compare.
+				The second thing to compare.
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -942,17 +945,17 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="greaterthan" kind="function" initlabel="&gt;" color="15 20 220">
 			<description>
 				<text>
 					Reports whether the <arg n="1"/> is greater than the <arg n="2"/>.
 				</text>
 				<arg-description n="1" doc-name="left value">
-					The first thing to compare.
+				The first thing to compare.
 				</arg-description>
 				<arg-description n="2" doc-name="right value">
-					The second thing to compare.
+				The second thing to compare.
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -965,17 +968,17 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="greaterthanorequalto" kind="function" initlabel="≥" color="15 20 220">
 			<description>
 				<text>
 					Reports whether the <arg n="1"/> is greater than or equal to the <arg n="2"/>.
 				</text>
 				<arg-description n="1" doc-name="left value">
-					The first thing to compare.
+				The first thing to compare.
 				</arg-description>
 				<arg-description n="2" doc-name="right value">
-					The second thing to compare.
+				The second thing to compare.
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -988,7 +991,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="atan" kind="function" initlabel="atan" color="15 20 220">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number"></BlockConnector>
@@ -1000,7 +1003,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="random" kind="function" initlabel="random" color="15 20 220">
 			<description>
 				<text>
@@ -1021,7 +1024,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="round" kind="function" initlabel="round" color="15 20 220">
 			<description>
 				<text>
@@ -1040,7 +1043,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="int" kind="function" initlabel="int" color="15 20 220">
 			<description>
 				<text>
@@ -1056,7 +1059,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="remainder" kind="function" initlabel="remainder" color="15 20 220">
 			<description>
 				<text>
@@ -1065,7 +1068,7 @@ BlockGenuses are first loaded.
 				<arg-description n="2" doc-name="first">
 					The number to divide.
 				</arg-description>
-
+				
 				<arg-description n="3" doc-name="second">
 					The number by which to divide.
 				</arg-description>
@@ -1080,7 +1083,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="min" kind="function" initlabel="min" color="15 20 220">
 			<description>
 				<text>
@@ -1103,7 +1106,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="max" kind="function" initlabel="max" color="15 20 220">
 			<description>
 				<text>
@@ -1126,7 +1129,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="power" kind="function" initlabel="power" color="15 20 220">
 			<description>
 				<text>
@@ -1147,11 +1150,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="abs" kind="function" initlabel="abs" color="15 20 220">
 			<description>
 				<text>
-					Reports the absolute value of a number.
+				Reports the absolute value of a number.
 				</text>
 				<arg-description n="1" doc-name="number">
 					A number from which to get the absolute value.
@@ -1166,7 +1169,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="sqrt" kind="function" initlabel="sqrt" color="15 20 220">
 			<description>
 				<text>
@@ -1185,7 +1188,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="sin" kind="function" initlabel="sin" color="15 20 220">
 			<description>
 				<text>
@@ -1204,7 +1207,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="cos" kind="function" initlabel="cos" color="15 20 220">
 			<description>
 				<text>
@@ -1223,7 +1226,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="tan" kind="function" initlabel="tan" color="15 20 220">
 			<description>
 				<text>
@@ -1242,7 +1245,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="asin" kind="function" initlabel="asin" color="15 20 220">
 			<description>
 				<text>
@@ -1251,7 +1254,7 @@ BlockGenuses are first loaded.
 				<arg-description n="1" doc-name="number">
 					A number from which to get the arcsine.
 				</arg-description>
-			</description>
+				</description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number"></BlockConnector>
 				<BlockConnector connector-kind="socket" connector-type="number"></BlockConnector>
@@ -1261,7 +1264,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="acos" kind="function" initlabel="acos" color="15 20 220">
 			<description>
 				<text>
@@ -1270,7 +1273,7 @@ BlockGenuses are first loaded.
 				<arg-description n="1" doc-name="number">
 					A number from which to get the arccosine.
 				</arg-description>
-			</description>
+				</description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number"></BlockConnector>
 				<BlockConnector connector-kind="socket" connector-type="number"></BlockConnector>
@@ -1280,7 +1283,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="log" kind="function" initlabel="log" color="15 20 220">
 			<description>
 				<text>
@@ -1299,7 +1302,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="ln" kind="function" initlabel="ln" color="15 20 220">
 			<description>
 				<text>
@@ -1318,13 +1321,13 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<!-- TERRAIN --> 
-
+				
 		<BlockGenus name="pc" kind="function" initlabel="patch color" color="40 255 0">
 			<description>
-				<text>Reports the color of the patch where the agent is standing.</text>
-			</description>
+             	<text>Reports the color of the patch where the agent is standing.</text>
+            </description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
@@ -1333,14 +1336,14 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="stamp" kind="command" initlabel="stamp" color="0 236 0">
 			<description>
-				<text>Changes the color of the patch on which this agent is to <arg n="1"/>.</text>
+             	<text>Changes the color of the patch on which this agent is to <arg n="1"/>.</text>
 				<arg-description n="1" name="color">
 					The color to which to change the patch.
 				</arg-description>
-			</description>
+            </description>
 			<BlockConnectors>
 				<BlockConnector label="color" connector-kind="socket" connector-type="number">
 					<DefaultArg genus-name="red" label="red"></DefaultArg>
@@ -1351,11 +1354,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="patch-height" kind="function" initlabel="patch height" color="40 255 0">
 			<description>
-				<text>Reports the height of the patch where the agent is standing.</text>
-			</description>
+             	 <text>Reports the height of the patch where the agent is standing.</text>
+            </description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
@@ -1366,11 +1369,11 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		<BlockGenus name="stomp" kind="command" initlabel="stomp" color="0 236 0">
 			<description>
-				<text>Decreases the height of the patch where the agent is standing, smoothly connecting the edges to surrounding patches.</text>
+             	<text>Decreases the height of the patch where the agent is standing, smoothly connecting the edges to surrounding patches.</text>
 				<arg-description n="1" name="height">
 					How much the patch height is decreased.
 				</arg-description>
-			</description>
+            </description>
 			<BlockConnectors>
 				<BlockConnector label="height" connector-kind="socket" connector-type="number">
 					<DefaultArg genus-name="number" label="1"></DefaultArg>
@@ -1384,11 +1387,11 @@ BlockGenuses are first loaded.
 
 		<BlockGenus name="yank" kind="command" initlabel="yank" color="0 236 0">
 			<description>
-				<text>Increases the height of the patch where the agent is standing, smoothly connecting the edges to surrounding patches.</text>
+             	<text>Increases the height of the patch where the agent is standing, smoothly connecting the edges to surrounding patches.</text>
 				<arg-description n="1" name="height">
 					How much the patch height is increased.
 				</arg-description>
-			</description>
+            </description>
 			<BlockConnectors>
 				<BlockConnector label="height" connector-kind="socket" connector-type="number">
 					<DefaultArg genus-name="number" label="1"></DefaultArg>
@@ -1399,9 +1402,9 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<!-- TRAITS -->
-
+		
 		<BlockGenus name="setc" kind="command" initlabel="set color" color="27 180 225">
 			<description>
 				<text>Sets the color of the agent to the given color.</text>
@@ -1416,7 +1419,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="color" kind="function" initlabel="color" color="44 220 255">
 			<description>
 				<text>Reports the color of this agent.</text>
@@ -1429,7 +1432,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="seth" kind="command" initlabel="set heading" color="27 180 225">
 			<description>
 				<text>Sets the heading of this agent to the specified value in degrees.</text>
@@ -1470,7 +1473,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="ycor" kind="function" initlabel="ycor" color="44 220 255">
 			<description>
 				<text>Reports the y coordinate of this agent.</text>
@@ -1535,7 +1538,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="pendown" kind="command" initlabel="pen down" color="27 180 225">
 			<description>
 				<text>Pulls the agent's pen down so the agent will stamp every patch where it moves.</text>
@@ -1545,7 +1548,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="pendown?" kind="function" initlabel="pen down?" color="44 220 255">
 			<description>
 				<text>Reports true if this agent's pen is down, and false otherwise.</text>
@@ -1558,7 +1561,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="shape" kind="function" initlabel="shape" color="44 220 255">
 			<description>
 				<text>Reports the shape of this agent.</text>
@@ -1571,7 +1574,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="breed" kind="function" initlabel="breed" color="44 220 255">
 			<description>
 				<text>Reports the breed of this agent.</text>
@@ -1584,7 +1587,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="setshape" kind="command" initlabel="set shape" color="27 180 225">
 			<description>
 				<text>
@@ -1602,7 +1605,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="setbreed" kind="command" initlabel="set breed" color="27 180 225">
 			<description>
 				<text>
@@ -1620,9 +1623,9 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<!-- CONTROLS -->
-
+		
 		<BlockGenus name="keyboard-up" kind="data" initlabel="keyboard up arrow?" color="255 255 0">
 			<description>
 				<text>
@@ -1637,7 +1640,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="keyboard-down" kind="data" initlabel="keyboard down arrow?" color="255 255 0">
 			<description>
 				<text>
@@ -1652,7 +1655,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="keyboard-left" kind="data" initlabel="keyboard left arrow?" color="255 255 0">
 			<description>
 				<text>
@@ -1667,7 +1670,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="keyboard-right" kind="data" initlabel="keyboard right arrow?" color="255 255 0">
 			<description>
 				<text>
@@ -1682,7 +1685,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="keyboard-space" kind="data" initlabel="keyboard space bar?" color="255 255 0">
 			<description>
 				<text>
@@ -1697,7 +1700,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="joy-xaxis" kind="function" initlabel="joy x-axis" color="255 255 0">
 			<description>
 				<text>
@@ -1727,7 +1730,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="joy-radius" kind="function" initlabel="joy radius" color="255 255 0">
 			<description>
 				<text>
@@ -1742,7 +1745,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="joy-angle" kind="function" initlabel="joy angle" color="255 255 0">
 			<description>
 				<text>
@@ -1757,7 +1760,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="dpad-angle" kind="function" initlabel="dpad angle" color="255 255 0">
 			<description>
 				<text>
@@ -1772,7 +1775,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="joy-button1?" kind="function" initlabel="button 1?" color="255 255 0">
 			<description>
 				<text>
@@ -1802,7 +1805,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="joy-button3?" kind="function" initlabel="button 3?" color="255 255 0">
 			<description>
 				<text>
@@ -1817,7 +1820,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="joy-button4?" kind="function" initlabel="button 4?" color="255 255 0">
 			<description>
 				<text>
@@ -1832,7 +1835,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="set-agent-camera" kind="command" initlabel="set agent camera" color="255 255 0">
 			<description>
 				<text>
@@ -1841,7 +1844,7 @@ BlockGenuses are first loaded.
 				<arg-description n="1" name="ID">
 					The ID of the agent being asked to run something.
 				</arg-description>
-
+				
 				<arg-description n="2" name="then">
 					The set of instructions that is run when by the asked agent.
 				</arg-description>
@@ -1854,7 +1857,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="who-of-agent-camera" kind="function" initlabel="ID of agent camera" color="255 255 0">
 			<description>
 				<text>
@@ -1869,7 +1872,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="over-shoulder?" kind="function" initlabel="over shoulder?" color="255 255 0">
 			<description>
 				<text>
@@ -1884,11 +1887,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="over-shoulder-on" kind="command" initlabel="over shoulder" color="255 255 0">
 			<description>
 				<text>
-					Turns the over-the-shoulder view on.
+				Turns the over-the-shoulder view on.
 				</text>
 			</description>
 			<BlockConnectors>
@@ -1912,7 +1915,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="agent-eye-on" kind="command" initlabel="agent eye" color="255 255 0">
 			<description>
 				<text>
@@ -1940,7 +1943,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="aerial-on" kind="command" initlabel="aerial" color="255 255 0">
 			<description>
 				<text>
@@ -1953,7 +1956,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="aerial-on"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="overhead?" kind="function" initlabel="overhead?" color="255 255 0">
 			<description>
 				<text>
@@ -1968,7 +1971,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="overhead-on" kind="command" initlabel="overhead on" color="255 255 0">
 			<description>
 				<text>
@@ -1981,7 +1984,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="overhead-on"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="overhead-off" kind="command" initlabel="overhead off" color="255 255 0">
 			<description>
 				<text>
@@ -1995,9 +1998,9 @@ BlockGenuses are first loaded.
 			</LangSpecProperties>
 		</BlockGenus>
 
-
+		
 		<!-- Procedure and parameters -->
-
+		
 		<BlockGenus name="procedure" kind="procedure" initlabel="Procedure" editable-label="yes" label-unique="yes" page-label-enabled="yes" is-starter="yes" color="177 10 255">
 			<description>
 				<text>
@@ -2024,7 +2027,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-procedure"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="proc-param-number" kind="param" initlabel="number param" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="177 10 255">
 			<description>
 				<text>
@@ -2048,7 +2051,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-procedure"></LangSpecProperty>
 			</LangSpecProperties>	
 		</BlockGenus>
-
+		
 		<BlockGenus name="proc-param-boolean" kind="param" initlabel="boolean param" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="177 10 255">
 			<description>
 				<text>
@@ -2072,7 +2075,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-procedure"></LangSpecProperty>
 			</LangSpecProperties>	
 		</BlockGenus>
-
+		
 		<BlockGenus name="proc-param-string" kind="param" initlabel="text param" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="177 10 255">
 			<description>
 				<text>
@@ -2096,7 +2099,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-procedure"></LangSpecProperty>
 			</LangSpecProperties>	
 		</BlockGenus>
-
+		
 		<BlockGenus name="proc-param-list" kind="param" initlabel="list param" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="177 10 255">
 			<description>
 				<text>
@@ -2111,7 +2114,7 @@ BlockGenuses are first loaded.
 					<LangSpecProperties>
 						<LangSpecProperty key="vm-cmd-name" value="eval-local"></LangSpecProperty>
 						<LangSpecProperty key="scope" value="local"></LangSpecProperty>
-						<LangSpecProperty key="stack-Type" value="breed-procedure"></LangSpecProperty>
+						<LangSpecProperty key="stack-type" value="breed-procedure"></LangSpecProperty>
 					</LangSpecProperties>	
 				</Stub>
 			</Stubs>
@@ -2120,11 +2123,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-procedure"></LangSpecProperty>
 			</LangSpecProperties>	
 		</BlockGenus>
-
+		
 		<!-- SETUP AND RUNTIME BLOCKS -->
-
+		
 		<!-- NOTE: The genus names "forever", "runonce", and "runforsometime" is duplicated in RunBlockManager.java, 
-		if you change this name, make sure to change it there too.  -->
+			if you change this name, make sure to change it there too.  -->
 		<BlockGenus name="forever" kind="command" initlabel="forever" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2149,7 +2152,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-forever"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-forever" kind="command" initlabel="forever" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2161,7 +2164,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="has-runtime-equiv" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runonce" kind="command" initlabel="run once" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2186,7 +2189,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-forever"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-once" kind="command" initlabel="run once" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2198,24 +2201,24 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="has-runtime-equiv" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runforsometime" kind="command" initlabel="run" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
 					When switched on, agents do commands over and over for <arg n="1"/> seconds. <note>There are different commands for each breed.</note>
 				</text>
-
+				
 				<arg-description n="1" name="secs">
 					The number of seconds for which the commands are run when switched on.
 				</arg-description>
-
+				
 				<arg-description n="2" name="agents" doc-name="breed">
 					The breed of the agents performing the commands attached here.
 				</arg-description>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="secs" connector-kind="socket" connector-type="number">
-				</BlockConnector>
+			    <BlockConnector label="secs" connector-kind="socket" connector-type="number">
+			    </BlockConnector>
 				<BlockConnector connector-kind="socket" connector-type="cmd"></BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -2230,7 +2233,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-forever"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-sometime" kind="command" initlabel="run" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2242,7 +2245,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="has-runtime-equiv" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="setup" kind="command" initlabel="setup" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2258,7 +2261,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="setup"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-setup" kind="command" initlabel="setup" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2269,7 +2272,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-runtime" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="monitor" kind="command" initlabel="monitor" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2285,7 +2288,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="monitor"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-monitor" kind="command" initlabel="monitor" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2296,7 +2299,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-runtime" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="slider" kind="command" initlabel="slider" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2312,7 +2315,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="monitor"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-slider" kind="command" initlabel="slider" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2323,7 +2326,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-runtime" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="table" kind="command" initlabel="table" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2342,7 +2345,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="monitor"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-table" kind="command" initlabel="table" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2354,7 +2357,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-runtime-table" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="line-graph" kind="command" initlabel="line graph" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2373,7 +2376,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="monitor"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-line-graph" kind="command" initlabel="line graph" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2385,7 +2388,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-runtime-line-graph" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="bar-graph" kind="command" initlabel="bar graph" editable-label="yes" label-unique="yes" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2404,7 +2407,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="monitor"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="runtime-bar-graph" kind="command" initlabel="bar graph" is-starter="yes" is-terminator="yes" color="139 0 0">
 			<description>
 				<text>
@@ -2416,7 +2419,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-runtime-bar-graph" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="clear-all" kind="command" initlabel="clear all" color="139 0 0">
 			<description>
 				<text>
@@ -2429,7 +2432,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="setup"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="clear-everyone" kind="command" initlabel="clear everyone" color="139 0 0">
 			<description>
 				<text>
@@ -2442,7 +2445,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="setup"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="clear-patches" kind="command" initlabel="clear patches" color="139 0 0">
 			<description>
 				<text>
@@ -2455,7 +2458,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="setup"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="scatter-everyone" kind="command" initlabel="scatter everyone" color="139 0 0">
 			<description>
 				<text>
@@ -2468,8 +2471,8 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="setup"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
-
+		
+		
 		<BlockGenus name="set-score" kind="command" initlabel="set score" color="230 0 255 ">
 			<description>
 				<text>
@@ -2488,7 +2491,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="set-score"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="score" kind="function" initlabel="score" color="230 0 255 ">
 			<description>
 				<text>
@@ -2503,14 +2506,14 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
-
+		
+		
 		<!-- BREED SPECIFIC BLOCKS -->
-
+		
 		<BlockGenus name="create-agents" kind="command" initlabel="" label-prefix="create " color="139 0 0">
 			<description>
 				<text>
-					Creates <arg n="1"/> number of agents of the given breed.
+				Creates <arg n="1"/> number of agents of the given breed.
 				</text>
 				<arg-description n="1" name="num">
 					The number of agents to create.
@@ -2530,11 +2533,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="setup"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="create-and-do" kind="command" initlabel="" label-prefix="create " color="139 0 0">
 			<description>
 				<text>
-					Creates <arg n="1"/> number of agents of the given breed and has each do the specified commands.
+				Creates <arg n="1"/> number of agents of the given breed and has each do the specified commands.
 				</text>
 				<arg-description n="1" name="num">
 					The number of agents to create.
@@ -2561,11 +2564,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="ask-arg" value="1"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="breed-string" kind="function" initlabel="" label-prefix="breed: "  color="255 0 255">
 			<description>
 				<text>
-					Reports the name of the given breed.
+				  	Reports the name of the given breed.
 				</text>
 			</description>
 			<BlockConnectors>
@@ -2579,11 +2582,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="count-breeds" kind="function" initlabel="" label-prefix="count "  color="128 30 255">
 			<description>
 				<text>
-					Reports the number agents of this breed.
+				  	Reports the number agents of this breed.
 				</text>
 			</description>
 			<BlockConnectors>
@@ -2597,11 +2600,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="count-breeds-with" kind="function" initlabel="" label-prefix="count "  label-suffix=" with" color="128 30 255">
 			<description>
 				<text>
-					Reports the number agents of this breed that satisfy the given condition.
+				  	Reports the number agents of this breed that satisfy the given condition.
 				</text>
 				<arg-description n="1" doc-name="condition">
 					A condition that must be true of the counted agents.
@@ -2621,11 +2624,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="ask-arg" value="0"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="scatter-breeds" kind="command" initlabel="" label-prefix="scatter "  color="139 0 0">
 			<description>
 				<text>
-					Scatters agents of this breed across SpaceLand.
+				  	Scatters agents of this breed across SpaceLand.
 				</text>
 			</description>
 			<LangSpecProperties>
@@ -2635,11 +2638,11 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="setup"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="clear-breeds" kind="command" initlabel="" label-prefix="clear "  color="139 0 0">
 			<description>
 				<text>
-					Clears all agents of this breed.
+				  	Clears all agents of this breed.
 				</text>
 			</description>
 			<LangSpecProperties>
@@ -2649,14 +2652,14 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="setup"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="collision" kind="command" initlabel="Collision" color="128 128 128" is-starter="yes" is-terminator="yes" page-label-enabled="yes">
 			<description>
 				<text>Constantly checks for collisions between agents.  If a collision occurs, causes the collider to run the <arg n="1"/> code, and the collidee to run the <arg n="2"/> code.  Which agent is the collidee and which is the collider depends on the block.  For example, if a Turtle and Frog collide, the collision block with "Turtles" as the first port and "Frogs" as the second port will assume that the Turtle is the collider and the Frog is the collidee.</text>
 				<arg-description n="1" name="me">
-					This is the code that the collider runs.
+				This is the code that the collider runs.
 				</arg-description>
-
+				
 				<arg-description n="2" name="agents">
 					This is the code that the collidee runs.  The label of this port determines which breed will be assumed to be collidee.
 				</arg-description>
@@ -2670,10 +2673,10 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="stack-type" value="breed-collision"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 
 		<!-- SHAPES (see ShapeBlocksGenerator) -->
-
+		
 		<BlockGenus name="random-shape" kind="function" initlabel="random shape" color="255 252 138">
 			<description>
 				<text>
@@ -2687,9 +2690,9 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="vm-cmd-name" value="random-shape"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<!-- DYNAMIC BLOCKS -->
-
+		
 		<BlockGenus name="ashape" kind="data" initlabel="" color="255 252 138">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="string"></BlockConnector>
@@ -2704,7 +2707,7 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="animals/turtle-default"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
+		
 		<BlockGenus name="bshape" kind="data" initlabel="" color="255 252 138">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="string"></BlockConnector>
@@ -2719,180 +2722,10 @@ BlockGenuses are first loaded.
 				<LangSpecProperty key="special-value" value="animals/sonic-sonic"></LangSpecProperty>
 			</LangSpecProperties>
 		</BlockGenus>
-
-		<!-- Grove -->
-		<BlockGenus name="seeedstudio-twig-twin-button" kind="command" initlabel="Twin Button" editable-label="no" label-unique="no" is-starter="yes" is-terminator="yes" color="0 133 140">
-			<description>
-				<text>
-					Twig Twin Buttons
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector label="#" connector-kind="socket" connector-type="number">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"></BlockConnector>
-				<BlockConnector connector-kind="socket" connector-type="cmd"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-			</LangSpecProperties>
-		</BlockGenus>
-		<!-- Arduino Pin Blocks -->
-		<BlockGenus name="arduino-pin" kind="command" initlabel="pin" editable-label="no" label-unique="no" is-starter="yes" is-terminator="yes" color="0 133 140">
-			<description>
-				<text>
-					Represent the Pin on Arduino board
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector label="#" connector-kind="socket" connector-type="number">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"></BlockConnector>
-				<BlockConnector connector-kind="socket" connector-type="cmd"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-			</LangSpecProperties>
-		</BlockGenus>
-
-		<BlockGenus name="arduino-pin-input" kind="function" initlabel="pin" color="0 133 140" editable-label="yes">
-			<description>
-				<text>
-					Arduino pin input
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector label="pin" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-			</LangSpecProperties>
-		</BlockGenus>
-
-		<BlockGenus name="arduino-high" kind="data" initlabel="HIGH" color="255 0 255">
-			<description>
-				<text>
-					Reports the boolean true.
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="true"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
-		</BlockGenus>
-
-		<BlockGenus name="arduino-low" kind="data" initlabel="LOW" color="255 0 255">
-			<description>
-				<text>
-					Reports the boolean true.
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="true"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
-		</BlockGenus>
-
-		<BlockGenus name="arduino-low-to-high" kind="data" initlabel="LOW to HIGH" color="255 0 255">
-			<description>
-				<text>
-					Pin going from low to high
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="true"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
-		</BlockGenus>
-
-		<BlockGenus name="arduino-high-to-low" kind="data" initlabel="HIGH to LOW" color="255 0 255">
-			<description>
-				<text>
-					Pin going from high to low
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="true"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
-		</BlockGenus>
-
-		<BlockGenus name="arduino-digital-write" kind="command" initlabel="pin" color="255 255 0">
-			<description>
-				<text>
-					Write the pin output
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-kind="socket" connector-type="number" label="#">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector label="set" connector-kind="socket" connector-type="boolean"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="arduino-digital-writ"></LangSpecProperty>
-			</LangSpecProperties>
-		</BlockGenus>
-
-		<BlockGenus name="arduino-analog-write" kind="command" initlabel="pin" color="255 255 0">
-			<description>
-				<text>
-					Write the pin output
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-kind="socket" connector-type="number" label="#">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector label="set" connector-kind="socket" connector-type="number"></BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="arduino-digital-writ"></LangSpecProperty>
-			</LangSpecProperties>
-		</BlockGenus>
-
-		<BlockGenus name="arduino-pin-lessthan" kind="function" initlabel="&lt;" color="15 20 220">
-			<description>
-				<text>
-					Reports the opposite of <arg n="1"/>.
-				</text>
-				<arg-description n="1" doc-name="boolean">
-					The boolean (<em>true</em> or <em>false</em>) that should be inverted.
-				</arg-description>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="not"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
-		</BlockGenus>
-
-
+		
 	</BlockGenuses>
-
+	
 	<BlockFamilies>
-		<BlockFamily>
-			<FamilyMember>arduino-high</FamilyMember>
-			<FamilyMember>arduino-low</FamilyMember>
-			<FamilyMember>arduino-high-to-low</FamilyMember>
-			<FamilyMember>arduino-low-to-high</FamilyMember>
-		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>fd</FamilyMember>
 			<FamilyMember>bk</FamilyMember>
@@ -3022,20 +2855,6 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>set-score</BlockGenusMember>
 				<BlockGenusMember>score</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer name="Pins" type="factory" is-open="yes" button-color="0 133 140">
-				<BlockGenusMember>arduino-pin</BlockGenusMember>
-				<BlockGenusMember>arduino-pin-input</BlockGenusMember>
-				<BlockGenusMember>arduino-digital-write</BlockGenusMember>
-				<BlockGenusMember>arduino-analog-write</BlockGenusMember>
-				<BlockGenusMember>arduino-high</BlockGenusMember>
-				<BlockGenusMember>arduino-low</BlockGenusMember>
-				<BlockGenusMember>arduino-pin-lessthan</BlockGenusMember>
-			</BlockDrawer>
-			<BlockDrawer name="Bricks" type="factory" is-open="yes" button-color="173 0 0">
-			</BlockDrawer>
-			<BlockDrawer name="SeeedStudio Grove" type="factory" is-open="yes" button-color="107 161 23">
-				<BlockGenusMember>seeedstudio-twig-twin-button</BlockGenusMember>
-			</BlockDrawer>
 			<BlockDrawer name="Movement" type="factory" button-color="247 0 0">
 				<BlockGenusMember>fd</BlockGenusMember>
 				<BlockGenusMember>bk</BlockGenusMember>
@@ -3162,9 +2981,9 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>black</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
-			(see slcodeblocks.ShapeBlocksGenerator for details)  -->
+				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->
 			<!-- Sound blocks reside in the auto-generated String drawer.  
-			(see slcodeblocks.SoundBlocksGenerator for details)  -->
+				 (see slcodeblocks.SoundBlocksGenerator for details)  -->
 		</BlockDrawerSet>
 	</BlockDrawerSets>
 
@@ -3174,19 +2993,19 @@ BlockGenuses are first loaded.
 		<Page page-name="Everyone" page-width="400"></Page>
 		<Page page-name="Setup" page-width="400"></Page>
 		<Page page-name="Runtime" page-width="400"></Page>
-		-->
+		 -->
 	</Pages>
 
 	<TrashCan>
 		<OpenTrashImage>/support/images/trash_open.png</OpenTrashImage>
 		<ClosedTrashImage>/support/images/trash.png</ClosedTrashImage>
 	</TrashCan>
-
+	
 	<BreedShapeMappings>
 		<BtoSMapping>
 			<BreedName>Turtles</BreedName>
 			<BreedShape>animals/turtle-default</BreedShape>
 		</BtoSMapping>
 	</BreedShapeMappings>
-
+	
 </BlockLangDef>
