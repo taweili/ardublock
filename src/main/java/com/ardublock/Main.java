@@ -55,7 +55,7 @@ public class Main
 		//get the handle of language definition file
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-		lang = documentBuilder.parse(getClass().getResource("/org/ardublock/block/ardublock_def.xml").toString()).getDocumentElement();
+		lang = documentBuilder.parse(getClass().getResource("/com/ardublock/block/ardublock_def.xml").toString()).getDocumentElement();
 		
 		jframe.setSize(new Dimension(640, 480));
 		
