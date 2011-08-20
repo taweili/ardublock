@@ -279,7 +279,7 @@ BlockGenuses are first loaded.
 			</LangSpecProperties>
 		</BlockGenus>
 		
-		<BlockGenus name="while" kind="command" initlabel="repeat" color="255 221 0">
+		<BlockGenus name="while" kind="command" initlabel="while" color="255 221 0">
 			<description>
 				<text>
 					While Block
@@ -287,7 +287,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="condition" connector-kind="socket" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="command" connector-kind="socket" connector-type="cmd"></BlockConnector>
+				<BlockConnector label="" connector-kind="socket" connector-type="cmd"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -507,6 +507,17 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="delayMicroseconds" kind="command" color="142 160 210" initlabel="delayMicroseconds">
+			<description>
+				<text>program delay in x milliseconds</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="microseconds">
+					<DefaultArg genus-name="number" label="1000"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="random" kind="data" color="142 160 210" initlabel="random">
 			<description>
 				<text>generate a random number less than the number</text>
@@ -516,6 +527,15 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="max">
 					<DefaultArg genus-name="number" label="1024"/>
 				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="millis" kind="data" color="142 160 210" initlabel="millis">
+			<description>
+				<text>generate a random number less than the number</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -611,9 +631,11 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>cos</BlockGenusMember>
 				<BlockGenusMember>tan</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="95 120 132" name="Utility" type="factory">
+			<BlockDrawer button-color="95 120 132" name="Utilities" type="factory">
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>random</BlockGenusMember>
+				<BlockGenusMember>delayMicroseconds</BlockGenusMember>
+				<BlockGenusMember>millis</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->
