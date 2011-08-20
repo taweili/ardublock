@@ -60,7 +60,7 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		 -->
 		 
-		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="loop" is-starter="yes" is-terminator="yes">
+		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="loop" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>this is the loop of the arduino</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="do"></BlockConnector>
@@ -208,10 +208,6 @@ BlockGenuses are first loaded.
 
 				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="true"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
 		</BlockGenus>
 		
 		<BlockGenus name="false" kind="data" initlabel="FALSE" color="208 10 16">
@@ -223,10 +219,6 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="false"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
 		</BlockGenus>
 		
 		
@@ -247,9 +239,6 @@ BlockGenuses are first loaded.
 				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"></BlockConnector>
 				<BlockConnector label="then" connector-kind="socket" connector-type="cmd"></BlockConnector>
 			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="if"></LangSpecProperty>
-			</LangSpecProperties>
 		</BlockGenus>
 		
 		<BlockGenus name="ifelse" kind="command" initlabel="ifelse" color="255 221 0">
@@ -274,9 +263,6 @@ BlockGenuses are first loaded.
 				<BlockConnector label="then" connector-kind="socket" connector-type="cmd"></BlockConnector>
 				<BlockConnector label="else" connector-kind="socket" connector-type="cmd"></BlockConnector>
 			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="ifelse"></LangSpecProperty>
-			</LangSpecProperties>
 		</BlockGenus>
 		
 		<BlockGenus name="while" kind="command" initlabel="while" color="255 221 0">
@@ -322,13 +308,8 @@ BlockGenuses are first loaded.
 				<BlockConnector label="" connector-kind="socket" connector-type="boolean"></BlockConnector>
 				<BlockConnector label="" connector-kind="socket" connector-type="boolean"></BlockConnector>
 			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="or"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
 		</BlockGenus>
 		
-				
 		<BlockGenus name="not" kind="function" initlabel="not" color="149 193 31">
 			<description>
 				<text>
@@ -343,11 +324,6 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-kind="plug" connector-type="boolean"></BlockConnector>
 				<BlockConnector label="" connector-kind="socket" connector-type="boolean"></BlockConnector>
 			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="not"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
-
 		</BlockGenus>
 		
 		
@@ -419,10 +395,6 @@ BlockGenuses are first loaded.
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
 			</BlockConnectors>
-			<LangSpecProperties>
-				<LangSpecProperty key="vm-cmd-name" value="quotient"></LangSpecProperty>
-				<LangSpecProperty key="is-monitorable" value="yes"></LangSpecProperty>
-			</LangSpecProperties>
 		</BlockGenus>
 		
 		<BlockGenus name="modulo" kind="function" color="149 193 31" initlabel="%">
