@@ -45,7 +45,7 @@ public class Starter
 		ardublockLang = documentBuilder.parse(getClass().getResource("/com/ardublock/block/ardublock_def.xml").toString()).getDocumentElement();
 		
 		JFrame jframe = new JFrame("Ardublock");
-		jframe.setSize(new Dimension(640, 480));
+		jframe.setSize(new Dimension(1280, 1024));
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
