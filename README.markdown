@@ -24,9 +24,13 @@ The Visual Block environment should show up. Happy Hacking! ;)
 
 Authors
 ----
-David Li taweili@gmail.com
+* David Li taweili@gmail.com
+* HE Qichen heqichen@yahoo.com.cn
 
-HE Qichen heqichen@yahoo.com.cn
+
+ToDo
+----
+* Integrate the [scripting engine](http://java.sun.com/developer/technicalArticles/J2SE/Desktop/scripting/) into the language blocks for code generation
 
 License
 ----
