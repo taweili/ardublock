@@ -2,7 +2,6 @@ package com.ardublock.ui;
 
 import java.awt.Dimension;
 
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 
 import org.w3c.dom.Element;

@@ -5,13 +5,9 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import org.w3c.dom.Element;
-
 import com.ardublock.ui.listener.GenerateCodeButtonListener;
 import com.ardublock.ui.listener.OpenButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
-
-import edu.mit.blocks.controller.WorkspaceController;
 
 public class ConsoleFrame extends JFrame
 {

@@ -5,20 +5,9 @@ import java.awt.event.ActionListener;
 import java.io.File;
 
 import javax.swing.JFileChooser;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Element;
-
 import com.ardublock.core.Context;
 
-import edu.mit.blocks.codeblocks.BlockConnectorShape;
-import edu.mit.blocks.codeblocks.BlockGenus;
-import edu.mit.blocks.codeblocks.BlockLinkChecker;
-import edu.mit.blocks.codeblocks.CommandRule;
-import edu.mit.blocks.codeblocks.SocketRule;
 import edu.mit.blocks.controller.WorkspaceController;
-import edu.mit.blocks.workspace.Workspace;
 
 public class OpenButtonListener implements ActionListener
 {
