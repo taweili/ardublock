@@ -511,6 +511,26 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<!-- brick -->
+		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255" initlabel="Tinker LED">
+			<description>
+				<text>TinkerKit LED</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+					<DefaultArg genus-name="digital-high" label="HIGH"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_LED.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 	</BlockGenuses>
 	
 	<BlockFamilies>
@@ -608,6 +628,10 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>random</BlockGenusMember>
 				<BlockGenusMember>delayMicroseconds</BlockGenusMember>
 				<BlockGenusMember>millis</BlockGenusMember>
+			</BlockDrawer>
+			
+			<BlockDrawer button-color="255 255 255" name="brick" type="factory">
+				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->
