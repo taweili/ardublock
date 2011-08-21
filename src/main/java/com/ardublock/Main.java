@@ -42,5 +42,4 @@ public class Main
 		Starter starter = new Starter();
 		starter.startArdublock();
 	}
-	
 }

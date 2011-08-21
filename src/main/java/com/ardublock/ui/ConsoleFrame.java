@@ -20,21 +20,18 @@ public class ConsoleFrame extends JFrame
 	 */
 	private static final long serialVersionUID = -4057010070646255290L;
 
-	private WorkspaceController wc;
-	public ConsoleFrame(WorkspaceController wc, Element lang)
-	{
-		this.wc = wc;
-		
+	public ConsoleFrame()
+	{	
 		this.setLayout(new FlowLayout());
 		
 		JButton generateButton = new JButton("generate code");
 		generateButton.addActionListener(new GenerateCodeButtonListener());
 		
 		JButton saveButton = new JButton("save");
-		saveButton.addActionListener(new SaveButtonListener(wc));
+		saveButton.addActionListener(new SaveButtonListener());
 		
 		JButton openButton = new JButton("open");
-		openButton.addActionListener(new OpenButtonListener(wc, lang));
+		openButton.addActionListener(new OpenButtonListener());
 		
 		this.add(generateButton);
 		this.add(saveButton);

@@ -10,6 +10,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Element;
 
+import com.ardublock.core.Context;
+
 import edu.mit.blocks.codeblocks.BlockConnectorShape;
 import edu.mit.blocks.codeblocks.BlockGenus;
 import edu.mit.blocks.codeblocks.BlockLinkChecker;
@@ -20,40 +22,25 @@ import edu.mit.blocks.workspace.Workspace;
 
 public class OpenButtonListener implements ActionListener
 {
-	private WorkspaceController wc;
-	private Element lang;
-	
-	public OpenButtonListener(WorkspaceController wc, Element lang)
+	private Context context;
+	public OpenButtonListener()
 	{
-		this.wc = wc;
-		this.lang = lang;
+		context = Context.getContext();
 	}
 	
 	public void actionPerformed(ActionEvent e)
 	{
 		try
 		{
+			WorkspaceController workspaceController = context.getWorkspaceController();
+			
 			JFileChooser fileChooser = new JFileChooser();
 			fileChooser.showOpenDialog(null);
 			File savedFile = fileChooser.getSelectedFile();
 			
 			
-			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			Element savedRoot = documentBuilder.parse(savedFile).getDocumentElement();
-			
-			wc.resetWorkspace();
-			
-			BlockConnectorShape.loadBlockConnectorShapes(lang);
-			BlockGenus.loadBlockGenera(lang);
-			BlockLinkChecker.addRule(new CommandRule());
-			BlockLinkChecker.addRule(new SocketRule());
-			
-			Workspace workspace = Workspace.getInstance();
-			
-			workspace.loadWorkspaceFrom(null, lang);
-			
-			wc.loadProjectFromPath(savedFile.getAbsolutePath());
+
+			workspaceController.loadProject(savedFile.getAbsolutePath(), context.getArdublockLangPath());
 		}
 		catch (Exception ex)
 		{

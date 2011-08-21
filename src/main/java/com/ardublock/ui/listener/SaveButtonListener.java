@@ -7,26 +7,28 @@ import java.io.FileOutputStream;
 
 import javax.swing.JFileChooser;
 
+import com.ardublock.core.Context;
+
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.workspace.Workspace;
 
 public class SaveButtonListener implements ActionListener
 {
-	private WorkspaceController wc;
-	
-	public SaveButtonListener(WorkspaceController wc)
+	private Context context;
+	public SaveButtonListener()
 	{
-		this.wc = wc;
+		context = Context.getContext();
 	}
-	
 	public void actionPerformed(ActionEvent e)
 	{
 		try
 		{
+			WorkspaceController workspaceController = context.getWorkspaceController();
+			
 			Workspace workspace = Workspace.getInstance();
 			String saveString;
 			//saveString = workspace.getSaveString();
-			saveString = wc.getSaveString();
+			saveString = workspaceController.getSaveString();
 			
 			
 			JFileChooser fileChooser = new JFileChooser();
