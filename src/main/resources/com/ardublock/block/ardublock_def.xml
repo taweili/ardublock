@@ -526,7 +526,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_LED.jpg</FileLocation>
+					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_LED.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
