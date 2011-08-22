@@ -571,12 +571,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Button" kind="number" color="255 255 255" initlabel="Tinker Button">
+		<BlockGenus name="Tinker_Button" kind="data" color="255 255 255" initlabel="Tinker Button">
 			<description>
 				<text>TinkerKit Button</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -589,7 +589,7 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		
-		<BlockGenus name="Tinker_Accmeter" kind="number" color="255 255 255" initlabel="Tinker Accelerometer">
+		<BlockGenus name="Tinker_Accmeter" kind="data" color="255 255 255" initlabel="Tinker Accelerometer">
 			<description>
 				<text>TinkerKit Accelerometer</text>
 			</description>
@@ -601,11 +601,149 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Button.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/Tinker_Accmeter.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="Tinker_Hall" kind="data" color="255 255 255" initlabel="Tinker Hall">
+			<description>
+				<text>TinkerKit Hall Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_Hall.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="Tinker_LDR" kind="data" color="255 255 255" initlabel="Tinker LDR">
+			<description>
+				<text>TinkerKit LDR</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_LDR.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="Tinker_LinearPotentiometer" kind="data" color="255 255 255" initlabel="Tinker LinearPotentiometer">
+			<description>
+				<text>TinkerKit Accelerometer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_LinearPotentiometer.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="Tinker_RotaryPotentiometer" kind="data" color="255 255 255" initlabel="Tinker RotaryPotentiometer">
+			<description>
+				<text>TinkerKit RotaryPotentiometer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_RotaryPotentiometer.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="Tinker_Thermistor" kind="data" color="255 255 255" initlabel="Tinker Thermistor">
+			<description>
+				<text>TinkerKit Thermistor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_Thermistor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="Tinker_Touch" kind="data" color="255 255 255" initlabel="Tinker Touch">
+			<description>
+				<text>TinkerKit Touch Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_Touch.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="Tinker Servo">
+			<description>
+				<text>Tinker Servo</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#" >
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
+					<DefaultArg genus-name="number" label="90"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_Servo.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		<BlockGenus name="Tinker_Tilt" kind="data" color="255 255 255" initlabel="Tinker Tilt">
+			<description>
+				<text>Tinker Tilt</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_Tilt.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		heqichen TODO
 		
 	</BlockGenuses>
@@ -699,6 +837,18 @@ BlockGenuses are first loaded.
 			<BlockDrawer button-color="255 255 255" name="Bricks" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
+				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
+				<BlockGenusMember>Tinker_Button</BlockGenusMember>
+				<BlockGenusMember>Tinker_Accmeter</BlockGenusMember>
+				<BlockGenusMember>Tinker_Hall</BlockGenusMember>
+				<BlockGenusMember>Tinker_LDR</BlockGenusMember>
+				<BlockGenusMember>Tinker_LinearPotentiometer</BlockGenusMember>
+				<BlockGenusMember>Tinker_RotaryPotentiometer</BlockGenusMember>
+				<BlockGenusMember>Tinker_Thermistor</BlockGenusMember>
+				<BlockGenusMember>Tinker_Touch</BlockGenusMember>
+				<BlockGenusMember>Tinker_Servo</BlockGenusMember>
+				<BlockGenusMember>Tinker_Tilt</BlockGenusMember>
+				
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->

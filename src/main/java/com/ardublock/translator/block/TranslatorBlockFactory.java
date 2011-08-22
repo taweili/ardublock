@@ -1,6 +1,17 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.tinker.TinkerAccmeterBlock;
+import com.ardublock.translator.block.tinker.TinkerButtonBlock;
+import com.ardublock.translator.block.tinker.TinkerHallBlock;
+import com.ardublock.translator.block.tinker.TinkerLDRBlock;
+import com.ardublock.translator.block.tinker.TinkerLEDBlock;
+import com.ardublock.translator.block.tinker.TinkerLinearPotentiometerBlock;
+import com.ardublock.translator.block.tinker.TinkerMosfetBlock;
+import com.ardublock.translator.block.tinker.TinkerRelayBlock;
+import com.ardublock.translator.block.tinker.TinkerRotaryPotentiometerBlock;
+import com.ardublock.translator.block.tinker.TinkerThermistorBlock;
+import com.ardublock.translator.block.tinker.TinkerTouchBlock;
 
 public class TranslatorBlockFactory
 {
@@ -149,6 +160,55 @@ public class TranslatorBlockFactory
 		if (blockName.equals("random"))
 		{
 			return new RandomBlock(blockId, translator);
+		}
+		
+		
+		//brick
+		if (blockName.equals("Tinker_LED"))
+		{
+			return new TinkerLEDBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_Mosfet"))
+		{
+			return new TinkerMosfetBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_Relay"))
+		{
+			return new TinkerRelayBlock(blockId, translator);
+		}
+		
+		if (blockName.equals("Tinker_Button"))
+		{
+			return new TinkerButtonBlock(blockId, translator);
+		}
+		
+		if (blockName.equals("Tinker_Accmeter"))
+		{
+			return new TinkerAccmeterBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_Hall"))
+		{
+			return new TinkerHallBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_LDR"))
+		{
+			return new TinkerLDRBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_LinearPotentiometer"))
+		{
+			return new TinkerLinearPotentiometerBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_RotaryPotentiometer"))
+		{
+			return new TinkerRotaryPotentiometerBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_Thermistor"))
+		{
+			return new TinkerThermistorBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_Touch"))
+		{
+			return new TinkerTouchBlock(blockId, translator);
 		}
 		
 		
