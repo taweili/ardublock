@@ -7,7 +7,7 @@
 This describes every BlockGenus, BlockDrawer, BlockFamilies in Starlogo-TNG.
 
 Note: For BlockGenus, if genus A relies on another genus B, that genus B must be 
-specified in the xml file before genus A is specified.  We impose this requirement so 
+specified in the xml file before genus A is specified./  We impose this requirement so 
 that sanity checks can be made regarding the validity of a default argument when the
 BlockGenuses are first loaded. 
 

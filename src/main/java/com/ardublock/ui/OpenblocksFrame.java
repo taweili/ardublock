@@ -13,7 +13,6 @@ import edu.mit.blocks.codeblocks.BlockGenus;
 import edu.mit.blocks.codeblocks.BlockLinkChecker;
 import edu.mit.blocks.codeblocks.CommandRule;
 import edu.mit.blocks.codeblocks.SocketRule;
-import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.workspace.Page;
 import edu.mit.blocks.workspace.Workspace;
 
@@ -33,14 +32,11 @@ public class OpenblocksFrame extends JFrame
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		initOpenBlocks();
-		
-		
 	}
 	
 	private void initOpenBlocks()
 	{
 		Context context = Context.getContext();
-		WorkspaceController workspaceController = context.getWorkspaceController();
 		
 		//I don't know why the code blow doesn't work.
 		//It says cannot find dtd file -_-b
