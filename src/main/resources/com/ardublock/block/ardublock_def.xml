@@ -33,6 +33,49 @@ BlockGenuses are first loaded.
 	</BlockConnectorShapes>
 	
 	<BlockGenuses>
+		<!-- Number -->
+		
+		<BlockGenus name="number" kind="data" color="208 10 16" initlabel="1" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="digital-high" kind="data" color="208 10 16" initlabel="HIGH">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="digital-low" kind="data" color="208 10 16" initlabel="LOW">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="true" kind="data" initlabel="TRUE" color="208 10 16">
+			<description>
+				<text>
+					Reports the boolean true.
+				</text>
+			</description>
+			<BlockConnectors>
+
+				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="false" kind="data" initlabel="FALSE" color="208 10 16">
+			<description>
+				<text>
+					Reports the boolean false.
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
 		<!-- Basic -->
 		
 		<!-- 
@@ -64,24 +107,6 @@ BlockGenuses are first loaded.
 			<description>this is the loop of the arduino</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="do"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="number-variable-setter" kind="command" color="255 255 255" initlabel="varialbe set">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="socket" label="varname" >
-					<DefaultArg genus-name="variable-name" label="var-name"/>
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="number" >
-					<DefaultArg genus-name="number" label="0"/>
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="number-variable-getter" kind="variable" color="255 255 255" initlabel="varialbe" label-prefix="variable: " editable-label="yes">
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="variable-name" connector-kind="socket" position-type="single" />
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -178,49 +203,6 @@ BlockGenuses are first loaded.
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
-		<!-- Number -->
-		
-		<BlockGenus name="number" kind="data" color="208 10 16" initlabel="1" editable-label="yes">
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="digital-high" kind="data" color="208 10 16" initlabel="HIGH">
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="digital-low" kind="data" color="208 10 16" initlabel="LOW">
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="true" kind="data" initlabel="TRUE" color="208 10 16">
-			<description>
-				<text>
-					Reports the boolean true.
-				</text>
-			</description>
-			<BlockConnectors>
-
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="false" kind="data" initlabel="FALSE" color="208 10 16">
-			<description>
-				<text>
-					Reports the boolean false.
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
 		
 		<BlockGenus name="if" kind="command" initlabel="if" color="255 221 0">
 			<description>
@@ -522,12 +504,12 @@ BlockGenuses are first loaded.
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
-					<DefaultArg genus-name="digital-high" label="HIGH"/>
+					<DefaultArg genus-name="digital-high" label="ON"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_LED.png</FileLocation>
+					<FileLocation>com/ardublock/block/Tinker_LED.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -661,21 +643,6 @@ BlockGenuses are first loaded.
 
 	<BlockDrawerSets>	
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no" >
-			<BlockDrawer name="Arduino" type="factory" is-open="yes" button-color="29 152 155">
-				<BlockGenusMember>loop</BlockGenusMember>
-				<BlockGenusMember>number-variable-setter</BlockGenusMember>
-				<BlockGenusMember>number-variable-getter</BlockGenusMember>
-				<BlockGenusMember>variable-name</BlockGenusMember>
-				<BlockGenusMember>digital-var</BlockGenusMember>
-				<BlockGenusMember>number-var</BlockGenusMember>
-				<BlockGenusMember>set-digital-var</BlockGenusMember>
-				<BlockGenusMember>set-number-var</BlockGenusMember>
-<!--
-				<BlockGenusMember>set-variable</BlockGenusMember>
-				<BlockGenusMember>variable</BlockGenusMember>
--->				
-			</BlockDrawer>
-
 			<BlockDrawer name="Control" type="facetory" is-open="yes" button-color="252 203 125">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
@@ -697,6 +664,10 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>digital-low</BlockGenusMember>
 				<BlockGenusMember>true</BlockGenusMember>
 				<BlockGenusMember>false</BlockGenusMember>
+				<BlockGenusMember>digital-var</BlockGenusMember>
+				<BlockGenusMember>number-var</BlockGenusMember>
+				<BlockGenusMember>set-digital-var</BlockGenusMember>
+				<BlockGenusMember>set-number-var</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="114 147 71" name="Operators" type="factory">
@@ -725,9 +696,9 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>millis</BlockGenusMember>
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="255 255 255" name="brick" type="factory">
+			<BlockDrawer button-color="255 255 255" name="Bricks" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
-				<BlockGenusMember>Tinker_Servo</BlockGenusMember>
+				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->

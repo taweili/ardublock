@@ -21,15 +21,13 @@ public class OpenButtonListener implements ActionListener
 	{
 		try
 		{
-			WorkspaceController workspaceController = context.getWorkspaceController();
-			
 			JFileChooser fileChooser = new JFileChooser();
 			fileChooser.showOpenDialog(null);
 			File savedFile = fileChooser.getSelectedFile();
 			
-			
-
-			workspaceController.loadProject(savedFile.getAbsolutePath(), context.getArdublockLangPath());
+			WorkspaceController workspaceController = context.getWorkspaceController();
+			workspaceController.loadFreshWorkspace();
+			workspaceController.loadProjectFromPath(savedFile.getAbsolutePath());
 		}
 		catch (Exception ex)
 		{
