@@ -25,15 +25,15 @@ public class SaveButtonListener implements ActionListener
 		{
 			WorkspaceController workspaceController = context.getWorkspaceController();
 			
-			Workspace workspace = Workspace.getInstance();
 			String saveString;
 			//saveString = workspace.getSaveString();
 			saveString = workspaceController.getSaveString();
 			
-			
 			JFileChooser fileChooser = new JFileChooser();
 			
-			fileChooser.showSaveDialog(workspace);
+			//How to get the ArdublockFrame?
+			fileChooser.showSaveDialog(null);
+			
 			File saveFile = fileChooser.getSelectedFile();
 			saveFile.createNewFile();
 			FileOutputStream fos = new FileOutputStream(saveFile);

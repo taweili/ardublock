@@ -38,12 +38,9 @@ public class Context
 	private WorkspaceController workspaceController;
 	private String ardublockLangPath;
 	private Element ardublockLangRoot;
-	private Page ardublockPage;
 	
 	private Context() 
 	{
-		workspaceController = new WorkspaceController();
-		
 		ardublockLangPath = this.getClass().getResource(Configuration.ARDUBLOCK_LANG_PATH).getFile();
 		System.out.println("arudblockLangPath: " + ardublockLangPath);
 		
@@ -69,8 +66,12 @@ public class Context
 			throw new ArdublockStartupException();
 		}
 		
-		ardublockPage = new Page("Ardublock");
-		ardublockPage.setPixelWidth(800);
+		workspaceController = new WorkspaceController();
+		workspaceController.resetWorkspace();
+		workspaceController.resetLanguage();
+		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(Configuration.LANG_DTD_PATH));
+		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(Configuration.ARDUBLOCK_LANG_PATH));
+		workspaceController.loadFreshWorkspace();
 	}
 
 	public WorkspaceController getWorkspaceController() {
@@ -84,9 +85,4 @@ public class Context
 	public String getArdublockLangPath() {
 		return ardublockLangPath;
 	}
-
-	public Page getArdublockPage() {
-		return ardublockPage;
-	}
-	
 }
