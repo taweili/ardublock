@@ -527,7 +527,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_LED.png</FileLocation>
+					<FileLocation>com/ardublock/block/Tinker_LED.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -546,7 +546,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_Mosfet.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/Tinker_Mosfet.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -565,7 +565,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_Relay.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/Tinker_Relay.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -584,7 +584,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_Servo.png</FileLocation>
+					<FileLocation>com/ardublock/block/Tinker_Servo.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -601,7 +601,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_Button.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/Tinker_Button.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -619,7 +619,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>/home/heqichen/my/project/ardublock/20110820/ardublock/src/main/resources/com/ardublock/block/Tinker_Button.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/Tinker_Button.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -727,6 +727,7 @@ BlockGenuses are first loaded.
 			
 			<BlockDrawer button-color="255 255 255" name="brick" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
+				<BlockGenusMember>Tinker_Servo</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->
