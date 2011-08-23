@@ -3,11 +3,12 @@ package com.ardublock.translator.block;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.basic.ConstBlock;
 
-public class TrueBlock extends ConstBlock
+public class DigitalOnBlock extends ConstBlock
 {
-	protected TrueBlock(Long blockId, Translator translator)
+	protected DigitalOnBlock(Long blockId, Translator translator)
 	{
 		super(blockId, translator);
-		this.setCode("true");
+		this.setCode("HIGH");
 	}
+
 }

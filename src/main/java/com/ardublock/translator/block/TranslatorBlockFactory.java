@@ -11,6 +11,7 @@ import com.ardublock.translator.block.tinker.TinkerMosfetBlock;
 import com.ardublock.translator.block.tinker.TinkerRelayBlock;
 import com.ardublock.translator.block.tinker.TinkerRotaryPotentiometerBlock;
 import com.ardublock.translator.block.tinker.TinkerThermistorBlock;
+import com.ardublock.translator.block.tinker.TinkerTiltBlock;
 import com.ardublock.translator.block.tinker.TinkerTouchBlock;
 
 public class TranslatorBlockFactory
@@ -55,6 +56,14 @@ public class TranslatorBlockFactory
 		{
 			return new DigitalHighBlock(blockId, translator);
 		}
+		if (blockName.equals("digital-on"))
+		{
+			return new DigitalOnBlock(blockId, translator);
+		}
+		if (blockName.equals("digital-off"))
+		{
+			return new DigitalOffBlock(blockId, translator);
+		}
 		if (blockName.equals("false"))
 		{
 			return new FalseBlock(blockId, translator);
@@ -93,6 +102,10 @@ public class TranslatorBlockFactory
 		if (blockName.equals("servo"))
 		{
 			return new ServoBlock(blockId, translator);
+		}
+		if (blockName.equals("ultrasonic"))
+		{
+			return new UltrasonicBlock(blockId, translator);
 		}
 		
 		//Math
@@ -209,6 +222,10 @@ public class TranslatorBlockFactory
 		if (blockName.equals("Tinker_Touch"))
 		{
 			return new TinkerTouchBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_Tilt"))
+		{
+			return new TinkerTiltBlock(blockId, translator);
 		}
 		
 		

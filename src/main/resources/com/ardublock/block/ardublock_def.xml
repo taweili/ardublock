@@ -52,6 +52,18 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="digital-on" kind="data" color="208 10 16" initlabel="ON">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="digital-off" kind="data" color="208 10 16" initlabel="OFF">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="true" kind="data" initlabel="TRUE" color="208 10 16">
 			<description>
 				<text>
@@ -104,7 +116,9 @@ BlockGenuses are first loaded.
 		 -->
 		 
 		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="loop" is-starter="yes" is-terminator="yes" label-unique="yes">
-			<description>this is the loop of the arduino</description>
+			<description>
+				<text>this is the loop of the arduino</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="do"></BlockConnector>
 			</BlockConnectors>
@@ -133,7 +147,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169" initlabel="digital pin">
-			<description>Read digital value from pin</description>
+			<description>
+				<text>Read digital value from pin</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
 					<DefaultArg genus-name="number" label="1"/>
@@ -143,7 +159,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		<BlockGenus name="pin-read-analog" kind="data" color="77 191 169" initlabel="analog pin">
-			<description>Read analog value from pin</description>
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
 					<DefaultArg genus-name="number" label="1"/>
@@ -153,7 +171,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		<BlockGenus name="pin-write-digital" kind="command" color="77 191 169" initlabel="set digital pin">
-			<description>write digital to pin</description>
+			<description>
+				<text>write digital to pin</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
 					<DefaultArg genus-name="number" label="1"/>
@@ -165,7 +185,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		<BlockGenus name="set-digital-var" kind="command" color="255 0 0" initlabel="set digital var">
-			<description>write digital to pin</description>
+			<description>
+				<text>write digital to pin</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="var"></BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket"></BlockConnector>
@@ -173,7 +195,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		<BlockGenus name="set-number-var" kind="command" color="255 0 0" initlabel="set number var">
-			<description>write digital to pin</description>
+			<description>
+				<text>write digital to pin</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="var"></BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket"></BlockConnector>
@@ -181,7 +205,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 			
 		<BlockGenus name="pin-write-analog" kind="command" color="77 191 169" initlabel="set analog pin">
-			<description>write analog to pin</description>
+			<description>
+				<text>write analog to pin</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
 					<DefaultArg genus-name="number" label="1"/>
@@ -193,7 +219,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		<BlockGenus name="servo" kind="command" color="77 191 169" initlabel="Servo">
-			<description>set a pin to pwm</description>
+			<description>
+				<text>set a pin to pwm</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
@@ -202,6 +230,26 @@ BlockGenuses are first loaded.
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="ultrasonic" kind="data" color="77 191 169" initlabel="ultrasonic">
+			<description>
+				<text>Ultrasonic distance sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="cm" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="trigger #">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="echo #">
+					<DefaultArg genus-name="number" label="2"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/ultrasonic.jpg</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		
 		<BlockGenus name="if" kind="command" initlabel="if" color="255 221 0">
@@ -278,10 +326,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports true if one or both of the two conditions are true.
 				</text>
-				<arg-description n="1" doc-name="condition 1">
+				<arg-description n="1" name="conidtion 1" doc-name="condition 1">
 					The first condition that must be true.
 				</arg-description>
-				<arg-description n="2" doc-name="condition 2">
+				<arg-description n="2" name="condition 2" doc-name="condition 2">
 					The second condition that must be true.
 				</arg-description>
 			</description>
@@ -504,7 +552,7 @@ BlockGenuses are first loaded.
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
-					<DefaultArg genus-name="digital-high" label="ON"/>
+					<DefaultArg genus-name="digital-on" label="ON"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -733,7 +781,7 @@ BlockGenuses are first loaded.
 				<text>Tinker Tilt</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -777,11 +825,15 @@ BlockGenuses are first loaded.
 			<FamilyMember>cos</FamilyMember>
 			<FamilyMember>tan</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>digital-on</FamilyMember>
+			<FamilyMember>digital-off</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>	
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no" >
-			<BlockDrawer name="Control" type="facetory" is-open="yes" button-color="252 203 125">
+			<BlockDrawer name="Control" type="factory" is-open="yes" button-color="252 203 125">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
@@ -794,6 +846,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 				<BlockGenusMember>servo</BlockGenusMember>
+				<BlockGenusMember>ultrasonic</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="182 85 52" name="Number/Constants" type="factory">

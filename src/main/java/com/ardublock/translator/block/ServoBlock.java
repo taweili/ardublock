@@ -38,9 +38,9 @@ public class ServoBlock extends TranslatorBlock
 		}
 		
 		String ret = servoName + ".write( " + translatorBlock.toCode() + " );\n";
-		this.addHeaderFile("Servo.h");
-		this.addDefinitionCommand("Servo " + servoName + ";");
-		this.addSetupCommand(servoName + ".attach(" + pinNumber + ");");
+		translator.addHeaderFile("Servo.h");
+		translator.addDefinitionCommand("Servo " + servoName + ";");
+		translator.addSetupCommand(servoName + ".attach(" + pinNumber + ");");
 		return ret;
 	}
 

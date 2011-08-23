@@ -17,6 +17,9 @@ public class Translator
 	private Set<String> setupSet;
 	private BlockAdaptor blockAdaptor;
 	
+	private Set<Long> inputPinSet;
+	private Set<Long> outputPinSet;
+	
 	public Translator()
 	{
 		reset();
@@ -52,6 +55,22 @@ public class Translator
 		}
 		
 		headerCommand = headerCommand + "void setup()\n{\n";
+		
+		if (!inputPinSet.isEmpty())
+		{
+			for (Long pinNumber:inputPinSet)
+			{
+				headerCommand = headerCommand + "pinMode( " + pinNumber + " , INPUT);\n";
+			}
+		}
+		if (!outputPinSet.isEmpty())
+		{
+			for (Long pinNumber:outputPinSet)
+			{
+				headerCommand = headerCommand + "pinMode( " + pinNumber + " , OUTPUT);\n";
+			}
+		}
+		
 		if (!setupSet.isEmpty())
 		{
 			for (String command:setupSet)
@@ -59,6 +78,7 @@ public class Translator
 				headerCommand = headerCommand + command + "\n";
 			}
 		}
+		
 		headerCommand = headerCommand + "}\n\n";
 		
 		String program = headerCommand + loopCommand;
@@ -75,6 +95,9 @@ public class Translator
 		headerFileSet = new HashSet<String>();
 		definitionSet = new HashSet<String>();
 		setupSet = new HashSet<String>();
+		inputPinSet = new HashSet<Long>();
+		outputPinSet = new HashSet<Long>();
+		
 		blockAdaptor = buildOpenBlocksAdaptor();
 	}
 	
@@ -96,5 +119,15 @@ public class Translator
 	public void addDefinitionCommand(String command)
 	{
 		definitionSet.add(command);
+	}
+	
+	public void addInputPin(Long pinNumber)
+	{
+		inputPinSet.add(pinNumber);
+	}
+	
+	public void addOutputPin(Long pinNumber)
+	{
+		outputPinSet.add(pinNumber);
 	}
 }

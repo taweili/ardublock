@@ -11,7 +11,7 @@ abstract public class TranslatorBlock
 	
 	private BlockAdaptor blockAdaptor;
 	
-	private Translator translator;
+	protected Translator translator;
 	
 	protected String comment;
 	
@@ -37,23 +37,6 @@ abstract public class TranslatorBlock
 		return blockAdaptor.getTranslatorBlockAtSocket(this.translator, blockId, i);
 	}
 	
-	protected void addHeaderFile(String headerFile)
-	{
-		Translator translator = getTranslator();
-		translator.addHeaderFile(headerFile);
-	}
-	
-	protected void addSetupCommand(String command)
-	{
-		Translator translator = getTranslator();
-		translator.addSetupCommand(command);
-	}
-	
-	protected void addDefinitionCommand(String command)
-	{
-		Translator translator = getTranslator();
-		translator.addDefinitionCommand(command);
-	}
 	
 	protected void setComment(String comment)
 	{

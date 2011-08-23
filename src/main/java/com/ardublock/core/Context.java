@@ -42,7 +42,6 @@ public class Context
 	private Context() 
 	{
 		ardublockLangPath = this.getClass().getResource(Configuration.ARDUBLOCK_LANG_PATH).getFile();
-		System.out.println("arudblockLangPath: " + ardublockLangPath);
 		
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder documentBuilder;
@@ -50,7 +49,6 @@ public class Context
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			try {
 				ardublockLangRoot = documentBuilder.parse(ardublockLangPath).getDocumentElement();
-				System.out.println("It's Ok!!!");
 			} catch (SAXException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
