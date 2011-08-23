@@ -16,7 +16,7 @@ import com.ardublock.translator.block.tinker.TinkerTouchBlock;
 
 public class TranslatorBlockFactory
 {
-	public TranslatorBlock buildTranslatorBlock(Translator translator, Long blockId, String blockName, String label)
+	public TranslatorBlock buildTranslatorBlock(Translator translator, Long blockId, String blockName, String codePrefix, String codeSuffix, String label)
 	{
 		System.out.println("block name : " + blockName + " captured");
 		
@@ -76,10 +76,23 @@ public class TranslatorBlockFactory
 		{
 			return new WhileBlock(blockId, translator);
 		}
+		if (blockName.equals("repeat_times"))
+		{
+			return new RepeatTimesBlock(blockId, translator);
+		}
 		
+		//const number
 		if (blockName.equals("number"))
 		{
-			return new NumberBlock(blockId, label, translator);
+			return new NumberBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("message"))
+		{
+			return new MessageBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("glue_sn"))
+		{
+			return new GlueSNBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		//Pin
@@ -174,7 +187,10 @@ public class TranslatorBlockFactory
 		{
 			return new RandomBlock(blockId, translator);
 		}
-		
+		if (blockName.equals("serial_println"))
+		{
+			return new SerialPrintlnBlock(blockId, translator);
+		}
 		
 		//brick
 		if (blockName.equals("Tinker_LED"))

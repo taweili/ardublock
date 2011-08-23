@@ -12,6 +12,8 @@ import com.ardublock.translator.block.TranslatorBlockFactory;
 
 public class Translator
 {
+	private static final String variablePrefix = "__ARDUBLOCK_VARIABLE_AUTO_PREFIX_";
+		
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
 	private Set<String> setupSet;
@@ -20,6 +22,7 @@ public class Translator
 	private Set<Long> inputPinSet;
 	private Set<Long> outputPinSet;
 	
+	private int variableCnt;
 	public Translator()
 	{
 		reset();
@@ -32,7 +35,7 @@ public class Translator
 		TranslatorBlockFactory translatorBlockFactory = new TranslatorBlockFactory();
 		Block block = Block.getBlock(blockId);
 		
-		TranslatorBlock rootTranslatorBlock = translatorBlockFactory.buildTranslatorBlock(this, blockId, block.getGenusName(), block.getBlockLabel());
+		TranslatorBlock rootTranslatorBlock = translatorBlockFactory.buildTranslatorBlock(this, blockId, block.getGenusName(), block.getBlockLabel(), "", "");
 		
 		String loopCommand = rootTranslatorBlock.toCode();
 		String headerCommand = "";
@@ -99,6 +102,8 @@ public class Translator
 		outputPinSet = new HashSet<Long>();
 		
 		blockAdaptor = buildOpenBlocksAdaptor();
+		
+		variableCnt = 0;
 	}
 	
 	private BlockAdaptor buildOpenBlocksAdaptor()
@@ -129,5 +134,11 @@ public class Translator
 	public void addOutputPin(Long pinNumber)
 	{
 		outputPinSet.add(pinNumber);
+	}
+	
+	public String buildVariableName()
+	{
+		variableCnt = variableCnt + 1;
+		return variablePrefix + variableCnt;
 	}
 }

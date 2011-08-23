@@ -83,10 +83,29 @@ BlockGenuses are first loaded.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="message" kind="data" color="0 0 255" initlabel="message" editable-label="yes">
+			<description>
+				<text>string message</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug"/>
+				<BlockConnector connector-type="string" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="glue_sn" kind="data" color="127 127 127" initlabel="glue">
+			<description>
+				<text>glue number to string</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
 		
 		<!-- Basic -->
 		
@@ -307,6 +326,18 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="repeat_times" kind="command" color="255 221 0" initlabel="repeat">
+			<description>
+				<text>repeat</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="5"/>
+				</BlockConnector>
+				<BlockConnector connector-type="cmd" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="and" kind="data" initlabel="and" color="149 193 31">
 			<description>
 				<text>
@@ -326,12 +357,6 @@ BlockGenuses are first loaded.
 				<text>
 					Reports true if one or both of the two conditions are true.
 				</text>
-				<arg-description n="1" name="conidtion 1" doc-name="condition 1">
-					The first condition that must be true.
-				</arg-description>
-				<arg-description n="2" name="condition 2" doc-name="condition 2">
-					The second condition that must be true.
-				</arg-description>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="boolean"></BlockConnector>
@@ -345,10 +370,6 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the opposite of <arg n="1"/>.
 				</text>
-				<arg-description n="1" doc-name="boolean">
-					The boolean (<em>true</em> or <em>false</em>) that should be inverted.
-				</arg-description>
-
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="boolean"></BlockConnector>
@@ -364,10 +385,6 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the sum of two numbers (<arg n="1"/> + <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left number">
-				</arg-description>
-				<arg-description n="2" doc-name="right number">
-				</arg-description>
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -381,10 +398,6 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the difference of two numbers (<arg n="1"/> - <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left number">
-				</arg-description>
-				<arg-description n="2" doc-name="right number">
-				</arg-description>
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -398,10 +411,6 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the product of two numbers (<arg n="1"/> x <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left value">
-				</arg-description>
-				<arg-description n="2" doc-name="right value">
-				</arg-description>
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -415,10 +424,6 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the quotient of  two numbers (<arg n="1"/> ÷ <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left value">
-				</arg-description>
-				<arg-description n="2" doc-name="right value">
-				</arg-description>
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
@@ -541,6 +546,16 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="serial_println" kind="command" color="142 160 210" initlabel="Serial println">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		
 		<!-- brick -->
 		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255" initlabel="Tinker LED">
@@ -792,8 +807,6 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		heqichen TODO
-		
 	</BlockGenuses>
 	
 	<BlockFamilies>
@@ -838,6 +851,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
+				<BlockGenusMember>repeat_times</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="29 152 155" name="Pin" type="factory">
@@ -859,6 +873,8 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>number-var</BlockGenusMember>
 				<BlockGenusMember>set-digital-var</BlockGenusMember>
 				<BlockGenusMember>set-number-var</BlockGenusMember>
+				<BlockGenusMember>message</BlockGenusMember>
+				<BlockGenusMember>glue_sn</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="114 147 71" name="Operators" type="factory">
@@ -885,6 +901,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>random</BlockGenusMember>
 				<BlockGenusMember>delayMicroseconds</BlockGenusMember>
 				<BlockGenusMember>millis</BlockGenusMember>
+				<BlockGenusMember>serial_println</BlockGenusMember>
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 255 255" name="Bricks" type="factory">

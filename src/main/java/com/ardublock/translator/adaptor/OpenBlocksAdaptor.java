@@ -15,7 +15,7 @@ public class OpenBlocksAdaptor implements BlockAdaptor
 		translatorBlockFactory = new TranslatorBlockFactory();
 	}
 	
-	public TranslatorBlock nextTranslatorBlock(Translator translator, Long blockId)
+	public TranslatorBlock nextTranslatorBlock(Translator translator, Long blockId, String codePrefix, String codeSuffix)
 	{
 		Block block = Block.getBlock(blockId);
 		blockId = block.getAfterBlockID();
@@ -26,12 +26,12 @@ public class OpenBlocksAdaptor implements BlockAdaptor
 		else
 		{
 			block = Block.getBlock(blockId);
-			TranslatorBlock translatorBlock = translatorBlockFactory.buildTranslatorBlock(translator, blockId, block.getGenusName(), block.getBlockLabel());
+			TranslatorBlock translatorBlock = translatorBlockFactory.buildTranslatorBlock(translator, blockId, block.getGenusName(), codePrefix, codeSuffix, block.getBlockLabel());
 			return translatorBlock;
 		}
 	}
 	
-	public TranslatorBlock getTranslatorBlockAtSocket(Translator translator, Long blockId, int i)
+	public TranslatorBlock getTranslatorBlockAtSocket(Translator translator, Long blockId, int i, String codePrefix, String codeSuffix)
 	{
 		Block block = Block.getBlock(blockId);
 		if (block == null)
@@ -48,7 +48,8 @@ public class OpenBlocksAdaptor implements BlockAdaptor
 		else
 		{
 			block = Block.getBlock(blockId);
-			TranslatorBlock translatorBlock = translatorBlockFactory.buildTranslatorBlock(translator, blockId, block.getGenusName(), block.getBlockLabel());
+			System.out.println("name: " + block.getGenusName() + "      | label: " + block.getBlockLabel());
+			TranslatorBlock translatorBlock = translatorBlockFactory.buildTranslatorBlock(translator, blockId, block.getGenusName(), codePrefix, codeSuffix, block.getBlockLabel());
 			return translatorBlock;
 		}
 		

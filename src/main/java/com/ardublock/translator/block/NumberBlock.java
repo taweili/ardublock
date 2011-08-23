@@ -4,16 +4,14 @@ import com.ardublock.translator.Translator;
 
 public class NumberBlock extends TranslatorBlock
 {
-	private String label;
-	protected NumberBlock(Long blockId, String label, Translator translator)
+	protected NumberBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
-		this.label = label;
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	public String toCode()
 	{
-		return label;
+		return codePrefix + label + codeSuffix;
 	}
 
 }
