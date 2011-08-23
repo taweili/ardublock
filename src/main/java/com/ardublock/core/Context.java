@@ -1,6 +1,7 @@
 package com.ardublock.core;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -18,8 +19,6 @@ public class Context
 {
 	private static Context singletonContext;
 	
-	
-	
 	public static Context getContext()
 	{
 		if (singletonContext == null)
@@ -36,36 +35,9 @@ public class Context
 	}
 	
 	private WorkspaceController workspaceController;
-	private String ardublockLangPath;
-	private Element ardublockLangRoot;
 	
 	private Context() 
 	{
-		ardublockLangPath = this.getClass().getResource(Configuration.ARDUBLOCK_LANG_PATH).getFile();
-		System.out.println("arudblockLangPath: " + ardublockLangPath);
-		
-		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder documentBuilder;
-		try {
-			documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			try {
-				ardublockLangRoot = documentBuilder.parse(ardublockLangPath).getDocumentElement();
-				System.out.println("It's Ok!!!");
-			} catch (SAXException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				throw new ArdublockStartupException();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				throw new ArdublockStartupException();
-			}
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			throw new ArdublockStartupException();
-		}
-		
 		workspaceController = new WorkspaceController();
 		workspaceController.resetWorkspace();
 		workspaceController.resetLanguage();
@@ -76,13 +48,5 @@ public class Context
 
 	public WorkspaceController getWorkspaceController() {
 		return workspaceController;
-	}
-
-	public Element getArdublockLangRoot() {
-		return ardublockLangRoot;
-	}
-
-	public String getArdublockLangPath() {
-		return ardublockLangPath;
 	}
 }
