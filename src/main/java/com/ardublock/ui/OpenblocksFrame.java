@@ -5,18 +5,9 @@ import java.awt.Dimension;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-import org.w3c.dom.Element;
-
 import com.ardublock.core.Context;
 
-import edu.mit.blocks.codeblocks.BlockConnectorShape;
-import edu.mit.blocks.codeblocks.BlockGenus;
-import edu.mit.blocks.codeblocks.BlockLinkChecker;
-import edu.mit.blocks.codeblocks.CommandRule;
-import edu.mit.blocks.codeblocks.SocketRule;
 import edu.mit.blocks.controller.WorkspaceController;
-import edu.mit.blocks.workspace.Page;
-import edu.mit.blocks.workspace.Workspace;
 
 public class OpenblocksFrame extends JFrame
 {

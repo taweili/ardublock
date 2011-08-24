@@ -610,7 +610,7 @@ BlockGenuses are first loaded.
 				<text>generate a random number less than the number</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -656,6 +656,47 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket">
 					<DefaultArg genus-name="number" label="255"/>
 				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="wire_read" kind="data" color="142 160 210" initlabel="I2C Read">
+			<description>
+				<text>read data from i2c</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="device address">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="register address">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="wire_write" kind="command" color="142 160 210" initlabel="I2C Write">
+			<description>
+				<text>write data via I2C</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="device address">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="register address">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="value">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="wire_isread" kind="data" color="142 160 210" initlabel="I2C read ok?">
+			<description>
+				<text>is last read from I2C success?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -1060,6 +1101,9 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>serial_println</BlockGenusMember>
 				<BlockGenusMember>map_common</BlockGenusMember>
 				<BlockGenusMember>map</BlockGenusMember>
+				<BlockGenusMember>wire_write</BlockGenusMember>
+				<BlockGenusMember>wire_read</BlockGenusMember>
+				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 255 255" name="Bricks" type="factory">

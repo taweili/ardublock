@@ -10,7 +10,6 @@ import javax.swing.JFileChooser;
 import com.ardublock.core.Context;
 
 import edu.mit.blocks.controller.WorkspaceController;
-import edu.mit.blocks.workspace.Workspace;
 
 public class SaveButtonListener implements ActionListener
 {

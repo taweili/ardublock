@@ -1,19 +1,6 @@
 package com.ardublock.core;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.w3c.dom.Element;
-import org.xml.sax.SAXException;
-
-import com.ardublock.core.exception.ArdublockStartupException;
-
 import edu.mit.blocks.controller.WorkspaceController;
-import edu.mit.blocks.workspace.Page;
 
 public class Context
 {

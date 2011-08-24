@@ -236,6 +236,18 @@ public class TranslatorBlockFactory
 		{
 			return new MillisBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
+		if (blockName.equals("wire_read"))
+		{
+			return new WireReadBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("wire_write"))
+		{
+			return new WireWriteBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("wire_isread"))
+		{
+			return new WireIsReadBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
 		
 		//brick
 		if (blockName.equals("Tinker_LED"))
