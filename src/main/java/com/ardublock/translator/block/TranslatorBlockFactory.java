@@ -6,10 +6,13 @@ import com.ardublock.translator.block.tinker.TinkerButtonBlock;
 import com.ardublock.translator.block.tinker.TinkerHallBlock;
 import com.ardublock.translator.block.tinker.TinkerLDRBlock;
 import com.ardublock.translator.block.tinker.TinkerLEDBlock;
+import com.ardublock.translator.block.tinker.TinkerLEDPwmBlock;
 import com.ardublock.translator.block.tinker.TinkerLinearPotentiometerBlock;
 import com.ardublock.translator.block.tinker.TinkerMosfetBlock;
+import com.ardublock.translator.block.tinker.TinkerMosfetPwmBlock;
 import com.ardublock.translator.block.tinker.TinkerRelayBlock;
 import com.ardublock.translator.block.tinker.TinkerRotaryPotentiometerBlock;
+import com.ardublock.translator.block.tinker.TinkerServoBlock;
 import com.ardublock.translator.block.tinker.TinkerThermistorBlock;
 import com.ardublock.translator.block.tinker.TinkerTiltBlock;
 import com.ardublock.translator.block.tinker.TinkerTouchBlock;
@@ -143,6 +146,32 @@ public class TranslatorBlockFactory
 		{
 			return new ModuloBlock(blockId, translator);
 		}
+		
+		if (blockName.equals("greater"))
+		{
+			return new GreaterBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("less"))
+		{
+			return new LessBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("equal"))
+		{
+			return new EqualBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("greater_equal"))
+		{
+			return new GreaterEqualBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("less_equal"))
+		{
+			return new LessEqualBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("not_equal"))
+		{
+			return new NotEqualBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		
 		if (blockName.equals("min"))
 		{
 			return new MinBlock(blockId, translator);
@@ -190,6 +219,22 @@ public class TranslatorBlockFactory
 		if (blockName.equals("serial_println"))
 		{
 			return new SerialPrintlnBlock(blockId, translator);
+		}
+		if (blockName.equals("map_common"))
+		{
+			return new MapCommonBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("map"))
+		{
+			return new MapBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("delay_microseconds"))
+		{
+			return new DelayMicrosecondsBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("millis"))
+		{
+			return new MillisBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		//brick
@@ -242,6 +287,18 @@ public class TranslatorBlockFactory
 		if (blockName.equals("Tinker_Tilt"))
 		{
 			return new TinkerTiltBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_LED_pwm"))
+		{
+			return new TinkerLEDPwmBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_Mosfet_pwm"))
+		{
+			return new TinkerMosfetPwmBlock(blockId, translator);
+		}
+		if (blockName.equals("Tinker_Servo"))
+		{
+			return new TinkerServoBlock(blockId, translator);
 		}
 		
 		

@@ -256,7 +256,7 @@ BlockGenuses are first loaded.
 				<text>Ultrasonic distance sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" label="cm" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="plug" label="cm"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="trigger #">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -337,6 +337,8 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<!-- operator -->
 		
 		<BlockGenus name="and" kind="data" initlabel="and" color="149 193 31">
 			<description>
@@ -456,6 +458,72 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="greater" kind="function" color="149 193 31" initlabel="&gt;">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="less" kind="function" color="149 193 31" initlabel="&lt;">
+			<description>
+				<text>is upper number less then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="equal" kind="function" color="149 193 31" initlabel="=">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="greater_equal" kind="function" color="149 193 31" initlabel="&gt;=">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="less_equal" kind="function" color="149 193 31" initlabel="&lt;=">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="not_equal" kind="function" color="149 193 31" initlabel="!=">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="abs" kind="function" color="149 193 31" initlabel="abs">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -514,7 +582,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="delayMicroseconds" kind="command" color="142 160 210" initlabel="delayMicroseconds">
+		<BlockGenus name="delay_microseconds" kind="command" color="142 160 210" initlabel="delayMicroseconds">
 			<description>
 				<text>program delay in x milliseconds</text>
 			</description>
@@ -557,6 +625,40 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="map_common" kind="data" color="142 160 210" initlabel="map [0, 1024] to [0, 255]">
+			<description>
+				<text>map value from [0, 1023] to [0, 255]</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="value">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="map" kind="" color="142 160 210" initlabel="map">
+			<description>
+				<text>map</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="value" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="from">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1023"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="to">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="255"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<!-- brick -->
 		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255" initlabel="Tinker LED">
 			<description>
@@ -577,6 +679,25 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="Tinker_LED_pwm" kind="command" color="255 255 255" initlabel="Tinker LED">
+			<description>
+				<text>TinkerKit LED</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="level">
+					<DefaultArg genus-name="number" label="255"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_LED.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 		<BlockGenus name="Tinker_Mosfet" kind="command" color="255 255 255" initlabel="Tinker Mosfet">
 			<description>
 				<text>TinkerKit Mosfet</text>
@@ -587,6 +708,25 @@ BlockGenuses are first loaded.
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
 					<DefaultArg genus-name="digital-high" label="HIGH"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/Tinker_Mosfet.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="Tinker_Mosfet_pwm" kind="command" color="255 255 255" initlabel="Tinker Mosfet">
+			<description>
+				<text>TinkerKit Mosfet</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="level">
+					<DefaultArg genus-name="number" label="255"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -796,7 +936,7 @@ BlockGenuses are first loaded.
 				<text>Tinker Tilt</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -832,6 +972,14 @@ BlockGenuses are first loaded.
 		<BlockFamily>
 			<FamilyMember>min</FamilyMember>
 			<FamilyMember>max</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>greater</FamilyMember>
+			<FamilyMember>less</FamilyMember>
+			<FamilyMember>equal</FamilyMember>
+			<FamilyMember>greater_equal</FamilyMember>
+			<FamilyMember>less_equal</FamilyMember>
+			<FamilyMember>not_equal</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>sin</FamilyMember>
@@ -889,6 +1037,14 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>modulo</BlockGenusMember>
 				<BlockGenusMember>min</BlockGenusMember>
 				<BlockGenusMember>max</BlockGenusMember>
+				
+				<BlockGenusMember>greater</BlockGenusMember>
+				<BlockGenusMember>less</BlockGenusMember>
+				<BlockGenusMember>equal</BlockGenusMember>
+				<BlockGenusMember>greater_equal</BlockGenusMember>
+				<BlockGenusMember>less_equal</BlockGenusMember>
+				<BlockGenusMember>not_equal</BlockGenusMember>
+				
 				<BlockGenusMember>abs</BlockGenusMember>
 				<BlockGenusMember>pow</BlockGenusMember>
 				<BlockGenusMember>sqrt</BlockGenusMember>
@@ -899,9 +1055,11 @@ BlockGenuses are first loaded.
 			<BlockDrawer button-color="95 120 132" name="Utilities" type="factory">
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>random</BlockGenusMember>
-				<BlockGenusMember>delayMicroseconds</BlockGenusMember>
+				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>serial_println</BlockGenusMember>
+				<BlockGenusMember>map_common</BlockGenusMember>
+				<BlockGenusMember>map</BlockGenusMember>
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 255 255" name="Bricks" type="factory">
@@ -909,6 +1067,8 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
 				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
 				<BlockGenusMember>Tinker_Button</BlockGenusMember>
+				<BlockGenusMember>Tinker_LED_pwm</BlockGenusMember>
+				<BlockGenusMember>Tinker_Mosfet_pwm</BlockGenusMember>
 				<BlockGenusMember>Tinker_Accmeter</BlockGenusMember>
 				<BlockGenusMember>Tinker_Hall</BlockGenusMember>
 				<BlockGenusMember>Tinker_LDR</BlockGenusMember>

@@ -2,6 +2,7 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.adaptor.BlockAdaptor;
+import com.ardublock.translator.block.exception.SocketNullException;
 
 abstract public class TranslatorBlock
 {
@@ -72,6 +73,21 @@ abstract public class TranslatorBlock
 	protected TranslatorBlock getTranslatorBlockAtSocket(int i, String codePrefix, String codeSuffix)
 	{
 		return blockAdaptor.getTranslatorBlockAtSocket(this.translator, blockId, i, codePrefix, codeSuffix);
+	}
+	
+	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i) throws SocketNullException
+	{
+		return this.getTranslatorBlockAtSocket(i, "", "");
+	}
+	
+	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i, String codePrefix, String codeSuffix) throws SocketNullException
+	{
+		TranslatorBlock translatorBlock = blockAdaptor.getTranslatorBlockAtSocket(this.translator, blockId, i, codePrefix, codeSuffix);
+		if (translatorBlock == null)
+		{
+			throw new SocketNullException();
+		}
+		return translatorBlock;
 	}
 	
 	protected void setComment(String comment)
