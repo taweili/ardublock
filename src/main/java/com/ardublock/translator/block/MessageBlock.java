@@ -13,7 +13,9 @@ public class MessageBlock extends TranslatorBlock
 	{
 		//TODO take out special character
 		String ret;
-		ret = codePrefix + "\"" + label + "\"" + codeSuffix;
+		ret = label.replaceAll("\\\\", "\\\\\\\\");
+		ret = ret.replaceAll("\"", "\\\\\"");
+		ret = codePrefix + "\"" + ret + "\"" + codeSuffix;
 		TranslatorBlock translatorBlock = this.getTranslatorBlockAtSocket(0, codePrefix, codeSuffix);
 		if (translatorBlock != null)
 		{
