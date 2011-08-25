@@ -3,9 +3,9 @@ package com.ardublock.translator.block;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.BlockException;
 
-public class SetterVariableNumberBlock extends TranslatorBlock
+public class SetterVariableDigitalBlock extends TranslatorBlock
 {
-	protected SetterVariableNumberBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	protected SetterVariableDigitalBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -13,9 +13,9 @@ public class SetterVariableNumberBlock extends TranslatorBlock
 	public String toCode()
 	{
 		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
-		if (!(tb instanceof VariableNumberBlock))
+		if (!(tb instanceof VariableDigitalBlock))
 		{
-			throw new BlockException(blockId, "digital var must be digital var");
+			throw new BlockException(blockId, "var must be var");
 		}
 		
 		String ret = tb.toCode();

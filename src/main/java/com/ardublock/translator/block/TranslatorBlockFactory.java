@@ -131,6 +131,14 @@ public class TranslatorBlockFactory
 		{
 			return new VariableNumberBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
+		if (blockName.equals("setter_variable_digital"))
+		{
+			return new SetterVariableDigitalBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("variable_digital"))
+		{
+			return new VariableDigitalBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
 		
 		//Math
 

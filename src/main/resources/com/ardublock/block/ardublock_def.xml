@@ -118,18 +118,6 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="digital-var" kind="data" initlabel="digital var name" editable-label="yes" is-label-value="yes" color="255 0 255">
-			<description>
-				<text>
-					Digital Var
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
-		
 		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169" initlabel="digital pin">
 			<description>
 				<text>Read digital value from pin</text>
@@ -168,16 +156,6 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="set-digital-var" kind="command" color="255 0 0" initlabel="set digital var">
-			<description>
-				<text>write digital to pin</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="var"></BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
 		<BlockGenus name="setter_variable_number" kind="command" color="255 0 0" initlabel="set number variable">
 			<description>
 				<text>set a number variable</text>
@@ -200,6 +178,31 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="setter_variable_digital" kind="command" color="255 0 0" initlabel="set digital var">
+			<description>
+				<text>write digital to pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="variable">
+					<DefaultArg genus-name="variable_digital" label="variable name"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="value">
+					<DefaultArg genus-name="digital-high" label="HIGH"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="variable_digital" kind="data" initlabel="digital var name" editable-label="yes" is-label-value="yes" color="255 0 255">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 			
@@ -1038,10 +1041,10 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>digital-low</BlockGenusMember>
 				<BlockGenusMember>true</BlockGenusMember>
 				<BlockGenusMember>false</BlockGenusMember>
-				<BlockGenusMember>digital-var</BlockGenusMember>
 				<BlockGenusMember>variable_number</BlockGenusMember>
-				<BlockGenusMember>set-digital-var</BlockGenusMember>
+				<BlockGenusMember>variable_digital</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
+				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 			</BlockDrawer>
