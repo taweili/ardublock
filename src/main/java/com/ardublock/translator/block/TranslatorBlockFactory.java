@@ -123,6 +123,14 @@ public class TranslatorBlockFactory
 		{
 			return new UltrasonicBlock(blockId, translator);
 		}
+		if (blockName.equals("setter_variable_number"))
+		{
+			return new SetterVariableNumberBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("variable_number"))
+		{
+			return new VariableNumberBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
 		
 		//Math
 

@@ -1,6 +1,8 @@
 package com.ardublock.translator;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import edu.mit.blocks.codeblocks.Block;
@@ -21,6 +23,9 @@ public class Translator
 	
 	private Set<Long> inputPinSet;
 	private Set<Long> outputPinSet;
+	
+	private Map<String, String> numberVariableSet;
+	private Map<String, String> booleanVariableSet;
 	
 	private int variableCnt;
 	public Translator()
@@ -101,6 +106,9 @@ public class Translator
 		inputPinSet = new HashSet<Long>();
 		outputPinSet = new HashSet<Long>();
 		
+		numberVariableSet = new HashMap<String, String>();
+		booleanVariableSet = new HashMap<String, String>();
+		
 		blockAdaptor = buildOpenBlocksAdaptor();
 		
 		variableCnt = 0;
@@ -140,5 +148,25 @@ public class Translator
 	{
 		variableCnt = variableCnt + 1;
 		return variablePrefix + variableCnt;
+	}
+	
+	public String getNumberVariable(String userVarName)
+	{
+		return numberVariableSet.get(userVarName);
+	}
+	
+	public String getBooleanVariable(String userVarName)
+	{
+		return booleanVariableSet.get(userVarName);
+	}
+	
+	public void addNumberVariable(String userVarName, String internalName)
+	{
+		numberVariableSet.put(userVarName, internalName);
+	}
+	
+	public void addBooleanVariable(String userVarName, String internalName)
+	{
+		booleanVariableSet.put(userVarName, internalName);
 	}
 }

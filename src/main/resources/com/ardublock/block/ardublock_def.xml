@@ -108,31 +108,6 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		<!-- Basic -->
-		
-		<!-- 
-		<BlockGenus name="variable-setter" kind="variable" color="0 0 255" initlabel="var-name" editable-label="yes">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="socket">
-					
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		 -->
-		
-		<BlockGenus name="variable-name" kind="string" color="0 0 255" initlabel="string">
-			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<!-- 
-		<BlockGenus name="variable-getter" kind="command" color="0 0 255" initlabel="set">
-			<BlockConnectors>
-				
-				<BlockConnector connector-type="number" connector-kind="socket" label="var-name" label-editable="yes"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		 -->
 		 
 		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="loop" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
@@ -154,16 +129,6 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="number-var" kind="data" initlabel="number var name" editable-label="yes" is-label-value="yes" color="255 0 255">
-			<description>
-				<text>
-					Digital Var
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
 		
 		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169" initlabel="digital pin">
 			<description>
@@ -213,13 +178,28 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="set-number-var" kind="command" color="255 0 0" initlabel="set number var">
+		<BlockGenus name="setter_variable_number" kind="command" color="255 0 0" initlabel="set number variable">
 			<description>
-				<text>write digital to pin</text>
+				<text>set a number variable</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="var"></BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="variable">
+					<DefaultArg genus-name="variable_number" label="var name"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="value">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="variable_number" kind="data" initlabel="number var name" editable-label="yes" is-label-value="yes" color="255 0 255">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 			
@@ -1059,9 +1039,9 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>true</BlockGenusMember>
 				<BlockGenusMember>false</BlockGenusMember>
 				<BlockGenusMember>digital-var</BlockGenusMember>
-				<BlockGenusMember>number-var</BlockGenusMember>
+				<BlockGenusMember>variable_number</BlockGenusMember>
 				<BlockGenusMember>set-digital-var</BlockGenusMember>
-				<BlockGenusMember>set-number-var</BlockGenusMember>
+				<BlockGenusMember>setter_variable_number</BlockGenusMember>
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 			</BlockDrawer>
