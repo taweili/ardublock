@@ -14,7 +14,7 @@ import com.ardublock.translator.block.TranslatorBlockFactory;
 
 public class Translator
 {
-	private static final String variablePrefix = "__ARDUBLOCK_VARIABLE_AUTO_PREFIX_";
+	private static final String variablePrefix = "_ABVAR_";
 		
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
