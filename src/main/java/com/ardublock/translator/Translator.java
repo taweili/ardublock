@@ -144,12 +144,6 @@ public class Translator
 		outputPinSet.add(pinNumber);
 	}
 	
-	public String buildVariableName()
-	{
-		variableCnt = variableCnt + 1;
-		return variablePrefix + variableCnt;
-	}
-	
 	public String getNumberVariable(String userVarName)
 	{
 		return numberVariableSet.get(userVarName);
@@ -168,5 +162,26 @@ public class Translator
 	public void addBooleanVariable(String userVarName, String internalName)
 	{
 		booleanVariableSet.put(userVarName, internalName);
+	}
+	
+	public String buildVariableName()
+	{
+		return buildVariableName("");
+	}
+	
+	public String buildVariableName(String reference)
+	{
+		variableCnt = variableCnt + 1;
+		String varName = variablePrefix + variableCnt + "_";
+		int i;
+		for (i=0; i<reference.length(); ++i)
+		{
+			char c = reference.charAt(i);
+			if (Character.isLetter(c) || Character.isDigit(c) || (c == '_'))
+			{
+				varName = varName + c;
+			}
+		}
+		return varName;
 	}
 }

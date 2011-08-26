@@ -14,7 +14,7 @@ public class VariableDigitalBlock extends TranslatorBlock
 		String internalVariableName = translator.getBooleanVariable(label);
 		if (internalVariableName == null)
 		{
-			internalVariableName = translator.buildVariableName();
+			internalVariableName = translator.buildVariableName(label);
 			translator.addBooleanVariable(label, internalVariableName);
 			translator.addDefinitionCommand("bool " + internalVariableName + ";");
 			translator.addSetupCommand(internalVariableName + " = false;");

@@ -14,7 +14,7 @@ public class VariableNumberBlock extends TranslatorBlock
 		String internalVariableName = translator.getNumberVariable(label);
 		if (internalVariableName == null)
 		{
-			internalVariableName = translator.buildVariableName();
+			internalVariableName = translator.buildVariableName(label);
 			translator.addNumberVariable(label, internalVariableName);
 			translator.addDefinitionCommand("int " + internalVariableName + ";");
 			translator.addSetupCommand(internalVariableName + " = 0;");
