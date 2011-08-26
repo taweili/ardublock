@@ -5,9 +5,9 @@ import com.ardublock.translator.Translator;
 public class RandomBlock extends TranslatorBlock
 {
 
-	protected RandomBlock(Long blockId, Translator translator)
+	protected RandomBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	public String toCode()
@@ -17,7 +17,7 @@ public class RandomBlock extends TranslatorBlock
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " )";
 		translator.addSetupCommand("randomrandomSeed(analogRead(A0) + analogRead(A1) + analogRead(A2));");
-		return ret;
+		return codePrefix + ret + codeSuffix;
 	}
 
 }

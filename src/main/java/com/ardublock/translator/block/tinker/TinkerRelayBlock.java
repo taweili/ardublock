@@ -6,9 +6,9 @@ import com.ardublock.translator.block.PinWriteDigitalBlock;
 public class TinkerRelayBlock extends PinWriteDigitalBlock
 {
 
-	public TinkerRelayBlock(Long blockId, Translator translator)
+	public TinkerRelayBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 }

@@ -5,9 +5,9 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class PinWriteDigitalBlock extends TranslatorBlock
 {
-	public PinWriteDigitalBlock(Long blockId, Translator translator)
+	public PinWriteDigitalBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	public String toCode()

@@ -6,9 +6,9 @@ import com.ardublock.translator.block.PinWriteDigitalBlock;
 public class TinkerMosfetBlock extends PinWriteDigitalBlock
 {
 
-	public TinkerMosfetBlock(Long blockId, Translator translator)
+	public TinkerMosfetBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 }

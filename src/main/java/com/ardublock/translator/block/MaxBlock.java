@@ -6,9 +6,9 @@ import com.ardublock.translator.block.exception.SocketNullException;
 public class MaxBlock extends TranslatorBlock
 {
 
-	protected MaxBlock(Long blockId, Translator translator)
+	protected MaxBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	public String toCode()
@@ -27,7 +27,7 @@ public class MaxBlock extends TranslatorBlock
 		}
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " )";
-		return ret;
+		return codePrefix + ret + codeSuffix;
 	}
 	
 }

@@ -5,9 +5,9 @@ import com.ardublock.translator.block.PinReadAnalogBlock;
 
 public class TinkerTouchBlock extends PinReadAnalogBlock
 {
-	public TinkerTouchBlock(Long blockId, Translator translator)
+	public TinkerTouchBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 }

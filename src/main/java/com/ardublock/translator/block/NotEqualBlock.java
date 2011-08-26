@@ -18,6 +18,6 @@ public class NotEqualBlock extends TranslatorBlock
 		tb = this.getRequiredTranslatorBlockAtSocket(1);
 		ret = ret + tb.toCode();
 		ret = ret + " ) )";
-		return ret;
+		return codePrefix + ret + codeSuffix;
 	}
 }

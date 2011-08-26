@@ -5,9 +5,9 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class PinReadAnalogBlock extends TranslatorBlock
 {
-	public PinReadAnalogBlock(Long blockId, Translator translator)
+	public PinReadAnalogBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	public String toCode()
@@ -20,7 +20,7 @@ public class PinReadAnalogBlock extends TranslatorBlock
 		}
 		ret = ret + translatorBlock.toCode();
 		ret = ret + ")";
-		return ret;
+		return codePrefix + ret + codeSuffix;
 	}
 
 }

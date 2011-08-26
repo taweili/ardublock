@@ -36,40 +36,40 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("true"))
 		{
-			return new TrueBlock(blockId, translator);
+			return new TrueBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		if (blockName.equals("and"))
 		{
-			return new AndBlock(blockId, translator);
+			return new AndBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("not"))
 		{
-			return new NotBlock(blockId, translator);
+			return new NotBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("or"))
 		{
-			return new OrBlock(blockId, translator);
+			return new OrBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("digital-high"))
 		{
-			return new DigitalHighBlock(blockId, translator);
+			return new DigitalHighBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("digital-low"))
 		{
-			return new DigitalHighBlock(blockId, translator);
+			return new DigitalLowBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("digital-on"))
 		{
-			return new DigitalOnBlock(blockId, translator);
+			return new DigitalOnBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("digital-off"))
 		{
-			return new DigitalOffBlock(blockId, translator);
+			return new DigitalOffBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("false"))
 		{
-			return new FalseBlock(blockId, translator);
+			return new FalseBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("if"))
 		{
@@ -105,19 +105,19 @@ public class TranslatorBlockFactory
 		//Pin
 		if (blockName.equals("pin-read-analog"))
 		{
-			return new PinReadAnalogBlock(blockId, translator);
+			return new PinReadAnalogBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("pin-read-digital"))
 		{
-			return new PinReadDigitalBlock(blockId, translator);
+			return new PinReadDigitalBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("pin-write-analog"))
 		{
-			return new PinWriteAnalogBlock(blockId, translator);
+			return new PinWriteAnalogBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("pin-write-digital"))
 		{
-			return new PinWriteDigitalBlock(blockId, translator);
+			return new PinWriteDigitalBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("servo"))
 		{
@@ -148,23 +148,23 @@ public class TranslatorBlockFactory
 
 		if (blockName.equals("addition"))
 		{
-			return new AdditionBlock(blockId, translator);
+			return new AdditionBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("subtraction"))
 		{
-			return new SubtractionBlock(blockId, translator);
+			return new SubtractionBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("multiplication"))
 		{
-			return new MultiplicationBlock(blockId, translator);
+			return new MultiplicationBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("division"))
 		{
-			return new DivisionBlock(blockId, translator);
+			return new DivisionBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("modulo"))
 		{
-			return new ModuloBlock(blockId, translator);
+			return new ModuloBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		if (blockName.equals("greater"))
@@ -194,35 +194,35 @@ public class TranslatorBlockFactory
 		
 		if (blockName.equals("min"))
 		{
-			return new MinBlock(blockId, translator);
+			return new MinBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("max"))
 		{
-			return new MaxBlock(blockId, translator);
+			return new MaxBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("abs"))
 		{
-			return new AbsBlock(blockId, translator);
+			return new AbsBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("pow"))
 		{
-			return new PowBlock(blockId, translator);
+			return new PowBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("sqrt"))
 		{
-			return new SqrtBlock(blockId, translator);
+			return new SqrtBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("sin"))
 		{
-			return new SinBlock(blockId, translator);
+			return new SinBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("cos"))
 		{
-			return new CosBlock(blockId, translator);
+			return new CosBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("tan"))
 		{
-			return new TanBlock(blockId, translator);
+			return new TanBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		
@@ -234,7 +234,7 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("random"))
 		{
-			return new RandomBlock(blockId, translator);
+			return new RandomBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("serial_println"))
 		{
@@ -272,61 +272,61 @@ public class TranslatorBlockFactory
 		//brick
 		if (blockName.equals("Tinker_LED"))
 		{
-			return new TinkerLEDBlock(blockId, translator);
+			return new TinkerLEDBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_Mosfet"))
 		{
-			return new TinkerMosfetBlock(blockId, translator);
+			return new TinkerMosfetBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_Relay"))
 		{
-			return new TinkerRelayBlock(blockId, translator);
+			return new TinkerRelayBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		if (blockName.equals("Tinker_Button"))
 		{
-			return new TinkerButtonBlock(blockId, translator);
+			return new TinkerButtonBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		if (blockName.equals("Tinker_Accmeter"))
 		{
-			return new TinkerAccmeterBlock(blockId, translator);
+			return new TinkerAccmeterBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_Hall"))
 		{
-			return new TinkerHallBlock(blockId, translator);
+			return new TinkerHallBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_LDR"))
 		{
-			return new TinkerLDRBlock(blockId, translator);
+			return new TinkerLDRBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_LinearPotentiometer"))
 		{
-			return new TinkerLinearPotentiometerBlock(blockId, translator);
+			return new TinkerLinearPotentiometerBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_RotaryPotentiometer"))
 		{
-			return new TinkerRotaryPotentiometerBlock(blockId, translator);
+			return new TinkerRotaryPotentiometerBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_Thermistor"))
 		{
-			return new TinkerThermistorBlock(blockId, translator);
+			return new TinkerThermistorBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_Touch"))
 		{
-			return new TinkerTouchBlock(blockId, translator);
+			return new TinkerTouchBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_Tilt"))
 		{
-			return new TinkerTiltBlock(blockId, translator);
+			return new TinkerTiltBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_LED_pwm"))
 		{
-			return new TinkerLEDPwmBlock(blockId, translator);
+			return new TinkerLEDPwmBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_Mosfet_pwm"))
 		{
-			return new TinkerMosfetPwmBlock(blockId, translator);
+			return new TinkerMosfetPwmBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("Tinker_Servo"))
 		{

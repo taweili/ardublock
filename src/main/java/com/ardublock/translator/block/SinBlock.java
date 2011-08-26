@@ -6,9 +6,9 @@ import com.ardublock.translator.block.exception.SocketNullException;
 public class SinBlock extends TranslatorBlock
 {
 
-	protected SinBlock(Long blockId, Translator translator)
+	protected SinBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	public String toCode()
@@ -21,7 +21,7 @@ public class SinBlock extends TranslatorBlock
 		}
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " )";
-		return ret;
+		return codePrefix + ret + codeSuffix;
 	}
 	
 }

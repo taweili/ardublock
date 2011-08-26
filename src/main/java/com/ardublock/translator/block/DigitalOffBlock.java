@@ -5,9 +5,9 @@ import com.ardublock.translator.block.basic.ConstBlock;
 
 public class DigitalOffBlock extends ConstBlock
 {
-	protected DigitalOffBlock(Long blockId, Translator translator)
+	protected DigitalOffBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 		this.setCode("LOW");
 	}
 

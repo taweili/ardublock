@@ -5,9 +5,9 @@ import com.ardublock.translator.block.PinWriteAnalogBlock;
 
 public class TinkerLEDPwmBlock extends PinWriteAnalogBlock
 {
-	public TinkerLEDPwmBlock(Long blockId, Translator translator)
+	public TinkerLEDPwmBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 }

@@ -6,9 +6,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 public abstract class ConstBlock extends TranslatorBlock
 {
 	private String code;
-	protected ConstBlock(Long blockId, Translator translator)
+	protected ConstBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 		this.code = "undefined";
 	}
 
@@ -19,7 +19,7 @@ public abstract class ConstBlock extends TranslatorBlock
 	
 	public String toCode()
 	{
-		return code;
+		return codePrefix + code + codeSuffix;
 	}
 
 }

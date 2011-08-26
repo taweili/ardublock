@@ -5,10 +5,9 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class CosBlock extends TranslatorBlock
 {
-
-	protected CosBlock(Long blockId, Translator translator)
+	protected CosBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	public String toCode()
@@ -21,7 +20,7 @@ public class CosBlock extends TranslatorBlock
 		}
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " )";
-		return ret;
+		return codePrefix + ret + codeSuffix;
 	}
 	
 }

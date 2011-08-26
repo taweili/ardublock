@@ -5,9 +5,9 @@ import com.ardublock.translator.block.PinReadDigitalBlock;
 
 public class TinkerTiltBlock extends PinReadDigitalBlock
 {
-	public TinkerTiltBlock(Long blockId, Translator translator)
+	public TinkerTiltBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 }
