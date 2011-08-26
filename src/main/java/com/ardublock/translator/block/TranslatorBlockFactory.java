@@ -97,6 +97,10 @@ public class TranslatorBlockFactory
 		{
 			return new GlueSNBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
+		if (blockName.equals("glue_sb"))
+		{
+			return new GlueSBBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
 		
 		//Pin
 		if (blockName.equals("pin-read-analog"))

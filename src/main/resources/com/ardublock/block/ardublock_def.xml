@@ -107,6 +107,16 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="glue_sb" kind="data" color="127 127 127" initlabel="glue">
+			<description>
+				<text>glue boolean to string</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<!-- Basic -->
 		 
 		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="loop" is-starter="yes" is-terminator="yes" label-unique="yes">
@@ -1047,6 +1057,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
+				<BlockGenusMember>glue_sb</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="114 147 71" name="Operators" type="factory">

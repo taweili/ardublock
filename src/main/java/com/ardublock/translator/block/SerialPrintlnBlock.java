@@ -12,7 +12,7 @@ public class SerialPrintlnBlock extends TranslatorBlock
 
 	public String toCode()
 	{
-		translator.addSetupCommand("Serial.setup(9600);");
+		translator.addSetupCommand("Serial.begin(9600);");
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0, "Serial.print( ", " );\n");
 		if (translatorBlock == null)
 		{
@@ -20,7 +20,7 @@ public class SerialPrintlnBlock extends TranslatorBlock
 		}
 		
 		String ret = translatorBlock.toCode();
-		ret = ret + "Serial.pritln(\"\");\n";
+		ret = ret + "Serial.println(\"\");\n";
 		
 		return ret;
 	}
