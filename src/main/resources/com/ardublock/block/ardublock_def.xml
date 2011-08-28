@@ -981,7 +981,77 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
+	
+	
+		<!-- Xinchejian -->
+	
+		<BlockGenus name="xcj_motor_forward" kind="command" color="0 255 0" initlabel="motor shield &lt;br&gt; forward">
+			<description>
+				<text>forward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="M#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="speed">
+					<DefaultArg genus-name="number" label="255"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/motor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="xcj_motor_backward" kind="command" color="0 255 0" initlabel="motor shield &lt;br&gt; backward">
+			<description>
+				<text>backward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="M#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="speed">
+					<DefaultArg genus-name="number" label="255"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/motor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="xcj_ms_digital_write" kind="command" color="0 255 0" initlabel="Xinchejian digitalWrite">
+			<description>
+				<text>write ditial singal to Socket</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="S#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="staus">
+					<DefaultArg genus-name="digital-high" label="HIGH"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="xcj_ms_digital_read" kind="data" color="0 255 0" initlabel="Xinchejian digitalRead">
+			<description>
+				<text>read digital status from socket</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="S#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 	</BlockGenuses>
+	
+	
 	
 	<BlockFamilies>
 		<BlockFamily>
@@ -1117,6 +1187,13 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>Tinker_Servo</BlockGenusMember>
 				<BlockGenusMember>Tinker_Tilt</BlockGenusMember>
 				
+			</BlockDrawer>
+			
+			<BlockDrawer button-color="0 255 0" name="XinChejian" type="factory">
+				<BlockGenusMember>xcj_motor_forward</BlockGenusMember>
+				<BlockGenusMember>xcj_motor_backward</BlockGenusMember>
+				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember>
+				<BlockGenusMember>xcj_ms_digital_write</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->

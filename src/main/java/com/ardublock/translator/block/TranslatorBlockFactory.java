@@ -16,6 +16,10 @@ import com.ardublock.translator.block.tinker.TinkerServoBlock;
 import com.ardublock.translator.block.tinker.TinkerThermistorBlock;
 import com.ardublock.translator.block.tinker.TinkerTiltBlock;
 import com.ardublock.translator.block.tinker.TinkerTouchBlock;
+import com.ardublock.translator.block.xinchejian.XinchejianDigitalReadBlock;
+import com.ardublock.translator.block.xinchejian.XinchejianDigitalWriteBlock;
+import com.ardublock.translator.block.xinchejian.XinchejianMotorBackwardBlock;
+import com.ardublock.translator.block.xinchejian.XinchejianMotorForwardBlock;
 
 public class TranslatorBlockFactory
 {
@@ -333,6 +337,23 @@ public class TranslatorBlockFactory
 			return new TinkerServoBlock(blockId, translator);
 		}
 		
+		//Xinchejian
+		if (blockName.equals("xcj_motor_forward"))
+		{
+			return new XinchejianMotorForwardBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("xcj_motor_backward"))
+		{
+			return new XinchejianMotorBackwardBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.endsWith("xcj_ms_digital_write"))
+		{
+			return new XinchejianDigitalWriteBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("xcj_ms_digital_read"))
+		{
+			return new XinchejianDigitalReadBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
 		
 		System.err.println(blockName + " not found!");
 		
