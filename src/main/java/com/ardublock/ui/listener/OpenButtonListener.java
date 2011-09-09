@@ -24,10 +24,13 @@ public class OpenButtonListener implements ActionListener
 			JFileChooser fileChooser = new JFileChooser();
 			fileChooser.showOpenDialog(null);
 			File savedFile = fileChooser.getSelectedFile();
-			
-			WorkspaceController workspaceController = context.getWorkspaceController();
-			workspaceController.loadFreshWorkspace();
-			workspaceController.loadProjectFromPath(savedFile.getAbsolutePath());
+			if (savedFile != null)
+			{
+				WorkspaceController workspaceController = context.getWorkspaceController();
+				workspaceController.resetWorkspace();
+				//workspaceController.loadFreshWorkspace();
+				workspaceController.loadProjectFromPath(savedFile.getAbsolutePath());
+			}
 		}
 		catch (Exception ex)
 		{
