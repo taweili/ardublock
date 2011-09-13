@@ -1216,11 +1216,4 @@ BlockGenuses are first loaded.
 		<ClosedTrashImage>/support/images/trash.png</ClosedTrashImage>
 	</TrashCan>
 	
-	<BreedShapeMappings>
-		<BtoSMapping>
-			<BreedName>Ardublock</BreedName>
-			<BreedShape>animals/turtle-default</BreedShape>
-		</BtoSMapping>
-	</BreedShapeMappings>
-	
 </BlockLangDef>

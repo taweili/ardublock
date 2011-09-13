@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- Definition of save XML format for Codeblocks -->
-
-<?xml version="1.0" encoding="UTF-16"?>
 
 <!-- Root element -->
 <!ELEMENT CodeBlocks (Pages?, BlockDrawerSets?)>

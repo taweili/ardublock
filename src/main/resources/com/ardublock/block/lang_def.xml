@@ -553,10 +553,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports true if one or both of the two conditions are true.
 				</text>
-				<arg-description n="2" doc-name="condition 1">
+				<arg-description n="2" name="condition 1">
 					The first condition that must be true.
 				</arg-description>
-				<arg-description n="3" doc-name="condition 2">
+				<arg-description n="3" name="condition 2">
 					The second condition that must be true.
 				</arg-description>
 			</description>
@@ -576,10 +576,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports true if both of the two conditions are true.
 				</text>
-				<arg-description n="2" doc-name="condition 1">
+				<arg-description n="2" name="condition 1">
 					The first condition that must be true.
 				</arg-description>
-					<arg-description n="3" doc-name="condition 2">
+					<arg-description n="3" name="condition 2">
 					The second condition that must be true.
 				</arg-description>
 			</description>
@@ -599,8 +599,8 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the opposite of <arg n="1"/>.
 				</text>
-				<arg-description n="1" doc-name="boolean">
-					The boolean (<em>true</em> or <em>false</em>) that should be inverted.
+				<arg-description n="1" name="boolean">
+					The boolean (true or false) that should be inverted.
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -619,7 +619,7 @@ BlockGenuses are first loaded.
 				<text>
 					Counts all agents that satisfy a certain condition.
 				</text>
-				<arg-description n="1" name="condition" doc-name="condition">
+				<arg-description n="1" name="condition">
 					The condition an agent must satisfy to be counted
 				</arg-description>
 			</description>
@@ -721,11 +721,11 @@ BlockGenuses are first loaded.
 				<text>
 					Appends <arg n="3"/> to the end of <arg n="2"/>.
 				</text>
-				<arg-description n="2" doc-name="first">
-					The text to which to append <arg n="3"/>.
+				<arg-description n="2" name="first">
+					The text to which to append.
 				</arg-description>
-				<arg-description n="3" doc-name="second">
-					The text to append to <arg n="2"/>.
+				<arg-description n="3" name="second">
+					The text to append to.
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -777,9 +777,9 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the sum of two numbers (<arg n="1"/> + <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left number">
+				<arg-description n="1" name="left number">
 				</arg-description>
-				<arg-description n="2" doc-name="right number">
+				<arg-description n="2" name="right number">
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -798,9 +798,9 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the difference of two numbers (<arg n="1"/> - <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left number">
+				<arg-description n="1" name="left number">
 				</arg-description>
-				<arg-description n="2" doc-name="right number">
+				<arg-description n="2" name="right number">
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -819,9 +819,9 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the product of  two numbers (<arg n="1"/> x <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left value">
+				<arg-description n="1" name="left value">
 				</arg-description>
-				<arg-description n="2" doc-name="right value">
+				<arg-description n="2" name="right value">
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -840,9 +840,9 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the quotient of  two numbers (<arg n="1"/> ÷ <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left value">
+				<arg-description n="1" name="left value">
 				</arg-description>
-				<arg-description n="2" doc-name="right value">
+				<arg-description n="2" name="right value">
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -861,9 +861,9 @@ BlockGenuses are first loaded.
 				<text>
 					Determines if two quantities are equal (<arg n="1"/> = <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left value">
+				<arg-description n="1" name="left value">
 				</arg-description>
-				<arg-description n="2" doc-name="right value">
+				<arg-description n="2" name="right value">
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -882,10 +882,10 @@ BlockGenuses are first loaded.
 				<text>
 					Determines if two quantities are different (<arg n="1"/> != <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="left value">
+				<arg-description n="1" name="left value">
 				The first thing to compare.
 				</arg-description>
-				<arg-description n="2" doc-name="right value">
+				<arg-description n="2" name="right value">
 				The second thing to compare.
 				</arg-description>
 			</description>
@@ -905,10 +905,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports whether the <arg n="1"/> is less than the <arg n="2"/>.
 				</text>
-				<arg-description n="1" doc-name="left value">
+				<arg-description n="1" name="left value">
 				The first thing to compare.
 				</arg-description>
-				<arg-description n="2" doc-name="right value">
+				<arg-description n="2" name="right value">
 				The second thing to compare.
 				</arg-description>
 			</description>
@@ -928,10 +928,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports whether the <arg n="1"/> is less than or equal to the <arg n="2"/>.
 				</text>
-				<arg-description n="1" doc-name="left value">
+				<arg-description n="1" name="left value">
 				The first thing to compare.
 				</arg-description>
-				<arg-description n="2" doc-name="right value">
+				<arg-description n="2" name="right value">
 				The second thing to compare.
 				</arg-description>
 			</description>
@@ -951,10 +951,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports whether the <arg n="1"/> is greater than the <arg n="2"/>.
 				</text>
-				<arg-description n="1" doc-name="left value">
+				<arg-description n="1" name="left value">
 				The first thing to compare.
 				</arg-description>
-				<arg-description n="2" doc-name="right value">
+				<arg-description n="2" name="right value">
 				The second thing to compare.
 				</arg-description>
 			</description>
@@ -974,10 +974,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports whether the <arg n="1"/> is greater than or equal to the <arg n="2"/>.
 				</text>
-				<arg-description n="1" doc-name="left value">
+				<arg-description n="1" name="left value">
 				The first thing to compare.
 				</arg-description>
-				<arg-description n="2" doc-name="right value">
+				<arg-description n="2" name="right value">
 				The second thing to compare.
 				</arg-description>
 			</description>
@@ -1009,7 +1009,7 @@ BlockGenuses are first loaded.
 				<text>
 					Reports a random integer greater than or equal to 1 and less than or equal to <arg n="1"/>.
 				</text>
-				<arg-description n="1" doc-name="number">
+				<arg-description n="1" name="number">
 					The upper integer in the range.
 				</arg-description>
 			</description>
@@ -1030,7 +1030,7 @@ BlockGenuses are first loaded.
 				<text>
 					Rounds <arg n="1"/> to the nearest integer.
 				</text>
-				<arg-description n="1" doc-name="number">
+				<arg-description n="1" name="number">
 					The number to round.
 				</arg-description>
 			</description>
@@ -1065,11 +1065,11 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the integer remainder of <arg n="2"/> divided by <arg n="3"/>.
 				</text>
-				<arg-description n="2" doc-name="first">
+				<arg-description n="2" name="first">
 					The number to divide.
 				</arg-description>
 				
-				<arg-description n="3" doc-name="second">
+				<arg-description n="3" name="second">
 					The number by which to divide.
 				</arg-description>
 			</description>
@@ -1089,10 +1089,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the smaller value of the two numbers.	
 				</text>
-				<arg-description n="2" doc-name="number 1">
+				<arg-description n="2" name="number 1">
 					The first number to compare.
 				</arg-description>
-				<arg-description n="3" doc-name="number 2">
+				<arg-description n="3" name="number 2">
 					The second number to compare.
 				</arg-description>
 			</description>
@@ -1112,10 +1112,10 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the greatest value of the two numbers.	
 				</text>
-				<arg-description n="2" doc-name="number 1">
+				<arg-description n="2" name="number 1">
 					The first number to compare.
 				</arg-description>
-				<arg-description n="3" doc-name="number 2">
+				<arg-description n="3" name="number 2">
 					The second number to compare.
 				</arg-description>
 			</description>
@@ -1135,9 +1135,9 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the power of one number raised to another (<arg n="1"/> ^ <arg n="2"/>).
 				</text>
-				<arg-description n="1" doc-name="base">
+				<arg-description n="1" name="base">
 				</arg-description>
-				<arg-description n="2" doc-name="exponent">
+				<arg-description n="2" name="exponent">
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -1156,7 +1156,7 @@ BlockGenuses are first loaded.
 				<text>
 				Reports the absolute value of a number.
 				</text>
-				<arg-description n="1" doc-name="number">
+				<arg-description n="1" name="number">
 					A number from which to get the absolute value.
 				</arg-description>
 			</description>
@@ -1175,7 +1175,7 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the square root of <arg n="1"/>.
 				</text>
-				<arg-description n="1" doc-name="number">
+				<arg-description n="1" name="number">
 					The number whose square root to take.
 				</arg-description>
 			</description>
@@ -1251,7 +1251,7 @@ BlockGenuses are first loaded.
 				<text>
 					Trigonometric function that reports the arcsine of the specified number.  All angles are reported in degrees.
 				</text>
-				<arg-description n="1" doc-name="number">
+				<arg-description n="1" name="number">
 					A number from which to get the arcsine.
 				</arg-description>
 				</description>
@@ -1270,7 +1270,7 @@ BlockGenuses are first loaded.
 				<text>
 					Trigonometric function that reports the arccosine of the specified number.  All angles are reported in degrees.
 				</text>
-				<arg-description n="1" doc-name="number">
+				<arg-description n="1" name="number">
 					A number from which to get the arccosine.
 				</arg-description>
 				</description>
@@ -1289,7 +1289,7 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the logarithm base 10 of <arg n="1"/>. <note>The return value <i>x</i> will be the number for which 10 to the power of <i>x</i> is equal to <arg n="1"/>.</note>
 				</text>
-				<arg-description n="1" doc-name="number">
+				<arg-description n="1" name="number">
 					The number of which to take the natural logarithm
 				</arg-description>
 			</description>
@@ -1308,7 +1308,7 @@ BlockGenuses are first loaded.
 				<text>
 					Reports the natural logarithm of <arg n="1"/>. <note>The return value <i>x</i> will be the number for which the mathematical constant e, which is about 2.718, to the power of <i>x</i> is equal to <arg n="1"/>.</note>
 				</text>
-				<arg-description n="1" doc-name="number">
+				<arg-description n="1" name="number">
 					The number of which to take the natural logarithm
 				</arg-description>
 			</description>
@@ -1593,7 +1593,7 @@ BlockGenuses are first loaded.
 				<text>
 					Causes this agent to change its shape to the supplied shape.
 				</text>
-				<arg-description n="1" name="string" doc-name="string">
+				<arg-description n="1" name="string">
 					The shape
 				</arg-description>
 			</description>
@@ -1611,7 +1611,7 @@ BlockGenuses are first loaded.
 				<text>
 					Causes this agent to change its breed to the supplied breed.
 				</text>
-				<arg-description n="1" name="string" doc-name="string">
+				<arg-description n="1" name="string">
 					The name of the new breed.
 				</arg-description>
 			</description>
@@ -2133,7 +2133,7 @@ BlockGenuses are first loaded.
 				<text>
 					When switched on, agents do commands over and over. <note>There are different commands for each breed.</note>
 				</text>
-				<arg-description n="1" name="agents" doc-name="breed">
+				<arg-description n="1" name="agents">
 					The breed of the agents performing the commands attached here.
 				</arg-description>
 			</description>
@@ -2170,7 +2170,7 @@ BlockGenuses are first loaded.
 				<text>
 					When switched on, agents do commands once. <note>There are different commands for each breed.</note>
 				</text>
-				<arg-description n="1" name="agents" doc-name="breed">
+				<arg-description n="1" name="agents">
 					The breed of the agents performing the commands attached here.
 				</arg-description>
 			</description>
@@ -2212,7 +2212,7 @@ BlockGenuses are first loaded.
 					The number of seconds for which the commands are run when switched on.
 				</arg-description>
 				
-				<arg-description n="2" name="agents" doc-name="breed">
+				<arg-description n="2" name="agents">
 					The breed of the agents performing the commands attached here.
 				</arg-description>
 			</description>
@@ -2478,7 +2478,7 @@ BlockGenuses are first loaded.
 				<text>
 					Sets the score to be the given value.
 				</text>
-				<arg-description n="1" name="score" doc-name="score">
+				<arg-description n="1" name="score">
 					The new value for the score.
 				</arg-description>
 			</description>
@@ -2606,7 +2606,7 @@ BlockGenuses are first loaded.
 				<text>
 				  	Reports the number agents of this breed that satisfy the given condition.
 				</text>
-				<arg-description n="1" doc-name="condition">
+				<arg-description n="1" name="condition">
 					A condition that must be true of the counted agents.
 				</arg-description>
 			</description>
@@ -3000,12 +3000,5 @@ BlockGenuses are first loaded.
 		<OpenTrashImage>/support/images/trash_open.png</OpenTrashImage>
 		<ClosedTrashImage>/support/images/trash.png</ClosedTrashImage>
 	</TrashCan>
-	
-	<BreedShapeMappings>
-		<BtoSMapping>
-			<BreedName>Turtles</BreedName>
-			<BreedShape>animals/turtle-default</BreedShape>
-		</BtoSMapping>
-	</BreedShapeMappings>
-	
+
 </BlockLangDef>
