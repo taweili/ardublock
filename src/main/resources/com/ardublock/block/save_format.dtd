@@ -27,19 +27,19 @@
 <!ATTLIST Block genus-name CDATA #REQUIRED>
 <!ATTLIST Block has-focus (yes|no) "no">
 
-<!ELEMENT Label (#CDATA)>
-<!ELEMENT PageLabel (#CDATA)>
-<!ELEMENT CompilerErrorMsg (#CDATA)>
+<!ELEMENT Label (#PCDATA)>
+<!ELEMENT PageLabel (#PCDATA)>
+<!ELEMENT CompilerErrorMsg (#PCDATA)>
 
 <!-- x, y  location within the block's page-->
 <!ELEMENT Location (X, Y)>
-<!ELEMENT X (#CDATA)>
-<!ELEMENT Y (#CDATA)>
+<!ELEMENT X (#PCDATA)>
+<!ELEMENT Y (#PCDATA)>
 
 <!-- width, height box size -->
 <!ELEMENT BoxSize (Width, Height)>
-<!ELEMENT Width (#CDATA)>
-<!ELEMENT Height (#CDATA)>
+<!ELEMENT Width (#PCDATA)>
+<!ELEMENT Height (#PCDATA)>
 
 <!-- existence of this element implies the block is collapsed -->
 <!ELEMENT Collapsed>
@@ -50,8 +50,8 @@
 
 <!--  Only the Block ID of the block connected at these connectors are 
       specified.   -->
-<!ELEMENT BeforeBlockId (#CDATA)>
-<!ELEMENT AfterBlockId (#CDATA)>
+<!ELEMENT BeforeBlockId (#PCDATA)>
+<!ELEMENT AfterBlockId (#PCDATA)>
 
 <!ELEMENT Plug (BlockConnector)>
 <!ELEMENT Sockets (BlockConnector*)>
