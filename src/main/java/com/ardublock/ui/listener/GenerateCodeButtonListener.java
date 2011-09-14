@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import com.ardublock.core.Context;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.ui.OpenblocksFrame;
 
 import edu.mit.blocks.codeblocks.Block;
 import edu.mit.blocks.controller.WorkspaceController;

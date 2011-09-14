@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import com.ardublock.core.Context;
+import com.ardublock.ui.OpenblocksFrame;
 
 import edu.mit.blocks.controller.WorkspaceController;
 
@@ -60,5 +61,7 @@ public class OpenButtonListener implements ActionListener
 			}
 		}
 	}
+	
+	
 
 }

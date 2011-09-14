@@ -3,21 +3,32 @@ package com.ardublock.ui;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.swing.JComponent;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
 
 import com.ardublock.core.Context;
+import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.ui.listener.ArdublockWorkspaceListener;
 import com.ardublock.ui.listener.GenerateCodeButtonListener;
 import com.ardublock.ui.listener.OpenButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
 import com.ardublock.ui.listener.TestListener;
 
+import edu.mit.blocks.codeblocks.Block;
 import edu.mit.blocks.controller.WorkspaceController;
+import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
 
 public class OpenblocksFrame extends JFrame
@@ -26,16 +37,17 @@ public class OpenblocksFrame extends JFrame
 	 * 
 	 */
 	private static final long serialVersionUID = 2841155965906223806L;
-
+	private Context context;
 	public OpenblocksFrame()
 	{
-		Context context = Context.getContext();
+		context = Context.getContext();
 		this.setTitle(context.makeFrameTitle());
 		this.setSize(new Dimension(800, 600));
 		this.setLayout(new BorderLayout());
 		//put the frame to the center of screen
 		this.setLocationRelativeTo(null);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		initOpenBlocks();
 	}
 	
@@ -72,7 +84,7 @@ public class OpenblocksFrame extends JFrame
 	
 	public void didSave()
 	{
-		System.out.println("svaeeee");
+		
 	}
 	
 	public void didLoad()
@@ -82,6 +94,9 @@ public class OpenblocksFrame extends JFrame
 	
 	public void didGenerate()
 	{
-		
+
 	}
+	
+	
+	
 }
