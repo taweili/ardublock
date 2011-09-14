@@ -52,6 +52,7 @@ public class SaveButtonListener implements ActionListener
 							{
 								parentFrame.setTitle(context.makeFrameTitle());
 							}
+							context.didSave();
 						}
 					}
 				}
@@ -64,6 +65,7 @@ public class SaveButtonListener implements ActionListener
 					{
 						parentFrame.setTitle(context.makeFrameTitle());
 					}
+					context.didSave();
 				}
 			}
 			catch (Exception ex)

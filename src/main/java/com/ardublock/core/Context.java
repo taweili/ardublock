@@ -3,6 +3,8 @@ package com.ardublock.core;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.ardublock.ui.listener.OpenblocksFrameListener;
+
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.renderable.RenderableBlock;
 
@@ -14,6 +16,7 @@ public class Context
 	private String saveFilePath;
 	
 	private Set<RenderableBlock> highlightBlockSet;
+	private Set<OpenblocksFrameListener> ofls;
 	
 	public static Context getContext()
 	{
@@ -43,6 +46,7 @@ public class Context
 		workspaceChanged = false;
 		saveFilePath = null;
 		highlightBlockSet = new HashSet<RenderableBlock>();
+		ofls = new HashSet<OpenblocksFrameListener>();
 	}
 
 	public WorkspaceController getWorkspaceController() {
@@ -103,5 +107,34 @@ public class Context
 			rb.updateInSearchResults(false);
 		}
 		highlightBlockSet.clear();
+	}
+	
+	public void registerOpenblocksFrameListener(OpenblocksFrameListener ofl)
+	{
+		ofls.add(ofl);
+	}
+	
+	public void didSave()
+	{
+		for (OpenblocksFrameListener ofl : ofls)
+		{
+			ofl.didSave();
+		}
+	}
+	
+	public void didLoad()
+	{
+		for (OpenblocksFrameListener ofl : ofls)
+		{
+			ofl.didLoad();
+		}
+	}
+	
+	public void didGenerate(String sourcecode)
+	{
+		for (OpenblocksFrameListener ofl : ofls)
+		{
+			ofl.didGenerate(sourcecode);
+		}
 	}
 }
