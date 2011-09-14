@@ -35,11 +35,13 @@ public class OpenButtonListener implements ActionListener
 			if (optionValue == JOptionPane.YES_OPTION)
 			{
 				loadFile();
+				context.didLoad();
 			}
 		}
 		else
 		{
 			loadFile();
+			context.didLoad();
 		}
 	}
 		
