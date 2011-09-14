@@ -4,8 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 import javax.swing.JFileChooser;
+import javax.swing.JFrame;
 
 import com.ardublock.core.Context;
 
@@ -14,36 +16,72 @@ import edu.mit.blocks.controller.WorkspaceController;
 public class SaveButtonListener implements ActionListener
 {
 	private Context context;
-	public SaveButtonListener()
+	private JFileChooser fileChooser;
+	private JFrame parentFrame;
+	public SaveButtonListener(JFrame frame)
 	{
 		context = Context.getContext();
+		fileChooser = new JFileChooser();
+		parentFrame = frame;
 	}
+	
 	public void actionPerformed(ActionEvent e)
 	{
-		try
+		if (context.isWorkspaceChanged())
 		{
-			WorkspaceController workspaceController = context.getWorkspaceController();
-			
-			String saveString;
-			//saveString = workspace.getSaveString();
-			saveString = workspaceController.getSaveString();
-			
-			JFileChooser fileChooser = new JFileChooser();
-			
-			//How to get the ArdublockFrame?
-			fileChooser.showSaveDialog(null);
-			
-			File saveFile = fileChooser.getSelectedFile();
-			saveFile.createNewFile();
-			FileOutputStream fos = new FileOutputStream(saveFile);
-			fos.write(saveString.getBytes());
-			fos.flush();
-			fos.close();
-		}
-		catch (Exception ex)
-		{
-			ex.printStackTrace();
+			try
+			{
+				WorkspaceController workspaceController = context.getWorkspaceController();
+				String saveString = workspaceController.getSaveString();
+				
+				String saveFilePath = context.getSaveFilePath();
+				if (saveFilePath == null)
+				{
+					int chooseResult;
+					chooseResult = fileChooser.showSaveDialog(parentFrame);
+					if (chooseResult == JFileChooser.APPROVE_OPTION)
+					{
+						File saveFile = fileChooser.getSelectedFile();
+						if (saveFile != null)
+						{
+							saveFile(saveFile, saveString);
+							saveFilePath = saveFile.getAbsolutePath();
+							context.setSaveFilePath(saveFilePath);
+							context.setWorkspaceChanged(false);
+							if (parentFrame != null)
+							{
+								parentFrame.setTitle(context.makeFrameTitle());
+							}
+						}
+					}
+				}
+				else
+				{
+					File saveFile = new File(saveFilePath);
+					saveFile(saveFile, saveString);
+					context.setWorkspaceChanged(false);
+					if (parentFrame != null)
+					{
+						parentFrame.setTitle(context.makeFrameTitle());
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				ex.printStackTrace();
+			}
 		}
 	}
 
+	private void saveFile(File saveFile, String saveString) throws IOException
+	{
+		if (!saveFile.exists())
+		{
+			saveFile.createNewFile();
+		}
+		FileOutputStream fos = new FileOutputStream(saveFile);
+		fos.write(saveString.getBytes());
+		fos.flush();
+		fos.close();
+	}
 }

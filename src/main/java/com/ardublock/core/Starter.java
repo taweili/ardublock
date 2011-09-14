@@ -14,7 +14,7 @@ public class Starter
 	public void startArdublock() throws SAXException, IOException, ParserConfigurationException
 	{
 		startOpenblocksFrame();
-		startConsoleFrame();
+		//startConsoleFrame();
 	}
 	
 	private void startOpenblocksFrame() throws SAXException, IOException, ParserConfigurationException
