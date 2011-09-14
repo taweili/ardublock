@@ -16,6 +16,7 @@ import com.ardublock.ui.listener.GenerateCodeButtonListener;
 import com.ardublock.ui.listener.OpenButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
 import com.ardublock.ui.listener.TestListener;
+import com.ardublock.ui.listener.OpenblocksFrameListener;
 
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.workspace.Workspace;
@@ -26,7 +27,13 @@ public class OpenblocksFrame extends JFrame
 	 * 
 	 */
 	private static final long serialVersionUID = 2841155965906223806L;
-
+	
+	private OpenblocksFrameListener listener;
+	
+	public void addListener(OpenblocksFrameListener ofl) {
+		listener = ofl;
+	}
+	
 	public OpenblocksFrame()
 	{
 		Context context = Context.getContext();
@@ -42,8 +49,6 @@ public class OpenblocksFrame extends JFrame
 	private void initOpenBlocks()
 	{
 		Context context = Context.getContext();
-		
-		
 		
 		WorkspaceController workspaceController = context.getWorkspaceController();
 		JComponent workspaceComponent = workspaceController.getWorkspacePanel();
@@ -69,19 +74,5 @@ public class OpenblocksFrame extends JFrame
 		this.add(buttons, BorderLayout.NORTH);
 		this.add(workspaceComponent, BorderLayout.CENTER);
 	}
-	
-	public void didSave()
-	{
-		System.out.println("svaeeee");
-	}
-	
-	public void didLoad()
-	{
-		
-	}
-	
-	public void didGenerate()
-	{
-		
-	}
+
 }
