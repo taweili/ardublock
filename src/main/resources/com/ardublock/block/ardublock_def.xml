@@ -1188,13 +1188,14 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>Tinker_Tilt</BlockGenusMember>
 				
 			</BlockDrawer>
-			
+<!--  			
 			<BlockDrawer button-color="0 255 0" name="XinChejian" type="factory">
 				<BlockGenusMember>xcj_motor_forward</BlockGenusMember>
 				<BlockGenusMember>xcj_motor_backward</BlockGenusMember>
 				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember>
 				<BlockGenusMember>xcj_ms_digital_write</BlockGenusMember>
 			</BlockDrawer>
+-->
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->
 			<!-- Sound blocks reside in the auto-generated String drawer.  
