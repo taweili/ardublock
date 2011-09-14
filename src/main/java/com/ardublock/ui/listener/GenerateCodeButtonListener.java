@@ -10,8 +10,10 @@ import javax.swing.JOptionPane;
 
 import com.ardublock.core.Context;
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.SocketNullException;
 
 import edu.mit.blocks.codeblocks.Block;
+import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
 
@@ -27,6 +29,8 @@ public class GenerateCodeButtonListener implements ActionListener
 	
 	public void actionPerformed(ActionEvent e)
 	{
+		boolean success;
+		success = true;
 		Translator translator = new Translator();
 		
 		Workspace workspace = Workspace.getInstance();
@@ -65,9 +69,33 @@ public class GenerateCodeButtonListener implements ActionListener
 		for (RenderableBlock renderableBlock : loopBlockSet)
 		{
 			Block loopBlock = renderableBlock.getBlock();
-			code = translator.translate(loopBlock.getBlockID());
+			try
+			{
+				code = translator.translate(loopBlock.getBlockID());
+			}
+			catch (SocketNullException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				success = false;
+				Long blockId = e1.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, "socket null", "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
 		}
 		
-		System.out.println(code);
+		if (success)
+		{
+			System.out.println(code);
+		}
 	}
 }

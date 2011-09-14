@@ -10,14 +10,10 @@ public class SerialPrintlnBlock extends TranslatorBlock
 		super(blockId, translator);
 	}
 
-	public String toCode()
+	public String toCode() throws SocketNullException
 	{
 		translator.addSetupCommand("Serial.begin(9600);");
-		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0, "Serial.print( ", " );\n");
-		if (translatorBlock == null)
-		{
-			throw new SocketNullException();
-		}
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0, "Serial.print( ", " );\n");
 		
 		String ret = translatorBlock.toCode();
 		ret = ret + "Serial.println(\"\");\n";

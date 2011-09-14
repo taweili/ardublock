@@ -6,7 +6,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 abstract public class TranslatorBlock
 {
-	abstract public String toCode();
+	abstract public String toCode() throws SocketNullException;
 	
 	protected Long blockId;
 	
@@ -77,7 +77,7 @@ abstract public class TranslatorBlock
 	
 	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i) throws SocketNullException
 	{
-		return this.getTranslatorBlockAtSocket(i, "", "");
+		return this.getRequiredTranslatorBlockAtSocket(i, "", "");
 	}
 	
 	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i, String codePrefix, String codeSuffix) throws SocketNullException
@@ -85,7 +85,7 @@ abstract public class TranslatorBlock
 		TranslatorBlock translatorBlock = blockAdaptor.getTranslatorBlockAtSocket(this.translator, blockId, i, codePrefix, codeSuffix);
 		if (translatorBlock == null)
 		{
-			throw new SocketNullException();
+			throw new SocketNullException(blockId);
 		}
 		return translatorBlock;
 	}

@@ -10,6 +10,7 @@ import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.TranslatorBlockFactory;
+import com.ardublock.translator.block.exception.SocketNullException;
 
 
 public class Translator
@@ -33,7 +34,7 @@ public class Translator
 		reset();
 	}
 	
-	public String translate(Long blockId)
+	public String translate(Long blockId) throws SocketNullException
 	{
 		reset();
 		

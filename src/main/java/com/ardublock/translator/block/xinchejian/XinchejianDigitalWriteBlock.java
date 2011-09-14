@@ -2,6 +2,7 @@ package com.ardublock.translator.block.xinchejian;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
+import com.ardublock.translator.block.exception.SocketNullException;
 
 public class XinchejianDigitalWriteBlock extends TranslatorBlock
 {
@@ -11,7 +12,7 @@ public class XinchejianDigitalWriteBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	public String toCode()
+	public String toCode() throws SocketNullException
 	{
 		translator.addDefinitionCommand(XinchejianDigitalReadBlock.XINCHEJIAN_DIGITAL_IO_DEFINITION);
 		

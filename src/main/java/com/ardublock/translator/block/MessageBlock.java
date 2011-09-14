@@ -1,6 +1,7 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.SocketNullException;
 
 public class MessageBlock extends TranslatorBlock
 {
@@ -9,7 +10,7 @@ public class MessageBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	public String toCode()
+	public String toCode() throws SocketNullException
 	{
 		//TODO take out special character
 		String ret;

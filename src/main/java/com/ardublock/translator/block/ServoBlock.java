@@ -13,14 +13,9 @@ public class ServoBlock extends TranslatorBlock
 		super(blockId, translator);
 	}
 
-	public String toCode()
+	public String toCode() throws SocketNullException
 	{
-		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
-		
-		if (translatorBlock == null)
-		{
-			throw new SocketNullException();
-		}
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		if (!(translatorBlock instanceof NumberBlock))
 		{
 			throw new BlockException(this.blockId, "the Pin# of Servo must a number");
@@ -31,11 +26,7 @@ public class ServoBlock extends TranslatorBlock
 		String pinNumber = pinNumberBlock.toCode();
 		String servoName = "servo_pin_" + pinNumber;
 		
-		translatorBlock = getTranslatorBlockAtSocket(1);
-		if (translatorBlock == null)
-		{
-			throw new SocketNullException();
-		}
+		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		
 		String ret = servoName + ".write( " + translatorBlock.toCode() + " );\n";
 		translator.addHeaderFile("Servo.h");

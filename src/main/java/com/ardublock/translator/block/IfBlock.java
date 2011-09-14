@@ -10,13 +10,10 @@ public class IfBlock extends TranslatorBlock
 		super(blockId, translator);
 	}
 
-	public String toCode() {
+	public String toCode() throws SocketNullException
+	{
 		String ret = "if (";
-		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
-		if (translatorBlock == null)
-		{
-			throw new SocketNullException();
-		}
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		ret = ret + ")\n{\n";
 		translatorBlock = getTranslatorBlockAtSocket(1);

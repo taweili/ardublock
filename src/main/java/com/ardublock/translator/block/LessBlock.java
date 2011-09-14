@@ -1,6 +1,7 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.SocketNullException;
 
 public class LessBlock extends TranslatorBlock
 {
@@ -9,7 +10,7 @@ public class LessBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	public String toCode()
+	public String toCode() throws SocketNullException
 	{
 		String ret = "( ( ";
 		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);

@@ -1,6 +1,6 @@
 package com.ardublock.core.exception;
 
-public class ArdublockException extends RuntimeException
+public class ArdublockException extends Exception //RuntimeException
 {
 
 	/**

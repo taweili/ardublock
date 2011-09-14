@@ -1,6 +1,7 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.SocketNullException;
 
 public class RandomBlock extends TranslatorBlock
 {
@@ -10,7 +11,7 @@ public class RandomBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	public String toCode()
+	public String toCode() throws SocketNullException
 	{
 		String ret = "random( ";
 		TranslatorBlock translatorBlock = getRequiredTranslatorBlockAtSocket(0);

@@ -11,16 +11,12 @@ public class RepeatTimesBlock extends TranslatorBlock
 		super(blockId, translator);
 	}
 
-	public String toCode()
+	public String toCode() throws SocketNullException
 	{
 		String varName = translator.buildVariableName();
 		translator.addDefinitionCommand("int " + varName + ";");
 		String ret = "for (" + varName + "=0; " + varName + "< ( ";
-		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
-		if (translatorBlock == null)
-		{
-			throw new SocketNullException();
-		}
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " ); ++" + varName + " )\n{\n";
 		
