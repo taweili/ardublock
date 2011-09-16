@@ -18,7 +18,7 @@ public class Context
 	private Set<RenderableBlock> highlightBlockSet;
 	private Set<OpenblocksFrameListener> ofls;
 	
-	final public static String APP_NAME = "TinkerKit Blocks";
+	final public static String APP_NAME = "ArduBlock";
 	
 	public static Context getContext()
 	{
