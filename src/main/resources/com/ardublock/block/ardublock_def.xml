@@ -947,7 +947,7 @@ BlockGenuses are first loaded.
 		
 		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="Tinker Servo">
 			<description>
-				<text>Tinker Servo</text>
+				<text>TinkerKit Servo</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#" >
@@ -967,7 +967,7 @@ BlockGenuses are first loaded.
 		
 		<BlockGenus name="Tinker_Tilt" kind="data" color="255 255 255" initlabel="Tinker Tilt">
 			<description>
-				<text>Tinker Tilt</text>
+				<text>TinkerKit Tilt</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
@@ -1170,7 +1170,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="255 255 255" name="Bricks" type="factory">
+			<BlockDrawer button-color="255 255 255" name="TinkerKit Blocks" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
 				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>

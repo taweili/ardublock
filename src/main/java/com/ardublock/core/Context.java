@@ -18,6 +18,8 @@ public class Context
 	private Set<RenderableBlock> highlightBlockSet;
 	private Set<OpenblocksFrameListener> ofls;
 	
+	final public static String APP_NAME = "TinkerKit Blocks";
+	
 	public static Context getContext()
 	{
 		if (singletonContext == null)
@@ -72,7 +74,7 @@ public class Context
 	
 	public String makeFrameTitle()
 	{
-		String title = "ArduBlock ";
+		String title = APP_NAME + " ";
 		if (saveFilePath == null)
 		{
 			title = title + "untitled";
