@@ -17,6 +17,7 @@ public class MinBlock extends TranslatorBlock
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+		ret = ret + " , ";
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " )";
 		return codePrefix + ret + codeSuffix;
