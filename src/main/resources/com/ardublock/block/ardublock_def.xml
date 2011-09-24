@@ -630,7 +630,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="map" kind="" color="142 160 210" initlabel="map">
+		<BlockGenus name="map" kind="data" color="142 160 210" initlabel="map">
 			<description>
 				<text>map</text>
 			</description>
