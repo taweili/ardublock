@@ -1,6 +1,8 @@
 package com.ardublock;
 
 import processing.app.Editor;
+import com.ardublock.core.Context;
+
 import processing.app.tools.Tool;
 
 import com.ardublock.ui.OpenblocksFrame;
@@ -30,7 +32,7 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 	}
 
 	public String getMenuTitle() {
-		return "ArduBlockTool";
+		return Context.APP_NAME + " Tool";
 	}
 
 	public void didSave() {

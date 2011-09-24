@@ -694,7 +694,7 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		<!-- brick -->
-		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255" initlabel="Tinker LED">
+		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255" initlabel="LED">
 			<description>
 				<text>TinkerKit LED</text>
 			</description>
@@ -713,7 +713,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_LED_pwm" kind="command" color="255 255 255" initlabel="Tinker LED">
+		<BlockGenus name="Tinker_LED_pwm" kind="command" color="255 255 255" initlabel="LED">
 			<description>
 				<text>TinkerKit LED</text>
 			</description>
@@ -732,7 +732,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Mosfet" kind="command" color="255 255 255" initlabel="Tinker Mosfet">
+		<BlockGenus name="Tinker_Mosfet" kind="command" color="255 255 255" initlabel="Mosfet">
 			<description>
 				<text>TinkerKit Mosfet</text>
 			</description>
@@ -751,7 +751,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Mosfet_pwm" kind="command" color="255 255 255" initlabel="Tinker Mosfet">
+		<BlockGenus name="Tinker_Mosfet_pwm" kind="command" color="255 255 255" initlabel="Mosfet">
 			<description>
 				<text>TinkerKit Mosfet</text>
 			</description>
@@ -770,7 +770,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Relay" kind="command" color="255 255 255" initlabel="Tinker Relay">
+		<BlockGenus name="Tinker_Relay" kind="command" color="255 255 255" initlabel="Relay">
 			<description>
 				<text>TinkerKit Relay</text>
 			</description>
@@ -789,7 +789,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="Tinker Servo">
+		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="Servo">
 			<description>
 				<text>TinkerKit Servo</text>
 			</description>
@@ -808,7 +808,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Button" kind="data" color="255 255 255" initlabel="Tinker Button">
+		<BlockGenus name="Tinker_Button" kind="data" color="255 255 255" initlabel="Button">
 			<description>
 				<text>TinkerKit Button</text>
 			</description>
@@ -826,7 +826,7 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		
-		<BlockGenus name="Tinker_Accmeter" kind="data" color="255 255 255" initlabel="Tinker Accelerometer">
+		<BlockGenus name="Tinker_Accmeter" kind="data" color="255 255 255" initlabel="Accelerometer">
 			<description>
 				<text>TinkerKit Accelerometer</text>
 			</description>
@@ -843,7 +843,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Hall" kind="data" color="255 255 255" initlabel="Tinker Hall">
+		<BlockGenus name="Tinker_Hall" kind="data" color="255 255 255" initlabel="Hall">
 			<description>
 				<text>TinkerKit Hall Sensor</text>
 			</description>
@@ -860,7 +860,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_LDR" kind="data" color="255 255 255" initlabel="Tinker LDR">
+		<BlockGenus name="Tinker_LDR" kind="data" color="255 255 255" initlabel="LDR">
 			<description>
 				<text>TinkerKit LDR</text>
 			</description>
@@ -877,7 +877,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_LinearPotentiometer" kind="data" color="255 255 255" initlabel="Tinker LinearPotentiometer">
+		<BlockGenus name="Tinker_LinearPotentiometer" kind="data" color="255 255 255" initlabel="LinearPotentiometer">
 			<description>
 				<text>TinkerKit Accelerometer</text>
 			</description>
@@ -894,7 +894,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_RotaryPotentiometer" kind="data" color="255 255 255" initlabel="Tinker RotaryPotentiometer">
+		<BlockGenus name="Tinker_RotaryPotentiometer" kind="data" color="255 255 255" initlabel="RotaryPotentiometer">
 			<description>
 				<text>TinkerKit RotaryPotentiometer</text>
 			</description>
@@ -911,7 +911,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Thermistor" kind="data" color="255 255 255" initlabel="Tinker Thermistor">
+		<BlockGenus name="Tinker_Thermistor" kind="data" color="255 255 255" initlabel="Thermistor">
 			<description>
 				<text>TinkerKit Thermistor</text>
 			</description>
@@ -928,7 +928,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Touch" kind="data" color="255 255 255" initlabel="Tinker Touch">
+		<BlockGenus name="Tinker_Touch" kind="data" color="255 255 255" initlabel="Touch">
 			<description>
 				<text>TinkerKit Touch Sensor</text>
 			</description>
@@ -945,9 +945,9 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="Tinker Servo">
+		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="Servo">
 			<description>
-				<text>Tinker Servo</text>
+				<text>TinkerKit Servo</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#" >
@@ -965,9 +965,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		
-		<BlockGenus name="Tinker_Tilt" kind="data" color="255 255 255" initlabel="Tinker Tilt">
+		<BlockGenus name="Tinker_Tilt" kind="data" color="255 255 255" initlabel="Tilt">
 			<description>
-				<text>Tinker Tilt</text>
+				<text>TinkerKit Tilt</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
@@ -1170,7 +1170,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="255 255 255" name="Bricks" type="factory">
+			<BlockDrawer button-color="255 255 255" name="TinkerKit Blocks" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
 				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
