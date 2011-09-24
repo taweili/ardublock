@@ -7,6 +7,6 @@
 	<classpathentry kind="var" path="M2_REPO/jfree/jfreechart/1.0.12/jfreechart-1.0.12.jar"/>
 	<classpathentry kind="var" path="M2_REPO/edu/mit/openblocks/1.0-20110819/openblocks-1.0-20110819.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/heqichen/my/project/ardublock/20110820/ardublock/lib/pde.jar"/>
+	<classpathentry kind="lib" path="lib/pde.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
