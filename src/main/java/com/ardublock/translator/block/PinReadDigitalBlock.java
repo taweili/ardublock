@@ -5,6 +5,8 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class PinReadDigitalBlock extends TranslatorBlock
 {
+	public static final String ARDUBLOCK_DIGITAL_READ_DEFINE = "boolean __ardublockDigitalRead(int pinNumber)\n{\npinMode(pinNumber, INPUT);\nreturn digitalRead(pinNumber);\n}\n\n";
+	
 	public PinReadDigitalBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
@@ -12,7 +14,8 @@ public class PinReadDigitalBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException
 	{
-		String ret = "digitalRead(";
+		translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_READ_DEFINE);
+		String ret = "__ardublockDigitalRead(";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		ret = ret + ")";
