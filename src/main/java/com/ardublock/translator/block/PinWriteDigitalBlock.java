@@ -14,15 +14,34 @@ public class PinWriteDigitalBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException
 	{
-		translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_WRITE_DEFINE);
-		String ret = "__ardublockDigitalWrite(";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		ret = ret + translatorBlock.toCode();
-		ret = ret + ", ";
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		ret = ret + translatorBlock.toCode();
-		ret = ret + ");\n";
-		return ret;
+		if (translatorBlock instanceof NumberBlock)
+		{
+			String number = translatorBlock.toCode();
+			String setupCode = "pinMode( " + number + " , OUTPUT);";
+			translator.addSetupCommand(setupCode);
+			
+			String ret = "digitalWrite( ";
+			ret = ret + number;
+			ret = ret + " , ";
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			ret = ret + translatorBlock.toCode();
+			ret = ret + " );\n";
+			return ret;
+		}
+		else
+		{
+			translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_WRITE_DEFINE);
+			String ret = "__ardublockDigitalWrite(";
+			
+			ret = ret + translatorBlock.toCode();
+			ret = ret + ", ";
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			ret = ret + translatorBlock.toCode();
+			ret = ret + ");\n";
+			return ret;
+		}
+		
 	}
 
 }
