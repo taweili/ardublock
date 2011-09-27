@@ -5,9 +5,9 @@ ArduBlock is a Block Programming Language for Arduino. The language and function
 
 Installation
 ----
-The project is managed by Maven.
+The project is managed by Maven. After checking out the source for the first time, one should run the following to install Arduino's pde.jar into the local repository. 
 
-	$ mvn clean package
+	$ mvn validate
 
 Usage
 ----
@@ -17,6 +17,8 @@ Usage
 Development
 ----
 Change the /src/main/resources/com/ardublock/block/ardublock_def.xml to add new blocks to ArduBlock
+
+	$ mvn clean package
 
 	$ mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
 
