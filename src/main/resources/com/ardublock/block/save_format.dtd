@@ -15,17 +15,19 @@
 <!ATTLIST Page page-color CDATA #REQUIRED>
 <!ATTLIST Page page-drawer CDATA #IMPLIED>  
 
-<!ELEMENT PageBlocks (Blocks*, BlockStub*)>
+
 
 <!-- If the Block is a BlockStub, then specify the following -->
 <!ELEMENT BlockStub (StubParentName, StubParentGenus, Block)>
 <!ELEMENT StubParentName (#PCDATA)>
 <!ELEMENT StubParentGenus (#PCDATA)>
 
-<!ELEMENT Block (Label?, PageLabel?, Location?, BoxSize?, Collapsed?, Comment?, BeforeBlockId?, AfterBlockId?, CompilerErrorMsg?, Plug?, Sockets*, BlockStubInfo?, LangSpecProperties?)>
+<!ELEMENT Block (Label?, PageLabel?, Location?, BoxSize?, Collapsed?, Comment?, BeforeBlockId?, AfterBlockId?, CompilerErrorMsg?, Plug?, Sockets*, LangSpecProperties?)>
 <!ATTLIST Block id CDATA #REQUIRED>
 <!ATTLIST Block genus-name CDATA #REQUIRED>
 <!ATTLIST Block has-focus (yes|no) "no">
+
+<!ELEMENT PageBlocks (Block*, BlockStub*)>
 
 <!ELEMENT Label (#PCDATA)>
 <!ELEMENT PageLabel (#PCDATA)>
@@ -42,7 +44,7 @@
 <!ELEMENT Height (#PCDATA)>
 
 <!-- existence of this element implies the block is collapsed -->
-<!ELEMENT Collapsed>
+<!ELEMENT Collapsed EMPTY>
 
 <!-- Comment widget associated with a Block -->
 <!ELEMENT Comment (Text, Location, Collapsed?)>
@@ -57,7 +59,7 @@
 <!ELEMENT Sockets (BlockConnector*)>
 
 <!-- NOTE: Exclusive saving is not enabled for Block Connectors YET -->
-<!ELEMENT BlockConnector (EMPTY)>
+<!ELEMENT BlockConnector EMPTY>
 <!ATTLIST BlockConnector label CDATA #IMPLIED>
 <!ATTLIST BlockConnector connector-kind (plug|socket) "socket">
 <!ATTLIST BlockConnector init-type CDATA #IMPLIED> 
