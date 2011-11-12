@@ -129,7 +129,7 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("ultrasonic"))
 		{
-			return new UltrasonicBlock(blockId, translator);
+			return new UltrasonicBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("setter_variable_number"))
 		{
