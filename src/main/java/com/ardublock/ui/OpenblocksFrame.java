@@ -65,7 +65,7 @@ public class OpenblocksFrame extends JFrame
 		saveButton.addActionListener(new SaveButtonListener(this));
 		JButton openButton = new JButton("Load");
 		openButton.addActionListener(new OpenButtonListener(this));
-		JButton generateButton = new JButton("Generate");
+		JButton generateButton = new JButton("Upload");
 		generateButton.addActionListener(new GenerateCodeButtonListener(this));
 
 		buttons.add(saveButton);
