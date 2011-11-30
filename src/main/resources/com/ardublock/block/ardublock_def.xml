@@ -1166,6 +1166,232 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 
+
+
+		<BlockGenus name="df_pizeo_disk_vibration_sensor" kind="data" color="255 102 0" initlabel="Pizeo Disk Vibration Sensor">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0052.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_analog_ambient_light_sensor" kind="data" color="255 102 0" initlabel="Analog Ambient Light Sensor">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0026.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_analog_grayscale_sensor" kind="data" color="255 102 0" initlabel="Analog Grayscale Senor">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0022.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_flame_sensor" kind="data" color="255 102 0" initlabel="Flame Sensor">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0076.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_temperature_sensor" kind="data" color="255 102 0" initlabel="Temperature Sensor">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0023.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_joystick_module_x" kind="data" color="255 102 0" initlabel="Joystick Module (Axis-X)">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0061.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_joystick_module_y" kind="data" color="255 102 0" initlabel="Joystick Module (Axis-Y)">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0061.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_mma7260_x" kind="data" color="255 102 0" initlabel="Triple Axis Accelerometer MMA7260 (Axis-X)">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0068.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_mma7260_y" kind="data" color="255 102 0" initlabel="Triple Axis Accelerometer MMA7260 (Axis-Y)">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0068.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_mma7260_z" kind="data" color="255 102 0" initlabel="Triple Axis Accelerometer MMA7260 (Axis-Z)">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0068.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_analog_rotation_sensor_v1" kind="data" color="255 102 0" initlabel="Analog Rotation Sensor V1">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0054.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_analog_rotation_sensor_v2" kind="data" color="255 102 0" initlabel="Analog Rotation Sensor V2">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0058.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_analog_sound_sensor" kind="data" color="255 102 0" initlabel="Analog Sound Sensor">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0034.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="df_analog_gas_sensor" kind="data" color="255 102 0" initlabel="Analog Gas Sensor">
+			<description>
+				<text>Read analog value from pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0049.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		
 	</BlockGenuses>
 	
@@ -1209,6 +1435,15 @@ BlockGenuses are first loaded.
 		<BlockFamily>
 			<FamilyMember>digital-on</FamilyMember>
 			<FamilyMember>digital-off</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>df_joystick_module_x</FamilyMember>
+			<FamilyMember>df_joystick_module_y</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>df_mma7260_x</FamilyMember>
+			<FamilyMember>df_mma7260_y</FamilyMember>
+			<FamilyMember>df_mma7260_z</FamilyMember>
 		</BlockFamily>
 	</BlockFamilies>
 
@@ -1321,6 +1556,20 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>df_digital_push_button</BlockGenusMember>
 				<BlockGenusMember>df_joystick_module_button</BlockGenusMember>
 				<BlockGenusMember>df_capacitive_touch_sensor</BlockGenusMember>
+				<BlockGenusMember>df_pizeo_disk_vibration_sensor</BlockGenusMember>
+				<BlockGenusMember>df_analog_ambient_light_sensor</BlockGenusMember>
+				<BlockGenusMember>df_analog_grayscale_sensor</BlockGenusMember>
+				<BlockGenusMember>df_flame_sensor</BlockGenusMember>
+				<BlockGenusMember>df_temperature_sensor</BlockGenusMember>
+				<BlockGenusMember>df_joystick_module_x</BlockGenusMember>
+				<BlockGenusMember>df_joystick_module_y</BlockGenusMember>
+				<BlockGenusMember>df_mma7260_x</BlockGenusMember>
+				<BlockGenusMember>df_mma7260_y</BlockGenusMember>
+				<BlockGenusMember>df_mma7260_z</BlockGenusMember>
+				<BlockGenusMember>df_analog_rotation_sensor_v1</BlockGenusMember>
+				<BlockGenusMember>df_analog_rotation_sensor_v2</BlockGenusMember>
+				<BlockGenusMember>df_analog_sound_sensor</BlockGenusMember>
+				<BlockGenusMember>df_analog_gas_sensor</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->
