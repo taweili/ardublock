@@ -5,18 +5,18 @@ import com.ardublock.core.Context;
 
 import processing.app.tools.Tool;
 
-import com.ardublock.ui.OpenblocksFrame;
+import com.ardublock.ui.ArduBlockToolFrame;
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
 public class ArduBlockTool implements Tool, OpenblocksFrameListener
 {
 	static Editor editor;
-	static OpenblocksFrame openblocksFrame;
+	static ArduBlockToolFrame openblocksFrame;
 	
 	public void init(Editor editor) {
 		if (ArduBlockTool.editor == null ) {
 			ArduBlockTool.editor = editor;
-			ArduBlockTool.openblocksFrame = new OpenblocksFrame();
+			ArduBlockTool.openblocksFrame = new ArduBlockToolFrame();
 			ArduBlockTool.openblocksFrame.addListener(this);
 		}
 	}
@@ -32,7 +32,7 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 	}
 
 	public String getMenuTitle() {
-		return Context.APP_NAME + " Tool";
+		return Context.APP_NAME;
 	}
 
 	public void didSave() {
@@ -43,5 +43,6 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 	}
 	public void didGenerate(String source) {
 		ArduBlockTool.editor.setText(source);
+		ArduBlockTool.editor.handleExport(false);
 	}
 }

@@ -21,7 +21,7 @@ import com.ardublock.ui.listener.OpenblocksFrameListener;
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.workspace.Workspace;
 
-public class OpenblocksFrame extends JFrame
+public class ArduBlockToolFrame extends JFrame
 {
 	/**
 	 * 
@@ -35,7 +35,7 @@ public class OpenblocksFrame extends JFrame
 		context.registerOpenblocksFrameListener(ofl);
 	}
 	
-	public OpenblocksFrame()
+	public ArduBlockToolFrame()
 	{
 		context = Context.getContext();
 		this.setTitle(context.makeFrameTitle());
