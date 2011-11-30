@@ -982,7 +982,8 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 	
-	
+		
+		
 		<!-- Xinchejian -->
 	
 		<BlockGenus name="xcj_motor_forward" kind="command" color="0 255 0" initlabel="motor shield &lt;br&gt; forward">
@@ -1049,9 +1050,124 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<!-- DFRobot -->
+		
+		
+		<BlockGenus name="df_digital_viberation_sensor" kind="data" color="255 102 0" initlabel="Digital Vibration Sensor">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0027.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		<BlockGenus name="df_digital_infrared_motion_sensor" kind="data" color="255 102 0" initlabel="Digital Infrared Motion Sensor">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/sen0018.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="df_digital_ir_receiver_module" kind="data" color="255 102 0" initlabel="Digital IR Receiver Module">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0094.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="df_adjustable_infrared_sensor_switch" kind="data" color="255 102 0" initlabel="Adjustable Infrared Sensor Switch">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/sen0019.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="df_line_tracking_sensor" kind="data" color="255 102 0" initlabel="Line Tracking Sensor">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/sen0017.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="df_digital_push_button" kind="data" color="255 102 0" initlabel="Digital Push Button">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0029.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="df_joystick_module_button" kind="data" color="255 102 0" initlabel="JoyStick Module Button">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0061.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="df_capacitive_touch_sensor" kind="data" color="255 102 0" initlabel="Capacitive Touch Sensor">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0030.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		
 	</BlockGenuses>
-	
-	
 	
 	<BlockFamilies>
 		<BlockFamily>
@@ -1196,6 +1312,16 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>xcj_ms_digital_write</BlockGenusMember>
 			</BlockDrawer>
 -->
+			<BlockDrawer button-color="255 102 0" name="DFRobot" type="factory">
+				<BlockGenusMember>df_digital_viberation_sensor</BlockGenusMember>
+				<BlockGenusMember>df_digital_infrared_motion_sensor</BlockGenusMember>
+				<BlockGenusMember>df_digital_ir_receiver_module</BlockGenusMember>
+				<BlockGenusMember>df_adjustable_infrared_sensor_switch</BlockGenusMember>
+				<BlockGenusMember>df_line_tracking_sensor</BlockGenusMember>
+				<BlockGenusMember>df_digital_push_button</BlockGenusMember>
+				<BlockGenusMember>df_joystick_module_button</BlockGenusMember>
+				<BlockGenusMember>df_capacitive_touch_sensor</BlockGenusMember>
+			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->
 			<!-- Sound blocks reside in the auto-generated String drawer.  
