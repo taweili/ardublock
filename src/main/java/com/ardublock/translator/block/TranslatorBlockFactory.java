@@ -1,6 +1,8 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.dfrobot.DfrobotAnalogInputBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotDigitalInoutBlock;
 import com.ardublock.translator.block.tinker.TinkerAccmeterBlock;
 import com.ardublock.translator.block.tinker.TinkerButtonBlock;
 import com.ardublock.translator.block.tinker.TinkerHallBlock;
@@ -353,6 +355,96 @@ public class TranslatorBlockFactory
 		if (blockName.equals("xcj_ms_digital_read"))
 		{
 			return new XinchejianDigitalReadBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		
+		//DFRobot
+		if (blockName.equals("df_digital_viberation_sensor"))
+		{
+			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_digital_infrared_motion_sensor"))
+		{
+			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_digital_ir_receiver_module"))
+		{
+			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_adjustable_infrared_sensor_switch"))
+		{
+			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_line_tracking_sensor"))
+		{
+			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_digital_push_button"))
+		{
+			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_joystick_module_button"))
+		{
+			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_capacitive_touch_sensor"))
+		{
+			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_pizeo_disk_vibration_sensor"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_analog_ambient_light_sensor"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_analog_grayscale_sensor"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_flame_sensor"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_temperature_sensor"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_joystick_module_x"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_joystick_module_y"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_mma7260_x"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_mma7260_y"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_mma7260_z"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_analog_rotation_sensor_v1"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_analog_rotation_sensor_v2"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_analog_sound_sensor"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_analog_gas_sensor"))
+		{
+			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		System.err.println(blockName + " not found!");

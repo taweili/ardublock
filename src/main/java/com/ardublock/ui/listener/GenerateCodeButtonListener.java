@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 
 import com.ardublock.core.Context;
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import edu.mit.blocks.codeblocks.Block;
 import edu.mit.blocks.renderable.RenderableBlock;
@@ -89,12 +90,32 @@ public class GenerateCodeButtonListener implements ActionListener
 				}
 				JOptionPane.showOptionDialog(parentFrame, "socket null", "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
 			}
+			catch (BlockException e2)
+			{
+				e2.printStackTrace();
+				success = false;
+				Long blockId = e2.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, e2.getMessage(), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
 		}
 		
 		if (success)
 		{
 //			System.out.println(code);
 			context.didGenerate(code);
+			
+			//for test by HE Qichen
+			System.out.println(code);
 		}
 	}
 }

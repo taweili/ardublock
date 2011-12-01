@@ -1,6 +1,7 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 
 public class PinReadAnalogBlock extends TranslatorBlock
@@ -14,9 +15,16 @@ public class PinReadAnalogBlock extends TranslatorBlock
 	{
 		String ret = "analogRead(A";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		ret = ret + translatorBlock.toCode();
-		ret = ret + ")";
-		return codePrefix + ret + codeSuffix;
+		if (translatorBlock instanceof NumberBlock)
+		{
+			ret = ret + translatorBlock.toCode();
+			ret = ret + ")";
+			return codePrefix + ret + codeSuffix;
+		}
+		else
+		{
+			throw new BlockException(blockId, "analog pin# must be a number");
+		}
 	}
 
 }
