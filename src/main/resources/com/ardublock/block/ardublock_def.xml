@@ -1393,6 +1393,139 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="df_servo" kind="command" color="255 102 0" initlabel="DFRobot Servo">
+			<description>
+				<text>set a pin to pwm</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/ser0017.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="df_360_degree_rotation_motor" kind="command" color="255 102 0" initlabel="360 degree rotation motor">
+			<description>
+				<text>set a pin to pwm</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/ser0017.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="df_led" kind="command" color="255 102 0" initlabel="LED Module">
+			<description>
+				<text>DFRobot LED Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+					<DefaultArg genus-name="digital-on" label="ON"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0021.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="df_led_pwm" kind="command" color="255 102 0" initlabel="LED with brightness">
+			<description>
+				<text>DFRobot LED Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="level">
+					<DefaultArg genus-name="number" label="255"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0021.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="df_piranha_led" kind="command" color="255 102 0" initlabel="piranha LED Module">
+			<description>
+				<text>DFRobot piranha LED Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+					<DefaultArg genus-name="digital-on" label="ON"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0031.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="df_piranha_led_pwm" kind="command" color="255 102 0" initlabel="piranha LED with brightness">
+			<description>
+				<text>DFRobot pianha LED Module with brightnes level</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="level">
+					<DefaultArg genus-name="number" label="255"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0031.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="df_relay" kind="command" color="255 102 0" initlabel="Relay">
+			<description>
+				<text>Dfrobot Relay Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+					<DefaultArg genus-name="digital-high" label="HIGH"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0017.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 	</BlockGenuses>
 	
 	<BlockFamilies>
@@ -1570,6 +1703,14 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>df_analog_rotation_sensor_v2</BlockGenusMember>
 				<BlockGenusMember>df_analog_sound_sensor</BlockGenusMember>
 				<BlockGenusMember>df_analog_gas_sensor</BlockGenusMember>
+				<BlockGenusMember>df_servo</BlockGenusMember>
+				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
+				<BlockGenusMember>df_led</BlockGenusMember>
+				<BlockGenusMember>df_led_pwm</BlockGenusMember>
+				<BlockGenusMember>df_piranha_led</BlockGenusMember>
+				<BlockGenusMember>df_piranha_led_pwm</BlockGenusMember>
+				<BlockGenusMember>df_relay</BlockGenusMember>
+				
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->

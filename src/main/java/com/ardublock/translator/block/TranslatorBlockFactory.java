@@ -3,6 +3,9 @@ package com.ardublock.translator.block;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.dfrobot.DfrobotAnalogInputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotDigitalInoutBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotDigitalOutputBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotPwmOutputBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotServoBlock;
 import com.ardublock.translator.block.tinker.TinkerAccmeterBlock;
 import com.ardublock.translator.block.tinker.TinkerButtonBlock;
 import com.ardublock.translator.block.tinker.TinkerHallBlock;
@@ -127,7 +130,7 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("servo"))
 		{
-			return new ServoBlock(blockId, translator);
+			return new ServoBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("ultrasonic"))
 		{
@@ -336,7 +339,7 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("Tinker_Servo"))
 		{
-			return new TinkerServoBlock(blockId, translator);
+			return new TinkerServoBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		//Xinchejian
@@ -445,6 +448,35 @@ public class TranslatorBlockFactory
 		if (blockName.equals("df_analog_gas_sensor"))
 		{
 			return new DfrobotAnalogInputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		
+		if (blockName.equals("df_servo"))
+		{
+			return new DfrobotServoBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_360_degree_rotation_motor"))
+		{
+			return new DfrobotServoBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_led"))
+		{
+			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_led_pwm"))
+		{
+			return new DfrobotPwmOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_piranha_led"))
+		{
+			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_piranha_led_pwm"))
+		{
+			return new DfrobotPwmOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_relay"))
+		{
+			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		System.err.println(blockName + " not found!");

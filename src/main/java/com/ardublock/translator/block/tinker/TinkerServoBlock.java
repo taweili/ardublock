@@ -6,9 +6,9 @@ import com.ardublock.translator.block.ServoBlock;
 public class TinkerServoBlock extends ServoBlock
 {
 
-	public TinkerServoBlock(Long blockId, Translator translator)
+	public TinkerServoBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
-		super(blockId, translator);
+		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 }
