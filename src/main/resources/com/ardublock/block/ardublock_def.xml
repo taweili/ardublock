@@ -1729,8 +1729,8 @@ BlockGenuses are first loaded.
 	</Pages>
 
 	<TrashCan>
-		<OpenTrashImage>/support/images/trash_open.png</OpenTrashImage>
-		<ClosedTrashImage>/support/images/trash.png</ClosedTrashImage>
+		<OpenTrashImage>com/ardublock/block/trash_open.png</OpenTrashImage>
+		<ClosedTrashImage>com/ardublock/block/trash.png</ClosedTrashImage>
 	</TrashCan>
 	
 </BlockLangDef>
