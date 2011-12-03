@@ -4,6 +4,8 @@ import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.dfrobot.DfrobotAnalogInputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotDigitalInoutBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotDigitalOutputBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotLedBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotLedPwmBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotPwmOutputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotServoBlock;
 import com.ardublock.translator.block.tinker.TinkerAccmeterBlock;
@@ -460,19 +462,19 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("df_led"))
 		{
-			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+			return new DfrobotLedBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("df_led_pwm"))
 		{
-			return new DfrobotPwmOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+			return new DfrobotLedPwmBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("df_piranha_led"))
 		{
-			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+			return new DfrobotLedBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("df_piranha_led_pwm"))
 		{
-			return new DfrobotPwmOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+			return new DfrobotLedPwmBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("df_relay"))
 		{
