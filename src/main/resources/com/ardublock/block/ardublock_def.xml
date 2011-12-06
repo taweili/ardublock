@@ -1526,6 +1526,42 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
+		<!-- seeedstudio grove -->
+		
+		<BlockGenus name="seeed_joystick" kind="data" color="0 255 0" initlabel="Grove Thumb Joystick">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="analog pin#">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/COM90133P.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_joystick_button" kind="data" color="0 255 0" initlabel="Grove Thumb Joystick Button">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug"></BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/COM90133P.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 	</BlockGenuses>
 	
 	<BlockFamilies>
@@ -1711,6 +1747,11 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>df_piranha_led_pwm</BlockGenusMember>
 				<BlockGenusMember>df_relay</BlockGenusMember>
 				
+			</BlockDrawer>
+			
+			<BlockDrawer button-color="0 255 0" name="Seeedstudio Grove">
+				<BlockGenusMember>seeed_joystick</BlockGenusMember>
+				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer
 				 (see slcodeblocks.ShapeBlocksGenerator for details)  -->

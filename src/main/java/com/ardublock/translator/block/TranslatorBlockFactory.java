@@ -8,6 +8,7 @@ import com.ardublock.translator.block.dfrobot.DfrobotLedBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotLedPwmBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotPwmOutputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotServoBlock;
+import com.ardublock.translator.block.seeedstudio.GroveJoyStickButtonBlock;
 import com.ardublock.translator.block.tinker.TinkerAccmeterBlock;
 import com.ardublock.translator.block.tinker.TinkerButtonBlock;
 import com.ardublock.translator.block.tinker.TinkerHallBlock;
@@ -479,6 +480,16 @@ public class TranslatorBlockFactory
 		if (blockName.equals("df_relay"))
 		{
 			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		
+		if (blockName.equals("seeed_joystick"))
+		{
+			return new PinReadAnalogBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		
+		if (blockName.equals("seeed_joystick_button"))
+		{
+			return new GroveJoyStickButtonBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		System.err.println(blockName + " not found!");
