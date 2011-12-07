@@ -708,7 +708,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_LED.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_LED.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -727,7 +727,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_LED.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_LED.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -746,7 +746,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Mosfet.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Mosfet.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -765,7 +765,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Mosfet.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Mosfet.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -784,7 +784,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Relay.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Relay.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -803,7 +803,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Servo.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Servo.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -820,7 +820,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Button.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Button.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -838,7 +838,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Accmeter.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Accmeter.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -855,7 +855,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Hall.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Hall.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -872,7 +872,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_LDR.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_LDR.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -889,7 +889,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_LinearPotentiometer.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_LinearPotentiometer.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -906,7 +906,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_RotaryPotentiometer.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_RotaryPotentiometer.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -923,7 +923,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Thermistor.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Thermistor.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -940,7 +940,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Touch.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Touch.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -959,7 +959,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Servo.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Servo.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -977,7 +977,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/Tinker_Tilt.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Tilt.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
