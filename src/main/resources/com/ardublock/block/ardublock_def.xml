@@ -820,7 +820,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Tinker_Button.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Button.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -838,7 +838,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Tinker_Accmeter.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Accmeter.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -855,7 +855,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Tinker_Hall.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Hall.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -1212,7 +1212,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0022.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0022.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -1445,7 +1445,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0021.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0021.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -1521,7 +1521,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0017.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0017.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
