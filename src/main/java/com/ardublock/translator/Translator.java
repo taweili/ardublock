@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 import edu.mit.blocks.codeblocks.Block;
+import edu.mit.blocks.workspace.Workspace;
 import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -28,9 +29,12 @@ public class Translator
 	private Map<String, String> numberVariableSet;
 	private Map<String, String> booleanVariableSet;
 	
+	private Workspace workspace;
+	
 	private int variableCnt;
-	public Translator()
+	public Translator(Workspace ws)
 	{
+		workspace = ws;
 		reset();
 	}
 	
@@ -39,7 +43,7 @@ public class Translator
 		reset();
 		
 		TranslatorBlockFactory translatorBlockFactory = new TranslatorBlockFactory();
-		Block block = Block.getBlock(blockId);
+		Block block = workspace.getEnv().getBlock(blockId);
 		
 		TranslatorBlock rootTranslatorBlock = translatorBlockFactory.buildTranslatorBlock(this, blockId, block.getGenusName(), block.getBlockLabel(), "", "");
 		
@@ -184,5 +188,13 @@ public class Translator
 			}
 		}
 		return varName;
+	}
+	
+	public Workspace getWorkspace() {
+		return workspace;
+	}
+	
+	public Block getBlock(Long blockId) {
+		return workspace.getEnv().getBlock(blockId);
 	}
 }

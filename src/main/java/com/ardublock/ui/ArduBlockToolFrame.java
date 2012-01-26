@@ -56,7 +56,7 @@ public class ArduBlockToolFrame extends JFrame
 		JComponent workspaceComponent = workspaceController.getWorkspacePanel();
 		
 		//WTF I can't add worksapcelistener by workspace contrller
-		Workspace workspace = Workspace.getInstance();
+		Workspace workspace = new Workspace();
 		workspace.addWorkspaceListener(new ArdublockWorkspaceListener(this));
 		
 		JPanel buttons = new JPanel();
@@ -66,7 +66,7 @@ public class ArduBlockToolFrame extends JFrame
 		JButton openButton = new JButton("Load");
 		openButton.addActionListener(new OpenButtonListener(this));
 		JButton generateButton = new JButton("Upload");
-		generateButton.addActionListener(new GenerateCodeButtonListener(this));
+		generateButton.addActionListener(new GenerateCodeButtonListener(this, workspace));
 
 		buttons.add(saveButton);
 		buttons.add(openButton);

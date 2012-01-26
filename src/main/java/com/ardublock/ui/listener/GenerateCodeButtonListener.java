@@ -20,19 +20,21 @@ public class GenerateCodeButtonListener implements ActionListener
 {
 	private JFrame parentFrame;
 	private Context context;
-	public GenerateCodeButtonListener(JFrame frame)
+	private Workspace workspace; 
+	
+	public GenerateCodeButtonListener(JFrame frame, Workspace ws)
 	{
 		this.parentFrame = frame;
 		context = Context.getContext();
+		workspace = ws;
 	}
 	
 	public void actionPerformed(ActionEvent e)
 	{
 		boolean success;
 		success = true;
-		Translator translator = new Translator();
+		Translator translator = new Translator(workspace);
 		
-		Workspace workspace = Workspace.getInstance();
 		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
 		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
 		String code = null;

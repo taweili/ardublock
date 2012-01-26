@@ -6,8 +6,8 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/openblocks"/>
 	<classpathentry kind="var" path="M2_REPO/jfree/jcommon/1.0.15/jcommon-1.0.15.jar"/>
 	<classpathentry kind="var" path="M2_REPO/jfree/jfreechart/1.0.12/jfreechart-1.0.12.jar"/>
-	<classpathentry kind="var" path="M2_REPO/edu/mit/openblocks/1.0-20110819/openblocks-1.0-20110819.jar"/>
 	<classpathentry kind="var" path="M2_REPO/arduino/pde/1.0/pde-1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/edu/mit/openblocks/1.0-20110819/openblocks-1.0-20110819.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
