@@ -52,11 +52,14 @@ public class OpenblocksFrame extends JFrame
 	{
 		Context context = Context.getContext();
 		
+		/*
 		WorkspaceController workspaceController = context.getWorkspaceController();
 		JComponent workspaceComponent = workspaceController.getWorkspacePanel();
+		*/
+		
+		Workspace workspace = context.getWorkspace();
 		
 		// WTF I can't add worksapcelistener by workspace contrller
-		Workspace workspace = new Workspace();
 		workspace.addWorkspaceListener(new ArdublockWorkspaceListener(this));
 		
 		JPanel buttons = new JPanel();
@@ -66,13 +69,13 @@ public class OpenblocksFrame extends JFrame
 		JButton openButton = new JButton("Load");
 		openButton.addActionListener(new OpenButtonListener(this));
 		JButton generateButton = new JButton("Upload");
-		generateButton.addActionListener(new GenerateCodeButtonListener(this, workspace));
+		generateButton.addActionListener(new GenerateCodeButtonListener(this, context));
 
 		buttons.add(saveButton);
 		buttons.add(openButton);
 		buttons.add(generateButton);
 
 		this.add(buttons, BorderLayout.NORTH);
-		this.add(workspaceComponent, BorderLayout.CENTER);
+		this.add(workspace, BorderLayout.CENTER);
 	}
 }

@@ -66,7 +66,7 @@ public class ArduBlockToolFrame extends JFrame
 		JButton openButton = new JButton("Load");
 		openButton.addActionListener(new OpenButtonListener(this));
 		JButton generateButton = new JButton("Upload");
-		generateButton.addActionListener(new GenerateCodeButtonListener(this, workspace));
+		generateButton.addActionListener(new GenerateCodeButtonListener(this, context));
 
 		buttons.add(saveButton);
 		buttons.add(openButton);

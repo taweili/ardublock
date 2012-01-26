@@ -14,7 +14,9 @@ import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import edu.mit.blocks.codeblocks.Block;
 import edu.mit.blocks.renderable.RenderableBlock;
+import edu.mit.blocks.workspace.Page;
 import edu.mit.blocks.workspace.Workspace;
+import edu.mit.blocks.workspace.WorkspaceEnvironment;
 
 public class GenerateCodeButtonListener implements ActionListener
 {
@@ -22,11 +24,11 @@ public class GenerateCodeButtonListener implements ActionListener
 	private Context context;
 	private Workspace workspace; 
 	
-	public GenerateCodeButtonListener(JFrame frame, Workspace ws)
+	public GenerateCodeButtonListener(JFrame frame, Context context)
 	{
 		this.parentFrame = frame;
-		context = Context.getContext();
-		workspace = ws;
+		this.context = context;
+		workspace = context.getWorkspaceController().getWorkspace();
 	}
 	
 	public void actionPerformed(ActionEvent e)
@@ -36,11 +38,18 @@ public class GenerateCodeButtonListener implements ActionListener
 		Translator translator = new Translator(workspace);
 		
 		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
+		
 		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
 		String code = null;
+		
+		System.out.println("starting finding loop");
+		
 		for (RenderableBlock renderableBlock:renderableBlocks)
 		{
 			Block block = renderableBlock.getBlock();
+			
+			System.out.println("block: " + block.getGenusName());
+			
 			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{
 				if(block.getGenusName().equals("loop"))

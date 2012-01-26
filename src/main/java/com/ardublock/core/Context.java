@@ -7,6 +7,7 @@ import com.ardublock.ui.listener.OpenblocksFrameListener;
 
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.renderable.RenderableBlock;
+import edu.mit.blocks.workspace.Workspace;
 
 public class Context
 {
@@ -38,23 +39,37 @@ public class Context
 	}
 	
 	private WorkspaceController workspaceController;
+	private Workspace workspace;
 	
 	private Context() 
 	{
+		/*
+		workspace = new Workspace();
+		workspace.reset();
+		workspace.setl
+		*/
+		
 		workspaceController = new WorkspaceController();
 		workspaceController.resetWorkspace();
 		workspaceController.resetLanguage();
 		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(Configuration.LANG_DTD_PATH));
 		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(Configuration.ARDUBLOCK_LANG_PATH));
 		workspaceController.loadFreshWorkspace();
+		workspace = workspaceController.getWorkspace();
 		workspaceChanged = false;
 		saveFilePath = null;
 		highlightBlockSet = new HashSet<RenderableBlock>();
 		ofls = new HashSet<OpenblocksFrameListener>();
+		this.workspace = workspaceController.getWorkspace();
 	}
 
 	public WorkspaceController getWorkspaceController() {
 		return workspaceController;
+	}
+	
+	public Workspace getWorkspace()
+	{
+		return workspace;
 	}
 
 	public boolean isWorkspaceChanged()
