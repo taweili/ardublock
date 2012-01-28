@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE BlockLangDef SYSTEM "lang_def.dtd">
-
 <!-- 
 
 
@@ -12,55 +11,54 @@ that sanity checks can be made regarding the validity of a default argument when
 BlockGenuses are first loaded. 
 
 -->
-
 <BlockLangDef>
 
 	<BlockConnectorShapes>
-		<BlockConnectorShape shape-type="number" shape-number="1"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="number-list" shape-number="2"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="number-inv" shape-number="3"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="boolean" shape-number="4"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="boolean-list" shape-number="5"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="boolean-inv" shape-number="6"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="string" shape-number="7"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="string-list" shape-number="8"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="string-inv" shape-number="9"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="poly" shape-number="10"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="poly-list" shape-number="11"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="poly-inv" shape-number="12"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="proc-param" shape-number="13"></BlockConnectorShape>
-		<BlockConnectorShape shape-type="cmd" shape-number="14"></BlockConnectorShape>
+		<BlockConnectorShape shape-type="number" shape-number="1"/>
+		<BlockConnectorShape shape-type="number-list" shape-number="2"/>
+		<BlockConnectorShape shape-type="number-inv" shape-number="3"/>
+		<BlockConnectorShape shape-type="boolean" shape-number="4"/>
+		<BlockConnectorShape shape-type="boolean-list" shape-number="5"/>
+		<BlockConnectorShape shape-type="boolean-inv" shape-number="6"/>
+		<BlockConnectorShape shape-type="string" shape-number="7"/>
+		<BlockConnectorShape shape-type="string-list" shape-number="8"/>
+		<BlockConnectorShape shape-type="string-inv" shape-number="9"/>
+		<BlockConnectorShape shape-type="poly" shape-number="10"/>
+		<BlockConnectorShape shape-type="poly-list" shape-number="11"/>
+		<BlockConnectorShape shape-type="poly-inv" shape-number="12"/>
+		<BlockConnectorShape shape-type="proc-param" shape-number="13"/>
+		<BlockConnectorShape shape-type="cmd" shape-number="14"/>
 	</BlockConnectorShapes>
 	
 	<BlockGenuses>
 		<!-- Number -->
 		
-		<BlockGenus name="number" kind="data" color="208 10 16" initlabel="1" editable-label="yes">
+		<BlockGenus name="number" kind="data" color="208 10 16" initlabel="bg.number" editable-label="yes">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<BlockGenus name="digital-high" kind="data" color="208 10 16" initlabel="bg.digital-high">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="digital-low" kind="data" color="208 10 16" initlabel="bg.digital-low">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<BlockGenus name="digital-on" kind="data" color="208 10 16" initlabel="bg.digital-on">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<BlockGenus name="digital-off" kind="data" color="208 10 16" initlabel="bg.digital-off">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -71,7 +69,7 @@ BlockGenuses are first loaded.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -82,7 +80,7 @@ BlockGenuses are first loaded.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror" />
+				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -92,7 +90,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug"/>
-				<BlockConnector connector-type="string" connector-kind="socket" />
+				<BlockConnector connector-type="string" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -101,8 +99,8 @@ BlockGenuses are first loaded.
 				<text>glue number to string</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" />
-				<BlockConnector connector-type="number" connector-kind="socket" />
+				<BlockConnector connector-type="string" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -111,8 +109,8 @@ BlockGenuses are first loaded.
 				<text>glue boolean to string</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="plug" />
-				<BlockConnector connector-type="boolean" connector-kind="socket" />
+				<BlockConnector connector-type="string" connector-kind="plug"/>
+				<BlockConnector connector-type="boolean" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -123,7 +121,7 @@ BlockGenuses are first loaded.
 				<text>this is the loop of the arduino</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="cmd" connector-kind="socket" label="do"></BlockConnector>
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="do"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -135,7 +133,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -147,7 +145,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -186,11 +184,11 @@ BlockGenuses are first loaded.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="setter_variable_digital" kind="command" color="255 0 0" initlabel="set digital var">
+		<BlockGenus name="setter_variable_digital" kind="command" color="255 0 0" initlabel="bg.setter_variable_digital">
 			<description>
 				<text>write digital to pin</text>
 			</description>
@@ -204,18 +202,18 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="variable_digital" kind="data" initlabel="digital var name" editable-label="yes" is-label-value="yes" color="255 0 255">
+		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="255 0 255">
 			<description>
 				<text>
 					Digital Var
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 			
-		<BlockGenus name="pin-write-analog" kind="command" color="77 191 169" initlabel="set analog pin">
+		<BlockGenus name="pin-write-analog" kind="command" color="77 191 169" initlabel="bg.pin-write-analog">
 			<description>
 				<text>write analog to pin</text>
 			</description>
@@ -229,7 +227,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="servo" kind="command" color="77 191 169" initlabel="Servo">
+		<BlockGenus name="servo" kind="command" color="77 191 169" initlabel="bg.servo">
 			<description>
 				<text>set a pin to pwm</text>
 			</description>
@@ -243,7 +241,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="ultrasonic" kind="data" color="77 191 169" initlabel="ultrasonic">
+		<BlockGenus name="ultrasonic" kind="data" color="77 191 169" initlabel="bg.ultrasonic">
 			<description>
 				<text>Ultrasonic distance sensor</text>
 			</description>
@@ -263,7 +261,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="if" kind="command" initlabel="if" color="255 221 0">
+		<BlockGenus name="if" kind="command" initlabel="bg.if" color="255 221 0">
 			<description>
 				<text>
 					If <arg n="1"/> is true, the agent will run the blocks attached to <arg n="2"/>
@@ -277,12 +275,12 @@ BlockGenuses are first loaded.
 				</arg-description>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="then" connector-kind="socket" connector-type="cmd"></BlockConnector>
+				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"/>
+				<BlockConnector label="then" connector-kind="socket" connector-type="cmd"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="ifelse" kind="command" initlabel="ifelse" color="255 221 0">
+		<BlockGenus name="ifelse" kind="command" initlabel="bg.ifelse" color="255 221 0">
 			<description>
 				<text>
 					Does the first set of commands if the condition specified is true, otherwise it will do the second set of commands.
@@ -300,25 +298,25 @@ BlockGenuses are first loaded.
 				</arg-description>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="then" connector-kind="socket" connector-type="cmd"></BlockConnector>
-				<BlockConnector label="else" connector-kind="socket" connector-type="cmd"></BlockConnector>
+				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"/>
+				<BlockConnector label="then" connector-kind="socket" connector-type="cmd"/>
+				<BlockConnector label="else" connector-kind="socket" connector-type="cmd"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="while" kind="command" initlabel="while" color="255 221 0">
+		<BlockGenus name="while" kind="command" initlabel="bg.while" color="255 221 0">
 			<description>
 				<text>
 					While Block
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="condition" connector-kind="socket" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="cmd"></BlockConnector>
+				<BlockConnector label="condition" connector-kind="socket" connector-type="boolean"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="cmd"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="repeat_times" kind="command" color="255 221 0" initlabel="repeat">
+		<BlockGenus name="repeat_times" kind="command" color="255 221 0" initlabel="bg.repeat_times">
 			<description>
 				<text>repeat</text>
 			</description>
@@ -326,236 +324,236 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket">
 					<DefaultArg genus-name="number" label="5"/>
 				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector connector-type="cmd" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<!-- operator -->
 		
-		<BlockGenus name="and" kind="data" initlabel="and" color="149 193 31">
+		<BlockGenus name="and" kind="data" initlabel="bg.and" color="149 193 31">
 			<description>
 				<text>
 					Reports true if both of the two conditions are true.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="boolean"></BlockConnector>
+				<BlockConnector connector-kind="plug" connector-type="boolean"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="boolean"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="boolean"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		
-		<BlockGenus name="or" kind="function" initlabel="or" color="149 193 31">
+		<BlockGenus name="or" kind="function" initlabel="bg.or" color="149 193 31">
 			<description>
 				<text>
 					Reports true if one or both of the two conditions are true.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="boolean"></BlockConnector>
+				<BlockConnector connector-kind="plug" connector-type="boolean"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="boolean"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="boolean"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="not" kind="function" initlabel="not" color="149 193 31">
+		<BlockGenus name="not" kind="function" initlabel="bg.not" color="149 193 31">
 			<description>
 				<text>
 					Reports the opposite of <arg n="1"/>.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="boolean"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="boolean"></BlockConnector>
+				<BlockConnector connector-kind="plug" connector-type="boolean"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="boolean"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		
 		<!-- Math -->
 		
-		<BlockGenus name="addition" kind="function" initlabel="+" color="149 193 31">
+		<BlockGenus name="addition" kind="function" initlabel="bg.addition" color="149 193 31">
 			<description>
 				<text>
 					Reports the sum of two numbers (<arg n="1"/> + <arg n="2"/>).
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="subtraction" kind="function" initlabel="-" color="149 193 31">
+		<BlockGenus name="subtraction" kind="function" initlabel="bg.subtraction" color="149 193 31">
 			<description>
 				<text>
 					Reports the difference of two numbers (<arg n="1"/> - <arg n="2"/>).
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="multiplication" kind="function" initlabel="x" color="149 193 31">
+		<BlockGenus name="multiplication" kind="function" initlabel="bg.multiplication" color="149 193 31">
 			<description>
 				<text>
 					Reports the product of two numbers (<arg n="1"/> x <arg n="2"/>).
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="division" kind="function" initlabel="÷" color="149 193 31">
+		<BlockGenus name="division" kind="function" initlabel="bg.division" color="149 193 31">
 			<description>
 				<text>
 					Reports the quotient of  two numbers (<arg n="1"/> ÷ <arg n="2"/>).
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="modulo" kind="function" color="149 193 31" initlabel="%">
+		<BlockGenus name="modulo" kind="function" color="149 193 31" initlabel="bg.modulo">
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
-				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"></BlockConnector>
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
+				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="min" kind="function" color="149 193 31" initlabel="min">
+		<BlockGenus name="min" kind="function" color="149 193 31" initlabel="bg.min">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="max" kind="function" color="149 193 31" initlabel="max">
+		<BlockGenus name="max" kind="function" color="149 193 31" initlabel="bg.max">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="greater" kind="function" color="149 193 31" initlabel="&gt;">
+		<BlockGenus name="greater" kind="function" color="149 193 31" initlabel="bg.greater">
 			<description>
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="less" kind="function" color="149 193 31" initlabel="&lt;">
+		<BlockGenus name="less" kind="function" color="149 193 31" initlabel="bg.less">
 			<description>
 				<text>is upper number less then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="equal" kind="function" color="149 193 31" initlabel="=">
+		<BlockGenus name="equal" kind="function" color="149 193 31" initlabel="bg.equal">
 			<description>
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="greater_equal" kind="function" color="149 193 31" initlabel="&gt;=">
+		<BlockGenus name="greater_equal" kind="function" color="149 193 31" initlabel="bg.greater_equal">
 			<description>
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="less_equal" kind="function" color="149 193 31" initlabel="&lt;=">
+		<BlockGenus name="less_equal" kind="function" color="149 193 31" initlabel="bg.less_equal">
 			<description>
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="not_equal" kind="function" color="149 193 31" initlabel="!=">
+		<BlockGenus name="not_equal" kind="function" color="149 193 31" initlabel="bg.not_equal">
 			<description>
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
-				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
+				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="abs" kind="function" color="149 193 31" initlabel="abs">
+		<BlockGenus name="abs" kind="function" color="149 193 31" initlabel="bg.abs">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" />
+				<BlockConnector connector-type="number" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pow" kind="function" color="149 193 31" initlabel="power">
+		<BlockGenus name="pow" kind="function" color="149 193 31" initlabel="bg.pow">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="base" />
-				<BlockConnector connector-type="number" connector-kind="socket" label="exponent" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="base"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="exponent"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="sqrt" kind="function" color="149 193 31" initlabel="sqrt">
+		<BlockGenus name="sqrt" kind="function" color="149 193 31" initlabel="bg.sqrt">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" />
+				<BlockConnector connector-type="number" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="sin" kind="function" color="149 193 31" initlabel="sin">
+		<BlockGenus name="sin" kind="function" color="149 193 31" initlabel="bg.sin">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" />
+				<BlockConnector connector-type="number" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="cos" kind="function" color="149 193 31" initlabel="cos">
+		<BlockGenus name="cos" kind="function" color="149 193 31" initlabel="bg.cos">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" />
+				<BlockConnector connector-type="number" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="tan" kind="function" color="149 193 31" initlabel="tan">
+		<BlockGenus name="tan" kind="function" color="149 193 31" initlabel="bg.tan">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" />
+				<BlockConnector connector-type="number" connector-kind="socket"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -563,7 +561,7 @@ BlockGenuses are first loaded.
 		
 		
 		<!-- Utility -->
-		<BlockGenus name="delay" kind="command" color="142 160 210" initlabel="delay">
+		<BlockGenus name="delay" kind="command" color="142 160 210" initlabel="bg.delay">
 			<description>
 				<text>program delay in x milliseconds</text>
 			</description>
@@ -574,7 +572,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="delay_microseconds" kind="command" color="142 160 210" initlabel="delayMicroseconds">
+		<BlockGenus name="delay_microseconds" kind="command" color="142 160 210" initlabel="bg.delay_microseconds">
 			<description>
 				<text>program delay in x milliseconds</text>
 			</description>
@@ -585,28 +583,28 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="random" kind="data" color="142 160 210" initlabel="random">
+		<BlockGenus name="random" kind="data" color="142 160 210" initlabel="bg.random">
 			<description>
 				<text>generate a random number less than the number</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="max">
 					<DefaultArg genus-name="number" label="1024"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="millis" kind="data" color="142 160 210" initlabel="millis">
+		<BlockGenus name="millis" kind="data" color="142 160 210" initlabel="bg.millis">
 			<description>
 				<text>generate a random number less than the number</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="serial_println" kind="command" color="142 160 210" initlabel="Serial println">
+		<BlockGenus name="serial_println" kind="command" color="142 160 210" initlabel="bg.serial_println">
 			<description>
 				<text>send message via Serial port</text>
 			</description>
@@ -617,27 +615,27 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="map_common" kind="data" color="142 160 210" initlabel="map [0, 1024] to [0, 255]">
+		<BlockGenus name="map_common" kind="data" color="142 160 210" initlabel="bg.map_common">
 			<description>
 				<text>map value from [0, 1023] to [0, 255]</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="value">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="map" kind="data" color="142 160 210" initlabel="map">
+		<BlockGenus name="map" kind="data" color="142 160 210" initlabel="bg.map">
 			<description>
 				<text>map</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
-				<BlockConnector connector-type="number" connector-kind="socket" label="value" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="value"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="from">
-					<DefaultArg genus-name="number" label="0" />
+					<DefaultArg genus-name="number" label="0"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket">
 					<DefaultArg genus-name="number" label="1023"/>
@@ -651,12 +649,12 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="wire_read" kind="data" color="142 160 210" initlabel="I2C Read">
+		<BlockGenus name="wire_read" kind="data" color="142 160 210" initlabel="bg.wire_read">
 			<description>
 				<text>read data from i2c</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="device address">
 					<DefaultArg genus-name="number" label="0"/>
 				</BlockConnector>
@@ -666,7 +664,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="wire_write" kind="command" color="142 160 210" initlabel="I2C Write">
+		<BlockGenus name="wire_write" kind="command" color="142 160 210" initlabel="bg.wire_write">
 			<description>
 				<text>write data via I2C</text>
 			</description>
@@ -683,17 +681,17 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="wire_isread" kind="data" color="142 160 210" initlabel="I2C read ok?">
+		<BlockGenus name="wire_isread" kind="data" color="142 160 210" initlabel="bg.wire_isread">
 			<description>
 				<text>is last read from I2C success?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<!-- TinkerKit! -->
-		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255" initlabel="LED">
+		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255" initlabel="bg.Tinker_LED">
 			<description>
 				<text>TinkerKit LED</text>
 			</description>
@@ -712,7 +710,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_LED_pwm" kind="command" color="255 255 255" initlabel="LED">
+		<BlockGenus name="Tinker_LED_pwm" kind="command" color="255 255 255" initlabel="bg.Tinker_LED_pwm">
 			<description>
 				<text>TinkerKit LED</text>
 			</description>
@@ -731,7 +729,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Mosfet" kind="command" color="255 255 255" initlabel="Mosfet">
+		<BlockGenus name="Tinker_Mosfet" kind="command" color="255 255 255" initlabel="bg.Tinker_Mosfet">
 			<description>
 				<text>TinkerKit Mosfet</text>
 			</description>
@@ -750,7 +748,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Mosfet_pwm" kind="command" color="255 255 255" initlabel="Mosfet">
+		<BlockGenus name="Tinker_Mosfet_pwm" kind="command" color="255 255 255" initlabel="bg.Tinker_Mosfet_pwm">
 			<description>
 				<text>TinkerKit Mosfet</text>
 			</description>
@@ -769,7 +767,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Relay" kind="command" color="255 255 255" initlabel="Relay">
+		<BlockGenus name="Tinker_Relay" kind="command" color="255 255 255" initlabel="bg.Tinker_Relay">
 			<description>
 				<text>TinkerKit Relay</text>
 			</description>
@@ -788,7 +786,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="Servo">
+		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="bg.Tinker_Servo">
 			<description>
 				<text>TinkerKit Servo</text>
 			</description>
@@ -807,12 +805,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Button" kind="data" color="255 255 255" initlabel="Button">
+		<BlockGenus name="Tinker_Button" kind="data" color="255 255 255" initlabel="bg.Tinker_Button">
 			<description>
 				<text>TinkerKit Button</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
@@ -825,12 +823,12 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		
-		<BlockGenus name="Tinker_Accmeter" kind="data" color="255 255 255" initlabel="Accelerometer">
+		<BlockGenus name="Tinker_Accmeter" kind="data" color="255 255 255" initlabel="bg.Tinker_Accmeter">
 			<description>
 				<text>TinkerKit Accelerometer</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
@@ -842,12 +840,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Hall" kind="data" color="255 255 255" initlabel="Hall">
+		<BlockGenus name="Tinker_Hall" kind="data" color="255 255 255" initlabel="bg.Tinker_Hall">
 			<description>
 				<text>TinkerKit Hall Sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
@@ -859,12 +857,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_LDR" kind="data" color="255 255 255" initlabel="LDR">
+		<BlockGenus name="Tinker_LDR" kind="data" color="255 255 255" initlabel="bg.Tinker_LDR">
 			<description>
 				<text>TinkerKit LDR</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
@@ -876,12 +874,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_LinearPotentiometer" kind="data" color="255 255 255" initlabel="LinearPotentiometer">
+		<BlockGenus name="Tinker_LinearPotentiometer" kind="data" color="255 255 255" initlabel="bg.Tinker_LinearPotentiometer">
 			<description>
 				<text>TinkerKit Accelerometer</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
@@ -893,12 +891,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_RotaryPotentiometer" kind="data" color="255 255 255" initlabel="RotaryPotentiometer">
+		<BlockGenus name="Tinker_RotaryPotentiometer" kind="data" color="255 255 255" initlabel="bg.Tinker_RotaryPotentiometer">
 			<description>
 				<text>TinkerKit RotaryPotentiometer</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
@@ -910,12 +908,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Thermistor" kind="data" color="255 255 255" initlabel="Thermistor">
+		<BlockGenus name="Tinker_Thermistor" kind="data" color="255 255 255" initlabel="bg.Tinker_Thermistor">
 			<description>
 				<text>TinkerKit Thermistor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
@@ -927,12 +925,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Touch" kind="data" color="255 255 255" initlabel="Touch">
+		<BlockGenus name="Tinker_Touch" kind="data" color="255 255 255" initlabel="bg.Tinker_Touch">
 			<description>
 				<text>TinkerKit Touch Sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
@@ -944,12 +942,12 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="Servo">
+		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255" initlabel="bg.Tinker_Servo">
 			<description>
 				<text>TinkerKit Servo</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#" >
+				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
@@ -964,7 +962,7 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		
-		<BlockGenus name="Tinker_Tilt" kind="data" color="255 255 255" initlabel="Tilt">
+		<BlockGenus name="Tinker_Tilt" kind="data" color="255 255 255" initlabel="bg.Tinker_Tilt">
 			<description>
 				<text>TinkerKit Tilt</text>
 			</description>
@@ -983,69 +981,69 @@ BlockGenuses are first loaded.
 	
 		<BlockGenus name="Tinker_I0" kind="data" color="255 255 255" initlabel="bg.Tinker_I0" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_I1" kind="data" color="255 255 255" initlabel="bg.Tinker_I1" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_I2" kind="data" color="255 255 255" initlabel="bg.Tinker_I2" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_I3" kind="data" color="255 255 255" initlabel="bg.Tinker_I3" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_I4" kind="data" color="255 255 255" initlabel="bg.Tinker_I4" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_I5" kind="data" color="255 255 255" initlabel="bg.Tinker_I5" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<BlockGenus name="Tinker_O0" kind="data" color="214 169 54" initlabel="bg.Tinker_O0" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_O1" kind="data" color="214 169 54" initlabel="bg.Tinker_O1" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_O2" kind="data" color="214 169 54" initlabel="bg.Tinker_O2" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_O3" kind="data" color="214 169 54" initlabel="bg.Tinker_O3" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_O4" kind="data" color="214 169 54" initlabel="bg.Tinker_O4" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="Tinker_O5" kind="data" color="214 169 54" initlabel="bg.Tinker_O5" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
 		<!-- Xinchejian -->
 	
-		<BlockGenus name="xcj_motor_forward" kind="command" color="0 255 0" initlabel="motor shield &lt;br&gt; forward">
+		<BlockGenus name="xcj_motor_forward" kind="command" color="0 255 0" initlabel="bg.xcj_motor_forward">
 			<description>
 				<text>forward</text>
 			</description>
@@ -1064,7 +1062,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="xcj_motor_backward" kind="command" color="0 255 0" initlabel="motor shield &lt;br&gt; backward">
+		<BlockGenus name="xcj_motor_backward" kind="command" color="0 255 0" initlabel="bg.xcj_motor_backward">
 			<description>
 				<text>backward</text>
 			</description>
@@ -1083,7 +1081,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="xcj_ms_digital_write" kind="command" color="0 255 0" initlabel="Xinchejian digitalWrite">
+		<BlockGenus name="xcj_ms_digital_write" kind="command" color="0 255 0" initlabel="bg.xcj_ms_digital_write">
 			<description>
 				<text>write ditial singal to Socket</text>
 			</description>
@@ -1097,12 +1095,12 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="xcj_ms_digital_read" kind="data" color="0 255 0" initlabel="Xinchejian digitalRead">
+		<BlockGenus name="xcj_ms_digital_read" kind="data" color="0 255 0" initlabel="bg.xcj_ms_digital_read">
 			<description>
 				<text>read digital status from socket</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="S#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1112,9 +1110,9 @@ BlockGenuses are first loaded.
 		<!-- DFRobot -->
 		
 		
-		<BlockGenus name="df_digital_viberation_sensor" kind="data" color="255 102 0" initlabel="Digital Vibration Sensor">
+		<BlockGenus name="df_digital_viberation_sensor" kind="data" color="255 102 0" initlabel="bg.df_digital_viberation_sensor">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1127,9 +1125,9 @@ BlockGenuses are first loaded.
 		</BlockGenus>
 		
 		
-		<BlockGenus name="df_digital_infrared_motion_sensor" kind="data" color="255 102 0" initlabel="Digital Infrared Motion Sensor">
+		<BlockGenus name="df_digital_infrared_motion_sensor" kind="data" color="255 102 0" initlabel="bg.df_digital_infrared_motion_sensor">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1141,9 +1139,9 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_digital_ir_receiver_module" kind="data" color="255 102 0" initlabel="Digital IR Receiver Module">
+		<BlockGenus name="df_digital_ir_receiver_module" kind="data" color="255 102 0" initlabel="bg.df_digital_ir_receiver_module">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1155,9 +1153,9 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_adjustable_infrared_sensor_switch" kind="data" color="255 102 0" initlabel="Adjustable Infrared Sensor Switch">
+		<BlockGenus name="df_adjustable_infrared_sensor_switch" kind="data" color="255 102 0" initlabel="bg.df_adjustable_infrared_sensor_switch">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1169,9 +1167,9 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_line_tracking_sensor" kind="data" color="255 102 0" initlabel="Line Tracking Sensor">
+		<BlockGenus name="df_line_tracking_sensor" kind="data" color="255 102 0" initlabel="bg.df_line_tracking_sensor">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1183,9 +1181,9 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_digital_push_button" kind="data" color="255 102 0" initlabel="Digital Push Button">
+		<BlockGenus name="df_digital_push_button" kind="data" color="255 102 0" initlabel="bg.df_digital_push_button">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1197,9 +1195,9 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_joystick_module_button" kind="data" color="255 102 0" initlabel="JoyStick Module Button">
+		<BlockGenus name="df_joystick_module_button" kind="data" color="255 102 0" initlabel="bg.df_joystick_module_button">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1211,9 +1209,9 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_capacitive_touch_sensor" kind="data" color="255 102 0" initlabel="Capacitive Touch Sensor">
+		<BlockGenus name="df_capacitive_touch_sensor" kind="data" color="255 102 0" initlabel="bg.df_capacitive_touch_sensor">
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -1227,7 +1225,7 @@ BlockGenuses are first loaded.
 
 
 
-		<BlockGenus name="df_pizeo_disk_vibration_sensor" kind="data" color="255 102 0" initlabel="Pizeo Disk Vibration Sensor">
+		<BlockGenus name="df_pizeo_disk_vibration_sensor" kind="data" color="255 102 0" initlabel="bg.df_pizeo_disk_vibration_sensor">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1235,7 +1233,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1243,7 +1241,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_analog_ambient_light_sensor" kind="data" color="255 102 0" initlabel="Analog Ambient Light Sensor">
+		<BlockGenus name="df_analog_ambient_light_sensor" kind="data" color="255 102 0" initlabel="bg.df_analog_ambient_light_sensor">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1251,7 +1249,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1259,7 +1257,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_analog_grayscale_sensor" kind="data" color="255 102 0" initlabel="Analog Grayscale Senor">
+		<BlockGenus name="df_analog_grayscale_sensor" kind="data" color="255 102 0" initlabel="bg.df_analog_grayscale_sensor">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1267,7 +1265,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1275,7 +1273,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_flame_sensor" kind="data" color="255 102 0" initlabel="Flame Sensor">
+		<BlockGenus name="df_flame_sensor" kind="data" color="255 102 0" initlabel="bg.df_flame_sensor">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1283,7 +1281,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1291,7 +1289,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_temperature_sensor" kind="data" color="255 102 0" initlabel="Temperature Sensor">
+		<BlockGenus name="df_temperature_sensor" kind="data" color="255 102 0" initlabel="bg.df_temperature_sensor">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1299,7 +1297,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1307,7 +1305,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_joystick_module_x" kind="data" color="255 102 0" initlabel="Joystick Module (Axis-X)">
+		<BlockGenus name="df_joystick_module_x" kind="data" color="255 102 0" initlabel="bg.df_joystick_module_x">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1315,7 +1313,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1323,7 +1321,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_joystick_module_y" kind="data" color="255 102 0" initlabel="Joystick Module (Axis-Y)">
+		<BlockGenus name="df_joystick_module_y" kind="data" color="255 102 0" initlabel="bg.df_joystick_module_y">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1331,7 +1329,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1339,7 +1337,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_mma7260_x" kind="data" color="255 102 0" initlabel="Triple Axis Accelerometer MMA7260 (Axis-X)">
+		<BlockGenus name="df_mma7260_x" kind="data" color="255 102 0" initlabel="bg.df_mma7260_x">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1347,7 +1345,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1355,7 +1353,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_mma7260_y" kind="data" color="255 102 0" initlabel="Triple Axis Accelerometer MMA7260 (Axis-Y)">
+		<BlockGenus name="df_mma7260_y" kind="data" color="255 102 0" initlabel="bg.df_mma7260_y">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1363,7 +1361,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1371,7 +1369,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_mma7260_z" kind="data" color="255 102 0" initlabel="Triple Axis Accelerometer MMA7260 (Axis-Z)">
+		<BlockGenus name="df_mma7260_z" kind="data" color="255 102 0" initlabel="bg.df_mma7260_z">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1379,7 +1377,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1387,7 +1385,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_analog_rotation_sensor_v1" kind="data" color="255 102 0" initlabel="Analog Rotation Sensor V1">
+		<BlockGenus name="df_analog_rotation_sensor_v1" kind="data" color="255 102 0" initlabel="bg.df_analog_rotation_sensor_v1">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1395,7 +1393,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1403,7 +1401,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_analog_rotation_sensor_v2" kind="data" color="255 102 0" initlabel="Analog Rotation Sensor V2">
+		<BlockGenus name="df_analog_rotation_sensor_v2" kind="data" color="255 102 0" initlabel="bg.df_analog_rotation_sensor_v2">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1411,7 +1409,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1419,7 +1417,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_analog_sound_sensor" kind="data" color="255 102 0" initlabel="Analog Sound Sensor">
+		<BlockGenus name="df_analog_sound_sensor" kind="data" color="255 102 0" initlabel="bg.df_analog_sound_sensor">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1427,7 +1425,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1435,7 +1433,7 @@ BlockGenuses are first loaded.
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_analog_gas_sensor" kind="data" color="255 102 0" initlabel="Analog Gas Sensor">
+		<BlockGenus name="df_analog_gas_sensor" kind="data" color="255 102 0" initlabel="bg.df_analog_gas_sensor">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -1443,7 +1441,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1452,7 +1450,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="df_servo" kind="command" color="255 102 0" initlabel="DFRobot Servo">
+		<BlockGenus name="df_servo" kind="command" color="255 102 0" initlabel="bg.df_servo">
 			<description>
 				<text>set a pin to pwm</text>
 			</description>
@@ -1471,7 +1469,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_360_degree_rotation_motor" kind="command" color="255 102 0" initlabel="360 degree rotation motor">
+		<BlockGenus name="df_360_degree_rotation_motor" kind="command" color="255 102 0" initlabel="bg.df_360_degree_rotation_motor">
 			<description>
 				<text>set a pin to pwm</text>
 			</description>
@@ -1490,7 +1488,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="df_led" kind="command" color="255 102 0" initlabel="LED Module">
+		<BlockGenus name="df_led" kind="command" color="255 102 0" initlabel="bg.df_led">
 			<description>
 				<text>DFRobot LED Module</text>
 			</description>
@@ -1509,7 +1507,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="df_led_pwm" kind="command" color="255 102 0" initlabel="LED with brightness">
+		<BlockGenus name="df_led_pwm" kind="command" color="255 102 0" initlabel="bg.df_led_pwm">
 			<description>
 				<text>DFRobot LED Module</text>
 			</description>
@@ -1528,7 +1526,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="df_piranha_led" kind="command" color="255 102 0" initlabel="piranha LED Module">
+		<BlockGenus name="df_piranha_led" kind="command" color="255 102 0" initlabel="bg.df_piranha_led">
 			<description>
 				<text>DFRobot piranha LED Module</text>
 			</description>
@@ -1547,7 +1545,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="df_piranha_led_pwm" kind="command" color="255 102 0" initlabel="piranha LED with brightness">
+		<BlockGenus name="df_piranha_led_pwm" kind="command" color="255 102 0" initlabel="bg.df_piranha_led_pwm">
 			<description>
 				<text>DFRobot pianha LED Module with brightnes level</text>
 			</description>
@@ -1566,7 +1564,7 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="df_relay" kind="command" color="255 102 0" initlabel="Relay">
+		<BlockGenus name="df_relay" kind="command" color="255 102 0" initlabel="bg.df_relay">
 			<description>
 				<text>Dfrobot Relay Module</text>
 			</description>
@@ -1587,7 +1585,7 @@ BlockGenuses are first loaded.
 		
 		<!-- seeedstudio grove -->
 		
-		<BlockGenus name="seeed_joystick" kind="data" color="0 255 0" initlabel="Grove Thumb Joystick">
+		<BlockGenus name="seeed_joystick" kind="data" color="0 255 0" initlabel="bg.seeed_joystick">
 			<description>
 				<text>Read analog value from analog pin</text>
 			</description>
@@ -1595,7 +1593,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="analog pin#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1604,15 +1602,15 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="seeed_joystick_button" kind="data" color="0 255 0" initlabel="Grove Thumb Joystick Button">
+		<BlockGenus name="seeed_joystick_button" kind="data" color="0 255 0" initlabel="bg.seeed_joystick_button">
 			<description>
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" >
+				<BlockConnector connector-type="number" connector-kind="socket">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="plug"></BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -1692,7 +1690,7 @@ BlockGenuses are first loaded.
 	</BlockFamilies>
 
 	<BlockDrawerSets>	
-		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no" >
+		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
 			<BlockDrawer name="Control" type="factory" is-open="yes" button-color="252 203 125">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
@@ -1848,7 +1846,7 @@ BlockGenuses are first loaded.
 	</BlockDrawerSets>
 
 	<Pages drawer-with-page="yes">
-		<Page page-name="ArduBlock" page-width="400"></Page>
+		<Page page-name="ArduBlock" page-width="400"/>
 		<!-- 
 		<Page page-name="Everyone" page-width="400"></Page>
 		<Page page-name="Setup" page-width="400"></Page>
