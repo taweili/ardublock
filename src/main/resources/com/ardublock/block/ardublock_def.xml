@@ -566,7 +566,7 @@ BlockGenuses are first loaded.
 				<text>program delay in x milliseconds</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="millisecond">
+				<BlockConnector connector-type="number" connector-kind="socket" label="milliseconds">
 					<DefaultArg genus-name="number" label="1000"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1691,7 +1691,7 @@ BlockGenuses are first loaded.
 
 	<BlockDrawerSets>	
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
-			<BlockDrawer name="Control" type="factory" is-open="yes" button-color="252 203 125">
+			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="252 203 125">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
@@ -1699,7 +1699,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 			</BlockDrawer>
 
-			<BlockDrawer button-color="29 152 155" name="Pin" type="factory">
+			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
@@ -1708,7 +1708,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 			</BlockDrawer>
 
-			<BlockDrawer button-color="182 85 52" name="Number/Constants" type="factory">
+			<BlockDrawer button-color="182 85 52" name="bd.number" type="factory">
 				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
@@ -1735,7 +1735,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>Tinker_O5</BlockGenusMember>
 			</BlockDrawer>
 
-			<BlockDrawer button-color="114 147 71" name="Operators" type="factory">
+			<BlockDrawer button-color="114 147 71" name="bd.operators" type="factory">
 				<BlockGenusMember>and</BlockGenusMember>
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
@@ -1762,7 +1762,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>cos</BlockGenusMember>
 				<BlockGenusMember>tan</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="95 120 132" name="Utilities" type="factory">
+			<BlockDrawer button-color="95 120 132" name="bd.utilities" type="factory">
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>random</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
@@ -1775,13 +1775,10 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="255 255 255" name="TinkerKit Blocks" type="factory">
+			<BlockDrawer button-color="255 255 255" name="bd.tinkerkit" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
-				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
-				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
-				<BlockGenusMember>Tinker_Button</BlockGenusMember>
 				<BlockGenusMember>Tinker_LED_pwm</BlockGenusMember>
-				<BlockGenusMember>Tinker_Mosfet_pwm</BlockGenusMember>
+				<BlockGenusMember>Tinker_Button</BlockGenusMember>
 				<BlockGenusMember>Tinker_Accmeter</BlockGenusMember>
 				<BlockGenusMember>Tinker_Hall</BlockGenusMember>
 				<BlockGenusMember>Tinker_LDR</BlockGenusMember>
@@ -1789,9 +1786,10 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>Tinker_RotaryPotentiometer</BlockGenusMember>
 				<BlockGenusMember>Tinker_Thermistor</BlockGenusMember>
 				<BlockGenusMember>Tinker_Touch</BlockGenusMember>
-				<BlockGenusMember>Tinker_Servo</BlockGenusMember>
 				<BlockGenusMember>Tinker_Tilt</BlockGenusMember>
-				
+				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
+				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
+				<BlockGenusMember>Tinker_Mosfet_pwm</BlockGenusMember>
 			</BlockDrawer>
 <!--  			
 			<BlockDrawer button-color="0 255 0" name="XinChejian" type="factory">
@@ -1801,7 +1799,7 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>xcj_ms_digital_write</BlockGenusMember>
 			</BlockDrawer>
 -->
-			<BlockDrawer button-color="255 102 0" name="DFRobot" type="factory">
+			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">
 				<BlockGenusMember>df_digital_viberation_sensor</BlockGenusMember>
 				<BlockGenusMember>df_digital_infrared_motion_sensor</BlockGenusMember>
 				<BlockGenusMember>df_digital_ir_receiver_module</BlockGenusMember>
@@ -1834,7 +1832,7 @@ BlockGenuses are first loaded.
 				
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="0 255 0" name="Seeedstudio Grove">
+			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
