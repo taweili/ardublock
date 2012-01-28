@@ -2,6 +2,7 @@ package com.ardublock.core;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.ResourceBundle;
 
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
@@ -41,8 +42,7 @@ public class Context
 	private WorkspaceController workspaceController;
 	private Workspace workspace;
 	
-	private Context() 
-	{
+	private Context() {
 		/*
 		workspace = new Workspace();
 		workspace.reset();
@@ -54,6 +54,7 @@ public class Context
 		workspaceController.resetLanguage();
 		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(Configuration.LANG_DTD_PATH));
 		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(Configuration.ARDUBLOCK_LANG_PATH));
+		workspaceController.setLangResourceBundle(ResourceBundle.getBundle("com/ardublock/block/ardublock_def"));
 		workspaceController.loadFreshWorkspace();
 		workspace = workspaceController.getWorkspace();
 		workspaceChanged = false;
