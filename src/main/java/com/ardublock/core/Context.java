@@ -52,9 +52,9 @@ public class Context
 		workspaceController = new WorkspaceController();
 		workspaceController.resetWorkspace();
 		workspaceController.resetLanguage();
+		workspaceController.setLangResourceBundle(ResourceBundle.getBundle("com/ardublock/block/ardublock_def"));
 		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(Configuration.LANG_DTD_PATH));
 		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(Configuration.ARDUBLOCK_LANG_PATH));
-		workspaceController.setLangResourceBundle(ResourceBundle.getBundle("com/ardublock/block/ardublock_def"));
 		workspaceController.loadFreshWorkspace();
 		workspace = workspaceController.getWorkspace();
 		workspaceChanged = false;

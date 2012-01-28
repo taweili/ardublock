@@ -41,42 +41,41 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="digital-high" kind="data" color="208 10 16" initlabel="HIGH">
+		<BlockGenus name="digital-high" kind="data" color="208 10 16" initlabel="bg.digital-high">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="digital-low" kind="data" color="208 10 16" initlabel="LOW">
+		<BlockGenus name="digital-low" kind="data" color="208 10 16" initlabel="bg.digital-low">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="digital-on" kind="data" color="208 10 16" initlabel="ON">
+		<BlockGenus name="digital-on" kind="data" color="208 10 16" initlabel="bg.digital-on">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="digital-off" kind="data" color="208 10 16" initlabel="OFF">
+		<BlockGenus name="digital-off" kind="data" color="208 10 16" initlabel="bg.digital-off">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="true" kind="data" initlabel="TRUE" color="208 10 16">
+		<BlockGenus name="true" kind="data" initlabel="bg.true" color="208 10 16">
 			<description>
 				<text>
 					Reports the boolean true.
 				</text>
 			</description>
 			<BlockConnectors>
-
 				<BlockConnector connector-kind="plug" connector-type="boolean" position-type="mirror"></BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="false" kind="data" initlabel="FALSE" color="208 10 16">
+		<BlockGenus name="false" kind="data" initlabel="bg.false" color="208 10 16">
 			<description>
 				<text>
 					Reports the boolean false.
@@ -87,7 +86,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="message" kind="data" color="0 0 255" initlabel="message" editable-label="yes">
+		<BlockGenus name="message" kind="data" color="0 0 255" initlabel="bg.message" editable-label="yes">
 			<description>
 				<text>string message</text>
 			</description>
@@ -97,7 +96,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="glue_sn" kind="data" color="127 127 127" initlabel="glue">
+		<BlockGenus name="glue_sn" kind="data" color="127 127 127" initlabel="bg.glue_sn">
 			<description>
 				<text>glue number to string</text>
 			</description>
@@ -107,7 +106,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="glue_sb" kind="data" color="127 127 127" initlabel="glue">
+		<BlockGenus name="glue_sb" kind="data" color="127 127 127" initlabel="bg.glue_sb">
 			<description>
 				<text>glue boolean to string</text>
 			</description>
@@ -119,7 +118,7 @@ BlockGenuses are first loaded.
 		
 		<!-- Basic -->
 		 
-		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="loop" is-starter="yes" is-terminator="yes" label-unique="yes">
+		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
 			</description>
@@ -128,7 +127,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169" initlabel="digital pin">
+		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169" initlabel="bg.pin-read-digital">
 			<description>
 				<text>Read digital value from pin</text>
 			</description>
@@ -140,7 +139,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pin-read-analog" kind="data" color="77 191 169" initlabel="analog pin">
+		<BlockGenus name="pin-read-analog" kind="data" color="77 191 169" initlabel="bg.pin-read-analog">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -152,7 +151,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pin-write-digital" kind="command" color="77 191 169" initlabel="set digital pin">
+		<BlockGenus name="pin-write-digital" kind="command" color="77 191 169" initlabel="bg.pin-write-digital">
 			<description>
 				<text>write digital to pin</text>
 			</description>
@@ -166,7 +165,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="setter_variable_number" kind="command" color="255 0 0" initlabel="set number variable">
+		<BlockGenus name="setter_variable_number" kind="command" color="255 0 0" initlabel="bg.setter_variable_number">
 			<description>
 				<text>set a number variable</text>
 			</description>
@@ -180,7 +179,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="variable_number" kind="data" initlabel="number var name" editable-label="yes" is-label-value="yes" color="255 0 255">
+		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="255 0 255">
 			<description>
 				<text>
 					Digital Var
