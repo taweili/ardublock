@@ -168,10 +168,10 @@ BlockGenuses are first loaded.
 				<text>set a number variable</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="variable">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
 					<DefaultArg genus-name="variable_number" label="var name"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="value">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="number" label="0"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -193,10 +193,10 @@ BlockGenuses are first loaded.
 				<text>write digital to pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="variable">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.variable">
 					<DefaultArg genus-name="variable_digital" label="variable name"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="value">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="digital-high" label="HIGH"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -232,10 +232,10 @@ BlockGenuses are first loaded.
 				<text>set a pin to pwm</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -275,8 +275,8 @@ BlockGenuses are first loaded.
 				</arg-description>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"/>
-				<BlockConnector label="then" connector-kind="socket" connector-type="cmd"/>
+				<BlockConnector label="bc.test" connector-kind="socket" connector-type="boolean"/>
+				<BlockConnector label="bc.then" connector-kind="socket" connector-type="cmd"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -298,9 +298,9 @@ BlockGenuses are first loaded.
 				</arg-description>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="test" connector-kind="socket" connector-type="boolean"/>
-				<BlockConnector label="then" connector-kind="socket" connector-type="cmd"/>
-				<BlockConnector label="else" connector-kind="socket" connector-type="cmd"/>
+				<BlockConnector label="bc.test" connector-kind="socket" connector-type="boolean"/>
+				<BlockConnector label="bc.then" connector-kind="socket" connector-type="cmd"/>
+				<BlockConnector label="bc.else" connector-kind="socket" connector-type="cmd"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -311,7 +311,7 @@ BlockGenuses are first loaded.
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="condition" connector-kind="socket" connector-type="boolean"/>
+				<BlockConnector label="bc.condition" connector-kind="socket" connector-type="boolean"/>
 				<BlockConnector label="" connector-kind="socket" connector-type="cmd"/>
 			</BlockConnectors>
 		</BlockGenus>
@@ -524,8 +524,8 @@ BlockGenuses are first loaded.
 		<BlockGenus name="pow" kind="function" color="149 193 31" initlabel="bg.pow">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="base"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="exponent"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.base"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.exponent"/>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -566,7 +566,7 @@ BlockGenuses are first loaded.
 				<text>program delay in x milliseconds</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="milliseconds">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.milliseconds">
 					<DefaultArg genus-name="number" label="1000"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -577,7 +577,7 @@ BlockGenuses are first loaded.
 				<text>program delay in x milliseconds</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="microseconds">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.microseconds">
 					<DefaultArg genus-name="number" label="1000"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -589,7 +589,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="max">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.max">
 					<DefaultArg genus-name="number" label="1024"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -621,7 +621,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="value">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -633,14 +633,14 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="value"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="from">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.from">
 					<DefaultArg genus-name="number" label="0"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket">
 					<DefaultArg genus-name="number" label="1023"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="to">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.to">
 					<DefaultArg genus-name="number" label="0"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket">
@@ -675,7 +675,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="register address">
 					<DefaultArg genus-name="number" label="0"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="value">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="number" label="0"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -696,10 +696,10 @@ BlockGenuses are first loaded.
 				<text>TinkerKit LED</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -715,10 +715,10 @@ BlockGenuses are first loaded.
 				<text>TinkerKit LED</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="level">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
 					<DefaultArg genus-name="number" label="255"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -734,10 +734,10 @@ BlockGenuses are first loaded.
 				<text>TinkerKit Mosfet</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-high" label="HIGH"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -753,10 +753,10 @@ BlockGenuses are first loaded.
 				<text>TinkerKit Mosfet</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="level">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
 					<DefaultArg genus-name="number" label="255"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -772,10 +772,10 @@ BlockGenuses are first loaded.
 				<text>TinkerKit Relay</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-high" label="HIGH"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -791,10 +791,10 @@ BlockGenuses are first loaded.
 				<text>TinkerKit Servo</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -811,7 +811,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -829,7 +829,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -846,7 +846,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -863,7 +863,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -880,7 +880,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -897,7 +897,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -914,7 +914,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -931,7 +931,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -947,10 +947,10 @@ BlockGenuses are first loaded.
 				<text>TinkerKit Servo</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -968,7 +968,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1089,7 +1089,7 @@ BlockGenuses are first loaded.
 				<BlockConnector connector-type="number" connector-kind="socket" label="S#">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="staus">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-high" label="HIGH"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1113,7 +1113,7 @@ BlockGenuses are first loaded.
 		<BlockGenus name="df_digital_viberation_sensor" kind="data" color="255 102 0" initlabel="bg.df_digital_viberation_sensor">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1128,7 +1128,7 @@ BlockGenuses are first loaded.
 		<BlockGenus name="df_digital_infrared_motion_sensor" kind="data" color="255 102 0" initlabel="bg.df_digital_infrared_motion_sensor">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1142,7 +1142,7 @@ BlockGenuses are first loaded.
 		<BlockGenus name="df_digital_ir_receiver_module" kind="data" color="255 102 0" initlabel="bg.df_digital_ir_receiver_module">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1156,7 +1156,7 @@ BlockGenuses are first loaded.
 		<BlockGenus name="df_adjustable_infrared_sensor_switch" kind="data" color="255 102 0" initlabel="bg.df_adjustable_infrared_sensor_switch">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1170,7 +1170,7 @@ BlockGenuses are first loaded.
 		<BlockGenus name="df_line_tracking_sensor" kind="data" color="255 102 0" initlabel="bg.df_line_tracking_sensor">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1184,7 +1184,7 @@ BlockGenuses are first loaded.
 		<BlockGenus name="df_digital_push_button" kind="data" color="255 102 0" initlabel="bg.df_digital_push_button">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1198,7 +1198,7 @@ BlockGenuses are first loaded.
 		<BlockGenus name="df_joystick_module_button" kind="data" color="255 102 0" initlabel="bg.df_joystick_module_button">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1212,7 +1212,7 @@ BlockGenuses are first loaded.
 		<BlockGenus name="df_capacitive_touch_sensor" kind="data" color="255 102 0" initlabel="bg.df_capacitive_touch_sensor">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1230,7 +1230,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1246,7 +1246,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1262,7 +1262,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1278,7 +1278,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1294,7 +1294,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1310,7 +1310,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1326,7 +1326,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1342,7 +1342,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1358,7 +1358,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1374,7 +1374,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1390,7 +1390,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1406,7 +1406,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1422,7 +1422,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1438,7 +1438,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -1455,10 +1455,10 @@ BlockGenuses are first loaded.
 				<text>set a pin to pwm</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1474,10 +1474,10 @@ BlockGenuses are first loaded.
 				<text>set a pin to pwm</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1493,10 +1493,10 @@ BlockGenuses are first loaded.
 				<text>DFRobot LED Module</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1512,10 +1512,10 @@ BlockGenuses are first loaded.
 				<text>DFRobot LED Module</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="level">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
 					<DefaultArg genus-name="number" label="255"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1531,10 +1531,10 @@ BlockGenuses are first loaded.
 				<text>DFRobot piranha LED Module</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1550,10 +1550,10 @@ BlockGenuses are first loaded.
 				<text>DFRobot pianha LED Module with brightnes level</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="level">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
 					<DefaultArg genus-name="number" label="255"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1569,10 +1569,10 @@ BlockGenuses are first loaded.
 				<text>Dfrobot Relay Module</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-high" label="HIGH"/>
 				</BlockConnector>
 			</BlockConnectors>
@@ -1590,7 +1590,7 @@ BlockGenuses are first loaded.
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="analog pin#">
+				<BlockConnector connector-type="number" connector-kind="socket">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
