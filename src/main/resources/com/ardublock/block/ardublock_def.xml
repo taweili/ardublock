@@ -692,7 +692,7 @@ BlockGenuses are first loaded.
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<!-- brick -->
+		<!-- TinkerKit! -->
 		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255" initlabel="LED">
 			<description>
 				<text>TinkerKit LED</text>
@@ -932,7 +932,7 @@ BlockGenuses are first loaded.
 				<text>TinkerKit Touch Sensor</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
 					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>

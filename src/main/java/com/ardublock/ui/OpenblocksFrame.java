@@ -4,22 +4,19 @@ import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
+import edu.mit.blocks.workspace.Workspace;
 
 import com.ardublock.core.Context;
-
 import com.ardublock.ui.listener.ArdublockWorkspaceListener;
 import com.ardublock.ui.listener.GenerateCodeButtonListener;
 import com.ardublock.ui.listener.OpenButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
-import edu.mit.blocks.controller.WorkspaceController;
-import edu.mit.blocks.workspace.Workspace;
 
 public class OpenblocksFrame extends JFrame
 {
