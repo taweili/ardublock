@@ -699,7 +699,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
 					<DefaultArg genus-name="digital-on" label="ON"/>
@@ -718,7 +718,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="level">
 					<DefaultArg genus-name="number" label="255"/>
@@ -737,7 +737,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
 					<DefaultArg genus-name="digital-high" label="HIGH"/>
@@ -756,7 +756,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="level">
 					<DefaultArg genus-name="number" label="255"/>
@@ -775,7 +775,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="status">
 					<DefaultArg genus-name="digital-high" label="HIGH"/>
@@ -794,7 +794,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_O1" label="O1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
 					<DefaultArg genus-name="number" label="90"/>
@@ -814,7 +814,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -832,7 +832,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -849,7 +849,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -866,7 +866,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -883,7 +883,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -900,7 +900,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -917,7 +917,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -934,7 +934,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -950,7 +950,7 @@ BlockGenuses are first loaded.
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#" >
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="angle">
 					<DefaultArg genus-name="number" label="90"/>
@@ -971,7 +971,7 @@ BlockGenuses are first loaded.
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="pin#">
-					<DefaultArg genus-name="number" label="1"/>
+					<DefaultArg genus-name="Tinker_I1" label="I1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -981,7 +981,67 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 	
+		<BlockGenus name="Tinker_I0" kind="data" color="255 255 255" initlabel="bg.Tinker_I0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I1" kind="data" color="255 255 255" initlabel="bg.Tinker_I1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I2" kind="data" color="255 255 255" initlabel="bg.Tinker_I2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I3" kind="data" color="255 255 255" initlabel="bg.Tinker_I3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I4" kind="data" color="255 255 255" initlabel="bg.Tinker_I4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I5" kind="data" color="255 255 255" initlabel="bg.Tinker_I5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		
+		<BlockGenus name="Tinker_O0" kind="data" color="214 169 54" initlabel="bg.Tinker_O0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O1" kind="data" color="214 169 54" initlabel="bg.Tinker_O1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O2" kind="data" color="214 169 54" initlabel="bg.Tinker_O2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O3" kind="data" color="214 169 54" initlabel="bg.Tinker_O3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O4" kind="data" color="214 169 54" initlabel="bg.Tinker_O4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O5" kind="data" color="214 169 54" initlabel="bg.Tinker_O5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		
 		<!-- Xinchejian -->
 	
@@ -1613,6 +1673,22 @@ BlockGenuses are first loaded.
 			<FamilyMember>df_mma7260_y</FamilyMember>
 			<FamilyMember>df_mma7260_z</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Tinker_I0</FamilyMember>
+			<FamilyMember>Tinker_I1</FamilyMember>
+			<FamilyMember>Tinker_I2</FamilyMember>
+			<FamilyMember>Tinker_I3</FamilyMember>
+			<FamilyMember>Tinker_I4</FamilyMember>
+			<FamilyMember>Tinker_I5</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Tinker_O0</FamilyMember>
+			<FamilyMember>Tinker_O1</FamilyMember>
+			<FamilyMember>Tinker_O2</FamilyMember>
+			<FamilyMember>Tinker_O3</FamilyMember>
+			<FamilyMember>Tinker_O4</FamilyMember>
+			<FamilyMember>Tinker_O5</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>	
@@ -1647,6 +1723,18 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
+				<BlockGenusMember>Tinker_I0</BlockGenusMember>
+				<BlockGenusMember>Tinker_I1</BlockGenusMember>
+				<BlockGenusMember>Tinker_I2</BlockGenusMember>
+				<BlockGenusMember>Tinker_I3</BlockGenusMember>
+				<BlockGenusMember>Tinker_I4</BlockGenusMember>
+				<BlockGenusMember>Tinker_I5</BlockGenusMember>
+				<BlockGenusMember>Tinker_O0</BlockGenusMember>
+				<BlockGenusMember>Tinker_O1</BlockGenusMember>
+				<BlockGenusMember>Tinker_O2</BlockGenusMember>
+				<BlockGenusMember>Tinker_O3</BlockGenusMember>
+				<BlockGenusMember>Tinker_O4</BlockGenusMember>
+				<BlockGenusMember>Tinker_O5</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="114 147 71" name="Operators" type="factory">

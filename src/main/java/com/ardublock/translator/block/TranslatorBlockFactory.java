@@ -6,18 +6,19 @@ import com.ardublock.translator.block.dfrobot.DfrobotDigitalInoutBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotDigitalOutputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotLedBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotLedPwmBlock;
-import com.ardublock.translator.block.dfrobot.DfrobotPwmOutputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotServoBlock;
 import com.ardublock.translator.block.seeedstudio.GroveJoyStickButtonBlock;
 import com.ardublock.translator.block.tinker.TinkerAccmeterBlock;
 import com.ardublock.translator.block.tinker.TinkerButtonBlock;
 import com.ardublock.translator.block.tinker.TinkerHallBlock;
+import com.ardublock.translator.block.tinker.TinkerInputPortBlock;
 import com.ardublock.translator.block.tinker.TinkerLDRBlock;
 import com.ardublock.translator.block.tinker.TinkerLEDBlock;
 import com.ardublock.translator.block.tinker.TinkerLEDPwmBlock;
 import com.ardublock.translator.block.tinker.TinkerLinearPotentiometerBlock;
 import com.ardublock.translator.block.tinker.TinkerMosfetBlock;
 import com.ardublock.translator.block.tinker.TinkerMosfetPwmBlock;
+import com.ardublock.translator.block.tinker.TinkerOutputPortBlock;
 import com.ardublock.translator.block.tinker.TinkerRelayBlock;
 import com.ardublock.translator.block.tinker.TinkerRotaryPotentiometerBlock;
 import com.ardublock.translator.block.tinker.TinkerServoBlock;
@@ -281,7 +282,17 @@ public class TranslatorBlockFactory
 			return new WireIsReadBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
-		//brick
+		//TinkerKit
+		if (blockName.equals("Tinker_I0") || blockName.equals("Tinker_I1") || blockName.equals("Tinker_I2")
+				|| blockName.equals("Tinker_I3") || blockName.equals("Tinker_I4") || blockName.equals("Tinker_I5"))
+		{
+			return new TinkerInputPortBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("Tinker_O0") || blockName.equals("Tinker_O1") || blockName.equals("Tinker_O2")
+				|| blockName.equals("Tinker_O3") || blockName.equals("Tinker_O4") || blockName.equals("Tinker_O5"))
+		{
+			return new TinkerOutputPortBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
 		if (blockName.equals("Tinker_LED"))
 		{
 			return new TinkerLEDBlock(blockId, translator, codePrefix, codeSuffix, label);

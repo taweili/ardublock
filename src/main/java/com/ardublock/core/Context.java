@@ -12,6 +12,9 @@ import edu.mit.blocks.workspace.Workspace;
 
 public class Context
 {
+	public final static String LANG_DTD_PATH = "/com/ardublock/block/lang_def.dtd";
+	public final static String ARDUBLOCK_LANG_PATH = "/com/ardublock/block/ardublock_def.xml";
+	
 	private static Context singletonContext;
 	
 	private boolean workspaceChanged;
@@ -53,8 +56,8 @@ public class Context
 		workspaceController.resetWorkspace();
 		workspaceController.resetLanguage();
 		workspaceController.setLangResourceBundle(ResourceBundle.getBundle("com/ardublock/block/ardublock_def"));
-		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(Configuration.LANG_DTD_PATH));
-		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(Configuration.ARDUBLOCK_LANG_PATH));
+		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(LANG_DTD_PATH));
+		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(ARDUBLOCK_LANG_PATH));
 		workspaceController.loadFreshWorkspace();
 		workspace = workspaceController.getWorkspace();
 		workspaceChanged = false;

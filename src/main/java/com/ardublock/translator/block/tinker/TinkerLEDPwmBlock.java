@@ -1,9 +1,8 @@
 package com.ardublock.translator.block.tinker;
 
 import com.ardublock.translator.Translator;
-import com.ardublock.translator.block.PinWriteAnalogBlock;
 
-public class TinkerLEDPwmBlock extends PinWriteAnalogBlock
+public class TinkerLEDPwmBlock extends AbstractTinkerWriteAnalogBlock
 {
 	public TinkerLEDPwmBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{

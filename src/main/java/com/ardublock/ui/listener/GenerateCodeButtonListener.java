@@ -12,11 +12,10 @@ import com.ardublock.core.Context;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
+
 import edu.mit.blocks.codeblocks.Block;
 import edu.mit.blocks.renderable.RenderableBlock;
-import edu.mit.blocks.workspace.Page;
 import edu.mit.blocks.workspace.Workspace;
-import edu.mit.blocks.workspace.WorkspaceEnvironment;
 
 public class GenerateCodeButtonListener implements ActionListener
 {
@@ -42,13 +41,10 @@ public class GenerateCodeButtonListener implements ActionListener
 		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
 		String code = null;
 		
-		System.out.println("starting finding loop");
 		
 		for (RenderableBlock renderableBlock:renderableBlocks)
 		{
 			Block block = renderableBlock.getBlock();
-			
-			System.out.println("block: " + block.getGenusName());
 			
 			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{

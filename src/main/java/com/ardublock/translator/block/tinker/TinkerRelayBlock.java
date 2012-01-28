@@ -1,9 +1,8 @@
 package com.ardublock.translator.block.tinker;
 
 import com.ardublock.translator.Translator;
-import com.ardublock.translator.block.PinWriteDigitalBlock;
 
-public class TinkerRelayBlock extends PinWriteDigitalBlock
+public class TinkerRelayBlock extends AbstractTinkerWriteDigitalBlock
 {
 
 	public TinkerRelayBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
