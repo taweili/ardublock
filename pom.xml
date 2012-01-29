@@ -89,4 +89,5 @@
 			<version>1.0</version>
 		</dependency>
 	</dependencies>
+	<url>http://ardublock.com/</url>
 </project>
