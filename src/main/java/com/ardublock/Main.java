@@ -13,7 +13,6 @@ public class Main
 {
 	public static void main(String args[]) throws SAXException, IOException, ParserConfigurationException
 	{
-		Locale.setDefault(new Locale("fr", "FR"));
 		Starter starter = new Starter();
 		starter.startArdublock();
 	}
