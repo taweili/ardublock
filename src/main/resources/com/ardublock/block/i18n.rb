@@ -4,8 +4,8 @@ doc = Nokogiri::XML(f)
 bgs = doc.css "BlockGenus"
 bgs.each do |bg|
   if bg['initlabel'] != "bg.#{bg['name']}"
-    # print "bg.#{bg['name']}=#{bg['initlabel']}\n"
+    print "bg.#{bg['name']}=#{bg['initlabel']}\n"
     bg['initlabel'] = "bg.#{bg['name']}"
   end
 end
-puts doc.to_xml(:indent => 2)
+# puts doc.to_xml(:indent => 2)
