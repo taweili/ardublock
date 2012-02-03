@@ -1,10 +1,12 @@
 require 'nokogiri'
-f = File.open "ardublock_def.xml"
+f = File.open "ardublock.xml"
 doc = Nokogiri::XML(f)
 bgs = doc.css "BlockGenus"
 bgs.each do |bg|
-  if bg['initlabel'] != "bg.#{bg['name']}"
-    print "bg.#{bg['name']}=#{bg['initlabel']}\n"
+  bg_name = "bg.#{bg['name']}"
+  puts "#{bg_name}.description.text=#{bg.css("text").text.strip}"
+  if bg['initlabel'] != bg_name
+    # print "bg.#{bg['name']}=#{bg['initlabel']}\n"
     bg['initlabel'] = "bg.#{bg['name']}"
   end
 end
