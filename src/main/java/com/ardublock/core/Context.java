@@ -1,5 +1,7 @@
 package com.ardublock.core;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.ResourceBundle;
@@ -47,17 +49,31 @@ public class Context
 	
 	private Context() {
 		/*
-		workspace = new Workspace();
-		workspace.reset();
-		workspace.setl
-		*/
-		
+		 * workspace = new Workspace(); workspace.reset(); workspace.setl
+		 */
+
+		// Style list
+		List<String[]> list = new ArrayList<String[]>();
+		String[][] styles = {
+				{ "//BlockGenus[@name[starts-with(.,\"Tinker\")]]/@color",
+						"128 0 0" },
+				{ "//BlockGenus[@name[starts-with(.,\"df_\")]]/@color",
+						"0 128 0" } };
+
+		for (String[] style : styles) {
+			list.add(style);
+		}
+
 		workspaceController = new WorkspaceController();
 		workspaceController.resetWorkspace();
 		workspaceController.resetLanguage();
-		workspaceController.setLangResourceBundle(ResourceBundle.getBundle("com/ardublock/block/ardublock"));
-		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(LANG_DTD_PATH));
-		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(ARDUBLOCK_LANG_PATH));
+		workspaceController.setLangResourceBundle(ResourceBundle
+				.getBundle("com/ardublock/block/ardublock"));
+		workspaceController.setStyleList(list);
+		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(
+				LANG_DTD_PATH));
+		workspaceController.setLangDefStream(this.getClass()
+				.getResourceAsStream(ARDUBLOCK_LANG_PATH));
 		workspaceController.loadFreshWorkspace();
 		workspace = workspaceController.getWorkspace();
 		workspaceChanged = false;
