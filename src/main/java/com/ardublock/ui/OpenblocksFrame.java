@@ -24,7 +24,6 @@ import com.ardublock.ui.listener.GenerateCodeButtonListener;
 import com.ardublock.ui.listener.OpenButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
 import com.ardublock.ui.listener.OpenblocksFrameListener;
-import com.ardublock.util.PropertiesReader;
 
 
 public class OpenblocksFrame extends JFrame
