@@ -82,7 +82,7 @@ public class SaveButtonListener implements ActionListener
 			saveFile.createNewFile();
 		}
 		FileOutputStream fos = new FileOutputStream(saveFile);
-		fos.write(saveString.getBytes());
+		fos.write(saveString.getBytes("UTF8"));
 		fos.flush();
 		fos.close();
 	}
