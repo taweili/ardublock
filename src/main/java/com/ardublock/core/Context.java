@@ -1,5 +1,8 @@
 package com.ardublock.core;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -20,7 +23,7 @@ public class Context
 	private static Context singletonContext;
 	
 	private boolean workspaceChanged;
-	private String saveFilePath;
+	
 	
 	private Set<RenderableBlock> highlightBlockSet;
 	private Set<OpenblocksFrameListener> ofls;
@@ -77,7 +80,6 @@ public class Context
 		workspaceController.loadFreshWorkspace();
 		workspace = workspaceController.getWorkspace();
 		workspaceChanged = false;
-		saveFilePath = null;
 		highlightBlockSet = new HashSet<RenderableBlock>();
 		ofls = new HashSet<OpenblocksFrameListener>();
 		this.workspace = workspaceController.getWorkspace();
@@ -100,32 +102,6 @@ public class Context
 	public void setWorkspaceChanged(boolean workspaceChanged) {
 		this.workspaceChanged = workspaceChanged;
 	}
-
-	public String getSaveFilePath() {
-		return saveFilePath;
-	}
-
-	public void setSaveFilePath(String saveFilePath) {
-		this.saveFilePath = saveFilePath;
-	}
-	
-	public String makeFrameTitle()
-	{
-		String title = APP_NAME + " ";
-		if (saveFilePath == null)
-		{
-			title = title + "untitled";
-		}
-		else
-		{
-			title = title + saveFilePath;
-		}
-		if (workspaceChanged)
-		{
-			title = title + " *";
-		}
-		return title;
-	}
 	
 	public void highlightBlock(RenderableBlock block)
 	{
@@ -146,6 +122,31 @@ public class Context
 			rb.updateInSearchResults(false);
 		}
 		highlightBlockSet.clear();
+	}
+
+	
+	public void saveArduBlockFile(File saveFile, String saveString) throws IOException
+	{
+		if (!saveFile.exists())
+		{
+			saveFile.createNewFile();
+		}
+		FileOutputStream fos = new FileOutputStream(saveFile, false);
+		fos.write(saveString.getBytes("UTF8"));
+		fos.flush();
+		fos.close();
+		didSave();
+	}
+	
+	public void loadArduBlockFile(File savedFile) throws IOException
+	{
+		if (savedFile != null)
+		{
+			String saveFilePath = savedFile.getAbsolutePath();
+			workspaceController.resetWorkspace();
+			workspaceController.loadProjectFromPath(saveFilePath);
+			didLoad();
+		}
 	}
 	
 	public void registerOpenblocksFrameListener(OpenblocksFrameListener ofl)
