@@ -57,11 +57,10 @@ public class Context
 
 		// Style list
 		List<String[]> list = new ArrayList<String[]>();
-		String[][] styles = {
-				{ "//BlockGenus[@name[starts-with(.,\"Tinker\")]]/@color",
-						"128 0 0" },
-				{ "//BlockGenus[@name[starts-with(.,\"df_\")]]/@color",
-						"0 128 0" } };
+		String[][] styles = {};
+		
+		//		{ "//BlockGenus[@name[starts-with(.,\"Tinker\")]]/@color", "128 0 0" },
+		//		{ "//BlockGenus[@name[starts-with(.,\"df_\")]]/@color",	"0 128 0" } };
 
 		for (String[] style : styles) {
 			list.add(style);
