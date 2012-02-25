@@ -17,7 +17,7 @@ public class RandomBlock extends TranslatorBlock
 		TranslatorBlock translatorBlock = getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " )";
-		translator.addSetupCommand("randomrandomSeed(analogRead(A0) + analogRead(A1) + analogRead(A2));");
+		translator.addSetupCommand("randomSeed(analogRead(A0) + analogRead(A1) + analogRead(A2));");
 		return codePrefix + ret + codeSuffix;
 	}
 
