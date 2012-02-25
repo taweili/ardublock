@@ -1,8 +1,6 @@
 package com.ardublock;
 
 import java.io.IOException;
-import java.util.Locale;
-
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
