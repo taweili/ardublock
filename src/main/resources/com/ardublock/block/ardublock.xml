@@ -261,6 +261,51 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="tone" kind="command" color="77 191 169" initlabel="tone">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin. </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="8"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440"/>
+				</BlockConnector>
+				
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="tone_time" kind="command" color="77 191 169" initlabel="tone">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin. </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="8"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.milliseconds">
+					<DefaultArg genus-name="number" label="1000"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="no_tone" kind="command" color="77 191 169" initlabel="noTone">
+			<description>
+				<text>Stops the generation of a square wave triggered by tone().</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="8"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
+		
 		<BlockGenus name="if" kind="command" initlabel="bg.if" color="255 221 0">
 			<description>
 				<text>
@@ -1706,6 +1751,9 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 				<BlockGenusMember>servo</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
+				<BlockGenusMember>tone</BlockGenusMember>
+				<BlockGenusMember>tone_time</BlockGenusMember>
+				<BlockGenusMember>no_tone</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="182 85 52" name="bd.number" type="factory">
