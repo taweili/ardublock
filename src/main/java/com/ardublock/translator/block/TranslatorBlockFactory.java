@@ -140,6 +140,18 @@ public class TranslatorBlockFactory
 		{
 			return new UltrasonicBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
+		if (blockName.equals("tone"))
+		{
+			return new ToneBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("tone_time"))
+		{
+			return new ToneTimeBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("no_tone"))
+		{
+			return new NoToneBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
 		if (blockName.equals("setter_variable_number"))
 		{
 			return new SetterVariableNumberBlock(blockId, translator, codePrefix, codeSuffix, label);
