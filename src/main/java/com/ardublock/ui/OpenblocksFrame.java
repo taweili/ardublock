@@ -97,17 +97,18 @@ public class OpenblocksFrame extends JFrame
 		
 		JPanel buttons = new JPanel();
 		buttons.setLayout(new FlowLayout());
-		JButton saveButton = new JButton("Save");
+		JButton saveButton = new JButton(uiMessageBundle.getString("ardublock.ui.save"));
 		saveButton.addActionListener(new SaveButtonListener(this));
-		JButton openButton = new JButton("Load");
+		JButton openButton = new JButton(uiMessageBundle.getString("ardublock.ui.load"));
 		openButton.addActionListener(new OpenButtonListener(this));
-		JButton generateButton = new JButton("Upload");
+		JButton generateButton = new JButton(uiMessageBundle.getString("ardublock.ui.upload"));
 		generateButton.addActionListener(new GenerateCodeButtonListener(this, context));
+		
 
 		buttons.add(saveButton);
 		buttons.add(openButton);
 		buttons.add(generateButton);
-
+		
 		this.add(buttons, BorderLayout.NORTH);
 		this.add(workspace, BorderLayout.CENTER);
 	}
