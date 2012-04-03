@@ -70,7 +70,7 @@ public class OpenblocksFrame extends JFrame
 		this.setLocationRelativeTo(null);
 		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		uiMessageBundle = ResourceBundle.getBundle("com.ardublock.ui");
+		uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
 		
 		fileChooser = new JFileChooser();
 		ffilter = new FileNameExtensionFilter(uiMessageBundle.getString("ardublock.file.suffix"), "abp");
