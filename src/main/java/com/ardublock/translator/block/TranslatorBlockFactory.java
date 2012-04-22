@@ -7,6 +7,8 @@ import com.ardublock.translator.block.dfrobot.DfrobotDigitalOutputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotLedBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotLedPwmBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotServoBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotToneBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotToneDelayBlock;
 import com.ardublock.translator.block.seeedstudio.GroveJoyStickButtonBlock;
 import com.ardublock.translator.block.tinker.TinkerAccmeterBlock;
 import com.ardublock.translator.block.tinker.TinkerButtonBlock;
@@ -504,6 +506,19 @@ public class TranslatorBlockFactory
 		{
 			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
+		if (blockName.equals("df_buzzer"))
+		{
+			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_buzzer_tone"))
+		{
+			return new DfrobotToneBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		if (blockName.equals("df_buzzer_tone_delay"))
+		{
+			return new DfrobotToneDelayBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		
 		
 		if (blockName.equals("seeed_joystick"))
 		{
