@@ -1628,6 +1628,67 @@ BlockGenuses are first loaded.
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="df_buzzer" kind="command" color="255 102 0" initlabel="bg.df_buzzer">
+			<description>
+				<text>DFRobot buzzer Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0032.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="df_buzzer_tone" kind="command" color="255 102 0" initlabel="bg.df_buzzer">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin. </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="8"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440"/>
+				</BlockConnector>
+				
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0032.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="df_buzzer_tone_delay" kind="command" color="255 102 0" initlabel="bg.df_buzzer">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin. </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="8"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.milliseconds">
+					<DefaultArg genus-name="number" label="1000"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/dfrobot/dfr0032.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 		<!-- seeedstudio grove -->
 		
 		<BlockGenus name="seeed_joystick" kind="data" color="0 255 0" initlabel="bg.seeed_joystick">
@@ -1877,7 +1938,9 @@ BlockGenuses are first loaded.
 				<BlockGenusMember>df_piranha_led</BlockGenusMember>
 				<BlockGenusMember>df_piranha_led_pwm</BlockGenusMember>
 				<BlockGenusMember>df_relay</BlockGenusMember>
-				
+				<BlockGenusMember>df_buzzer</BlockGenusMember>
+				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>
+				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
