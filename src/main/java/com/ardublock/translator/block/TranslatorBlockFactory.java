@@ -2,6 +2,7 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.dfrobot.DfrobotAnalogInputBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotAnalogOuptutBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotDigitalInoutBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotDigitalOutputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotLedBlock;
@@ -497,11 +498,11 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("df_piranha_led"))
 		{
-			return new DfrobotLedBlock(blockId, translator, codePrefix, codeSuffix, label);
+			return new DfrobotDigitalOutputBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("df_piranha_led_pwm"))
 		{
-			return new DfrobotLedPwmBlock(blockId, translator, codePrefix, codeSuffix, label);
+			return new DfrobotAnalogOuptutBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("df_relay"))
 		{
