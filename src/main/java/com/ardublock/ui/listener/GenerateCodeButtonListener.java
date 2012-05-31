@@ -118,7 +118,7 @@ public class GenerateCodeButtonListener implements ActionListener
 		
 		if (success)
 		{
-//			System.out.println(code);
+			System.out.println(code);
 			context.didGenerate(code);
 			
 			//for test by HE Qichen

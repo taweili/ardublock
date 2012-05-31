@@ -6,6 +6,7 @@ import com.ardublock.translator.block.dfrobot.DfrobotDigitalInoutBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotDigitalOutputBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotLedBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotLedPwmBlock;
+import com.ardublock.translator.block.dfrobot.DfrobotPushButtonBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotServoBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotToneBlock;
 import com.ardublock.translator.block.dfrobot.DfrobotToneDelayBlock;
@@ -411,7 +412,7 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("df_digital_push_button"))
 		{
-			return new DfrobotDigitalInoutBlock(blockId, translator, codePrefix, codeSuffix, label);
+			return new DfrobotPushButtonBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("df_joystick_module_button"))
 		{
