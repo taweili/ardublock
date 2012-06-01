@@ -12,14 +12,18 @@ public class PinWriteAnalogBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException
 	{
-		String ret = "analogWrite(";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		ret = ret + translatorBlock.toCode();
-		ret = ret + ", ";
+		String portNum = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		ret = ret + translatorBlock.toCode();
-		ret = ret + ");\n";
+		String value = translatorBlock.toCode();
+		
+		String setupCode = "pinMode( " + portNum + " , OUTPUT);";
+		translator.addSetupCommand(setupCode);
+		
+		String ret = "analogWrite(" + portNum + " , " + value + ");\n";
 		return ret;
 	}
 
 }
+
+
