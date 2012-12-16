@@ -121,7 +121,7 @@ BlockGenuses are first loaded.
 	<text>this is the loop of the arduino</text>
       </description>
       <BlockConnectors>
-	<BlockConnector connector-type="cmd" connector-kind="socket" label="do"/>
+	<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.do"/>
       </BlockConnectors>
     </BlockGenus>
     
