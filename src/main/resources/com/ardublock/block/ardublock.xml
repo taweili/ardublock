@@ -714,7 +714,7 @@ BlockGenuses are first loaded.
 	<text>write data via I2C</text>
       </description>
       <BlockConnectors>
-	<BlockConnector connector-type="number" connector-kind="socket" label="device address">
+	<BlockConnector connector-type="number" connector-kind="socket" label="bc.device_address">
 	  <DefaultArg genus-name="number" label="0"/>
 	</BlockConnector>
 	<BlockConnector connector-type="number" connector-kind="socket" label="bc.register_address">
