@@ -700,10 +700,10 @@ BlockGenuses are first loaded.
       </description>
       <BlockConnectors>
 	<BlockConnector connector-type="number" connector-kind="plug"/>
-	<BlockConnector connector-type="number" connector-kind="socket" label="device address">
+	<BlockConnector connector-type="number" connector-kind="socket" label="bc.device_address">
 	  <DefaultArg genus-name="number" label="0"/>
 	</BlockConnector>
-	<BlockConnector connector-type="number" connector-kind="socket" label="register address">
+	<BlockConnector connector-type="number" connector-kind="socket" label="bc.register_address">
 	  <DefaultArg genus-name="number" label="0"/>
 	</BlockConnector>
       </BlockConnectors>
@@ -717,7 +717,7 @@ BlockGenuses are first loaded.
 	<BlockConnector connector-type="number" connector-kind="socket" label="device address">
 	  <DefaultArg genus-name="number" label="0"/>
 	</BlockConnector>
-	<BlockConnector connector-type="number" connector-kind="socket" label="register address">
+	<BlockConnector connector-type="number" connector-kind="socket" label="bc.register_address">
 	  <DefaultArg genus-name="number" label="0"/>
 	</BlockConnector>
 	<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
