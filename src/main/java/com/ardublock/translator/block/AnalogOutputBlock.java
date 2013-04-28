@@ -3,9 +3,9 @@ package com.ardublock.translator.block;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
 
-public class PinWriteAnalogBlock extends TranslatorBlock
+public class AnalogOutputBlock extends TranslatorBlock
 {
-	public PinWriteAnalogBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public AnalogOutputBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

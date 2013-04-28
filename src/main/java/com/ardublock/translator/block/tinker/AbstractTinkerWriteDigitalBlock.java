@@ -1,8 +1,8 @@
 package com.ardublock.translator.block.tinker;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.DigitalOutputBlock;
 import com.ardublock.translator.block.NumberBlock;
-import com.ardublock.translator.block.PinWriteDigitalBlock;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 
@@ -32,7 +32,7 @@ public abstract class AbstractTinkerWriteDigitalBlock extends TranslatorBlock
 		}
 		else
 		{
-			translator.addDefinitionCommand(PinWriteDigitalBlock.ARDUBLOCK_DIGITAL_WRITE_DEFINE);
+			translator.addDefinitionCommand(DigitalOutputBlock.ARDUBLOCK_DIGITAL_WRITE_DEFINE);
 			ret = "__ardublockDigitalWrite(";
 			
 			ret = ret + translatorBlock.toCode();

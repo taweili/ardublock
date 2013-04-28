@@ -4,9 +4,9 @@ import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 
-public class PinReadAnalogBlock extends TranslatorBlock
+public class AnalogInputBlock extends TranslatorBlock
 {
-	public PinReadAnalogBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public AnalogInputBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

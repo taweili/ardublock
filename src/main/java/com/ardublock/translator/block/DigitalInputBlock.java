@@ -3,11 +3,11 @@ package com.ardublock.translator.block;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
 
-public class PinReadDigitalBlock extends TranslatorBlock
+public class DigitalInputBlock extends TranslatorBlock
 {
 	public static final String ARDUBLOCK_DIGITAL_READ_DEFINE = "boolean __ardublockDigitalRead(int pinNumber)\n{\npinMode(pinNumber, INPUT);\nreturn digitalRead(pinNumber);\n}\n\n";
 	
-	public PinReadDigitalBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public DigitalInputBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

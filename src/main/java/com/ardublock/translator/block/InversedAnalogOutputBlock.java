@@ -1,12 +1,12 @@
-package com.ardublock.translator.block.dfrobot;
+package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
-import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 
-public class DfrobotLedPwmBlock extends TranslatorBlock
+public class InversedAnalogOutputBlock extends AnalogOutputBlock
 {
-	public DfrobotLedPwmBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+
+	public InversedAnalogOutputBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
