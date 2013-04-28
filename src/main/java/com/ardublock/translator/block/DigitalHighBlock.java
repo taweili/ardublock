@@ -6,7 +6,7 @@ import com.ardublock.translator.block.basic.ConstBlock;
 public class DigitalHighBlock extends ConstBlock
 {
 
-	protected DigitalHighBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public DigitalHighBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 		this.setCode("HIGH");

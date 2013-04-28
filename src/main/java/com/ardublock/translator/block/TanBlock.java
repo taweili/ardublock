@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class TanBlock extends TranslatorBlock
 {
-	protected TanBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public TanBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

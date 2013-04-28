@@ -4,7 +4,7 @@ import com.ardublock.translator.Translator;
 
 public class VariableNumberBlock extends TranslatorBlock
 {
-	protected VariableNumberBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public VariableNumberBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

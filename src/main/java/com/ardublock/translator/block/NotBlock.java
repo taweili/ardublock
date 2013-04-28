@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class NotBlock extends TranslatorBlock
 {
-	protected NotBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public NotBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

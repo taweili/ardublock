@@ -6,7 +6,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 public class WhileBlock extends TranslatorBlock
 {
 
-	protected WhileBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public WhileBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
 	}

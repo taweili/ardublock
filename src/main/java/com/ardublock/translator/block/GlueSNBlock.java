@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class GlueSNBlock extends TranslatorBlock
 {
-	protected GlueSNBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public GlueSNBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

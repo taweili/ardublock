@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class NotEqualBlock extends TranslatorBlock
 {
-	protected NotEqualBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public NotEqualBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

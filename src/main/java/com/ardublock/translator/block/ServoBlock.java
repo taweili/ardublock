@@ -8,7 +8,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 public class ServoBlock extends TranslatorBlock
 {
 
-	protected ServoBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public ServoBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

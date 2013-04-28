@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class UltrasonicBlock extends TranslatorBlock
 {
-	protected UltrasonicBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public UltrasonicBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class SerialPrintlnBlock extends TranslatorBlock
 {
-	protected SerialPrintlnBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public SerialPrintlnBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

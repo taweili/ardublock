@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class MapCommonBlock extends TranslatorBlock
 {
-	protected MapCommonBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public MapCommonBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

@@ -4,7 +4,7 @@ import com.ardublock.translator.Translator;
 
 public class MillisBlock extends TranslatorBlock
 {
-	protected MillisBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public MillisBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

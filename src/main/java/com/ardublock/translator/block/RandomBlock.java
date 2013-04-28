@@ -6,7 +6,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 public class RandomBlock extends TranslatorBlock
 {
 
-	protected RandomBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public RandomBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

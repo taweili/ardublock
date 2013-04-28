@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class ToneTimeBlock extends TranslatorBlock
 {
-	protected ToneTimeBlock(Long blockId, Translator translator, String codePrefix,	String codeSuffix, String label)
+	public ToneTimeBlock(Long blockId, Translator translator, String codePrefix,	String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

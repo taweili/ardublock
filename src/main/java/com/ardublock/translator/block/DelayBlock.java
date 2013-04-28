@@ -6,7 +6,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 public class DelayBlock extends TranslatorBlock
 {
 
-	protected DelayBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public DelayBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
 	}

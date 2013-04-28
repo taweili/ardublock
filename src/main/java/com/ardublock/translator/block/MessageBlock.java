@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class MessageBlock extends TranslatorBlock
 {
-	protected MessageBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public MessageBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

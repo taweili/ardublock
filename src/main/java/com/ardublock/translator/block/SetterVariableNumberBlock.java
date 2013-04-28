@@ -6,7 +6,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class SetterVariableNumberBlock extends TranslatorBlock
 {
-	protected SetterVariableNumberBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public SetterVariableNumberBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}

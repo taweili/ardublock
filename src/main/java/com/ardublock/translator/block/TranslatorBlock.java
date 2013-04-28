@@ -40,7 +40,7 @@ abstract public class TranslatorBlock
 		this.label = "";
 	}
 	
-	protected TranslatorBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public TranslatorBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		this.blockId = blockId;
 		this.translator = translator;
