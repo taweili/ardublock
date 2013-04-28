@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class IfelseBlock extends TranslatorBlock
 {
-	protected IfelseBlock(Long blockId, Translator translator)
+	protected IfelseBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
 	}

@@ -6,7 +6,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 public class RepeatTimesBlock extends TranslatorBlock
 {
 
-	protected RepeatTimesBlock(Long blockId, Translator translator)
+	protected RepeatTimesBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
 	}

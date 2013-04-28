@@ -43,13 +43,13 @@ public class TranslatorBlockFactory
 		//Arduino
 		if (blockName.equals("loop"))
 		{
-			return new LoopBlock(blockId, translator);
+			return new LoopBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		
 		if (blockName.equals("ifelse"))
 		{
-			return new IfelseBlock(blockId, translator);
+			return new IfelseBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("true"))
 		{
@@ -90,15 +90,15 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("if"))
 		{
-			return new IfBlock(blockId, translator);
+			return new IfBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("while"))
 		{
-			return new WhileBlock(blockId, translator);
+			return new WhileBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("repeat_times"))
 		{
-			return new RepeatTimesBlock(blockId, translator);
+			return new RepeatTimesBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
 		//const number
@@ -259,7 +259,7 @@ public class TranslatorBlockFactory
 		//Utility
 		if (blockName.equals("delay"))
 		{
-			return new DelayBlock(blockId, translator);
+			return new DelayBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("random"))
 		{
@@ -267,7 +267,7 @@ public class TranslatorBlockFactory
 		}
 		if (blockName.equals("serial_println"))
 		{
-			return new SerialPrintlnBlock(blockId, translator);
+			return new SerialPrintlnBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		if (blockName.equals("map_common"))
 		{

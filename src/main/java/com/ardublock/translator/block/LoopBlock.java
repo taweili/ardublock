@@ -5,7 +5,7 @@ import com.ardublock.translator.block.exception.SocketNullException;
 
 public class LoopBlock extends TranslatorBlock
 {
-	public LoopBlock(Long blockId, Translator translator)
+	public LoopBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
 	}
