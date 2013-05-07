@@ -27,7 +27,7 @@ The Visual Block environment should show up. Happy Hacking! ;)
 Authors
 ----
 * David Li taweili@gmail.com
-* HE Qichen heqichen@yahoo.com.cn
+* HE Qichen heqichen@gmail.com
 
 
 ToDo
