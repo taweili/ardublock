@@ -34,6 +34,11 @@ public class TranslatorBlockFactory
 		
 		String className = PropertiesReader.getValue(blockName, BLOCK_MAPPING);
 		//System.out.println("className: " + className);
+		String longName = shortClassName.get(className);
+		if (longName != null)
+		{
+			className = longName;
+		}
 		
 		try
 		{
