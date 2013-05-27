@@ -122,7 +122,7 @@ public class GenerateCodeButtonListener implements ActionListener
 			context.didGenerate(code);
 			
 			//for test by HE Qichen
-			System.out.println(code);
+			//System.out.println(code);
 		}
 	}
 }
