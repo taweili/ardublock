@@ -118,7 +118,11 @@ public class GenerateCodeButtonListener implements ActionListener
 		
 		if (success)
 		{
-//			System.out.println(code);
+			if (!context.isInArduino())
+			{
+				System.out.println(code);
+			}
+			
 			context.didGenerate(code);
 			
 			//for test by HE Qichen

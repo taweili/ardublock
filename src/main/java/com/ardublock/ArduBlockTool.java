@@ -63,7 +63,7 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 		ArduBlockTool.editor.handleExport(false);
 	}
 	
-	private final static String ARDUINO_VERSION_UNKNOWN = "unknown";
+	
 	private String getArduinoVersion()
 	{
 		Context context = Context.getContext();
@@ -77,33 +77,33 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 				String line = reader.readLine();
 				if (line == null)
 				{
-					return ARDUINO_VERSION_UNKNOWN;
+					return Context.ARDUINO_VERSION_UNKNOWN;
 				}
 				line = line.trim();
 				if (line.length() == 0)
 				{
-					return ARDUINO_VERSION_UNKNOWN;
+					return Context.ARDUINO_VERSION_UNKNOWN;
 				}
 				return line;
 				
 			}
 			catch (FileNotFoundException e)
 			{
-				return ARDUINO_VERSION_UNKNOWN;
+				return Context.ARDUINO_VERSION_UNKNOWN;
 			}
 			catch (UnsupportedEncodingException e)
 			{
-				return ARDUINO_VERSION_UNKNOWN;
+				return Context.ARDUINO_VERSION_UNKNOWN;
 			}
 			catch (IOException e)
 			{
 				e.printStackTrace();
-				return ARDUINO_VERSION_UNKNOWN;
+				return Context.ARDUINO_VERSION_UNKNOWN;
 			}
 		}
 		else
 		{
-			return ARDUINO_VERSION_UNKNOWN;
+			return Context.ARDUINO_VERSION_UNKNOWN;
 		}
 		
 	}
