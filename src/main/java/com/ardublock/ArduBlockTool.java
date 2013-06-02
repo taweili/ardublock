@@ -23,10 +23,16 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 	static ArduBlockToolFrame openblocksFrame;
 	
 	public void init(Editor editor) {
-		if (ArduBlockTool.editor == null ) {
+		if (ArduBlockTool.editor == null )
+		{
 			ArduBlockTool.editor = editor;
 			ArduBlockTool.openblocksFrame = new ArduBlockToolFrame();
 			ArduBlockTool.openblocksFrame.addListener(this);
+			Context context = Context.getContext();
+			String arduinoVersion = this.getArduinoVersion();
+			context.setInArduino(true);
+			context.setArduinoVersionString(arduinoVersion);
+			System.out.println("Arduino Version: " + arduinoVersion);
 		}
 	}
 
@@ -57,9 +63,7 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 		ArduBlockTool.editor.handleExport(false);
 	}
 	
-	
-	private static final char UNIX_DIR_SAP = '/';
-	private static final char WINDOWS_DIR_SAP = '\\';
+	private final static String ARDUINO_VERSION_UNKNOWN = "unknown";
 	private String getArduinoVersion()
 	{
 		Context context = Context.getContext();
@@ -73,32 +77,33 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 				String line = reader.readLine();
 				if (line == null)
 				{
-					return "unknown";
+					return ARDUINO_VERSION_UNKNOWN;
 				}
+				line = line.trim();
 				if (line.length() == 0)
 				{
-					return "unknown";
+					return ARDUINO_VERSION_UNKNOWN;
 				}
 				return line;
 				
 			}
 			catch (FileNotFoundException e)
 			{
-				return "unknown";
+				return ARDUINO_VERSION_UNKNOWN;
 			}
 			catch (UnsupportedEncodingException e)
 			{
-				return "unknown";
+				return ARDUINO_VERSION_UNKNOWN;
 			}
 			catch (IOException e)
 			{
 				e.printStackTrace();
-				return "unknown";
+				return ARDUINO_VERSION_UNKNOWN;
 			}
 		}
 		else
 		{
-			return "unknown";
+			return ARDUINO_VERSION_UNKNOWN;
 		}
 		
 	}

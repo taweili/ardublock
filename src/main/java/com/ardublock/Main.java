@@ -18,13 +18,6 @@ public class Main
 	{
 		Main me = new Main();
 		me.startArdublock();
-		for (Map.Entry<Object, Object> e : System.getProperties().entrySet())
-		{
-			String keyStr = e.getKey().toString();
-			String valueStr = System.getProperty(keyStr);
-			
-			System.out.println(keyStr + ": " + valueStr);
-		}
 	}
 	
 	public void startArdublock() throws SAXException, IOException, ParserConfigurationException
