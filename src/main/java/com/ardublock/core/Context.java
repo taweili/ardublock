@@ -27,8 +27,19 @@ public class Context
 	
 	private Set<RenderableBlock> highlightBlockSet;
 	private Set<OpenblocksFrameListener> ofls;
-	
+	private boolean isInArduino = false;
+	private String arduinoVersionString = "unknown";
+	private OsType osType; 
+			
 	final public static String APP_NAME = "ArduBlock";
+	
+	public enum OsType
+	{
+		LINUX,
+		MAC,
+		WINDOWS,
+		UNKNOWN,
+	};
 	
 	//final public static String VERSION_STRING = " ";
 	
@@ -79,6 +90,50 @@ public class Context
 		highlightBlockSet = new HashSet<RenderableBlock>();
 		ofls = new HashSet<OpenblocksFrameListener>();
 		this.workspace = workspaceController.getWorkspace();
+		
+		isInArduino = false;
+		
+		//determine OS
+		String osName = System.getProperty("os.name");
+		osName = osName.toLowerCase();
+		if (osName.contains("win"))
+		{
+			osType = Context.OsType.WINDOWS;
+		}
+		else
+		{
+			if (osName.contains("linux"))
+			{
+				osType = Context.OsType.LINUX;
+			}
+			else
+			{
+				if(osName.contains("mac"))
+				{
+					osType = Context.OsType.MAC;
+				}
+				else
+				{
+					osType = Context.OsType.UNKNOWN;
+				}
+			}
+		}
+		//
+	}
+	
+	public File getArduinoFile(String name)
+	{
+		String path = System.getProperty("user.dir");
+		if (osType.equals(OsType.MAC))
+		{
+			String javaroot = System.getProperty("javaroot");
+			if (javaroot != null)
+			{
+				path = javaroot;
+			}
+		}
+		File workingDir = new File(path);
+		return new File(workingDir, name);
 	}
 
 	public WorkspaceController getWorkspaceController() {
@@ -145,6 +200,28 @@ public class Context
 		}
 	}
 	
+	
+	
+	public boolean isInArduino() {
+		return isInArduino;
+	}
+
+	public void setInArduino(boolean isInArduino) {
+		this.isInArduino = isInArduino;
+	}
+
+	public String getArduinoVersionString() {
+		return arduinoVersionString;
+	}
+
+	public void setArduinoVersionString(String arduinoVersionString) {
+		this.arduinoVersionString = arduinoVersionString;
+	}
+
+	public OsType getOsType() {
+		return osType;
+	}
+
 	public void registerOpenblocksFrameListener(OpenblocksFrameListener ofl)
 	{
 		ofls.add(ofl);
