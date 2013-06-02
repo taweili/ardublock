@@ -1,8 +1,10 @@
 package com.ardublock.translator.block;
 
+import com.ardublock.translator.SubroutineNotDeclaredException;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclatedException;
 
 abstract public class TranslatorBlock
 {
@@ -75,12 +77,12 @@ abstract public class TranslatorBlock
 		return blockAdaptor.getTranslatorBlockAtSocket(this.translator, blockId, i, codePrefix, codeSuffix);
 	}
 	
-	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i) throws SocketNullException
+	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i) throws SocketNullException, SubroutineNotDeclaredException
 	{
 		return this.getRequiredTranslatorBlockAtSocket(i, "", "");
 	}
 	
-	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i, String codePrefix, String codeSuffix) throws SocketNullException
+	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i, String codePrefix, String codeSuffix) throws SocketNullException, SubroutineNotDeclatedException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = blockAdaptor.getTranslatorBlockAtSocket(this.translator, blockId, i, codePrefix, codeSuffix);
 		if (translatorBlock == null)

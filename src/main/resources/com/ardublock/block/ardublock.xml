@@ -211,7 +211,7 @@
 			<description>
 				<text>set a number variable</text>
 			</description>
-			<BlockConnectors>
+			<BlockConnectors>a
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.variable">
 					<DefaultArg genus-name="variable_number" label="var name" />
@@ -472,6 +472,18 @@
 				</BlockConnector>
 				<BlockConnector connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="subroutine" kind="command" color="177 10 255" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes"
+			label-unique="yes" editable-label="yes">
+		    <description>subroutine</description>
+		    <BlockConnectors>
+		        <BlockConnector connector-type="cmd" connector-kind="socket" />
+		    </BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="subroutine-ref" kind="command" color="177 10 255" initlable="bg.subroutine" editable-label="yes">
+		    <description>invoke subroutine</description>
 		</BlockGenus>
 
 		<!-- operator -->
@@ -2405,6 +2417,8 @@
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
+				<BlockGenusMember>subroutine</BlockGenusMember>
+				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="29 152 155" name="bd.pins"

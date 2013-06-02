@@ -12,6 +12,7 @@ import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.TranslatorBlockFactory;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclatedException;
 
 
 public class Translator
@@ -21,6 +22,7 @@ public class Translator
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
 	private Set<String> setupSet;
+	private Set<String> functionNameSet;
 	private BlockAdaptor blockAdaptor;
 	
 	private Set<Long> inputPinSet;
@@ -67,6 +69,15 @@ public class Translator
 			headerCommand = headerCommand + "\n";
 		}
 		
+		if (!functionNameSet.isEmpty())
+		{
+			for (String command:functionNameSet)
+			{
+				headerCommand += "void " + command  + "(void);\n";
+			}
+			headerCommand = headerCommand + "\n";
+		}
+		
 		headerCommand = headerCommand + "void setup()\n{\n";
 		
 		if (!inputPinSet.isEmpty())
@@ -108,6 +119,7 @@ public class Translator
 		headerFileSet = new HashSet<String>();
 		definitionSet = new HashSet<String>();
 		setupSet = new HashSet<String>();
+		functionNameSet = new HashSet<String>();
 		inputPinSet = new HashSet<Long>();
 		outputPinSet = new HashSet<Long>();
 		
@@ -168,6 +180,17 @@ public class Translator
 	{
 		booleanVariableSet.put(userVarName, internalName);
 	}
+	
+	public void addFunctionName(String functionName) throws SubroutineNotDeclaredException
+	{
+		if (functionName.equals("loop") ||functionName.equals("setup") || functionNameSet.contains(functionName))
+		{
+			throw new SubroutineNotDeclaredException();
+		}
+		//TODO
+		add...
+	}
+	
 	
 	public String buildVariableName()
 	{
