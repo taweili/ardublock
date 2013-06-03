@@ -101,20 +101,12 @@ public class GenerateCodeButtonListener implements ActionListener
 			{
 				Block loopBlock = renderableBlock.getBlock();
 				code.append(translator.translate(loopBlock.getBlockID()));
-				
-				System.out.println("========================================================================");
-				System.out.println(code.toString());
-				System.out.println("========================================================================");
 			}
 			
 			for (RenderableBlock renderableBlock : subroutineBlockSet)
 			{
 				Block subroutineBlock = renderableBlock.getBlock();
 				code.append(translator.translate(subroutineBlock.getBlockID()));
-				
-				System.out.println("========================================================================");
-				System.out.println(code.toString());
-				System.out.println("========================================================================");
 			}
 			
 			code.insert(0, translator.genreateHeaderCommand());
