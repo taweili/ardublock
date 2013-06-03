@@ -2,6 +2,7 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class InversedDigitalInputBlock extends DigitalInputBlock
 {
@@ -11,7 +12,7 @@ public class InversedDigitalInputBlock extends DigitalInputBlock
 	}
 	
 	@Override
-	public String toCode() throws SocketNullException
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		String code = super.toCode();
 		code = "!(" + code + ")";

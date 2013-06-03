@@ -2,6 +2,7 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class SubroutineBlock extends TranslatorBlock
 {
@@ -12,24 +13,19 @@ public class SubroutineBlock extends TranslatorBlock
 	}
 
 	@Override
-	public String toCode() throws SocketNullException, SubroutineNotDeclatedException
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String functionName = label.trim();
-		translator
-		// TODO Auto-generated method stub
-		return null;
-	}asdfasdf
-
-	
-	String internalVariableName = translator.getBooleanVariable(label);
-	if (internalVariableName == null)
-	{
-		internalVariableName = translator.buildVariableName(label);
-		translator.addBooleanVariable(label, internalVariableName);
-		translator.addDefinitionCommand("bool " + internalVariableName + ";");
-		translator.addSetupCommand(internalVariableName + " = false;");
+		System.out.println("labael: " + label);
+		String subroutineName = label.trim();
+		String ret;
+		ret = "void " + subroutineName + "()\n{\n";
+		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
+		while (translatorBlock != null)
+		{
+			ret = ret + translatorBlock.toCode();
+			translatorBlock = translatorBlock.nextTranslatorBlock();
+		}
+		ret = ret + "}\n\n";
+		return ret;
 	}
-	//String ret = " ( " + internalVariableName + " ? true : false )";
-	String ret = internalVariableName;
-	return codePrefix + ret + codeSuffix;
 }

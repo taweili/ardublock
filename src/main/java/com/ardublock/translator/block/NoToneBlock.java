@@ -2,6 +2,7 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class NoToneBlock extends TranslatorBlock
 {
@@ -11,7 +12,7 @@ public class NoToneBlock extends TranslatorBlock
 	}
 
 	@Override
-	public String toCode() throws SocketNullException
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock pinBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		String ret = "noTone(" + pinBlock.toCode() + ");\n";

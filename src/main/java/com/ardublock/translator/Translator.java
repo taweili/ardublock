@@ -12,7 +12,8 @@ import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.TranslatorBlockFactory;
 import com.ardublock.translator.block.exception.SocketNullException;
-import com.ardublock.translator.block.exception.SubroutineNotDeclatedException;
+import com.ardublock.translator.block.exception.SubroutineNameDuplicatedException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 
 public class Translator
@@ -40,58 +41,51 @@ public class Translator
 		reset();
 	}
 	
-	public String translate(Long blockId) throws SocketNullException
+	public String genreateHeaderCommand()
 	{
-		reset();
+		StringBuilder headerCommand = new StringBuilder();
 		
-		TranslatorBlockFactory translatorBlockFactory = new TranslatorBlockFactory();
-		Block block = workspace.getEnv().getBlock(blockId);
-		
-		TranslatorBlock rootTranslatorBlock = translatorBlockFactory.buildTranslatorBlock(this, blockId, block.getGenusName(), block.getBlockLabel(), "", "");
-		
-		String loopCommand = rootTranslatorBlock.toCode();
-		String headerCommand = "";
 		if (!headerFileSet.isEmpty())
 		{
 			for (String file:headerFileSet)
 			{
-				headerCommand = headerCommand  + "#include <" + file + ">\n";
+				headerCommand.append("#include <" + file + ">\n");
 			}
-			headerCommand = headerCommand + "\n";
+			headerCommand.append("\n");
 		}
 		
 		if (!definitionSet.isEmpty())
 		{
 			for (String command:definitionSet)
 			{
-				headerCommand = headerCommand + command + "\n"; 
+				headerCommand.append("\n");
 			}
-			headerCommand = headerCommand + "\n";
+			headerCommand.append("\n");
 		}
 		
 		if (!functionNameSet.isEmpty())
 		{
-			for (String command:functionNameSet)
+			for (String functionName:functionNameSet)
 			{
-				headerCommand += "void " + command  + "(void);\n";
+				headerCommand.append("void " + functionName + "();\n");
 			}
-			headerCommand = headerCommand + "\n";
+			headerCommand.append("\n");
 		}
 		
-		headerCommand = headerCommand + "void setup()\n{\n";
+		headerCommand.append("void setup()\n{\n");
 		
 		if (!inputPinSet.isEmpty())
 		{
 			for (Long pinNumber:inputPinSet)
 			{
-				headerCommand = headerCommand + "pinMode( " + pinNumber + " , INPUT);\n";
+				headerCommand.append("pinMode( " + pinNumber + " , INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
 			for (Long pinNumber:outputPinSet)
 			{
-				headerCommand = headerCommand + "pinMode( " + pinNumber + " , OUTPUT);\n";
+				headerCommand.append("pinMode( " + pinNumber + " , OUTPUT);\n");
 			}
 		}
 		
@@ -99,14 +93,24 @@ public class Translator
 		{
 			for (String command:setupSet)
 			{
-				headerCommand = headerCommand + command + "\n";
+				headerCommand.append(command + "\n");
 			}
 		}
 		
-		headerCommand = headerCommand + "}\n\n";
+		headerCommand.append("}\n\n");
+		return headerCommand.toString();
+	}
+	
+	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException
+	{
 		
-		String program = headerCommand + loopCommand;
-		return program;
+		
+		TranslatorBlockFactory translatorBlockFactory = new TranslatorBlockFactory();
+		Block block = workspace.getEnv().getBlock(blockId);
+		
+		TranslatorBlock rootTranslatorBlock = translatorBlockFactory.buildTranslatorBlock(this, blockId, block.getGenusName(), "", "", block.getBlockLabel());
+		
+		return rootTranslatorBlock.toCode();
 	}
 	
 	public BlockAdaptor getBlockAdaptor()
@@ -114,7 +118,7 @@ public class Translator
 		return blockAdaptor;
 	}
 	
-	private void reset()
+	public void reset()
 	{
 		headerFileSet = new HashSet<String>();
 		definitionSet = new HashSet<String>();
@@ -181,14 +185,19 @@ public class Translator
 		booleanVariableSet.put(userVarName, internalName);
 	}
 	
-	public void addFunctionName(String functionName) throws SubroutineNotDeclaredException
+	public void addFunctionName(Long blockId, String functionName) throws SubroutineNameDuplicatedException
 	{
 		if (functionName.equals("loop") ||functionName.equals("setup") || functionNameSet.contains(functionName))
 		{
-			throw new SubroutineNotDeclaredException();
+			throw new SubroutineNameDuplicatedException(blockId);
 		}
-		//TODO
-		add...
+		
+		functionNameSet.add(functionName);
+	}
+	
+	public boolean containFunctionName(String name)
+	{
+		return functionNameSet.contains(name.trim());
 	}
 	
 	

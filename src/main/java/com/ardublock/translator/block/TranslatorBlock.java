@@ -1,14 +1,13 @@
 package com.ardublock.translator.block;
 
-import com.ardublock.translator.SubroutineNotDeclaredException;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.block.exception.SocketNullException;
-import com.ardublock.translator.block.exception.SubroutineNotDeclatedException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 abstract public class TranslatorBlock
 {
-	abstract public String toCode() throws SocketNullException;
+	abstract public String toCode() throws SocketNullException, SubroutineNotDeclaredException;
 	
 	protected Long blockId;
 	
@@ -77,12 +76,12 @@ abstract public class TranslatorBlock
 		return blockAdaptor.getTranslatorBlockAtSocket(this.translator, blockId, i, codePrefix, codeSuffix);
 	}
 	
-	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i) throws SocketNullException, SubroutineNotDeclaredException
+	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i) throws SocketNullException
 	{
 		return this.getRequiredTranslatorBlockAtSocket(i, "", "");
 	}
 	
-	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i, String codePrefix, String codeSuffix) throws SocketNullException, SubroutineNotDeclatedException, SubroutineNotDeclaredException
+	protected TranslatorBlock getRequiredTranslatorBlockAtSocket(int i, String codePrefix, String codeSuffix) throws SocketNullException
 	{
 		TranslatorBlock translatorBlock = blockAdaptor.getTranslatorBlockAtSocket(this.translator, blockId, i, codePrefix, codeSuffix);
 		if (translatorBlock == null)

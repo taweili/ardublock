@@ -5,6 +5,7 @@ import com.ardublock.translator.block.DigitalOutputBlock;
 import com.ardublock.translator.block.NumberBlock;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public abstract class AbstractTinkerWriteDigitalBlock extends TranslatorBlock 
 {
@@ -16,7 +17,7 @@ public abstract class AbstractTinkerWriteDigitalBlock extends TranslatorBlock
 	}
 
 	@Override
-	public String toCode() throws SocketNullException
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		String ret = "";

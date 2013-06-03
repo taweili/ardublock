@@ -3,6 +3,7 @@ package com.ardublock.translator.block.xinchejian;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class XinchejianDigitalReadBlock extends TranslatorBlock
 {
@@ -13,7 +14,7 @@ public class XinchejianDigitalReadBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	public String toCode() throws SocketNullException
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		translator.addDefinitionCommand(XINCHEJIAN_DIGITAL_IO_DEFINITION);
 		
