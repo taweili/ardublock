@@ -58,7 +58,7 @@ public class Translator
 		{
 			for (String command:definitionSet)
 			{
-				headerCommand.append("\n");
+				headerCommand.append(command + "\n");
 			}
 			headerCommand.append("\n");
 		}
