@@ -2,6 +2,8 @@ package com.ardublock.translator;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -31,6 +33,9 @@ public class Translator
 	
 	private Map<String, String> numberVariableSet;
 	private Map<String, String> booleanVariableSet;
+	private List<TranslatorBlock> doAfterBlocks;
+	
+	private Map<String, String> internalVars;
 	
 	private Workspace workspace;
 	
@@ -110,7 +115,14 @@ public class Translator
 		
 		TranslatorBlock rootTranslatorBlock = translatorBlockFactory.buildTranslatorBlock(this, blockId, block.getGenusName(), "", "", block.getBlockLabel());
 		
-		return rootTranslatorBlock.toCode();
+		String code = rootTranslatorBlock.toCode();
+		
+		for (TranslatorBlock translatorBlock : doAfterBlocks)
+		{
+			translatorBlock.afterTranslation();
+		}
+		
+		return code;
 	}
 	
 	public BlockAdaptor getBlockAdaptor()
@@ -129,6 +141,10 @@ public class Translator
 		
 		numberVariableSet = new HashMap<String, String>();
 		booleanVariableSet = new HashMap<String, String>();
+		
+		doAfterBlocks = new LinkedList<TranslatorBlock>();
+		
+		internalVars = new HashMap<String, String>();
 		
 		blockAdaptor = buildOpenBlocksAdaptor();
 		
@@ -228,5 +244,20 @@ public class Translator
 	
 	public Block getBlock(Long blockId) {
 		return workspace.getEnv().getBlock(blockId);
+	}
+
+	public void addDoAfter(TranslatorBlock translatorBlock)
+	{
+		doAfterBlocks.add(translatorBlock);
+	}
+	
+	public void setInternalVar(String name, String value)
+	{
+		internalVars.put(name, value);
+	}
+	
+	public String getInternalVar(String name)
+	{
+		return internalVars.get(name);
 	}
 }

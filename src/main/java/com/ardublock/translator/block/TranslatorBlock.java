@@ -100,4 +100,13 @@ abstract public class TranslatorBlock
 	{
 		return this.comment;
 	}
+	
+	protected void registerAfterTranslator()
+	{
+		translator.addDoAfter(this);
+	}
+
+	public void afterTranslation() {
+		
+	}
 }

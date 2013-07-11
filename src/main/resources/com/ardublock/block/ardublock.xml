@@ -2294,7 +2294,83 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-
+		
+		<BlockGenus name="banbao_motor_setup" kind="command" color="255 0 0" inilabel="bg.banbao_motor_setup">
+		    <description>
+		        <text>setup motor pin</text>
+		    </description>
+		    <BlockConnectors>
+		        <BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_left_positive">
+		            <DefaultArg genus-name="number" label="9"/>
+		        </BlockConnector>
+		        <BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_left_negative">
+		            <DefaultArg genus-name="number" label="10"/>
+		        </BlockConnector>
+		        <BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_right_positive">
+		            <DefaultArg genus-name="number" label="11"/>
+		        </BlockConnector>
+		        <BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_right_negative">
+		            <DefaultArg genus-name="number" label="12"/>
+		        </BlockConnector>
+		    </BlockConnectors>
+		    <Images>
+		        <Image>
+		            <FileLocation>com/ardublock/block/banbao/motor.png</FileLocation>
+		        </Image>
+		    </Images>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_go_forward" kind="command" color="255 0 0" initlabel="bg.banbao_go_forward">
+		    <description>
+		        <text>go forward</text>
+		    </description>
+		    <Images>
+		        <Image>
+		            <FileLocation>com/ardublock/block/banbao/go_forward.png</FileLocation>
+		        </Image>
+		    </Images>
+		</BlockGenus>
+		<BlockGenus name="banbao_turn_left" kind="command" color="255 0 0" initlabel="bg.banbao_turn_left">
+		    <description>
+		        <text>turn left</text>
+		    </description>
+		    <Images>
+		        <Image>
+		            <FileLocation>com/ardublock/block/banbao/turn_left.png</FileLocation>
+		        </Image>
+		    </Images>
+		</BlockGenus>
+		<BlockGenus name="banbao_turn_right" kind="command" color="255 0 0" initlabel="bg.banbao_turn_right">
+		    <description>
+		        <text>turn right</text>
+		    </description>
+		    <Images>
+		        <Image>
+		            <FileLocation>com/ardublock/block/banbao/turn_right.png</FileLocation>
+		        </Image>
+		    </Images>
+		</BlockGenus>
+		<BlockGenus name="banbao_go_backward" kind="command" color="255 0 0" initlabel="bg.banbao_go_backward">
+		    <description>
+		        <text>go backward</text>
+		    </description>
+		    <Images>
+		        <Image>
+		            <FileLocation>com/ardublock/block/banbao/go_backward.png</FileLocation>
+		        </Image>
+		    </Images>
+		</BlockGenus>
+		<BlockGenus name="banbao_stop" kind="command" color="255 0 0" initlabel="bg.banbao_stop">
+		    <description>
+		        <text>stop</text>
+		    </description>
+		    <Images>
+		        <Image>
+		            <FileLocation>com/ardublock/block/banbao/stop.png</FileLocation>
+		        </Image>
+		    </Images>
+		</BlockGenus>
+		
 		<!-- seeedstudio grove -->
 
 		<BlockGenus name="seeed_joystick" kind="data" color="0 255 0"
@@ -2569,7 +2645,16 @@
 				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>
 				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
 			</BlockDrawer>
-
+	
+			<BlockDrawer button-color="255 0 0 " name="bd.BanBao">
+			    <BlockGenusMember>banbao_motor_setup</BlockGenusMember>
+			    <BlockGenusMember>banbao_go_forward</BlockGenusMember>
+			    <BlockGenusMember>banbao_turn_left</BlockGenusMember>
+			    <BlockGenusMember>banbao_turn_right</BlockGenusMember>
+			    <BlockGenusMember>banbao_go_backward</BlockGenusMember>
+			    <BlockGenusMember>banbao_stop</BlockGenusMember>
+			</BlockDrawer>
+			
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
