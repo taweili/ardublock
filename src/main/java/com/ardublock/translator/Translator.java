@@ -2,6 +2,7 @@ package com.ardublock.translator;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -132,12 +133,13 @@ public class Translator
 	
 	public void reset()
 	{
-		headerFileSet = new HashSet<String>();
-		definitionSet = new HashSet<String>();
-		setupSet = new HashSet<String>();
-		functionNameSet = new HashSet<String>();
-		inputPinSet = new HashSet<Long>();
-		outputPinSet = new HashSet<Long>();
+		headerFileSet = new LinkedHashSet<String>();
+		definitionSet = new LinkedHashSet<String>();
+		definitionSet = new LinkedHashSet<String>();
+		setupSet = new LinkedHashSet<String>();
+		functionNameSet = new LinkedHashSet<String>();
+		inputPinSet = new LinkedHashSet<Long>();
+		outputPinSet = new LinkedHashSet<Long>();
 		
 		numberVariableSet = new HashMap<String, String>();
 		booleanVariableSet = new HashMap<String, String>();

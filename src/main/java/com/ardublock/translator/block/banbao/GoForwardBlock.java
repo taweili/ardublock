@@ -6,7 +6,7 @@ import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class GoForwardBlock extends TranslatorBlock
+public class GoForwardBlock extends MotorSetupBlock
 {
 
 	public GoForwardBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
@@ -17,17 +17,14 @@ public class GoForwardBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException,
 			SubroutineNotDeclaredException {
 		this.registerAfterTranslator();
-		
-		return "";
+		return "bbDrive("+defaultSpeed+", 0, "+defaultSpeed+", 0);\n" +
+		"delay(200);\n";
 	}
 	
 	@Override
 	public void afterTranslation()
 	{
-		if (this.translator.getInternalVar("isBanBaoMotorSetupPut") == null)
-		{
-			throw new BlockException(blockId, "something not defined");
-		}
+		super.runningBlockDoAfterTranslator();
 	}
 
 }
