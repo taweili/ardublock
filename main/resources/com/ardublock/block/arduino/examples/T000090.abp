@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="40 40 40" page-drawer="ArduBlock" page-infullview="yes" page-name="ArduBlock" page-width="2560">
+<PageBlocks>
+<Block genus-name="delay" id="120">
+<Location>
+<X>99</X>
+<Y>219</Y>
+</Location>
+<BeforeBlockId>115</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="121" connector-kind="socket" connector-type="number" init-type="number" label="millisecond" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="121">
+<Label>1000</Label>
+<Location>
+<X>221</X>
+<Y>222</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="120" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="114">
+<Location>
+<X>32</X>
+<Y>110</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="115" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="serial_println" id="115">
+<Location>
+<X>99</X>
+<Y>118</Y>
+</Location>
+<BeforeBlockId>114</BeforeBlockId>
+<AfterBlockId>120</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="116" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="message" id="116">
+<Label>light</Label>
+<Location>
+<X>195</X>
+<Y>121</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="115" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="117" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="glue_sn" id="117">
+<Location>
+<X>249</X>
+<Y>121</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="116" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="118" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="Tinker_LDR" id="118">
+<Location>
+<X>303</X>
+<Y>121</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="117" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="119" connector-kind="socket" connector-type="number" init-type="number" label="pin#" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="Tinker_I0" id="119">
+<Location>
+<X>489</X>
+<Y>121</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="118" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
