@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages drawer-with-page="yes">
+<Page page-color="40 40 40" page-drawer="Ardublock" page-infullview="yes" page-name="Ardublock" page-width="2560">
+<PageBlocks>
+<Block genus-name="Tinker_LED" id="95">
+<Location>
+<X>83</X>
+<Y>82</Y>
+</Location>
+<BeforeBlockId>89</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="97" connector-kind="socket" connector-type="number" init-type="number" label="pin#" position-type="single"/>
+<BlockConnector con-block-id="99" connector-kind="socket" connector-type="boolean" init-type="boolean" label="status" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-high" id="99">
+<Location>
+<X>207</X>
+<Y>109</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="95" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="97">
+<Location>
+<X>207</X>
+<Y>85</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="95" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="101">
+<Location>
+<X>20</X>
+<Y>20</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="89" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="Tinker_Servo" id="89">
+<Location>
+<X>83</X>
+<Y>28</Y>
+</Location>
+<BeforeBlockId>101</BeforeBlockId>
+<AfterBlockId>95</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="91" connector-kind="socket" connector-type="number" init-type="number" label="pin#" position-type="single"/>
+<BlockConnector con-block-id="93" connector-kind="socket" connector-type="number" init-type="number" label="angle" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="93">
+<Label>90</Label>
+<Location>
+<X>213</X>
+<Y>55</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="89" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="91">
+<Location>
+<X>213</X>
+<Y>31</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="89" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
