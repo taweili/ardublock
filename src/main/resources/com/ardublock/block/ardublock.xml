@@ -3132,7 +3132,7 @@
 				<BlockGenusMember>code_loop</BlockGenusMember>
 			</BlockDrawer>
 			
-			<!--
+			
 			<BlockDrawer button-color="255 255 255" name="bd.tinkerkit"
 				type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
@@ -3229,7 +3229,7 @@
 			</BlockDrawer>
 			
 			
-			-->
+			
 			
 			<!-- <BlockDrawer button-color="0 255 0" name="XinChejian" type="factory"> 
 				<BlockGenusMember>xcj_motor_forward</BlockGenusMember> <BlockGenusMember>xcj_motor_backward</BlockGenusMember> 

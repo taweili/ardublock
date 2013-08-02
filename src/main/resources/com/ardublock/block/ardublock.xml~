@@ -3127,7 +3127,6 @@
 			</BlockDrawer>
 			<BlockDrawer button-color="120 120 120" name="bd.especial"
 				type="factory">
-				
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
 				<BlockGenusMember>code_loop</BlockGenusMember>
