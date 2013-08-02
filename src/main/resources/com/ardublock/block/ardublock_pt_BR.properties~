@@ -3,6 +3,14 @@ bg.code_setup=Adiciona no Setup
 bg.code_loop=Adiciona no Loop
 bd.especial=Especial
 bg.serial_read=L\u00ea Serial
+bg.equal_digital==
+bg.not_equal_digital=!=
+#bg.glue_msg=junte
+bg.repeat=Repete
+bc.var=Iteration var name
+
+
+
 #X-Generator: crowdin.net
 # BlockDrawer name
 
@@ -103,7 +111,7 @@ bg.loop=sempre
 bg.map=mapeie
 bg.map_common=mapeie [0, 1024] para [0, 255]
 bg.max=m\u00e1x
-bg.message=Texto
+bg.message=Mensagem
 bg.millis=Tempo
 bg.min=m\u00edn
 bg.modulo=resto

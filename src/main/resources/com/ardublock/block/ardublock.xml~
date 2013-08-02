@@ -51,7 +51,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="string"
 					connector-kind="socket">
-					<DefaultArg genus-name="message" label="Code" />
+					<DefaultArg genus-name="glue_msg" label="Code" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -63,7 +63,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="string"
 					connector-kind="socket">
-					<DefaultArg genus-name="message" label="Code" />
+					<DefaultArg genus-name="glue_msg" label="Code" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -75,7 +75,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="string"
 					connector-kind="socket">
-					<DefaultArg genus-name="message" label="Code" />
+					<DefaultArg genus-name="glue_msg" label="Code" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -98,6 +98,78 @@
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="equal_digital" kind="function" color="222 131 51"
+			initlabel="bg.equal_digital">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="not_equal_digital" kind="function" color="222 131 51"
+			initlabel="bg.not_equal_digital">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="repeat" kind="command" color="255 221 0"
+			initlabel="bg.repeat">
+			<description>
+				<text>repeat</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.variable">
+					<DefaultArg genus-name="variable_number" label="var name" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="cmd" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
+		
+		
+		
+		
+		<BlockGenus name="glue_msg" kind="data" color="200 200 200"
+			initlabel="bg.glue_msg" editable-label="yes">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="plug" />
+					<BlockConnector connector-type="string"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+       
+		
+		
+		
+		
+		
+		
+		
 		<!--*****************************************************************
 		********* NEW BLOCKS ************************************************
 	    ***************************************-->
@@ -205,7 +277,7 @@
 					connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-
+        
 		<!-- Basic -->
 
 		<BlockGenus name="loop" kind="command" color="255 221 0"
@@ -940,7 +1012,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="string"
 					connector-kind="socket">
-<!--					<DefaultArg genus-name="message" label="message" />-->
+					<DefaultArg genus-name="message" label="message" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2953,14 +3025,15 @@
 			<BlockDrawer name="bd.control" type="factory" is-open="yes"
 				button-color="255 255 0">
 				<BlockGenusMember>loop</BlockGenusMember>
-				<BlockGenusMember>ifelse</BlockGenusMember>
+				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
+				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
-				<BlockGenusMember>delay</BlockGenusMember>
-				<BlockGenusMember>delay_microseconds</BlockGenusMember>
+				<BlockGenusMember>repeat</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
+				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 			</BlockDrawer>
             
 			<BlockDrawer button-color="56 209 36" name="bd.pins"
@@ -2998,10 +3071,12 @@
 				<BlockGenusMember>greater</BlockGenusMember>
 				<BlockGenusMember>less</BlockGenusMember>
 				<BlockGenusMember>equal</BlockGenusMember>
+				<BlockGenusMember>equal_digital</BlockGenusMember>
 				<BlockGenusMember>greater_equal</BlockGenusMember>
 				<BlockGenusMember>less_equal</BlockGenusMember>
 				<BlockGenusMember>not_equal</BlockGenusMember>
-
+                <BlockGenusMember>not_equal_digital</BlockGenusMember>
+                
 				<BlockGenusMember>and</BlockGenusMember>
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
@@ -3033,7 +3108,7 @@
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
-
+<!--                <BlockGenusMember>glue_msg</BlockGenusMember>-->
 				<!--<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>-->
@@ -3058,7 +3133,7 @@
 				<BlockGenusMember>code_loop</BlockGenusMember>
 			</BlockDrawer>
 			
-			
+			<!--
 			<BlockDrawer button-color="255 255 255" name="bd.tinkerkit"
 				type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
@@ -3153,6 +3228,10 @@
 				<BlockGenusMember>ls_TiltModule</BlockGenusMember>
 				<BlockGenusMember>ls_TouchSensorModule</BlockGenusMember>	
 			</BlockDrawer>
+			
+			
+			-->
+			
 			<!-- <BlockDrawer button-color="0 255 0" name="XinChejian" type="factory"> 
 				<BlockGenusMember>xcj_motor_forward</BlockGenusMember> <BlockGenusMember>xcj_motor_backward</BlockGenusMember> 
 				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember> <BlockGenusMember>xcj_ms_digital_write</BlockGenusMember> 

@@ -2,6 +2,12 @@
 code_head=com.ardublock.translator.block.CodeHeadBlock
 code_setup=com.ardublock.translator.block.CodeSetupBlock
 code_loop=com.ardublock.translator.block.CodeLoopBlock
+serial_print=com.ardublock.translator.block.SerialPrintBlock
+serial_read=com.ardublock.translator.block.SerialReadBlock
+equal_digital=com.ardublock.translator.block.EqualDigitalBlock
+not_equal_digital=com.ardublock.translator.block.NotEqualDigitalBlock
+repeat=com.ardublock.translator.block.RepeatBlock
+glue_msg=com.ardublock.translator.block.MessageBlock
 
 #arduino control
 loop=com.ardublock.translator.block.LoopBlock
@@ -71,7 +77,6 @@ tan=com.ardublock.translator.block.TanBlock
 delay=com.ardublock.translator.block.DelayBlock
 random=com.ardublock.translator.block.RandomBlock
 serial_println=com.ardublock.translator.block.SerialPrintlnBlock
-serial_print=com.ardublock.translator.block.SerialPrintBlock
 map_common=com.ardublock.translator.block.MapCommonBlock
 map=com.ardublock.translator.block.MapBlock
 delay_microseconds=com.ardublock.translator.block.DelayMicrosecondsBlock
