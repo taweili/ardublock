@@ -167,7 +167,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="#">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="banbao_IO_1" label="#1" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean"
 					connector-kind="plug" />
@@ -182,7 +182,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="#">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="banbao_IO_7" label="#7" />
 				</BlockConnector>
 				<BlockConnector connector-type="number"
 					connector-kind="plug" />
@@ -197,7 +197,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="#">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="banbao_IO_1" label="#1" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean"
 					connector-kind="socket">
@@ -206,6 +206,23 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="pin-write-analog" kind="command" color="77 191 169"
+			initlabel="bg.pin-write-analog">
+			<description>
+				<text>write analog to pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="#">
+					<DefaultArg genus-name="banbao_IO_1" label="#1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="setter_variable_number" kind="command"
 			color="255 0 0" initlabel="bg.setter_variable_number">
 			<description>
@@ -222,7 +239,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
 		<BlockGenus name="variable_number" kind="data"
 			initlabel="bg.variable_number" editable-label="yes" is-label-value="yes"
 			color="255 0 255">
@@ -268,23 +285,6 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="pin-write-analog" kind="command" color="77 191 169"
-			initlabel="bg.pin-write-analog">
-			<description>
-				<text>write analog to pin</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="#">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket">
-					<DefaultArg genus-name="number" label="255" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-
 		<BlockGenus name="servo" kind="command" color="77 191 169"
 			initlabel="bg.servo">
 			<description>
@@ -293,7 +293,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="banbao_IO_3" label="#3" />
 				</BlockConnector>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.angle">
@@ -312,7 +312,7 @@
 					connector-kind="plug" label="cm" />
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="trigger #">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="banbao_IO_1" label="#1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="echo #">
@@ -336,7 +336,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="8" />
+					<DefaultArg genus-name="banbao_IO_3" label="#3" />
 				</BlockConnector>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.frequency">
@@ -356,7 +356,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="8" />
+					<DefaultArg genus-name="banbao_IO_3" label="#3" />
 				</BlockConnector>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.frequency">
@@ -378,7 +378,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="8" />
+					<DefaultArg genus-name="banbao_IO_3" label="#3" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
