@@ -14,9 +14,9 @@ public class AnalogInputBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String ret = "analogRead(A";
+		String ret = "analogRead(";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		if (translatorBlock instanceof NumberBlock)
+		if (translatorBlock instanceof NumberBlock || translatorBlock instanceof com.ardublock.translator.block.banbao.NumberBlock)
 		{
 			ret = ret + translatorBlock.toCode();
 			ret = ret + ")";

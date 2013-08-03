@@ -29,8 +29,8 @@ public class Translator
 	private Set<String> functionNameSet;
 	private BlockAdaptor blockAdaptor;
 	
-	private Set<Long> inputPinSet;
-	private Set<Long> outputPinSet;
+	private Set<String> inputPinSet;
+	private Set<String> outputPinSet;
 	
 	private Map<String, String> numberVariableSet;
 	private Map<String, String> booleanVariableSet;
@@ -82,14 +82,14 @@ public class Translator
 		
 		if (!inputPinSet.isEmpty())
 		{
-			for (Long pinNumber:inputPinSet)
+			for (String pinNumber:inputPinSet)
 			{
 				headerCommand.append("pinMode( " + pinNumber + " , INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
-			for (Long pinNumber:outputPinSet)
+			for (String pinNumber:outputPinSet)
 			{
 				headerCommand.append("pinMode( " + pinNumber + " , OUTPUT);\n");
 			}
@@ -138,8 +138,8 @@ public class Translator
 		definitionSet = new LinkedHashSet<String>();
 		setupSet = new LinkedHashSet<String>();
 		functionNameSet = new LinkedHashSet<String>();
-		inputPinSet = new LinkedHashSet<Long>();
-		outputPinSet = new LinkedHashSet<Long>();
+		inputPinSet = new LinkedHashSet<String>();
+		outputPinSet = new LinkedHashSet<String>();
 		
 		numberVariableSet = new HashMap<String, String>();
 		booleanVariableSet = new HashMap<String, String>();
@@ -173,12 +173,12 @@ public class Translator
 		definitionSet.add(command);
 	}
 	
-	public void addInputPin(Long pinNumber)
+	public void addInputPin(String pinNumber)
 	{
 		inputPinSet.add(pinNumber);
 	}
 	
-	public void addOutputPin(Long pinNumber)
+	public void addOutputPin(String pinNumber)
 	{
 		outputPinSet.add(pinNumber);
 	}
