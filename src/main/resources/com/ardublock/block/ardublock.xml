@@ -3088,7 +3088,7 @@
 
 			<BlockDrawer button-color="182 85 52" name="bd.number"
 				type="factory">
-				<!-- <BlockGenusMember>number</BlockGenusMember> -->
+				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
 				<BlockGenusMember>true</BlockGenusMember>
