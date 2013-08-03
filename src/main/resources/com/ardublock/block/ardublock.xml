@@ -2298,6 +2298,89 @@
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="banbao_IO_1" kind="data" color="208 10 16"
+			initlabel="bg.banbao_io_1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_2" kind="data" color="208 10 16"
+			initlabel="bg.banbao_io_2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_3" kind="data" color="208 10 16"
+			initlabel="bg.banbao_io_3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_4" kind="data" color="208 10 16"
+			initlabel="bg.banbao_io_4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_5" kind="data" color="208 10 16"
+			initlabel="bg.banbao_io_5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_6" kind="data" color="208 10 16"
+			initlabel="bg.banbao_io_6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_7" kind="data" color="208 60 16"
+			initlabel="bg.banbao_io_7" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_8" kind="data" color="208 60 16"
+			initlabel="bg.banbao_io_8" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_9" kind="data" color="208 60 16"
+			initlabel="bg.banbao_io_9" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="banbao_IO_10" kind="data" color="208 60 16"
+			initlabel="bg.banbao_io_10" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
+		
+		
 		<BlockGenus name="banbao_motor_setup" kind="command" color="255 0 0" inilabel="bg.banbao_motor_setup">
 		    <description>
 		        <text>setup motor pin</text>
@@ -2960,6 +3043,20 @@
 			<FamilyMember>Tinker_O4</FamilyMember>
 			<FamilyMember>Tinker_O5</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+		    <FamilyMember>banbao_IO_1</FamilyMember>
+		    <FamilyMember>banbao_IO_2</FamilyMember>
+		    <FamilyMember>banbao_IO_3</FamilyMember>
+		    <FamilyMember>banbao_IO_4</FamilyMember>
+		    <FamilyMember>banbao_IO_5</FamilyMember>
+		    <FamilyMember>banbao_IO_6</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+		    <FamilyMember>banbao_IO_7</FamilyMember>
+		    <FamilyMember>banbao_IO_8</FamilyMember>
+		    <FamilyMember>banbao_IO_9</FamilyMember>
+		    <FamilyMember>banbao_IO_10</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -2991,11 +3088,21 @@
 
 			<BlockDrawer button-color="182 85 52" name="bd.number"
 				type="factory">
-				<BlockGenusMember>number</BlockGenusMember>
+				<!-- <BlockGenusMember>number</BlockGenusMember> -->
 				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
 				<BlockGenusMember>true</BlockGenusMember>
 				<BlockGenusMember>false</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_1</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_2</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_3</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_4</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_5</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_6</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_7</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_8</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_9</BlockGenusMember>
+				<BlockGenusMember>banbao_IO_10</BlockGenusMember>
 				<BlockGenusMember>variable_number</BlockGenusMember>
 				<BlockGenusMember>variable_digital</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
