@@ -3136,12 +3136,12 @@
 			    <BlockGenusMember>banbao_go_backward</BlockGenusMember>
 			    <BlockGenusMember>banbao_stop</BlockGenusMember>
 			</BlockDrawer>
-			
+<!-- 
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
-			
+ -->
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
 				<BlockGenusMember>ls_5mmLEDModule</BlockGenusMember>
