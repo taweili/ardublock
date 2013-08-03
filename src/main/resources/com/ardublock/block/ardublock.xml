@@ -3142,6 +3142,7 @@
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
  -->
+ <!-- 
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
 				<BlockGenusMember>ls_5mmLEDModule</BlockGenusMember>
@@ -3167,6 +3168,7 @@
 				<BlockGenusMember>ls_TiltModule</BlockGenusMember>
 				<BlockGenusMember>ls_TouchSensorModule</BlockGenusMember>	
 			</BlockDrawer>
+ -->
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see 
 				slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator 
