@@ -41,8 +41,8 @@
 	<BlockGenuses>
 		
 		<!--*****************************************************************
-		********* NEW BLOCKS ************************************************
-	    ***************************************-->
+		****************** NEW BLOCKS - Daniel Girardi **********************
+	    ******************************************************************-->
 		<BlockGenus name="code_loop" kind="command" color="125 125 125"
 			initlabel="bg.code_loop">
 			<description>
@@ -144,12 +144,6 @@
 				<BlockConnector connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		
-		
-		
-		
-		
-		
 		<BlockGenus name="glue_msg" kind="data" color="200 200 200"
 			initlabel="bg.glue_msg" editable-label="yes">
 			<description>
@@ -162,16 +156,87 @@
 					connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
+		<!-- *****************************************************************
+		********************** Vectors Blocks ********************************
+		*****************************************************************-->
+		<BlockGenus name="variable_vector" kind="data"
+			initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes"
+			color="208 10 16">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.num">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="variable_fake" kind="data"
+			initlabel="bg.fake" editable-label="yes" is-label-value="yes"
+			color="208 10 16">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="create_variable_vector" kind="command"
+			color="208 10 16" initlabel="bg.create_variable_vector">
+			<description>
+				<text>create a vector of numbers</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.variable">
+					<DefaultArg genus-name="variable_fake" label="var name" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.vecsize">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="setter_variable_vector" kind="command"
+			color="208 10 16" initlabel="bg.setter_variable_vector">
+			<description>
+				<text>Set a vector number</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.variable">
+					<DefaultArg genus-name="variable_fake" label="var fake" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.position">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.value">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		
+		
+		
+		
        
 		
 		
-		
-		
-		
-		
-		
 		<!--*****************************************************************
-		********* NEW BLOCKS ************************************************
+		********* END ************************************************
 	    ***************************************-->
 		<!-- Number -->
 		<BlockGenus name="number" kind="data" color="208 10 16"
@@ -3086,6 +3151,7 @@
 
 			<BlockDrawer button-color="230 69 69" name="bd.number"
 				type="factory">
+				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
@@ -3095,7 +3161,9 @@
 				<BlockGenusMember>variable_digital</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
-				<BlockGenusMember>millis</BlockGenusMember>
+				<BlockGenusMember>variable_vector</BlockGenusMember>
+				<BlockGenusMember>create_variable_vector</BlockGenusMember>
+				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
 			</BlockDrawer>
 
 			
@@ -3132,7 +3200,7 @@
 				<BlockGenusMember>code_loop</BlockGenusMember>
 			</BlockDrawer>
 			
-			<!--
+			
 			<BlockDrawer button-color="255 255 255" name="bd.tinkerkit"
 				type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
@@ -3229,7 +3297,7 @@
 			</BlockDrawer>
 			
 			
-			-->
+			
 			
 			<!-- <BlockDrawer button-color="0 255 0" name="XinChejian" type="factory"> 
 				<BlockGenusMember>xcj_motor_forward</BlockGenusMember> <BlockGenusMember>xcj_motor_backward</BlockGenusMember> 

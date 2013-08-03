@@ -1,4 +1,8 @@
 #short name can be found in /src/com/ardublock/translator/block/TranslatorBlockFactory.java
+variable_fake=com.ardublock.translator.block.VariableFakeBlock
+variable_Vector=com.ardublock.translator.block.VariableVectorBlock
+setter_variable_vector=com.ardublock.translator.block.SetterVariableVectorBlock
+create_variable_vector=com.ardublock.translator.block.CreateVariableVectorBlock
 code_head=com.ardublock.translator.block.CodeHeadBlock
 code_setup=com.ardublock.translator.block.CodeSetupBlock
 code_loop=com.ardublock.translator.block.CodeLoopBlock
@@ -7,7 +11,7 @@ serial_read=com.ardublock.translator.block.SerialReadBlock
 equal_digital=com.ardublock.translator.block.EqualDigitalBlock
 not_equal_digital=com.ardublock.translator.block.NotEqualDigitalBlock
 repeat=com.ardublock.translator.block.RepeatBlock
-glue_msg=com.ardublock.translator.block.MessageBlock
+glue_msg=com.ardublock.translator.block.GlueMSGBlock
 
 #arduino control
 loop=com.ardublock.translator.block.LoopBlock
