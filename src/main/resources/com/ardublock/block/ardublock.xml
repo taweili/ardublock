@@ -3003,6 +3003,7 @@
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
+				<!-- 
 				<BlockGenusMember>Tinker_I0</BlockGenusMember>
 				<BlockGenusMember>Tinker_I1</BlockGenusMember>
 				<BlockGenusMember>Tinker_I2</BlockGenusMember>
@@ -3015,6 +3016,7 @@
 				<BlockGenusMember>Tinker_O3</BlockGenusMember>
 				<BlockGenusMember>Tinker_O4</BlockGenusMember>
 				<BlockGenusMember>Tinker_O5</BlockGenusMember>
+				 -->
 			</BlockDrawer>
 
 			<BlockDrawer button-color="114 147 71" name="bd.operators"
@@ -3058,7 +3060,7 @@
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
-
+<!-- 
 			<BlockDrawer button-color="255 255 255" name="bd.tinkerkit"
 				type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
@@ -3076,6 +3078,7 @@
 				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
 				<BlockGenusMember>Tinker_Mosfet_pwm</BlockGenusMember>
 			</BlockDrawer>
+ -->
 			<!-- <BlockDrawer button-color="0 255 0" name="XinChejian" type="factory"> 
 				<BlockGenusMember>xcj_motor_forward</BlockGenusMember> <BlockGenusMember>xcj_motor_backward</BlockGenusMember> 
 				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember> <BlockGenusMember>xcj_ms_digital_write</BlockGenusMember> 
