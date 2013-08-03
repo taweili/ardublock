@@ -1,7 +1,6 @@
 package com.ardublock;
 
 import java.io.IOException;
-import java.util.Map;
 
 import javax.swing.JFrame;
 import javax.xml.parsers.ParserConfigurationException;
