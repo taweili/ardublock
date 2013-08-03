@@ -211,7 +211,7 @@
 			<description>
 				<text>set a number variable</text>
 			</description>
-			<BlockConnectors>a
+			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.variable">
 					<DefaultArg genus-name="variable_number" label="var name" />
@@ -476,14 +476,18 @@
 		
 		<BlockGenus name="subroutine" kind="command" color="177 10 255" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes"
 			label-unique="yes" editable-label="yes">
-		    <description>subroutine</description>
+		    <description>
+		    	<text>subroutine</text>
+		    </description>
 		    <BlockConnectors>
 		        <BlockConnector connector-type="cmd" connector-kind="socket" />
 		    </BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="subroutine-ref" kind="command" color="177 10 255" initlable="bg.subroutine" editable-label="yes">
-		    <description>invoke subroutine</description>
+		<BlockGenus name="subroutine-ref" kind="command" color="177 10 255" initlabel="bg.subroutine" editable-label="yes">
+		    <description>
+		    	<text>invoke subroutine</text>
+		    </description>
 		</BlockGenus>
 
 		<!-- operator -->
@@ -976,7 +980,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<!-- TinkerKit! -->
+		<!--************************************************************** TinkerKit! **********************************************************************-->
 		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255"
 			initlabel="bg.Tinker_LED">
 			<description>
@@ -1128,7 +1132,6 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-
 
 		<BlockGenus name="Tinker_Accmeter" kind="data" color="255 255 255"
 			initlabel="bg.Tinker_Accmeter">
@@ -1477,7 +1480,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<!-- DFRobot -->
+		<!--************************************************************** DFRobot ***************************************************************************-->
 
 
 		<BlockGenus name="df_digital_viberation_sensor" kind="data"
@@ -2412,7 +2415,483 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		
+		<!--************************************************************* linksprite_LinkerKit*******************************************************-->
 
+		<BlockGenus name="ls_10mmLEDModule" kind="command" color="135 206 235"
+			initlabel="bg.ls_10mmLEDModule">
+			<description>
+				<text>10mm Blue/Green/Yellow/Red LED Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/10mmLEDModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_5mmLEDModule" kind="command" color="135 206 235"
+			initlabel="bg.ls_5mmLEDModule">
+			<description>
+				<text>5mm Blue/Green/Yellow/Red LED Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/5mmLEDModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ls_AccelerometerModule_x" kind="data" color="135 206 235"
+			initlabel="bg.ls_AccelerometerModule_x">
+			<description>
+				<text>Based on the excellent ADXL-345, this digital 3-axis accelerometer has excellent EMI protection.</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>	
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/AccelerometerModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_AccelerometerModule_y" kind="data" color="135 206 235"
+			initlabel="bg.ls_AccelerometerModule_y">
+			<description>
+				<text>Based on the excellent ADXL-345, this digital 3-axis accelerometer has excellent EMI protection.</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/AccelerometerModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_AccelerometerModule_z" kind="data" color="135 206 235"
+			initlabel="bg.ls_AccelerometerModule_z">
+			<description>
+				<text>Based on the excellent ADXL-345, this digital 3-axis accelerometer has excellent EMI protection.</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/AccelerometerModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>							
+
+		<BlockGenus name="ls_ButtonModule" kind="data" color="135 206 235"
+			initlabel="bg.ls_ButtonModule">
+			<description>
+				<text>Button Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/ButtonModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_BuzzerModule" kind="command" color="135 206 235"
+			initlabel="bg.ls_BuzzerModule">
+			<description>
+				<text>Buzzer Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/BuzzerModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>			
+
+		<BlockGenus name="ls_HallSensor" kind="data" color="135 206 235"
+			initlabel="bg.ls_HallSensor">
+			<description>
+				<text>Hall Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/HallSensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_HighPowerLedModule" kind="command" color="135 206 235"
+			initlabel="bg.ls_HighPowerLedModule">
+			<description>
+				<text>High Power Led Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/HighPowerLedModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_JoystickSensorModule_x" kind="data" color="135 206 235"
+			initlabel="bg.ls_JoystickSensorModule_x">
+			<description>
+				<text>Joystick Sensor Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/JoystickSensorModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		
+		<BlockGenus name="ls_JoystickSensorModule_y" kind="data" color="135 206 235"
+			initlabel="bg.ls_JoystickSensorModule_y">
+			<description>
+				<text>Joystick Sensor Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/JoystickSensorModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>			
+		
+		<BlockGenus name="ls_LDRModule" kind="data" color="135 206 235"
+			initlabel="bg.ls_LDRModule">
+			<description>
+				<text>LDR Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/LDRModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_LEDBar" kind="command" color="135 206 235"
+			initlabel="bg.ls_LEDBar">
+			<description>
+				<text>LED Bar</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/LEDBarr.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_Linear-SlidePotentiometerModule" kind="data" color="135 206 235"
+			initlabel="bg.ls_Linear-SlidePotentiometerModule">
+			<description>
+				<text>Linear/Slide Potentiometer Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/Linear-SlidePotentiometerModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_MagneticSwitch" kind="data" color="135 206 235"
+			initlabel="bg.ls_MagneticSwitch">
+			<description>
+				<text>Magnetic Switch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/MagneticSwitch.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		
+		<BlockGenus name="ls_MosfetModule" kind="command" color="135 206 235"
+			initlabel="bg.ls_MosfetModule">
+			<description>
+				<text>Mosfet Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/MosfetModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		
+		<BlockGenus name="ls_RelayModule" kind="command" color="135 206 235"
+			initlabel="bg.ls_RelayModule">
+			<description>
+				<text>Relay Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/RelayModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ls_RotaryPotentiometerModule" kind="data" color="135 206 235"
+			initlabel="bg.ls_RotaryPotentiometerModule">
+			<description>
+				<text>Rotary Potentiometer Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/RotaryPotentiometerModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>																
+
+		<BlockGenus name="ls_RTCModule" kind="data" color="135 206 235"
+			initlabel="bg.ls_RTCModule">
+			<description>
+				<text>RTC Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/RTCModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ls_SoundSensor" kind="data" color="135 206 235"
+			initlabel="bg.ls_SoundSensor">
+			<description>
+				<text>Sound Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/SoundSensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		
+		<BlockGenus name="ls_ThermalModule" kind="data" color="135 206 235"
+			initlabel="bg.ls_ThermalModule">
+			<description>
+				<text>Thermal Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/ThermalModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ls_TiltModule" kind="data" color="135 206 235"
+			initlabel="bg.ls_TiltModule">
+			<description>
+				<text>Tilt Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/TiltModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		
+		<BlockGenus name="ls_TouchSensorModule" kind="data" color="135 206 235"
+			initlabel="bg.ls_TouchSensorModule">
+			<description>
+				<text>Touch Sensor Module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/linksprite/TouchSensorModule.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>							
+		
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -2658,6 +3137,32 @@
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
+			</BlockDrawer>
+			
+			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
+				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
+				<BlockGenusMember>ls_5mmLEDModule</BlockGenusMember>
+				<BlockGenusMember>ls_AccelerometerModule_x</BlockGenusMember>
+				<BlockGenusMember>ls_AccelerometerModule_y</BlockGenusMember>
+				<BlockGenusMember>ls_AccelerometerModule_z</BlockGenusMember>
+				<BlockGenusMember>ls_ButtonModule</BlockGenusMember>
+				<BlockGenusMember>ls_BuzzerModule</BlockGenusMember>				
+				<BlockGenusMember>ls_HallSensor</BlockGenusMember>
+				<BlockGenusMember>ls_HighPowerLedModule</BlockGenusMember>
+				<BlockGenusMember>ls_JoystickSensorModule_x</BlockGenusMember>
+				<BlockGenusMember>ls_JoystickSensorModule_y</BlockGenusMember>
+				<BlockGenusMember>ls_LDRModule</BlockGenusMember>	
+				<BlockGenusMember>ls_LEDBar</BlockGenusMember>
+				<BlockGenusMember>ls_Linear-SlidePotentiometerModule</BlockGenusMember>
+				<BlockGenusMember>ls_MagneticSwitch</BlockGenusMember>
+				<BlockGenusMember>ls_MosfetModule</BlockGenusMember>				
+				<BlockGenusMember>ls_RelayModule</BlockGenusMember>
+				<BlockGenusMember>ls_RotaryPotentiometerModule</BlockGenusMember>
+				<BlockGenusMember>ls_RTCModule</BlockGenusMember>
+				<BlockGenusMember>ls_SoundSensor</BlockGenusMember>					
+				<BlockGenusMember>ls_ThermalModule</BlockGenusMember>
+				<BlockGenusMember>ls_TiltModule</BlockGenusMember>
+				<BlockGenusMember>ls_TouchSensorModule</BlockGenusMember>	
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see 
 				slcodeblocks.ShapeBlocksGenerator for details) -->
