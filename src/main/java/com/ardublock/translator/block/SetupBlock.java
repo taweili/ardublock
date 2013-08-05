@@ -14,16 +14,13 @@ public class SetupBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		String ret="";
-		ret = "void loop()\n{\n";
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
 		while (translatorBlock != null)
 		{
-			ret = translatorBlock.toCode();
-			ret+= "\n";
-			translator.addSetupCommand(ret);
+			ret += translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
-		ret = "";
+        translator.addSetupCommand(ret);
 		return ret;
 	}
 }
