@@ -43,6 +43,17 @@
 		<!--*****************************************************************
 		****************** NEW BLOCKS - Daniel Girardi **********************
 	    ******************************************************************-->
+	    <BlockGenus name="setup" kind="command" color="155 255 000"
+			initlabel="bg.setup" is-starter="yes" is-terminator="no"
+			label-unique="yes">
+			<description>
+				<text>Add setup atribution here</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="cmd" connector-kind="socket"
+					label="" />
+			</BlockConnectors>
+		</BlockGenus>
 		<BlockGenus name="code_loop" kind="command" color="125 125 125"
 			initlabel="bg.code_loop">
 			<description>
@@ -677,6 +688,9 @@
 		    	<text>subroutine</text>
 		    </description>
 		    <BlockConnectors>
+<!--		        <BlockConnector connector-type="number"-->
+<!--					connector-kind="socket" label="bc.par" >-->
+<!--					</BlockConnector>-->
 		        <BlockConnector connector-type="cmd" connector-kind="socket" />
 		    </BlockConnectors>
 		</BlockGenus>
@@ -685,6 +699,12 @@
 		    <description>
 		    	<text>invoke subroutine</text>
 		    </description>
+<!--		    <BlockConnectors>-->
+<!--    	        <BlockConnector connector-type="number"-->
+<!--    				connector-kind="socket">-->
+<!--    			</BlockConnector>-->
+<!--		    </BlockConnectors>-->
+
 		</BlockGenus>
 
 		<!-- operator -->
@@ -3049,9 +3069,18 @@
 			<FamilyMember>not_equal</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>equal_digital</FamilyMember>
+			<FamilyMember>not_equal_digital</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>sin</FamilyMember>
 			<FamilyMember>cos</FamilyMember>
 			<FamilyMember>tan</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>code_head</FamilyMember>
+			<FamilyMember>code_setup</FamilyMember>
+			<FamilyMember>code_loop</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>digital-on</FamilyMember>
@@ -3096,6 +3125,7 @@
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 				<BlockGenusMember>repeat</BlockGenusMember>
+				<BlockGenusMember>setup</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
@@ -3165,7 +3195,6 @@
 				<BlockGenusMember>create_variable_vector</BlockGenusMember>
 				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
 			</BlockDrawer>
-
 			
 			
             <BlockDrawer button-color="255 255 255" name="bd.communication"

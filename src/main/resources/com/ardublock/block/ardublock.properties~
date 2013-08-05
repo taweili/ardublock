@@ -1,4 +1,6 @@
-bc.vecsize=eize
+bc.setup=Setup
+bc.par=input
+bc.vecsize=size
 bc.num=#
 bg.variable_fake=fake
 bg.fake=fake
