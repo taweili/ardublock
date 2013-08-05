@@ -73,7 +73,7 @@ public class NumberBlock extends TranslatorBlock
 		}
 		
 		translator.addOutputPin(indicatorPin);
-		translator.addSetupCommand("pinMode(" + indicatorPin + ", HIGH);");
+		translator.addSetupCommand("digitalWrite(" + indicatorPin + ", HIGH);");
 		
 		return getInternalPin(externalPinNumber);
 	}
