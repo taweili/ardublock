@@ -1,4 +1,15 @@
+bg.variable_poly=Variable
+bg.setter_variable_char= Set char variable
+bg.char=A
+bd.chars= Chars Test
+bg.not_equal_poly= !=
+bg.equal_poly= ==
+bg.glue_poly = glue
+bg.serial_read_poly= serial read
+bg.serial_available=data available
 bg.loop2=Program
+bc.setup=setup
+bc.loop2=loop
 bg.setup=Setup
 bc.par=input
 bc.vecsize=size
