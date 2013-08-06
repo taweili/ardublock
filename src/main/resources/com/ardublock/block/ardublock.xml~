@@ -43,15 +43,32 @@
 		<!--*****************************************************************
 		****************** NEW BLOCKS - Daniel Girardi **********************
 	    ******************************************************************-->
-	    <BlockGenus name="setup" kind="command" color="155 255 000"
-			initlabel="bg.setup" is-starter="yes" is-terminator="no"
+	    <BlockGenus name="loop2" kind="command" color="155 255 0"
+			initlabel="bg.loop2" is-starter="yes" is-terminator="yes"
+			label-unique="yes">
+			<description>
+				<text>this is the loop of the arduino</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="cmd" connector-kind="socket"
+					label="bc.setup" />
+				<BlockConnector connector-type="cmd" connector-kind="socket"
+					label="bc.loop2" />
+			</BlockConnectors>
+		</BlockGenus>
+	    <BlockGenus name="setup" kind="command" color="155 255 0"
+			initlabel="bg.setup" is-starter="no" is-terminator="no"
 			label-unique="yes">
 			<description>
 				<text>Add setup atribution here</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="cmd" connector-kind="socket"
-					label="" />
+					label="Setup" />
+<!--				</BlockConnector>-->
+				<BlockConnector connector-type="cmd" connector-kind="socket"
+					label="Loop" />
+<!--				</BlockConnector>-->
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="code_loop" kind="command" color="125 125 125"
@@ -356,7 +373,7 @@
         
 		<!-- Basic -->
 
-		<BlockGenus name="loop" kind="command" color="255 221 0"
+		<BlockGenus name="loop" kind="command" color="155 255 0"
 			initlabel="bg.loop" is-starter="yes" is-terminator="yes"
 			label-unique="yes">
 			<description>
@@ -3125,7 +3142,7 @@
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 				<BlockGenusMember>repeat</BlockGenusMember>
-				<BlockGenusMember>setup</BlockGenusMember>
+				<BlockGenusMember>loop2</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>

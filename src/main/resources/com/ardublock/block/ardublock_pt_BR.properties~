@@ -1,3 +1,6 @@
+bg.setup=Setup
+bc.setup=In\u00edcio
+bc.loop2=Loop
 bc.vecsize=tamanho
 bc.num=#
 bg.variable_fake=fake

@@ -4,16 +4,16 @@ import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class SetupBlock extends TranslatorBlock
+public class Loop2Block extends TranslatorBlock
 {
-	public SetupBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public Loop2Block(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
 	}
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String ret="";
+	    String ret="";
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
 		while (translatorBlock != null)
 		{
@@ -21,6 +21,16 @@ public class SetupBlock extends TranslatorBlock
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
         translator.addSetupCommand(ret);
+//		return "";
+		String ret;
+		ret = "void loop()\n{\n";
+		TranslatorBlock translatorBlock2 = getTranslatorBlockAtSocket(1);
+		while (translatorBlock2 != null)
+		{
+			ret = ret + translatorBlock2.toCode();
+			translatorBlock2 = translatorBlock2.nextTranslatorBlock();
+		}
+		ret = ret + "}\n\n";
 		return ret;
 	}
 }

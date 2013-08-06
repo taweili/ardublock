@@ -1,4 +1,5 @@
-bc.setup=Setup
+bg.loop2=Program
+bg.setup=Setup
 bc.par=input
 bc.vecsize=size
 bc.num=#

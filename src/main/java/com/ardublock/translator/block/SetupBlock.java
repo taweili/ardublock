@@ -21,6 +21,6 @@ public class SetupBlock extends TranslatorBlock
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
         translator.addSetupCommand(ret);
-		return ret;
+		return "";
 	}
 }
