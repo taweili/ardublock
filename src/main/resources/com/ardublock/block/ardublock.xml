@@ -979,6 +979,102 @@
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="watchdog_setup" kind="command" color="80 36 36"
+			initlabel="bg.watchdog_setup">
+			<description>
+				<text>Watchdog Setup</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.watchdog_enable">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="Time">
+					<DefaultArg genus-name="watchdog_60ms" label="WDTO_60MS" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="watchdog_reset" kind="command" color="80 36 36"
+			initlabel="bg.watchdog_reset">
+			<description>
+				<text>Watchdog reset</text>
+			</description>
+		</BlockGenus>
+
+
+		<BlockGenus name="watchdog_15ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_15ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_30ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_30ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_60ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_60ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_120ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_120ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_250ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_250ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_500ms" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_500ms" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_1s" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_1s" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_2s" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_2s" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_4s" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_4s" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="watchdog_8s" kind="data" color="255 255 0"
+			initlabel="bg.watchdog_8s" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!--************************************************************** TinkerKit! **********************************************************************-->
 		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255"
@@ -2860,6 +2956,18 @@
 			<FamilyMember>digital-off</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>watchdog_15ms</FamilyMember>
+			<FamilyMember>watchdog_30ms</FamilyMember>
+			<FamilyMember>watchdog_60ms</FamilyMember>
+			<FamilyMember>watchdog_120ms</FamilyMember>
+			<FamilyMember>watchdog_250ms</FamilyMember>
+			<FamilyMember>watchdog_500ms</FamilyMember>
+			<FamilyMember>watchdog_1s</FamilyMember>
+			<FamilyMember>watchdog_2s</FamilyMember>
+			<FamilyMember>watchdog_4s</FamilyMember>
+			<FamilyMember>watchdog_8s</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>df_joystick_module_x</FamilyMember>
 			<FamilyMember>df_joystick_module_y</FamilyMember>
 		</BlockFamily>
@@ -2981,6 +3089,8 @@
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
+				<BlockGenusMember>watchdog_setup</BlockGenusMember>
+				<BlockGenusMember>watchdog_reset</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="255 255 255" name="bd.tinkerkit"
