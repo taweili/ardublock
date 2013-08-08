@@ -968,6 +968,23 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="wire_write_one_byte" kind="command" color="200 200 200"
+			initlabel="bg.wire_write_one_byte">
+			<description>
+				<text>write data via I2C</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.device_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.register_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<BlockGenus name="wire_isread" kind="data" color="142 160 210"
 			initlabel="bg.wire_isread">
@@ -3087,6 +3104,7 @@
 				<BlockGenusMember>map_common</BlockGenusMember>
 				<BlockGenusMember>map</BlockGenusMember>
 				<BlockGenusMember>wire_write</BlockGenusMember>
+				<BlockGenusMember>wire_write_one_byte</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 				<BlockGenusMember>watchdog_setup</BlockGenusMember>
