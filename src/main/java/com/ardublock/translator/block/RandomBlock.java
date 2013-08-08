@@ -14,11 +14,11 @@ public class RandomBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String ret = "random( ";
+		String ret = "\trandom( ";
 		TranslatorBlock translatorBlock = getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " )";
-		translator.addSetupCommand("randomSeed(analogRead(A0) + analogRead(A1) + analogRead(A2));");
+		translator.addSetupCommand("\trandomSeed(analogRead(A0) + analogRead(A1) + analogRead(A2));");
 		return codePrefix + ret + codeSuffix;
 	}
 

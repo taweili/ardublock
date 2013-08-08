@@ -17,12 +17,12 @@ public class Loop2Block extends TranslatorBlock
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
 		while (translatorBlock != null)
 		{
-			ret += translatorBlock.toCode();
+			ret +="\t"+ translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
         translator.addSetupCommand(ret);
 //		return "";
-		String ret;
+		ret="";
 		ret = "void loop()\n{\n";
 		TranslatorBlock translatorBlock2 = getTranslatorBlockAtSocket(1);
 		while (translatorBlock2 != null)

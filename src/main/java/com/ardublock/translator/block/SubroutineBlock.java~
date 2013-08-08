@@ -18,10 +18,10 @@ public class SubroutineBlock extends TranslatorBlock
 		String subroutineName = label.trim();
 		String ret;
 		ret = "void " + subroutineName + "()\n{\n";
-		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(1);
+		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
 		while (translatorBlock != null)
 		{
-			ret = ret + translatorBlock.toCode();
+			ret = ret + "\t"+translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
 		ret = ret + "}\n\n";

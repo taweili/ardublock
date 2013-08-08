@@ -37,7 +37,6 @@
 		<BlockConnectorShape shape-type="cmd"
 			shape-number="14" />
 	</BlockConnectorShapes>
-
 	<BlockGenuses>
 		
 		<!--*****************************************************************

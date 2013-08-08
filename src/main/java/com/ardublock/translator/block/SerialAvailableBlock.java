@@ -15,7 +15,7 @@ public class SerialAvailableBlock extends TranslatorBlock
 	{
 		translator.addSetupCommand("Serial.begin(9600);");
 		
-		String ret = "Serial.available()";
+		String ret = "\tSerial.available()";
 		
 		return ret;
 	}

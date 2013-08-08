@@ -1,4 +1,5 @@
-bg.variable_poly=Variable
+bg.color=200 150 0
+bg.variable_poly=char variable name
 bg.setter_variable_char= Set char variable
 bg.char=A
 bd.chars= Chars Test

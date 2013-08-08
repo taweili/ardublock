@@ -14,7 +14,7 @@ public class DelayMicrosecondsBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "delayMicroseconds( " + tb.toCode() + " );\n";
+		String ret = "\tdelayMicroseconds( " + tb.toCode() + " );\n";
 		return ret;
 	}
 

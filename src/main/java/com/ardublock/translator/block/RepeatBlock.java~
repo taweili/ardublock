@@ -23,13 +23,13 @@ public class RepeatBlock extends TranslatorBlock
 		String ret = "for (" + varName + "=0; " + varName + "< ( ";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		ret = ret + translatorBlock.toCode();
-		ret = ret + " ); ++" + varName + " )\n{\n";
+		ret = ret + " ); " + varName + "++ )\n{\n";
 		
 		
 		translatorBlock = getTranslatorBlockAtSocket(2);
 		while (translatorBlock != null)
 		{
-			ret = ret + translatorBlock.toCode();
+			ret = ret + "\t"+translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
 		

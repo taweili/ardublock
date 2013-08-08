@@ -1,3 +1,27 @@
+bg.variable_poly=nome da vari\u00e1vel char
+bg.setter_variable_char= atribui vari\u00e1vel char
+bg.char=A
+bd.chars= Chars Test
+bg.not_equal_poly= !=
+bg.equal_poly= ==
+bg.glue_poly = junte
+bg.serial_read_poly= L\u00ea Serial
+bg.serial_available=dados dispon\u00edveis
+
+
+bg.setup=Setup
+bg.loop2=Programa
+bc.setup=In\u00edcio
+bc.loop2=Loop
+bc.vecsize=tamanho
+bc.num=#
+bg.variable_fake=fake
+bg.fake=fake
+bg.variable_vector=nome do vetor
+bc.position=Posi\u00e7\u00e3o
+bg.create_variable_vector=cria um vetor
+bg.setter_variable_vector=atribui valor ao vetor
+
 
 bg.code_head=Adiciona no Head
 bg.code_setup=Adiciona no Setup

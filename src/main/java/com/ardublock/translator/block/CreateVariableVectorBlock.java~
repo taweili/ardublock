@@ -20,7 +20,7 @@ public class CreateVariableVectorBlock extends TranslatorBlock
 		int foo = Integer.parseInt(size.toCode())+1;
 		varName+="[";
 		translator.addDefinitionCommand("int " + varName +foo+"];\n");
-		translator.addSetupCommand("for (int i=0;i<"+foo+";i++) "+ varName+"=0;\n"   );
+		translator.addSetupCommand("for (int i=0;i<"+foo+";i++) "+ varName+"i]=0;\n"   );
 		return "";
 	}
 

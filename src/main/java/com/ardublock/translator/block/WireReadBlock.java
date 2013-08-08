@@ -58,7 +58,7 @@ public class WireReadBlock extends TranslatorBlock
 			}
 		}
 		
-		t.addSetupCommand("Wire.begin();\n__ardublockIsI2cReadOk = false;");
+		t.addSetupCommand("\tWire.begin();\n\t__ardublockIsI2cReadOk = false;");
 	}
 
 }

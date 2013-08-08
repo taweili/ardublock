@@ -37,7 +37,6 @@
 		<BlockConnectorShape shape-type="cmd"
 			shape-number="14" />
 	</BlockConnectorShapes>
-
 	<BlockGenuses>
 		
 		<!--*****************************************************************
@@ -69,7 +68,7 @@
 					label="" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="repeat" kind="command" color="255 221 0"
+		<BlockGenus name="repeat" kind="command" color="255 180 70"
 			initlabel="bg.repeat">
 			<description>
 				<text>repeat</text>
@@ -3182,6 +3181,10 @@
 			<FamilyMember>not_equal_digital</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>equal_poly</FamilyMember>
+			<FamilyMember>not_equal_poly</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>sin</FamilyMember>
 			<FamilyMember>cos</FamilyMember>
 			<FamilyMember>tan</FamilyMember>
@@ -3340,7 +3343,7 @@
 <!--				-->
 <!--				-->
 <!--				-->
-<!--<!--				<BlockGenusMember>variable_poly</BlockGenusMember>-->-->
+<!--				<BlockGenusMember>variable_poly</BlockGenusMember>-->
 <!--				-->
 <!--			</BlockDrawer>-->
 			
