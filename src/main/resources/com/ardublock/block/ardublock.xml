@@ -1093,6 +1093,91 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+
+		<!--************************************************************** Storage **********************************************************************-->
+
+
+		<BlockGenus name="sd_write" kind="command" color="0 100 90"
+			initlabel="bg.sd_write">
+			<description>
+				<text>Write to SD card</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="File">
+					<DefaultArg genus-name="message" label="file.txt" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="Return">
+					<DefaultArg genus-name="sd_return" label="Return" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="Data">
+					<DefaultArg genus-name="message" label="Data" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="sd_write_number" kind="command" color="0 100 90"
+			initlabel="bg.sd_write_number">
+			<description>
+				<text>Write to SD card</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="File">
+					<DefaultArg genus-name="message" label="file.txt" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="Return">
+					<DefaultArg genus-name="sd_return" label="Return" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="Number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="sd_write_number_int" kind="command" color="0 100 90"
+			initlabel="bg.sd_write_number_int">
+			<description>
+				<text>Write number to SD card</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="File">
+					<DefaultArg genus-name="message" label="file.txt" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="Return">
+					<DefaultArg genus-name="sd_return" label="Return" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="Number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="sd_return" kind="data" color="255 255 0"
+			initlabel="bg.sd_return" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="sd_no_return" kind="data" color="255 255 0"
+			initlabel="bg.sd_no_return" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+
+
+
+
 		<!--************************************************************** TinkerKit! **********************************************************************-->
 		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255"
 			initlabel="bg.Tinker_LED">
@@ -3094,6 +3179,14 @@
 				<BlockGenusMember>cos</BlockGenusMember>
 				<BlockGenusMember>tan</BlockGenusMember>
 			</BlockDrawer>
+			
+			<BlockDrawer button-color="0 50 45" name="bd.storage"
+				type="factory">
+				<BlockGenusMember>sd_write</BlockGenusMember>
+				<BlockGenusMember>sd_write_number</BlockGenusMember>
+				<BlockGenusMember>sd_write_number_int</BlockGenusMember>
+			</BlockDrawer>
+			
 			<BlockDrawer button-color="95 120 132" name="bd.utilities"
 				type="factory">
 				<BlockGenusMember>delay</BlockGenusMember>
