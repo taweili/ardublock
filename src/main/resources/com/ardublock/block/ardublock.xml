@@ -1096,6 +1096,37 @@
 
 		<!--************************************************************** Storage **********************************************************************-->
 
+		<BlockGenus name="eeprom_read" kind="data" color="0 100 90"
+			initlabel="bg.eeprom_read">
+			<description>
+				<text>EEPROM Read</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="eeprom_write" kind="command" color="0 100 90"
+			initlabel="bg.eeprom_write">
+			<description>
+				<text>EEPROM Write</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.eeprom_data">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<BlockGenus name="sd_write" kind="command" color="0 100 90"
 			initlabel="bg.sd_write">
@@ -3094,6 +3125,10 @@
 			<FamilyMember>Tinker_O4</FamilyMember>
 			<FamilyMember>Tinker_O5</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+				<FamilyMember>sd_return</FamilyMember>
+				<FamilyMember>sd_no_return</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -3182,6 +3217,8 @@
 			
 			<BlockDrawer button-color="0 50 45" name="bd.storage"
 				type="factory">
+				<BlockGenusMember>eeprom_read</BlockGenusMember>
+				<BlockGenusMember>eeprom_write</BlockGenusMember>
 				<BlockGenusMember>sd_write</BlockGenusMember>
 				<BlockGenusMember>sd_write_number</BlockGenusMember>
 				<BlockGenusMember>sd_write_number_int</BlockGenusMember>
