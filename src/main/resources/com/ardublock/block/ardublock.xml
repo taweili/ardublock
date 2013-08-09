@@ -820,7 +820,7 @@
 
 
 		<!-- Utility -->
-		<BlockGenus name="delay" kind="command" color="142 160 210"
+		<BlockGenus name="delay" kind="command" color="80 36 36"
 			initlabel="bg.delay">
 			<description>
 				<text>program delay in x milliseconds</text>
@@ -833,7 +833,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="delay_microseconds" kind="command" color="142 160 210"
+		<BlockGenus name="delay_microseconds" kind="command" color="80 36 36"
 			initlabel="bg.delay_microseconds">
 			<description>
 				<text>program delay in x milliseconds</text>
@@ -846,7 +846,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="random" kind="data" color="142 160 210"
+		<BlockGenus name="random" kind="data" color="80 36 36"
 			initlabel="bg.random">
 			<description>
 				<text>generate a random number less than the number</text>
@@ -861,7 +861,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="millis" kind="data" color="142 160 210"
+		<BlockGenus name="millis" kind="data" color="80 36 36"
 			initlabel="bg.millis">
 			<description>
 				<text>generate a random number less than the number</text>
@@ -872,20 +872,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="serial_println" kind="command" color="142 160 210"
-			initlabel="bg.serial_println">
-			<description>
-				<text>send message via Serial port</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="string"
-					connector-kind="socket">
-					<DefaultArg genus-name="message" label="message" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="map_common" kind="data" color="142 160 210"
+		<BlockGenus name="map_common" kind="data" color="80 36 36"
 			initlabel="bg.map_common">
 			<description>
 				<text>map value from [0, 1023] to [0, 255]</text>
@@ -900,7 +887,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="map" kind="data" color="142 160 210"
+		<BlockGenus name="map" kind="data" color="80 36 36"
 			initlabel="bg.map">
 			<description>
 				<text>map</text>
@@ -929,73 +916,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="wire_read" kind="data" color="142 160 210"
-			initlabel="bg.wire_read">
-			<description>
-				<text>read data from i2c</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" />
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.device_address">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.register_address">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
 
-		<BlockGenus name="wire_write" kind="command" color="142 160 210"
-			initlabel="bg.wire_write">
-			<description>
-				<text>write data via I2C</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.device_address">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.register_address">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.value">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="wire_write_one_byte" kind="command" color="200 200 200"
-			initlabel="bg.wire_write_one_byte">
-			<description>
-				<text>write data via I2C</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.device_address">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.register_address">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="wire_isread" kind="data" color="142 160 210"
-			initlabel="bg.wire_isread">
-			<description>
-				<text>is last read from I2C success?</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
 		
 		<BlockGenus name="watchdog_setup" kind="command" color="80 36 36"
 			initlabel="bg.watchdog_setup">
@@ -1092,7 +1013,88 @@
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<!--************************************************************* Communication *******************************************************-->
 
+		<BlockGenus name="serial_println" kind="command" color="200 200 200"
+			initlabel="bg.serial_println">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="wire_read" kind="data" color="200 200 200"
+			initlabel="bg.wire_read">
+			<description>
+				<text>read data from i2c</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.device_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.register_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="wire_write" kind="command" color="200 200 200"
+			initlabel="bg.wire_write">
+			<description>
+				<text>write data via I2C</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.device_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.register_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.value">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="wire_write_one_byte" kind="command" color="200 200 200"
+			initlabel="bg.wire_write_one_byte">
+			<description>
+				<text>write data via I2C</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.device_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.register_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="wire_isread" kind="data" color="200 200 200"
+			initlabel="bg.wire_isread">
+			<description>
+				<text>is last read from I2C success?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!--************************************************************** Storage **********************************************************************-->
 
@@ -3172,18 +3174,6 @@
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
-				<BlockGenusMember>Tinker_I0</BlockGenusMember>
-				<BlockGenusMember>Tinker_I1</BlockGenusMember>
-				<BlockGenusMember>Tinker_I2</BlockGenusMember>
-				<BlockGenusMember>Tinker_I3</BlockGenusMember>
-				<BlockGenusMember>Tinker_I4</BlockGenusMember>
-				<BlockGenusMember>Tinker_I5</BlockGenusMember>
-				<BlockGenusMember>Tinker_O0</BlockGenusMember>
-				<BlockGenusMember>Tinker_O1</BlockGenusMember>
-				<BlockGenusMember>Tinker_O2</BlockGenusMember>
-				<BlockGenusMember>Tinker_O3</BlockGenusMember>
-				<BlockGenusMember>Tinker_O4</BlockGenusMember>
-				<BlockGenusMember>Tinker_O5</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockDrawer button-color="114 147 71" name="bd.operators"
@@ -3214,7 +3204,15 @@
 				<BlockGenusMember>cos</BlockGenusMember>
 				<BlockGenusMember>tan</BlockGenusMember>
 			</BlockDrawer>
-			
+            <BlockDrawer button-color="255 255 255" name="bd.communication"
+				type="factory">
+				<BlockGenusMember>serial_println</BlockGenusMember>
+				<BlockGenusMember>wire_write</BlockGenusMember>
+				<BlockGenusMember>wire_write_one_byte</BlockGenusMember>
+				<BlockGenusMember>wire_read</BlockGenusMember>
+				<BlockGenusMember>wire_isread</BlockGenusMember>
+
+			</BlockDrawer>
 			<BlockDrawer button-color="0 50 45" name="bd.storage"
 				type="factory">
 				<BlockGenusMember>eeprom_read</BlockGenusMember>
@@ -3224,19 +3222,15 @@
 				<BlockGenusMember>sd_write_number_int</BlockGenusMember>
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="95 120 132" name="bd.utilities"
+			<BlockDrawer button-color="60 16 16" name="bd.utilities"
 				type="factory">
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>random</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>millis</BlockGenusMember>
-				<BlockGenusMember>serial_println</BlockGenusMember>
 				<BlockGenusMember>map_common</BlockGenusMember>
 				<BlockGenusMember>map</BlockGenusMember>
-				<BlockGenusMember>wire_write</BlockGenusMember>
-				<BlockGenusMember>wire_write_one_byte</BlockGenusMember>
-				<BlockGenusMember>wire_read</BlockGenusMember>
-				<BlockGenusMember>wire_isread</BlockGenusMember>
+
 				<BlockGenusMember>watchdog_setup</BlockGenusMember>
 				<BlockGenusMember>watchdog_reset</BlockGenusMember>
 			</BlockDrawer>
