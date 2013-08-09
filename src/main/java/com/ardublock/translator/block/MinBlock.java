@@ -14,7 +14,7 @@ public class MinBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String ret = "min( ";
+		String ret = "\tmin( ";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);

@@ -59,6 +59,14 @@ public class GenerateCodeButtonListener implements ActionListener
 				{
 					loopBlockSet.add(renderableBlock);
 				}
+				if(block.getGenusName().equals("loop2"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("setup"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
 				if (block.getGenusName().equals("subroutine"))
 				{
 					String functionName = block.getBlockLabel().trim();

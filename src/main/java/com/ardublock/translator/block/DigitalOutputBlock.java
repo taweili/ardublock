@@ -19,10 +19,10 @@ public class DigitalOutputBlock extends TranslatorBlock
 		if (translatorBlock instanceof NumberBlock)
 		{
 			String number = translatorBlock.toCode();
-			String setupCode = "pinMode( " + number + " , OUTPUT);";
+			String setupCode = "\tpinMode( " + number + " , OUTPUT);";
 			translator.addSetupCommand(setupCode);
 			
-			String ret = "digitalWrite( ";
+			String ret = "\tdigitalWrite( ";
 			ret = ret + number;
 			ret = ret + " , ";
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);

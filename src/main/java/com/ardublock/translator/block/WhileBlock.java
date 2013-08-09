@@ -14,17 +14,17 @@ public class WhileBlock extends TranslatorBlock
 	
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String ret = "while ( ";
+		String ret = "\twhile ( ";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
-		ret = ret + " )\n{\n";
+		ret = ret + " )\n\t{\n";
 		translatorBlock = getTranslatorBlockAtSocket(1);
 		while (translatorBlock != null)
 		{
-			ret = ret + translatorBlock.toCode();
+			ret = ret + "\t"+translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
-		ret = ret + "}\n\n";
+		ret = ret + "\t}\n\n";
 		return ret;
 	}
 

@@ -14,7 +14,7 @@ public class MaxBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String ret = "max( ";
+		String ret = "\tmax( ";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);

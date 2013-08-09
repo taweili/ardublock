@@ -20,9 +20,9 @@ public class DigitalInputBlock extends TranslatorBlock
 		{
 			String number;
 			number = translatorBlock.toCode();
-			String setupCode = "pinMode( " + number + " , INPUT);";
+			String setupCode = "\tpinMode( " + number + " , INPUT);";
 			translator.addSetupCommand(setupCode);
-			String ret = "digitalRead( ";
+			String ret = "\tdigitalRead( ";
 			ret = ret + number;
 			ret = ret + ")";
 			return codePrefix + ret + codeSuffix;

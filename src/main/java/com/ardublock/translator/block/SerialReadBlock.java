@@ -13,11 +13,9 @@ public class SerialReadBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		translator.addSetupCommand("Serial.begin(9600);");
-        //translator.addDefinitionCommand("int incomingByte = 0;);
-//		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0, "Serial.print( ", " );\n");
+		translator.addSetupCommand("\tSerial.begin(9600);");
 		
-		String ret = "Serial.read()";
+		String ret = "Serial.parseInt()";
 		
 		return ret;
 	}

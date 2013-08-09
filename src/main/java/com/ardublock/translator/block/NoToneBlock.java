@@ -15,7 +15,7 @@ public class NoToneBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock pinBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "noTone(" + pinBlock.toCode() + ");\n";
+		String ret = "\tnoTone(" + pinBlock.toCode() + ");\n";
 		return ret;
 	}
 }

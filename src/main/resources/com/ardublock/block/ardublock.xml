@@ -37,12 +37,56 @@
 		<BlockConnectorShape shape-type="cmd"
 			shape-number="14" />
 	</BlockConnectorShapes>
-
 	<BlockGenuses>
 		
 		<!--*****************************************************************
-		********* NEW BLOCKS ************************************************
-	    ***************************************-->
+		****************** NEW BLOCKS - Daniel Girardi **********************
+	    ******************************************************************-->
+	    
+	    <!-- ******************** Controls Menu *************** -->
+	    <BlockGenus name="loop2" kind="command" color="155 255 0"
+			initlabel="bg.loop2" is-starter="yes" is-terminator="yes"
+			label-unique="yes">
+			<description>
+				<text>this is the loop of the arduino</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="cmd" connector-kind="socket"
+					label="bc.setup" />
+				<BlockConnector connector-type="cmd" connector-kind="socket"
+					label="bc.loop2" />
+			</BlockConnectors>
+		</BlockGenus>
+	    <BlockGenus name="setup" kind="command" color="155 255 0"
+			initlabel="bg.setup" is-starter="no" is-terminator="no"
+			label-unique="yes">
+			<description>
+				<text>Add setup atribution here</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="cmd" connector-kind="socket"
+					label="" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="repeat" kind="command" color="255 221 0"
+			initlabel="bg.repeat">
+			<description>
+				<text>repeat</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.variable">
+					<DefaultArg genus-name="variable_number" label="var name" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="cmd" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<!-- ******************** Especial Menu *************** -->
 		<BlockGenus name="code_loop" kind="command" color="125 125 125"
 			initlabel="bg.code_loop">
 			<description>
@@ -79,7 +123,9 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="serial_print" kind="command" color="200 200 200"
+		
+		<!-- ******************** Communication Menu *************** -->
+		<BlockGenus name="serial_print" kind="command" color="245 245 245"
 			initlabel="bg.serial_print">
 			<description>
 				<text>send message via Serial port</text>
@@ -91,13 +137,34 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="serial_read" kind="data" color="200 200 200"
-			initlabel="bg.serial_read" editable-label="yes">
+		<BlockGenus name="serial_read" kind="data" color="245 245 245"
+			initlabel="bg.serial_read" >
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="serial_available" kind="data" color="245 245 245"
+			initlabel="bg.serial_available" >
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="glue_msg" kind="data" color="245 245 245"
+			initlabel="bg.glue_msg" editable-label="no">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="plug" />
+					<BlockConnector connector-type="string"
+					connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<!-- ******************** Logic Menu *************** -->
 		<BlockGenus name="equal_digital" kind="function" color="222 131 51"
 			initlabel="bg.equal_digital">
 			<description>
@@ -127,52 +194,169 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="repeat" kind="command" color="255 221 0"
-			initlabel="bg.repeat">
+		<!-- ******************* Char Blocks *************************-->
+		<BlockGenus name="equal_poly" kind="function" color="222 131 51"
+			initlabel="bg.equal_poly">
 			<description>
-				<text>repeat</text>
+				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-			    <BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="var name" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket">
-					<DefaultArg genus-name="number" label="5" />
-				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="poly"
+					connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="poly"
+					connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="not_equal_poly" kind="function" color="222 131 51"
+			initlabel="bg.not_equal_poly">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="poly"
+					connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="poly"
+					connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="serial_read_poly" kind="data" color="245 245 245"
+			initlabel="bg.serial_read" >
+			<BlockConnectors>
+				<BlockConnector connector-type="poly"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 		
-		
-		
-		
-		
-		<BlockGenus name="glue_msg" kind="data" color="200 200 200"
-			initlabel="bg.glue_msg" editable-label="yes">
+		<BlockGenus name="glue_poly" kind="data" color="245 245 245"
+			initlabel="bg.glue_poly" editable-label="no">
 			<description>
 				<text></text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string"
 					connector-kind="plug" />
-					<BlockConnector connector-type="string"
-					connector-kind="plug" />
+					<BlockConnector connector-type="poly"
+					connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-       
 		
+		<BlockGenus name="variable_poly" kind="data"
+			initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes"
+			color="208 10 16">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="poly"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 		
+		<BlockGenus name="setter_variable_char" kind="command"
+			color="208 10 16" initlabel="bg.setter_variable_char">
+			<description>
+				<text>create a vector of numbers</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="poly"
+					connector-kind="socket" label="bc.variable">
+					<DefaultArg genus-name="variable_poly" label="var name" />
+				</BlockConnector>
+				<BlockConnector connector-type="poly"
+					connector-kind="socket" label="char">
+					<DefaultArg genus-name="char" label="A" />
+				</BlockConnector>
+				
+			</BlockConnectors>
+		</BlockGenus>
 		
-		
-		
-		
-		
+		<BlockGenus name="char" kind="data" color="208 10 16"
+			initlabel="bg.char" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="poly"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<!-- ******************* Vectors Blocks *************************-->
+		<BlockGenus name="variable_vector" kind="data"
+			initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes"
+			color="208 10 16">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.num">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="variable_fake" kind="data"
+			initlabel="bg.fake" editable-label="yes" is-label-value="yes"
+			color="208 10 16">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="create_variable_vector" kind="command"
+			color="208 10 16" initlabel="bg.create_variable_vector">
+			<description>
+				<text>create a vector of numbers</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.variable">
+					<DefaultArg genus-name="variable_fake" label="var name" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.vecsize">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="setter_variable_vector" kind="command"
+			color="208 10 16" initlabel="bg.setter_variable_vector">
+			<description>
+				<text>Set a vector number</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.variable">
+					<DefaultArg genus-name="variable_fake" label="var fake" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.position">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.value">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<!--*****************************************************************
-		********* NEW BLOCKS ************************************************
+		********* END ************************************************
 	    ***************************************-->
+
+
 		<!-- Number -->
 		<BlockGenus name="number" kind="data" color="208 10 16"
 			initlabel="bg.number" editable-label="yes">
@@ -239,7 +423,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="message" kind="data" color="200 200 200"
+		<BlockGenus name="message" kind="data" color="245 245 245"
 			initlabel="bg.message" editable-label="yes">
 			<description>
 				<text>string message</text>
@@ -252,7 +436,7 @@
 			</BlockConnectors>
 		</BlockGenus>
        
-		<BlockGenus name="glue_sn" kind="data" color="200 200 200"
+		<BlockGenus name="glue_sn" kind="data" color="245 245 245"
 			initlabel="bg.glue_sn">
 			<description>
 				<text>glue number to string</text>
@@ -265,7 +449,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="glue_sb" kind="data" color="200 200 200"
+		<BlockGenus name="glue_sb" kind="data" color="245 245 245"
 			initlabel="bg.glue_sb">
 			<description>
 				<text>glue boolean to string</text>
@@ -280,7 +464,7 @@
         
 		<!-- Basic -->
 
-		<BlockGenus name="loop" kind="command" color="255 221 0"
+		<BlockGenus name="loop" kind="command" color="155 255 0"
 			initlabel="bg.loop" is-starter="yes" is-terminator="yes"
 			label-unique="yes">
 			<description>
@@ -417,7 +601,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="servo" kind="command" color="247 0 103"
+		<BlockGenus name="servo" kind="command" color="153 0 204"
 			initlabel="bg.servo">
 			<description>
 				<text>set a pin to pwm</text>
@@ -434,7 +618,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="ultrasonic" kind="data" color="247 0 103"
+		<BlockGenus name="ultrasonic" kind="data" color="153 0 204"
 			initlabel="bg.ultrasonic">
 			<description>
 				<text>Ultrasonic distance sensor</text>
@@ -458,7 +642,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="tone" kind="command" color="247 0 103"
+		<BlockGenus name="tone" kind="command" color="153 0 204"
 			initlabel="tone">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50%
@@ -478,7 +662,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="tone_time" kind="command" color="247 0 103"
+		<BlockGenus name="tone_time" kind="command" color="153 0 204"
 			initlabel="tone">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50%
@@ -501,7 +685,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="no_tone" kind="command" color="247 0 103"
+		<BlockGenus name="no_tone" kind="command" color="153 0 204"
 			initlabel="noTone">
 			<description>
 				<text>Stops the generation of a square wave triggered by tone().
@@ -612,6 +796,9 @@
 		    	<text>subroutine</text>
 		    </description>
 		    <BlockConnectors>
+<!--		        <BlockConnector connector-type="number"-->
+<!--					connector-kind="socket" label="bc.par" >-->
+<!--					</BlockConnector>-->
 		        <BlockConnector connector-type="cmd" connector-kind="socket" />
 		    </BlockConnectors>
 		</BlockGenus>
@@ -620,6 +807,12 @@
 		    <description>
 		    	<text>invoke subroutine</text>
 		    </description>
+<!--		    <BlockConnectors>-->
+<!--    	        <BlockConnector connector-type="number"-->
+<!--    				connector-kind="socket">-->
+<!--    			</BlockConnector>-->
+<!--		    </BlockConnectors>-->
+
 		</BlockGenus>
 
 		<!-- operator -->
@@ -1004,7 +1197,7 @@
 			</BlockConnectors>
 		</BlockGenus>
         
-		<BlockGenus name="serial_println" kind="command" color="200 200 200"
+		<BlockGenus name="serial_println" kind="command" color="245 245 245"
 			initlabel="bg.serial_println">
 			<description>
 				<text>send message via Serial port</text>
@@ -1062,7 +1255,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="wire_read" kind="data" color="247 0 103"
+		<BlockGenus name="wire_read" kind="data" color="245 245 245"
 			initlabel="bg.wire_read">
 			<description>
 				<text>read data from i2c</text>
@@ -1081,7 +1274,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="wire_write" kind="command" color="247 0 103"
+		<BlockGenus name="wire_write" kind="command" color="245 245 245"
 			initlabel="bg.wire_write">
 			<description>
 				<text>write data via I2C</text>
@@ -1102,7 +1295,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="wire_isread" kind="data" color="247 0 103"
+		<BlockGenus name="wire_isread" kind="data" color="245 245 245"
 			initlabel="bg.wire_isread">
 			<description>
 				<text>is last read from I2C success?</text>
@@ -2984,9 +3177,22 @@
 			<FamilyMember>not_equal</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>equal_digital</FamilyMember>
+			<FamilyMember>not_equal_digital</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>equal_poly</FamilyMember>
+			<FamilyMember>not_equal_poly</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>sin</FamilyMember>
 			<FamilyMember>cos</FamilyMember>
 			<FamilyMember>tan</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>code_head</FamilyMember>
+			<FamilyMember>code_setup</FamilyMember>
+			<FamilyMember>code_loop</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>digital-on</FamilyMember>
@@ -3024,6 +3230,7 @@
 			window-per-drawer="no" drawer-draggable="no">
 			<BlockDrawer name="bd.control" type="factory" is-open="yes"
 				button-color="255 255 0">
+				<BlockGenusMember>loop2</BlockGenusMember>
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
@@ -3076,16 +3283,18 @@
 				<BlockGenusMember>less_equal</BlockGenusMember>
 				<BlockGenusMember>not_equal</BlockGenusMember>
                 <BlockGenusMember>not_equal_digital</BlockGenusMember>
-                
 				<BlockGenusMember>and</BlockGenusMember>
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
+				<BlockGenusMember>equal_poly</BlockGenusMember>
+				<BlockGenusMember>not_equal_poly</BlockGenusMember>
 				
 
 			</BlockDrawer>
 
 			<BlockDrawer button-color="230 69 69" name="bd.number"
 				type="factory">
+				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
@@ -3095,36 +3304,49 @@
 				<BlockGenusMember>variable_digital</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
-				<BlockGenusMember>millis</BlockGenusMember>
-			</BlockDrawer>
-
-			
-			
-            <BlockDrawer button-color="255 255 255" name="bd.communication"
-				type="factory">
-				<BlockGenusMember>serial_read</BlockGenusMember>
-				<BlockGenusMember>serial_print</BlockGenusMember>
-				<BlockGenusMember>serial_println</BlockGenusMember>
-				<BlockGenusMember>message</BlockGenusMember>
-				<BlockGenusMember>glue_sn</BlockGenusMember>
-				<BlockGenusMember>glue_sb</BlockGenusMember>
-<!--                <BlockGenusMember>glue_msg</BlockGenusMember>-->
-				<!--<BlockGenusMember>wire_write</BlockGenusMember>
-				<BlockGenusMember>wire_read</BlockGenusMember>
-				<BlockGenusMember>wire_isread</BlockGenusMember>-->
+				<BlockGenusMember>variable_vector</BlockGenusMember>
+				<BlockGenusMember>create_variable_vector</BlockGenusMember>
+				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
+				<BlockGenusMember>setter_variable_char</BlockGenusMember>
+				<BlockGenusMember>variable_poly</BlockGenusMember>
+				<BlockGenusMember>char</BlockGenusMember>
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="255 59 140" name="bd.utilities"
+			<BlockDrawer button-color="138 0 184" name="bd.utilities"
 				type="factory">
 				<BlockGenusMember>servo</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
+				
+			</BlockDrawer>
+			
+			<BlockDrawer button-color="255 255 255" name="bd.communication"
+				type="factory">
+				<BlockGenusMember>serial_read</BlockGenusMember>
+				<BlockGenusMember>serial_read_poly</BlockGenusMember>
+				<BlockGenusMember>serial_available</BlockGenusMember>
+				<BlockGenusMember>serial_print</BlockGenusMember>
+				<BlockGenusMember>serial_println</BlockGenusMember>
+				<BlockGenusMember>message</BlockGenusMember>
+				<BlockGenusMember>glue_sn</BlockGenusMember>
+				<BlockGenusMember>glue_sb</BlockGenusMember>
+				<BlockGenusMember>glue_poly</BlockGenusMember>
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
+			
+<!--			<BlockDrawer button-color="120 120 120" name="bd.chars"-->
+<!--				type="factory">-->
+<!--				-->
+<!--				-->
+<!--				-->
+<!--				<BlockGenusMember>variable_poly</BlockGenusMember>-->
+<!--				-->
+<!--			</BlockDrawer>-->
+			
 			<BlockDrawer button-color="120 120 120" name="bd.especial"
 				type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
