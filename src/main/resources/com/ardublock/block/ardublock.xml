@@ -1011,6 +1011,14 @@
 
 		<!--************************************************************* Communication *******************************************************-->
 
+		<BlockGenus name="serial_read" kind="data" color="200 200 200"
+			initlabel="bg.serial_read" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="serial_println" kind="command" color="200 200 200"
 			initlabel="bg.serial_println">
 			<description>
@@ -3206,6 +3214,7 @@
 			</BlockDrawer>
             <BlockDrawer button-color="255 255 255" name="bd.communication"
 				type="factory">
+				<BlockGenusMember>serial_read</BlockGenusMember>
 				<BlockGenusMember>serial_println</BlockGenusMember>
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_write_one_byte</BlockGenusMember>
