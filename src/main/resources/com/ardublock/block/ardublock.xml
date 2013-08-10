@@ -39,7 +39,8 @@
 	</BlockConnectorShapes>
 
 	<BlockGenuses>
-		<!-- Number -->
+
+		<!--************************************************************* Number *******************************************************-->
 
 		<BlockGenus name="number" kind="data" color="208 10 16"
 			initlabel="bg.number" editable-label="yes">
@@ -145,7 +146,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<!-- Basic -->
+		<!--************************************************************* Basic *******************************************************-->
 
 		<BlockGenus name="loop" kind="command" color="255 221 0"
 			initlabel="bg.loop" is-starter="yes" is-terminator="yes"
@@ -541,8 +542,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-
-		<!-- Math -->
+		<!--************************************************************* Math *******************************************************-->
 
 		<BlockGenus name="addition" kind="function" initlabel="bg.addition"
 			color="149 193 31">
@@ -816,10 +816,8 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<!--************************************************************* Utility *******************************************************-->
 
-
-
-		<!-- Utility -->
 		<BlockGenus name="delay" kind="command" color="80 36 36"
 			initlabel="bg.delay">
 			<description>
@@ -916,8 +914,6 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-
-		
 		<BlockGenus name="watchdog_setup" kind="command" color="80 36 36"
 			initlabel="bg.watchdog_setup">
 			<description>
@@ -941,7 +937,6 @@
 				<text>Watchdog reset</text>
 			</description>
 		</BlockGenus>
-
 
 		<BlockGenus name="watchdog_15ms" kind="data" color="255 255 0"
 			initlabel="bg.watchdog_15ms" editable-label="no">
@@ -1013,6 +1008,7 @@
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+
 		<!--************************************************************* Communication *******************************************************-->
 
 		<BlockGenus name="serial_println" kind="command" color="200 200 200"
@@ -1021,6 +1017,10 @@
 				<text>send message via Serial port</text>
 			</description>
 			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="Return">
+					<DefaultArg genus-name="sd_return" label="Return" />
+				</BlockConnector>
 				<BlockConnector connector-type="string"
 					connector-kind="socket">
 					<DefaultArg genus-name="message" label="message" />

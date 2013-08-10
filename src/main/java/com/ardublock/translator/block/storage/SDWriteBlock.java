@@ -51,15 +51,6 @@ public class SDWriteBlock extends TranslatorBlock
 	}
 	
 
-	//private static final String THERMOCOUPLE_DEFINITION = "#if ARDUINO < 100\nint SCK = 13;\nint MISO = 12;\n#endif\nint CS1 = 11;\nMAX31855 temperature(SCK, CS1, MISO);\n";
-	//private static final String SD_DEFINITION = "const int chipSelect = 10;\n\nvoid __ardublockWriteSD (String file_name,String text)\n{\n\nchar Filename[12];\n\nif (!SD.begin(chipSelect)) {\n}\n\nfile_name.toCharArray(Filename, 12);\nFile dataFile = SD.open(Filename, FILE_WRITE);\n\nif (dataFile)\n{\ndataFile.println(text);\ndataFile.close();\n}\n\n}\n\n";
-	//private static final String SD_DEFINITION_LN = "const int chipSelect = 10;\n\nvoid __ardublockWriteSD (String file_name,String text)\n{\n\nchar Filename[12];\n\nif (!SD.begin(chipSelect)) {\n}\n\nfile_name.toCharArray(Filename, 12);\nFile dataFile = SD.open(Filename, FILE_WRITE);\n\nif (dataFile)\n{\ndataFile.println(text);\ndataFile.close();\n}\n\n}\n\n";
 
-	
-	//public static void setupSDEnvironment(Translator t)
-	//{
-	//	t.addHeaderFile("SD.h");
-	//	t.addDefinitionCommand(SD_DEFINITION);
-	//}
 	
 }
