@@ -1,6 +1,15 @@
 #short name can be found in /src/com/ardublock/translator/block/TranslatorBlockFactory.java
+eeprom_read=com.ardublock.translator.block.storage.EEPROMReadBlock
+eeprom_write=com.ardublock.translator.block.storage.EEPROMWriteBlock
+sd_write=com.ardublock.translator.block.storage.SDWriteBlock
+sd_write_number=com.ardublock.translator.block.storage.SDWriteNumberBlock
+sd_write_number_int=com.ardublock.translator.block.storage.SDWriteNumberIntBlock
+sd_return=com.ardublock.translator.block.storage.SDPortBlock
+sd_no_return=com.ardublock.translator.block.storage.SDPortBlock
+
+
 variable_poly=com.ardublock.translator.block.VariablePolyBlock
-char=com.ardublock.translator.block.VariablePolyBlock
+char=com.ardublock.translator.block.PolyBlock
 setter_variable_char=com.ardublock.translator.block.SetterVariablePolyBlock
 glue_poly=com.ardublock.translator.block.GluePolyBlock
 serial_read_poly=com.ardublock.translator.block.SerialReadPolyBlock
