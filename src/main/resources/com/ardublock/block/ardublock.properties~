@@ -1,5 +1,5 @@
+bg.constrain=constrain
 bg.sd_write2=SD write
-
 bg.sd_write=SD flash write
 bg.sd_write_number=SD write number
 bg.sd_write_number_int=SD write number Int

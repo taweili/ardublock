@@ -531,6 +531,27 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="constrain" kind="function" color="36 133 237"
+			initlabel="bg.constrain">
+			<description>
+				<text>Constrain a number between two values</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.value" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.low">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.high">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
         <!--****************** Logical Operators ***************-->
         <!--****************** Logical Operators ***************-->
         <!--****************** Logical Operators ***************-->
@@ -3412,11 +3433,11 @@
 				<BlockGenusMember>cos</BlockGenusMember>
 				<BlockGenusMember>tan</BlockGenusMember>
 			    <BlockGenusMember>random</BlockGenusMember>
-				
 				<BlockGenusMember>min</BlockGenusMember>
 				<BlockGenusMember>max</BlockGenusMember>
 				<BlockGenusMember>map_common</BlockGenusMember>
 				<BlockGenusMember>map</BlockGenusMember>
+				<BlockGenusMember>constrain</BlockGenusMember>
 	
 			</BlockDrawer>
             <BlockDrawer button-color="255 163 82" name="bd.logic"

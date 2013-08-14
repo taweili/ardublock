@@ -6,6 +6,7 @@ sd_write_number=com.ardublock.translator.block.storage.SDWriteNumberBlock
 sd_write_number_int=com.ardublock.translator.block.storage.SDWriteNumberIntBlock
 sd_return=com.ardublock.translator.block.storage.SDPortBlock
 sd_no_return=com.ardublock.translator.block.storage.SDPortBlock
+sd_write2=com.ardublock.translator.block.storage.SDWrite2Block
 
 
 variable_poly=com.ardublock.translator.block.VariablePolyBlock

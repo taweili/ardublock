@@ -531,6 +531,27 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="constrain" kind="function" color="36 133 237"
+			initlabel="bg.constrain">
+			<description>
+				<text>Constrain a number between two values</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="number"
+					connector-kind="plug" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.value" />
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.low">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.high">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
         <!--****************** Logical Operators ***************-->
         <!--****************** Logical Operators ***************-->
         <!--****************** Logical Operators ***************-->
@@ -3365,10 +3386,10 @@
 			<FamilyMember>Tinker_O4</FamilyMember>
 			<FamilyMember>Tinker_O5</FamilyMember>
 		</BlockFamily>
-		<BlockFamily>
-			<FamilyMember>sd_return</FamilyMember>
-			<FamilyMember>sd_no_return</FamilyMember>
-		</BlockFamily>
+<!--		<BlockFamily>-->
+<!--			<FamilyMember>sd_return</FamilyMember>-->
+<!--			<FamilyMember>sd_no_return</FamilyMember>-->
+<!--		</BlockFamily>-->
 	</BlockFamilies>
 
 	<BlockDrawerSets>
