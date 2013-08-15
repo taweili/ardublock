@@ -1,4 +1,6 @@
 bg.constrain=constrain
+bc.low=lower
+bc.high=higher
 bg.sd_write2=SD write
 bg.sd_write=SD flash write
 bg.sd_write_number=SD write number

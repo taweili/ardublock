@@ -16,10 +16,16 @@ public class AnalogInputBlock extends TranslatorBlock
 	{
 		String ret = "analogRead(";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		ret = ret + translatorBlock.toCode();
-		ret = ret + ")";
-		return codePrefix + ret + codeSuffix;
-	
+		if (translatorBlock instanceof NumberBlock)
+		{
+			ret = ret + translatorBlock.toCode();
+			ret = ret + ")";
+			return codePrefix + ret + codeSuffix;
+		}
+		else
+		{
+			throw new BlockException(blockId, "analog pin# must be a number");
+		}
 	}
 
 }
