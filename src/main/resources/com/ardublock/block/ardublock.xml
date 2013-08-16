@@ -44,9 +44,9 @@
 			shape-number="17" />
 	</BlockConnectorShapes>
 	<BlockGenuses>
-		<!--*****************************************************************
-		****************** NEW BLOCKS - Daniel Girardi **********************
-	    ******************************************************************-->
+
+	    <!-- ******************** Controls Menu *************** -->
+	    <!-- ******************** Controls Menu *************** -->
 	    <!-- ******************** Controls Menu *************** -->
 	    <BlockGenus name="loop2" kind="command" color="155 255 0"
 			initlabel="bg.loop2" is-starter="yes" is-terminator="yes"
@@ -344,89 +344,12 @@
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="create_variable_vector" kind="command"
-			color="208 10 16" initlabel="bg.create_variable_vector">
-			<description>
-				<text>create a vector of numbers</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_fake" label="var name" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.vecsize">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="setter_variable_vector" kind="command"
-			color="208 10 16" initlabel="bg.setter_variable_vector">
-			<description>
-				<text>Set a vector number</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_fake" label="var fake" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.position">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.value">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		<!--*****************************************************************
-		********* END ************************************************
-	    ***************************************-->
-		<!--************************************************************* Number *******************************************************-->
-
-		<!-- Number -->
-		<BlockGenus name="number" kind="data" color="208 10 16"
-			initlabel="bg.number" editable-label="yes">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="digital-high" kind="data" color="208 10 16"
-			initlabel="bg.digital-high">
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="digital-low" kind="data" color="208 10 16"
-			initlabel="bg.digital-low">
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="digital-on" kind="data" color="208 10 16"
-			initlabel="bg.digital-on">
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="digital-off" kind="data" color="208 10 16"
-			initlabel="bg.digital-off">
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean"
-					connector-kind="plug" position-type="mirror" />
+				<BlockConnector label="" connector-kind="plug"
+					connector-type="number" position-type="mirror" />
+				<BlockConnector label="" connector-kind="socket"
+					connector-type="number" position-type="bottom" />
+				<BlockConnector label="" connector-kind="socket"
+					connector-type="number" position-type="bottom" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -1305,6 +1228,9 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+
+		<!-- ******************** Storage *************** -->
+		<!-- ******************** Storage *************** -->
 		<!-- ******************** Storage *************** -->
 
 		<BlockGenus name="eeprom_read" kind="data" color="0 100 90"
@@ -1321,7 +1247,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
 		<BlockGenus name="eeprom_write" kind="command" color="0 100 90"
 			initlabel="bg.eeprom_write">
 			<description>
@@ -1479,127 +1405,10 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="watchdog_setup" kind="command" color="80 36 36"
-			initlabel="bg.watchdog_setup">
-			<description>
-				<text>Watchdog Setup</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean"
-					connector-kind="socket" label="bc.watchdog_enable">
-					<DefaultArg genus-name="digital-high" label="HIGH" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="Time">
-					<DefaultArg genus-name="watchdog_60ms" label="WDTO_60MS" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
 
-		<BlockGenus name="watchdog_reset" kind="command" color="80 36 36"
-			initlabel="bg.watchdog_reset">
-			<description>
-				<text>Watchdog reset</text>
-			</description>
-		</BlockGenus>
-
-		<BlockGenus name="watchdog_15ms" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_15ms" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_30ms" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_30ms" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_60ms" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_60ms" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_120ms" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_120ms" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_250ms" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_250ms" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_500ms" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_500ms" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_1s" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_1s" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_2s" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_2s" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_4s" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_4s" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="watchdog_8s" kind="data" color="255 255 0"
-			initlabel="bg.watchdog_8s" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-
-		<!--************************************************************* Communication *******************************************************-->
-
-		<BlockGenus name="serial_read" kind="data" color="200 200 200"
-			initlabel="bg.serial_read" editable-label="yes">
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="serial_println" kind="command" color="200 200 200"
-			initlabel="bg.serial_println">
-			<description>
-				<text>send message via Serial port</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="string"
-					connector-kind="socket" label="Return">
-					<DefaultArg genus-name="sd_return" label="Return" />
-				</BlockConnector>
-				<BlockConnector connector-type="string"
-					connector-kind="socket">
-					<DefaultArg genus-name="message" label="message" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
+		<!-- ******************** Unused/Obsoletes *************** -->
+		<!-- ******************** Unused/Obsoletes *************** -->
+		<!-- ******************** Unused/Obsoletes *************** -->
 
 		<BlockGenus name="glue_msg" kind="data" color="245 245 245"
 			initlabel="bg.glue_msg" editable-label="yes">
@@ -1625,23 +1434,6 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="plug" position-type="mirror" />
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="wire_write_one_byte" kind="command" color="200 200 200"
-			initlabel="bg.wire_write_one_byte">
-			<description>
-				<text>write data via I2C</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.device_address">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.register_address">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -1674,62 +1466,8 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="sd_write_number" kind="command" color="0 100 90"
-			initlabel="bg.sd_write_number">
-			<description>
-				<text>Write to SD card</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="string"
-					connector-kind="socket" label="File">
-					<DefaultArg genus-name="message" label="file.txt" />
-				</BlockConnector>
-				<BlockConnector connector-type="string"
-					connector-kind="socket" label="Return">
-					<DefaultArg genus-name="sd_return" label="Return" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="Number">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="sd_write_number_int" kind="command" color="0 100 90"
-			initlabel="bg.sd_write_number_int">
-			<description>
-				<text>Write number to SD card</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="string"
-					connector-kind="socket" label="File">
-					<DefaultArg genus-name="message" label="file.txt" />
-				</BlockConnector>
-				<BlockConnector connector-type="string"
-					connector-kind="socket" label="Return">
-					<DefaultArg genus-name="sd_return" label="Return" />
-				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="Number">
-					<DefaultArg genus-name="number" label="0" />
-				</BlockConnector>
-			</BlockConnectors>
-		</BlockGenus>
 
-		<BlockGenus name="sd_return" kind="data" color="255 255 0"
-			initlabel="bg.sd_return" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="string"
-					connector-kind="plug" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="sd_no_return" kind="data" color="255 255 0"
-			initlabel="bg.sd_no_return" editable-label="no">
-			<BlockConnectors>
-				<BlockConnector connector-type="string"
-					connector-kind="plug" />
-			</BlockConnectors>
-		</BlockGenus>
+
 
 		<!--************************************************************** TinkerKit! **********************************************************************-->
 		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255"
@@ -3624,18 +3362,6 @@
 			<FamilyMember>digital-off</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
-			<FamilyMember>watchdog_15ms</FamilyMember>
-			<FamilyMember>watchdog_30ms</FamilyMember>
-			<FamilyMember>watchdog_60ms</FamilyMember>
-			<FamilyMember>watchdog_120ms</FamilyMember>
-			<FamilyMember>watchdog_250ms</FamilyMember>
-			<FamilyMember>watchdog_500ms</FamilyMember>
-			<FamilyMember>watchdog_1s</FamilyMember>
-			<FamilyMember>watchdog_2s</FamilyMember>
-			<FamilyMember>watchdog_4s</FamilyMember>
-			<FamilyMember>watchdog_8s</FamilyMember>
-		</BlockFamily>
-		<BlockFamily>
 			<FamilyMember>df_joystick_module_x</FamilyMember>
 			<FamilyMember>df_joystick_module_y</FamilyMember>
 		</BlockFamily>
@@ -3660,17 +3386,10 @@
 			<FamilyMember>Tinker_O4</FamilyMember>
 			<FamilyMember>Tinker_O5</FamilyMember>
 		</BlockFamily>
-<<<<<<< HEAD
-		<BlockFamily>
-				<FamilyMember>sd_return</FamilyMember>
-				<FamilyMember>sd_no_return</FamilyMember>
-		</BlockFamily>
-=======
 <!--		<BlockFamily>-->
 <!--			<FamilyMember>sd_return</FamilyMember>-->
 <!--			<FamilyMember>sd_no_return</FamilyMember>-->
 <!--		</BlockFamily>-->
->>>>>>> danielfsc/master
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -3697,29 +3416,7 @@
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
-				<BlockGenusMember>servo</BlockGenusMember>
-				<BlockGenusMember>ultrasonic</BlockGenusMember>
-				<BlockGenusMember>tone</BlockGenusMember>
-				<BlockGenusMember>tone_time</BlockGenusMember>
-				<BlockGenusMember>no_tone</BlockGenusMember>
 			</BlockDrawer>
-
-			<BlockDrawer button-color="182 85 52" name="bd.number"
-				type="factory">
-				<BlockGenusMember>number</BlockGenusMember>
-				<BlockGenusMember>digital-high</BlockGenusMember>
-				<BlockGenusMember>digital-low</BlockGenusMember>
-				<BlockGenusMember>true</BlockGenusMember>
-				<BlockGenusMember>false</BlockGenusMember>
-				<BlockGenusMember>variable_number</BlockGenusMember>
-				<BlockGenusMember>variable_digital</BlockGenusMember>
-				<BlockGenusMember>setter_variable_number</BlockGenusMember>
-				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
-				<BlockGenusMember>message</BlockGenusMember>
-				<BlockGenusMember>glue_sn</BlockGenusMember>
-				<BlockGenusMember>glue_sb</BlockGenusMember>
-			</BlockDrawer>
-			
             <BlockDrawer button-color="79 85 255" name="bd.operators"
 				type="factory">
 
@@ -3762,16 +3459,7 @@
 
 			</BlockDrawer>
 
-			<BlockDrawer button-color="0 50 45" name="bd.storage"
-				type="factory">
-				<BlockGenusMember>eeprom_read</BlockGenusMember>
-				<BlockGenusMember>eeprom_write</BlockGenusMember>
-				<BlockGenusMember>sd_write</BlockGenusMember>
-				<BlockGenusMember>sd_write_number</BlockGenusMember>
-				<BlockGenusMember>sd_write_number_int</BlockGenusMember>
-			</BlockDrawer>
-			
-			<BlockDrawer button-color="60 16 16" name="bd.utilities"
+			<BlockDrawer button-color="230 69 69" name="bd.number"
 				type="factory">
 				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
@@ -3789,6 +3477,10 @@
 				<BlockGenusMember>setter_variable_char</BlockGenusMember>
 				<BlockGenusMember>variable_poly</BlockGenusMember>
 				<BlockGenusMember>char</BlockGenusMember>
+			</BlockDrawer>
+			
+			<BlockDrawer button-color="138 0 184" name="bd.utilities"
+				type="factory">
 				<BlockGenusMember>servo</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 				<BlockGenusMember>tone</BlockGenusMember>
@@ -3809,13 +3501,8 @@
 				<BlockGenusMember>glue_sb</BlockGenusMember>
 				<BlockGenusMember>glue_poly</BlockGenusMember>
 				<BlockGenusMember>wire_write</BlockGenusMember>
-				<BlockGenusMember>wire_write_one_byte</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
-				<BlockGenusMember>map_common</BlockGenusMember>
-				<BlockGenusMember>map</BlockGenusMember>
-				<BlockGenusMember>watchdog_setup</BlockGenusMember>
-				<BlockGenusMember>watchdog_reset</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 50 45" name="bd.storage"
 				type="factory">
@@ -3938,7 +3625,10 @@
 				<BlockGenusMember>ls_TiltModule</BlockGenusMember>
 				<BlockGenusMember>ls_TouchSensorModule</BlockGenusMember>	
 			</BlockDrawer>
-
+			
+			
+			
+			
 			<!-- <BlockDrawer button-color="0 255 0" name="XinChejian" type="factory"> 
 				<BlockGenusMember>xcj_motor_forward</BlockGenusMember> <BlockGenusMember>xcj_motor_backward</BlockGenusMember> 
 				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember> <BlockGenusMember>xcj_ms_digital_write</BlockGenusMember> 
@@ -3952,6 +3642,8 @@
 
 	<Pages drawer-with-page="yes">
 		<Page page-name="ArduBlock" page-width="400" />
+		<!-- <Page page-name="Everyone" page-width="400"></Page> <Page page-name="Setup" 
+			page-width="400"></Page> <Page page-name="Runtime" page-width="400"></Page> -->
 	</Pages>
 
 	<TrashCan>
