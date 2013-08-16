@@ -48,7 +48,7 @@
 	    <!-- ******************** Controls Menu *************** -->
 	    <!-- ******************** Controls Menu *************** -->
 	    <!-- ******************** Controls Menu *************** -->
-	    <BlockGenus name="loop2" kind="command" color="155 255 0"
+	    <BlockGenus name="loop2" kind="command" color="255 221 0"
 			initlabel="bg.loop2" is-starter="yes" is-terminator="yes"
 			label-unique="yes">
 			<description>
@@ -61,7 +61,7 @@
 					label="bc.loop2" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="loop" kind="command" color="155 255 0"
+		<BlockGenus name="loop" kind="command" color="255 221 0"
 			initlabel="bg.loop" is-starter="yes" is-terminator="yes"
 			label-unique="yes">
 			<description>
@@ -224,7 +224,7 @@
         <!--****************** Pins ***************-->
         <!--****************** Pins ***************-->
 
-		<BlockGenus name="pin-read-digital" kind="data" color="31 191 13"
+		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169"
 			initlabel="bg.pin-read-digital">
 			<description>
 			</description>
@@ -237,7 +237,7 @@
 					connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="pin-read-analog" kind="data" color="31 191 13"
+		<BlockGenus name="pin-read-analog" kind="data" color="77 191 169"
 			initlabel="bg.pin-read-analog">
 			<description>
 				<text>Read analog value from pin</text>
@@ -251,7 +251,7 @@
 					connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="pin-write-digital" kind="command" color="31 191 13"
+		<BlockGenus name="pin-write-digital" kind="command" color="77 191 169"
 			initlabel="bg.pin-write-digital">
 			<description>
 				<text>write digital to pin</text>
@@ -268,7 +268,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="pin-write-analog" kind="command" color="31 191 13"
+		<BlockGenus name="pin-write-analog" kind="command" color="77 191 169"
 			initlabel="bg.pin-write-analog">
 			<description>
 				<text>write analog to pin</text>
@@ -285,13 +285,10 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-
-        <!--****************** Mathematical Operators ***************-->
-        <!--****************** Mathematical Operators ***************-->
         <!--****************** Mathematical Operators ***************-->
 
 		<BlockGenus name="addition" kind="function" initlabel="bg.addition"
-			color="36 133 237">
+			color="149 193 31">
 			<description>
 				<text>
 					Reports the sum of two numbers (
@@ -312,7 +309,7 @@
 		</BlockGenus>
 
 		<BlockGenus name="subtraction" kind="function" initlabel="bg.subtraction"
-			color="36 133 237">
+			color="149 193 31">
 			<description>
 				<text>
 					Reports the difference of two numbers (
@@ -333,7 +330,7 @@
 		</BlockGenus>
 
 		<BlockGenus name="multiplication" kind="function"
-			initlabel="bg.multiplication" color="36 133 237">
+			initlabel="bg.multiplication" color="149 193 31">
 			<description>
 				<text>
 					Reports the product of two numbers (
@@ -354,7 +351,7 @@
 		</BlockGenus>
 
 		<BlockGenus name="division" kind="function" initlabel="bg.division"
-			color="36 133 237">
+			color="149 193 31">
 			<description>
 				<text>
 					Reports the quotient of two numbers (
@@ -374,7 +371,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="modulo" kind="function" color="36 133 237"
+		<BlockGenus name="modulo" kind="function" color="149 193 31"
 			initlabel="bg.modulo">
 			<BlockConnectors>
 				<BlockConnector label="" connector-kind="plug"
@@ -386,7 +383,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="abs" kind="function" color="36 133 237"
+		<BlockGenus name="abs" kind="function" color="149 193 31"
 			initlabel="bg.abs">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -396,7 +393,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="pow" kind="function" color="36 133 237"
+		<BlockGenus name="pow" kind="function" color="149 193 31"
 			initlabel="bg.pow">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -408,7 +405,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="sqrt" kind="function" color="36 133 237"
+		<BlockGenus name="sqrt" kind="function" color="149 193 31"
 			initlabel="bg.sqrt">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -418,7 +415,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="sin" kind="function" color="36 133 237"
+		<BlockGenus name="sin" kind="function" color="149 193 31"
 			initlabel="bg.sin">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -428,7 +425,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="cos" kind="function" color="36 133 237"
+		<BlockGenus name="cos" kind="function" color="149 193 31"
 			initlabel="bg.cos">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -438,7 +435,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="tan" kind="function" color="36 133 237"
+		<BlockGenus name="tan" kind="function" color="149 193 31"
 			initlabel="bg.tan">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -448,7 +445,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="random" kind="data" color="36 133 237"
+		<BlockGenus name="random" kind="data" color="149 193 31"
 			initlabel="bg.random">
 			<description>
 				<text>generate a random number less than the number</text>
@@ -463,7 +460,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="min" kind="function" color="36 133 237"
+		<BlockGenus name="min" kind="function" color="149 193 31"
 			initlabel="bg.min">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -475,7 +472,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="max" kind="function" color="36 133 237"
+		<BlockGenus name="max" kind="function" color="149 193 31"
 			initlabel="bg.max">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -487,7 +484,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="map_common" kind="data" color="36 133 237"
+		<BlockGenus name="map_common" kind="data" color="149 193 31"
 			initlabel="bg.map_common">
 			<description>
 				<text>map value from [0, 1023] to [0, 255]</text>
@@ -502,7 +499,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="map" kind="function" color="36 133 237"
+		<BlockGenus name="map" kind="function" color="149 193 31"
 			initlabel="bg.map">
 			<description>
 				<text>map</text>
@@ -531,7 +528,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="constrain" kind="function" color="36 133 237"
+		<BlockGenus name="constrain" kind="function" color="149 193 31"
 			initlabel="bg.constrain">
 			<description>
 				<text>Constrain a number between two values</text>
@@ -979,10 +976,8 @@
 		</BlockGenus>
 
         <!--****************** Utilities ***************-->
-        <!--****************** Utilities ***************-->
-        <!--****************** Utilities ***************-->
 
-		<BlockGenus name="servo" kind="command" color="153 0 204"
+		<BlockGenus name="servo" kind="command" color="95 120 132"
 			initlabel="bg.servo">
 			<description>
 				<text>set a pin to pwm</text>
@@ -999,7 +994,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="ultrasonic" kind="data" color="153 0 204"
+		<BlockGenus name="ultrasonic" kind="data" color="95 120 132"
 			initlabel="bg.ultrasonic">
 			<description>
 				<text>Ultrasonic distance sensor</text>
@@ -1023,7 +1018,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="tone" kind="command" color="153 0 204"
+		<BlockGenus name="tone" kind="command" color="95 120 132"
 			initlabel="tone">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50%
@@ -1043,7 +1038,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="tone_time" kind="command" color="153 0 204"
+		<BlockGenus name="tone_time" kind="command" color="95 120 132"
 			initlabel="tone">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50%
@@ -1066,7 +1061,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="no_tone" kind="command" color="153 0 204"
+		<BlockGenus name="no_tone" kind="command" color="95 120 132"
 			initlabel="noTone">
 			<description>
 				<text>Stops the generation of a square wave triggered by tone().
@@ -1080,8 +1075,6 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<!-- ******************** Communication *************** -->
-		<!-- ******************** Communication *************** -->
 		<!-- ******************** Communication *************** -->
 
 		<BlockGenus name="serial_read" kind="data" color="245 245 245"
@@ -1470,7 +1463,7 @@
 
 
 		<!--************************************************************** TinkerKit! **********************************************************************-->
-		<BlockGenus name="Tinker_LED" kind="command" color="255 255 255"
+		<BlockGenus name="Tinker_LED" kind="command" color="13 152 164"
 			initlabel="bg.Tinker_LED">
 			<description>
 				<text>TinkerKit LED</text>
@@ -1492,7 +1485,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_LED_pwm" kind="command" color="255 255 255"
+		<BlockGenus name="Tinker_LED_pwm" kind="command" color="13 152 164"
 			initlabel="bg.Tinker_LED_pwm">
 			<description>
 				<text>TinkerKit LED</text>
@@ -1514,7 +1507,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Mosfet" kind="command" color="255 255 255"
+		<BlockGenus name="Tinker_Mosfet" kind="command" color="13 152 164"
 			initlabel="bg.Tinker_Mosfet">
 			<description>
 				<text>TinkerKit Mosfet</text>
@@ -1536,7 +1529,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Mosfet_pwm" kind="command" color="255 255 255"
+		<BlockGenus name="Tinker_Mosfet_pwm" kind="command" color="13 152 164"
 			initlabel="bg.Tinker_Mosfet_pwm">
 			<description>
 				<text>TinkerKit Mosfet</text>
@@ -1558,7 +1551,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Relay" kind="command" color="255 255 255"
+		<BlockGenus name="Tinker_Relay" kind="command" color="13 152 164"
 			initlabel="bg.Tinker_Relay">
 			<description>
 				<text>TinkerKit Relay</text>
@@ -1580,7 +1573,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255"
+		<BlockGenus name="Tinker_Servo" kind="command" color="13 152 164"
 			initlabel="bg.Tinker_Servo">
 			<description>
 				<text>TinkerKit Servo</text>
@@ -1602,7 +1595,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Button" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_Button" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_Button">
 			<description>
 				<text>TinkerKit Button</text>
@@ -1622,7 +1615,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Accmeter" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_Accmeter" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_Accmeter">
 			<description>
 				<text>TinkerKit Accelerometer</text>
@@ -1642,7 +1635,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Hall" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_Hall" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_Hall">
 			<description>
 				<text>TinkerKit Hall Sensor</text>
@@ -1662,7 +1655,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_LDR" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_LDR" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_LDR">
 			<description>
 				<text>TinkerKit LDR</text>
@@ -1683,7 +1676,7 @@
 		</BlockGenus>
 
 		<BlockGenus name="Tinker_LinearPotentiometer" kind="data"
-			color="255 255 255" initlabel="bg.Tinker_LinearPotentiometer">
+			color="13 152 164" initlabel="bg.Tinker_LinearPotentiometer">
 			<description>
 				<text>TinkerKit Accelerometer</text>
 			</description>
@@ -1703,7 +1696,7 @@
 		</BlockGenus>
 
 		<BlockGenus name="Tinker_RotaryPotentiometer" kind="data"
-			color="255 255 255" initlabel="bg.Tinker_RotaryPotentiometer">
+			color="13 152 164" initlabel="bg.Tinker_RotaryPotentiometer">
 			<description>
 				<text>TinkerKit RotaryPotentiometer</text>
 			</description>
@@ -1722,7 +1715,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Thermistor" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_Thermistor" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_Thermistor">
 			<description>
 				<text>TinkerKit Thermistor</text>
@@ -1742,7 +1735,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Touch" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_Touch" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_Touch">
 			<description>
 				<text>TinkerKit Touch Sensor</text>
@@ -1762,7 +1755,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_Servo" kind="command" color="255 255 255"
+		<BlockGenus name="Tinker_Servo" kind="command" color="13 152 164"
 			initlabel="bg.Tinker_Servo">
 			<description>
 				<text>TinkerKit Servo</text>
@@ -1785,7 +1778,7 @@
 		</BlockGenus>
 
 
-		<BlockGenus name="Tinker_Tilt" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_Tilt" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_Tilt">
 			<description>
 				<text>TinkerKit Tilt</text>
@@ -1805,42 +1798,42 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Tinker_I0" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_I0" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_I0" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="Tinker_I1" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_I1" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_I1" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="Tinker_I2" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_I2" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_I2" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="Tinker_I3" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_I3" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_I3" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="Tinker_I4" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_I4" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_I4" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
 					connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="Tinker_I5" kind="data" color="255 255 255"
+		<BlockGenus name="Tinker_I5" kind="data" color="13 152 164"
 			initlabel="bg.Tinker_I5" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
@@ -3399,7 +3392,6 @@
 				button-color="255 255 0">
 				<BlockGenusMember>loop2</BlockGenusMember>
 				<BlockGenusMember>loop</BlockGenusMember>
-				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
@@ -3408,16 +3400,17 @@
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
+				<BlockGenusMember>delay</BlockGenusMember>
 			</BlockDrawer>
             
-			<BlockDrawer button-color="56 209 36" name="bd.pins"
+			<BlockDrawer button-color="29 152 155" name="bd.pins"
 				type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 			</BlockDrawer>
-            <BlockDrawer button-color="79 85 255" name="bd.operators"
+            <BlockDrawer button-color="114 147 71" name="bd.operators"
 				type="factory">
 
 				<BlockGenusMember>addition</BlockGenusMember>
@@ -3455,8 +3448,6 @@
 				<BlockGenusMember>not</BlockGenusMember>
 				<BlockGenusMember>equal_poly</BlockGenusMember>
 				<BlockGenusMember>not_equal_poly</BlockGenusMember>
-				
-
 			</BlockDrawer>
 
 			<BlockDrawer button-color="230 69 69" name="bd.number"
@@ -3479,15 +3470,16 @@
 				<BlockGenusMember>char</BlockGenusMember>
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="138 0 184" name="bd.utilities"
+			<BlockDrawer button-color="95 120 132" name="bd.utilities"
 				type="factory">
-				<BlockGenusMember>servo</BlockGenusMember>
-				<BlockGenusMember>ultrasonic</BlockGenusMember>
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
-				
+				<BlockGenusMember>servo</BlockGenusMember>
+				<BlockGenusMember>ultrasonic</BlockGenusMember>
 			</BlockDrawer>
+			
+			
 			
 			<BlockDrawer button-color="255 255 255" name="bd.communication"
 				type="factory">
@@ -3495,7 +3487,7 @@
 				<BlockGenusMember>serial_read_poly</BlockGenusMember>
 				<BlockGenusMember>serial_available</BlockGenusMember>
 				<BlockGenusMember>serial_print</BlockGenusMember>
-<!--				<BlockGenusMember>serial_println</BlockGenusMember>-->
+				<BlockGenusMember>serial_println</BlockGenusMember>
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
@@ -3531,7 +3523,7 @@
 			</BlockDrawer>
 			
 			
-			<BlockDrawer button-color="255 255 255" name="bd.tinkerkit"
+			<BlockDrawer button-color="13 152 164" name="bd.tinkerkit"
 				type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 				<BlockGenusMember>Tinker_LED_pwm</BlockGenusMember>
