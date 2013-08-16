@@ -3610,10 +3610,7 @@
 				<BlockGenusMember>ls_TiltModule</BlockGenusMember>
 				<BlockGenusMember>ls_TouchSensorModule</BlockGenusMember>	
 			</BlockDrawer>
-			
-			
-			
-			
+
 			<!-- <BlockDrawer button-color="0 255 0" name="XinChejian" type="factory"> 
 				<BlockGenusMember>xcj_motor_forward</BlockGenusMember> <BlockGenusMember>xcj_motor_backward</BlockGenusMember> 
 				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember> <BlockGenusMember>xcj_ms_digital_write</BlockGenusMember> 
@@ -3626,9 +3623,7 @@
 	</BlockDrawerSets>
 
 	<Pages drawer-with-page="yes">
-		<Page page-name="ArduBlock" page-width="400" />
-		<!-- <Page page-name="Everyone" page-width="400"></Page> <Page page-name="Setup" 
-			page-width="400"></Page> <Page page-name="Runtime" page-width="400"></Page> -->
+		<Page page-name="Main" page-width="400" />
 	</Pages>
 
 	<TrashCan>
