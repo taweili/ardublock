@@ -156,17 +156,16 @@
 		<BlockGenus name="repeat_times" kind="command" color="255 221 0"
 			initlabel="bg.repeat_times">
 			<description>
-				<text>repeat</text>
+				<text>Repeat the commands for "times"</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number"
-					connector-kind="socket">
+					connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
 				<BlockConnector connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-
 
 		<BlockGenus name="repeat" kind="command" color="255 221 0"
 			initlabel="bg.repeat">
@@ -213,8 +212,6 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-        <!--****************** Pins ***************-->
-        <!--****************** Pins ***************-->
         <!--****************** Pins ***************-->
 
 		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169"
