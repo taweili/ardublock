@@ -31,7 +31,7 @@ public class SerialPrintlnBlock extends TranslatorBlock
 
 		}			
 		
-		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1, text , " );\n");
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0, text , " );\n");
 		
 		String ret = translatorBlock.toCode();
 
