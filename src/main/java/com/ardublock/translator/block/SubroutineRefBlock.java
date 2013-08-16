@@ -20,7 +20,7 @@ public class SubroutineRefBlock extends TranslatorBlock
 		{
 			throw new SubroutineNotDeclaredException(blockId);
 		}
-		return subroutineName + "();\n";
+		return "\t"+subroutineName + "();\n";
 	}
 
 }
