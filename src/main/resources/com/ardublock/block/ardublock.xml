@@ -88,13 +88,11 @@
 					<arg n="2" />
 				</text>
 				<arg-description n="1" name="test">
-					The condition being
-					tested.
+					The condition being	tested.
 				</arg-description>
 
 				<arg-description n="2" name="then">
-					The set of instructions
-					that is done when the condition is true.
+					The set of instructions	that is done when the condition is true.
 				</arg-description>
 			</description>
 			<BlockConnectors>
@@ -109,23 +107,18 @@
 			color="255 221 0">
 			<description>
 				<text>
-					Does the first set of commands if the condition specified is
-					true,
-					otherwise it will do the second set of commands.
+					Does the first set of commands if the condition specified is true, otherwise it will do the second set of commands.
 				</text>
 				<arg-description n="1" name="test">
-					The condition being
-					tested.
+					The condition being	tested.
 				</arg-description>
 
 				<arg-description n="2" name="then">
-					The set of instructions
-					that is done when the condition is true.
+					The set of instructions	that is done when the condition is true.
 				</arg-description>
 
 				<arg-description n="3" name="else">
-					The set of instructions
-					that is done when the condition is false.
+					The set of instructions	that is done when the condition is false.
 				</arg-description>
 			</description>
 			<BlockConnectors>
