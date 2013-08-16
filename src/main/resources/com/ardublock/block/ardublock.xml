@@ -8,14 +8,10 @@
 <BlockLangDef>
 
 	<BlockConnectorShapes>
-		<BlockConnectorShape shape-type="number"
-			shape-number="1" />
-		<BlockConnectorShape shape-type="number-list"
-			shape-number="2" />
-		<BlockConnectorShape shape-type="number-inv"
-			shape-number="3" />
-		<BlockConnectorShape shape-type="boolean"
-			shape-number="4" />
+		<BlockConnectorShape shape-type="number" shape-number="1" />
+		<BlockConnectorShape shape-type="number-list" shape-number="2" />
+		<BlockConnectorShape shape-type="number-inv" shape-number="3" />
+		<BlockConnectorShape shape-type="boolean" shape-number="4" />
 		<BlockConnectorShape shape-type="boolean-list"
 			shape-number="5" />
 		<BlockConnectorShape shape-type="boolean-inv"
@@ -44,9 +40,6 @@
 			shape-number="17" />
 	</BlockConnectorShapes>
 	<BlockGenuses>
-
-	    <!-- ******************** Controls Menu *************** -->
-	    <!-- ******************** Controls Menu *************** -->
 	    <!-- ******************** Controls Menu *************** -->
 	    <BlockGenus name="loop2" kind="command" color="255 221 0"
 			initlabel="bg.loop2" is-starter="yes" is-terminator="yes"
