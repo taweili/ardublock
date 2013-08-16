@@ -17,6 +17,6 @@ public class SerialReadBlock extends TranslatorBlock
 		
 		String ret = "Serial.parseInt()";
 		
-		return ret;
+		return codePrefix+ret+codeSuffix;
 	}
 }

@@ -17,6 +17,6 @@ public class SerialReadPolyBlock extends TranslatorBlock
 		
 		String ret = "Serial.read()";
 		
-		return ret;
+		return codePrefix+ret+codeSuffix;
 	}
 }
