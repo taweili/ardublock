@@ -13,7 +13,7 @@ public class SerialReadPolyBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		translator.addSetupCommand("Serial.begin(9600);");
+		translator.addSetupCommand("\tSerial.begin(9600);");
 		
 		String ret = "Serial.read()";
 		
