@@ -1,14 +1,20 @@
 package com.ardublock.ui;
 
+import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ResourceBundle;
 
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -103,13 +109,36 @@ public class OpenblocksFrame extends JFrame
 		openButton.addActionListener(new OpenButtonListener(this));
 		JButton generateButton = new JButton(uiMessageBundle.getString("ardublock.ui.upload"));
 		generateButton.addActionListener(new GenerateCodeButtonListener(this, context));
-		
+
 
 		buttons.add(saveButton);
 		buttons.add(openButton);
 		buttons.add(generateButton);
+
+		JPanel bottomPanel = new JPanel();
+		JButton websiteButton = new JButton(uiMessageBundle.getString("ardublock.ui.website"));
+		websiteButton.addActionListener(new ActionListener () {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			    Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+			    URL url;
+			    if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+			        try {
+						url = new URL("http://ardublock.com");
+			            desktop.browse(url.toURI());
+			        } catch (Exception e1) {
+			            e1.printStackTrace();
+			        }
+			    }
+			}
+		});
+		JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
+		
+		bottomPanel.add(websiteButton);
+		bottomPanel.add(versionLabel);
 		
 		this.add(buttons, BorderLayout.NORTH);
+		this.add(bottomPanel, BorderLayout.SOUTH);
 		this.add(workspace, BorderLayout.CENTER);
 	}
 	
