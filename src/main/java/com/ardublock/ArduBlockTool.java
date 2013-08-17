@@ -79,6 +79,7 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 				InputStream is = new FileInputStream(versionFile);
 				BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 				String line = reader.readLine();
+				reader.close();
 				if (line == null)
 				{
 					return Context.ARDUINO_VERSION_UNKNOWN;

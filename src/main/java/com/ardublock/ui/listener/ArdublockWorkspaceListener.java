@@ -1,7 +1,5 @@
 package com.ardublock.ui.listener;
 
-import javax.swing.JFrame;
-
 import com.ardublock.core.Context;
 import com.ardublock.ui.OpenblocksFrame;
 
