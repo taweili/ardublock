@@ -96,32 +96,28 @@ public class Context
 		
 		isInArduino = false;
 		
-		//determine OS
+		osType = determineOsType();
+	}
+	
+	//determine OS
+	private OsType determineOsType()
+	{
 		String osName = System.getProperty("os.name");
 		osName = osName.toLowerCase();
+
 		if (osName.contains("win"))
 		{
-			osType = Context.OsType.WINDOWS;
+			return Context.OsType.WINDOWS;
 		}
-		else
+		if (osName.contains("linux"))
 		{
-			if (osName.contains("linux"))
-			{
-				osType = Context.OsType.LINUX;
-			}
-			else
-			{
-				if(osName.contains("mac"))
-				{
-					osType = Context.OsType.MAC;
-				}
-				else
-				{
-					osType = Context.OsType.UNKNOWN;
-				}
-			}
+			return Context.OsType.LINUX;
 		}
-		//
+		if(osName.contains("mac"))
+		{
+			return Context.OsType.MAC;
+		}
+		return Context.OsType.UNKNOWN;
 	}
 	
 	public File getArduinoFile(String name)
@@ -176,6 +172,12 @@ public class Context
 			rb.updateInSearchResults(false);
 		}
 		highlightBlockSet.clear();
+	}
+	
+	public void newArduBlockFile()
+	{
+		workspaceController.resetWorkspace();
+		workspaceChanged = false;
 	}
 
 	
