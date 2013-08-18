@@ -44,6 +44,9 @@ public class Context
 		UNKNOWN,
 	};
 	
+	private String saveFilePath;
+	private String saveFileName;
+	
 	//final public static String VERSION_STRING = " ";
 	
 	public static Context getContext()
@@ -64,9 +67,8 @@ public class Context
 	private WorkspaceController workspaceController;
 	private Workspace workspace;
 	
-	private Context() {
-
-
+	private Context()
+	{
 		workspaceController = new WorkspaceController();
 		resetWorksapce();
 		workspace = workspaceController.getWorkspace();
@@ -103,6 +105,9 @@ public class Context
 		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(LANG_DTD_PATH));
 		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(ARDUBLOCK_LANG_PATH));
 		workspaceController.loadFreshWorkspace();
+		
+		saveFilePath = null;
+		saveFileName = "untitled";
 	}
 	
 	//determine OS
@@ -197,7 +202,8 @@ public class Context
 	{
 		if (savedFile != null)
 		{
-			String saveFilePath = savedFile.getAbsolutePath();
+			saveFilePath = savedFile.getAbsolutePath();
+			saveFileName = savedFile.getName();
 			workspaceController.resetWorkspace();
 			workspaceController.loadProjectFromPath(saveFilePath);
 			didLoad();
@@ -253,5 +259,21 @@ public class Context
 		{
 			ofl.didGenerate(sourcecode);
 		}
+	}
+
+	public String getSaveFileName() {
+		return saveFileName;
+	}
+
+	public void setSaveFileName(String saveFileName) {
+		this.saveFileName = saveFileName;
+	}
+
+	public String getSaveFilePath() {
+		return saveFilePath;
+	}
+
+	public void setSaveFilePath(String saveFilePath) {
+		this.saveFilePath = saveFilePath;
 	}
 }

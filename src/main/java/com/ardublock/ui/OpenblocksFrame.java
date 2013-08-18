@@ -43,8 +43,6 @@ public class OpenblocksFrame extends JFrame
 	private static final long serialVersionUID = 2841155965906223806L;
 
 	private Context context;
-	private String saveFilePath;
-	private String saveFileName;
 	private JFileChooser fileChooser;
 	private FileFilter ffilter;
 	
@@ -57,7 +55,7 @@ public class OpenblocksFrame extends JFrame
 	
 	public String makeFrameTitle()
 	{
-		String title = Context.APP_NAME + " " + saveFileName;
+		String title = Context.APP_NAME + " " + context.getSaveFileName();
 		if (context.isWorkspaceChanged())
 		{
 			title = title + " *";
@@ -68,9 +66,6 @@ public class OpenblocksFrame extends JFrame
 	
 	public OpenblocksFrame()
 	{
-		saveFilePath = null;
-		saveFileName = "untitled";
-		
 		context = Context.getContext();
 		this.setTitle(makeFrameTitle());
 		this.setSize(new Dimension(1024, 860));
@@ -186,8 +181,6 @@ public class OpenblocksFrame extends JFrame
 				return ;
 			}
 			
-			saveFilePath = savedFile.getAbsolutePath();
-			saveFileName = savedFile.getName();
 			try
 			{
 				context.loadArduBlockFile(savedFile);
@@ -210,7 +203,7 @@ public class OpenblocksFrame extends JFrame
 		
 		String saveString = getArduBlockString();
 		
-		if (saveFilePath == null)
+		if (context.getSaveFilePath() == null)
 		{
 			File saveFile = letUserChooseSaveFile();
 			saveFile = checkFileSuffix(saveFile);
@@ -228,7 +221,7 @@ public class OpenblocksFrame extends JFrame
 		}
 		else
 		{
-			File saveFile = new File(saveFilePath);
+			File saveFile = new File(context.getSaveFilePath());
 			writeFileAndUpdateFrame(saveString, saveFile);
 		}
 	}
@@ -274,8 +267,8 @@ public class OpenblocksFrame extends JFrame
 	private void saveArduBlockToFile(String ardublockString, File saveFile) throws IOException
 	{
 		context.saveArduBlockFile(saveFile, ardublockString);
-		saveFilePath = saveFile.getAbsolutePath();
-		saveFileName = saveFile.getName();
+		context.setSaveFileName(saveFile.getName());
+		context.setSaveFilePath(saveFile.getAbsolutePath());
 	}
 	
 	public void doNewArduBlockFile()
