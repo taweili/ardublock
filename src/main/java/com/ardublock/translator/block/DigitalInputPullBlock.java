@@ -7,11 +7,10 @@ import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 public class DigitalInputPullBlock extends DigitalInputBlock
 {
 	public static final String ARDUBLOCK_DIGITAL_READ_INPUT_PULLUP_DEFINE = 
-"boolean __ardublockDigitalRead(int pinNumber)\n" +
+"void __ardublockDigitalInputPullup(int pinNumber)\n" +
 "{\n" +
 "pinMode(pinNumber, INPUT);\n" +
 "digitalWrite(pinNumber, HIGH);\n" +
-"return digitalRead(pinNumber);\n" +
 "}\n" +
 "\n";
 	
@@ -26,20 +25,14 @@ public class DigitalInputPullBlock extends DigitalInputBlock
 		number = translatorBlock.toCode();
 		translator.addInputPin(Long.parseLong(number));
 		translator.addSetupCommand("\tdigitalWrite(" + number + ", HIGH);");
-		String ret = "\tdigitalRead( ";
-		ret = ret + number;
-		ret = ret + ")";
-		return codePrefix + ret + codeSuffix;
+		return "" ;
 	}
 	
 	protected String generateCodeUsingNonNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
 	{
 		translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_READ_INPUT_PULLUP_DEFINE);
-		String ret = "__ardublockDigitalRead(";
-		
-		ret = ret + translatorBlock.toCode();
-		ret = ret + ")";
-		return codePrefix + ret + codeSuffix;
+		translator.addSetupCommand("__ardublockDigitalInputPullup(" + translatorBlock.toCode() + ");");
+		return "";
 	}
 
 	

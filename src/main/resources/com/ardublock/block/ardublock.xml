@@ -182,15 +182,15 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="pin-read-digital-pullup" kind="data" color="77 191 169" initlabel="bg.pin-read-digital-pullup">
+		
+		<BlockGenus name="pin-read-digital-pullup" kind="command" color="77 191 169" initlabel="bg.pin-write-digital">
 			<description>
-				<text>Read digital from the pin</text>
+				<text>write digital to pin</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
 		
