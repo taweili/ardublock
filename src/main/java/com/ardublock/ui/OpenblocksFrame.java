@@ -114,7 +114,6 @@ public class OpenblocksFrame extends JFrame
 		buttons.add(openButton);
 		buttons.add(generateButton);
 
-		JPanel bottomPanel = new JPanel();
 		JButton websiteButton = new JButton(uiMessageBundle.getString("ardublock.ui.website"));
 		websiteButton.addActionListener(new ActionListener () {
 			@Override
@@ -133,11 +132,10 @@ public class OpenblocksFrame extends JFrame
 		});
 		JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
 		
-		bottomPanel.add(websiteButton);
-		bottomPanel.add(versionLabel);
+		buttons.add(websiteButton);
+		buttons.add(versionLabel);
 		
 		this.add(buttons, BorderLayout.NORTH);
-		this.add(bottomPanel, BorderLayout.SOUTH);
 		this.add(workspace, BorderLayout.CENTER);
 	}
 	
