@@ -65,6 +65,23 @@ public class Context
 	private Workspace workspace;
 	
 	private Context() {
+
+
+		workspaceController = new WorkspaceController();
+		resetWorksapce();
+		workspace = workspaceController.getWorkspace();
+		workspaceChanged = false;
+		highlightBlockSet = new HashSet<RenderableBlock>();
+		ofls = new HashSet<OpenblocksFrameListener>();
+		this.workspace = workspaceController.getWorkspace();
+		
+		isInArduino = false;
+		
+		osType = determineOsType();
+	}
+	
+	private void resetWorksapce()
+	{
 		/*
 		 * workspace = new Workspace(); workspace.reset(); workspace.setl
 		 */
@@ -79,8 +96,6 @@ public class Context
 		for (String[] style : styles) {
 			list.add(style);
 		}
-
-		workspaceController = new WorkspaceController();
 		workspaceController.resetWorkspace();
 		workspaceController.resetLanguage();
 		workspaceController.setLangResourceBundle(ResourceBundle.getBundle("com/ardublock/block/ardublock"));
@@ -88,15 +103,6 @@ public class Context
 		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(LANG_DTD_PATH));
 		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(ARDUBLOCK_LANG_PATH));
 		workspaceController.loadFreshWorkspace();
-		workspace = workspaceController.getWorkspace();
-		workspaceChanged = false;
-		highlightBlockSet = new HashSet<RenderableBlock>();
-		ofls = new HashSet<OpenblocksFrameListener>();
-		this.workspace = workspaceController.getWorkspace();
-		
-		isInArduino = false;
-		
-		osType = determineOsType();
 	}
 	
 	//determine OS
