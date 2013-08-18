@@ -2311,6 +2311,249 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		
+				<BlockGenus name="seeed_o2_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_o2_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/o2.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_uv_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_uv_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/uv.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_single_gyro" kind="data" color="0 255 0" initlabel="bg.seeed_single_gyro">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/gyro.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_mq9_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_mq9_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/mq9.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_mp3_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_mp3_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/mq3.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_vib_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_vib_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/vib_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_loud_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_loud_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/loud_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_diff_amp" kind="data" color="0 255 0" initlabel="bg.seeed_diff_amp">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/diff_amp.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_ir_temp_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_ir_temp_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/ir_temp_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_ir_proximity_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_ir_proximity_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/ir_proximity_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_electricity_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_electricity_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/electricity_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_angle_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_angle_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/angle_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_sound_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_sound_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/sound_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_moisture_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_moisture_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/moisture_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="seeed_temp_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_temp_sensor">
+			<description>
+				<text>Read analog value from analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/temp_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<!-- end of seeedStudio -->
 
 		<!--**** linksprite_LinkerKit **** -->
 
@@ -2977,6 +3220,21 @@
 				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
+			    <BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_uv_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_single_gyro</BlockGenusMember>
+				<BlockGenusMember>seeed_mq9_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_mp3_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_vib_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_loud_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_diff_amp</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_proximity_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_electricity_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_angle_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
