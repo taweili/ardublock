@@ -1,5 +1,6 @@
 package com.ardublock.ui;
 
+import java.awt.Component;
 import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
@@ -109,11 +110,11 @@ public class OpenblocksFrame extends JFrame
 		JButton generateButton = new JButton(uiMessageBundle.getString("ardublock.ui.upload"));
 		generateButton.addActionListener(new GenerateCodeButtonListener(this, context));
 
-
 		buttons.add(saveButton);
 		buttons.add(openButton);
 		buttons.add(generateButton);
 
+		JPanel bottomPanel = new JPanel();
 		JButton websiteButton = new JButton(uiMessageBundle.getString("ardublock.ui.website"));
 		websiteButton.addActionListener(new ActionListener () {
 			@Override
@@ -131,11 +132,11 @@ public class OpenblocksFrame extends JFrame
 			}
 		});
 		JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
-		
-		buttons.add(websiteButton);
-		buttons.add(versionLabel);
+		bottomPanel.add(websiteButton);
+		bottomPanel.add(versionLabel);
 		
 		this.add(buttons, BorderLayout.NORTH);
+		this.add(bottomPanel, BorderLayout.SOUTH);
 		this.add(workspace, BorderLayout.CENTER);
 	}
 	
