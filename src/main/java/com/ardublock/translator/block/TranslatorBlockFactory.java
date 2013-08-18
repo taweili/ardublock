@@ -19,6 +19,7 @@ public class TranslatorBlockFactory
 		shortClassName = new HashMap<String, String>();
 		shortClassName.put("analogInput", "com.ardublock.translator.block.AnalogInputBlock");
 		shortClassName.put("digitalInput", "com.ardublock.translator.block.DigitalInputBlock");
+		shortClassName.put("digitalInputPullup","com.ardublock.translator.block.DigitalInputPullBlock");
 		shortClassName.put("analogOutput", "com.ardublock.translator.block.AnalogOutputBlock");
 		shortClassName.put("digitalOutput", "com.ardublock.translator.block.DigitalOutputBlock");
 		shortClassName.put("inversedDigitalInput", "com.ardublock.translator.block.InversedDigitalInputBlock");

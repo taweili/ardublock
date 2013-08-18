@@ -181,6 +181,19 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
+
+		<BlockGenus name="pin-read-digital-pullup" kind="data" color="77 191 169" initlabel="bg.pin-read-digital-pullup">
+			<description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="pin-read-analog" kind="data" color="77 191 169" initlabel="bg.pin-read-analog">
 			<description>
 				<text>Read analog value from pin</text>
@@ -2821,6 +2834,7 @@
 
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
+				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
