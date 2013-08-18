@@ -183,6 +183,7 @@ public class OpenblocksFrame extends JFrame
 			
 			try
 			{
+				this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
 				context.loadArduBlockFile(savedFile);
 				context.setWorkspaceChanged(false);
 			}
@@ -190,6 +191,10 @@ public class OpenblocksFrame extends JFrame
 			{
 				JOptionPane.showOptionDialog(this, uiMessageBundle.getString("message.file_not_found"), uiMessageBundle.getString("message.title.error"), JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
 				e.printStackTrace();
+			}
+			finally
+			{
+				this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 			}
 		}
 	}
