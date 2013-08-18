@@ -25,7 +25,7 @@
 	</BlockConnectorShapes>
 	<BlockGenuses>
 		<!-- ******************** Controls Menu *************** -->
-		<BlockGenus name="loop2" kind="command" color="255 221 0" initlabel="bg.loop2" is-starter="yes" is-terminator="yes" label-unique="yes">
+		<BlockGenus name="loop2" kind="command" color="255 240 0" initlabel="bg.loop2" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
 			</description>
@@ -34,7 +34,7 @@
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop2" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="loop" kind="command" color="255 221 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
+		<BlockGenus name="loop" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
 			</description>
@@ -143,7 +143,7 @@
 				<BlockConnector connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="subroutine" kind="command" color="177 10 255" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
+		<BlockGenus name="subroutine" kind="command" color="200 200 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
 			<description>
 				<text>subroutine</text>
 			</description>
@@ -152,7 +152,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="subroutine-ref" kind="command" color="177 10 255" initlabel="bg.subroutine" editable-label="yes">
+		<BlockGenus name="subroutine-ref" kind="command" color="200 200 0" initlabel="bg.subroutine" editable-label="yes">
 			<description>
 				<text>invoke subroutine</text>
 			</description>
@@ -585,10 +585,7 @@
 		</BlockGenus>
 
 		<!--****************** Numbers/Constants *************** -->
-		<!--****************** Numbers/Constants *************** -->
-		<!--****************** Numbers/Constants *************** -->
-
-		<BlockGenus name="millis" kind="data" color="208 10 16" initlabel="bg.millis">
+		<BlockGenus name="millis" kind="data" color="232 156 149" initlabel="bg.millis">
 			<description>
 				<text>Time in milliseconds</text>
 			</description>
@@ -597,25 +594,25 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="number" kind="data" color="208 10 16" initlabel="bg.number" editable-label="yes">
+		<BlockGenus name="number" kind="data" color="232 156 149" initlabel="bg.number" editable-label="yes">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="digital-high" kind="data" color="208 10 16" initlabel="bg.digital-high">
+		<BlockGenus name="digital-high" kind="data" color="232 156 149" initlabel="bg.digital-high">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="digital-low" kind="data" color="208 10 16" initlabel="bg.digital-low">
+		<BlockGenus name="digital-low" kind="data" color="232 156 149" initlabel="bg.digital-low">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 
-		<BlockGenus name="true" kind="data" initlabel="bg.true" color="208 10 16" editable-label="no">
+		<BlockGenus name="true" kind="data" initlabel="bg.true" color="232 156 149" editable-label="no">
 			<description>
 				<text>
 					Reports the boolean true.
@@ -626,7 +623,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="false" kind="data" initlabel="bg.false" color="208 10 16">
+		<BlockGenus name="false" kind="data" initlabel="bg.false" color="232 156 149">
 			<description>
 				<text>
 					Reports the boolean false.
@@ -637,7 +634,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="208 10 16">
+		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="232 156 149">
 			<description>
 				<text>
 					Digital Var
@@ -648,7 +645,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="208 10 16">
+		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="232 156 149">
 			<description>
 				<text>
 					Digital Var
@@ -659,7 +656,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_number" kind="command" color="208 10 16" initlabel="bg.setter_variable_number">
+		<BlockGenus name="setter_variable_number" kind="command" color="232 156 149" initlabel="bg.setter_variable_number">
 			<description>
 				<text>set a number variable</text>
 			</description>
@@ -673,7 +670,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_digital" kind="command" color="208 10 16" initlabel="bg.setter_variable_digital">
+		<BlockGenus name="setter_variable_digital" kind="command" color="232 156 149" initlabel="bg.setter_variable_digital">
 			<description>
 				<text>write digital to pin</text>
 			</description>
@@ -687,7 +684,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_vector" kind="data" initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes" color="208 10 16">
+		<BlockGenus name="variable_vector" kind="data" initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes" color="232 156 149">
 			<description>
 				<text>
 					Digital Var
@@ -701,7 +698,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="create_variable_vector" kind="command" color="208 10 16" initlabel="bg.create_variable_vector">
+		<BlockGenus name="create_variable_vector" kind="command" color="232 156 149" initlabel="bg.create_variable_vector">
 			<description>
 				<text>create a vector of numbers</text>
 			</description>
@@ -716,7 +713,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_vector" kind="command" color="208 10 16" initlabel="bg.setter_variable_vector">
+		<BlockGenus name="setter_variable_vector" kind="command" color="232 156 149" initlabel="bg.setter_variable_vector">
 			<description>
 				<text>Set a vector number</text>
 			</description>
@@ -733,7 +730,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_char" kind="command" color="208 10 16" initlabel="bg.setter_variable_char">
+		<BlockGenus name="setter_variable_char" kind="command" color="232 156 149" initlabel="bg.setter_variable_char">
 			<description>
 				<text>create a vector of numbers</text>
 			</description>
@@ -748,7 +745,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="208 10 16">
+		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="232 156 149">
 			<description>
 				<text>
 					Digital Var
@@ -759,7 +756,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="char" kind="data" color="208 10 16" initlabel="bg.char" editable-label="yes">
+		<BlockGenus name="char" kind="data" color="232 156 149" initlabel="bg.char" editable-label="yes">
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
@@ -964,11 +961,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-
 		<!-- ******************** Storage *************** -->
-		<!-- ******************** Storage *************** -->
-		<!-- ******************** Storage *************** -->
-
 		<BlockGenus name="eeprom_read" kind="data" color="0 100 90" initlabel="bg.eeprom_read">
 			<description>
 				<text>EEPROM Read</text>
@@ -1138,7 +1131,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_fake" kind="data" initlabel="bg.fake" editable-label="yes" is-label-value="yes" color="208 10 16">
+		<BlockGenus name="variable_fake" kind="data" initlabel="bg.fake" editable-label="yes" is-label-value="yes" color="232 156 149">
 			<description>
 				<text>
 					Digital Var
@@ -1149,13 +1142,13 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="digital-on" kind="data" color="208 10 16" initlabel="bg.digital-on">
+		<BlockGenus name="digital-on" kind="data" color="232 156 149" initlabel="bg.digital-on">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="digital-off" kind="data" color="208 10 16" initlabel="bg.digital-off">
+		<BlockGenus name="digital-off" kind="data" color="232 156 149" initlabel="bg.digital-off">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
@@ -2826,17 +2819,17 @@
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 				<BlockGenusMember>repeat</BlockGenusMember>
-				<BlockGenusMember>subroutine</BlockGenusMember>
-				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>delay</BlockGenusMember>
+				<BlockGenusMember>subroutine</BlockGenusMember>
+				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
-				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
+				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>				
 			</BlockDrawer>
 			<BlockDrawer button-color="114 147 71" name="bd.operators" type="factory">
 				<BlockGenusMember>addition</BlockGenusMember>
@@ -2872,7 +2865,7 @@
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="230 69 69" name="bd.number" type="factory">
+			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
 				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>digital-high</BlockGenusMember>
