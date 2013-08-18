@@ -3072,6 +3072,21 @@
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>				
 			</BlockDrawer>
+			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
+				<BlockGenusMember>greater</BlockGenusMember>
+				<BlockGenusMember>less</BlockGenusMember>
+				<BlockGenusMember>equal</BlockGenusMember>
+				<BlockGenusMember>greater_equal</BlockGenusMember>
+				<BlockGenusMember>less_equal</BlockGenusMember>
+				<BlockGenusMember>not_equal</BlockGenusMember>
+				<BlockGenusMember>equal_digital</BlockGenusMember>
+				<BlockGenusMember>not_equal_digital</BlockGenusMember>
+				<BlockGenusMember>equal_poly</BlockGenusMember>
+				<BlockGenusMember>not_equal_poly</BlockGenusMember>
+				<BlockGenusMember>and</BlockGenusMember>
+				<BlockGenusMember>or</BlockGenusMember>
+				<BlockGenusMember>not</BlockGenusMember>
+			</BlockDrawer>
 			<BlockDrawer button-color="114 147 71" name="bd.operators" type="factory">
 				<BlockGenusMember>addition</BlockGenusMember>
 				<BlockGenusMember>subtraction</BlockGenusMember>
@@ -3091,21 +3106,7 @@
 				<BlockGenusMember>map</BlockGenusMember>
 				<BlockGenusMember>constrain</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
-				<BlockGenusMember>greater</BlockGenusMember>
-				<BlockGenusMember>less</BlockGenusMember>
-				<BlockGenusMember>equal</BlockGenusMember>
-				<BlockGenusMember>greater_equal</BlockGenusMember>
-				<BlockGenusMember>less_equal</BlockGenusMember>
-				<BlockGenusMember>not_equal</BlockGenusMember>
-				<BlockGenusMember>equal_digital</BlockGenusMember>
-				<BlockGenusMember>not_equal_digital</BlockGenusMember>
-				<BlockGenusMember>equal_poly</BlockGenusMember>
-				<BlockGenusMember>not_equal_poly</BlockGenusMember>
-				<BlockGenusMember>and</BlockGenusMember>
-				<BlockGenusMember>or</BlockGenusMember>
-				<BlockGenusMember>not</BlockGenusMember>
-			</BlockDrawer>
+
 			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
 				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
