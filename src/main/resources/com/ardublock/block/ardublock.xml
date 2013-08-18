@@ -2283,7 +2283,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2300,7 +2300,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
@@ -2317,7 +2317,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2333,7 +2333,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2349,7 +2349,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2365,7 +2365,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2381,7 +2381,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2397,7 +2397,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2413,7 +2413,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2429,7 +2429,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2445,7 +2445,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2461,7 +2461,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2477,7 +2477,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2493,7 +2493,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2509,7 +2509,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2525,7 +2525,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2541,7 +2541,7 @@
 				<text>Read analog value from analog pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -2552,11 +2552,9 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		
 		<!-- end of seeedStudio -->
 
 		<!--**** linksprite_LinkerKit **** -->
-
 		<BlockGenus name="ls_10mmLEDModule" kind="command" color="135 206 235" initlabel="bg.ls_10mmLEDModule">
 			<description>
 				<text>10mm Blue/Green/Yellow/Red LED Module</text>
