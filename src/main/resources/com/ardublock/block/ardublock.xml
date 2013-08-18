@@ -3074,7 +3074,6 @@
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>delay</BlockGenusMember>
 			</BlockDrawer>
-
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
 				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>
@@ -3116,7 +3115,6 @@
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
 			</BlockDrawer>
-
 			<BlockDrawer button-color="230 69 69" name="bd.number" type="factory">
 				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
@@ -3135,7 +3133,6 @@
 				<BlockGenusMember>variable_poly</BlockGenusMember>
 				<BlockGenusMember>char</BlockGenusMember>
 			</BlockDrawer>
-
 			<BlockDrawer button-color="95 120 132" name="bd.utilities" type="factory">
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
@@ -3143,9 +3140,6 @@
 				<BlockGenusMember>servo</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 			</BlockDrawer>
-
-
-
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_read</BlockGenusMember>
 				<BlockGenusMember>serial_read_poly</BlockGenusMember>
@@ -3168,23 +3162,11 @@
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number_int</BlockGenusMember> -->
 			</BlockDrawer>
-
-			<!-- <BlockDrawer button-color="120 120 120" name="bd.chars" -->
-			<!-- type="factory"> -->
-			<!-- -->
-			<!-- -->
-			<!-- -->
-			<!-- <BlockGenusMember>variable_poly</BlockGenusMember> -->
-			<!-- -->
-			<!-- </BlockDrawer> -->
-
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
 				<BlockGenusMember>code_loop</BlockGenusMember>
 			</BlockDrawer>
-
-
 			<BlockDrawer button-color="13 152 164" name="bd.tinkerkit" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 				<BlockGenusMember>Tinker_LED_pwm</BlockGenusMember>
@@ -3201,8 +3183,6 @@
 				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
 				<BlockGenusMember>Tinker_Mosfet_pwm</BlockGenusMember>
 			</BlockDrawer>
-
-
 			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">
 				<BlockGenusMember>df_digital_viberation_sensor</BlockGenusMember>
 				<BlockGenusMember>df_digital_tilt_sensor</BlockGenusMember>
@@ -3246,7 +3226,6 @@
 				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>
 				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
 			</BlockDrawer>
-
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
 			    <BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_uv_sensor</BlockGenusMember>
@@ -3266,7 +3245,6 @@
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
-
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
 				<BlockGenusMember>ls_5mmLEDModule</BlockGenusMember>
@@ -3292,7 +3270,6 @@
 				<BlockGenusMember>ls_TiltModule</BlockGenusMember>
 				<BlockGenusMember>ls_TouchSensorModule</BlockGenusMember>
 			</BlockDrawer>
-
 			<!-- <BlockDrawer button-color="0 255 0" name="XinChejian" type="factory"> <BlockGenusMember>xcj_motor_forward</BlockGenusMember> <BlockGenusMember>xcj_motor_backward</BlockGenusMember> 
 				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember> <BlockGenusMember>xcj_ms_digital_write</BlockGenusMember> </BlockDrawer> -->
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->

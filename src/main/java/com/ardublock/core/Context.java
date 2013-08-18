@@ -34,8 +34,6 @@ public class Context
 			
 	final public static String APP_NAME = "ArduBlock";
 	
-	
-	
 	public enum OsType
 	{
 		LINUX,
