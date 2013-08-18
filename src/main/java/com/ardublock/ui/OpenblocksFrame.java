@@ -203,56 +203,79 @@ public class OpenblocksFrame extends JFrame
 	
 	public void doSaveArduBlockFile()
 	{
-		if (context.isWorkspaceChanged())
+		if (!context.isWorkspaceChanged())
 		{
-			try
-			{
-				WorkspaceController workspaceController = context.getWorkspaceController();
-				String saveString = workspaceController.getSaveString();
-				
-				if (saveFilePath == null)
-				{
-					int chooseResult;
-					chooseResult = fileChooser.showSaveDialog(this);
-					if (chooseResult == JFileChooser.APPROVE_OPTION)
-					{
-						File saveFile = fileChooser.getSelectedFile();
-						saveFile = checkFileSuffix(saveFile);
-						if (saveFile != null)
-						{
-							if (saveFile.exists())
-							{
-								int optionValue = JOptionPane.showOptionDialog(this, uiMessageBundle.getString("message.content.overwrite"), uiMessageBundle.getString("message.title.question"), JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, JOptionPane.YES_OPTION);
-								if (optionValue != JOptionPane.YES_OPTION)
-								{
-									return ;
-								}
-							}
-							context.saveArduBlockFile(saveFile, saveString);
-							saveFilePath = saveFile.getAbsolutePath();
-							saveFileName = saveFile.getName();
-							context.setWorkspaceChanged(false);
-							this.setTitle(this.makeFrameTitle());
-							
-						}
-					}
-				}
-				else
-				{
-					File saveFile = new File(saveFilePath);
-					context.saveArduBlockFile(saveFile, saveString);
-					saveFilePath = saveFile.getAbsolutePath();
-					saveFileName = saveFile.getName();
-					context.setWorkspaceChanged(false);
-					this.setTitle(this.makeFrameTitle());
-					
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.printStackTrace();
-			}
+			return ;
 		}
+		
+		String saveString = getArduBlockString();
+		
+		if (saveFilePath == null)
+		{
+			File saveFile = letUserChooseSaveFile();
+			saveFile = checkFileSuffix(saveFile);
+			if (saveFile == null)
+			{
+				return ;
+			}
+			
+			if (saveFile.exists() && !askUserOverwriteExistedFile())
+			{
+				return ;
+			}
+			
+			writeFileAndUpdateFrame(saveString, saveFile);
+		}
+		else
+		{
+			File saveFile = new File(saveFilePath);
+			writeFileAndUpdateFrame(saveString, saveFile);
+		}
+	}
+	
+	private String getArduBlockString()
+	{
+		WorkspaceController workspaceController = context.getWorkspaceController();
+		return workspaceController.getSaveString();
+	}
+	
+	private void writeFileAndUpdateFrame(String ardublockString, File saveFile) 
+	{
+		try
+		{
+			saveArduBlockToFile(ardublockString, saveFile);
+			context.setWorkspaceChanged(false);
+			this.setTitle(this.makeFrameTitle());
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private File letUserChooseSaveFile()
+	{
+		int chooseResult;
+		chooseResult = fileChooser.showSaveDialog(this);
+		if (chooseResult == JFileChooser.APPROVE_OPTION)
+		{
+			return fileChooser.getSelectedFile();
+		}
+		return null;
+	}
+	
+	private boolean askUserOverwriteExistedFile()
+	{
+		int optionValue = JOptionPane.showOptionDialog(this, uiMessageBundle.getString("message.content.overwrite"), uiMessageBundle.getString("message.title.question"), JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, JOptionPane.YES_OPTION);
+		return (optionValue == JOptionPane.YES_OPTION);
+	}
+	
+	private void saveArduBlockToFile(String ardublockString, File saveFile) throws IOException
+	{
+		context.saveArduBlockFile(saveFile, ardublockString);
+		saveFilePath = saveFile.getAbsolutePath();
+		saveFileName = saveFile.getName();
 	}
 	
 	public void doNewArduBlockFile()
