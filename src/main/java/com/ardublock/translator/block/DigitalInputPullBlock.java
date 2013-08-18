@@ -1,6 +1,8 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class DigitalInputPullBlock extends DigitalInputBlock
 {
@@ -17,7 +19,28 @@ public class DigitalInputPullBlock extends DigitalInputBlock
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
-
+	
+	protected String generateCodeUsingNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
+	{
+		String number;
+		number = translatorBlock.toCode();
+		translator.addInputPin(Long.parseLong(number));
+		translator.addSetupCommand("\tdigitalWrite(" + number + ", HIGH);");
+		String ret = "\tdigitalRead( ";
+		ret = ret + number;
+		ret = ret + ")";
+		return codePrefix + ret + codeSuffix;
+	}
+	
+	protected String generateCodeUsingNonNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
+	{
+		translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_READ_INPUT_PULLUP_DEFINE);
+		String ret = "__ardublockDigitalRead(";
+		
+		ret = ret + translatorBlock.toCode();
+		ret = ret + ")";
+		return codePrefix + ret + codeSuffix;
+	}
 
 	
 }
