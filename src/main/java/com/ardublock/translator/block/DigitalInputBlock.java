@@ -20,8 +20,8 @@ public class DigitalInputBlock extends TranslatorBlock
 		{
 			String number;
 			number = translatorBlock.toCode();
-			String setupCode = "\tpinMode( " + number + " , INPUT);";
-			translator.addSetupCommand(setupCode);
+			translator.addInputPin(Long.parseLong(number));
+			
 			String ret = "\tdigitalRead( ";
 			ret = ret + number;
 			ret = ret + ")";
