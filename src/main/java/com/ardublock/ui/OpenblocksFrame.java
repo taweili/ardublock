@@ -205,25 +205,44 @@ public class OpenblocksFrame extends JFrame
 		
 		if (context.getSaveFilePath() == null)
 		{
-			File saveFile = letUserChooseSaveFile();
-			saveFile = checkFileSuffix(saveFile);
-			if (saveFile == null)
-			{
-				return ;
-			}
-			
-			if (saveFile.exists() && !askUserOverwriteExistedFile())
-			{
-				return ;
-			}
-			
-			writeFileAndUpdateFrame(saveString, saveFile);
+			chooseFileAndSave(saveString);
 		}
 		else
 		{
 			File saveFile = new File(context.getSaveFilePath());
 			writeFileAndUpdateFrame(saveString, saveFile);
 		}
+	}
+
+	
+	public void doSaveAsArduBlockFile()
+	{
+		if (context.isWorkspaceEmpty())
+		{
+			return ;
+		}
+		
+		String saveString = getArduBlockString();
+		
+		chooseFileAndSave(saveString);
+		
+	}
+	
+	private void chooseFileAndSave(String ardublockString)
+	{
+		File saveFile = letUserChooseSaveFile();
+		saveFile = checkFileSuffix(saveFile);
+		if (saveFile == null)
+		{
+			return ;
+		}
+		
+		if (saveFile.exists() && !askUserOverwriteExistedFile())
+		{
+			return ;
+		}
+		
+		writeFileAndUpdateFrame(ardublockString, saveFile);
 	}
 	
 	private String getArduBlockString()
@@ -288,11 +307,6 @@ public class OpenblocksFrame extends JFrame
 		this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 	}
 	
-	
-	public void doSaveAsArduBlockFile()
-	{
-		
-	}
 	
 	
 	private File checkFileSuffix(File saveFile)

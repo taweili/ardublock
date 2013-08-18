@@ -24,7 +24,7 @@ public class Context
 	private static Context singletonContext;
 	
 	private boolean workspaceChanged;
-	
+	private boolean workspaceEmpty;
 	
 	private Set<RenderableBlock> highlightBlockSet;
 	private Set<OpenblocksFrameListener> ofls;
@@ -108,6 +108,7 @@ public class Context
 		
 		saveFilePath = null;
 		saveFileName = "untitled";
+		workspaceEmpty = true;
 	}
 	
 	//determine OS
@@ -275,5 +276,13 @@ public class Context
 
 	public void setSaveFilePath(String saveFilePath) {
 		this.saveFilePath = saveFilePath;
+	}
+
+	public boolean isWorkspaceEmpty() {
+		return workspaceEmpty;
+	}
+
+	public void setWorkspaceEmpty(boolean workspaceEmpty) {
+		this.workspaceEmpty = workspaceEmpty;
 	}
 }

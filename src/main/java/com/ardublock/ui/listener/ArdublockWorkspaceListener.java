@@ -23,6 +23,7 @@ public class ArdublockWorkspaceListener implements WorkspaceListener
 		if (!context.isWorkspaceChanged())
 		{
 			context.setWorkspaceChanged(true);
+			context.setWorkspaceEmpty(false);
 			String title = frame.makeFrameTitle();
 			if (frame != null)
 			{
