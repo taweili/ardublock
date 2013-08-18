@@ -58,6 +58,16 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 		
 	}
 	
+	public void didSaveAs()
+	{
+		
+	}
+	
+	public void didNew()
+	{
+		
+	}
+	
 	public void didGenerate(String source) {
 		ArduBlockTool.editor.setText(source);
 		ArduBlockTool.editor.handleExport(false);

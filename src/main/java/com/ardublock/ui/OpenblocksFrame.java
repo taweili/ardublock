@@ -1,6 +1,7 @@
 package com.ardublock.ui;
 
 import java.awt.Component;
+import java.awt.Cursor;
 import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
@@ -27,7 +28,9 @@ import edu.mit.blocks.workspace.Workspace;
 import com.ardublock.core.Context;
 import com.ardublock.ui.listener.ArdublockWorkspaceListener;
 import com.ardublock.ui.listener.GenerateCodeButtonListener;
+import com.ardublock.ui.listener.NewButtonListener;
 import com.ardublock.ui.listener.OpenButtonListener;
+import com.ardublock.ui.listener.SaveAsButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
@@ -103,14 +106,20 @@ public class OpenblocksFrame extends JFrame
 		
 		JPanel buttons = new JPanel();
 		buttons.setLayout(new FlowLayout());
+		JButton newButton = new JButton(uiMessageBundle.getString("ardublock.ui.new"));
+		newButton.addActionListener(new NewButtonListener(this));
 		JButton saveButton = new JButton(uiMessageBundle.getString("ardublock.ui.save"));
 		saveButton.addActionListener(new SaveButtonListener(this));
+		JButton saveAsButton = new JButton(uiMessageBundle.getString("ardublock.ui.saveAs"));
+		saveAsButton.addActionListener(new SaveAsButtonListener(this));
 		JButton openButton = new JButton(uiMessageBundle.getString("ardublock.ui.load"));
 		openButton.addActionListener(new OpenButtonListener(this));
 		JButton generateButton = new JButton(uiMessageBundle.getString("ardublock.ui.upload"));
 		generateButton.addActionListener(new GenerateCodeButtonListener(this, context));
 
+		buttons.add(newButton);
 		buttons.add(saveButton);
+		buttons.add(saveAsButton);
 		buttons.add(openButton);
 		buttons.add(generateButton);
 
@@ -245,6 +254,30 @@ public class OpenblocksFrame extends JFrame
 			}
 		}
 	}
+	
+	public void doNewArduBlockFile()
+	{
+		if (context.isWorkspaceChanged())
+		{
+			int optionValue = JOptionPane.showOptionDialog(this, uiMessageBundle.getString("message.question.newfile_on_workspace_changed"), uiMessageBundle.getString("message.title.question"), JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, JOptionPane.YES_OPTION);
+			if (optionValue != JOptionPane.YES_OPTION)
+			{
+				return ;
+			}
+		}
+		this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+		context.resetWorksapce();
+		context.setWorkspaceChanged(false);
+		this.setTitle(this.makeFrameTitle());
+		this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+	}
+	
+	
+	public void doSaveAsArduBlockFile()
+	{
+		
+	}
+	
 	
 	private File checkFileSuffix(File saveFile)
 	{

@@ -80,7 +80,7 @@ public class Context
 		osType = determineOsType();
 	}
 	
-	private void resetWorksapce()
+	public void resetWorksapce()
 	{
 		/*
 		 * workspace = new Workspace(); workspace.reset(); workspace.setl
@@ -179,13 +179,6 @@ public class Context
 		}
 		highlightBlockSet.clear();
 	}
-	
-	public void newArduBlockFile()
-	{
-		workspaceController.resetWorkspace();
-		workspaceChanged = false;
-	}
-
 	
 	public void saveArduBlockFile(File saveFile, String saveString) throws IOException
 	{
