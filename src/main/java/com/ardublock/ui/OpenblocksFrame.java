@@ -81,7 +81,6 @@ public class OpenblocksFrame extends JFrame
 		fileChooser.setFileFilter(ffilter);
 		fileChooser.addChoosableFileFilter(ffilter);
 		
-		
 		initOpenBlocks();
 	}
 	
