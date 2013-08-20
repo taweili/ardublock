@@ -91,6 +91,12 @@
 			<scope>provided</scope>
 			<version>1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<scope>test</scope>
+			<version>3.9</version>
+		</dependency>
 	</dependencies>
 	<url>http://ardublock.com/</url>
 </project>
