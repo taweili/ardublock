@@ -7,5 +7,5 @@ target/
 .settings
 openblocks.iml
 
-*/.settings/**
+.settings/
 *~
