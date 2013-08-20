@@ -6,7 +6,10 @@ import java.util.Map;
 import java.util.Set;
 
 import edu.mit.blocks.codeblocks.Block;
+import edu.mit.blocks.renderable.Comment;
+import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
+
 import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -103,13 +106,9 @@ public class Translator
 	
 	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException
 	{
-		
-		
 		TranslatorBlockFactory translatorBlockFactory = new TranslatorBlockFactory();
 		Block block = workspace.getEnv().getBlock(blockId);
-		
 		TranslatorBlock rootTranslatorBlock = translatorBlockFactory.buildTranslatorBlock(this, blockId, block.getGenusName(), "", "", block.getBlockLabel());
-		
 		return rootTranslatorBlock.toCode();
 	}
 	
