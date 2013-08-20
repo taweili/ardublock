@@ -97,6 +97,12 @@
 			<scope>test</scope>
 			<version>3.9</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.9</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	<url>http://ardublock.com/</url>
 </project>
