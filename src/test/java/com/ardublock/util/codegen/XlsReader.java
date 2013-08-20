@@ -10,6 +10,6 @@ public class XlsReader
 	
 	public void work()
 	{
-		this.getClass().getClassLoader().getResourceAsStream("")
+		this.getClass().getClassLoader().getResourceAsStream("");
 	}
 }
