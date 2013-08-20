@@ -7,7 +7,5 @@ target/
 .settings
 openblocks.iml
 
-*/.classpath
-*/.project
-*/.settings
+*/.settings/**
 *~
