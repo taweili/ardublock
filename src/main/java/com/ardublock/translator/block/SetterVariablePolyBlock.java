@@ -22,7 +22,7 @@ public class SetterVariablePolyBlock extends TranslatorBlock
 		
 		String ret = tb.toCode();
 		tb = this.getRequiredTranslatorBlockAtSocket(1);
-		ret ="\t"+ ret + " = " + tb.toCode() + " ;\n";
+		ret ="\t"+ ret + " = \'" + tb.toCode().replace("\"","") + "\' ;\n";
 		return ret;
 	}
 
