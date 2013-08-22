@@ -9,3 +9,4 @@ openblocks.iml
 
 .settings/
 *~
+src/main/resources/com/ardublock/block/ardublock.zip
