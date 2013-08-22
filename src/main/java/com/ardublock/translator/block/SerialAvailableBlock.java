@@ -13,9 +13,9 @@ public class SerialAvailableBlock extends TranslatorBlock
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		translator.addSetupCommand("Serial.begin(9600);");
+		translator.addSetupCommand("\tSerial.begin(9600);");
 		
-		String ret = "\tSerial.available()";
+		String ret = "Serial.available()";
 		
 		return ret;
 	}
