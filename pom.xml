@@ -103,6 +103,12 @@
 			<version>3.9</version>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>1.3.2</version>
+		    <scope>test</scope>
+		</dependency>
+</dependencies>
 	<url>http://ardublock.com/</url>
 </project>
