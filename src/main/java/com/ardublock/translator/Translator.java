@@ -22,10 +22,10 @@ public class Translator
 {
 	private static final String variablePrefix = "_ABVAR_";
 		
-	private List<String> headerFileSet;
-	private List<String> definitionSet;
+	private Set<String> headerFileSet;
+	private Set<String> definitionSet;
 	private List<String> setupSet;
-	private List<String> functionNameSet;
+	private Set<String> functionNameSet;
 	private BlockAdaptor blockAdaptor;
 	
 	private Set<Long> inputPinSet;
@@ -118,10 +118,10 @@ public class Translator
 	
 	public void reset()
 	{
-		headerFileSet = new ArrayList<String>();
-		definitionSet = new ArrayList<String>();
+		headerFileSet = new HashSet<String>();
+		definitionSet = new HashSet<String>();
 		setupSet = new ArrayList<String>();
-		functionNameSet = new ArrayList<String>();
+		functionNameSet = new HashSet<String>();
 		inputPinSet = new HashSet<Long>();
 		outputPinSet = new HashSet<Long>();
 		

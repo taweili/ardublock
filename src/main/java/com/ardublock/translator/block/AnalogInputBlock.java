@@ -18,7 +18,6 @@ public class AnalogInputBlock extends TranslatorBlock
 		ret = ret + translatorBlock.toCode();
 		ret = ret + ")";
 		return codePrefix + ret + codeSuffix;
-	
 	}
 
 }

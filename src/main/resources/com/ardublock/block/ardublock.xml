@@ -1910,7 +1910,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug" label="centermeter" />
 			</BlockConnectors>
 			<Images>
 				<Image>
