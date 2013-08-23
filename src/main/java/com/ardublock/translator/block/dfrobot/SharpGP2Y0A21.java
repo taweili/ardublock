@@ -12,10 +12,10 @@ public class SharpGP2Y0A21 extends TranslatorBlock {
 	}
 
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
-		String func = "int ComputeSharpGP2Y0A21(int value) {";
-		func +=  "if (value < 10) value = 10;";
-	    func += "return ((67870.0 / (value - 3.0)) - 40.0);";
-	    func += "}";
+		String func = "int ComputeSharpGP2Y0A21(int value) {\n";
+		func +=  "if (value < 10) value = 10;\n";
+	    func += "return ((67870.0 / (value - 3.0)) - 40.0);\n";
+	    func += "}\n\n";
 		translator.addDefinitionCommand(func);
 
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
