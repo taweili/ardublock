@@ -1,0 +1,16 @@
+		<BlockGenus name="#block_genus_name#" kind="data" color="255 102 0" initlabel="bg.#block_genus_name#">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>#block_image_path#</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
