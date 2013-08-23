@@ -16,7 +16,7 @@ public class CreateVariableVectorBlock extends TranslatorBlock
 		TranslatorBlock name = this.getRequiredTranslatorBlockAtSocket(0);
 		TranslatorBlock size = this.getRequiredTranslatorBlockAtSocket(1);
 		varName+=name.toCode();
-		int foo = Integer.parseInt(size.toCode())+1;
+		int foo = Integer.parseInt(size.toCode());
 		varName+="[";
 		translator.addDefinitionCommand("int " + varName +foo+"];\n");
 		translator.addSetupCommand("\tfor (int i=0;i<"+foo+";i++) "+ varName+"i]=0;\n"   );
