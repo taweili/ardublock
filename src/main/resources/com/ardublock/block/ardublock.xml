@@ -3034,11 +3034,21 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/linksprite/TouchSensorModule.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/network/bleshield.jpg</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
-
+		
+		<BlockGenus name="bleshield_available" kind="data" color="169 148 212" initlabel="bg.bleshield_available">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="bleshield_read_poly" kind="data" color="169 148 212" initlabel="bg.bleshield_read_poly">
+			<BlockConnectors>
+				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -3241,6 +3251,8 @@
 			</BlockDrawer>
 			<BlockDrawer button-color="169 148 212" name="bd.network" type="factory">
 				<BlockGenusMember>bleshield</BlockGenusMember>
+				<BlockGenusMember>bleshield_available</BlockGenusMember>
+				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>	
 			</BlockDrawer>
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>

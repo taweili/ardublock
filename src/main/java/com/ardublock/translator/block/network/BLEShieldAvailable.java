@@ -5,18 +5,15 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class BLEShield extends TranslatorBlock {
+public class BLEShieldAvailable extends TranslatorBlock {
 
-	public BLEShield(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
+	public BLEShieldAvailable(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
-		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addDefinitionCommand("SoftwareSerial bleShield(2, 3);");
-		translator.addSetupCommand("bleShield.begin(19200);");
-		return "";
+		return "bleShield.available()";
 	}
 
 }
