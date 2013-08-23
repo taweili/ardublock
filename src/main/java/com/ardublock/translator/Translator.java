@@ -1,13 +1,13 @@
 package com.ardublock.translator;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import edu.mit.blocks.codeblocks.Block;
-import edu.mit.blocks.renderable.Comment;
-import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
 
 import com.ardublock.translator.adaptor.BlockAdaptor;
@@ -18,15 +18,14 @@ import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNameDuplicatedException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-
 public class Translator
 {
 	private static final String variablePrefix = "_ABVAR_";
 		
-	private Set<String> headerFileSet;
-	private Set<String> definitionSet;
-	private Set<String> setupSet;
-	private Set<String> functionNameSet;
+	private List<String> headerFileSet;
+	private List<String> definitionSet;
+	private List<String> setupSet;
+	private List<String> functionNameSet;
 	private BlockAdaptor blockAdaptor;
 	
 	private Set<Long> inputPinSet;
@@ -119,10 +118,10 @@ public class Translator
 	
 	public void reset()
 	{
-		headerFileSet = new HashSet<String>();
-		definitionSet = new HashSet<String>();
-		setupSet = new HashSet<String>();
-		functionNameSet = new HashSet<String>();
+		headerFileSet = new ArrayList<String>();
+		definitionSet = new ArrayList<String>();
+		setupSet = new ArrayList<String>();
+		functionNameSet = new ArrayList<String>();
 		inputPinSet = new HashSet<Long>();
 		outputPinSet = new HashSet<Long>();
 		

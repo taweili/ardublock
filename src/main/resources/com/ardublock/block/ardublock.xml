@@ -182,7 +182,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		
+
 		<BlockGenus name="pin-read-digital-pullup" kind="command" color="77 191 169" initlabel="bg.pin-write-digital">
 			<description>
 				<text>write digital to pin</text>
@@ -193,7 +193,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
+
 		<BlockGenus name="pin-read-analog" kind="data" color="77 191 169" initlabel="bg.pin-read-analog">
 			<description>
 				<text>Read analog value from pin</text>
@@ -1116,11 +1116,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-
 		<!-- ******************** Unused/Obsoletes *************** -->
-		<!-- ******************** Unused/Obsoletes *************** -->
-		<!-- ******************** Unused/Obsoletes *************** -->
-
 		<BlockGenus name="glue_msg" kind="data" color="245 245 245" initlabel="bg.glue_msg" editable-label="yes">
 			<description>
 				<text></text>
@@ -1435,7 +1431,6 @@
 			</Images>
 		</BlockGenus>
 
-
 		<BlockGenus name="Tinker_Tilt" kind="data" color="13 152 164" initlabel="bg.Tinker_Tilt">
 			<description>
 				<text>TinkerKit Tilt</text>
@@ -1581,9 +1576,70 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<!-- ******** Panda Shield ******** -->
+		<BlockGenus name="panda_i1" kind="data" color="214 169 54" initlabel="bg.panda_i1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i2" kind="data" color="214 169 54" initlabel="bg.panda_i2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i3" kind="data" color="214 169 54" initlabel="bg.panda_i3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i4" kind="data" color="214 169 54" initlabel="bg.panda_i4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i5" kind="data" color="214 169 54" initlabel="bg.panda_i5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i6" kind="data" color="214 169 54" initlabel="bg.panda_i6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="panda_o1" kind="data" color="214 169 54" initlabel="bg.panda_o1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o2" kind="data" color="214 169 54" initlabel="bg.panda_o2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o3" kind="data" color="214 169 54" initlabel="bg.panda_o3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o4" kind="data" color="214 169 54" initlabel="bg.panda_o4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o5" kind="data" color="214 169 54" initlabel="bg.panda_o5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o6" kind="data" color="214 169 54" initlabel="bg.panda_o6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<!--************************************************************** DFRobot *************************************************************************** -->
-
-
 		<BlockGenus name="df_digital_viberation_sensor" kind="data" color="255 102 0" initlabel="bg.df_digital_viberation_sensor">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
@@ -2311,8 +2367,8 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		
-				<BlockGenus name="seeed_o2_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_o2_sensor">
+
+		<BlockGenus name="seeed_o2_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_o2_sensor">
 			<description>
 				<text>Read analog value from analog pin</text>
 			</description>
@@ -3044,10 +3100,20 @@
 			<FamilyMember>Tinker_O4</FamilyMember>
 			<FamilyMember>Tinker_O5</FamilyMember>
 		</BlockFamily>
-		<!-- <BlockFamily> -->
-		<!-- <FamilyMember>sd_return</FamilyMember> -->
-		<!-- <FamilyMember>sd_no_return</FamilyMember> -->
-		<!-- </BlockFamily> -->
+		<BlockFamily>
+			<FamilyMember>panda_i1</FamilyMember>
+			<FamilyMember>panda_i2</FamilyMember>
+			<FamilyMember>panda_i3</FamilyMember>
+			<FamilyMember>panda_i4</FamilyMember>
+			<FamilyMember>panda_i5</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>panda_o1</FamilyMember>
+			<FamilyMember>panda_o2</FamilyMember>
+			<FamilyMember>panda_o3</FamilyMember>
+			<FamilyMember>panda_o4</FamilyMember>
+			<FamilyMember>panda_o5</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -3070,7 +3136,7 @@
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
-				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>				
+				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
@@ -3106,7 +3172,6 @@
 				<BlockGenusMember>map</BlockGenusMember>
 				<BlockGenusMember>constrain</BlockGenusMember>
 			</BlockDrawer>
-
 			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
 				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
@@ -3217,9 +3282,11 @@
 				<BlockGenusMember>df_buzzer</BlockGenusMember>
 				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>
 				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
+				<BlockGenusMember>panda_i1</BlockGenusMember>
+				<BlockGenusMember>panda_o1</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
-			    <BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_uv_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_single_gyro</BlockGenusMember>
 				<BlockGenusMember>seeed_mq9_sensor</BlockGenusMember>
