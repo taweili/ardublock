@@ -73,8 +73,8 @@ public class CodeGen
 	{
 		outputSet.addBlockGenus(makeBlockGenusFromBlockDescription(block));
 		outputSet.addBlockMember(makeBlockMemberFromBlockDescription(block));
-		outputSet.addBlockName(block.getBlockGenusName() + "=" + block.getBlockShowName());
-		outputSet.addBlockDescription(block.getBlockGenusName() + ".description=" + block.getBlockDescription());
+		outputSet.addBlockName("bg." + block.getBlockGenusName() + "=" + block.getBlockShowName());
+		outputSet.addBlockDescription("bg." + block.getBlockGenusName() + ".description=" + block.getBlockDescription());
 		outputSet.addBlockType(block.getBlockGenusName() + "=" + block.getBlockType());
 	}
 	
