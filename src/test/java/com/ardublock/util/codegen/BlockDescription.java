@@ -6,6 +6,8 @@ public class BlockDescription
 	private String blockImagePath;
 	private String blockShowName;
 	private String blockDescription;
+	private String blockType;
+	private String blockColor;
 	public String getBlockGenusName() {
 		return blockGenusName;
 	}
@@ -29,6 +31,18 @@ public class BlockDescription
 	}
 	public void setBlockDescription(String blockDescription) {
 		this.blockDescription = blockDescription;
+	}
+	public String getBlockType() {
+		return blockType;
+	}
+	public void setBlockType(String blockType) {
+		this.blockType = blockType;
+	}
+	public String getBlockColor() {
+		return blockColor;
+	}
+	public void setBlockColor(String blockColor) {
+		this.blockColor = blockColor;
 	}
 	
 }
