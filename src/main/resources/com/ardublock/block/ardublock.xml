@@ -2880,6 +2880,196 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		
+		<BlockGenus name="seeed_circle_led" kind="command" color="0 255 0" initlabel="bg.seeed_circle_led">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/circle_led.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_2coil_relay" kind="command" color="0 255 0" initlabel="bg.seeed_2coil_relay">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/2coil_relay.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_dry_relay" kind="command" color="0 255 0" initlabel="bg.seeed_dry_relay">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/dry_relay.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_solid_relay" kind="command" color="0 255 0" initlabel="bg.seeed_solid_relay">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/solid_relay.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_circle_led" kind="command" color="0 255 0" initlabel="bg.seeed_circle_led">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/circle_led.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_led_strip" kind="command" color="0 255 0" initlabel="bg.seeed_led_strip">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/led_strip.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_led" kind="command" color="0 255 0" initlabel="bg.seeed_led">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/led.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_var_led" kind="command" color="0 255 0" initlabel="bg.seeed_var_led">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/var_led.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_vib" kind="command" color="0 255 0" initlabel="bg.seeed_vib">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/vib.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_relay" kind="command" color="0 255 0" initlabel="bg.seeed_relay">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/relay.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of seeedStudio -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -3588,7 +3778,18 @@
 				<BlockGenusMember>seeed_water_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_touch_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_mag_switch</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_dist_int</BlockGenusMember>v
+				<BlockGenusMember>seeed_ir_dist_int</BlockGenusMember>
+				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
+				<BlockGenusMember>seeed_2coil_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_dry_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_solid_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
+				<BlockGenusMember>seeed_led_strip</BlockGenusMember>
+				<BlockGenusMember>seeed_led</BlockGenusMember>
+				<BlockGenusMember>seeed_var_led</BlockGenusMember>
+				<BlockGenusMember>seeed_vib</BlockGenusMember>
+				<BlockGenusMember>seeed_relay</BlockGenusMember>
+				
 				
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
