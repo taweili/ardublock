@@ -10,7 +10,8 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>#block_image_path#</FileLocation>
+					<FileLocation>com/ardublock/block/#block_image_path#</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
+		

@@ -2,6 +2,7 @@ package com.ardublock.util.codegen;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -28,16 +29,7 @@ public class CodeGen
 		
 		generateArdublockCode(xlsReader, outputSet);
 		
-		for (String blockGenus : outputSet.getBlockGenusList())
-		{
-			System.out.println(blockGenus);
-			System.out.println();
-		}
-		
-		for (String blockMember : outputSet.getBlockDrawerList())
-		{
-			System.out.println(blockMember);
-		}
+		output(outputSet);
 	}
 	
 
@@ -81,6 +73,9 @@ public class CodeGen
 	{
 		outputSet.addBlockGenus(makeBlockGenusFromBlockDescription(block));
 		outputSet.addBlockMember(makeBlockMemberFromBlockDescription(block));
+		outputSet.addBlockName(block.getBlockGenusName() + "=" + block.getBlockShowName());
+		outputSet.addBlockDescription(block.getBlockGenusName() + ".description=" + block.getBlockDescription());
+		outputSet.addBlockType(block.getBlockGenusName() + "=" + block.getBlockType());
 	}
 	
 	private String makeBlockMemberFromBlockDescription(BlockDescription block)
@@ -98,5 +93,23 @@ public class CodeGen
 		ret = ret.replaceAll("#block_image_path#", block.getBlockImagePath());
 		ret = ret.replaceAll("#block_color#", block.getBlockColor());
 		return ret;
+	}
+	
+	private void output(OutputSet outputSet)
+	{
+		outputSection(outputSet.getBlockGenusList());
+		outputSection(outputSet.getBlockDrawerList());
+		outputSection(outputSet.getBlockNameList());
+		outputSection(outputSet.getBlockDescriptionList());
+		outputSection(outputSet.getBlockTypeList());
+	}
+	
+	private void outputSection(List<String> section)
+	{
+		for (String entry : section)
+		{
+			System.out.println(entry);
+		}
+		System.out.println();
 	}
 }
