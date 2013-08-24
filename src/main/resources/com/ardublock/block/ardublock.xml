@@ -2863,6 +2863,23 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		
+		<BlockGenus name="seeed_ir_dist_int" kind="data" color="1 255 0" initlabel="bg.seeed_ir_dist_int">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/ir_dist_int.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of seeedStudio -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -3571,6 +3588,7 @@
 				<BlockGenusMember>seeed_water_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_touch_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_mag_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_dist_int</BlockGenusMember>v
 				
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>

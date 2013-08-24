@@ -23,7 +23,7 @@ public class CodeGen
 		setupTemplateString();
 		
 		XlsReader xlsReader = new XlsReader();
-		xlsReader.setFilePath("/home/heqichen/my/project/taweili/ardublock/ardublock/src/test/resources/seeedstudio/test.xls");
+		xlsReader.setFilePath("/home/heqichen/my/project/taweili/ardublock/ardublock/src/test/resources/seeedstudio/digitalout.xls");
 		
 		OutputSet outputSet = new OutputSet();
 		
