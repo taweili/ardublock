@@ -2608,6 +2608,261 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		
+		<BlockGenus name="seeed_voltage_divider" kind="data" color="0 255 0" initlabel="bg.seeed_voltage_divider">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/voltage_divider.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_flame_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_flame_sensor">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/flame_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_button" kind="data" color="0 255 0" initlabel="bg.seeed_button">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/button.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_switch" kind="data" color="0 255 0" initlabel="bg.seeed_switch">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/switch.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_ir_refl_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_ir_refl_sensor">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/ir_refl_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_heart_rate_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_heart_rate_sensor">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/heart_rate_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_chest_heart_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_chest_heart_sensor">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/chest_heart_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_air_quality_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_air_quality_sensor">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/air_quality_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_line_finder" kind="data" color="0 255 0" initlabel="bg.seeed_line_finder">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/line_finder.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_pir_motion_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_pir_motion_sensor">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/pir_motion_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_tilt_switch" kind="data" color="0 255 0" initlabel="bg.seeed_tilt_switch">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/tilt_switch.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_push_button" kind="data" color="0 255 0" initlabel="bg.seeed_push_button">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/push_button.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_water_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_water_sensor">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/water_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_touch_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_touch_sensor">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/touch_sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="seeed_mag_switch" kind="data" color="0 255 0" initlabel="bg.seeed_mag_switch">
+		    <description>
+				<text>Read digital from the pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/mag_switch.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of seeedStudio -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -3301,6 +3556,22 @@
 				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
+				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_button</BlockGenusMember>
+				<BlockGenusMember>seeed_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_refl_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_heart_rate_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_chest_heart_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_air_quality_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_line_finder</BlockGenusMember>
+				<BlockGenusMember>seeed_pir_motion_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_tilt_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_push_button</BlockGenusMember>
+				<BlockGenusMember>seeed_water_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_touch_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_mag_switch</BlockGenusMember>
+				
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
