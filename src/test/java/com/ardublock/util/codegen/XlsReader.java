@@ -46,22 +46,26 @@ public class XlsReader
 		if (row == null)
 			return false;
 		String firstCellContent = getCellContent(0);
-		return !firstCellContent.isEmpty();
+		return (firstCellContent ==null || !firstCellContent.isEmpty());
 	}
 	
 	private String getCellContent(int cellId)
 	{
 		Cell cell = row.getCell(cellId);
+		if (cell == null)
+			return null;
 		return cell.getStringCellValue().trim();
 	}
 
 	public BlockDescription nextBlockDescription()
 	{
 		BlockDescription blockDesc = new BlockDescription();
-		blockDesc.setBlockGenusName(getCellContent(0));
-		blockDesc.setBlockImagePath(getCellContent(1));
-		blockDesc.setBlockShowName(getCellContent(2));
-		blockDesc.setBlockDescription(getCellContent(3));
+		blockDesc.setBlockType(getCellContent(0));
+		blockDesc.setBlockColor(getCellContent(1));
+		blockDesc.setBlockGenusName(getCellContent(2));
+		blockDesc.setBlockImagePath(getCellContent(3));
+		blockDesc.setBlockShowName(getCellContent(4));
+		blockDesc.setBlockDescription(getCellContent(5));
 		
 		seekNextRow();
 		
