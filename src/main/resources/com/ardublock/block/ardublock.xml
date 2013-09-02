@@ -3618,8 +3618,8 @@
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 				<BlockGenusMember>repeat</BlockGenusMember>
-				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>delay</BlockGenusMember>
+				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 			</BlockDrawer>
@@ -3824,11 +3824,10 @@
 				<BlockGenusMember>seeed_var_led</BlockGenusMember>
 				<BlockGenusMember>seeed_vib</BlockGenusMember>
 				<BlockGenusMember>seeed_relay</BlockGenusMember>
-				
-				
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
+			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
 				<BlockGenusMember>ls_5mmLEDModule</BlockGenusMember>
@@ -3854,8 +3853,15 @@
 				<BlockGenusMember>ls_TiltModule</BlockGenusMember>
 				<BlockGenusMember>ls_TouchSensorModule</BlockGenusMember>
 			</BlockDrawer>
-			<!-- <BlockDrawer button-color="0 255 0" name="XinChejian" type="factory"> <BlockGenusMember>xcj_motor_forward</BlockGenusMember> <BlockGenusMember>xcj_motor_backward</BlockGenusMember> 
-				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember> <BlockGenusMember>xcj_ms_digital_write</BlockGenusMember> </BlockDrawer> -->
+			-->
+			<!--
+			<BlockDrawer button-color="0 255 0" name="XinChejian" type="factory">
+				<BlockGenusMember>xcj_motor_forward</BlockGenusMember>
+				<BlockGenusMember>xcj_motor_backward</BlockGenusMember> 
+				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember>
+				<BlockGenusMember>xcj_ms_digital_write</BlockGenusMember>
+			</BlockDrawer>
+		    -->
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
 		</BlockDrawerSet>
