@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.LinkedHashSet;
 
 import edu.mit.blocks.codeblocks.Block;
 import edu.mit.blocks.workspace.Workspace;
@@ -24,7 +25,7 @@ public class Translator
 		
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
-	private List<String> setupSet;
+	private Set<String> setupSet;
 	private Set<String> functionNameSet;
 	private BlockAdaptor blockAdaptor;
 	
@@ -120,7 +121,7 @@ public class Translator
 	{
 		headerFileSet = new HashSet<String>();
 		definitionSet = new HashSet<String>();
-		setupSet = new ArrayList<String>();
+		setupSet = new LinkedHashSet<String>();
 		functionNameSet = new HashSet<String>();
 		inputPinSet = new HashSet<Long>();
 		outputPinSet = new HashSet<Long>();
