@@ -6,13 +6,16 @@ import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -93,7 +96,7 @@ public class OpenblocksFrame extends JFrame
 		JComponent workspaceComponent = workspaceController.getWorkspacePanel();
 		*/
 		
-		Workspace workspace = context.getWorkspace();
+		final Workspace workspace = context.getWorkspace();
 		
 		// WTF I can't add worksapcelistener by workspace contrller
 		workspace.addWorkspaceListener(new ArdublockWorkspaceListener(this));
@@ -114,6 +117,29 @@ public class OpenblocksFrame extends JFrame
 		serialMonitorButton.addActionListener(new ActionListener () {
 			public void actionPerformed(ActionEvent e) {
 				context.getEditor().handleSerial();
+			}
+		});
+		JButton saveImageButton = new JButton(uiMessageBundle.getString("ardublock.ui.saveImage"));
+		saveImageButton.addActionListener(new ActionListener () {
+			public void actionPerformed(ActionEvent e) {
+				Dimension size = workspace.getCanvasSize();
+				System.out.println("size: " + size);
+				BufferedImage bi = new BufferedImage(1280, 2560, BufferedImage.TYPE_INT_RGB);
+				Graphics g = bi.createGraphics();
+				workspace.getBlockCanvas().getPageAt(0).getJComponent().paint(g);
+				try{
+					final JFileChooser fc = new JFileChooser();
+					fc.setSelectedFile(new File("ardublock.jpg"));
+					int returnVal = fc.showSaveDialog(workspace.getBlockCanvas().getJComponent());
+			        if (returnVal == JFileChooser.APPROVE_OPTION) {
+			            File file = fc.getSelectedFile();
+						ImageIO.write(bi,"jpg",file);
+			        }
+				} catch (Exception e1) {
+					
+				} finally {
+					g.dispose();
+				}
 			}
 		});
 
@@ -142,8 +168,11 @@ public class OpenblocksFrame extends JFrame
 			}
 		});
 		JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
+		
+		bottomPanel.add(saveImageButton);
 		bottomPanel.add(websiteButton);
 		bottomPanel.add(versionLabel);
+
 		
 		this.add(buttons, BorderLayout.NORTH);
 		this.add(bottomPanel, BorderLayout.SOUTH);
