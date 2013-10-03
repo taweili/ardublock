@@ -15,6 +15,8 @@ import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
 
+import processing.app.Editor;
+
 public class Context
 {
 	public final static String LANG_DTD_PATH = "/com/ardublock/block/lang_def.dtd";
@@ -31,8 +33,10 @@ public class Context
 	private boolean isInArduino = false;
 	private String arduinoVersionString = ARDUINO_VERSION_UNKNOWN;
 	private OsType osType; 
-			
+
 	final public static String APP_NAME = "ArduBlock";
+	
+	private Editor editor;
 	
 	public enum OsType
 	{
@@ -209,6 +213,13 @@ public class Context
 		}
 	}
 	
+	public void setEditor(Editor e) {
+		editor = e;
+	}
+	
+	public Editor getEditor() {
+		return editor;
+	}
 	
 	
 	public boolean isInArduino() {

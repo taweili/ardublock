@@ -86,7 +86,7 @@ public class OpenblocksFrame extends JFrame
 	
 	private void initOpenBlocks()
 	{
-		Context context = Context.getContext();
+		final Context context = Context.getContext();
 		
 		/*
 		WorkspaceController workspaceController = context.getWorkspaceController();
@@ -110,12 +110,19 @@ public class OpenblocksFrame extends JFrame
 		openButton.addActionListener(new OpenButtonListener(this));
 		JButton generateButton = new JButton(uiMessageBundle.getString("ardublock.ui.upload"));
 		generateButton.addActionListener(new GenerateCodeButtonListener(this, context));
+		JButton serialMonitorButton = new JButton(uiMessageBundle.getString("ardublock.ui.serialMonitor"));
+		serialMonitorButton.addActionListener(new ActionListener () {
+			public void actionPerformed(ActionEvent e) {
+				context.getEditor().handleSerial();
+			}
+		});
 
 		buttons.add(newButton);
 		buttons.add(saveButton);
 		buttons.add(saveAsButton);
 		buttons.add(openButton);
 		buttons.add(generateButton);
+		buttons.add(serialMonitorButton);
 
 		JPanel bottomPanel = new JPanel();
 		JButton websiteButton = new JButton(uiMessageBundle.getString("ardublock.ui.website"));
