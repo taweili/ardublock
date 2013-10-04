@@ -71,7 +71,7 @@ public class OpenblocksFrame extends JFrame
 	{
 		context = Context.getContext();
 		this.setTitle(makeFrameTitle());
-		this.setSize(new Dimension(1024, 860));
+		this.setSize(new Dimension(1024, 760));
 		this.setLayout(new BorderLayout());
 		//put the frame to the center of screen
 		this.setLocationRelativeTo(null);
