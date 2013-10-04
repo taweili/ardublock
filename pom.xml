@@ -56,7 +56,7 @@
 				<executions>
 					<execution>
 						<id>install-arduino-pde</id>
-						<phase>generate-sources</phase>
+						<phase>validate</phase>
 						<configuration>
 							<file>${basedir}/lib/pde.jar</file>
 							<repositoryLayout>default</repositoryLayout>
