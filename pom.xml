@@ -14,6 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
+	    <pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -51,11 +52,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
-				<version>2.3.1</version>
+				<version>2.5</version>
 				<executions>
 					<execution>
 						<id>install-arduino-pde</id>
-						<phase>validate</phase>
+						<phase>generate-sources</phase>
 						<configuration>
 							<file>${basedir}/lib/pde.jar</file>
 							<repositoryLayout>default</repositoryLayout>
@@ -72,6 +73,7 @@
 				</executions>
 			</plugin>
 		</plugins>
+		</pluginManagement>
 	</build>
 	<repositories>
 		<repository>
@@ -83,7 +85,7 @@
 		<dependency>
 			<groupId>edu.mit</groupId>
 			<artifactId>openblocks</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>arduino</groupId>
