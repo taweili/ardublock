@@ -649,7 +649,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="230 110 110">
 			<description>
 				<text>
 					Digital Var
@@ -660,7 +660,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="230 110 110">
 			<description>
 				<text>
 					Digital Var
@@ -699,7 +699,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_vector" kind="data" initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_vector" kind="data" initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes" color="230 110 110">
 			<description>
 				<text>
 					Digital Var
@@ -760,7 +760,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="230 110 110">
 			<description>
 				<text>
 					Digital Var

@@ -78,7 +78,7 @@ public class GenerateCodeButtonListener implements ActionListener
 					{
 						context.highlightBlock(renderableBlock);
 						//find the second subroutine whose name is defined, and make it highlight. though it cannot happen due to constraint of OpenBlocks -_-
-						JOptionPane.showOptionDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNameDuplicated"), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+						JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNameDuplicated"), "Error", JOptionPane.ERROR_MESSAGE);
 						return ;
 					}
 					subroutineBlockSet.add(renderableBlock);
@@ -86,19 +86,16 @@ public class GenerateCodeButtonListener implements ActionListener
 				
 			}
 		}
-		if (loopBlockSet.size() == 0)
-		{
-			JOptionPane.showOptionDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.noLoopFound"), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+		if (loopBlockSet.size() == 0) {
+			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.noLoopFound"), "Error", JOptionPane.ERROR_MESSAGE);
 			return ;
 		}
-		if (loopBlockSet.size() > 1)
-		{
-			
+		if (loopBlockSet.size() > 1) {
 			for (RenderableBlock rb : loopBlockSet)
 			{
 				context.highlightBlock(rb);
 			}
-			JOptionPane.showOptionDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.multipleLoopFound"), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.multipleLoopFound"), "Error", JOptionPane.ERROR_MESSAGE);
 			return ;
 		}
 		
@@ -134,7 +131,7 @@ public class GenerateCodeButtonListener implements ActionListener
 					break;
 				}
 			}
-			JOptionPane.showOptionDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.socketNull"), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.socketNull"), "Error", JOptionPane.ERROR_MESSAGE);
 		}
 		catch (BlockException e2)
 		{
@@ -151,7 +148,7 @@ public class GenerateCodeButtonListener implements ActionListener
 					break;
 				}
 			}
-			JOptionPane.showOptionDialog(parentFrame, e2.getMessage(), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			JOptionPane.showMessageDialog(parentFrame, e2.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 		}
 		catch (SubroutineNotDeclaredException e3)
 		{
@@ -168,7 +165,7 @@ public class GenerateCodeButtonListener implements ActionListener
 					break;
 				}
 			}
-			JOptionPane.showOptionDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNotDeclared"), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNotDeclared"), "Error", JOptionPane.ERROR_MESSAGE);
 			
 		}
 		
