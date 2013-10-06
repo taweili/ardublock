@@ -9,12 +9,10 @@ public class PolyBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode()
 	{
-	    String ret="\"";
-	    ret+=label;
-	    ret+="\"";
-		return codePrefix + "\""+label+ "\"" + codeSuffix;
+	    return codePrefix + "\""+label+ "\"" + codeSuffix;
 	}
 
 }

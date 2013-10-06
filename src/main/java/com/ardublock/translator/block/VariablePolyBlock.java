@@ -9,6 +9,7 @@ public class VariablePolyBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode()
 	{
 		String internalVariableName = translator.getNumberVariable(label);

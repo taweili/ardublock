@@ -23,6 +23,7 @@ public class PandaOutputPortBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException
 	{
 		String g_name = this.getTranslator().getBlock(blockId).getGenusName();

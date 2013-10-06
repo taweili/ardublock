@@ -14,6 +14,7 @@ public class XinchejianDigitalReadBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		translator.addDefinitionCommand(XINCHEJIAN_DIGITAL_IO_DEFINITION);

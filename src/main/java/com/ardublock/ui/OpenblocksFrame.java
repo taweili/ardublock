@@ -1,10 +1,9 @@
 package com.ardublock.ui;
 
-import java.awt.Component;
+import java.awt.BorderLayout;
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.awt.Dimension;
-import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
@@ -16,26 +15,26 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JButton;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
-import edu.mit.blocks.controller.WorkspaceController;
-import edu.mit.blocks.workspace.Workspace;
 
 import com.ardublock.core.Context;
 import com.ardublock.ui.listener.ArdublockWorkspaceListener;
 import com.ardublock.ui.listener.GenerateCodeButtonListener;
 import com.ardublock.ui.listener.NewButtonListener;
 import com.ardublock.ui.listener.OpenButtonListener;
+import com.ardublock.ui.listener.OpenblocksFrameListener;
 import com.ardublock.ui.listener.SaveAsButtonListener;
 import com.ardublock.ui.listener.SaveButtonListener;
-import com.ardublock.ui.listener.OpenblocksFrameListener;
+
+import edu.mit.blocks.controller.WorkspaceController;
+import edu.mit.blocks.workspace.Workspace;
 
 
 public class OpenblocksFrame extends JFrame
@@ -153,7 +152,6 @@ public class OpenblocksFrame extends JFrame
 		JPanel bottomPanel = new JPanel();
 		JButton websiteButton = new JButton(uiMessageBundle.getString("ardublock.ui.website"));
 		websiteButton.addActionListener(new ActionListener () {
-			@Override
 			public void actionPerformed(ActionEvent e) {
 			    Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
 			    URL url;

@@ -1,15 +1,10 @@
 package com.ardublock.translator;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.LinkedHashSet;
-
-import edu.mit.blocks.codeblocks.Block;
-import edu.mit.blocks.workspace.Workspace;
 
 import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
@@ -18,6 +13,9 @@ import com.ardublock.translator.block.TranslatorBlockFactory;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNameDuplicatedException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
+
+import edu.mit.blocks.codeblocks.Block;
+import edu.mit.blocks.workspace.Workspace;
 
 public class Translator
 {

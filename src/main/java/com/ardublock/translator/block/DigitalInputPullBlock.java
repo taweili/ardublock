@@ -19,6 +19,7 @@ public class DigitalInputPullBlock extends DigitalInputBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	
+	@Override
 	protected String generateCodeUsingNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
 	{
 		String number;
@@ -28,6 +29,7 @@ public class DigitalInputPullBlock extends DigitalInputBlock
 		return "" ;
 	}
 	
+	@Override
 	protected String generateCodeUsingNonNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
 	{
 		translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_READ_INPUT_PULLUP_DEFINE);

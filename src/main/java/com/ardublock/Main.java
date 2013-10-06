@@ -27,14 +27,14 @@ public class Main
 	
 	private void startOpenblocksFrame() throws SAXException, IOException, ParserConfigurationException
 	{
-		
 		OpenblocksFrame openblocksFrame = new OpenblocksFrame();
 		openblocksFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Context context = Context.getContext();
 		context.setInArduino(false);
 		openblocksFrame.setVisible(true);
 	}
-	
+
+	@SuppressWarnings("unused")
 	private void startConsoleFrame()
 	{
 		ConsoleFrame consoleFrame = new ConsoleFrame();

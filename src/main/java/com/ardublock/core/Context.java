@@ -3,19 +3,19 @@ package com.ardublock.core;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
+
+import processing.app.Editor;
 
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
-
-import processing.app.Editor;
 
 public class Context
 {

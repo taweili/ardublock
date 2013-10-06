@@ -10,10 +10,9 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
 import processing.app.Editor;
-import com.ardublock.core.Context;
-
 import processing.app.tools.Tool;
 
+import com.ardublock.core.Context;
 import com.ardublock.ui.ArduBlockToolFrame;
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 

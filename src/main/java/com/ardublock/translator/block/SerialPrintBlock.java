@@ -11,6 +11,7 @@ public class SerialPrintBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		translator.addSetupCommand("\tSerial.begin(9600);");

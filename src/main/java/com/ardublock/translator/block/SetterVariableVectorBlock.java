@@ -11,6 +11,7 @@ public class SetterVariableVectorBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock name = this.getRequiredTranslatorBlockAtSocket(0);

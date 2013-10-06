@@ -11,6 +11,7 @@ public class SharpGP2Y0A21 extends TranslatorBlock {
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		String func = "int ComputeSharpGP2Y0A21(int value) {\n";
 		func +=  "if (value < 10) value = 10;\n";

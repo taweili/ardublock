@@ -14,6 +14,7 @@ public class XinchejianMotorForwardBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		translator.addDefinitionCommand(ARDUBLOCK_MOTOR_DEFINITION);

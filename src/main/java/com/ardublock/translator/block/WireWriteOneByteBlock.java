@@ -12,6 +12,7 @@ public class WireWriteOneByteBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		WireReadBlock.setupWireEnvironment(translator);
