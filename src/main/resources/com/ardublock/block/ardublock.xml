@@ -760,10 +760,10 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="230 110 110">
+		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="230 110 110">.
 			<description>
 				<text>
-					Digital Var
+					character variable
 				</text>
 			</description>
 			<BlockConnectors>
@@ -1142,7 +1142,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_fake" kind="data" initlabel="bg.fake" editable-label="yes" is-label-value="yes" color="232 156 149">
+		<BlockGenus name="variable_fake" kind="data" initlabel="bg.fake" editable-label="yes" is-label-value="yes" color="230 110 110">
 			<description>
 				<text>
 					Digital Var
