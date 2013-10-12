@@ -3,6 +3,8 @@ package com.ardublock.translator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -23,8 +25,9 @@ public class Translator
 		
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
-	private Set<String> setupSet;
+	private List<String> setupCommand;
 	private Set<String> functionNameSet;
+	private Set<TranslatorBlock> bodyTranslatreFinishCallbackSet;
 	private BlockAdaptor blockAdaptor;
 	
 	private Set<Long> inputPinSet;
@@ -90,9 +93,9 @@ public class Translator
 			}
 		}
 		
-		if (!setupSet.isEmpty())
+		if (!setupCommand.isEmpty())
 		{
-			for (String command:setupSet)
+			for (String command:setupCommand)
 			{
 				headerCommand.append(command + "\n");
 			}
@@ -119,10 +122,11 @@ public class Translator
 	{
 		headerFileSet = new HashSet<String>();
 		definitionSet = new HashSet<String>();
-		setupSet = new LinkedHashSet<String>();
+		setupCommand = new LinkedList<String>();
 		functionNameSet = new HashSet<String>();
 		inputPinSet = new HashSet<Long>();
 		outputPinSet = new HashSet<Long>();
+		bodyTranslatreFinishCallbackSet = new HashSet<TranslatorBlock>();
 		
 		numberVariableSet = new HashMap<String, String>();
 		booleanVariableSet = new HashMap<String, String>();
@@ -144,7 +148,10 @@ public class Translator
 	
 	public void addSetupCommand(String command)
 	{
-		setupSet.add(command);
+		if (!setupCommand.contains(command))
+		{
+			setupCommand.add(command);
+		}
 	}
 	
 	public void addDefinitionCommand(String command)
@@ -225,5 +232,18 @@ public class Translator
 	
 	public Block getBlock(Long blockId) {
 		return workspace.getEnv().getBlock(blockId);
+	}
+	
+	public void registerBodyTranslateFinishCallback(TranslatorBlock translatorBlock)
+	{
+		bodyTranslatreFinishCallbackSet.add(translatorBlock);
+	}
+
+	public void beforeGenerateHeader() {
+		for (TranslatorBlock translatorBlock : bodyTranslatreFinishCallbackSet)
+		{
+			translatorBlock.onTranslateBodyFinished();
+		}
+		
 	}
 }
