@@ -2069,14 +2069,14 @@
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.attr">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0058.png</FileLocation>
+					<FileLocation>com/ardublock/block/tmp/face.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
