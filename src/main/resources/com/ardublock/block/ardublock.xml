@@ -860,7 +860,8 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
+		
 		<!-- ******************** Communication *************** -->
 
 		<BlockGenus name="serial_read" kind="data" color="245 245 245" initlabel="bg.serial_read">
@@ -2347,6 +2348,22 @@
 			</Images>
 		</BlockGenus>
 
+		<BlockGenus name="df_lcd_keypad" kind="command" color="255 102 0" initlabel="bg.df_lcd_keypad">
+			<description>
+				<text>LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bg.message">
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/bulk/lcd2x16-01.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 		<!-- seeedstudio grove -->
 
 		<BlockGenus name="seeed_joystick" kind="data" color="0 255 0" initlabel="bg.seeed_joystick">
@@ -3526,6 +3543,62 @@
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<!--**************************************Adafruit*********************************** -->
+		<BlockGenus name="ada_dc_motor_fwd" kind="command" color="216 5 10" initlabel="bg.ada_dc_motor_fwd">
+			<description>
+				<text>Adafruit DC motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_channel">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_speed">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<!-- <Image>
+					<FileLocation>com/ardublock/block/bulk/moteur-dc-fwd.jpg</FileLocation>
+				</Image> -->
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="ada_dc_motor_bwd" kind="command" color="216 5 10" initlabel="bg.ada_dc_motor_bwd">
+			<description>
+				<text>Adafruit DC motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_channel">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_speed">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<!-- <Image>
+					<FileLocation>com/ardublock/block/bulk/moteur-dc-bwd.jpg</FileLocation>
+				</Image> -->
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="ada_dc_motor_release" kind="command" color="216 5 10" initlabel="bg.ada_dc_motor_release">
+			<description>
+				<text>Adafruit DC motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_channel">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_speed">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<!-- <Image>
+					<FileLocation>com/ardublock/block/bulk/moteur-dc-release.jpg</FileLocation>
+				</Image> -->
+			</Images>
+		</BlockGenus>
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -3620,6 +3693,11 @@
 			<FamilyMember>panda_o3</FamilyMember>
 			<FamilyMember>panda_o4</FamilyMember>
 			<FamilyMember>panda_o5</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>ada_dc_motor_fwd</FamilyMember>
+			<FamilyMember>ada_dc_motor_bwd</FamilyMember>
+			<FamilyMember>ada_dc_motor_release</FamilyMember>
 		</BlockFamily>
 	</BlockFamilies>
 
@@ -3797,6 +3875,7 @@
 				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
 				<BlockGenusMember>panda_i1</BlockGenusMember>
 				<BlockGenusMember>panda_o1</BlockGenusMember>
+				<BlockGenusMember>df_lcd_keypad</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
 				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
@@ -3842,6 +3921,11 @@
 				<BlockGenusMember>seeed_relay</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
+				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
+				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
+				<BlockGenusMember>ada_dc_motor_release</BlockGenusMember>
 			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
