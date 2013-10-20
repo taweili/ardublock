@@ -100,4 +100,7 @@ abstract public class TranslatorBlock
 	{
 		return this.comment;
 	}
+	
+	public void onTranslateBodyFinished(){}
+	
 }

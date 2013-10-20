@@ -1,15 +1,23 @@
 package com.ardublock.translator.block;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class Loop2Block extends TranslatorBlock
 {
+	private List<String> setupCommand;
+	
 	public Loop2Block(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
+		setupCommand = new LinkedList<String>();
 	}
+	
+	
 
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
@@ -18,10 +26,12 @@ public class Loop2Block extends TranslatorBlock
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
 		while (translatorBlock != null)
 		{
-			ret += translatorBlock.toCode();
+			ret = translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
+			this.setupCommand.add(ret);
 		}
-        translator.addSetupCommand(ret);
+		
+		translator.registerBodyTranslateFinishCallback(this);
 //		return "";
 		ret="";
 		ret = "void loop()\n{\n";
@@ -34,4 +44,14 @@ public class Loop2Block extends TranslatorBlock
 		ret = ret + "}\n\n";
 		return ret;
 	}
+	
+	@Override
+	public void onTranslateBodyFinished()
+	{
+		for (String command : setupCommand)
+		{
+			translator.addSetupCommand(command);
+		}
+	}
+	
 }

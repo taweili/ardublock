@@ -22,7 +22,7 @@ public class SerialPrintBlock extends TranslatorBlock
 		String test=translatorBlock.toCode();
 //		ret+=test;
 		if(test.equals("true")){
-		    ret+="\tSerial.println(\"\");\n";
+		    ret+="\tSerial.println();\n";
 		}
 		return ret;
 	}
