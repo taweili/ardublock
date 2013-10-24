@@ -1,0 +1,30 @@
+package com.ardublock.translator.block;
+
+import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
+
+public class VariableVectorBlock extends TranslatorBlock
+{
+	public VariableVectorBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	{
+		super(blockId, translator, codePrefix, codeSuffix, label);
+	}
+
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
+	{
+//		String internalVariableName = translator.getNumberVariable(label);
+//		if (internalVariableName == null)
+//		{
+//			internalVariableName = translator.buildVariableName(label);
+//			translator.addNumberVariable(label, internalVariableName);
+//			translator.addDefinitionCommand("int " + internalVariableName + ";");
+//			translator.addSetupCommand(internalVariableName + " = 0;");
+//		}
+//		return codePrefix + "lalala" + codeSuffix;
+        TranslatorBlock position = this.getRequiredTranslatorBlockAtSocket(0);
+		String ret = "vec_"+label.replace(" ","")+"["+position.toCode()+"]";
+		return codePrefix + ret + codeSuffix;
+	}
+
+}
