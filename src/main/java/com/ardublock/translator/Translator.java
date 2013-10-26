@@ -79,20 +79,26 @@ public class Translator
 			headerCommand.append("\n");
 		}
 		
-		headerCommand.append("void setup()\n{\n");
+		return headerCommand.toString() + generateSetupFunction();
+	}
+	
+	public String generateSetupFunction()
+	{
+		StringBuilder setupFunction = new StringBuilder();
+		setupFunction.append("void setup()\n{\n");
 		
 		if (!inputPinSet.isEmpty())
 		{
 			for (Long pinNumber:inputPinSet)
 			{
-				headerCommand.append("\tpinMode( " + pinNumber + " , INPUT);\n");
+				setupFunction.append("\tpinMode( " + pinNumber + " , INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
 			for (Long pinNumber:outputPinSet)
 			{
-				headerCommand.append("\tpinMode( " + pinNumber + " , OUTPUT);\n");
+				setupFunction.append("\tpinMode( " + pinNumber + " , OUTPUT);\n");
 			}
 		}
 		
@@ -100,12 +106,13 @@ public class Translator
 		{
 			for (String command:setupCommand)
 			{
-				headerCommand.append(command + "\n");
+				setupFunction.append(command + "\n");
 			}
 		}
 		
-		headerCommand.append("}\n\n");
-		return headerCommand.toString();
+		setupFunction.append("}\n\n");
+		
+		return setupFunction.toString();
 	}
 	
 	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException

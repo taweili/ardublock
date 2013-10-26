@@ -113,11 +113,6 @@ public class GenerateCodeButtonListener implements ActionListener
 
 		try
 		{
-			for (RenderableBlock renderableBlock : scoopBlockSet)
-			{
-				Block scoopBlock = renderableBlock.getBlock();
-				code.append(translator.translate(scoopBlock.getBlockID()));
-			}
 			
 			for (RenderableBlock renderableBlock : loopBlockSet)
 			{
@@ -125,11 +120,18 @@ public class GenerateCodeButtonListener implements ActionListener
 				code.append(translator.translate(loopBlock.getBlockID()));
 			}
 			
+			for (RenderableBlock renderableBlock : scoopBlockSet)
+			{
+				Block scoopBlock = renderableBlock.getBlock();
+				code.append(translator.translate(scoopBlock.getBlockID()));
+			}
+			
 			for (RenderableBlock renderableBlock : subroutineBlockSet)
 			{
 				Block subroutineBlock = renderableBlock.getBlock();
 				code.append(translator.translate(subroutineBlock.getBlockID()));
 			}
+			
 			translator.beforeGenerateHeader();
 			code.insert(0, translator.genreateHeaderCommand());
 		}
