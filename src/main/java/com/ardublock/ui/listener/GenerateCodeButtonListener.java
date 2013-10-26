@@ -87,10 +87,12 @@ public class GenerateCodeButtonListener implements ActionListener
 				}
 				if (block.getGenusName().equals("scoop_task"))
 				{
+					translator.setScoopProgram(true);
 					scoopBlockSet.add(renderableBlock);
 				}
 				if (block.getGenusName().equals("scoop_loop"))
 				{
+					translator.setScoopProgram(true);
 					scoopBlockSet.add(renderableBlock);
 				}
 				
@@ -108,10 +110,15 @@ public class GenerateCodeButtonListener implements ActionListener
 			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.multipleLoopFound"), "Error", JOptionPane.ERROR_MESSAGE);
 			return ;
 		}
-		
 
 		try
 		{
+			for (RenderableBlock renderableBlock : scoopBlockSet)
+			{
+				Block scoopBlock = renderableBlock.getBlock();
+				code.append(translator.translate(scoopBlock.getBlockID()));
+			}
+			
 			for (RenderableBlock renderableBlock : loopBlockSet)
 			{
 				Block loopBlock = renderableBlock.getBlock();
