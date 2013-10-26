@@ -14,7 +14,6 @@ public class LoopBlock extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		translator.setRootBlockName("loop");
 		String ret;
 		ret = "void loop()\n{\n";
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);

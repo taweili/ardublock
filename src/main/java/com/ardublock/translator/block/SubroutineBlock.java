@@ -15,7 +15,6 @@ public class SubroutineBlock extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		translator.setRootBlockName("subroutine");
 		String subroutineName = label.trim();
 		String ret;
 		ret = "void " + subroutineName + "()\n{\n";

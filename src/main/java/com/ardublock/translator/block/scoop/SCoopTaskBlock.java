@@ -16,7 +16,6 @@ public class SCoopTaskBlock extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		translator.setRootBlockName("SCoop.task");
 		String ret;
 		
 		translator.addHeaderFile("SCoop.h");

@@ -116,18 +116,21 @@ public class GenerateCodeButtonListener implements ActionListener
 			
 			for (RenderableBlock renderableBlock : loopBlockSet)
 			{
+				translator.setRootBlockName("loop");
 				Block loopBlock = renderableBlock.getBlock();
 				code.append(translator.translate(loopBlock.getBlockID()));
 			}
 			
 			for (RenderableBlock renderableBlock : scoopBlockSet)
 			{
+				translator.setRootBlockName("scoop");
 				Block scoopBlock = renderableBlock.getBlock();
 				code.append(translator.translate(scoopBlock.getBlockID()));
 			}
 			
 			for (RenderableBlock renderableBlock : subroutineBlockSet)
 			{
+				translator.setRootBlockName("subroutine");
 				Block subroutineBlock = renderableBlock.getBlock();
 				code.append(translator.translate(subroutineBlock.getBlockID()));
 			}
