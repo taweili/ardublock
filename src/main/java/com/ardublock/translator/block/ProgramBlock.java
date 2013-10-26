@@ -7,11 +7,11 @@ import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Loop2Block extends TranslatorBlock
+public class ProgramBlock extends TranslatorBlock
 {
 	private List<String> setupCommand;
 	
-	public Loop2Block(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public ProgramBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
 		setupCommand = new LinkedList<String>();
