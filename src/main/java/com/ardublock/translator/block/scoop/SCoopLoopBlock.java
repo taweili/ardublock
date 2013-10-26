@@ -8,17 +8,31 @@ import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 public class SCoopLoopBlock extends TranslatorBlock
 {
 
-	public SCoopLoopBlock(Long blockId, Translator translator,
-			String codePrefix, String codeSuffix, String label) {
+	public SCoopLoopBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public String toCode() throws SocketNullException,
-			SubroutineNotDeclaredException {
-		// TODO Auto-generated method stub
-		return "";
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
+	{
+		translator.setRootBlockName("SCoop.loop");
+		String ret;
+		
+		translator.addHeaderFile("SCoop.h");
+		translator.addSetupCommand("mySCoop.start();");
+		
+		String taskName = SCoopTaskBlock.createScoopTaskName();
+		ret = "defineTaskLoop(" + taskName + ")\n"
+				+ "{\n";
+		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
+		while (translatorBlock != null)
+		{
+			ret = ret + translatorBlock.toCode();
+			translatorBlock = translatorBlock.nextTranslatorBlock();
+		}
+		ret = ret + "}\n\n";
+		return ret;
 	}
 
 }

@@ -9,16 +9,26 @@ public class SCoopTaskBlock extends TranslatorBlock
 {
 
 	public SCoopTaskBlock(Long blockId, Translator translator,
-			String codePrefix, String codeSuffix, String label) {
+			String codePrefix, String codeSuffix, String label)
+	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toCode() throws SocketNullException,
-			SubroutineNotDeclaredException {
+			SubroutineNotDeclaredException
+	{
 		// TODO Auto-generated method stub
 		return "";
 	}
+	
+	private static int taskId = 0;
+
+	public static String createScoopTaskName()
+	{
+		++taskId;
+		return "scoopTask" + taskId;
+	}
 
 }
+
