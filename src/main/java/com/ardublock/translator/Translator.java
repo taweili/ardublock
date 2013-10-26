@@ -38,7 +38,10 @@ public class Translator
 	
 	private Workspace workspace;
 	
+	private String rootBlockName;
+	
 	private int variableCnt;
+	private boolean isScoopProgram;
 	public Translator(Workspace ws)
 	{
 		workspace = ws;
@@ -134,6 +137,9 @@ public class Translator
 		blockAdaptor = buildOpenBlocksAdaptor();
 		
 		variableCnt = 0;
+		
+		rootBlockName = null;
+		isScoopProgram = false;
 	}
 	
 	private BlockAdaptor buildOpenBlocksAdaptor()
@@ -245,5 +251,21 @@ public class Translator
 			translatorBlock.onTranslateBodyFinished();
 		}
 		
+	}
+
+	public String getRootBlockName() {
+		return rootBlockName;
+	}
+
+	public void setRootBlockName(String rootBlockName) {
+		this.rootBlockName = rootBlockName;
+	}
+
+	public boolean isScoopProgram() {
+		return isScoopProgram;
+	}
+
+	public void setScoopProgram(boolean isScoopProgram) {
+		this.isScoopProgram = isScoopProgram;
 	}
 }

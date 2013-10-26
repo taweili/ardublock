@@ -46,6 +46,7 @@ public class GenerateCodeButtonListener implements ActionListener
 		
 		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
 		Set<RenderableBlock> subroutineBlockSet = new HashSet<RenderableBlock>();
+		Set<RenderableBlock> scoopBlockSet = new HashSet<RenderableBlock>();
 		StringBuilder code = new StringBuilder();
 		
 		
@@ -55,6 +56,7 @@ public class GenerateCodeButtonListener implements ActionListener
 			
 			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{
+				
 				if(block.getGenusName().equals("loop"))
 				{
 					loopBlockSet.add(renderableBlock);
@@ -82,6 +84,14 @@ public class GenerateCodeButtonListener implements ActionListener
 						return ;
 					}
 					subroutineBlockSet.add(renderableBlock);
+				}
+				if (block.getGenusName().equals("scoop_task"))
+				{
+					scoopBlockSet.add(renderableBlock);
+				}
+				if (block.getGenusName().equals("scoop_loop"))
+				{
+					scoopBlockSet.add(renderableBlock);
 				}
 				
 			}

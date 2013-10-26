@@ -31,7 +31,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.setup" />
-				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop2" />
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop" />
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="loop" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
@@ -167,7 +167,38 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
+		<BlockGenus name="scoop_task" kind="command" color="26 97 218" initlabel="bg.program" is-starter="yes" is-terminator="yes" label-unique="yes">
+			<description>
+				<text>this is the loop of the arduino</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.setup" />
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="scoop_loop" kind="command" color="26 97 218" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
+			<description>
+				<text>this is the loop of the arduino</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.do" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="scoop_sleep" kind="command" color="26 97 218" initlabel="bg.scoop_sleep">
+			<description>
+				<text>program sleep in x milliseconds</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.milliseconds">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
 		<!--****************** Pins *************** -->
 
 		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169" initlabel="bg.pin-read-digital">
@@ -3730,6 +3761,9 @@
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
+				<BlockGenusMember>scoop_task</BlockGenusMember>
+				<BlockGenusMember>scoop_loop</BlockGenusMember>
+				<BlockGenusMember>scoop_sleep</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
