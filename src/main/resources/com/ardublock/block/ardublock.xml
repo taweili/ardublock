@@ -25,7 +25,7 @@
 	</BlockConnectorShapes>
 	<BlockGenuses>
 		<!-- ******************** Controls Menu *************** -->
-		<BlockGenus name="loop2" kind="command" color="255 240 0" initlabel="bg.loop2" is-starter="yes" is-terminator="yes" label-unique="yes">
+		<BlockGenus name="program" kind="command" color="255 240 0" initlabel="bg.program" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
 			</description>
@@ -3719,7 +3719,7 @@
 	<BlockDrawerSets>
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
 			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="255 255 0">
-				<BlockGenusMember>loop2</BlockGenusMember>
+				<BlockGenusMember>program</BlockGenusMember>
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
