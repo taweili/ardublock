@@ -22,6 +22,8 @@ Change the /src/main/resources/com/ardublock/block/ardublock_def.xml to add new 
 
 	$ mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
 
+The Visual Block environment should show up. Happy Hacking! ;) 
+
 Deploy
 ----
 Edit code of ardublock
@@ -29,8 +31,6 @@ Edit code of ardublock
 	$ mvn clean package
 
 copy the target/ardublock-all.jar to Arduino\tools\ArduBlockTool\tool
-
-The Visual Block environment should show up. Happy Hacking! ;) 
 
 Authors
 ----
