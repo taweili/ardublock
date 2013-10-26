@@ -8,17 +8,26 @@ import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 public class SCoopSleepBlock extends TranslatorBlock
 {
 
-	public SCoopSleepBlock(Long blockId, Translator translator,
-			String codePrefix, String codeSuffix, String label) {
+	public SCoopSleepBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public String toCode() throws SocketNullException,
-			SubroutineNotDeclaredException {
-		// TODO Auto-generated method stub
-		return "";
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
+	{
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		String value = translatorBlock.toCode();
+		
+		String rootBlockName = translator.getRootBlockName().toLowerCase().trim();
+		if (rootBlockName.startsWith("scoop"))
+		{
+			return "sleep(" + value + ");\n";
+		}
+		else
+		{
+			return "mySCoop.sleep(" + value + ");\n";
+		}
 	}
 
 }
