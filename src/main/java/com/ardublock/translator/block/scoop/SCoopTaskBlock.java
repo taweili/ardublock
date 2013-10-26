@@ -8,20 +8,48 @@ import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 public class SCoopTaskBlock extends TranslatorBlock
 {
 
-	public SCoopTaskBlock(Long blockId, Translator translator,
-			String codePrefix, String codeSuffix, String label)
+	public SCoopTaskBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
 	@Override
-	public String toCode() throws SocketNullException,
-			SubroutineNotDeclaredException
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		// TODO Auto-generated method stub
-		return "";
+		translator.setRootBlockName("SCoop.task");
+		String ret;
+		
+		translator.addHeaderFile("SCoop.h");
+		translator.addSetupCommand("mySCoop.start();");
+		
+		String taskName = SCoopTaskBlock.createScoopTaskName();
+		ret = "defineTask(" + taskName + ")\n"
+				+ "void " + taskName + "::setup()\n"
+				+ "{\n";
+		
+		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
+		while (translatorBlock != null)
+		{
+			ret = ret + translatorBlock.toCode();
+			translatorBlock = translatorBlock.nextTranslatorBlock();
+		}
+		ret = ret + "}\n\n"
+				+ "void " + taskName + "::loop()\n"
+				+ "{\n";
+		
+		translatorBlock = getTranslatorBlockAtSocket(1);
+		while (translatorBlock != null)
+		{
+			ret = ret + translatorBlock.toCode();
+			translatorBlock = translatorBlock.nextTranslatorBlock();
+		}
+		
+		ret = ret + "}\n\n";
+		
+		return ret;
+
 	}
-	
+
 	private static int taskId = 0;
 
 	public static String createScoopTaskName()
@@ -31,4 +59,3 @@ public class SCoopTaskBlock extends TranslatorBlock
 	}
 
 }
-
