@@ -14,6 +14,7 @@ public abstract class AbstractTinkerWriteAnalogBlock extends TranslatorBlock
 		translator.addHeaderFile("TinkerKit.h");
 	}
 	
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		String ret = "analogWrite(";

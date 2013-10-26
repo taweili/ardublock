@@ -11,10 +11,11 @@ public class VariableVectorBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
         TranslatorBlock position = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "vec_"+label.replace(" ","")+"["+position.toCode()+"]";
+		String ret = "vec_"+label.replace(" ","")+"["+position.toCode()+" - 1]";
 		return codePrefix + ret + codeSuffix;
 	}
 

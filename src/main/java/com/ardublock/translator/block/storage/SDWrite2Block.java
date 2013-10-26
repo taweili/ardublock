@@ -1,6 +1,5 @@
 package com.ardublock.translator.block.storage;
 
-import com.ardublock.core.Context;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
@@ -13,6 +12,7 @@ public class SDWrite2Block extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 	    translator.addDefinitionCommand("#include <SD.h>\n");
@@ -31,8 +31,4 @@ public class SDWrite2Block extends TranslatorBlock
         ret+="\t}\n";
 		return  ret ;
 	}
-	
-
-
-	
 }

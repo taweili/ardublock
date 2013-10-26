@@ -23,6 +23,7 @@ public class BlockException extends RuntimeException
 	public void setBlockId(Long blockId) {
 		this.blockId = blockId;
 	}
+	@Override
 	public String getMessage() {
 		return message;
 	}

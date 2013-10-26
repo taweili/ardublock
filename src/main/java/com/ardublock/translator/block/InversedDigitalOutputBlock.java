@@ -12,6 +12,7 @@ public class InversedDigitalOutputBlock extends DigitalOutputBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	
+	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);

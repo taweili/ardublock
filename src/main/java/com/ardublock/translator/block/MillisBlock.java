@@ -9,6 +9,7 @@ public class MillisBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode()
 	{
 		String ret = "millis()";

@@ -13,6 +13,7 @@ public class SDPortBlock extends TranslatorBlock
 		
 	}
 
+	@Override
 	public String toCode() throws SocketNullException
 	{
 		return codePrefix + label + codeSuffix;
