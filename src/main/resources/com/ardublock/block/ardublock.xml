@@ -137,6 +137,20 @@
 				<BlockConnector label="" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+	<BlockGenus name="do_while" kind="command" initlabel="bg.do_while" color="255 221 0">
+          <description>
+            <text>
+                Do While Block
+            </text>
+          </description>
+          <BlockConnectors>
+            <BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
+            <BlockConnector label="bc.test" connector-kind="socket" connector-type="boolean">
+              <DefaultArg genus-name="less" label="Pick a test" />
+            </BlockConnector>    
+          </BlockConnectors>
+      </BlockGenus> 
 
 		<BlockGenus name="repeat_times" kind="command" color="255 221 0" initlabel="bg.repeat_times">
 			<description>
@@ -3742,6 +3756,7 @@
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
+				<BlockGenusMember>do_while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 				<BlockGenusMember>repeat</BlockGenusMember>
 				<BlockGenusMember>repeat_control</BlockGenusMember>
