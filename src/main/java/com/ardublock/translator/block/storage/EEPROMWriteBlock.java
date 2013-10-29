@@ -1,13 +1,20 @@
 package com.ardublock.translator.block.storage;
 
-import com.ardublock.core.Context;
+import java.util.ResourceBundle;
+//import com.ardublock.core.Context;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
+import com.ardublock.translator.block.NumberBlock;
+import com.ardublock.translator.block.VariableNumberBlock;
+import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
+
 public class EEPROMWriteBlock extends TranslatorBlock
 {
+	private static ResourceBundle uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
+	
 	public EEPROMWriteBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
@@ -17,34 +24,19 @@ public class EEPROMWriteBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		setupEEPROMEnvironment(translator);
-		
-		String ret = "";
-		
-		Context context = Context.getContext();
-		if (context.getArduinoVersionString().equals(Context.ARDUINO_VERSION_UNKNOWN))
-		{
-			ret += "//Unable to detect your Arduino version, using 1.0 in default\n";
-		}
 
-		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);		
-		TranslatorBlock tb1 = this.getRequiredTranslatorBlockAtSocket(1);
-		
-		//Switch was not used for compatibility with java 1.6
-
-			ret += "EEPROM.write( ";
-			int devAddr1 = Integer.parseInt(tb.toCode());
-			if(devAddr1>1023){
-			devAddr1 = 1023;
-			}
-			ret = ret + Integer.toString(devAddr1);
-			ret = ret + " , ";
-			int data1 = Integer.parseInt(tb1.toCode());
-			if(data1>128){
-			data1 = 128;
-			}
-			ret = ret + data1;
-			ret = ret + " );\n";
-
+			String ret = "EEPROM.write( ";
+			
+			TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
+			//if (!(tb instanceof VariableNumberBlock) && !(tb instanceof NumberBlock)) {
+				
+			//	throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.number_int_slot"));
+			//}
+			
+			ret += tb.toCode();
+			tb = this.getRequiredTranslatorBlockAtSocket(1);
+			ret = "\t"+ret + " , " + tb.toCode() + " ) ;\n";
+			
 		return codePrefix + ret + codeSuffix;
 	}
 	
