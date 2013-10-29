@@ -1023,6 +1023,58 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="eeprom_read_long" kind="data" color="0 100 90" initlabel="bg.eeprom_read_long">
+			<description>
+				<text>EEPROM Read 'unsigned long'</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="eeprom_write_long" kind="command" color="0 100 90" initlabel="bg.eeprom_write_long">
+			<description>
+				<text>EEPROM Write 'unsigned long'</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_data">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="eeprom_read_int" kind="data" color="0 100 90" initlabel="bg.eeprom_read_int">
+			<description>
+				<text>EEPROM Read integer </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="eeprom_write_int" kind="command" color="0 100 90" initlabel="bg.eeprom_write_int">
+			<description>
+				<text>EEPROM Write integer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_data">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<BlockGenus name="sd_write2" kind="command" color="0 100 90" initlabel="bg.sd_write2">
 			<description>
@@ -3834,6 +3886,10 @@
 			<BlockDrawer button-color="0 50 45" name="bd.storage" type="factory">
 				<BlockGenusMember>eeprom_read</BlockGenusMember>
 				<BlockGenusMember>eeprom_write</BlockGenusMember>
+				<BlockGenusMember>eeprom_read_int</BlockGenusMember>
+				<BlockGenusMember>eeprom_write_int</BlockGenusMember>
+				<BlockGenusMember>eeprom_read_long</BlockGenusMember>
+				<BlockGenusMember>eeprom_write_long</BlockGenusMember>
 				<BlockGenusMember>sd_write2</BlockGenusMember>
 				<!-- <BlockGenusMember>sd_write</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
