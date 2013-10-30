@@ -56,7 +56,7 @@ abstract public class TranslatorBlock
 		return translator;
 	}
 	
-	protected TranslatorBlock nextTranslatorBlock()
+	public TranslatorBlock nextTranslatorBlock()
 	{
 		return this.nextTranslatorBlock("", "");
 	}
