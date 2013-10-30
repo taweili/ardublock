@@ -701,21 +701,7 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-
-	    <BlockGenus name="setter_variable_number_unsigned_long" kind="command" color="232 156 149" initlabel="bg.setter_variable_number_unsigned_long">
-	      <description>
-	        <text>set a long number variable</text>
-	      </description>
-	      <BlockConnectors>
-	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_number_unsigned_long" label="long number variable name" />
-	        </BlockConnector>
-	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
-	          <DefaultArg genus-name="number" label="0" />
-	        </BlockConnector>
-	      </BlockConnectors>
-	    </BlockGenus>
-
+		
 		<BlockGenus name="setter_variable_number" kind="command" color="232 156 149" initlabel="bg.setter_variable_number">
 			<description>
 				<text>set a number variable</text>
@@ -729,7 +715,21 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
+		<BlockGenus name="setter_variable_number_unsigned_long" kind="command" color="232 156 149" initlabel="bg.setter_variable_number_unsigned_long">
+	      <description>
+	        <text>set a long number variable</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_number_unsigned_long" label="long number variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="number" label="0" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+		
 		<BlockGenus name="setter_variable_digital" kind="command" color="232 156 149" initlabel="bg.setter_variable_digital">
 			<description>
 				<text>write digital to pin</text>
