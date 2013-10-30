@@ -24,6 +24,27 @@
 		<BlockConnectorShape shape-type="cmd3" shape-number="17" />
 	</BlockConnectorShapes>
 	<BlockGenuses>
+	    <!-- ******************** NEW FOR LOOP **************** -->
+		<BlockGenus name="repeat_control" kind="command" color="255 221 0" initlabel="bg.repeat_control">
+			<description>
+				<text>repeat</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
+					<DefaultArg genus-name="variable_number" label="variable name" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.start">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.end">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.increment">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="cmd" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- ******************** Controls Menu *************** -->
 		<BlockGenus name="program" kind="command" color="255 240 0" initlabel="bg.program" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
@@ -137,7 +158,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
 					<DefaultArg genus-name="variable_number" label="variable name" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
 				<BlockConnector connector-type="cmd" connector-kind="socket" />
@@ -396,7 +417,6 @@
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
 		</BlockGenus>
-		
 		<BlockGenus name="map_common" kind="data" color="149 193 31" initlabel="bg.map_common">
 			<description>
 				<text>map value from [0, 1023] to [0, 255]</text>
@@ -659,6 +679,17 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+	    <BlockGenus name="variable_number_unsigned_long" kind="data" initlabel="bg.variable_number_unsigned_long" editable-label="yes" is-label-value="yes" color="230 110 110">
+	      <description>
+	        <text>
+	          Unsigned Long Var
+	        </text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+	      </BlockConnectors>
+	    </BlockGenus>
 
 		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="230 110 110">
 			<description>
@@ -684,6 +715,20 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+	    <BlockGenus name="setter_variable_number_unsigned_long" kind="command" color="232 156 149" initlabel="bg.setter_variable_number_unsigned_long">
+	      <description>
+	        <text>set a long number variable</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_number_unsigned_long" label="long number variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="number" label="0" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
 
 		<BlockGenus name="setter_variable_digital" kind="command" color="232 156 149" initlabel="bg.setter_variable_digital">
 			<description>
@@ -2706,7 +2751,6 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		
 		<BlockGenus name="seeed_switch" kind="data" color="0 255 0" initlabel="bg.seeed_switch">
 		    <description>
 				<text>Read digital from the pin</text>
@@ -2723,7 +2767,6 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		
 		<BlockGenus name="seeed_ir_refl_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_ir_refl_sensor">
 		    <description>
 				<text>Read digital from the pin</text>
@@ -3726,6 +3769,7 @@
 				<BlockGenusMember>while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 				<BlockGenusMember>repeat</BlockGenusMember>
+				<BlockGenusMember>repeat_control</BlockGenusMember>
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
@@ -3781,8 +3825,10 @@
 				<BlockGenusMember>true</BlockGenusMember>
 				<BlockGenusMember>false</BlockGenusMember>
 				<BlockGenusMember>variable_number</BlockGenusMember>
+				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
 				<BlockGenusMember>variable_digital</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
+				<BlockGenusMember>setter_variable_number_unsigned_long</BlockGenusMember>
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
 				<BlockGenusMember>variable_vector</BlockGenusMember>
 				<BlockGenusMember>create_variable_vector</BlockGenusMember>
