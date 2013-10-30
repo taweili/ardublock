@@ -701,7 +701,7 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
+
 		<BlockGenus name="setter_variable_number" kind="command" color="232 156 149" initlabel="bg.setter_variable_number">
 			<description>
 				<text>set a number variable</text>
@@ -729,7 +729,7 @@
 	        </BlockConnector>
 	      </BlockConnectors>
 	    </BlockGenus>
-		
+
 		<BlockGenus name="setter_variable_digital" kind="command" color="232 156 149" initlabel="bg.setter_variable_digital">
 			<description>
 				<text>write digital to pin</text>
