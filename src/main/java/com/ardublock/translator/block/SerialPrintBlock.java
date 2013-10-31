@@ -14,7 +14,10 @@ public class SerialPrintBlock extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		translator.addSetupCommand("\tSerial.begin(9600);");
+		/**
+		 * DO NOT add tab in code any more, we'll use arduino to format code, or the code will duplicated. 
+		 */
+		translator.addSetupCommand("Serial.begin(9600);");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0, "\tSerial.print( ", " );\n\tSerial.print(\" \");\n");
 		
 		String ret = translatorBlock.toCode();
