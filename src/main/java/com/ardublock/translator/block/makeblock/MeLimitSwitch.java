@@ -4,9 +4,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class MeLineFinder extends TranslatorBlock {
+public class MeLimitSwitch extends TranslatorBlock {
 
-	public MeLineFinder(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
+	public MeLimitSwitch(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
@@ -17,9 +17,9 @@ public class MeLineFinder extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeLineFinder lineFinder"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
+		String ret = "MeLimitSwitch switch"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
-		return "lineFinder"+translatorBlock.toCode()+".readSensors()";
+		return "switch"+translatorBlock.toCode()+".touched()";
 	}
 
 }
