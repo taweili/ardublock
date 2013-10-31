@@ -1037,9 +1037,9 @@
 		</BlockGenus>
 
 		<!-- ******************** Storage *************** -->
-		<BlockGenus name="eeprom_read" kind="data" color="0 100 90" initlabel="bg.eeprom_read">
+		<BlockGenus name="eeprom_read_int" kind="data" color="0 100 90" initlabel="bg.eeprom_read_int">
 			<description>
-				<text>EEPROM Read</text>
+				<text>EEPROM Read integer </text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -1048,10 +1048,10 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
-		<BlockGenus name="eeprom_write" kind="command" color="0 100 90" initlabel="bg.eeprom_write">
+		
+		<BlockGenus name="eeprom_write_int" kind="command" color="0 100 90" initlabel="bg.eeprom_write_int">
 			<description>
-				<text>EEPROM Write</text>
+				<text>EEPROM Write integer</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
@@ -1089,9 +1089,9 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="eeprom_read_int" kind="data" color="0 100 90" initlabel="bg.eeprom_read_int">
+		<BlockGenus name="eeprom_read" kind="data" color="0 100 90" initlabel="bg.eeprom_read">
 			<description>
-				<text>EEPROM Read integer </text>
+				<text>EEPROM Read</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
@@ -1100,10 +1100,10 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
-		<BlockGenus name="eeprom_write_int" kind="command" color="0 100 90" initlabel="bg.eeprom_write_int">
+
+		<BlockGenus name="eeprom_write" kind="command" color="0 100 90" initlabel="bg.eeprom_write">
 			<description>
-				<text>EEPROM Write integer</text>
+				<text>EEPROM Write</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
@@ -1114,7 +1114,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
 		<BlockGenus name="sd_write2" kind="command" color="0 100 90" initlabel="bg.sd_write2">
 			<description>
 				<text>Write to SD card</text>
@@ -4177,12 +4177,12 @@
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 50 45" name="bd.storage" type="factory">
-				<BlockGenusMember>eeprom_read</BlockGenusMember>
-				<BlockGenusMember>eeprom_write</BlockGenusMember>
 				<BlockGenusMember>eeprom_read_int</BlockGenusMember>
 				<BlockGenusMember>eeprom_write_int</BlockGenusMember>
 				<BlockGenusMember>eeprom_read_long</BlockGenusMember>
 				<BlockGenusMember>eeprom_write_long</BlockGenusMember>
+				<BlockGenusMember>eeprom_read</BlockGenusMember>
+				<BlockGenusMember>eeprom_write</BlockGenusMember>
 				<BlockGenusMember>sd_write2</BlockGenusMember>
 				<!-- <BlockGenusMember>sd_write</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
