@@ -17,7 +17,7 @@ public class MeLimitSwitch extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeLimitSwitch switch"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
+		String ret = "MeLimitSwitch switch"+translatorBlock.toCode()+"(PORT"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		return "switch"+translatorBlock.toCode()+".touched()";
 	}
