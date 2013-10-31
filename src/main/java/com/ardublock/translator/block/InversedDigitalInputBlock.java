@@ -11,11 +11,25 @@ public class InversedDigitalInputBlock extends DigitalInputBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	
-	@Override
-	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
+	protected String generateCodeUsingNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String code = super.toCode();
-		code = "!(" + code + ")";
-		return code;
+		String number;
+		number = translatorBlock.toCode();
+		translator.addInputPin(Long.parseLong(number));
+		
+		String ret = "!digitalRead( ";
+		ret = ret + number;
+		ret = ret + ")";
+		return codePrefix + ret + codeSuffix;
+	}
+	
+	protected String generateCodeUsingNonNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
+	{
+		translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_READ_DEFINE);
+		String ret = "!__ardublockDigitalRead(";
+		
+		ret = ret + translatorBlock.toCode();
+		ret = ret + ")";
+		return codePrefix + ret + codeSuffix;
 	}
 }
