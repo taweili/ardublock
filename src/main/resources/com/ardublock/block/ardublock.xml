@@ -1088,7 +1088,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
+
 		<BlockGenus name="eeprom_read" kind="data" color="0 100 90" initlabel="bg.eeprom_read">
 			<description>
 				<text>EEPROM Read</text>
@@ -1114,7 +1114,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
+
 		<BlockGenus name="sd_write2" kind="command" color="0 100 90" initlabel="bg.sd_write2">
 			<description>
 				<text>Write to SD card</text>
