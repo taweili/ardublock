@@ -137,6 +137,20 @@
 				<BlockConnector label="" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+	<BlockGenus name="do_while" kind="command" initlabel="bg.do_while" color="255 221 0">
+          <description>
+            <text>
+                Do While Block
+            </text>
+          </description>
+          <BlockConnectors>
+            <BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
+            <BlockConnector label="bc.test" connector-kind="socket" connector-type="boolean">
+              <DefaultArg genus-name="less" label="Pick a test" />
+            </BlockConnector>    
+          </BlockConnectors>
+      </BlockGenus> 
 
 		<BlockGenus name="repeat_times" kind="command" color="255 221 0" initlabel="bg.repeat_times">
 			<description>
@@ -3657,6 +3671,243 @@
 				</Image> -->
 			</Images>
 		</BlockGenus>
+		<!--***Makeblock***-->
+		<BlockGenus name="me_ultrasonic_sensor" kind="data" color="0 177 236" initlabel="bg.me_ultrasonic_sensor">
+			<description>
+				<text>Makeblock Ultrasonic Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_7" label="Port 7" />
+					
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_ultrasonic_sensor.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_linefinder" kind="data" color="0 177 236" initlabel="bg.me_linefinder">
+			<description>
+				<text>Makeblock LineFinder</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_4" label="Port 4" />
+					
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_linefinder.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_motordriver" kind="command" color="0 177 236" initlabel="bg.me_motordriver">
+			<description>
+				<text>Makeblock DC Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
+					<DefaultArg genus-name="me_motor_1" label="M1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_motordriver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_servodriver" kind="command" color="0 177 236" initlabel="bg.me_servodriver">
+			<description>
+				<text>Makeblock Servo</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_1" label="Port 1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.device_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle_number">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_servodriver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_infraredreceiver" kind="data" color="0 177 236" initlabel="bg.me_infraredreceiver">
+			<description>
+				<text>Makeblock Infrared Receiver</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_7" label="Port 7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_infraredreceiver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_bluetooth_read" kind="command" color="0 177 236" initlabel="bg.me_bluetooth_read">
+			<description>
+				<text>Makeblock Bluetooth Read</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_3" label="Port 3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.input_data">
+					<DefaultArg genus-name="variable_number" label="btRead" />
+				</BlockConnector>
+				<BlockConnector label="bc.then" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_bluetooth.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_bluetooth_write" kind="command" color="0 177 236" initlabel="bg.me_bluetooth_write">
+			<description>
+				<text>Makeblock Bluetooth Write</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_3" label="Port 3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.output_data">
+					<DefaultArg genus-name="variable_number" label="btRead" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_bluetooth_write.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_bluetooth_commands" kind="command" color="0 177 236" initlabel="bg.me_bluetooth_commands">
+			<description>
+				<text>Makeblock Bluetooth Commands</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_3" label="Port 3" />
+				</BlockConnector>
+				<BlockConnector label="bc.then" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_bluetooth_cmds.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_bluetooth_command" kind="command" color="0 177 236" initlabel="bg.me_bluetooth_command">
+			<description>
+				<text>Makeblock Bluetooth Commands</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.command_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_bluetooth_cmd.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_port_1" kind="data" color="0 177 236" initlabel="bg.me_port_1" editable-label="no">
+			<description>
+				<text>Me Base Shield Port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" >
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_port_2" kind="data" color="0 177 236" initlabel="bg.me_port_2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_port_3" kind="data" color="0 177 236" initlabel="bg.me_port_3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_port_4" kind="data" color="0 177 236" initlabel="bg.me_port_4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="4" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_port_5" kind="data" color="0 177 236" initlabel="bg.me_port_5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" >
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_port_6" kind="data" color="0 177 236" initlabel="bg.me_port_6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" >
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_port_7" kind="data" color="0 177 236" initlabel="bg.me_port_7" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" >
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_port_8" kind="data" color="0 177 236" initlabel="bg.me_port_8" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_motor_1" kind="data" color="0 177 236" initlabel="bg.me_motor_1" editable-label="no">
+			<description>
+				<text>Me Base Shield DC Motor Port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_motor_2" kind="data" color="0 177 236" initlabel="bg.me_port_2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -3757,6 +4008,20 @@
 			<FamilyMember>ada_dc_motor_bwd</FamilyMember>
 			<FamilyMember>ada_dc_motor_release</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>me_port_1</FamilyMember>
+			<FamilyMember>me_port_2</FamilyMember>
+			<FamilyMember>me_port_3</FamilyMember>
+			<FamilyMember>me_port_4</FamilyMember>
+			<FamilyMember>me_port_5</FamilyMember>
+			<FamilyMember>me_port_6</FamilyMember>
+			<FamilyMember>me_port_7</FamilyMember>
+			<FamilyMember>me_port_8</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>me_motor_1</FamilyMember>
+			<FamilyMember>me_motor_2</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -3767,6 +4032,7 @@
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
+				<BlockGenusMember>do_while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 				<BlockGenusMember>repeat</BlockGenusMember>
 				<BlockGenusMember>repeat_control</BlockGenusMember>
@@ -3870,6 +4136,19 @@
 				<BlockGenusMember>bleshield</BlockGenusMember>
 				<BlockGenusMember>bleshield_available</BlockGenusMember>
 				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>	
+			</BlockDrawer>
+			<BlockDrawer button-color="0 177 236" name="bd.makeblock" type="factory">
+				<BlockGenusMember>me_ultrasonic_sensor</BlockGenusMember>
+				<BlockGenusMember>me_linefinder</BlockGenusMember>
+				<BlockGenusMember>me_motordriver</BlockGenusMember>
+				<BlockGenusMember>me_servodriver</BlockGenusMember>
+				<BlockGenusMember>me_infraredreceiver</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_read</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_write</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_commands</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_command</BlockGenusMember>
+				<BlockGenusMember>me_port_1</BlockGenusMember>
+				<BlockGenusMember>me_motor_1</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
