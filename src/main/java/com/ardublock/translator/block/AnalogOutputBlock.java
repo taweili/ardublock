@@ -19,10 +19,10 @@ public class AnalogOutputBlock extends TranslatorBlock
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		String value = translatorBlock.toCode();
 		
-		String setupCode = "\tpinMode( " + portNum + " , OUTPUT);";
+		String setupCode = "pinMode( " + portNum + " , OUTPUT);";
 		translator.addSetupCommand(setupCode);
 		
-		String ret = "\tanalogWrite(" + portNum + " , " + value + ");\n";
+		String ret = "analogWrite(" + portNum + " , " + value + ");\n";
 		return ret;
 	}
 
