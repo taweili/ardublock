@@ -17,7 +17,7 @@ public class InversedDigitalInputBlock extends DigitalInputBlock
 		number = translatorBlock.toCode();
 		translator.addInputPin(Long.parseLong(number));
 		
-		String ret = "!digitalRead( ";
+		String ret = "!digitalRead(";
 		ret = ret + number;
 		ret = ret + ")";
 		return codePrefix + ret + codeSuffix;
