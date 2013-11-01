@@ -19,20 +19,20 @@ public class RepeatBlock extends TranslatorBlock
 		TranslatorBlock teste = this.getRequiredTranslatorBlockAtSocket(0);
 		varName=varName+teste.toCode();
 		//translator.addDefinitionCommand("int " + varName + "; //teste");
-		String ret = "\tfor (" + varName + "= 1; " + varName + "<= ( ";
+		String ret = "for (" + varName + "= 1; " + varName + "<= ( ";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		ret = ret + translatorBlock.toCode();
-		ret = ret + " ); " + varName + "++ )\n\t{\n";
+		ret = ret + " ); " + varName + "++ )\n{\n";
 		
 		
 		translatorBlock = getTranslatorBlockAtSocket(2);
 		while (translatorBlock != null)
 		{
-			ret = ret + "\t"+translatorBlock.toCode();
+			ret = ret + translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
 		
-		ret = ret + "\t}\n";
+		ret = ret + "}\n";
 		return ret;
 	}
 

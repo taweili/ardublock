@@ -17,20 +17,20 @@ public class RepeatTimesBlock extends TranslatorBlock
 	{
 		String varName = translator.buildVariableName();
 		translator.addDefinitionCommand("int " + varName + "a;");
-		String ret = "\tfor (" + varName + "a=1; " + varName + "a<= ( ";
+		String ret = "for (" + varName + "a=1; " + varName + "a<= ( ";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
-		ret = ret + " ); ++" + varName + "a )\n\t{\n";
+		ret = ret + " ); ++" + varName + "a )\n{\n";
 		
 		
 		translatorBlock = getTranslatorBlockAtSocket(1);
 		while (translatorBlock != null)
 		{
-			ret = ret + "\t"+translatorBlock.toCode();
+			ret = ret + translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
 		
-		ret = ret + "\t}\n";
+		ret = ret + "}\n";
 		return ret;
 	}
 
