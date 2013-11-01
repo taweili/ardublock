@@ -234,6 +234,66 @@
 		</BlockGenus>
 		
 		
+		<BlockGenus name="scoop_event_low" kind="data" color="26 97 218" initlabel="bg.scoop_event_low">
+			<description>
+				<text>event flag</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="scoop_event_high" kind="data" color="26 97 218" initlabel="bg.scoop_event_high">
+			<description>
+				<text>event flag</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="scoop_event_falling" kind="data" color="26 97 218" initlabel="bg.scoop_event_falling">
+			<description>
+				<text>event flag</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="scoop_event_rising" kind="data" color="26 97 218" initlabel="bg.scoop_event_rising">
+			<description>
+				<text>event flag</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="scoop_event_change" kind="data" color="26 97 218" initlabel="bg.scoop_event_change">
+			<description>
+				<text>event flag</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
+		
+		<BlockGenus name="scoop_pin_event" kind="command" color="26 97 218" initlabel="bg.scoop_pin_event">
+			<description>
+				<text>SCoop Event on pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="variable_number" label="variable name" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.scoop_event_flag">
+					<DefaultArg genus-name="scoop_event_rising" label="Event: RISING" />
+				</BlockConnector>
+				<BlockConnector connector-type="cmd" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		
+		
 		<!--****************** Pins *************** -->
 
 		<BlockGenus name="pin-read-digital" kind="data" color="77 191 169" initlabel="bg.pin-read-digital">
@@ -4105,6 +4165,13 @@
 			<FamilyMember>me_motor_1</FamilyMember>
 			<FamilyMember>me_motor_2</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+		    <FamilyMember>scoop_event_low</FamilyMember>
+		    <FamilyMember>scoop_event_high</FamilyMember>
+		    <FamilyMember>scoop_event_falling</FamilyMember>
+		    <FamilyMember>scoop_event_rising</FamilyMember>
+		    <FamilyMember>scoop_event_change</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -4126,6 +4193,13 @@
 				<BlockGenusMember>scoop_task</BlockGenusMember>
 				<BlockGenusMember>scoop_loop</BlockGenusMember>
 				<BlockGenusMember>scoop_sleep</BlockGenusMember>
+				<BlockGenusMember>scoop_pin_event</BlockGenusMember>
+				<BlockGenusMember>scoop_event_low</BlockGenusMember>
+				<BlockGenusMember>scoop_event_high</BlockGenusMember>
+				<BlockGenusMember>scoop_event_falling</BlockGenusMember>
+				<BlockGenusMember>scoop_event_rising</BlockGenusMember>
+				<BlockGenusMember>scoop_event_change</BlockGenusMember>
+				
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
