@@ -14,24 +14,24 @@ public class IfelseBlock extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String ret = "\tif (";
+		String ret = "if (";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
-		ret = ret + ")\n\t{\n";
+		ret = ret + ")\n{\n";
 		translatorBlock = getTranslatorBlockAtSocket(1);
 		while (translatorBlock != null)
 		{
-			ret = ret +"\t"+ translatorBlock.toCode();
+			ret = ret + translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
-		ret = ret + "\t}\n\telse\n\t{\n";
+		ret = ret + "}\nelse\n{\n";
 		translatorBlock = getTranslatorBlockAtSocket(2);
 		while (translatorBlock != null)
 		{
-			ret = ret +"\t"+ translatorBlock.toCode();
+			ret = ret + translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
-		ret = ret + "\t}\n";
+		ret = ret + "}\n";
 		return ret;
 	}
 
