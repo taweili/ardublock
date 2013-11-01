@@ -82,14 +82,14 @@ public class Translator
 		{
 			for (Long pinNumber:inputPinSet)
 			{
-				headerCommand.append("pinMode( " + pinNumber + " , INPUT);\n");
+				headerCommand.append("pinMode( " + pinNumber + ", INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
 			for (Long pinNumber:outputPinSet)
 			{
-				headerCommand.append("pinMode( " + pinNumber + " , OUTPUT);\n");
+				headerCommand.append("pinMode( " + pinNumber + ", OUTPUT);\n");
 			}
 		}
 		
