@@ -21,7 +21,7 @@ public class RepeatControlBlock extends TranslatorBlock
 		TranslatorBlock teste = this.getRequiredTranslatorBlockAtSocket(0);
 		varName=varName+teste.toCode();
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		String ret = "\tfor (" + varName + "= (";
+		String ret = "for (" + varName + "= (";
 		start=Integer.parseInt(translatorBlock.toCode());
 		ret = ret + String.valueOf(start) + ") ; ";
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
@@ -30,21 +30,21 @@ public class RepeatControlBlock extends TranslatorBlock
 		    ret = ret + varName + " <= (";
 		    ret = ret + String.valueOf(stop) + ") ; "+varName + "+= (";
 		    translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-		    ret = ret + translatorBlock.toCode() +") )\n\t{\n";
+		    ret = ret + translatorBlock.toCode() +") )\n{\n";
 		}else{
 		    ret = ret + varName + " >= (";
 		    ret = ret + String.valueOf(stop) + ") ; "+varName + "-= (";
 		    translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-		    ret = ret + translatorBlock.toCode() +") )\n\t{\n";
+		    ret = ret + translatorBlock.toCode() +") )\n{\n";
 		}
 		translatorBlock = getTranslatorBlockAtSocket(4);
 		while (translatorBlock != null)
 		{
-			ret = ret + "\t"+translatorBlock.toCode();
+			ret = ret + translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
 		
-		ret = ret + "\t}\n";
+		ret = ret + "}\n";
 		return ret;
 	}
 
