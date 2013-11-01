@@ -3849,6 +3849,42 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="me_limitswitch" kind="data" color="0 177 236" initlabel="bg.me_limitswitch">
+			<description>
+				<text>Makeblock LimitSwitch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_4" label="Port 4" />
+					
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_limitswitch.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_shutter" kind="command" color="0 177 236" initlabel="bg.me_shutter">
+			<description>
+				<text>Makeblock Shutter For DSLR</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_4" label="Port 4" />
+					
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.shutter_state">
+					<DefaultArg genus-name="me_shutter_1" label="Shot On" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_shutter.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<BlockGenus name="me_motordriver" kind="command" color="0 177 236" initlabel="bg.me_motordriver">
 			<description>
 				<text>Makeblock DC Motor</text>
@@ -3887,6 +3923,31 @@
 			<Images>
 				<Image>
 					<FileLocation>com/ardublock/block/makeblock/me_servodriver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="me_stepper_motor" kind="command" color="0 177 236" initlabel="bg.me_stepper_motor">
+			<description>
+				<text>Makeblock Stepper Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_1" label="Port 1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
+					<DefaultArg genus-name="number" label="10000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.acceleration_number">
+					<DefaultArg genus-name="number" label="2000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.moveTo_number">
+					<DefaultArg genus-name="number" label="3000" />
+				</BlockConnector>
+				<BlockConnector label="bc.stepper_finish" connector-kind="socket" connector-type="cmd"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/makeblock/me_stepper_motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -4051,6 +4112,37 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="me_shutter_1" kind="data" color="0 177 236" initlabel="bg.me_shutter_1" editable-label="no">
+			<description>
+				<text>Me Shutter Action</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_shutter_2" kind="data" color="0 177 236" initlabel="bg.me_shutter_2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_shutter_3" kind="data" color="0 177 236" initlabel="bg.me_shutter_3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="me_shutter_4" kind="data" color="0 177 236" initlabel="bg.me_shutter_4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="4" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -4164,6 +4256,12 @@
 		<BlockFamily>
 			<FamilyMember>me_motor_1</FamilyMember>
 			<FamilyMember>me_motor_2</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>me_shutter_1</FamilyMember>
+			<FamilyMember>me_shutter_2</FamilyMember>
+			<FamilyMember>me_shutter_3</FamilyMember>
+			<FamilyMember>me_shutter_4</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 		    <FamilyMember>scoop_event_low</FamilyMember>
@@ -4301,19 +4399,6 @@
 				<BlockGenusMember>bleshield_available</BlockGenusMember>
 				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>	
 			</BlockDrawer>
-			<BlockDrawer button-color="0 177 236" name="bd.makeblock" type="factory">
-				<BlockGenusMember>me_ultrasonic_sensor</BlockGenusMember>
-				<BlockGenusMember>me_linefinder</BlockGenusMember>
-				<BlockGenusMember>me_motordriver</BlockGenusMember>
-				<BlockGenusMember>me_servodriver</BlockGenusMember>
-				<BlockGenusMember>me_infraredreceiver</BlockGenusMember>
-				<BlockGenusMember>me_bluetooth_read</BlockGenusMember>
-				<BlockGenusMember>me_bluetooth_write</BlockGenusMember>
-				<BlockGenusMember>me_bluetooth_commands</BlockGenusMember>
-				<BlockGenusMember>me_bluetooth_command</BlockGenusMember>
-				<BlockGenusMember>me_port_1</BlockGenusMember>
-				<BlockGenusMember>me_motor_1</BlockGenusMember>
-			</BlockDrawer>
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
@@ -4431,6 +4516,23 @@
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_release</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="0 177 236" name="bd.makeblock" type="factory">
+				<BlockGenusMember>me_ultrasonic_sensor</BlockGenusMember>
+				<BlockGenusMember>me_linefinder</BlockGenusMember>
+				<BlockGenusMember>me_limitswitch</BlockGenusMember>
+				<BlockGenusMember>me_shutter</BlockGenusMember>
+				<BlockGenusMember>me_motordriver</BlockGenusMember>
+				<BlockGenusMember>me_servodriver</BlockGenusMember>
+				<BlockGenusMember>me_stepper_motor</BlockGenusMember>
+				<BlockGenusMember>me_infraredreceiver</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_read</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_write</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_commands</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_command</BlockGenusMember>
+				<BlockGenusMember>me_port_1</BlockGenusMember>
+				<BlockGenusMember>me_motor_1</BlockGenusMember>
+				<BlockGenusMember>me_shutter_1</BlockGenusMember>
 			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">

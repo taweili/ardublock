@@ -4,9 +4,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class MeInfraredReceiver extends TranslatorBlock {
+public class MeLimitSwitch extends TranslatorBlock {
 
-	public MeInfraredReceiver(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
+	public MeLimitSwitch(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
@@ -17,9 +17,9 @@ public class MeInfraredReceiver extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeInfraredReceiver infraredReceiverDecode"+translatorBlock.toCode()+"(PORT"+translatorBlock.toCode()+");";
+		String ret = "MeLimitSwitch switch"+translatorBlock.toCode()+"(PORT"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
-		return "infraredReceiverDecode"+translatorBlock.toCode()+".read()";
+		return "switch"+translatorBlock.toCode()+".touched()";
 	}
 
 }
