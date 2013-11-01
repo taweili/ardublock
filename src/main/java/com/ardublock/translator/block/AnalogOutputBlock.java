@@ -19,8 +19,15 @@ public class AnalogOutputBlock extends TranslatorBlock
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		String value = translatorBlock.toCode();
 		
-		String setupCode = "pinMode( " + portNum + " , OUTPUT);";
-		translator.addSetupCommand(setupCode);
+		if (translatorBlock instanceof NumberBlock)
+		{
+			translator.addOutputPin(Long.parseLong(portNum));
+		}
+		else
+		{
+			String setupCode = "pinMode( " + portNum + " , OUTPUT);";
+			translator.addSetupCommand(setupCode);
+		}
 		
 		String ret = "analogWrite(" + portNum + " , " + value + ");\n";
 		return ret;

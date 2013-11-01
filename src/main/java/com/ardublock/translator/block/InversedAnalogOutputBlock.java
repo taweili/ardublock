@@ -23,7 +23,7 @@ public class InversedAnalogOutputBlock extends AnalogOutputBlock
 		String setupCode = "pinMode( " + portNum + " , OUTPUT);";
 		translator.addSetupCommand(setupCode);
 		
-		String ret = "\tanalogWrite(" + portNum + ", 255 - (" + value + " ));\n";
+		String ret = "analogWrite(" + portNum + ", 255 - (" + value + " ));\n";
 		
 		return ret;
 	}
