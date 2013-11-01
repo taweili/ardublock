@@ -283,7 +283,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="variable_number" label="variable name" />
+					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.scoop_event_flag">
 					<DefaultArg genus-name="scoop_event_rising" label="Event: RISING" />
