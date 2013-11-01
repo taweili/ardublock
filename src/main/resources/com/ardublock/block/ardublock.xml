@@ -277,7 +277,7 @@
 		
 		
 		
-		<BlockGenus name="scoop_pin_event" kind="command" color="26 97 218" initlabel="bg.scoop_pin_event">
+		<BlockGenus name="scoop_pin_event" kind="command" color="26 97 218" initlabel="bg.scoop_pin_event" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>SCoop Event on pin</text>
 			</description>

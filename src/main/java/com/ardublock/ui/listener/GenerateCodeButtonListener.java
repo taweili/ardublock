@@ -95,6 +95,11 @@ public class GenerateCodeButtonListener implements ActionListener
 					translator.setScoopProgram(true);
 					scoopBlockSet.add(renderableBlock);
 				}
+				if (block.getGenusName().equals("scoop_pin_event"))
+				{
+					translator.setScoopProgram(true);
+					scoopBlockSet.add(renderableBlock);
+				}
 				
 			}
 		}
