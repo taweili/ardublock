@@ -91,14 +91,14 @@ public class Translator
 		{
 			for (Long pinNumber:inputPinSet)
 			{
-				setupFunction.append("\tpinMode( " + pinNumber + " , INPUT);\n");
+				setupFunction.append("pinMode( " + pinNumber + " , INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
 			for (Long pinNumber:outputPinSet)
 			{
-				setupFunction.append("\tpinMode( " + pinNumber + " , OUTPUT);\n");
+				setupFunction.append("pinMode( " + pinNumber + " , OUTPUT);\n");
 			}
 		}
 		

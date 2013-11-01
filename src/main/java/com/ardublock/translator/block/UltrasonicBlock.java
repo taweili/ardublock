@@ -23,7 +23,7 @@ public class UltrasonicBlock extends TranslatorBlock
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		echoPin = translatorBlock.toCode();
 		
-		translator.addSetupCommand("\tdigitalWrite( " + trigPin + " , LOW );\n");
+		translator.addSetupCommand("digitalWrite( " + trigPin + " , LOW );\n");
 		
 		translator.addDefinitionCommand(ultraSonicFunction);
 		
