@@ -24,7 +24,7 @@ public class MeMotorDriver extends TranslatorBlock {
 		int portNum = port==null?0:Integer.parseInt(port.toCode());
 		TranslatorBlock block = portNum>0?port:me;
 		String motor = "dcMotor"+block.toCode();
-		String ret = "MeDCMotor "+motor+(portNum>0?"(PORT_":"(M")+block.toCode()+");";
+		String ret = "MeDCMotor "+motor+(portNum>0?"(PORT":"(M")+block.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		block = this.getRequiredTranslatorBlockAtSocket(2);
 		if(block instanceof NumberBlock){

@@ -4,9 +4,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class MeInfraredReceiver extends TranslatorBlock {
+public class MeShutter extends TranslatorBlock {
 
-	public MeInfraredReceiver(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
+	public MeShutter(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label) {
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
@@ -17,9 +17,11 @@ public class MeInfraredReceiver extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeInfraredReceiver infraredReceiverDecode"+translatorBlock.toCode()+"(PORT"+translatorBlock.toCode()+");";
+		String ret = "MeShutter shutter"+translatorBlock.toCode()+"(PORT"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
-		return "infraredReceiverDecode"+translatorBlock.toCode()+".read()";
+		TranslatorBlock state = this.getRequiredTranslatorBlockAtSocket(1);
+		int stateId = Integer.parseInt(state.toCode());
+		return "\tshutter"+translatorBlock.toCode()+(stateId==1?".shotOn()":(stateId==2?".shotOff()":(stateId==3?".focusOn()":".focusOff()")))+";\n";
 	}
 
 }

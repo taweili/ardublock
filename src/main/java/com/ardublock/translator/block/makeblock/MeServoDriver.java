@@ -34,7 +34,7 @@ public class MeServoDriver extends TranslatorBlock {
 		}else{
 			device = "1";
 		}
-		String ret = "MeServo "+servo+"(PORT_"+block.toCode()+","+device+");";
+		String ret = "MeServo "+servo+"(PORT"+block.toCode()+","+device+");";
 		translator.addDefinitionCommand(ret);
 		String output = "";
 		block = this.getRequiredTranslatorBlockAtSocket(2);
