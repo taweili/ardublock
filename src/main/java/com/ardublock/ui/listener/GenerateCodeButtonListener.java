@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import com.ardublock.core.Context;
+import com.ardublock.translator.AutoFormat;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
@@ -198,11 +199,19 @@ public class GenerateCodeButtonListener implements ActionListener
 		
 		if (success)
 		{
+			AutoFormat formatter = new AutoFormat();
+			String codeOut = code.toString();
+			
+			if (context.isNeedAutoFormat)
+			{
+				codeOut = formatter.format(codeOut);
+			}
+			
 			if (!context.isInArduino())
 			{
-				System.out.println(code.toString());
+				System.out.println(codeOut);
 			}		
-			context.didGenerate(code.toString());
+			context.didGenerate(codeOut);
 		}
 	}
 }

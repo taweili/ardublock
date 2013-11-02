@@ -22,6 +22,7 @@ public class Context
 	public final static String LANG_DTD_PATH = "/com/ardublock/block/lang_def.dtd";
 	public final static String ARDUBLOCK_LANG_PATH = "/com/ardublock/block/ardublock.xml";
 	public final static String ARDUINO_VERSION_UNKNOWN = "unknown";
+	public final boolean isNeedAutoFormat = true;
 	
 	private static Context singletonContext;
 	
