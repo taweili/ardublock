@@ -175,7 +175,10 @@ public class GenerateCodeButtonListener implements ActionListener
 			AutoFormat formatter = new AutoFormat();
 			String codeOut = code.toString();
 			
-			codeOut = formatter.format(codeOut);
+			if (context.isNeedAutoFormat)
+			{
+				codeOut = formatter.format(codeOut);
+			}
 			
 			if (!context.isInArduino())
 			{
