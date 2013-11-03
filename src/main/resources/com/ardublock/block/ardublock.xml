@@ -42,7 +42,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.increment">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 		<!-- ******************** Controls Menu *************** -->
@@ -134,7 +134,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="bc.condition" connector-kind="socket" connector-type="boolean" />
-				<BlockConnector label="" connector-kind="socket" connector-type="cmd" />
+				<BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -146,7 +146,7 @@
           </description>
           <BlockConnectors>
             <BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
-            <BlockConnector label="bc.test" connector-kind="socket" connector-type="boolean">
+            <BlockConnector label="bc.condition" connector-kind="socket" connector-type="boolean">
               <DefaultArg genus-name="less" label="Pick a test" />
             </BlockConnector>    
           </BlockConnectors>
@@ -160,7 +160,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -175,7 +175,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="subroutine" kind="command" color="200 200 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
@@ -183,7 +183,7 @@
 				<text>subroutine</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 
