@@ -17,7 +17,7 @@ public class SetterVariableVectorBlock extends TranslatorBlock
 		TranslatorBlock name = this.getRequiredTranslatorBlockAtSocket(0);
 		TranslatorBlock position = this.getRequiredTranslatorBlockAtSocket(1);
 		TranslatorBlock value = this.getRequiredTranslatorBlockAtSocket(2);
-		String ret ="\t"+ name.toCode()+"["+position.toCode()+" - 1]";
+		String ret = name.toCode()+"["+position.toCode()+" - 1]";
 		ret = ret + " = " + value.toCode() + " ;\n";
 		return ret;
 	}
