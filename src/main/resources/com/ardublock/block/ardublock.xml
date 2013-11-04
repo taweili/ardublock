@@ -4288,7 +4288,9 @@
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
-				<BlockGenusMember>scoop_task</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="26 97 218" name="bd.scoop">
+			    <BlockGenusMember>scoop_task</BlockGenusMember>
 				<BlockGenusMember>scoop_loop</BlockGenusMember>
 				<BlockGenusMember>scoop_sleep</BlockGenusMember>
 				<BlockGenusMember>scoop_pin_event</BlockGenusMember>
@@ -4297,7 +4299,6 @@
 				<BlockGenusMember>scoop_event_falling</BlockGenusMember>
 				<BlockGenusMember>scoop_event_rising</BlockGenusMember>
 				<BlockGenusMember>scoop_event_change</BlockGenusMember>
-				
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
