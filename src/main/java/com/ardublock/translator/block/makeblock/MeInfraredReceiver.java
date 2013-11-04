@@ -17,7 +17,7 @@ public class MeInfraredReceiver extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeInfraredReceiver infraredReceiverDecode"+translatorBlock.toCode()+"(PORT"+translatorBlock.toCode()+");";
+		String ret = "MeInfraredReceiver infraredReceiverDecode"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		return "infraredReceiverDecode"+translatorBlock.toCode()+".read()";
 	}

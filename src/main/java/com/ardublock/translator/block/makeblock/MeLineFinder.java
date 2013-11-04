@@ -17,7 +17,7 @@ public class MeLineFinder extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeLineFinder lineFinder"+translatorBlock.toCode()+"(PORT"+translatorBlock.toCode()+");";
+		String ret = "MeLineFinder lineFinder"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		return "lineFinder"+translatorBlock.toCode()+".readSensors()";
 	}

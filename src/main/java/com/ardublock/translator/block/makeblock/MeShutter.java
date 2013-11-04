@@ -17,7 +17,7 @@ public class MeShutter extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeShutter shutter"+translatorBlock.toCode()+"(PORT"+translatorBlock.toCode()+");";
+		String ret = "MeShutter shutter"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		TranslatorBlock state = this.getRequiredTranslatorBlockAtSocket(1);
 		int stateId = Integer.parseInt(state.toCode());

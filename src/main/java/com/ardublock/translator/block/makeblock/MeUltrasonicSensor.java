@@ -17,7 +17,7 @@ public class MeUltrasonicSensor extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeUltrasonicSensor ultraSensor(PORT"+translatorBlock.toCode()+");";
+		String ret = "MeUltrasonicSensor ultraSensor(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		return "ultraSensor.distanceCm()";
 	}

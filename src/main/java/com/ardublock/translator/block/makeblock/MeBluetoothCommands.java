@@ -17,7 +17,7 @@ public class MeBluetoothCommands extends TranslatorBlock {
 		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock block = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeBluetooth bluetooth"+block.toCode()+"(PORT"+block.toCode()+");";
+		String ret = "MeBluetooth bluetooth"+block.toCode()+"(PORT_"+block.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		translator.addDefinitionCommand("int bufferIndex=0;");
 		translator.addDefinitionCommand("int btRead=-1;");
