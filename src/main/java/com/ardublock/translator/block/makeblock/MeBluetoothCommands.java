@@ -20,8 +20,7 @@ public class MeBluetoothCommands extends TranslatorBlock {
 		translator.addDefinitionCommand(ret);
 		translator.addSetupCommand("bluetooth"+block.toCode()+".begin(9600);");
 		TranslatorBlock execBlock = getTranslatorBlockAtSocket(1);
-		ret = "";
-		ret += "btRead = bluetooth"+block.toCode()+".read();\n";     
+		ret = "";   
 		ret += "if(bluetooth"+block.toCode()+".paramAvailable()){\n";
 		String exec = "";
 		while (execBlock != null)
