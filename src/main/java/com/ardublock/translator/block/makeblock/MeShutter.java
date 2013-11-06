@@ -14,7 +14,6 @@ public class MeShutter extends TranslatorBlock {
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		translator.addHeaderFile("Makeblock.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		String ret = "MeShutter shutter"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";

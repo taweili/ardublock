@@ -14,11 +14,11 @@ public class MeInfraredReceiver extends TranslatorBlock {
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		translator.addHeaderFile("Makeblock.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeInfraredReceiver infraredReceiverDecode"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
+		String ret = "MeInfraredReceiver infraredReceiver"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
+		translator.addSetupCommand("infraredReceiver"+translatorBlock.toCode()+".begin();");
 		return "infraredReceiverDecode"+translatorBlock.toCode()+".read()";
 	}
 

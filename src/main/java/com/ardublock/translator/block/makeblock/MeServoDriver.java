@@ -17,7 +17,6 @@ public class MeServoDriver extends TranslatorBlock {
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		translator.addHeaderFile("Makeblock.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock block = this.getRequiredTranslatorBlockAtSocket(0);
 		String servo = "servoDriver"+block.toCode();

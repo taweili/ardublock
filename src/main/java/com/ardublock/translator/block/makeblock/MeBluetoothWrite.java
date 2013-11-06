@@ -14,7 +14,6 @@ public class MeBluetoothWrite extends TranslatorBlock {
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		translator.addHeaderFile("Makeblock.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock block = this.getRequiredTranslatorBlockAtSocket(0);
 		String ret = "MeBluetooth bluetooth"+block.toCode()+"(PORT_"+block.toCode()+");";

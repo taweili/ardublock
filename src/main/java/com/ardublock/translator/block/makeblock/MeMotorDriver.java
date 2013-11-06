@@ -16,7 +16,6 @@ public class MeMotorDriver extends TranslatorBlock {
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		translator.addHeaderFile("Makeblock.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock port = this.getTranslatorBlockAtSocket(0);
 		TranslatorBlock me = this.getTranslatorBlockAtSocket(1);
