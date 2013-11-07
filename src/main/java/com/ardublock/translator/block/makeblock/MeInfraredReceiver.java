@@ -19,7 +19,7 @@ public class MeInfraredReceiver extends TranslatorBlock {
 		String ret = "MeInfraredReceiver infraredReceiver"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		translator.addSetupCommand("infraredReceiver"+translatorBlock.toCode()+".begin();");
-		return "infraredReceiverDecode"+translatorBlock.toCode()+".read()";
+		return "infraredReceiver"+translatorBlock.toCode()+".read()";
 	}
 
 }
