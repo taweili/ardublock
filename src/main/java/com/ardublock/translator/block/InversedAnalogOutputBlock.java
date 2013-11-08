@@ -20,10 +20,10 @@ public class InversedAnalogOutputBlock extends AnalogOutputBlock
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		String value = translatorBlock.toCode();
 		
-		String setupCode = "\tpinMode( " + portNum + " , OUTPUT);";
+		String setupCode = "pinMode( " + portNum + " , OUTPUT);";
 		translator.addSetupCommand(setupCode);
 		
-		String ret = "\tanalogWrite(" + portNum + ", 255 - (" + value + " ));\n";
+		String ret = "analogWrite(" + portNum + ", 255 - (" + value + " ));\n";
 		
 		return ret;
 	}

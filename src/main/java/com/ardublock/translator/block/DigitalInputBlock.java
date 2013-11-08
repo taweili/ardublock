@@ -34,7 +34,7 @@ public class DigitalInputBlock extends TranslatorBlock
 		number = translatorBlock.toCode();
 		translator.addInputPin(Long.parseLong(number));
 		
-		String ret = "\tdigitalRead( ";
+		String ret = "digitalRead(";
 		ret = ret + number;
 		ret = ret + ")";
 		return codePrefix + ret + codeSuffix;

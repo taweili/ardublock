@@ -22,7 +22,7 @@ import edu.mit.blocks.workspace.Workspace;
 public class Translator
 {
 	private static final String variablePrefix = "_ABVAR_";
-		
+
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
 	private List<String> setupCommand;
@@ -39,6 +39,7 @@ public class Translator
 	private Workspace workspace;
 	
 	private int variableCnt;
+	
 	public Translator(Workspace ws)
 	{
 		workspace = ws;
@@ -82,14 +83,14 @@ public class Translator
 		{
 			for (Long pinNumber:inputPinSet)
 			{
-				headerCommand.append("\tpinMode( " + pinNumber + " , INPUT);\n");
+				headerCommand.append("pinMode( " + pinNumber + ", INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
 			for (Long pinNumber:outputPinSet)
 			{
-				headerCommand.append("\tpinMode( " + pinNumber + " , OUTPUT);\n");
+				headerCommand.append("pinMode( " + pinNumber + ", OUTPUT);\n");
 			}
 		}
 		

@@ -18,7 +18,7 @@ public class ToneBlock extends TranslatorBlock
 		TranslatorBlock pinBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		TranslatorBlock freqBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		
-		String ret = "\ttone(" + pinBlock.toCode() + ", " + freqBlock.toCode() + ");\n";
+		String ret = "tone(" + pinBlock.toCode() + ", " + freqBlock.toCode() + ");\n";
 		return ret;
 	}
 

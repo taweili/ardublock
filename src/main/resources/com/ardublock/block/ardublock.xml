@@ -42,7 +42,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.increment">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 		<!-- ******************** Controls Menu *************** -->
@@ -134,9 +134,23 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="bc.condition" connector-kind="socket" connector-type="boolean" />
-				<BlockConnector label="" connector-kind="socket" connector-type="cmd" />
+				<BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+	<BlockGenus name="do_while" kind="command" initlabel="bg.do_while" color="255 221 0">
+          <description>
+            <text>
+                Do While Block
+            </text>
+          </description>
+          <BlockConnectors>
+            <BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
+            <BlockConnector label="bc.condition" connector-kind="socket" connector-type="boolean">
+              <DefaultArg genus-name="less" label="Pick a test" />
+            </BlockConnector>    
+          </BlockConnectors>
+      </BlockGenus> 
 
 		<BlockGenus name="repeat_times" kind="command" color="255 221 0" initlabel="bg.repeat_times">
 			<description>
@@ -146,7 +160,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -161,7 +175,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="subroutine" kind="command" color="200 200 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
@@ -169,7 +183,7 @@
 				<text>subroutine</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -1023,6 +1037,58 @@
 		</BlockGenus>
 
 		<!-- ******************** Storage *************** -->
+		<BlockGenus name="eeprom_read_int" kind="data" color="0 100 90" initlabel="bg.eeprom_read_int">
+			<description>
+				<text>EEPROM Read integer </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="eeprom_write_int" kind="command" color="0 100 90" initlabel="bg.eeprom_write_int">
+			<description>
+				<text>EEPROM Write integer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_data">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="eeprom_read_long" kind="data" color="0 100 90" initlabel="bg.eeprom_read_long">
+			<description>
+				<text>EEPROM Read 'unsigned long'</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="eeprom_write_long" kind="command" color="0 100 90" initlabel="bg.eeprom_write_long">
+			<description>
+				<text>EEPROM Write 'unsigned long'</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_address">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.eeprom_data">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="eeprom_read" kind="data" color="0 100 90" initlabel="bg.eeprom_read">
 			<description>
 				<text>EEPROM Read</text>
@@ -4123,6 +4189,7 @@
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
+				<BlockGenusMember>do_while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
 				<BlockGenusMember>repeat</BlockGenusMember>
 				<BlockGenusMember>repeat_control</BlockGenusMember>
@@ -4215,6 +4282,10 @@
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 50 45" name="bd.storage" type="factory">
+				<BlockGenusMember>eeprom_read_int</BlockGenusMember>
+				<BlockGenusMember>eeprom_write_int</BlockGenusMember>
+				<BlockGenusMember>eeprom_read_long</BlockGenusMember>
+				<BlockGenusMember>eeprom_write_long</BlockGenusMember>
 				<BlockGenusMember>eeprom_read</BlockGenusMember>
 				<BlockGenusMember>eeprom_write</BlockGenusMember>
 				<BlockGenusMember>sd_write2</BlockGenusMember>
