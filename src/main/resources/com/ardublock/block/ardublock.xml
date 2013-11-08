@@ -3794,7 +3794,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="me_infraredreceiver" kind="data" color="0 177 236" initlabel="bg.me_infraredreceiver">
+		<BlockGenus name="me_infraredreceiver" kind="command" color="0 177 236" initlabel="bg.me_infraredreceiver">
 			<description>
 				<text>Makeblock Infrared Receiver</text>
 			</description>
@@ -3802,7 +3802,11 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
 					<DefaultArg genus-name="me_port_7" label="Port 7" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.input_data">
+					<DefaultArg genus-name="variable_number" label="irRead" />
+				</BlockConnector>
+				<BlockConnector label="bc.me_key_down" connector-kind="socket" connector-type="cmd"/>
+				<BlockConnector label="bc.me_key_up" connector-kind="socket" connector-type="cmd"/>
 			</BlockConnectors>
 			<Images>
 				<Image>

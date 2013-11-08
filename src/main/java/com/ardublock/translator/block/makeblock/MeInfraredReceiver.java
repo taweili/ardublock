@@ -19,7 +19,27 @@ public class MeInfraredReceiver extends TranslatorBlock {
 		String ret = "MeInfraredReceiver infraredReceiver"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		translator.addSetupCommand("infraredReceiver"+translatorBlock.toCode()+".begin();");
-		return "infraredReceiver"+translatorBlock.toCode()+".read()";
+		
+
+		TranslatorBlock dataBlock = this.getRequiredTranslatorBlockAtSocket(1);
+		TranslatorBlock keyDownBlock = getTranslatorBlockAtSocket(2);
+		TranslatorBlock keyUpBlock = getTranslatorBlockAtSocket(3);
+		ret = "\nif(infraredReceiver"+translatorBlock.toCode()+".buttonState()==1){\n"+dataBlock.toCode()+"=infraredReceiver"+translatorBlock.toCode()+".read();\n";
+		String exec = "";
+		while (keyDownBlock != null)
+		{
+			exec += "\t"+ keyDownBlock.toCode()+"\n";
+			keyDownBlock = keyDownBlock.nextTranslatorBlock();
+		}
+		ret += "\n"+exec+"\n}else{\n";
+		exec = "";
+		while (keyUpBlock != null)
+		{
+			exec += "\t"+ keyUpBlock.toCode()+"\n";
+			keyUpBlock = keyUpBlock.nextTranslatorBlock();
+		}
+		ret += "\n"+exec+"\n};\n";
+		return ret;
 	}
 
 }
