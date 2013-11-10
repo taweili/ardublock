@@ -6,7 +6,7 @@ target/
 .project
 .settings
 openblocks.iml
-
+bin/
 .settings/
 *~
 src/main/resources/com/ardublock/block/ardublock.zip
