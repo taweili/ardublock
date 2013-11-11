@@ -17,7 +17,6 @@ public class MeServoDriver extends TranslatorBlock {
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		translator.addHeaderFile("Makeblock.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock block = this.getRequiredTranslatorBlockAtSocket(0);
 		String servo = "servoDriver"+block.toCode();
@@ -34,7 +33,7 @@ public class MeServoDriver extends TranslatorBlock {
 		}else{
 			device = "1";
 		}
-		String ret = "MeServo "+servo+"(PORT"+block.toCode()+","+device+");";
+		String ret = "MeServo "+servo+"(PORT_"+block.toCode()+","+device+");";
 		translator.addDefinitionCommand(ret);
 		String output = "";
 		block = this.getRequiredTranslatorBlockAtSocket(2);
