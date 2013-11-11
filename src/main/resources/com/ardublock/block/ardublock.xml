@@ -3812,7 +3812,7 @@
 					<DefaultArg genus-name="me_port_7" label="Port 7" />
 					
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -3829,7 +3829,7 @@
 					<DefaultArg genus-name="me_port_4" label="Port 4" />
 					
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -3846,7 +3846,7 @@
 					<DefaultArg genus-name="me_port_4" label="Port 4" />
 					
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -3939,7 +3939,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="me_infraredreceiver" kind="data" color="0 177 236" initlabel="bg.me_infraredreceiver">
+		<BlockGenus name="me_infraredreceiver" kind="command" color="0 177 236" initlabel="bg.me_infraredreceiver">
 			<description>
 				<text>Makeblock Infrared Receiver</text>
 			</description>
@@ -3947,7 +3947,11 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
 					<DefaultArg genus-name="me_port_7" label="Port 7" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.input_data">
+					<DefaultArg genus-name="variable_number" label="irRead" />
+				</BlockConnector>
+				<BlockConnector label="bc.me_key_down" connector-kind="socket" connector-type="cmd"/>
+				<BlockConnector label="bc.me_key_up" connector-kind="socket" connector-type="cmd"/>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -4013,10 +4017,13 @@
 				<text>Makeblock Bluetooth Commands</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.command_number">
-					<DefaultArg genus-name="number" label="1" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.port_number">
+					<DefaultArg genus-name="me_port_3" label="Port 3" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="poly" connector-kind="socket" label="Param Name">
+					<DefaultArg genus-name="char" label="speed" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
 			<Images>
 				<Image>
