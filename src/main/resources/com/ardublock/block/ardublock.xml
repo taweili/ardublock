@@ -4323,6 +4323,80 @@
 			</Images>
 		</BlockGenus>
 		
+		<!-- InsectBot blocks -->
+		
+		<BlockGenus name="insectbot_get_distance" kind="data" color="64 109 0" initlabel="bg.insectbot_get_distance">
+			<description>
+				<text>workshop template</text>
+			</description>
+		    <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_distance.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_is_indanger" kind="data" color="64 109 0" initlabel="bg.insectbot_is_indanger">
+			<description>
+				<text>workshop template</text>
+			</description>
+		    <BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_danger.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_go_forward" kind="command" color="64 109 0" initlabel="bg.insectbot_go_forward">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_goforward.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_go_backright" kind="command" color="64 109 0" initlabel="bg.insectbot_go_backright">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_gobackright.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_turn_left" kind="command" color="64 109 0" initlabel="bg.insectbot_turn_left">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_turnleft.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_blink_led" kind="command" color="64 109 0" initlabel="bg.insectbot_blink_led">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_led.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -4720,6 +4794,16 @@
 				<BlockGenusMember>ws_danger</BlockGenusMember>
 				<BlockGenusMember>ws_binoculars</BlockGenusMember>
 			</BlockDrawer>
+			
+			<BlockDrawer button-color="64 109 0" name="bd.insectbot">
+			    <BlockGenusMember>insectbot_get_distance</BlockGenusMember>
+			    <BlockGenusMember>insectbot_is_indanger</BlockGenusMember>
+			    <BlockGenusMember>insectbot_go_forward</BlockGenusMember>
+			    <BlockGenusMember>insectbot_go_backright</BlockGenusMember>
+			    <BlockGenusMember>insectbot_turn_left</BlockGenusMember>
+			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
+			</BlockDrawer>
+			
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
