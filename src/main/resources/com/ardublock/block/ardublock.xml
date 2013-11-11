@@ -4295,6 +4295,20 @@
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="ws_danger" kind="data" color="225 116 116" initlabel="bg.ws_danger">
+			<description>
+				<text>workshop template</text>
+			</description>
+		    <BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/danger.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -4689,7 +4703,7 @@
 				<BlockGenusMember>ws_scan</BlockGenusMember>
 				<BlockGenusMember>ws_music</BlockGenusMember>
 				<BlockGenusMember>ws_wireless</BlockGenusMember>
-				
+				<BlockGenusMember>ws_danger</BlockGenusMember>
 			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
