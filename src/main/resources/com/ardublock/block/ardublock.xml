@@ -4251,6 +4251,49 @@
 		</BlockGenus>
 		
 		
+		<BlockGenus name="ws_light" kind="command" color="225 116 116" initlabel="bg.ws_light">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/light.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_scan" kind="command" color="225 116 116" initlabel="bg.ws_scan">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/scan.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_music" kind="command" color="225 116 116" initlabel="bg.ws_music">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/music.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_wireless" kind="command" color="225 116 116" initlabel="bg.ws_wireless">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/wireless.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		
 	</BlockGenuses>
 
@@ -4642,6 +4685,11 @@
 				<BlockGenusMember>ws_go_forward_right</BlockGenusMember>
 				<BlockGenusMember>ws_go_backward_left</BlockGenusMember>
 				<BlockGenusMember>ws_go_backward_right</BlockGenusMember>
+				<BlockGenusMember>ws_light</BlockGenusMember>
+				<BlockGenusMember>ws_scan</BlockGenusMember>
+				<BlockGenusMember>ws_music</BlockGenusMember>
+				<BlockGenusMember>ws_wireless</BlockGenusMember>
+				
 			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
