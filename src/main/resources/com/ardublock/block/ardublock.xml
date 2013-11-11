@@ -24,6 +24,7 @@
 		<BlockConnectorShape shape-type="cmd3" shape-number="17" />
 	</BlockConnectorShapes>
 	<BlockGenuses>
+		<BlockGenus name="dummy" kind="command" initlabel="" color="0 0 0" />
 	    <!-- ******************** NEW FOR LOOP **************** -->
 		<BlockGenus name="repeat_control" kind="command" color="255 221 0" initlabel="bg.repeat_control">
 			<description>
@@ -579,7 +580,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -590,7 +594,10 @@
 				<text>is upper number less then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -601,7 +608,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -611,7 +621,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="boolean" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -622,7 +635,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -633,7 +649,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -644,7 +663,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -655,7 +677,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="boolean" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -707,7 +732,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -718,7 +746,10 @@
 				<text>is upper number greater then lower?</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -737,6 +768,12 @@
 		<BlockGenus name="number" kind="data" color="232 156 149" initlabel="bg.number" editable-label="yes">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="number-const" kind="data" color="232 156 149" initlabel="bg.number" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="plug" position-type="single" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -927,22 +964,64 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<!--****************** Utilities *************** -->
-
-		<BlockGenus name="servo" kind="command" color="95 120 132" initlabel="bg.servo">
+		<!--****************** Utilities *************** -->		
+		<BlockGenus name="servo_default" kind="command" color="95 120 132" label-prefix="Servo: " initlabel="bg.servo">
 			<description>
-				<text>set a pin to pwm</text>
+				<text>Servo Default</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number-const" label="5"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="number" label="90" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/SG90.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
-
+		
+		<BlockGenus name="servo_sg90" kind="command" color="95 120 132" label-prefix="Servo: " initlabel="bg.servo">
+			<description>
+				<text>SG90</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number-const" label="5"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/SG90.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="servo_mg996r" kind="command" color="95 120 132" label-prefix="Servo: " initlabel="bg.servo">
+			<description>
+				<text>Servo MG996R</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number-const" label="5"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/SG90.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 		<BlockGenus name="ultrasonic" kind="data" color="95 120 132" initlabel="bg.ultrasonic">
 			<description>
 				<text>Ultrasonic distance sensor</text>
@@ -4200,6 +4279,11 @@
 			<FamilyMember>digital-off</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>servo_default</FamilyMember>
+			<FamilyMember>servo_sg90</FamilyMember>
+			<FamilyMember>servo_mg996r</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>df_joystick_module_x</FamilyMember>
 			<FamilyMember>df_joystick_module_y</FamilyMember>
 		</BlockFamily>
@@ -4366,7 +4450,7 @@
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
-				<BlockGenusMember>servo</BlockGenusMember>
+				<BlockGenusMember>servo_default</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">

@@ -1,4 +1,4 @@
-
+// Not now used by standard blocks. Retained as long as it is referenced by legacy blocks.
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
