@@ -14,10 +14,9 @@ public class MeStepperMotor extends TranslatorBlock {
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
 		translator.addHeaderFile("Makeblock.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addHeaderFile("Servo.h");
 		translator.addHeaderFile("Wire.h");
 		TranslatorBlock portBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "MeStepperMotor stepper"+portBlock.toCode()+"(PORT"+portBlock.toCode()+");";
+		String ret = "MeStepperMotor stepper"+portBlock.toCode()+"(PORT_"+portBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
 		TranslatorBlock speedBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		TranslatorBlock accelerationBlock = this.getRequiredTranslatorBlockAtSocket(2);
