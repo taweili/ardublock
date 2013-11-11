@@ -4100,6 +4100,120 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<!-- Workshop block -->
+		<BlockGenus name="ws_setting" kind="command" color="225 116 116" initlabel="bg.workshop_setting">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/setting.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_forward" kind="command" color="225 116 116" initlabel="bg.go_forward">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_forward.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_backward" kind="command" color="225 116 116" initlabel="bg.ws_go_backward">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_backward.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_stop" kind="command" color="225 116 116" initlabel="bg.ws_stop">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/stop.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_turn_left" kind="command" color="225 116 116" initlabel="bg.ws_turn_left">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/turn_left.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_turn_right" kind="command" color="225 116 116" initlabel="bg.ws_turn_right">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/turn_right.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_forward_left" kind="command" color="225 116 116" initlabel="bg.ws_go_forward_left">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_forward_left.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_forward_right" kind="command" color="225 116 116" initlabel="bg.ws_go_forward_right">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_forward_right.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_backward_left" kind="command" color="225 116 116" initlabel="bg.ws_go_backward_left">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_back_left.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_backward_right" kind="command" color="225 116 116" initlabel="bg.ws_go_backward_right">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_back_right.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -4478,6 +4592,18 @@
 				<BlockGenusMember>me_port_1</BlockGenusMember>
 				<BlockGenusMember>me_motor_1</BlockGenusMember>
 				<BlockGenusMember>me_shutter_1</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="225 116 116" name="bd.workshop" type="factory">
+			    <BlockGenusMember>ws_setting</BlockGenusMember>
+			    <BlockGenusMember>ws_go_forward</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward</BlockGenusMember>
+				<BlockGenusMember>ws_stop</BlockGenusMember>
+				<BlockGenusMember>ws_turn_left</BlockGenusMember>
+				<BlockGenusMember>ws_turn_right</BlockGenusMember>
+				<BlockGenusMember>ws_go_forward_left</BlockGenusMember>
+				<BlockGenusMember>ws_go_forward_right</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward_left</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward_right</BlockGenusMember>
 			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
