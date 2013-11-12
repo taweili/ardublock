@@ -951,7 +951,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/ultrasonic.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/ultrasonic.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
