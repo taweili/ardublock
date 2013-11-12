@@ -56,6 +56,15 @@
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop2" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="loop2" kind="command" color="255 240 0" initlabel="bg.program" is-starter="yes" is-terminator="yes" label-unique="yes">
+			<description>
+				<text>this is the loop of the arduino</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.setup" />
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop2" />
+			</BlockConnectors>
+		</BlockGenus>
 		<BlockGenus name="loop" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
