@@ -65,32 +65,9 @@
 			</BlockConnectors>
 		</BlockGenus>
 		<!-- legacy support -->
-		<!-- 
-		<BlockGenus name="loop1" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="no">
-			<description>
-				<text>this is the loop of the arduino</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.do" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="loop2" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="no">
-			<description>
-				<text>this is the loop of the arduino</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.do" />
-			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="loop3" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="no">
-			<description>
-				<text>this is the loop of the arduino</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.do" />
-			</BlockConnectors>
-		</BlockGenus>
-		 -->
+		<BlockGenus name="loop1" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="no" />
+		<BlockGenus name="loop2" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="no" />
+		<BlockGenus name="loop3" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="no" />
 		<!-- end of legacy support -->
 
 		<BlockGenus name="delay" kind="command" color="255 221 0" initlabel="bg.delay">
