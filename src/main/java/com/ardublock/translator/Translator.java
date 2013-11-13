@@ -23,7 +23,7 @@ public class Translator
 {
 	private static final String variablePrefix = "_ABVAR_";
 
-	private Set<String> headerFileSet;
+	private List<String> headerFileSet;
 	private Set<String> definitionSet;
 	private List<String> setupCommand;
 	private Set<String> functionNameSet;
@@ -121,7 +121,7 @@ public class Translator
 	
 	public void reset()
 	{
-		headerFileSet = new HashSet<String>();
+		headerFileSet = new LinkedList<String>();
 		definitionSet = new HashSet<String>();
 		setupCommand = new LinkedList<String>();
 		functionNameSet = new HashSet<String>();
@@ -144,7 +144,10 @@ public class Translator
 	
 	public void addHeaderFile(String headerFile)
 	{
-		headerFileSet.add(headerFile);
+		if (!headerFileSet.contains(headerFile))
+		{
+			headerFileSet.add(headerFile);
+		}
 	}
 	
 	public void addSetupCommand(String command)
