@@ -4781,6 +4781,7 @@
 				<BlockGenusMember>me_motor_1</BlockGenusMember>
 				<BlockGenusMember>me_shutter_1</BlockGenusMember>
 			</BlockDrawer>
+			<!-- 
 			<BlockDrawer button-color="225 116 116" name="bd.workshop" type="factory">
 			    <BlockGenusMember>ws_setting</BlockGenusMember>
 			    <BlockGenusMember>ws_go_forward</BlockGenusMember>
@@ -4799,7 +4800,7 @@
 				<BlockGenusMember>ws_danger</BlockGenusMember>
 				<BlockGenusMember>ws_binoculars</BlockGenusMember>
 			</BlockDrawer>
-			
+			 -->
 			<BlockDrawer button-color="64 109 0" name="bd.insectbot">
 			    <BlockGenusMember>insectbot_get_distance</BlockGenusMember>
 			    <BlockGenusMember>insectbot_is_indanger</BlockGenusMember>
