@@ -121,8 +121,8 @@ public class Translator
 	
 	public void reset()
 	{
-		headerFileSet = new HashSet<String>();
-		definitionSet = new HashSet<String>();
+		headerFileSet = new LinkedHashSet<String>();
+		definitionSet = new LinkedHashSet<String>();
 		setupCommand = new LinkedList<String>();
 		functionNameSet = new HashSet<String>();
 		inputPinSet = new HashSet<Long>();
