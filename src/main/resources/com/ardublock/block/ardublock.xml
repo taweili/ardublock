@@ -335,7 +335,10 @@
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" />
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 			</BlockConnectors>
@@ -352,7 +355,10 @@
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" />
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 			</BlockConnectors>
@@ -369,7 +375,10 @@
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" />
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 			</BlockConnectors>
@@ -386,7 +395,10 @@
 				</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" />
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 			</BlockConnectors>
@@ -394,7 +406,10 @@
 
 		<BlockGenus name="modulo" kind="function" color="149 193 31" initlabel="bg.modulo">
 			<BlockConnectors>
-				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" />
+				<BlockConnector label="" connector-kind="plug" connector-type="number" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 				<BlockConnector label="" connector-kind="socket" connector-type="number" position-type="bottom" />
 			</BlockConnectors>
@@ -472,7 +487,10 @@
 		
 		<BlockGenus name="min" kind="function" color="149 193 31" initlabel="bg.min">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
@@ -480,7 +498,10 @@
 
 		<BlockGenus name="max" kind="function" color="149 193 31" initlabel="bg.max">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 				<BlockConnector connector-type="number" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
