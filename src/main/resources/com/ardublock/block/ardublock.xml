@@ -273,6 +273,54 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="tone" kind="command" color="77 191 169" initlabel="tone">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50%
+					duty cycle) on a pin.
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440" />
+				</BlockConnector>
+
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="tone_time" kind="command" color="77 191 169" initlabel="tone">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50%
+					duty cycle) on a pin.
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.milliseconds">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="no_tone" kind="command" color="77 191 169" initlabel="noTone">
+			<description>
+				<text>Stops the generation of a square wave triggered by tone().
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!--****************** Mathematical Operators *************** -->
 
@@ -685,7 +733,19 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="number-const" kind="data" color="232 156 149" initlabel="bg.number" editable-label="yes">
+		<BlockGenus name="number-single" kind="data" color="205 133 63" initlabel="bg.number-single" editable-label="yes" is-label-value="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="number-single-fixed-parallel" kind="data" color="205 133 63" initlabel="Parallel" editable-label="no" is-label-value="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="number-single-I2C-address" kind="data" color="205 133 63" initlabel="bg.number-single-I2C-address" editable-label="yes" is-label-value="yes">
 			<BlockConnectors>
 				<BlockConnector connector-type="number-list" connector-kind="plug" position-type="single" />
 			</BlockConnectors>
@@ -861,7 +921,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="230 110 110">.
+		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="230 110 110">
 			<description>
 				<text>
 					character variable
@@ -879,13 +939,13 @@
 		</BlockGenus>
 
 		<!--****************** Utilities *************** -->		
-		<BlockGenus name="servo_default" kind="command" color="95 120 132" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_default" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
 			<description>
 				<text>Servo Default</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number-const" label="5"/>
+					<DefaultArg genus-name="number-single" label="5"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90" />
@@ -898,13 +958,13 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="servo_sg90" kind="command" color="95 120 132" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_sg90" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
 			<description>
 				<text>SG90</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number-const" label="5"/>
+					<DefaultArg genus-name="number-single" label="5"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90" />
@@ -917,13 +977,13 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="servo_mg996r" kind="command" color="95 120 132" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_mg996r" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
 			<description>
 				<text>Servo MG996R</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number-const" label="5"/>
+					<DefaultArg genus-name="number-single" label="5"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90" />
@@ -936,7 +996,7 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="ultrasonic" kind="data" color="95 120 132" initlabel="bg.ultrasonic">
+		<BlockGenus name="ultrasonic" kind="data" color="205 133 63" initlabel="bg.ultrasonic">
 			<description>
 				<text>Ultrasonic distance sensor</text>
 			</description>
@@ -956,55 +1016,169 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="tone" kind="command" color="95 120 132" initlabel="tone">
+		<BlockGenus name="LCD_I2C_Sainsmart_20by4" kind="command" color="205 133 63" initlabel="bg.LCD_I2C_Sainsmart_20by4">
 			<description>
-				<text>Generates a square wave of the specified frequency (and 50%
-					duty cycle) on a pin.
-				</text>
-			</description>
+				<text>20 Char by 4 Line LCD display</text>
+			</description>			
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="8" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.print">
+					<DefaultArg genus-name="message" label="Sainsmart LCD. I2C"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
-					<DefaultArg genus-name="number" label="440" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
+					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-
-			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="tone_time" kind="command" color="95 120 132" initlabel="tone">
-			<description>
-				<text>Generates a square wave of the specified frequency (and 50%
-					duty cycle) on a pin.
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="8" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.character_number">
+					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
-					<DefaultArg genus-name="number" label="440" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.milliseconds">
-					<DefaultArg genus-name="number" label="1000" />
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/LCD20by4.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="no_tone" kind="command" color="95 120 132" initlabel="noTone">
+		<BlockGenus name="LCD_I2C_Sainsmart_16by2" kind="command" color="205 133 63" initlabel="bg.LCD_I2C_Sainsmart_16by2">
 			<description>
-				<text>Stops the generation of a square wave triggered by tone().
-				</text>
+				<text>16 Char by 2 Line LCD display</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.print">
+					<DefaultArg genus-name="message" label="Sainsmart LCD. I2C"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.character_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/LCD20by4.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="LCD_PLL_Sainsmart_16by2" kind="command" color="205 133 63" initlabel="bg.LCD_PLL_Sainsmart_16by2">
+			<description>
+				<text>16 Char by 2 Line LCD display</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="8" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.print">
+					<DefaultArg genus-name="message" label="SainsmartLCD Parallel"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.character_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single-fixed-parallel" label="Parallel"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/LCD16by2.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="LCD_command_clear" kind="command" color="205 133 63" label-prefix="LCD::  " initlabel="bg.LCD_command_clear">
+			<description>
+				<text>Clear LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="LCD_command_home" kind="command" color="205 133 63" label-prefix="LCD::  " initlabel="bg.LCD_command_home">
+			<description>
+				<text>Home LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="LCD_command_lightOn" kind="command" color="205 133 63" label-prefix="LCD::  " initlabel="bg.LCD_command_lightOn">
+			<description>
+				<text>Home LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="LCD_command_lightOff" kind="command" color="205 133 63" label-prefix="LCD::  " initlabel="bg.LCD_command_lightOff">
+			<description>
+				<text>Home LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		
+		<BlockGenus name="LCD_command_cursorOn" kind="command" color="205 133 63" label-prefix="LCD::  " initlabel="bg.LCD_command_cursorOn">
+			<description>
+				<text>Home LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="LCD_command_cursorOff" kind="command" color="205 133 63" label-prefix="LCD::  " initlabel="bg.LCD_command_cursorOff">
+			<description>
+				<text>Home LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="LCD_command_blinkOn" kind="command" color="205 133 63" label-prefix="LCD::  " initlabel="bg.LCD_command_blinkOn">
+			<description>
+				<text>Home LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="LCD_command_blinkOff" kind="command" color="205 133 63" label-prefix="LCD::  " initlabel="bg.LCD_command_blinkOff">
+			<description>
+				<text>Home LCD</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.device_address_I2C">
+					<DefaultArg genus-name="number-single" label="3F"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
 		<!-- ******************** Communication *************** -->
 
 		<BlockGenus name="serial_read" kind="data" color="245 245 245" initlabel="bg.serial_read">
@@ -3765,11 +3939,11 @@
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<!-- <Image>
+			<!--<Images>
+				 <Image>
 					<FileLocation>com/ardublock/block/bulk/moteur-dc-fwd.jpg</FileLocation>
-				</Image> -->
-			</Images>
+				</Image> 
+			</Images> -->
 		</BlockGenus>
 		<BlockGenus name="ada_dc_motor_bwd" kind="command" color="216 5 10" initlabel="bg.ada_dc_motor_bwd">
 			<description>
@@ -3783,11 +3957,11 @@
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<!-- <Image>
+			<!-- <Images>
+				<Image>
 					<FileLocation>com/ardublock/block/bulk/moteur-dc-bwd.jpg</FileLocation>
-				</Image> -->
-			</Images>
+				</Image> 
+			</Images> -->
 		</BlockGenus>
 		<BlockGenus name="ada_dc_motor_release" kind="command" color="216 5 10" initlabel="bg.ada_dc_motor_release">
 			<description>
@@ -3801,11 +3975,11 @@
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<!-- <Image>
+			<!-- <Images>
+				 <Image>
 					<FileLocation>com/ardublock/block/bulk/moteur-dc-release.jpg</FileLocation>
-				</Image> -->
-			</Images>
+				</Image> 
+			</Images> -->
 		</BlockGenus>
 		<!--***Makeblock***-->
 		<BlockGenus name="me_ultrasonic_sensor" kind="data" color="0 177 236" initlabel="bg.me_ultrasonic_sensor">
@@ -4200,6 +4374,20 @@
 			<FamilyMember>digital-off</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>LCD_I2C_Sainsmart_20by4</FamilyMember>
+			<FamilyMember>LCD_I2C_Sainsmart_16by2</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>LCD_command_clear</FamilyMember>
+			<FamilyMember>LCD_command_home</FamilyMember>
+			<FamilyMember>LCD_command_lightOff</FamilyMember>
+			<FamilyMember>LCD_command_lightOn</FamilyMember>
+			<FamilyMember>LCD_command_cursorOn</FamilyMember>
+			<FamilyMember>LCD_command_cursorOff</FamilyMember>
+			<FamilyMember>LCD_command_blinkOn</FamilyMember>
+			<FamilyMember>LCD_command_blinkOff</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>servo_default</FamilyMember>
 			<FamilyMember>servo_sg90</FamilyMember>
 			<FamilyMember>servo_mg996r</FamilyMember>
@@ -4293,6 +4481,9 @@
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>
+				<BlockGenusMember>tone</BlockGenusMember>
+				<BlockGenusMember>tone_time</BlockGenusMember>
+				<BlockGenusMember>no_tone</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
@@ -4349,12 +4540,14 @@
 				<BlockGenusMember>variable_poly</BlockGenusMember>
 				<BlockGenusMember>char</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="95 120 132" name="bd.utilities" type="factory">
-				<BlockGenusMember>tone</BlockGenusMember>
-				<BlockGenusMember>tone_time</BlockGenusMember>
-				<BlockGenusMember>no_tone</BlockGenusMember>
+			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>servo_default</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
+				<BlockGenusMember>LCD_I2C_Sainsmart_20by4</BlockGenusMember>
+				<BlockGenusMember>LCD_command_lightOff</BlockGenusMember>
+				<BlockGenusMember>LCD_PLL_Sainsmart_16by2</BlockGenusMember>
+				<BlockGenusMember>number-single-I2C-address</BlockGenusMember>
+				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_read</BlockGenusMember>
