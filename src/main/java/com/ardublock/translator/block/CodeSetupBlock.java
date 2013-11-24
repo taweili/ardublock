@@ -16,11 +16,11 @@ public class CodeSetupBlock extends TranslatorBlock
 	{
 		
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret ="\t"+ translatorBlock.toCode();
+		String ret = translatorBlock.toCode();
 		//ret=ret.substring(1);
 		//ret=ret.replace(ret.substring(ret.length()-1),"");
 		ret=ret+"\n";
-		translator.addSetupCommand(ret);
+		translator.addSetupCommandForced(ret);
 		return "";
 	}
 }
