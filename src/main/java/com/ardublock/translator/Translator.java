@@ -155,6 +155,11 @@ public class Translator
 		}
 	}
 	
+	public void addSetupCommandForced(String command)
+	{
+		setupCommand.add(command);
+	}
+	
 	public void addDefinitionCommand(String command)
 	{
 		definitionSet.add(command);
