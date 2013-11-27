@@ -18,6 +18,10 @@ public class MessageBlock extends TranslatorBlock
 		String ret;
 		ret = label.replaceAll("\\\\", "\\\\\\\\");
 		ret = ret.replaceAll("\"", "\\\\\"");
+		//A way to have 'space' at start or end of message
+		ret = ret.replaceAll("<&space>", " ");
+		//A way to have other block settings applied but no message sent
+		ret = ret.replaceAll("<&nothing>", "");
 		ret = codePrefix + "\"" + ret + "\"" + codeSuffix;
 		TranslatorBlock translatorBlock = this.getTranslatorBlockAtSocket(0, codePrefix, codeSuffix);
 		if (translatorBlock != null)
