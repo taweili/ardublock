@@ -20,13 +20,12 @@ public class ServoMg996rBlock extends TranslatorBlock {
 
 		String servoSpecs = ",620,2200";
 
-		if (!( tb instanceof NumberConstBlock ) )
+		if (!( tb instanceof NumberBlock ) )
 		{
-			throw new BlockException(this.blockId, "the Pin# of Servo must be a constant");
+			throw new BlockException(this.blockId, "the Pin# of Servo must be a number");
 		}
 
-		NumberConstBlock pinNumberBlock = (NumberConstBlock)tb;
-		String pinNumber = pinNumberBlock.toCode();
+		String pinNumber = tb.toCode();
 		String servoName = "servo_pin_" + pinNumber;
 
 		tb = this.getRequiredTranslatorBlockAtSocket(1);

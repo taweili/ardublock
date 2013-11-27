@@ -56,7 +56,7 @@ public class ProgramBlock extends TranslatorBlock
 	{
 		for (String command : setupCommand)
 		{
-			translator.addSetupCommand(command);
+			translator.addSetupCommandForced(command);
 		}
 	}
 	
