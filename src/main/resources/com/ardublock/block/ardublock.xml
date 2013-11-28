@@ -4231,6 +4231,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+<<<<<<< HEAD
 		<BlockGenus name="me_port_1" kind="data" color="0 177 236" initlabel="bg.me_port_1" editable-label="no">
 			<description>
 				<text>Me Base Shield Port</text>
@@ -4338,6 +4339,59 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+=======
+		
+		<BlockGenus name="ada_stepper_step_fwd" kind="command" color="216 5 50" initlabel="bg.ada_stepper_step_fwd">
+			<description>
+				<text>Adafruit Stepper motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_channel">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps_nb">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_rpm">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<!-- <Image>
+					<FileLocation>com/ardublock/block/bulk/moteur-dc-release.jpg</FileLocation>
+				</Image> -->
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_stepper_step_bwd" kind="command" color="216 5 50" initlabel="bg.ada_stepper_step_bwd">
+			<description>
+				<text>Adafruit Stepper motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_channel">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps_nb">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_rpm">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<!-- <Image>
+					<FileLocation>com/ardublock/block/bulk/moteur-dc-release.jpg</FileLocation>
+				</Image> -->
+			</Images>
+		</BlockGenus>
+		
+>>>>>>> temp
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -4458,6 +4512,7 @@
 			<FamilyMember>ada_dc_motor_release</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+<<<<<<< HEAD
 			<FamilyMember>me_port_1</FamilyMember>
 			<FamilyMember>me_port_2</FamilyMember>
 			<FamilyMember>me_port_3</FamilyMember>
@@ -4476,6 +4531,10 @@
 			<FamilyMember>me_shutter_2</FamilyMember>
 			<FamilyMember>me_shutter_3</FamilyMember>
 			<FamilyMember>me_shutter_4</FamilyMember>
+=======
+			<FamilyMember>ada_stepper_step_fwd</FamilyMember>
+			<FamilyMember>ada_stepper_step_bwd</FamilyMember>
+>>>>>>> temp
 		</BlockFamily>
 	</BlockFamilies>
 
@@ -4718,6 +4777,8 @@
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_release</BlockGenusMember>
+				<BlockGenusMember>ada_stepper_step_fwd</BlockGenusMember>
+				<BlockGenusMember>ada_stepper_step_bwd</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 177 236" name="bd.makeblock" type="factory">
 				<BlockGenusMember>me_ultrasonic_sensor</BlockGenusMember>
