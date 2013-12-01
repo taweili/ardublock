@@ -2,6 +2,7 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.bbbb.BbbbBlock;
 import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
@@ -23,6 +24,7 @@ public class ServoBlock extends TranslatorBlock
 			throw new BlockException(this.blockId, "the Pin# of Servo must a number");
 		}
 		
+		translator.addDefinitionCommand(BbbbBlock.BBBB_DEF);
 		
 		NumberBlock pinNumberBlock = (NumberBlock)translatorBlock;
 		String pinNumber = pinNumberBlock.toCode();
@@ -33,7 +35,8 @@ public class ServoBlock extends TranslatorBlock
 		String ret = servoName + ".write( " + translatorBlock.toCode() + " );\n";
 		translator.addHeaderFile("Servo.h");
 		translator.addDefinitionCommand("Servo " + servoName + ";");
-		translator.addSetupCommand(servoName + ".attach(" + pinNumber + ");");
+		translator.addSetupCommand("lightOnIndicator(" + pinNumber + ");");
+		translator.addSetupCommand(servoName + ".attach(PP_PORT_IO[" + pinNumber + "-1]);");
 		return ret;
 	}
 
