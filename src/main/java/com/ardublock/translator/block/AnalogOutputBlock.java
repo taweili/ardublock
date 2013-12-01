@@ -1,6 +1,7 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.bbbb.BbbbBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
@@ -14,23 +15,22 @@ public class AnalogOutputBlock extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
+		
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String portNum = translatorBlock.toCode();
-		
-		
+		String number = translatorBlock.toCode().trim();
 		if (translatorBlock instanceof NumberBlock)
 		{
-			translator.addOutputPin(portNum.trim());
+			translator.addDefinitionCommand(BbbbBlock.BBBB_DEF);
+			translator.addSetupCommand("lightOnIndicator(" + number + ");");
 		}
 		else
 		{
-			String setupCode = "pinMode( " + portNum + " , OUTPUT);";
-			translator.addSetupCommand(setupCode);
+			translator.addSetupCommand(String.format("pinMode(%s, OUTPUT);", number));
 		}
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		String value = translatorBlock.toCode();
 		
-		String ret = "analogWrite(" + portNum + " , " + value + ");\n";
+		String status = this.getRequiredTranslatorBlockAtSocket(1).toCode().trim();
+		
+		String ret = String.format("bbAnalogWrite(%s, %s);", number, status);
 		return ret;
 	}
 
