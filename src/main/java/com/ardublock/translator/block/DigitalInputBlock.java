@@ -32,7 +32,7 @@ public class DigitalInputBlock extends TranslatorBlock
 	{
 		String number;
 		number = translatorBlock.toCode();
-		translator.addInputPin(Long.parseLong(number));
+		translator.addInputPin(number.trim());
 		
 		String ret = "digitalRead(";
 		ret = ret + number;
