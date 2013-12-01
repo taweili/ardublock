@@ -1,6 +1,7 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.bbbb.BbbbBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
@@ -31,12 +32,11 @@ public class DigitalInputBlock extends TranslatorBlock
 	protected String generateCodeUsingNumberBlock(TranslatorBlock translatorBlock) throws SocketNullException, SubroutineNotDeclaredException
 	{
 		String number;
-		number = translatorBlock.toCode();
-		translator.addInputPin(number.trim());
+		number = translatorBlock.toCode().trim();
 		
-		String ret = "digitalRead(";
-		ret = ret + number;
-		ret = ret + ")";
+		String ret = String.format("bbDigitalRead(%s)", number);
+		translator.addDefinitionCommand(BbbbBlock.BBBB_DEF);
+		translator.addSetupCommand("lightOnIndicator(" + number + ");");
 		return codePrefix + ret + codeSuffix;
 	}
 	

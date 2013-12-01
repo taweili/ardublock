@@ -37,14 +37,14 @@ public class BbbbBlock
 			"	return analogRead(PP_PORT_IO[i]);\n" + 
 			"}\n" + 
 			"\n" + 
-			"int bbDigitalRead(int i, int status)\n" + 
+			"int bbDigitalRead(int i)\n" + 
 			"{\n" + 
 			"	if (i<1 || i>6)\n" + 
 			"	{\n" + 
 			"		return 0;\n" + 
 			"	}\n" + 
 			"	--i;\n" + 
-			"	pinMode(PP_PORT_IO[i], OUTPUT);\n" + 
+			"	pinMode(PP_PORT_IO[i], INPUT);\n" + 
 			"	return digitalRead(PP_PORT_IO[i]);\n" + 
 			"}\n" + 
 			"\n" + 
