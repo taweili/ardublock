@@ -26,6 +26,9 @@ public class TranslatorBlockFactory
 		shortClassName.put("inversedDigitalOutput", "com.ardublock.translator.block.InversedDigitalOutputBlock");
 		shortClassName.put("inversedAnalogOutput", "com.ardublock.translator.block.InversedAnalogOutputBlock");
 		shortClassName.put("servo", "com.ardublock.translator.block.ServoBlock");
+		shortClassName.put("tone", "com.ardublock.translator.block.ToneBlock");
+		shortClassName.put("toneTime", "com.ardublock.translator.block.ToneTimeBlock");
+		shortClassName.put("noTone", "com.ardublock.translator.block.NoToneBlock");
 	}
 	
 	
