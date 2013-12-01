@@ -24,7 +24,7 @@ public class DigitalInputPullBlock extends DigitalInputBlock
 	{
 		String number;
 		number = translatorBlock.toCode();
-		translator.addInputPin(Long.parseLong(number));
+		translator.addInputPin(number.trim());
 		translator.addSetupCommand("digitalWrite(" + number + ", HIGH);");
 		return "" ;
 	}

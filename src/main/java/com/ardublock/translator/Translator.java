@@ -30,8 +30,8 @@ public class Translator
 	private Set<TranslatorBlock> bodyTranslatreFinishCallbackSet;
 	private BlockAdaptor blockAdaptor;
 	
-	private Set<Long> inputPinSet;
-	private Set<Long> outputPinSet;
+	private Set<String> inputPinSet;
+	private Set<String> outputPinSet;
 	
 	private Map<String, String> numberVariableSet;
 	private Map<String, String> booleanVariableSet;
@@ -81,14 +81,14 @@ public class Translator
 		
 		if (!inputPinSet.isEmpty())
 		{
-			for (Long pinNumber:inputPinSet)
+			for (String pinNumber:inputPinSet)
 			{
 				headerCommand.append("pinMode( " + pinNumber + ", INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
-			for (Long pinNumber:outputPinSet)
+			for (String pinNumber:outputPinSet)
 			{
 				headerCommand.append("pinMode( " + pinNumber + ", OUTPUT);\n");
 			}
@@ -125,8 +125,8 @@ public class Translator
 		definitionSet = new LinkedHashSet<String>();
 		setupCommand = new LinkedList<String>();
 		functionNameSet = new HashSet<String>();
-		inputPinSet = new HashSet<Long>();
-		outputPinSet = new HashSet<Long>();
+		inputPinSet = new HashSet<String>();
+		outputPinSet = new HashSet<String>();
 		bodyTranslatreFinishCallbackSet = new HashSet<TranslatorBlock>();
 		
 		numberVariableSet = new HashMap<String, String>();
@@ -165,12 +165,12 @@ public class Translator
 		definitionSet.add(command);
 	}
 	
-	public void addInputPin(Long pinNumber)
+	public void addInputPin(String pinNumber)
 	{
 		inputPinSet.add(pinNumber);
 	}
 	
-	public void addOutputPin(Long pinNumber)
+	public void addOutputPin(String pinNumber)
 	{
 		outputPinSet.add(pinNumber);
 	}
