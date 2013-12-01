@@ -2630,6 +2630,38 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		
+		<BlockGenus name="bbbb_motor_cw" kind="command" color="255 102 0" initlabel="bg.motor_cw">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/bbbb/mcw.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="bbbb_motor_ccw" kind="command" color="255 102 0" initlabel="bg.motor_ccw">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/bbbb/mccw.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 
 		<BlockGenus name="df_piranha_led" kind="command" color="255 102 0" initlabel="bg.df_piranha_led">
 			<description>
@@ -4589,6 +4621,8 @@
 			    <BlockGenusMember>df_led</BlockGenusMember>
 				<BlockGenusMember>df_led_pwm</BlockGenusMember>
 				<BlockGenusMember>df_digital_push_button</BlockGenusMember>
+				<BlockGenusMember>bbbb_motor_cw</BlockGenusMember>
+				<BlockGenusMember>bbbb_motor_ccw</BlockGenusMember>
 				<BlockGenusMember>df_digital_viberation_sensor</BlockGenusMember>
 				<BlockGenusMember>df_analog_rotation_sensor_v1</BlockGenusMember>
 				<BlockGenusMember>df_analog_rotation_sensor_v2</BlockGenusMember>

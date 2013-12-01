@@ -58,7 +58,20 @@ public class BbbbBlock
 			"	pinMode(PP_PORT_IO[i], OUTPUT);\n" + 
 			"	analogWrite(PP_PORT_IO[i], status);\n" + 
 			"}\n" + 
-			""
+			"void bbbbMotor(int direction, int speed)\n" + 
+			"{\n" + 
+			"	pinMode(10, OUTPUT);\n" + 
+			"	pinMode(11, OUTPUT);\n" + 
+			"	if (0 == direction)\n" + 
+			"	{\n" + 
+			"		digitalWrite(10, LOW);\n" + 
+			"	}\n" + 
+			"	else\n" + 
+			"	{\n" + 
+			"		digitalWrite(10, HIGH);\n" + 
+			"	}\n" + 
+			"	analogWrite(11, speed);\n" + 
+			"}"
 			;
 	
 	
