@@ -4595,13 +4595,13 @@
 				<BlockGenusMember>df_servo</BlockGenusMember>
 				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
 				<BlockGenusMember>df_analog_sound_sensor</BlockGenusMember>
-				<BlockGenusMember>df_analog_volume_sensor</BlockGenusMember>
+				<!-- <BlockGenusMember>df_analog_volume_sensor</BlockGenusMember> -->
 				<BlockGenusMember>df_relay</BlockGenusMember>
 				<BlockGenusMember>df_analog_ambient_light_sensor</BlockGenusMember>
 				<BlockGenusMember>df_analog_grayscale_sensor</BlockGenusMember>
 				<BlockGenusMember>df_buzzer</BlockGenusMember>
-				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>
-				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
+				<!-- <BlockGenusMember>df_buzzer_tone</BlockGenusMember> -->
+				<!-- <BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember> -->
 				<BlockGenusMember>df_capacitive_touch_sensor</BlockGenusMember>
 				<BlockGenusMember>df_digital_tilt_sensor</BlockGenusMember>
 				<BlockGenusMember>df_digital_infrared_motion_sensor</BlockGenusMember>
@@ -4621,7 +4621,7 @@
 				<BlockGenusMember>df_mma7260_x</BlockGenusMember>
 				<BlockGenusMember>df_mma7260_y</BlockGenusMember>
 				<BlockGenusMember>df_mma7260_z</BlockGenusMember>
-				<BlockGenusMember>df_analog_gp2y0a21</BlockGenusMember>
+				<!-- <BlockGenusMember>df_analog_gp2y0a21</BlockGenusMember> -->
 				<BlockGenusMember>df_analog_moisture</BlockGenusMember>
 				<BlockGenusMember>df_analog_gas_sensor</BlockGenusMember>
 				<BlockGenusMember>df_analog_co_sensor</BlockGenusMember>
@@ -4630,7 +4630,7 @@
 				<BlockGenusMember>df_piranha_led_pwm</BlockGenusMember>
 				<BlockGenusMember>panda_i1</BlockGenusMember>
 				<BlockGenusMember>panda_o1</BlockGenusMember>
-				<BlockGenusMember>df_lcd_keypad</BlockGenusMember>
+				<!-- <BlockGenusMember>df_lcd_keypad</BlockGenusMember> -->
 			</BlockDrawer>
 			
 			<!--
