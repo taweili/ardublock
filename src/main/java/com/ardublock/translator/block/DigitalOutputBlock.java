@@ -1,6 +1,7 @@
 package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.bbbb.BbbbBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
@@ -19,17 +20,15 @@ public class DigitalOutputBlock extends TranslatorBlock
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		if (translatorBlock instanceof NumberBlock)
 		{
-			String number = translatorBlock.toCode();
-			String setupCode = "pinMode( " + number + " , OUTPUT);";
-			translator.addSetupCommand(setupCode);
+			translator.addDefinitionCommand(BbbbBlock.BBBB_DEF);
 			
-			String ret = "digitalWrite( ";
-			ret = ret + number;
-			ret = ret + " , ";
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-			ret = ret + translatorBlock.toCode();
-			ret = ret + " );\n";
-			return ret;
+			String number = translatorBlock.toCode().trim();
+			String status = this.getRequiredTranslatorBlockAtSocket(1).toCode().trim();
+			String ret = String.format("bbDigitalWrite(%s, %s);\n", number, status);
+			
+			translator.addSetupCommand("lightOnIndicator(" + number + ");");
+			
+			return codePrefix + ret + codeSuffix;
 		}
 		else
 		{
