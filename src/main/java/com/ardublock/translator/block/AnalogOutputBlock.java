@@ -20,7 +20,7 @@ public class AnalogOutputBlock extends TranslatorBlock
 		
 		if (translatorBlock instanceof NumberBlock)
 		{
-			translator.addOutputPin(Long.parseLong(portNum));
+			translator.addOutputPin(portNum.trim());
 		}
 		else
 		{
