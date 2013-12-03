@@ -19,7 +19,7 @@ public class InversedDigitalOutputBlock extends DigitalOutputBlock
 		if (translatorBlock instanceof NumberBlock)
 		{
 			String number = translatorBlock.toCode();
-			translator.addOutputPin(Long.parseLong(number));
+			translator.addOutputPin(number.trim());
 			
 			String ret = "digitalWrite( ";
 			ret = ret + number;

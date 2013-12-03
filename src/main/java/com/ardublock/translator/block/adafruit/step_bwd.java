@@ -36,9 +36,10 @@ public class step_bwd extends TranslatorBlock
 		
 		String MotorName = "stepper_motor" + ChannelNumber;
 		
-		String ret = "\t" + MotorName + ".step(" + Steps + ", BACKWARD, DOUBLE);\n";
+		String ret = "\t" + MotorName + ".setSpeed(" + rpm + ");\n";
+		ret += "\t" + MotorName + ".step(" + Steps + ", BACKWARD, DOUBLE);\n";
 		translator.addHeaderFile("AFMotor.h");
-		translator.addSetupCommand(MotorName + ".setSpeed(" + rpm + ");");
+		//translator.addSetupCommand(MotorName + ".setSpeed(" + rpm + ");");
 		translator.addDefinitionCommand("AF_Stepper " + MotorName + "(" + Steps_nb + ", " + ChannelNumber + ");");
 
 		return ret;

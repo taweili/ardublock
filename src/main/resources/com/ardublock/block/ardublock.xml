@@ -4002,6 +4002,57 @@
 				</Image> 
 			</Images> -->
 		</BlockGenus>
+		<BlockGenus name="ada_stepper_step_fwd" kind="command" color="216 5 50" initlabel="bg.ada_stepper_step_fwd">
+			<description>
+				<text>Adafruit Stepper motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_channel">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps_nb">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_rpm">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<!-- <Image>
+					<FileLocation>com/ardublock/block/bulk/moteur-dc-release.jpg</FileLocation>
+				</Image> -->
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_stepper_step_bwd" kind="command" color="216 5 50" initlabel="bg.ada_stepper_step_bwd">
+			<description>
+				<text>Adafruit Stepper motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_channel">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps_nb">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_rpm">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<!-- <Image>
+					<FileLocation>com/ardublock/block/bulk/moteur-dc-release.jpg</FileLocation>
+				</Image> -->
+			</Images>
+		</BlockGenus>
+		
+		
 		<!--***Makeblock***-->
 		<BlockGenus name="me_ultrasonic_sensor" kind="data" color="0 177 236" initlabel="bg.me_ultrasonic_sensor">
 			<description>
@@ -4231,7 +4282,6 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-<<<<<<< HEAD
 		<BlockGenus name="me_port_1" kind="data" color="0 177 236" initlabel="bg.me_port_1" editable-label="no">
 			<description>
 				<text>Me Base Shield Port</text>
@@ -4339,59 +4389,265 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-=======
 		
-		<BlockGenus name="ada_stepper_step_fwd" kind="command" color="216 5 50" initlabel="bg.ada_stepper_step_fwd">
+		<!-- Workshop block -->
+		<BlockGenus name="ws_setting" kind="command" color="225 116 116" initlabel="bg.workshop_setting">
 			<description>
-				<text>Adafruit Stepper motor</text>
+				<text>workshop template</text>
 			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_channel">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps_nb">
-					<DefaultArg genus-name="number" label="200" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_rpm">
-					<DefaultArg genus-name="number" label="10" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps">
-					<DefaultArg genus-name="number" label="200" />
-				</BlockConnector>
-			</BlockConnectors>
 			<Images>
-				<!-- <Image>
-					<FileLocation>com/ardublock/block/bulk/moteur-dc-release.jpg</FileLocation>
-				</Image> -->
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/setting.png</FileLocation>
+				</Image>
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="ada_stepper_step_bwd" kind="command" color="216 5 50" initlabel="bg.ada_stepper_step_bwd">
+		<BlockGenus name="ws_go_forward" kind="command" color="225 116 116" initlabel="bg.go_forward">
 			<description>
-				<text>Adafruit Stepper motor</text>
+				<text>workshop template</text>
 			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_channel">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps_nb">
-					<DefaultArg genus-name="number" label="200" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_rpm">
-					<DefaultArg genus-name="number" label="10" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_steps">
-					<DefaultArg genus-name="number" label="200" />
-				</BlockConnector>
-			</BlockConnectors>
 			<Images>
-				<!-- <Image>
-					<FileLocation>com/ardublock/block/bulk/moteur-dc-release.jpg</FileLocation>
-				</Image> -->
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_forward.png</FileLocation>
+				</Image>
 			</Images>
 		</BlockGenus>
 		
->>>>>>> temp
+		<BlockGenus name="ws_go_backward" kind="command" color="225 116 116" initlabel="bg.ws_go_backward">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_backward.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_stop" kind="command" color="225 116 116" initlabel="bg.ws_stop">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/stop.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_turn_left" kind="command" color="225 116 116" initlabel="bg.ws_turn_left">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/turn_left.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_turn_right" kind="command" color="225 116 116" initlabel="bg.ws_turn_right">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/turn_right.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_forward_left" kind="command" color="225 116 116" initlabel="bg.ws_go_forward_left">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_forward_left.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_forward_right" kind="command" color="225 116 116" initlabel="bg.ws_go_forward_right">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_forward_right.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_backward_left" kind="command" color="225 116 116" initlabel="bg.ws_go_backward_left">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_back_left.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_go_backward_right" kind="command" color="225 116 116" initlabel="bg.ws_go_backward_right">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/go_back_right.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		<BlockGenus name="ws_light" kind="command" color="225 116 116" initlabel="bg.ws_light">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/light.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_scan" kind="command" color="225 116 116" initlabel="bg.ws_scan">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/scan.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_music" kind="command" color="225 116 116" initlabel="bg.ws_music">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/music.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_wireless" kind="command" color="225 116 116" initlabel="bg.ws_wireless">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/wireless.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_danger" kind="data" color="225 116 116" initlabel="bg.ws_danger">
+			<description>
+				<text>workshop template</text>
+			</description>
+		    <BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/danger.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ws_binoculars" kind="data" color="225 116 116" initlabel="bg.ws_binoculars">
+			<description>
+				<text>workshop template</text>
+			</description>
+		    <BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/binoculars.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<!-- InsectBot blocks -->
+		
+		<BlockGenus name="insectbot_get_distance" kind="data" color="64 109 0" initlabel="bg.insectbot_get_distance">
+			<description>
+				<text>workshop template</text>
+			</description>
+		    <BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_distance.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_is_indanger" kind="data" color="64 109 0" initlabel="bg.insectbot_is_indanger">
+			<description>
+				<text>workshop template</text>
+			</description>
+		    <BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_danger.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_go_forward" kind="command" color="64 109 0" initlabel="bg.insectbot_go_forward">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_goforward.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_go_backright" kind="command" color="64 109 0" initlabel="bg.insectbot_go_backright">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_gobackright.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_turn_left" kind="command" color="64 109 0" initlabel="bg.insectbot_turn_left">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_turnleft.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="insectbot_blink_led" kind="command" color="64 109 0" initlabel="bg.insectbot_blink_led">
+			<description>
+				<text>workshop template</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/workshop/insectbot_led.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -4512,7 +4768,10 @@
 			<FamilyMember>ada_dc_motor_release</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
-<<<<<<< HEAD
+			<FamilyMember>ada_stepper_step_fwd</FamilyMember>
+			<FamilyMember>ada_stepper_step_bwd</FamilyMember>
+		</BlockFamily>		
+		<BlockFamily>
 			<FamilyMember>me_port_1</FamilyMember>
 			<FamilyMember>me_port_2</FamilyMember>
 			<FamilyMember>me_port_3</FamilyMember>
@@ -4531,10 +4790,6 @@
 			<FamilyMember>me_shutter_2</FamilyMember>
 			<FamilyMember>me_shutter_3</FamilyMember>
 			<FamilyMember>me_shutter_4</FamilyMember>
-=======
-			<FamilyMember>ada_stepper_step_fwd</FamilyMember>
-			<FamilyMember>ada_stepper_step_bwd</FamilyMember>
->>>>>>> temp
 		</BlockFamily>
 	</BlockFamilies>
 
@@ -4797,6 +5052,35 @@
 				<BlockGenusMember>me_motor_1</BlockGenusMember>
 				<BlockGenusMember>me_shutter_1</BlockGenusMember>
 			</BlockDrawer>
+			<!-- 
+			<BlockDrawer button-color="225 116 116" name="bd.workshop" type="factory">
+			    <BlockGenusMember>ws_setting</BlockGenusMember>
+			    <BlockGenusMember>ws_go_forward</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward</BlockGenusMember>
+				<BlockGenusMember>ws_stop</BlockGenusMember>
+				<BlockGenusMember>ws_turn_left</BlockGenusMember>
+				<BlockGenusMember>ws_turn_right</BlockGenusMember>
+				<BlockGenusMember>ws_go_forward_left</BlockGenusMember>
+				<BlockGenusMember>ws_go_forward_right</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward_left</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward_right</BlockGenusMember>
+				<BlockGenusMember>ws_light</BlockGenusMember>
+				<BlockGenusMember>ws_scan</BlockGenusMember>
+				<BlockGenusMember>ws_music</BlockGenusMember>
+				<BlockGenusMember>ws_wireless</BlockGenusMember>
+				<BlockGenusMember>ws_danger</BlockGenusMember>
+				<BlockGenusMember>ws_binoculars</BlockGenusMember>
+			</BlockDrawer>
+			 -->
+			<BlockDrawer button-color="64 109 0" name="bd.insectbot">
+			    <BlockGenusMember>insectbot_get_distance</BlockGenusMember>
+			    <BlockGenusMember>insectbot_is_indanger</BlockGenusMember>
+			    <BlockGenusMember>insectbot_go_forward</BlockGenusMember>
+			    <BlockGenusMember>insectbot_go_backright</BlockGenusMember>
+			    <BlockGenusMember>insectbot_turn_left</BlockGenusMember>
+			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
+			</BlockDrawer>
+			
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
