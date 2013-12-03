@@ -34,6 +34,11 @@ public class LCD_PLL_Sainsmart_16by2_Block extends TranslatorBlock {
 		translator.addHeaderFile("Wire.h");
 		translator.addHeaderFile("LCD.h");
 		translator.addHeaderFile("LiquidCrystal.h");
+		translator.addDefinitionCommand(             "// For these LCD controls to work you MUST replace the standard LCD library with 'New LCD' from...");
+		translator.addDefinitionCommand(			 "// https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home");
+		translator.addDefinitionCommand(			 "// Direct download https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads/LiquidCrystal_V1.2.1.zip");
+		translator.addDefinitionCommand(             "// Your project will not compile until this is done.");
+		translator.addDefinitionCommand(             "//");
 		translator.addDefinitionCommand(             "//                             RS  EN  d0  d1  d2  d3  LED ");
 		translator.addDefinitionCommand("LiquidCrystal lcd_I2C_" + parallel_addr + "(12, 11,  5,  4,  3,  2,  7, POSITIVE);");
 		translator.addSetupCommand("lcd_I2C_" + parallel_addr + ".begin (16, 2);");
