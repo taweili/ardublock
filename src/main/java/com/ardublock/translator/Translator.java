@@ -144,7 +144,10 @@ public class Translator
 	
 	public void addHeaderFile(String headerFile)
 	{
-		headerFileSet.add(headerFile);
+		if (!headerFileSet.contains(headerFile))
+		{
+			headerFileSet.add(headerFile);
+		}
 	}
 	
 	public void addSetupCommand(String command)
