@@ -3,19 +3,16 @@ package com.ardublock.ui.listener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
-import java.util.ResourceBundle;
 import java.util.Set;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import com.ardublock.core.Context;
-import com.ardublock.translator.AutoFormat;
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
-import com.ardublock.translator.block.exception.SubroutineNameDuplicatedException;
-import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 import edu.mit.blocks.codeblocks.Block;
 import edu.mit.blocks.renderable.RenderableBlock;
@@ -26,177 +23,324 @@ public class GenerateCodeButtonListener implements ActionListener
 	private JFrame parentFrame;
 	private Context context;
 	private Workspace workspace; 
-	private ResourceBundle uiMessageBundle;
 	
 	public GenerateCodeButtonListener(JFrame frame, Context context)
 	{
 		this.parentFrame = frame;
 		this.context = context;
 		workspace = context.getWorkspaceController().getWorkspace();
-		uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+	 */
 	public void actionPerformed(ActionEvent e)
 	{
 		boolean success;
 		success = true;
 		Translator translator = new Translator(workspace);
-		translator.reset();
 		
 		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
 		
+		// generate the infinite loop's code
+		
+		// declarations for the loop
 		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
-		Set<RenderableBlock> subroutineBlockSet = new HashSet<RenderableBlock>();
-		StringBuilder code = new StringBuilder();
+		String codeLoop = null;
+		String codeLoopHeader = null;
 		
-		
+		// infinite loop search
 		for (RenderableBlock renderableBlock:renderableBlocks)
 		{
 			Block block = renderableBlock.getBlock();
 			
 			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{
-				if(block.getGenusName().equals("loop"))
+				if(block.getGenusName().equals("loop") || block.getGenusName().equals("loop2"))
 				{
 					loopBlockSet.add(renderableBlock);
 				}
-				if(block.getGenusName().equals("loop1"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("loop2"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("loop3"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("program"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("setup"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if (block.getGenusName().equals("subroutine"))
-				{
-					String functionName = block.getBlockLabel().trim();
-					try
-					{
-						translator.addFunctionName(block.getBlockID(), functionName);
-					}
-					catch (SubroutineNameDuplicatedException e1)
-					{
-						context.highlightBlock(renderableBlock);
-						//find the second subroutine whose name is defined, and make it highlight. though it cannot happen due to constraint of OpenBlocks -_-
-						JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNameDuplicated"), "Error", JOptionPane.ERROR_MESSAGE);
-						return ;
-					}
-					subroutineBlockSet.add(renderableBlock);
-				}
-				
 			}
 		}
-		if (loopBlockSet.size() == 0) {
-			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.noLoopFound"), "Error", JOptionPane.ERROR_MESSAGE);
+		// message if no infinite loop
+		if (loopBlockSet.size() == 0)
+		{
+			JOptionPane.showOptionDialog(parentFrame, "No loop found!", "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
 			return ;
 		}
-		if (loopBlockSet.size() > 1) {
+		// message if too much infinite loops
+		if (loopBlockSet.size() > 1)
+		{
+			
 			for (RenderableBlock rb : loopBlockSet)
 			{
 				context.highlightBlock(rb);
 			}
-			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.multipleLoopFound"), "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showOptionDialog(parentFrame, "multiple loop block found!", "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
 			return ;
 		}
 		
-
-		try
+		// make the code of the infinite loop and the header
+		for (RenderableBlock renderableBlock : loopBlockSet)
 		{
-			for (RenderableBlock renderableBlock : loopBlockSet)
+			Block loopBlock = renderableBlock.getBlock();
+			try
 			{
-				Block loopBlock = renderableBlock.getBlock();
-				code.append(translator.translate(loopBlock.getBlockID()));
+				codeLoop = translator.translate(loopBlock.getBlockID());
+				//codeLoopHeader = translator.translateHeader(loopBlock.getBlockID());
 			}
+			catch (SocketNullException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				success = false;
+				Long blockId = e1.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, "socket null", "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
+			catch (BlockException e2)
+			{
+				e2.printStackTrace();
+				success = false;
+				Long blockId = e2.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, e2.getMessage(), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
+		}
+		
+		// generate the infinite loop//'s code
+		
+		// declarations for the loop
+		Set<RenderableBlock> loopParallelBlockSet = new HashSet<RenderableBlock>();
+		String codeLoopParallel = "";
+		//String codeLoopHeader = null;
+		
+		// infinite loop search
+		for (RenderableBlock renderableBlock:renderableBlocks)
+		{
+			Block block = renderableBlock.getBlock();
 			
-			for (RenderableBlock renderableBlock : subroutineBlockSet)
+			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{
-				Block subroutineBlock = renderableBlock.getBlock();
-				code.append(translator.translate(subroutineBlock.getBlockID()));
-			}
-			translator.beforeGenerateHeader();
-			code.insert(0, translator.genreateHeaderCommand());
-		}
-		catch (SocketNullException e1)
-		{
-			e1.printStackTrace();
-			success = false;
-			Long blockId = e1.getBlockId();
-			Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
-			for (RenderableBlock renderableBlock2 : blocks)
-			{
-				Block block2 = renderableBlock2.getBlock();
-				if (block2.getBlockID().equals(blockId))
+				if(block.getGenusName().equals("loop//"))
 				{
-					context.highlightBlock(renderableBlock2);
-					break;
+					loopParallelBlockSet.add(renderableBlock);
 				}
 			}
-			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.socketNull"), "Error", JOptionPane.ERROR_MESSAGE);
 		}
-		catch (BlockException e2)
+		
+		// make the code of the infinite loop and the header
+		for (RenderableBlock renderableBlock : loopParallelBlockSet)
 		{
-			e2.printStackTrace();
-			success = false;
-			Long blockId = e2.getBlockId();
-			Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
-			for (RenderableBlock renderableBlock2 : blocks)
+			Block loopParallelBlock = renderableBlock.getBlock();
+			try
 			{
-				Block block2 = renderableBlock2.getBlock();
-				if (block2.getBlockID().equals(blockId))
-				{
-					context.highlightBlock(renderableBlock2);
-					break;
-				}
+				codeLoopParallel += translator.translate(loopParallelBlock.getBlockID());
+				//codeLoopHeader = translator.translateHeader(loopBlock.getBlockID());
 			}
-			JOptionPane.showMessageDialog(parentFrame, e2.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+			catch (SocketNullException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				success = false;
+				Long blockId = e1.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, "socket null", "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
+			catch (BlockException e2)
+			{
+				e2.printStackTrace();
+				success = false;
+				Long blockId = e2.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, e2.getMessage(), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
 		}
-		catch (SubroutineNotDeclaredException e3)
+		
+		// generate the procedure's code
+		
+		// declarations for the procedures
+		Set<RenderableBlock> procBlockSet = new HashSet<RenderableBlock>();
+		String codeProc = "";
+		
+		// procedure search		
+		for (RenderableBlock renderableBlock:renderableBlocks)
 		{
-			e3.printStackTrace();
-			success = false;
-			Long blockId = e3.getBlockId();
-			Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
-			for (RenderableBlock renderableBlock3 : blocks)
-			{
-				Block block2 = renderableBlock3.getBlock();
-				if (block2.getBlockID().equals(blockId))
-				{
-					context.highlightBlock(renderableBlock3);
-					break;
-				}
-			}
-			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNotDeclared"), "Error", JOptionPane.ERROR_MESSAGE);
+			Block block = renderableBlock.getBlock();
 			
+			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
+			{
+				if(block.getGenusName().equals("procedure") || block.getGenusName().equals("procedure_interrupt"))
+				{
+					procBlockSet.add(renderableBlock);
+				}
+			}
 		}
+		
+		// make the code of the procedure loop and the header
+		for (RenderableBlock renderableBlock : procBlockSet)
+		{
+			Block procBlock = renderableBlock.getBlock();
+			try
+			{
+				codeProc += translator.translateProc(procBlock.getBlockID());
+				//codeProcHeader = translator.translateHeader(procBlock.getBlockID());
+			}
+			catch (SocketNullException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				success = false;
+				Long blockId = e1.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, "socket null", "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
+			catch (BlockException e2)
+			{
+				e2.printStackTrace();
+				success = false;
+				Long blockId = e2.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, e2.getMessage(), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
+		}
+		
+		// generate the header's code
+		
+		// declarations for the header
+		Set<RenderableBlock> headerBlockSet = new HashSet<RenderableBlock>();
+		String codeHeader = null;
+		
+		// infinite procedure search
+		for (RenderableBlock renderableBlock:renderableBlocks)
+		{
+			Block block = renderableBlock.getBlock();
+			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
+			{
+//				//headerBlockSet.add(renderableBlock);
+//				if(block.getGenusName().startsWith("global-var-"))
+//				{
+					headerBlockSet.add(renderableBlock);					
+//				}
+			}
+		}
+		
+		// make the code of the header for loops and procedures
+		for (RenderableBlock renderableBlock : headerBlockSet)
+		{
+			Block headerBlock = renderableBlock.getBlock();
+			try
+			{
+				//String inutile = translator.translateVar(headerBlock.getBlockID());
+				codeHeader = translator.translateHeader(headerBlock.getBlockID());
+			}
+			catch (SocketNullException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				success = false;
+				Long blockId = e1.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, "socket null", "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
+			catch (BlockException e2)
+			{
+				e2.printStackTrace();
+				success = false;
+				Long blockId = e2.getBlockId();
+				Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
+				for (RenderableBlock renderableBlock2 : blocks)
+				{
+					Block block2 = renderableBlock2.getBlock();
+					if (block2.getBlockID().equals(blockId))
+					{
+						context.highlightBlock(renderableBlock2);
+						break;
+					}
+				}
+				JOptionPane.showOptionDialog(parentFrame, e2.getMessage(), "Error", JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null, null, JOptionPane.OK_OPTION);
+			}
+		}
+		
+		
+		
+		//Long i = 0L;
+		//String codeHeader = translator.translateHeader(i);
 		
 		if (success)
 		{
-			AutoFormat formatter = new AutoFormat();
-			String codeOut = code.toString();
+			System.out.println(codeHeader);
+			System.out.println(codeLoopParallel);
+			System.out.println(codeLoop);
+			System.out.println(codeProc);
+			String code = codeHeader + codeLoopParallel + codeLoop + codeProc;
+			context.didGenerate(code);
 			
-			if (context.isNeedAutoFormat)
-			{
-				codeOut = formatter.format(codeOut);
-			}
-			
-			if (!context.isInArduino())
-			{
-				System.out.println(codeOut);
-			}		
-			context.didGenerate(codeOut);
+			//for test by HE Qichen
+			//System.out.println(code);
 		}
 	}
 }
