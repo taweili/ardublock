@@ -1,25 +1,30 @@
 package com.ardublock.translator.block;
 
-
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
-import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class SerialPrintlnBlock extends TranslatorBlock
 {
-	public SerialPrintlnBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	protected SerialPrintlnBlock(Long blockId, Translator translator)
 	{
-		super(blockId, translator, codePrefix, codeSuffix, label);
+		super(blockId, translator);
 	}
 
-	@Override
-	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
+	public String toCode() throws SocketNullException
 	{
 		translator.addSetupCommand("Serial.begin(9600);");
-		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0, "Serial.print(", ");\n");
-		
-		String ret = translatorBlock.toCode();
-		ret = ret + "Serial.println();\n";
+		int i=0;
+		TranslatorBlock tb = getTranslatorBlockAtSocket(0, "\tSerial.print(", ");\n");
+		//tb=this.nextTranslatorBlock();		
+		String ret = "";
+		while (tb != null)
+		{
+			ret = ret + tb.toCode();
+			i=i+1;
+			tb = getTranslatorBlockAtSocket(i, "\tSerial.print(", ");\n");
+		}		
+		//ret = ret.replace("\n", "\n\t");
+		ret = ret + "\tSerial.println(\"\");\n";
 		
 		return ret;
 	}

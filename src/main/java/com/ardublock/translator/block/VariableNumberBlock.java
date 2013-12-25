@@ -4,23 +4,22 @@ import com.ardublock.translator.Translator;
 
 public class VariableNumberBlock extends TranslatorBlock
 {
-	public VariableNumberBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	protected VariableNumberBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	@Override
 	public String toCode()
 	{
-		String internalVariableName = translator.getNumberVariable(label);
-		if (internalVariableName == null)
+		String localVariableName = translator.getNumberLocalVariable(label);
+		if (localVariableName == null)
 		{
-			internalVariableName = translator.buildVariableName(label);
-			translator.addNumberVariable(label, internalVariableName);
-			translator.addDefinitionCommand("int " + internalVariableName + " = 0 ;");
-//			translator.addSetupCommand(internalVariableName + " = 0;");
+			localVariableName = translator.buildLocalVariableName(label);
+			translator.addNumberVariable(label, localVariableName);
+			//translator.addDefinitionCommand("int " + internalVariableName + ";");
+			//translator.addSetupCommand("\t" + internalVariableName + " = 0;");
 		}
-		return codePrefix + internalVariableName + codeSuffix;
+		return codePrefix + localVariableName + codeSuffix;
 	}
 
 }

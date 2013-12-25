@@ -1,5 +1,7 @@
 package com.ardublock.ui.listener;
 
+import javax.swing.JFrame;
+
 import com.ardublock.core.Context;
 import com.ardublock.ui.OpenblocksFrame;
 
@@ -23,7 +25,6 @@ public class ArdublockWorkspaceListener implements WorkspaceListener
 		if (!context.isWorkspaceChanged())
 		{
 			context.setWorkspaceChanged(true);
-			context.setWorkspaceEmpty(false);
 			String title = frame.makeFrameTitle();
 			if (frame != null)
 			{

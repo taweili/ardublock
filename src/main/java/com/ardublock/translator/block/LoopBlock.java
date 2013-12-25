@@ -2,20 +2,18 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
-import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class LoopBlock extends TranslatorBlock
 {
-	public LoopBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public LoopBlock(Long blockId, Translator translator)
 	{
 		super(blockId, translator);
 	}
 
-	@Override
-	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
+	public String toCode() throws SocketNullException
 	{
 		String ret;
-		ret = "void loop()\n{\n";
+		ret = "void loop() {\n";
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
 		while (translatorBlock != null)
 		{

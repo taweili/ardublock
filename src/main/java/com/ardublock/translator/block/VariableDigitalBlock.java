@@ -4,25 +4,23 @@ import com.ardublock.translator.Translator;
 
 public class VariableDigitalBlock extends TranslatorBlock
 {
-	public VariableDigitalBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	protected VariableDigitalBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	@Override
 	public String toCode()
 	{
-		String internalVariableName = translator.getBooleanVariable(label);
-		if (internalVariableName == null)
+		String localVariableName = translator.getBooleanLocalVariable(label);
+		if (localVariableName == null)
 		{
-			internalVariableName = translator.buildVariableName(label);
-			translator.addBooleanVariable(label, internalVariableName);
-			translator.addDefinitionCommand("bool " + internalVariableName + "= false ;");
-//			translator.addSetupCommand(internalVariableName + " = false;");
+			localVariableName = translator.buildLocalVariableName(label);
+			translator.addBooleanVariable(label, localVariableName);
+			//translator.addDefinitionCommand("int " + internalVariableName + ";");
+			//translator.addSetupCommand("\t" + internalVariableName + " = 0;");
 		}
-		//String ret = " ( " + internalVariableName + " ? true : false )";
-		String ret = internalVariableName;
-		return codePrefix + ret + codeSuffix;
+		return codePrefix + localVariableName + codeSuffix;
 	}
+
 
 }

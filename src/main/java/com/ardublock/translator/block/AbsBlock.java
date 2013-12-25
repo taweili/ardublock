@@ -2,7 +2,6 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
-import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class AbsBlock extends TranslatorBlock
 	{
@@ -13,7 +12,7 @@ public class AbsBlock extends TranslatorBlock
 		}
 
 		@Override
-		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
+		public String toCode() throws SocketNullException
 		{
 			String ret = "abs( ";
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
