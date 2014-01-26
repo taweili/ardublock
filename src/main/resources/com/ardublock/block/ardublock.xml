@@ -739,7 +739,7 @@
 		</BlockGenus>
 
 		<!--****************** Numbers/Constants *************** -->
-		<BlockGenus name="millis" kind="data" color="204 102 153" initlabel="bg.millis">
+		<BlockGenus name="millis" kind="data" color="255 153 204" initlabel="bg.millis"> //
 			<description>
 				<text>Time in milliseconds</text>
 			</description>
@@ -749,12 +749,33 @@
 		</BlockGenus>
 
 		<BlockGenus name="number" kind="data" color="232 156 149" initlabel="bg.number" editable-label="yes">
+			<description>
+				<text>
+					Standard integer constant
+				</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="number_long" kind="data" color="204 102 153" initlabel="bg.number_long" editable-label="yes">
+		<BlockGenus name="number_long" kind="data" color="255 153 204 " initlabel="bg.number_long" editable-label="yes">
+			<description>
+				<text>
+					'Unsigned Long' constant
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="number_double" kind="data" color="153 204 255" initlabel="bg.number_double" editable-label="yes">
+			<description>
+				<text>
+					'Double' constant
+				</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
@@ -778,19 +799,30 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="digital-high" kind="data" color="153 102 204" initlabel="bg.digital-high">
+		<BlockGenus name="digital-high" kind="data" color="204 153 255" initlabel="bg.digital-high">
+			<description>
+				<text>
+					Pin HIGH
+				</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="digital-low" kind="data" color="153 102 204" initlabel="bg.digital-low">
+		
+		<BlockGenus name="digital-low" kind="data" color="204 153 255" initlabel="bg.digital-low">
+			<description>
+				<text>
+					Pin LOW
+				</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
 
-		<BlockGenus name="true" kind="data" initlabel="bg.true" color="153 102 204" editable-label="no">
+		<BlockGenus name="true" kind="data" initlabel="bg.true" color="204 153 255" editable-label="no">
 			<description>
 				<text>
 					Reports the boolean true.
@@ -801,7 +833,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="false" kind="data" initlabel="bg.false" color="153 102 204">
+		<BlockGenus name="false" kind="data" initlabel="bg.false" color="204 153 255">
 			<description>
 				<text>
 					Reports the boolean false.
@@ -823,7 +855,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-	    <BlockGenus name="variable_number_unsigned_long" kind="data" initlabel="bg.variable_number_unsigned_long" editable-label="yes" is-label-value="yes" color="255 153 204">
+	    <BlockGenus name="variable_number_unsigned_long" kind="data" initlabel="bg.variable_number_unsigned_long" editable-label="yes" is-label-value="yes" color="204 102 153">
 	      <description>
 	        <text>
 	          Unsigned Long Var
@@ -833,8 +865,19 @@
 	        <BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 	      </BlockConnectors>
 	    </BlockGenus>
+	    
+	    <BlockGenus name="variable_number_double" kind="data" initlabel="bg.variable_number_double" editable-label="yes" is-label-value="yes" color="51 153 255">
+	      <description>
+	        <text>
+	          Double
+	        </text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+	      </BlockConnectors>
+	    </BlockGenus>
 
-		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="204 153 255">
+		<BlockGenus name="variable_digital" kind="data" initlabel="bg.variable_digital" editable-label="yes" is-label-value="yes" color="153 102 204">
 			<description>
 				<text>
 					Digital Var
@@ -847,11 +890,11 @@
 
 		<BlockGenus name="setter_variable_number" kind="command" color="232 156 149" initlabel="bg.setter_variable_number">
 			<description>
-				<text>set a number variable</text>
+				<text>set integer variable</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="number variable name" />
+					<DefaultArg genus-name="variable_number" label="integer variable name" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="number" label="0" />
@@ -861,14 +904,28 @@
 		
 	    <BlockGenus name="setter_variable_number_unsigned_long" kind="command" color="255 153 204" initlabel="bg.setter_variable_number_unsigned_long">
 	      <description>
-	        <text>set a long number variable</text>
+	        <text>set a large integer variable</text>
 	      </description>
 	      <BlockConnectors>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_number_unsigned_long" label="long number variable name" />
+	          <DefaultArg genus-name="variable_number_unsigned_long" label="Large integer variable name" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 	          <DefaultArg genus-name="number_long" label="1000000" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+
+	    <BlockGenus name="setter_variable_number_double" kind="command" color="153 204 255" initlabel="bg.setter_variable_number_double">
+	      <description>
+	        <text>set decimal variable</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_number_double" label="Decimal variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="number_double" label="3.1415927" />
 	        </BlockConnector>
 	      </BlockConnectors>
 	    </BlockGenus>
@@ -887,10 +944,10 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_vector" kind="data" initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes" color="230 110 110">
+		<BlockGenus name="variable_vector" kind="data" initlabel="bg.variable_vector" editable-label="yes" is-label-value="yes" color="232 156 149">
 			<description>
 				<text>
-					Digital Var
+					Array member value
 				</text>
 			</description>
 			<BlockConnectors>
@@ -933,7 +990,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="setter_variable_char" kind="command" color="232 156 149" initlabel="bg.setter_variable_char">
+		<BlockGenus name="setter_variable_char" kind="command" color="102 255 51" initlabel="bg.setter_variable_char">
 			<description>
 				<text>create a vector of numbers</text>
 			</description>
@@ -948,7 +1005,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="230 110 110">
+		<BlockGenus name="variable_poly" kind="data" initlabel="bg.variable_poly" editable-label="yes" is-label-value="yes" color="0 204  0">
 			<description>
 				<text>
 					character variable
@@ -959,7 +1016,12 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="char" kind="data" color="232 156 149" initlabel="bg.char" editable-label="yes">
+		<BlockGenus name="char" kind="data" color="102 255 51" initlabel="bg.char" editable-label="yes">
+			<description>
+				<text>
+					character
+				</text>
+			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
@@ -1539,7 +1601,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_fake" kind="data" initlabel="bg.fake" editable-label="yes" is-label-value="yes" color="230 110 110">
+		<BlockGenus name="variable_fake" kind="data" initlabel="bg.fake" editable-label="yes" is-label-value="yes" color="204 51 0">
 			<description>
 				<text>
 					Digital Var
@@ -1550,13 +1612,13 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="digital-on" kind="data" color="232 156 149" initlabel="bg.digital-on">
+		<BlockGenus name="digital-on" kind="data" color="204 153 255" initlabel="bg.digital-on">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="digital-off" kind="data" color="232 156 149" initlabel="bg.digital-off">
+		<BlockGenus name="digital-off" kind="data" color="204 153 255" initlabel="bg.digital-off">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
@@ -4810,22 +4872,25 @@
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
 				<BlockGenusMember>variable_number</BlockGenusMember>
 				<BlockGenusMember>number</BlockGenusMember>
-				<BlockGenusMember>setter_variable_number_unsigned_long</BlockGenusMember>
-				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
-				<BlockGenusMember>number_long</BlockGenusMember>
-				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
 				<BlockGenusMember>variable_digital</BlockGenusMember>
 				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
 				<BlockGenusMember>true</BlockGenusMember>
 				<BlockGenusMember>false</BlockGenusMember>
+				<BlockGenusMember>setter_variable_number_unsigned_long</BlockGenusMember>
+				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
+				<BlockGenusMember>number_long</BlockGenusMember>
+				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>create_variable_vector</BlockGenusMember>
 				<BlockGenusMember>variable_vector</BlockGenusMember>
 				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
 				<BlockGenusMember>setter_variable_char</BlockGenusMember>
 				<BlockGenusMember>variable_poly</BlockGenusMember>
 				<BlockGenusMember>char</BlockGenusMember>
+				<BlockGenusMember>setter_variable_number_double</BlockGenusMember>
+				<BlockGenusMember>variable_number_double</BlockGenusMember>
+				<BlockGenusMember>number_double</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>servo_default</BlockGenusMember>
