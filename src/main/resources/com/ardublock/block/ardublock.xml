@@ -739,7 +739,7 @@
 		</BlockGenus>
 
 		<!--****************** Numbers/Constants *************** -->
-		<BlockGenus name="millis" kind="data" color="255 153 204" initlabel="bg.millis"> //
+		<BlockGenus name="millis" kind="data" color="255 153 204" initlabel="bg.millis">
 			<description>
 				<text>Time in milliseconds</text>
 			</description>
