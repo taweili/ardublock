@@ -45,9 +45,10 @@ public class GenerateCodeButtonListener implements ActionListener
 		
 		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
 		
-		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
+		Set<RenderableBlock> loopBlockSet = translator.findEntryBlocks();
 		Set<RenderableBlock> subroutineBlockSet = new HashSet<RenderableBlock>();
 		StringBuilder code = new StringBuilder();
+		
 		
 		
 		for (RenderableBlock renderableBlock:renderableBlocks)
@@ -56,30 +57,6 @@ public class GenerateCodeButtonListener implements ActionListener
 			
 			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{
-				if(block.getGenusName().equals("loop"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("loop1"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("loop2"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("loop3"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("program"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
-				if(block.getGenusName().equals("setup"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
 				if (block.getGenusName().equals("subroutine"))
 				{
 					String functionName = block.getBlockLabel().trim();

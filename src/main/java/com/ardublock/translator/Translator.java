@@ -17,6 +17,7 @@ import com.ardublock.translator.block.exception.SubroutineNameDuplicatedExceptio
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 import edu.mit.blocks.codeblocks.Block;
+import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
 
 public class Translator
@@ -254,5 +255,46 @@ public class Translator
 			translatorBlock.onTranslateBodyFinished();
 		}
 		
+	}
+	
+	public Set<RenderableBlock> findEntryBlocks()
+	{
+		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
+		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
+		
+		for (RenderableBlock renderableBlock:renderableBlocks)
+		{
+			Block block = renderableBlock.getBlock();
+			
+			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
+			{
+				if(block.getGenusName().equals("loop"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("loop1"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("loop2"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("loop3"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("program"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("setup"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+			}
+		}
+		
+		return loopBlockSet;
 	}
 }
