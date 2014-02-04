@@ -316,20 +316,6 @@ public class Translator
 					String functionName = block.getBlockLabel().trim();
 					this.addFunctionName(block.getBlockID(), functionName);
 					subroutineBlockSet.add(renderableBlock);
-					
-					
-					/*
-					try
-					{
-						translator.
-					}
-					catch (SubroutineNameDuplicatedException e1)
-					{
-						
-						return ;
-					}
-					*/
-					subroutineBlockSet.add(renderableBlock);
 				}
 				
 			}
