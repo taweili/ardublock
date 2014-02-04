@@ -1,6 +1,8 @@
 package com.ardublock;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -17,7 +19,7 @@ public class MainTest
 		MainTest test = new MainTest();
 		test.setupTest();
 		test.testFiles();
-		test.teardown();
+		//test.teardown();
 	}
 	
 	private void teardown() {
@@ -33,14 +35,15 @@ public class MainTest
 	
 	public void testFiles() throws SAXException, IOException, ParserConfigurationException
 	{
-		String savedFiles[] = {"factorial.abp"};
+		String savedFiles[] = {"src/test/resources/examples/factorial.abp"};
+		
+		Context context = Context.getContext();
 		
 		for (String savedFile : savedFiles)
 		{
-			System.out.println(savedFile);
+			File file = new File(savedFile);
+			context.loadArduBlockFile(file);
 		}
 		
-		Context context = Context.getContext();
-		//context.loadArduBlockFile();
 	}
 }
