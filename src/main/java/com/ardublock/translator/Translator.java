@@ -323,4 +323,24 @@ public class Translator
 		
 		return subroutineBlockSet;
 	}
+	
+	public String translate(Set<RenderableBlock> loopBlocks, Set<RenderableBlock> subroutineBlocks) throws SocketNullException, SubroutineNotDeclaredException
+	{
+		StringBuilder code = new StringBuilder();
+		for (RenderableBlock renderableBlock : loopBlocks)
+		{
+			Block loopBlock = renderableBlock.getBlock();
+			code.append(translate(loopBlock.getBlockID()));
+		}
+		
+		for (RenderableBlock renderableBlock : subroutineBlocks)
+		{
+			Block subroutineBlock = renderableBlock.getBlock();
+			code.append(translate(subroutineBlock.getBlockID()));
+		}
+		beforeGenerateHeader();
+		code.insert(0, genreateHeaderCommand());
+		
+		return code.toString();
+	}
 }

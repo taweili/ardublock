@@ -80,8 +80,6 @@ public class GenerateCodeButtonListener implements ActionListener
 			return ;
 			
 		}
-		StringBuilder code = new StringBuilder();
-		
 		
 		
 		if (loopBlockSet.size() == 0) {
@@ -97,26 +95,15 @@ public class GenerateCodeButtonListener implements ActionListener
 			return ;
 		}
 		
+		String code = "";
 
 		try
 		{
-			for (RenderableBlock renderableBlock : loopBlockSet)
-			{
-				Block loopBlock = renderableBlock.getBlock();
-				code.append(translator.translate(loopBlock.getBlockID()));
-			}
-			
-			for (RenderableBlock renderableBlock : subroutineBlockSet)
-			{
-				Block subroutineBlock = renderableBlock.getBlock();
-				code.append(translator.translate(subroutineBlock.getBlockID()));
-			}
-			translator.beforeGenerateHeader();
-			code.insert(0, translator.genreateHeaderCommand());
+			code = translator.translate(loopBlockSet, subroutineBlockSet);
 		}
 		catch (SocketNullException e1)
 		{
-			e1.printStackTrace();
+			//e1.printStackTrace();
 			success = false;
 			Long blockId = e1.getBlockId();
 			Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
@@ -150,7 +137,7 @@ public class GenerateCodeButtonListener implements ActionListener
 		}
 		catch (SubroutineNotDeclaredException e3)
 		{
-			e3.printStackTrace();
+			//e3.printStackTrace();
 			success = false;
 			Long blockId = e3.getBlockId();
 			Iterable<RenderableBlock> blocks = workspace.getRenderableBlocks();
