@@ -43,39 +43,47 @@ public class GenerateCodeButtonListener implements ActionListener
 		Translator translator = new Translator(workspace);
 		translator.reset();
 		
-		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
-		
 		Set<RenderableBlock> loopBlockSet = translator.findEntryBlocks();
-		Set<RenderableBlock> subroutineBlockSet = new HashSet<RenderableBlock>();
+		Set<RenderableBlock> subroutineBlockSet;
+		try
+		{
+			subroutineBlockSet = translator.findSubroutineBlocks();
+		}
+		catch (SubroutineNameDuplicatedException e4)
+		{
+			Iterable<RenderableBlock> rbs = workspace.getRenderableBlocks();
+			String subroutineName = null;
+			
+			//determine duplicated subroutine name
+			for (RenderableBlock rb : rbs)
+			{
+				if (rb.getBlockID() .equals(e4.getBlockId()))
+				{
+					subroutineName = rb.getBlock().getBlockLabel().trim();
+					break;
+				}
+			}
+			
+			//highlight duplicated blocks
+			for (RenderableBlock rb : rbs)
+			{
+				if (rb.getBlock().getBlockLabel().trim().equals(subroutineName))
+				{
+					context.highlightBlock(rb);
+				}
+			}
+			
+			//context.highlightBlock(renderableBlock);
+			//find the second subroutine whose name is defined, and make it highlight. though it cannot happen due to constraint of OpenBlocks -_-
+			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNameDuplicated"), "Error", JOptionPane.ERROR_MESSAGE);
+			//e4.printStackTrace();
+			return ;
+			
+		}
 		StringBuilder code = new StringBuilder();
 		
 		
 		
-		for (RenderableBlock renderableBlock:renderableBlocks)
-		{
-			Block block = renderableBlock.getBlock();
-			
-			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
-			{
-				if (block.getGenusName().equals("subroutine"))
-				{
-					String functionName = block.getBlockLabel().trim();
-					try
-					{
-						translator.addFunctionName(block.getBlockID(), functionName);
-					}
-					catch (SubroutineNameDuplicatedException e1)
-					{
-						context.highlightBlock(renderableBlock);
-						//find the second subroutine whose name is defined, and make it highlight. though it cannot happen due to constraint of OpenBlocks -_-
-						JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNameDuplicated"), "Error", JOptionPane.ERROR_MESSAGE);
-						return ;
-					}
-					subroutineBlockSet.add(renderableBlock);
-				}
-				
-			}
-		}
 		if (loopBlockSet.size() == 0) {
 			JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.noLoopFound"), "Error", JOptionPane.ERROR_MESSAGE);
 			return ;

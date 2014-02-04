@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.swing.JOptionPane;
+
 import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -296,5 +298,43 @@ public class Translator
 		}
 		
 		return loopBlockSet;
+	}
+	
+	public Set<RenderableBlock> findSubroutineBlocks() throws SubroutineNameDuplicatedException
+	{
+		Set<RenderableBlock> subroutineBlockSet = new HashSet<RenderableBlock>();
+		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
+		
+		for (RenderableBlock renderableBlock:renderableBlocks)
+		{
+			Block block = renderableBlock.getBlock();
+			
+			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
+			{
+				if (block.getGenusName().equals("subroutine"))
+				{
+					String functionName = block.getBlockLabel().trim();
+					this.addFunctionName(block.getBlockID(), functionName);
+					subroutineBlockSet.add(renderableBlock);
+					
+					
+					/*
+					try
+					{
+						translator.
+					}
+					catch (SubroutineNameDuplicatedException e1)
+					{
+						
+						return ;
+					}
+					*/
+					subroutineBlockSet.add(renderableBlock);
+				}
+				
+			}
+		}
+		
+		return subroutineBlockSet;
 	}
 }
