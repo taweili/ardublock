@@ -7,6 +7,7 @@ import java.util.Set;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.junit.Ignore;
 import org.xml.sax.SAXException;
 
 import com.ardublock.core.Context;
@@ -18,6 +19,7 @@ import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
 
+@Ignore
 public class MainTest
 {
 	private Main main;
