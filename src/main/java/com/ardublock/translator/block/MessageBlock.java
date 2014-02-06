@@ -22,6 +22,8 @@ public class MessageBlock extends TranslatorBlock
 		ret = ret.replaceAll("<&space>", " ");
 		//A way to have other block settings applied but no message sent
 		ret = ret.replaceAll("<&nothing>", "");
+		// A way to add \t to messages
+		ret = ret.replaceAll("<&tab>", "\\\\t");
 		ret = codePrefix + "\"" + ret + "\"" + codeSuffix;
 		TranslatorBlock translatorBlock = this.getTranslatorBlockAtSocket(0, codePrefix, codeSuffix);
 		if (translatorBlock != null)
