@@ -2,9 +2,9 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 
-public class VariableNumberUnsignedLongBlock extends TranslatorBlock
+public class VariableNumberDoubleBlock extends TranslatorBlock
 {
-  public VariableNumberUnsignedLongBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+  public VariableNumberDoubleBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
   {
     super(blockId, translator, codePrefix, codeSuffix, label);
   }
@@ -17,7 +17,7 @@ public class VariableNumberUnsignedLongBlock extends TranslatorBlock
     {
       internalVariableName = translator.buildVariableName(label);
       translator.addNumberVariable(label, internalVariableName);
-      translator.addDefinitionCommand("unsigned long " + internalVariableName + " = 0UL ;");
+      translator.addDefinitionCommand("double " + internalVariableName + " = 0.0 ;");
 //      translator.addSetupCommand(internalVariableName + " = 0;");
     }
     return codePrefix + internalVariableName + codeSuffix;
