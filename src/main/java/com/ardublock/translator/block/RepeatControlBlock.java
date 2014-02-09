@@ -1,12 +1,17 @@
 package com.ardublock.translator.block;
 
+import java.util.ResourceBundle;
+
 import com.ardublock.translator.Translator;
+import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class RepeatControlBlock extends TranslatorBlock
 {
 
+	private static ResourceBundle uiMessageBundle = ResourceBundle.getBundle("com/ardublock/block/ardublock");
+	
 	public RepeatControlBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator);
@@ -15,29 +20,30 @@ public class RepeatControlBlock extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-	    int start=0, stop=0;
-	    String aux;
-		String varName="";//this.getRequiredTranslatorBlockAtSocket(0);
-		TranslatorBlock teste = this.getRequiredTranslatorBlockAtSocket(0);
-		varName=varName+teste.toCode();
-		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		String ret = "for (" + varName + "= (";
-		start=Integer.parseInt(translatorBlock.toCode());
-		ret = ret + String.valueOf(start) + ") ; ";
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-		stop=Integer.parseInt(translatorBlock.toCode());
-		if(stop>=start){
-		    ret = ret + varName + " <= (";
-		    ret = ret + String.valueOf(stop) + ") ; "+varName + "+= (";
-		    translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-		    ret = ret + translatorBlock.toCode() +") )\n{\n";
-		}else{
-		    ret = ret + varName + " >= (";
-		    ret = ret + String.valueOf(stop) + ") ; "+varName + "-= (";
-		    translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-		    ret = ret + translatorBlock.toCode() +") )\n{\n";
+
+		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
+		if (!(tb instanceof VariableNumberBlock || tb instanceof VariableNumberUnsignedLongBlock || tb instanceof VariableNumberDoubleBlock)) {
+			throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.number_var_slot"));
 		}
-		translatorBlock = getTranslatorBlockAtSocket(4);
+
+		String varName = tb.toCode();
+		
+		tb = this.getRequiredTranslatorBlockAtSocket(1);
+		String startVal = tb.toCode();
+
+		tb = this.getRequiredTranslatorBlockAtSocket(2);
+		String stopVal = tb.toCode();
+
+		tb = this.getRequiredTranslatorBlockAtSocket(3);
+		String incVal = tb.toCode();
+
+		String ret = "";
+
+		ret = ret + "for( int _ABRES_" + varName + "_dir = " + startVal + "<=" + stopVal + "?1:-1, " + varName + " = " + startVal + "; \n" + 
+							 "_ABRES_" + varName + "_dir == 1" + "?" + varName + " <= "+ stopVal + ":" + varName + " >= " + stopVal + "; \n" + 
+							   varName + " = " + varName + " + (" + incVal + " * _ABRES_" + varName + "_dir))\n{";
+
+		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(4);
 		while (translatorBlock != null)
 		{
 			ret = ret + translatorBlock.toCode();
