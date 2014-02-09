@@ -39,9 +39,9 @@ public class RepeatControlBlock extends TranslatorBlock
 
 		String ret = "";
 
-		ret = ret + "for( int _ABRES_" + varName + "_dir = " + startVal + "<=" + stopVal + "?1:-1, " + varName + " = " + startVal + "; \n" + 
-							 "_ABRES_" + varName + "_dir == 1" + "?" + varName + " <= "+ stopVal + ":" + varName + " >= " + stopVal + "; \n" + 
-							   varName + " = " + varName + " + (" + incVal + " * _ABRES_" + varName + "_dir))\n{";
+		ret = ret + "for(" + varName + " = " + startVal + "; \n" + 
+				    startVal + "<=" + stopVal + "?" + varName + " <= "+ stopVal + ":" + varName + " >= " + stopVal + "; \n" + 
+				    startVal + "<=" + stopVal + "?" +  varName + " = " + varName + " + " + incVal + ":" +  varName + " = " + varName + " - (" + incVal + "))\n{"; 
 
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(4);
 		while (translatorBlock != null)
