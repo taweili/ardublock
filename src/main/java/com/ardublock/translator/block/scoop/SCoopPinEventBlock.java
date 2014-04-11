@@ -56,11 +56,11 @@ public class SCoopPinEventBlock extends SCoopTaskBlock
 		
 		//read pin number to moniting
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		String pinNumber = translatorBlock.toCode();
+		String pinNumber = translatorBlock.toCode().trim();
 		
 		if (translatorBlock instanceof NumberBlock)
 		{
-			translator.addInputPin(Long.parseLong(pinNumber));
+			translator.addInputPin(pinNumber);
 		}
 		else
 		{
