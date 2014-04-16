@@ -1692,6 +1692,28 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="bluno_println" kind="command" color="245 245 245" initlabel="bg.serial_println">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="bluno_println_number" kind="command" color="245 245 245" initlabel="bg.bluno_println_number">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<!--************************************************************** TinkerKit! ********************************************************************** -->
 		<BlockGenus name="Tinker_LED" kind="command" color="13 152 164" initlabel="bg.Tinker_LED">
 			<description>
@@ -4976,6 +4998,8 @@
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 				<BlockGenusMember>ir_setport</BlockGenusMember>
 				<BlockGenusMember>ir_getcode</BlockGenusMember>
+				<BlockGenusMember>bluno_println</BlockGenusMember>
+				<BlockGenusMember>bluno_println_number</BlockGenusMember>
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">
