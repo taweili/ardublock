@@ -263,7 +263,6 @@ public class Context
 			saveFileName = savedFile.getName();
 			workspaceController.resetWorkspace();
 			workspaceController.loadProjectFromPath(saveFilePath);
-			System.out.println("load save file path: " + saveFilePath);
 			didLoad();
 		}
 	}
