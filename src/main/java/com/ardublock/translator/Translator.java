@@ -14,6 +14,7 @@ import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.TranslatorBlockFactory;
+import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNameDuplicatedException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
@@ -38,6 +39,8 @@ public class Translator
 	
 	private Map<String, String> numberVariableSet;
 	private Map<String, String> booleanVariableSet;
+	private Map<String, String> stringVariableSet;
+	private Map<String, Object> internalData;
 	
 	private Workspace workspace;
 	
@@ -109,7 +112,7 @@ public class Translator
 		return headerCommand.toString();
 	}
 	
-	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException
+	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException, BlockException
 	{
 		TranslatorBlockFactory translatorBlockFactory = new TranslatorBlockFactory();
 		Block block = workspace.getEnv().getBlock(blockId);
@@ -134,7 +137,9 @@ public class Translator
 		
 		numberVariableSet = new HashMap<String, String>();
 		booleanVariableSet = new HashMap<String, String>();
+		stringVariableSet = new HashMap<String, String>();
 		
+		internalData =  new HashMap<String, Object>();
 		blockAdaptor = buildOpenBlocksAdaptor();
 		
 		variableCnt = 0;
@@ -191,6 +196,11 @@ public class Translator
 		return booleanVariableSet.get(userVarName);
 	}
 	
+	public String getStringVariable(String userVarName)
+	{
+		return stringVariableSet.get(userVarName);
+	}
+	
 	public void addNumberVariable(String userVarName, String internalName)
 	{
 		numberVariableSet.put(userVarName, internalName);
@@ -199,6 +209,11 @@ public class Translator
 	public void addBooleanVariable(String userVarName, String internalName)
 	{
 		booleanVariableSet.put(userVarName, internalName);
+	}
+	
+	public void addStringVariable(String userVarName, String internalName)
+	{
+		stringVariableSet.put(userVarName, internalName);
 	}
 	
 	public void addFunctionName(Long blockId, String functionName) throws SubroutineNameDuplicatedException
@@ -251,13 +266,14 @@ public class Translator
 		bodyTranslatreFinishCallbackSet.add(translatorBlock);
 	}
 
-	public void beforeGenerateHeader() {
+	public void beforeGenerateHeader()  throws SocketNullException, SubroutineNotDeclaredException
+	{
 		for (TranslatorBlock translatorBlock : bodyTranslatreFinishCallbackSet)
 		{
 			translatorBlock.onTranslateBodyFinished();
 		}
-		
 	}
+
 	
 	public Set<RenderableBlock> findEntryBlocks()
 	{
@@ -327,6 +343,7 @@ public class Translator
 	public String translate(Set<RenderableBlock> loopBlocks, Set<RenderableBlock> subroutineBlocks) throws SocketNullException, SubroutineNotDeclaredException
 	{
 		StringBuilder code = new StringBuilder();
+		
 		for (RenderableBlock renderableBlock : loopBlocks)
 		{
 			Block loopBlock = renderableBlock.getBlock();
@@ -342,5 +359,15 @@ public class Translator
 		code.insert(0, genreateHeaderCommand());
 		
 		return code.toString();
+	}
+	
+	public Object getInternalData(String name)
+	{
+		return internalData.get(name);
+	}
+	
+	public void addInternalData(String name, Object value)
+	{
+		internalData.put(name, value);
 	}
 }

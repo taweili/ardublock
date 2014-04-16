@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1600">
+<PageBlocks>
+<Block genus-name="loop" id="147">
+<Location>
+<X>131</X>
+<Y>91</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="148" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="148">
+<Location>
+<X>204</X>
+<Y>99</Y>
+</Location>
+<BeforeBlockId>147</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="144" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="string_equal" id="144">
+<Location>
+<X>278</X>
+<Y>102</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="148" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="145" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="bottom"/>
+<BlockConnector con-block-id="146" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="message" id="146">
+<Location>
+<X>488</X>
+<Y>105</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="144" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_string" id="145">
+<Location>
+<X>288</X>
+<Y>105</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="144" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

@@ -737,6 +737,32 @@
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="string_equal" kind="function" color="222 131 51" initlabel="bg.string_equal">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="string_empty" kind="function" color="222 131 51" initlabel="bg.string_empty">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug">
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!--****************** Numbers/Constants *************** -->
 		<BlockGenus name="millis" kind="data" color="255 153 204" initlabel="bg.millis">
@@ -885,6 +911,15 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="variable_string" kind="data" color="32 102 204" initlabel="bg.variable_string" editable-label="yes">
+			<description>
+				<text>string message</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -1634,7 +1669,29 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
+		<BlockGenus name="ir_setport" kind="command" color="245 245 245" initlabel="bg.ir_setport">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="11" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="ir_getcode" kind="command" color="245 245 245" initlabel="bg.ir_getcode">
+			<description>
+				<text></text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="variable_string" label="ir code" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<!--************************************************************** TinkerKit! ********************************************************************** -->
 		<BlockGenus name="Tinker_LED" kind="command" color="13 152 164" initlabel="bg.Tinker_LED">
 			<description>
@@ -4847,6 +4904,8 @@
 				<BlockGenusMember>and</BlockGenusMember>
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
+				<BlockGenusMember>string_equal</BlockGenusMember>
+				<BlockGenusMember>string_empty</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="114 147 71" name="bd.operators" type="factory">
 				<BlockGenusMember>addition</BlockGenusMember>
@@ -4891,6 +4950,7 @@
 				<BlockGenusMember>setter_variable_number_double</BlockGenusMember>
 				<BlockGenusMember>variable_number_double</BlockGenusMember>
 				<BlockGenusMember>number_double</BlockGenusMember>
+				<BlockGenusMember>variable_string</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>servo_default</BlockGenusMember>
@@ -4914,6 +4974,8 @@
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
+				<BlockGenusMember>ir_setport</BlockGenusMember>
+				<BlockGenusMember>ir_getcode</BlockGenusMember>
 			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">
@@ -4963,7 +5025,6 @@
 				<BlockGenusMember>panda_o1</BlockGenusMember>
 				<BlockGenusMember>df_lcd_keypad</BlockGenusMember>
 			</BlockDrawer>
-			
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
 		</BlockDrawerSet>
