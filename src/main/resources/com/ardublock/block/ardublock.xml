@@ -2774,6 +2774,39 @@
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="df_romeo_motors" kind="command" color="255 102 0" initlabel="bg.df_romeo_motors">
+			<description>
+				<text>set a pin to pwm</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.m1">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.m2">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="df_romeo_motor" kind="command" color="255 102 0" initlabel="bg.df_romeo_motor">
+			<description>
+				<text>set a pin to pwm</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="df_romeo_motor_stop" kind="command" color="255 102 0" initlabel="bg.df_romeo_motor_stop">
+			<description>
+				<text>set a pin to pwm</text>
+			</description>
+		</BlockGenus>
 		
 		<BlockGenus name="df_led" kind="command" color="255 102 0" initlabel="bg.df_led">
 			<description>
@@ -5048,6 +5081,9 @@
 				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
 				<BlockGenusMember>df_dht11_temperature</BlockGenusMember>
 				<BlockGenusMember>df_dht11_humidity</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motors</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motor</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember>
 				<BlockGenusMember>df_analog_sound_sensor</BlockGenusMember>
 				<BlockGenusMember>df_analog_volume_sensor</BlockGenusMember>
 				<BlockGenusMember>df_relay</BlockGenusMember>
