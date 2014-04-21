@@ -1666,7 +1666,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="ir_setport" kind="command" color="77 191 169" initlabel="bg.ir_setport">
+		<BlockGenus name="ir_setport" kind="command" color="245 245 245" initlabel="bg.ir_setport">
 			<description>
 				<text></text>
 			</description>
@@ -1677,7 +1677,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="ir_getcode" kind="command" color="77 191 169" initlabel="bg.ir_getcode">
+		<BlockGenus name="ir_getcode" kind="command" color="245 245 245" initlabel="bg.ir_getcode">
 			<description>
 				<text></text>
 			</description>
@@ -1709,6 +1709,8 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		
 		
 		<!--************************************************************** TinkerKit! ********************************************************************** -->
 		<BlockGenus name="Tinker_LED" kind="command" color="13 152 164" initlabel="bg.Tinker_LED">
@@ -4955,8 +4957,6 @@
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 				<BlockGenusMember>df_dht11_temperature</BlockGenusMember>
 				<BlockGenusMember>df_dht11_humidity</BlockGenusMember>
-				<BlockGenusMember>ir_setport</BlockGenusMember>
-				<BlockGenusMember>ir_getcode</BlockGenusMember>
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
@@ -5015,29 +5015,21 @@
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>delay_microseconds</BlockGenusMember>
 				<BlockGenusMember>millis</BlockGenusMember>
-				<BlockGenusMember>servo_default</BlockGenusMember>
-				<BlockGenusMember>ultrasonic</BlockGenusMember>
-				<BlockGenusMember>LCD_I2C_Sainsmart_20by4</BlockGenusMember>
-				<BlockGenusMember>LCD_command_lightOff</BlockGenusMember>
-				<BlockGenusMember>LCD_PLL_Sainsmart_16by2</BlockGenusMember>
-				<BlockGenusMember>number-single-I2C-address</BlockGenusMember>
-				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
-			</BlockDrawer>
-			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_read</BlockGenusMember>
-				<BlockGenusMember>serial_read_poly</BlockGenusMember>
-				<BlockGenusMember>serial_available</BlockGenusMember>
-				<BlockGenusMember>serial_print</BlockGenusMember>
 				<BlockGenusMember>serial_println</BlockGenusMember>
-				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
-				<BlockGenusMember>glue_poly</BlockGenusMember>
+				<BlockGenusMember>ir_setport</BlockGenusMember>
+				<BlockGenusMember>ir_getcode</BlockGenusMember>
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
-				<BlockGenusMember>ir_setport</BlockGenusMember>
-				<BlockGenusMember>ir_getcode</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
+				<BlockGenusMember>serial_read_poly</BlockGenusMember>
+				<BlockGenusMember>serial_available</BlockGenusMember>
+				<BlockGenusMember>serial_print</BlockGenusMember>
+				<BlockGenusMember>glue_poly</BlockGenusMember>
 				<BlockGenusMember>bluno_println</BlockGenusMember>
 				<BlockGenusMember>bluno_println_number</BlockGenusMember>
 			</BlockDrawer>
