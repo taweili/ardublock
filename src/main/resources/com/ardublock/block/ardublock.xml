@@ -157,6 +157,12 @@
             </BlockConnector>    
           </BlockConnectors>
       </BlockGenus> 
+		
+		<BlockGenus name="break" kind="command" color="255 221 0" initlabel="bg.break">
+			<description>
+				<text>Repeat the commands for "times"</text>
+			</description>
+		</BlockGenus>
 
 		<BlockGenus name="repeat_times" kind="command" color="255 221 0" initlabel="bg.repeat_times">
 			<description>
@@ -4956,17 +4962,18 @@
 	<BlockDrawerSets>
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
 			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="255 255 0">
-				<BlockGenusMember>program</BlockGenusMember>
 				<BlockGenusMember>loop</BlockGenusMember>
+				<BlockGenusMember>program</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
-				<BlockGenusMember>do_while</BlockGenusMember>
-				<BlockGenusMember>repeat_times</BlockGenusMember>
+				<!-- <BlockGenusMember>do_while</BlockGenusMember> -->
+				<!-- <BlockGenusMember>repeat_times</BlockGenusMember> -->
 				<BlockGenusMember>repeat</BlockGenusMember>
-				<BlockGenusMember>repeat_control</BlockGenusMember>
+				<!-- <BlockGenusMember>repeat_control</BlockGenusMember> -->
+				<BlockGenusMember>break</BlockGenusMember>
 				<BlockGenusMember>delay</BlockGenusMember>
-				<BlockGenusMember>delay_microseconds</BlockGenusMember>
+				<!-- <BlockGenusMember>delay_microseconds</BlockGenusMember> -->
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 			</BlockDrawer>

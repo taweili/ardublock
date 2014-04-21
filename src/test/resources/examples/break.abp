@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1600">
+<PageBlocks>
+<Block genus-name="loop" id="145">
+<Location>
+<X>65</X>
+<Y>37</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="294" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="repeat" id="294">
+<Location>
+<X>138</X>
+<Y>45</Y>
+</Location>
+<BeforeBlockId>145</BeforeBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="295" connector-kind="socket" connector-type="number" init-type="number" label="variable" position-type="single"/>
+<BlockConnector con-block-id="296" connector-kind="socket" connector-type="number" init-type="number" label="times" position-type="single"/>
+<BlockConnector con-block-id="293" connector-kind="socket" connector-type="cmd" init-type="cmd" label="commands" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="break" id="293">
+<Location>
+<X>349</X>
+<Y>101</Y>
+</Location>
+<BeforeBlockId>294</BeforeBlockId>
+</Block>
+<Block genus-name="number" id="296">
+<Label>5</Label>
+<Location>
+<X>352</X>
+<Y>72</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="294" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="295">
+<Label>variable name</Label>
+<Location>
+<X>352</X>
+<Y>48</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="294" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

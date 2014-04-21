@@ -3,13 +3,13 @@
 <Pages collapsible-pages="yes" drawer-with-page="yes">
 <Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1600">
 <PageBlocks>
-<Block genus-name="loop" id="145">
+<Block genus-name="loop" id="293">
 <Location>
-<X>111</X>
-<Y>84</Y>
+<X>130</X>
+<Y>75</Y>
 </Location>
 <Sockets num-sockets="1">
-<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="执行" position-type="single"/>
 </Sockets>
 </Block>
 </PageBlocks>

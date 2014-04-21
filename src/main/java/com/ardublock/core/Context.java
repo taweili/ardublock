@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
@@ -22,8 +23,13 @@ import processing.app.Editor;
 
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
+import edu.mit.blocks.codeblocks.Block;
 import edu.mit.blocks.controller.WorkspaceController;
+import edu.mit.blocks.renderable.BlockUtilities;
+import edu.mit.blocks.renderable.FactoryRenderableBlock;
 import edu.mit.blocks.renderable.RenderableBlock;
+import edu.mit.blocks.workspace.FactoryManager;
+import edu.mit.blocks.workspace.Page;
 import edu.mit.blocks.workspace.Workspace;
 
 public class Context
@@ -128,6 +134,7 @@ public class Context
 	
 	private void loadDefaultArdublockProgram()
 	{
+		/*
 		InputStream defaultArdublockProgram = this.getClass().getResourceAsStream(DEFAULT_ARDUBLOCK_PROGRAM_PATH);
 		
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -164,6 +171,19 @@ public class Context
 			e.printStackTrace();
 			workspaceController.loadFreshWorkspace();
 		}
+        */
+		
+		Workspace workspace = workspaceController.getWorkspace();
+		Page page = workspace.getPageNamed("Main");
+		
+		FactoryManager manager = workspace.getFactoryManager();
+		Block newBlock;
+        newBlock = new Block(workspace, "loop", false);
+        FactoryRenderableBlock factoryRenderableBlock = new FactoryRenderableBlock(workspace, manager, newBlock.getBlockID());
+        RenderableBlock renderableBlock = factoryRenderableBlock.createNewInstance();
+        renderableBlock.setLocation(100, 100);
+        page.addBlock(renderableBlock);
+        
         
 	}
 	
