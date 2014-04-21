@@ -4942,8 +4942,6 @@
 				<BlockGenusMember>repeat</BlockGenusMember>
 				<!-- <BlockGenusMember>repeat_control</BlockGenusMember> -->
 				<BlockGenusMember>break</BlockGenusMember>
-				<BlockGenusMember>delay</BlockGenusMember>
-				<!-- <BlockGenusMember>delay_microseconds</BlockGenusMember> -->
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 			</BlockDrawer>
@@ -4996,31 +4994,27 @@
 				<BlockGenusMember>map</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
+				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
 				<BlockGenusMember>variable_number</BlockGenusMember>
-				<BlockGenusMember>number</BlockGenusMember>
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
 				<BlockGenusMember>variable_digital</BlockGenusMember>
-				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
+				<BlockGenusMember>digital-high</BlockGenusMember>
 				<BlockGenusMember>true</BlockGenusMember>
 				<BlockGenusMember>false</BlockGenusMember>
-				<BlockGenusMember>setter_variable_number_unsigned_long</BlockGenusMember>
-				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
-				<BlockGenusMember>number_long</BlockGenusMember>
-				<BlockGenusMember>millis</BlockGenusMember>
-				<BlockGenusMember>create_variable_vector</BlockGenusMember>
-				<BlockGenusMember>variable_vector</BlockGenusMember>
-				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
-				<BlockGenusMember>setter_variable_char</BlockGenusMember>
-				<BlockGenusMember>variable_poly</BlockGenusMember>
-				<BlockGenusMember>char</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number_double</BlockGenusMember>
 				<BlockGenusMember>variable_number_double</BlockGenusMember>
 				<BlockGenusMember>number_double</BlockGenusMember>
+				<BlockGenusMember>setter_variable_char</BlockGenusMember>
+				<BlockGenusMember>char</BlockGenusMember>
 				<BlockGenusMember>variable_string</BlockGenusMember>
+				<BlockGenusMember>message</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
+				<BlockGenusMember>delay</BlockGenusMember>
+				<BlockGenusMember>delay_microseconds</BlockGenusMember>
+				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>servo_default</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Sainsmart_20by4</BlockGenusMember>
