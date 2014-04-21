@@ -486,7 +486,7 @@
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.max" >
-					<DefaultArg genus-name="number" label="1024" />
+					<DefaultArg genus-name="number" label="10" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -4992,13 +4992,8 @@
 				<BlockGenusMember>sin</BlockGenusMember>
 				<BlockGenusMember>cos</BlockGenusMember>
 				<BlockGenusMember>tan</BlockGenusMember>
-				<BlockGenusMember>random</BlockGenusMember>
 				<BlockGenusMember>random_range</BlockGenusMember>
-				<BlockGenusMember>min</BlockGenusMember>
-				<BlockGenusMember>max</BlockGenusMember>
-				<BlockGenusMember>map_common</BlockGenusMember>
 				<BlockGenusMember>map</BlockGenusMember>
-				<BlockGenusMember>constrain</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
