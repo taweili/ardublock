@@ -187,7 +187,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
-				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="subroutine" kind="command" color="200 200 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
@@ -1081,11 +1081,6 @@
 					<DefaultArg genus-name="number" label="90" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/SG90.png</FileLocation>
-				</Image>
-			</Images>
 		</BlockGenus>
 		
 		<BlockGenus name="servo_sg90" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
@@ -1126,7 +1121,7 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="ultrasonic" kind="data" color="205 133 63" initlabel="bg.ultrasonic">
+		<BlockGenus name="ultrasonic" kind="data" color="77 191 169" initlabel="bg.ultrasonic">
 			<description>
 				<text>Ultrasonic distance sensor</text>
 			</description>
@@ -1139,11 +1134,6 @@
 					<DefaultArg genus-name="number" label="2" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/ultrasonic.png</FileLocation>
-				</Image>
-			</Images>
 		</BlockGenus>
 
 		<BlockGenus name="LCD_I2C_Sainsmart_20by4" kind="command" color="205 133 63" initlabel="bg.LCD_I2C_Sainsmart_20by4">
@@ -1676,7 +1666,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="ir_setport" kind="command" color="245 245 245" initlabel="bg.ir_setport">
+		<BlockGenus name="ir_setport" kind="command" color="77 191 169" initlabel="bg.ir_setport">
 			<description>
 				<text></text>
 			</description>
@@ -1687,7 +1677,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="ir_getcode" kind="command" color="245 245 245" initlabel="bg.ir_getcode">
+		<BlockGenus name="ir_getcode" kind="command" color="77 191 169" initlabel="bg.ir_getcode">
 			<description>
 				<text></text>
 			</description>
@@ -2708,7 +2698,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_servo" kind="command" color="255 102 0" initlabel="bg.df_servo">
+		<BlockGenus name="df_servo" kind="command" color="77 191 169" initlabel="bg.df_servo">
 			<description>
 				<text>set a pin to pwm</text>
 			</description>
@@ -2720,14 +2710,9 @@
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/ser0017.jpg</FileLocation>
-				</Image>
-			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_360_degree_rotation_motor" kind="command" color="255 102 0" initlabel="bg.df_360_degree_rotation_motor">
+		<BlockGenus name="df_360_degree_rotation_motor" kind="command" color="77 191 169" initlabel="bg.df_360_degree_rotation_motor">
 			<description>
 				<text>set a pin to pwm</text>
 			</description>
@@ -2739,14 +2724,9 @@
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/ser0017.jpg</FileLocation>
-				</Image>
-			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="df_dht11_temperature" kind="data" color="255 102 0" initlabel="bg.df_dht11_temperature">
+		<BlockGenus name="df_dht11_temperature" kind="data" color="77 191 169" initlabel="bg.df_dht11_temperature">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -2756,14 +2736,9 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0067.jpg</FileLocation>
-				</Image>
-			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="df_dht11_humidity" kind="data" color="255 102 0" initlabel="bg.df_dht11_humidity">
+		<BlockGenus name="df_dht11_humidity" kind="data" color="77 191 169" initlabel="bg.df_dht11_humidity">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
@@ -2773,11 +2748,6 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0067.jpg</FileLocation>
-				</Image>
-			</Images>
 		</BlockGenus>
 		
 		<BlockGenus name="df_romeo_motors" kind="command" color="255 102 0" initlabel="bg.df_romeo_motors">
@@ -4982,7 +4952,13 @@
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
-				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>
+				<BlockGenusMember>df_servo</BlockGenusMember>
+				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
+				<BlockGenusMember>ultrasonic</BlockGenusMember>
+				<BlockGenusMember>df_dht11_temperature</BlockGenusMember>
+				<BlockGenusMember>df_dht11_humidity</BlockGenusMember>
+				<BlockGenusMember>ir_setport</BlockGenusMember>
+				<BlockGenusMember>ir_getcode</BlockGenusMember>
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
