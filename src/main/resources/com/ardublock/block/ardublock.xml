@@ -140,7 +140,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector label="bc.condition" connector-kind="socket" connector-type="boolean" />
-				<BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -172,7 +172,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
-				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -195,7 +195,7 @@
 				<text>subroutine</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
+				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
 
