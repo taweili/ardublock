@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1600">
+<PageBlocks>
+<Block genus-name="delay" id="93">
+<Location>
+<X>173</X>
+<Y>192</Y>
+</Location>
+<BeforeBlockId>92</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="94" connector-kind="socket" connector-type="number" init-type="number" label="milliseconds" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="94">
+<Label>500</Label>
+<Location>
+<X>383</X>
+<Y>195</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="93" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="bluno_println_clear" id="92">
+<Location>
+<X>173</X>
+<Y>168</Y>
+</Location>
+<BeforeBlockId>89</BeforeBlockId>
+<AfterBlockId>93</AfterBlockId>
+</Block>
+<Block genus-name="delay" id="89">
+<Location>
+<X>173</X>
+<Y>138</Y>
+</Location>
+<BeforeBlockId>87</BeforeBlockId>
+<AfterBlockId>92</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="90" connector-kind="socket" connector-type="number" init-type="number" label="milliseconds" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="90">
+<Label>500</Label>
+<Location>
+<X>383</X>
+<Y>141</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="89" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="bluno_println" id="87">
+<Location>
+<X>173</X>
+<Y>108</Y>
+</Location>
+<BeforeBlockId>86</BeforeBlockId>
+<AfterBlockId>89</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="88" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="message" id="88">
+<Label>Hello World</Label>
+<Location>
+<X>299</X>
+<Y>111</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="87" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="loop" id="86">
+<Location>
+<X>100</X>
+<Y>100</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="87" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

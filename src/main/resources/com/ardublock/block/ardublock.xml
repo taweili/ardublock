@@ -26,7 +26,7 @@
 	<BlockGenuses>
 		<BlockGenus name="dummy" kind="command" initlabel="" color="0 0 0" />
 	    <!-- ******************** NEW FOR LOOP **************** -->
-		<BlockGenus name="repeat_control" kind="command" color="255 221 0" initlabel="bg.repeat_control">
+		<BlockGenus name="repeat_control" kind="command" color="149 193 31" initlabel="bg.repeat_control">
 			<description>
 				<text>repeat</text>
 			</description>
@@ -47,7 +47,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		<!-- ******************** Controls Menu *************** -->
-		<BlockGenus name="program" kind="command" color="255 240 0" initlabel="bg.program" is-starter="yes" is-terminator="yes" label-unique="no">
+		<BlockGenus name="program" kind="command" color="149 193 31" initlabel="bg.program" is-starter="yes" is-terminator="yes" label-unique="no">
 			<description>
 				<text>this is the loop of the arduino</text>
 			</description>
@@ -56,7 +56,7 @@
 				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.loop" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="loop" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
+		<BlockGenus name="loop" kind="command" color="149 193 31" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="yes">
 			<description>
 				<text>this is the loop of the arduino</text>
 			</description>
@@ -70,7 +70,7 @@
 		<BlockGenus name="loop3" kind="command" color="255 240 0" initlabel="bg.loop" is-starter="yes" is-terminator="yes" label-unique="no" />
 		<!-- end of legacy support -->
 
-		<BlockGenus name="delay" kind="command" color="255 221 0" initlabel="bg.delay">
+		<BlockGenus name="delay" kind="command" color="149 193 31" initlabel="bg.delay">
 			<description>
 				<text>program delay in x milliseconds</text>
 			</description>
@@ -80,7 +80,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="if" kind="command" initlabel="bg.if" color="255 221 0">
+		<BlockGenus name="if" kind="command" initlabel="bg.if" color="149 193 31">
 			<description>
 				<text>
 					If
@@ -104,7 +104,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="ifelse" kind="command" initlabel="bg.ifelse" color="255 221 0">
+		<BlockGenus name="ifelse" kind="command" initlabel="bg.ifelse" color="149 193 31">
 			<description>
 				<text>
 					Does the first set of commands if the condition specified is
@@ -132,7 +132,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="while" kind="command" initlabel="bg.while" color="255 221 0">
+		<BlockGenus name="while" kind="command" initlabel="bg.while" color="149 193 31">
 			<description>
 				<text>
 					While Block
@@ -144,7 +144,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-	<BlockGenus name="do_while" kind="command" initlabel="bg.do_while" color="255 221 0">
+	<BlockGenus name="do_while" kind="command" initlabel="bg.do_while" color="149 193 31">
           <description>
             <text>
                 Do While Block
@@ -158,13 +158,13 @@
           </BlockConnectors>
       </BlockGenus> 
 		
-		<BlockGenus name="break" kind="command" color="255 221 0" initlabel="bg.break">
+		<BlockGenus name="break" kind="command" color="149 193 31" initlabel="bg.break">
 			<description>
 				<text>Repeat the commands for "times"</text>
 			</description>
 		</BlockGenus>
 
-		<BlockGenus name="repeat_times" kind="command" color="255 221 0" initlabel="bg.repeat_times">
+		<BlockGenus name="repeat_times" kind="command" color="149 193 31" initlabel="bg.repeat_times">
 			<description>
 				<text>Repeat the commands for "times"</text>
 			</description>
@@ -176,7 +176,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="repeat" kind="command" color="255 221 0" initlabel="bg.repeat">
+		<BlockGenus name="repeat" kind="command" color="149 193 31" initlabel="bg.repeat">
 			<description>
 				<text>repeat</text>
 			</description>
@@ -190,7 +190,7 @@
 				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="subroutine" kind="command" color="200 200 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
+		<BlockGenus name="subroutine" kind="command" color="149 193 31" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
 			<description>
 				<text>subroutine</text>
 			</description>
@@ -199,12 +199,12 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="subroutine-ref" kind="command" color="200 200 0" initlabel="bg.subroutine" editable-label="yes">
+		<BlockGenus name="subroutine-ref" kind="command" color="149 193 31" initlabel="bg.subroutine" editable-label="yes">
 			<description>
 				<text>invoke subroutine</text>
 			</description>
 		</BlockGenus>
-		<BlockGenus name="delay_microseconds" kind="command" color="255 221 0" initlabel="bg.delay_microseconds">
+		<BlockGenus name="delay_microseconds" kind="command" color="149 193 31" initlabel="bg.delay_microseconds">
 			<description>
 				<text>program delay in x milliseconds</text>
 			</description>
@@ -1688,7 +1688,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="bluno_println" kind="command" color="245 245 245" initlabel="bg.serial_println">
+		<BlockGenus name="bluno_println" kind="command" color="255 102 0" initlabel="bg.serial_println">
 			<description>
 				<text>send message via Serial port</text>
 			</description>
@@ -1699,7 +1699,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="bluno_println_number" kind="command" color="245 245 245" initlabel="bg.bluno_println_number">
+		<BlockGenus name="bluno_println_number" kind="command" color="255 102 0" initlabel="bg.bluno_println_number">
 			<description>
 				<text>send message via Serial port</text>
 			</description>
@@ -1708,6 +1708,12 @@
 					
 				</BlockConnector>
 			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="bluno_println_clear" kind="command" color="255 102 0" initlabel="bg.bluno_println_number">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
 		</BlockGenus>
 		
 		
@@ -4933,7 +4939,7 @@
 
 	<BlockDrawerSets>
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
-			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="255 255 0">
+			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="114 147 71">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>program</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
@@ -5025,66 +5031,14 @@
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
-				<BlockGenusMember>serial_read_poly</BlockGenusMember>
-				<BlockGenusMember>serial_available</BlockGenusMember>
-				<BlockGenusMember>serial_print</BlockGenusMember>
-				<BlockGenusMember>glue_poly</BlockGenusMember>
-				<BlockGenusMember>bluno_println</BlockGenusMember>
-				<BlockGenusMember>bluno_println_number</BlockGenusMember>
-			</BlockDrawer>
 			
 			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">
-			    <BlockGenusMember>df_led</BlockGenusMember>
-				<BlockGenusMember>df_led_pwm</BlockGenusMember>
-				<BlockGenusMember>df_digital_push_button</BlockGenusMember>
-				<BlockGenusMember>df_digital_viberation_sensor</BlockGenusMember>
-				<BlockGenusMember>df_analog_rotation_sensor_v1</BlockGenusMember>
-				<BlockGenusMember>df_analog_rotation_sensor_v2</BlockGenusMember>
-				<BlockGenusMember>df_servo</BlockGenusMember>
-				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
-				<BlockGenusMember>df_dht11_temperature</BlockGenusMember>
-				<BlockGenusMember>df_dht11_humidity</BlockGenusMember>
+				<BlockGenusMember>bluno_println</BlockGenusMember>
+				<BlockGenusMember>bluno_println_number</BlockGenusMember>
+				<BlockGenusMember>bluno_println_clear</BlockGenusMember>
 				<BlockGenusMember>df_romeo_motors</BlockGenusMember>
 				<BlockGenusMember>df_romeo_motor</BlockGenusMember>
 				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember>
-				<BlockGenusMember>df_analog_sound_sensor</BlockGenusMember>
-				<BlockGenusMember>df_analog_volume_sensor</BlockGenusMember>
-				<BlockGenusMember>df_relay</BlockGenusMember>
-				<BlockGenusMember>df_analog_ambient_light_sensor</BlockGenusMember>
-				<BlockGenusMember>df_analog_grayscale_sensor</BlockGenusMember>
-				<BlockGenusMember>df_buzzer</BlockGenusMember>
-				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>
-				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
-				<BlockGenusMember>df_capacitive_touch_sensor</BlockGenusMember>
-				<BlockGenusMember>df_digital_tilt_sensor</BlockGenusMember>
-				<BlockGenusMember>df_digital_infrared_motion_sensor</BlockGenusMember>
-				<BlockGenusMember>df_digital_ir_receiver_module</BlockGenusMember>
-				<BlockGenusMember>df_adjustable_infrared_sensor_switch</BlockGenusMember>
-				<BlockGenusMember>df_line_tracking_sensor</BlockGenusMember>
-				<BlockGenusMember>df_joystick_module_button</BlockGenusMember>
-				<BlockGenusMember>df_digital_magnetic_sensor</BlockGenusMember>
-				<BlockGenusMember>df_pizeo_disk_vibration_sensor</BlockGenusMember>
-				<BlockGenusMember>df_flame_sensor</BlockGenusMember>
-				<BlockGenusMember>df_temperature_sensor</BlockGenusMember>
-				<BlockGenusMember>df_joystick_module_x</BlockGenusMember>
-				<BlockGenusMember>df_joystick_module_y</BlockGenusMember>
-				<BlockGenusMember>df_analog_mma7361_x</BlockGenusMember>
-				<BlockGenusMember>df_analog_mma7361_y</BlockGenusMember>
-				<BlockGenusMember>df_analog_mma7361_z</BlockGenusMember>
-				<BlockGenusMember>df_mma7260_x</BlockGenusMember>
-				<BlockGenusMember>df_mma7260_y</BlockGenusMember>
-				<BlockGenusMember>df_mma7260_z</BlockGenusMember>
-				<BlockGenusMember>df_analog_gp2y0a21</BlockGenusMember>
-				<BlockGenusMember>df_analog_moisture</BlockGenusMember>
-				<BlockGenusMember>df_analog_gas_sensor</BlockGenusMember>
-				<BlockGenusMember>df_analog_co_sensor</BlockGenusMember>
-				<BlockGenusMember>df_analog_voltage_divider</BlockGenusMember>
-				<BlockGenusMember>df_piranha_led</BlockGenusMember>
-				<BlockGenusMember>df_piranha_led_pwm</BlockGenusMember>
-				<BlockGenusMember>panda_i1</BlockGenusMember>
-				<BlockGenusMember>panda_o1</BlockGenusMember>
-				<BlockGenusMember>df_lcd_keypad</BlockGenusMember>
 			</BlockDrawer>
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
