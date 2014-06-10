@@ -1267,6 +1267,37 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+	<BlockGenus name="keyboard" kind="command" color="205 133 63" initlabel="bg.keyboard">
+			<description>
+				<text>keyboard</text>
+			</description>
+			<BlockConnectors>
+				
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keyboard.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+			
+				<BlockGenus name="keyboard_post" kind="data" color="205 133 63" initlabel="bg.keyboard_post">
+			<description>
+				<text>keyboard post</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
+				
+			</BlockConnectors>
+			
+			</BlockGenus>
 
 		<!-- ******************** Communication *************** -->
 
@@ -3573,7 +3604,65 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		
+
+		
 		<!-- end of seeedStudio -->
+		
+		<!-- DuinoEDU -->
+						<BlockGenus name="DuinoEDU_infrared" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_infrared">
+			<description>
+				<text>Infrared distance sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pin #">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/infrared.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+								<BlockGenus name="DuinoEDU_temp" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_temp">
+			<description>
+				<text>temp sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pin #">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/temp_humi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+								<BlockGenus name="DuinoEDU_humi" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_humi">
+			<description>
+				<text>humi sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pin #">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/temp_humi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
 		<BlockGenus name="ls_10mmLEDModule" kind="command" color="135 206 235" initlabel="bg.ls_10mmLEDModule">
@@ -4900,6 +4989,8 @@
 				<BlockGenusMember>LCD_PLL_Sainsmart_16by2</BlockGenusMember>
 				<BlockGenusMember>number-single-I2C-address</BlockGenusMember>
 				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
+				<BlockGenusMember>keyboard</BlockGenusMember>
+				<BlockGenusMember>keyboard_post</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_read</BlockGenusMember>
@@ -5096,6 +5187,11 @@
 			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
 			</BlockDrawer>
 			
+			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
+			<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_humi</BlockGenusMember>
+			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
