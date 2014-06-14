@@ -19,10 +19,10 @@ public class Temp extends TranslatorBlock {
 
 		
 		translator.addHeaderFile("DHT.h");
-		translator.addSetupCommand("monDHTPRO.begin();");
-		translator.addDefinitionCommand("DHT monDHT("+Pin +");"	);
 		
-		String ret = "monDHT.lireTemperature();";
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \nDHT monDHT2("+Pin +");"	);
+		translator.addSetupCommand("monDHT2.begin();");
+		String ret = "monDHT2.lireTemperature()";
 		
 
 		return codePrefix + ret + codeSuffix;

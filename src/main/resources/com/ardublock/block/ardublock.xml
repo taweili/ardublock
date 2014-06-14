@@ -1268,36 +1268,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-	<BlockGenus name="keyboard" kind="command" color="205 133 63" initlabel="bg.keyboard">
-			<description>
-				<text>keyboard</text>
-			</description>
-			<BlockConnectors>
-				
-				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
-					<DefaultArg genus-name="number" label="2" />
-				</BlockConnector>
-			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/keyboard.png</FileLocation>
-				</Image>
-			</Images>
-			</BlockGenus>
-			
-				<BlockGenus name="keyboard_post" kind="data" color="205 133 63" initlabel="bg.keyboard_post">
-			<description>
-				<text>keyboard post</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
-				
-			</BlockConnectors>
-			
-			</BlockGenus>
+	
 
 		<!-- ******************** Communication *************** -->
 
@@ -2868,6 +2839,8 @@
 			</Images>
 		</BlockGenus>
 		
+		
+		
 		<!-- seeedstudio grove -->
 
 		<BlockGenus name="seeed_joystick" kind="data" color="0 255 0" initlabel="bg.seeed_joystick">
@@ -3661,6 +3634,219 @@
 			</Images>
 		</BlockGenus>
 		
+		
+			<BlockGenus name="DuinoEDU_Led_Bar" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Led_Bar">
+			<description>
+				<text>Led_Bar</text>
+			</description>
+			<BlockConnectors>
+				
+				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+					<BlockConnector connector-type="number" connector-kind="socket" label="Niveau #">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/led_bar.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+				
+		
+		<BlockGenus name="DuinoEDU_LCD_I2C_RGB" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_LCD_I2C_RGB">
+			<description>
+				<text>LCD_I2C_RG</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.print">
+					<DefaultArg genus-name="message" label="tape text here"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="line #">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/LCD_Serial_RGB_Backlight.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+				<BlockGenus name="DuinoEDU_LCD_I2C_Backlight" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_LCD_I2C_Backlight">
+			<description>
+				<text>LCD_I2C_Backlight</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="R #">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="G #">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+					<BlockConnector connector-type="number" connector-kind="socket" label="B #">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/LCD_Serial_RGB_Backlight.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+				<BlockGenus name="DuinoEDU_LCD_I2C_RGB_Clear" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_LCD_I2C_RGB_Clear">
+			<description>
+				<text>LCD_I2C_RG_Clear</text>
+			</description>			
+			<BlockConnectors>
+	
+			</BlockConnectors>
+
+		</BlockGenus>
+		<BlockGenus name="keyboard" kind="command" color="0 255 0" initlabel="bg.keyboard">
+			<description>
+				<text>keyboard</text>
+			</description>
+			<BlockConnectors>
+				
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keyboard.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+			
+				<BlockGenus name="keyboard_post" kind="data" color="0 255 0" initlabel="bg.keyboard_post">
+			<description>
+				<text>keyboard post</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
+				
+			</BlockConnectors>
+			
+			</BlockGenus>
+		<BlockGenus name="DuinoEDU_Keypad_12_Button" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Keypad_12_Button">
+			<description>
+				<text>Keypad 12 or 16 Buttons</text>
+			</description>			
+			<BlockConnectors>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keypad_12_button.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Keypad_Post" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Keypad_Post">
+			<description>
+				<text>Keypad post</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
+				
+			</BlockConnectors>
+			
+			</BlockGenus>
+		
+					<BlockGenus name="DuinoEDU_Digital_Tube" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Digital_Tube">
+			<description>
+				<text>Didital Tube</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+					<BlockConnector connector-type="number" connector-kind="socket" label="Brightness #">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Didital_Tube.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+					<BlockGenus name="DuinoEDU_Display_Digital_Tube" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Display_Digital_Tube">
+			<description>
+				<text>Display Didital Tube</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="display #">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="On digit #">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>	
+				
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="POINT_ON">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Didital_Tube.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+
+		
+					<BlockGenus name="DuinoEDU_Display_Digital_Tube2" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Display_Digital_Tube2">
+			<description>
+				<text>Display Didital Tube</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="On digit 1">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="On digit 2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>	
+				<BlockConnector connector-type="number" connector-kind="socket" label="On digit 3">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="On digit 4">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="POINT_ON">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Didital_Tube.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+				<BlockGenus name="DuinoEDU_Digital_Clear" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Digital_Clear">
+			<description>
+				<text>Didital Tube Clear</text>
+			</description>			
+			<BlockConnectors>
+	
+			</BlockConnectors>
+
+		</BlockGenus>
 		
 		<!-- end of DuinoEDU -->
 
@@ -4989,8 +5175,7 @@
 				<BlockGenusMember>LCD_PLL_Sainsmart_16by2</BlockGenusMember>
 				<BlockGenusMember>number-single-I2C-address</BlockGenusMember>
 				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
-				<BlockGenusMember>keyboard</BlockGenusMember>
-				<BlockGenusMember>keyboard_post</BlockGenusMember>
+
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_read</BlockGenusMember>
@@ -5191,6 +5376,19 @@
 			<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_humi</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_LCD_I2C_RGB</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
+			<BlockGenusMember>DuinoEDU_LCD_I2C_RGB_Clear</BlockGenusMember>		
+			<BlockGenusMember>DuinoEDU_Keypad_12_Button</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Keypad_Post</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Digital_Tube</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
+			<BlockGenusMember>keyboard</BlockGenusMember>
+			<BlockGenusMember>keyboard_post</BlockGenusMember>
+			
 			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
