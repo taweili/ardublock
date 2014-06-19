@@ -5,8 +5,8 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Temp extends TranslatorBlock {
-	public Temp(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+public class TempPro extends TranslatorBlock {
+	public TempPro(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -20,9 +20,9 @@ public class Temp extends TranslatorBlock {
 		
 		translator.addHeaderFile("DHT.h");
 		
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \nDHT monDHT_Temp("+Pin +");"	);
-		translator.addSetupCommand("monDHT_Temp.begin();");
-		String ret = "monDHT_Temp.lireTemperature()";
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \nDHT monDHTPRO_Temp("+Pin +",DHT22);"	);
+		translator.addSetupCommand("monDHTPRO_Temp.brancher();");
+		String ret = "monDHTPRO_Temp.readTemperature()";
 		
 
 		return codePrefix + ret + codeSuffix;

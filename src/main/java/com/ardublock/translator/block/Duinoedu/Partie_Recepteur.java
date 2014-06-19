@@ -5,9 +5,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Driver_I2C_Back  extends TranslatorBlock {
+public class Partie_Recepteur  extends TranslatorBlock {
 
-	public Driver_I2C_Back (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public Partie_Recepteur (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -15,19 +15,13 @@ public class Driver_I2C_Back  extends TranslatorBlock {
 	//@Override
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
-			String way;
+			String Pin;
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-			way = translatorBlock.toCode();
+			Pin = translatorBlock.toCode();
 			
-			
-			translator.addHeaderFile("Wire.h");
-			translator.addHeaderFile("MotorI2C.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nMotorI2C mesMoteurs;");
-			translator.addSetupCommand("mesMoteurs.brancher();");
-			
-						
-			String ret =  "mesMoteurs.reculer(\""+ way +"\");\n";
-			
-			return ret ;	
+			translator.addHeaderFile("VirtualWire.h");
+			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/");
+			translator.addSetupCommand("brancherRecepteur("+ Pin +");");
+			return "\"recevoirTexte()\"" ;	
 		}
 }

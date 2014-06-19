@@ -17,16 +17,11 @@ public class Infrared extends TranslatorBlock {
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		Pin = translatorBlock.toCode();
 
-		
 		translator.addHeaderFile("IRremote.h");
-		translator.addSetupCommand("monRecepteur.enableIRIn(); ");
-		
 		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nIRrecv monRecepteur("+Pin +");"	);
-		
-		
-		String ret = "monRecepteur.lireCodeIr() ";
-		
+		translator.addSetupCommand("monRecepteur.enableIRIn(); ");
 
+		String ret = "monRecepteur.lireCodeIr() ";
 		return codePrefix + ret + codeSuffix;
 	}
 	

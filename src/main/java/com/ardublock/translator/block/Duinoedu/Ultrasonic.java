@@ -5,8 +5,8 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Temp extends TranslatorBlock {
-	public Temp(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+public class Ultrasonic extends TranslatorBlock {
+	public Ultrasonic(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -18,11 +18,10 @@ public class Temp extends TranslatorBlock {
 		Pin = translatorBlock.toCode();
 
 		
-		translator.addHeaderFile("DHT.h");
+		translator.addHeaderFile("Ultrasonic.h");
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nUltrasonic monUltrasonic("+Pin +");"	);
 		
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \nDHT monDHT_Temp("+Pin +");"	);
-		translator.addSetupCommand("monDHT_Temp.begin();");
-		String ret = "monDHT_Temp.lireTemperature()";
+		String ret = "monUltrasonic.mesurer()";
 		
 
 		return codePrefix + ret + codeSuffix;

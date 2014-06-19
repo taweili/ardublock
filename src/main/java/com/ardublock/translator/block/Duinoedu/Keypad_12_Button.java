@@ -14,20 +14,17 @@ public class Keypad_12_Button extends TranslatorBlock  {
 	@Override
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
+
+		String StartPin;
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		StartPin = translatorBlock.toCode();
+		String EndPin;
+		TranslatorBlock translatorBlock2 = this.getRequiredTranslatorBlockAtSocket(1);
+		EndPin = translatorBlock2.toCode();
+
 		translator.addHeaderFile("Keypad.h");
-		translator.addDefinitionCommand("const byte ROWS = 4; //four rows\n"
-				+ "const byte COLS = 4; //three columns\n"
-				+ "//define the cymbols on the buttons of the keypads\n"
-				+ "char hexaKeys[ROWS][COLS] = {\n"
-				+ "{ '1','2','3','A'},\n"
-				+ "{'4','5','6','B'},\n"
-				+ "{'7','8','9','C'},\n"
-				+ "{'*','0','#','D'}\n"
-				+ "};\n"
-				+ "byte rowPins[ROWS] = {2,3,4,5}; //connect to the row pinouts of the keypad\n"
-				+ "byte colPins[COLS] = {6,7,8,9}; //connect to the column pinouts of the keypad\n\n"
-				+ "//initialize an instance of class NewKeypad\n"
-				+ "Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS); \n"	);
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/"	);
+		translator.addSetupCommand("keypad.brancher("+StartPin +","+EndPin+");");
 				
 return "";
 	}

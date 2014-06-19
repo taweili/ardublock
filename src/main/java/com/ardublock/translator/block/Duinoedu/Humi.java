@@ -19,10 +19,10 @@ public class Humi extends TranslatorBlock {
 
 		
 		translator.addHeaderFile("DHT.h");
-		translator.addSetupCommand("monDHT.begin();");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nDHT monDHT("+Pin +");"	);
+		translator.addSetupCommand("monDHT_Humi.begin();");
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nDHT monDHT_Humi("+Pin +");"	);
 		
-		String ret = "monDHT.lireHumidite()";
+		String ret = "monDHT_Humi.lireHumidite()";
 		
 
 		return codePrefix + ret + codeSuffix;

@@ -22,11 +22,11 @@ public class Driver_I2C_Forward  extends TranslatorBlock {
 			
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("MotorI2C.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/");
-			translator.addSetupCommand("mesMoteurs.branch();");
+			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nMotorI2C mesMoteurs;");
+			translator.addSetupCommand("mesMoteurs.brancher();");
 			
 						
-			String ret =  "mesMoteurs.forward("+ way +");\n";
+			String ret =  "mesMoteurs.avancer(\""+ way +"\");\n";
 			
 			return ret ;	
 		}
