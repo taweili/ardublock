@@ -4665,6 +4665,307 @@
 			</Images>
 		</BlockGenus>
 
+		<!-- *** iDrawing ***-->
+		<!-- **data** -->		
+
+		<BlockGenus name="led_mode_flash" kind="data" color="204 153 255" initlabel="bg.led_mode_flash">
+			<description>
+				<text>
+					Flashing Mode
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="led_mode_fade" kind="data" color="204 153 255" initlabel="bg.led_mode_fade">
+			<description>
+				<text>
+					Fading Mode
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		<BlockGenus name="port_pin_name" kind="data" color="246 220 169" initlabel="bg.port_pin_name" editable-label="yes">
+			<description>
+				<text>
+					Pin name
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="poly" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="trigger_equal" kind="data" color="222 131 51" initlabel="bg.trigger_equal" editable-label="no">
+			<description>
+				<text>
+					trigger equal
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="trigger_greater" kind="data" color="222 131 51" initlabel="bg.trigger_greater" editable-label="no">
+			<description>
+				<text>
+					trigger greater
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="trigger_less" kind="data" color="222 131 51" initlabel="bg.trigger_less" editable-label="no">
+			<description>
+				<text>
+					trigger less
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		
+		<BlockGenus name="player_mode_random" kind="data" color="204 153 255" initlabel="bg.player_mode_random">
+			<description>
+				<text>
+					Random Mode
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="player_mode_single" kind="data" color="204 153 255" initlabel="bg.player_mode_single">
+			<description>
+				<text>
+					 Single Mode
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="output_mode_high" kind="data" color="204 153 255" initlabel="bg.output_mode_high">
+			<description>
+				<text>
+					 high
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="output_mode_low" kind="data" color="204 153 255" initlabel="bg.output_mode_low">
+			<description>
+				<text>
+					 low
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="output_mode_highpulse" kind="data" color="204 153 255" initlabel="bg.output_mode_highpulse">
+			<description>
+				<text>
+					 high pulse
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="output_mode_lowpulse" kind="data" color="204 153 255" initlabel="bg.output_mode_lowpulse">
+			<description>
+				<text>
+					 low pulse
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="single" />
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		<!--command-->		
+		
+		<BlockGenus name="iDrawing_set_para" kind="command" color="255 102 0" initlabel="bg.iDrawing_set_para">
+			<description>
+				<text>set iDrawing parameter</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.wake_condition">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.duration">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="cmd" connector-kind="socket" label="bc.rules"  />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="iDrawing_run" kind="command" color="255 102 0" initlabel="bg.iDrawing_run">
+			<description>
+				<text>iDrawing run</text>
+			</description>
+			<BlockConnectors>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="iDrawing_rule_start" kind="command" color="244 167 112" initlabel="bg.iDrawing_rule_start">
+			<description>
+				<text>set rule</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="boolean" connector-kind="socket" label="bc.trigger"/>
+			    <BlockConnector connector-type="proc-param" connector-kind="socket" label="bc.actuator"/>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="iDrawing_rule_stop" kind="command" color="199 118 64" initlabel="bg.iDrawing_rule_stop">
+			<description>
+				<text>set rule</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="boolean" connector-kind="socket" label="bc.trigger"/>
+			    <BlockConnector connector-type="poly" connector-kind="socket" label="bc.pin_name">
+					<DefaultArg genus-name="port_pin_name" label="5" />
+			    </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		<BlockGenus name="iDrawing_rule_sleep" kind="command" color="101 85 75" initlabel="bg.iDrawing_rule_sleep">
+			<description>
+				<text>let system go to sleep state</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="boolean" connector-kind="socket" label="bc.trigger"/>
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		<!-- trigger -->
+
+		<BlockGenus name="iDrawing_trigger_time" kind="data" color="159 216 234" initlabel="bg.iDrawing_trigger_time">
+			<description>
+				<text>tigger</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.time">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="iDrawing_trigger_dpin" kind="data" color="159 216 234" initlabel="bg.iDrawing_trigger_dpin">
+			<description>
+				<text>digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.pin_name">
+					<DefaultArg genus-name="port_pin_name" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.digital_status">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="iDrawing_trigger_apin" kind="data" color="159 216 234" initlabel="bg.iDrawing_trigger_apin">
+			<description>
+				<text>analog pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.pin_name">
+					<DefaultArg genus-name="port_pin_name" label="A0" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.trigger_logic">
+					<DefaultArg genus-name="trigger_greater" label=">" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.analog_value">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		
+
+		<!-- actuator -->
+		<BlockGenus name="iDrawing_actuator_led" kind="data" color="94 145 85" initlabel="bg.iDrawing_actuator_led">
+			<description>
+				<text>actuator</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="proc-param" connector-kind="plug" />
+				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.pin_name">
+					<DefaultArg genus-name="port_pin_name" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.mode" >
+					<DefaultArg genus-name="led_mode_flash" label="Flash" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.period">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		<BlockGenus name="iDrawing_actuator_playermini" kind="data" color="94 145 85" initlabel="bg.iDrawing_actuator_playermini">
+			<description>
+				<text>actuator</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="proc-param" connector-kind="plug" />
+				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.pin_name">
+					<DefaultArg genus-name="port_pin_name" label="UART" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.mode" >
+					<DefaultArg genus-name="player_mode_random" label="Random" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.songname">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		<BlockGenus name="iDrawing_actuator_dpin" kind="data" color="94 145 85" initlabel="bg.iDrawing_actuator_dpin">
+			<description>
+				<text>digital pin</text>
+			</description>
+			<BlockConnectors>
+			    <BlockConnector connector-type="proc-param" connector-kind="plug" />
+				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.pin_name">
+					<DefaultArg genus-name="port_pin_name" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.mode">
+					<DefaultArg genus-name="output_mode_highpulse" label="High Pulse" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -4804,6 +5105,31 @@
 			<FamilyMember>me_shutter_3</FamilyMember>
 			<FamilyMember>me_shutter_4</FamilyMember>
 		</BlockFamily>
+
+
+		<BlockFamily>
+			<FamilyMember>led_mode_flash</FamilyMember>
+			<FamilyMember>led_mode_fade</FamilyMember>
+		</BlockFamily>
+		
+		<BlockFamily>
+			<FamilyMember>trigger_equal</FamilyMember>
+			<FamilyMember>trigger_greater</FamilyMember>
+			<FamilyMember>trigger_less</FamilyMember>
+		</BlockFamily>
+
+		<BlockFamily>
+			<FamilyMember>player_mode_random</FamilyMember>
+			<FamilyMember>player_mode_single</FamilyMember>
+		</BlockFamily>
+
+		<BlockFamily>
+			<FamilyMember>output_mode_high</FamilyMember>
+			<FamilyMember>output_mode_low</FamilyMember>
+			<FamilyMember>output_mode_highpulse</FamilyMember>
+			<FamilyMember>output_mode_lowpulse</FamilyMember>
+		</BlockFamily>		
+		
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -5095,6 +5421,38 @@
 			    <BlockGenusMember>insectbot_turn_left</BlockGenusMember>
 			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
 			</BlockDrawer>
+
+			<BlockDrawer button-color="255 102 0" name="bd.iDrawing">
+			    <BlockGenusMember>iDrawing_set_para</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_run</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_rule_start</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_rule_stop</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_rule_sleep</BlockGenusMember>
+			    
+			    <BlockGenusMember>iDrawing_trigger_time</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_trigger_dpin</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_trigger_apin</BlockGenusMember>
+			    
+			    <BlockGenusMember>iDrawing_actuator_led</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_actuator_playermini</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_actuator_dpin</BlockGenusMember>
+			    
+			    <BlockGenusMember>port_pin_name</BlockGenusMember>
+			    <BlockGenusMember>led_mode_flash</BlockGenusMember>
+			    <BlockGenusMember>led_mode_fade</BlockGenusMember>
+			    <BlockGenusMember>player_mode_random</BlockGenusMember>
+			    <BlockGenusMember>player_mode_single</BlockGenusMember>
+			    <BlockGenusMember>output_mode_high</BlockGenusMember>
+			    <BlockGenusMember>output_mode_low</BlockGenusMember>
+			    <BlockGenusMember>output_mode_highpulse</BlockGenusMember>
+			    <BlockGenusMember>output_mode_lowpulse</BlockGenusMember>
+			    <BlockGenusMember>trigger_equal</BlockGenusMember>
+			    <BlockGenusMember>trigger_greater</BlockGenusMember>
+			    <BlockGenusMember>trigger_less</BlockGenusMember>		    
+
+
+			</BlockDrawer>
+
 			
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
