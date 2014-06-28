@@ -3698,7 +3698,7 @@
 					<DefaultArg genus-name="number" label="3" />
 				</BlockConnector>
 					<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
-					<DefaultArg genus-name="number" label="255" />
+					<DefaultArg genus-name="number" label="1023" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3830,6 +3830,9 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="EndPin #">
 					<DefaultArg genus-name="number" label="8" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_serial_display">
+					<DefaultArg genus-name="DuinoEDU_setSerialInfosOn" label="activer" />
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -3848,18 +3851,31 @@
 			</BlockConnectors>
 			
 		</BlockGenus>
-	<BlockGenus name="DuinoEDU_Keypad_Pwd" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Keypad_Pwd">
+	<BlockGenus name="DuinoEDU_Keypad_Pwd" kind="function" color="0 255 0" initlabel="bg.DuinoEDU_Keypad_Pwd">
 			<description>
 				<text>Keypad pwd</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter"/>
+				<BlockConnector connector-type="boolean" connector-kind="plug" label="letter"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Pwd">
 					<DefaultArg genus-name="number" label="1234" />
 				</BlockConnector>				
+			</BlockConnectors>			
+	</BlockGenus>
+	
+	<BlockGenus name="DuinoEDU_setSerialInfosOn" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_setSerialInfosOn" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-			
-			</BlockGenus>		
+	</BlockGenus>
+		
+		
+	<BlockGenus name="DuinoEDU_setSerialInfosOff" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_setSerialInfosOff" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+	</BlockGenus>		
+		
 					<BlockGenus name="DuinoEDU_Digital_Tube" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Digital_Tube">
 			<description>
 				<text>Didital Tube</text>
@@ -5397,6 +5413,10 @@
 			<FamilyMember>DuinoEDU_On_digit3</FamilyMember>
 			<FamilyMember>DuinoEDU_On_digit4</FamilyMember>
 		</BlockFamily>	
+				<BlockFamily>
+			<FamilyMember>DuinoEDU_setSerialInfosOn</FamilyMember>
+			<FamilyMember>DuinoEDU_setSerialInfosOff</FamilyMember>
+		</BlockFamily>	
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -5639,6 +5659,32 @@
 				<BlockGenusMember>seeed_joystick</BlockGenusMember>
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
+			
+			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
+			<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_LCD_I2C_RGB</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
+			<BlockGenusMember>DuinoEDU_LCD_I2C_RGB_Clear</BlockGenusMember>	
+			<BlockGenusMember>DuinoEDU_Oled_I2C</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Oled_Clear</BlockGenusMember>	
+			<BlockGenusMember>DuinoEDU_Keypad_12_Button</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Keypad_Post</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Keypad_Pwd</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Digital_Tube</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
+			<BlockGenusMember>keyboard</BlockGenusMember>
+			<BlockGenusMember>keyboard_post</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
+			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
@@ -5690,32 +5736,6 @@
 			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
 			</BlockDrawer>
 			
-			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
-			<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_LCD_I2C_RGB</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
-			<BlockGenusMember>DuinoEDU_LCD_I2C_RGB_Clear</BlockGenusMember>	
-			<BlockGenusMember>DuinoEDU_Oled_I2C</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Oled_Clear</BlockGenusMember>	
-			<BlockGenusMember>DuinoEDU_Keypad_12_Button</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Keypad_Post</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Keypad_Pwd</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Digital_Tube</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
-			<BlockGenusMember>keyboard</BlockGenusMember>
-			<BlockGenusMember>keyboard_post</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
-			
-			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>

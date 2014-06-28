@@ -16,15 +16,19 @@ public class Keypad_12_Button extends TranslatorBlock  {
 	{
 
 		String StartPin;
+		String Diplay;
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		StartPin = translatorBlock.toCode();
 		String EndPin;
 		TranslatorBlock translatorBlock2 = this.getRequiredTranslatorBlockAtSocket(1);
 		EndPin = translatorBlock2.toCode();
+		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
+		Diplay = translatorBlock.toCode();
 
 		translator.addHeaderFile("Keypad.h");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/"	);
-		translator.addSetupCommand("keypad.brancher("+StartPin +","+EndPin+");");
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nKeypad keypad;"	);
+		translator.addSetupCommand("keypad.brancher("+StartPin +","+EndPin+");\n"+
+				Diplay );
 				
 return "";
 	}

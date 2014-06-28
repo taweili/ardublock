@@ -18,8 +18,8 @@ public class Keypad_Pwd  extends TranslatorBlock {
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		Pwd = translatorBlock.toCode();
 
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nkeypad.writePassword("+ Pwd +");");
-		String ret = "testPassword()";
+		translator.addSetupCommand("keypad.writePassword(\""+ Pwd +"\");");
+		String ret = "keypad.testPasswordOk()";
 		return codePrefix + ret + codeSuffix;
 	}
 }
