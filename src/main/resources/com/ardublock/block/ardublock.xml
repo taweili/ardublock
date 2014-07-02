@@ -4664,6 +4664,577 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<!-- littlebits -->
+				<BlockGenus name="little_bits_bendsensor" kind="data" color="93 13 125" initlabel="bg.little_bits_bendsensor">
+					<description>
+						<text>BendSensor</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/BendSensor.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_button" kind="data" color="93 13 125" initlabel="bg.little_bits_button">
+					<description>
+						<text>Button</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="boolean" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/Button.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_dimmer" kind="data" color="93 13 125" initlabel="bg.little_bits_dimmer">
+					<description>
+						<text>Dimmer</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/Dimmer.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_lightsensor" kind="data" color="93 13 125" initlabel="bg.little_bits_lightsensor">
+					<description>
+						<text>LightSensor</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/LightSensor.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_lighttrigger" kind="data" color="93 13 125" initlabel="bg.little_bits_lighttrigger">
+					<description>
+						<text>LightTrigger</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/LightTrigger.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_microphone" kind="data" color="93 13 125" initlabel="bg.little_bits_microphone">
+					<description>
+						<text>Microphone</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/Microphone.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_motiontrigger" kind="data" color="93 13 125" initlabel="bg.little_bits_motiontrigger">
+					<description>
+						<text>MotionTrigger</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/MotionTrigger.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_pressuresensor" kind="data" color="93 13 125" initlabel="bg.little_bits_pressuresensor">
+					<description>
+						<text>PressureSensor</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/PressureSensor.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_pulse" kind="data" color="93 13 125" initlabel="bg.little_bits_pulse">
+					<description>
+						<text>Pulse</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/Pulse.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_remotetrigger" kind="data" color="93 13 125" initlabel="bg.little_bits_remotetrigger">
+					<description>
+						<text>RemoteTrigger</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/RemoteTrigger.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_rollerswitch" kind="data" color="93 13 125" initlabel="bg.little_bits_rollerswitch">
+					<description>
+						<text>RollerSwitch</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/RollerSwitch.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_slidedimmer" kind="data" color="93 13 125" initlabel="bg.little_bits_slidedimmer">
+					<description>
+						<text>SlideDimmer</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/SlideDimmer.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_slideswitch" kind="data" color="93 13 125" initlabel="bg.little_bits_slideswitch">
+					<description>
+						<text>SlideSwitch</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/SlideSwitch.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_soundtrigger" kind="data" color="93 13 125" initlabel="bg.little_bits_soundtrigger">
+					<description>
+						<text>SoundTrigger</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/SoundTrigger.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_timeout" kind="data" color="93 13 125" initlabel="bg.little_bits_timeout">
+					<description>
+						<text>TimeOut</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/TimeOut.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_toggleswitch" kind="data" color="93 13 125" initlabel="bg.little_bits_toggleswitch">
+					<description>
+						<text>ToggleSwitch</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/ToggleSwitch.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_mix" kind="data" color="93 13 125" initlabel="bg.little_bits_mix">
+					<description>
+						<text>mix</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/mix.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_oscillator" kind="data" color="93 13 125" initlabel="bg.little_bits_oscillator">
+					<description>
+						<text>oscillator</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/oscillator.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_random" kind="data" color="93 13 125" initlabel="bg.little_bits_random">
+					<description>
+						<text>random</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="plug" />
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/input/random.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_bargraph" kind="command" color="93 13 125" initlabel="bg.little_bits_bargraph">
+					<description>
+						<text>Bargraph</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/Bargraph.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_brightled" kind="command" color="93 13 125" initlabel="bg.little_bits_brightled">
+					<description>
+						<text>BrightLED</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/BrightLED.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_dcmotor" kind="command" color="93 13 125" initlabel="bg.little_bits_dcmotor">
+					<description>
+						<text>DCMotor</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/DCMotor.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_fan" kind="command" color="93 13 125" initlabel="bg.little_bits_fan">
+					<description>
+						<text>Fan</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/Fan.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_ir_led" kind="command" color="93 13 125" initlabel="bg.little_bits_ir_led">
+					<description>
+						<text>IR_LED</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/IR_LED.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_led" kind="command" color="93 13 125" initlabel="bg.little_bits_led">
+					<description>
+						<text>LED</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/LED.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_lightwire" kind="command" color="93 13 125" initlabel="bg.little_bits_lightwire">
+					<description>
+						<text>Lightwire</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/Lightwire.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_longled" kind="command" color="93 13 125" initlabel="bg.little_bits_longled">
+					<description>
+						<text>LongLED</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/LongLED.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_number" kind="command" color="93 13 125" initlabel="bg.little_bits_number">
+					<description>
+						<text>Number</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/Number.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_rgbled" kind="command" color="93 13 125" initlabel="bg.little_bits_rgbled">
+					<description>
+						<text>RGBLED</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/RGBLED.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_uvled" kind="command" color="93 13 125" initlabel="bg.little_bits_uvled">
+					<description>
+						<text>UVLED</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/UVLED.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_vibration_motor" kind="command" color="93 13 125" initlabel="bg.little_bits_vibration_motor">
+					<description>
+						<text>Vibration_Motor</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/Vibration_Motor.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
+				<BlockGenus name="little_bits_synthspeaker" kind="command" color="93 13 125" initlabel="bg.little_bits_synthspeaker">
+					<description>
+						<text>synthspeaker</text>
+					</description>
+					<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="#">
+							<DefaultArg genus-name="number" label="1" />
+						</BlockConnector>
+						<BlockConnector connector-type="number" connector-kind="socket">
+							<DefaultArg genus-name="number" label="255" />
+						</BlockConnector>
+					</BlockConnectors>
+					<Images>
+						<Image>
+							<FileLocation>com/ardublock/block/littlebits/output/synthspeaker.jpg</FileLocation>
+						</Image>
+					</Images>
+				</BlockGenus>
+		
 
 		<!-- *** iDrawing ***-->
 		<!-- **data** -->		
@@ -5453,6 +6024,42 @@
 
 			</BlockDrawer>
 
+			
+			<!-- littlebits -->
+						<BlockDrawer button-color="93 13 125" name="bd.littlebits">
+						    <BlockGenusMember>little_bits_bendsensor</BlockGenusMember>
+						    <BlockGenusMember>little_bits_button</BlockGenusMember>
+						    <BlockGenusMember>little_bits_dimmer</BlockGenusMember>
+						    <BlockGenusMember>little_bits_lightsensor</BlockGenusMember>
+						    <BlockGenusMember>little_bits_lighttrigger</BlockGenusMember>
+						    <BlockGenusMember>little_bits_microphone</BlockGenusMember>
+						    <BlockGenusMember>little_bits_motiontrigger</BlockGenusMember>
+						    <BlockGenusMember>little_bits_pressuresensor</BlockGenusMember>
+						    <BlockGenusMember>little_bits_pulse</BlockGenusMember>
+						    <BlockGenusMember>little_bits_remotetrigger</BlockGenusMember>
+						    <BlockGenusMember>little_bits_rollerswitch</BlockGenusMember>
+						    <BlockGenusMember>little_bits_slidedimmer</BlockGenusMember>
+						    <BlockGenusMember>little_bits_slideswitch</BlockGenusMember>
+						    <BlockGenusMember>little_bits_soundtrigger</BlockGenusMember>
+						    <BlockGenusMember>little_bits_timeout</BlockGenusMember>
+						    <BlockGenusMember>little_bits_toggleswitch</BlockGenusMember>
+						    <BlockGenusMember>little_bits_mix</BlockGenusMember>
+						    <BlockGenusMember>little_bits_oscillator</BlockGenusMember>
+						    <BlockGenusMember>little_bits_random</BlockGenusMember>
+						    <BlockGenusMember>little_bits_bargraph</BlockGenusMember>
+						    <BlockGenusMember>little_bits_brightled</BlockGenusMember>
+						    <BlockGenusMember>little_bits_dcmotor</BlockGenusMember>
+						    <BlockGenusMember>little_bits_fan</BlockGenusMember>
+						    <BlockGenusMember>little_bits_ir_led</BlockGenusMember>
+						    <BlockGenusMember>little_bits_led</BlockGenusMember>
+						    <BlockGenusMember>little_bits_lightwire</BlockGenusMember>
+						    <BlockGenusMember>little_bits_longled</BlockGenusMember>
+						    <BlockGenusMember>little_bits_number</BlockGenusMember>
+						    <BlockGenusMember>little_bits_rgbled</BlockGenusMember>
+						    <BlockGenusMember>little_bits_uvled</BlockGenusMember>
+						    <BlockGenusMember>little_bits_vibration_motor</BlockGenusMember>
+						    <BlockGenusMember>little_bits_synthspeaker</BlockGenusMember>
+						</BlockDrawer>
 			
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">

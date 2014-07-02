@@ -1,0 +1,10 @@
+	<BlockGenus name="BLOCK_NAME" kind="BLOCK_NAME_KIND" color="64 109 0" initlabel="BLOCK_LABEL">
+		<description>
+			<text>BLOCK_DESC</text>
+		</description>
+		<Images>
+			<Image>
+				<FileLocation>com/ardublock/block/littlebits/BLOCK_IMAGE</FileLocation>
+			</Image>
+		</Images>
+	</BlockGenus>
