@@ -9,6 +9,7 @@ public class NumberBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode()
 	{
 		return codePrefix + label + codeSuffix;

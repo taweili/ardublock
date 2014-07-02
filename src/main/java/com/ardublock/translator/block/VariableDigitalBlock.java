@@ -9,6 +9,7 @@ public class VariableDigitalBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
+	@Override
 	public String toCode()
 	{
 		String internalVariableName = translator.getBooleanVariable(label);
@@ -16,8 +17,8 @@ public class VariableDigitalBlock extends TranslatorBlock
 		{
 			internalVariableName = translator.buildVariableName(label);
 			translator.addBooleanVariable(label, internalVariableName);
-			translator.addDefinitionCommand("bool " + internalVariableName + ";");
-			translator.addSetupCommand(internalVariableName + " = false;");
+			translator.addDefinitionCommand("bool " + internalVariableName + "= false ;");
+//			translator.addSetupCommand(internalVariableName + " = false;");
 		}
 		//String ret = " ( " + internalVariableName + " ? true : false )";
 		String ret = internalVariableName;

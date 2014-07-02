@@ -3,6 +3,7 @@ package com.ardublock.translator.block.xinchejian;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class XinchejianMotorBackwardBlock extends TranslatorBlock
 {
@@ -11,7 +12,8 @@ public class XinchejianMotorBackwardBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	public String toCode() throws SocketNullException
+	@Override
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		translator.addDefinitionCommand(XinchejianMotorForwardBlock.ARDUBLOCK_MOTOR_DEFINITION);
 		

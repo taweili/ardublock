@@ -11,9 +11,9 @@ public class TinkerInputPortBlock extends TranslatorBlock
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 		translator.addHeaderFile("TinkerKit.h");
-		
 	}
 
+	@Override
 	public String toCode() throws SocketNullException
 	{
 		return codePrefix + label + codeSuffix;

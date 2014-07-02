@@ -3,11 +3,13 @@ package com.ardublock.core;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
+
+import processing.app.Editor;
 
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
@@ -19,16 +21,34 @@ public class Context
 {
 	public final static String LANG_DTD_PATH = "/com/ardublock/block/lang_def.dtd";
 	public final static String ARDUBLOCK_LANG_PATH = "/com/ardublock/block/ardublock.xml";
+	public final static String ARDUINO_VERSION_UNKNOWN = "unknown";
+	public final boolean isNeedAutoFormat = true;
 	
 	private static Context singletonContext;
 	
 	private boolean workspaceChanged;
-	
+	private boolean workspaceEmpty;
 	
 	private Set<RenderableBlock> highlightBlockSet;
 	private Set<OpenblocksFrameListener> ofls;
-	
+	private boolean isInArduino = false;
+	private String arduinoVersionString = ARDUINO_VERSION_UNKNOWN;
+	private OsType osType; 
+
 	final public static String APP_NAME = "ArduBlock";
+	
+	private Editor editor;
+	
+	public enum OsType
+	{
+		LINUX,
+		MAC,
+		WINDOWS,
+		UNKNOWN,
+	};
+	
+	private String saveFilePath;
+	private String saveFileName;
 	
 	//final public static String VERSION_STRING = " ";
 	
@@ -50,7 +70,23 @@ public class Context
 	private WorkspaceController workspaceController;
 	private Workspace workspace;
 	
-	private Context() {
+	private Context()
+	{
+		workspaceController = new WorkspaceController();
+		resetWorksapce();
+		workspace = workspaceController.getWorkspace();
+		workspaceChanged = false;
+		highlightBlockSet = new HashSet<RenderableBlock>();
+		ofls = new HashSet<OpenblocksFrameListener>();
+		this.workspace = workspaceController.getWorkspace();
+		
+		isInArduino = false;
+		
+		osType = determineOsType();
+	}
+	
+	public void resetWorksapce()
+	{
 		/*
 		 * workspace = new Workspace(); workspace.reset(); workspace.setl
 		 */
@@ -65,8 +101,6 @@ public class Context
 		for (String[] style : styles) {
 			list.add(style);
 		}
-
-		workspaceController = new WorkspaceController();
 		workspaceController.resetWorkspace();
 		workspaceController.resetLanguage();
 		workspaceController.setLangResourceBundle(ResourceBundle.getBundle("com/ardublock/block/ardublock"));
@@ -74,11 +108,46 @@ public class Context
 		workspaceController.setLangDefDtd(this.getClass().getResourceAsStream(LANG_DTD_PATH));
 		workspaceController.setLangDefStream(this.getClass().getResourceAsStream(ARDUBLOCK_LANG_PATH));
 		workspaceController.loadFreshWorkspace();
-		workspace = workspaceController.getWorkspace();
-		workspaceChanged = false;
-		highlightBlockSet = new HashSet<RenderableBlock>();
-		ofls = new HashSet<OpenblocksFrameListener>();
-		this.workspace = workspaceController.getWorkspace();
+		
+		saveFilePath = null;
+		saveFileName = "untitled";
+		workspaceEmpty = true;
+	}
+	
+	//determine OS
+	private OsType determineOsType()
+	{
+		String osName = System.getProperty("os.name");
+		osName = osName.toLowerCase();
+
+		if (osName.contains("win"))
+		{
+			return Context.OsType.WINDOWS;
+		}
+		if (osName.contains("linux"))
+		{
+			return Context.OsType.LINUX;
+		}
+		if(osName.contains("mac"))
+		{
+			return Context.OsType.MAC;
+		}
+		return Context.OsType.UNKNOWN;
+	}
+	
+	public File getArduinoFile(String name)
+	{
+		String path = System.getProperty("user.dir");
+		if (osType.equals(OsType.MAC))
+		{
+			String javaroot = System.getProperty("javaroot");
+			if (javaroot != null)
+			{
+				path = javaroot;
+			}
+		}
+		File workingDir = new File(path);
+		return new File(workingDir, name);
 	}
 
 	public WorkspaceController getWorkspaceController() {
@@ -119,7 +188,6 @@ public class Context
 		}
 		highlightBlockSet.clear();
 	}
-
 	
 	public void saveArduBlockFile(File saveFile, String saveString) throws IOException
 	{
@@ -138,13 +206,43 @@ public class Context
 	{
 		if (savedFile != null)
 		{
-			String saveFilePath = savedFile.getAbsolutePath();
+			saveFilePath = savedFile.getAbsolutePath();
+			saveFileName = savedFile.getName();
 			workspaceController.resetWorkspace();
 			workspaceController.loadProjectFromPath(saveFilePath);
 			didLoad();
 		}
 	}
 	
+	public void setEditor(Editor e) {
+		editor = e;
+	}
+	
+	public Editor getEditor() {
+		return editor;
+	}
+	
+	
+	public boolean isInArduino() {
+		return isInArduino;
+	}
+
+	public void setInArduino(boolean isInArduino) {
+		this.isInArduino = isInArduino;
+	}
+
+	public String getArduinoVersionString() {
+		return arduinoVersionString;
+	}
+
+	public void setArduinoVersionString(String arduinoVersionString) {
+		this.arduinoVersionString = arduinoVersionString;
+	}
+
+	public OsType getOsType() {
+		return osType;
+	}
+
 	public void registerOpenblocksFrameListener(OpenblocksFrameListener ofl)
 	{
 		ofls.add(ofl);
@@ -172,5 +270,29 @@ public class Context
 		{
 			ofl.didGenerate(sourcecode);
 		}
+	}
+
+	public String getSaveFileName() {
+		return saveFileName;
+	}
+
+	public void setSaveFileName(String saveFileName) {
+		this.saveFileName = saveFileName;
+	}
+
+	public String getSaveFilePath() {
+		return saveFilePath;
+	}
+
+	public void setSaveFilePath(String saveFilePath) {
+		this.saveFilePath = saveFilePath;
+	}
+
+	public boolean isWorkspaceEmpty() {
+		return workspaceEmpty;
+	}
+
+	public void setWorkspaceEmpty(boolean workspaceEmpty) {
+		this.workspaceEmpty = workspaceEmpty;
 	}
 }

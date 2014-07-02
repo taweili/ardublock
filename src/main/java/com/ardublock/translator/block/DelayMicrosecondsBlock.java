@@ -2,6 +2,7 @@ package com.ardublock.translator.block;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
+import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 public class DelayMicrosecondsBlock extends TranslatorBlock
 {
@@ -10,10 +11,11 @@ public class DelayMicrosecondsBlock extends TranslatorBlock
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 
-	public String toCode() throws SocketNullException
+	@Override
+	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
-		String ret = "delayMicroseconds( " + tb.toCode() + " );\n";
+		String ret = "\tdelayMicroseconds( " + tb.toCode() + " );\n";
 		return ret;
 	}
 

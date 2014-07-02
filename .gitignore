@@ -1,3 +1,15 @@
+build/
 target/
 .DS_Store
+.classpath
+.idea
+.project
+.settings
+openblocks.iml
+bin/
+.settings/
+*~
 src/main/resources/com/ardublock/block/ardublock.zip
+deploy.sh
+test-output
+src/main/resources/com/ardublock/block/littlebits/files
