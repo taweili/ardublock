@@ -10,3 +10,4 @@ echo "Remove cropped images"
 rm -rf */*_crop.jpg
 
 # rm -f `ls */*1LR* | sed -e 's/_1LR.jpg$//'`
+
