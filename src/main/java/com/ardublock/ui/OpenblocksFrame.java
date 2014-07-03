@@ -6,6 +6,7 @@ import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -123,8 +124,11 @@ public class OpenblocksFrame extends JFrame
 			public void actionPerformed(ActionEvent e) {
 				Dimension size = workspace.getCanvasSize();
 				System.out.println("size: " + size);
-				BufferedImage bi = new BufferedImage(1280, 2560, BufferedImage.TYPE_INT_RGB);
-				Graphics g = bi.createGraphics();
+				BufferedImage bi = new BufferedImage(2560, 2560, BufferedImage.TYPE_INT_RGB);
+				Graphics2D g = (Graphics2D)bi.createGraphics();
+				double theScaleFactor = (300d/72d);  
+				g.scale(theScaleFactor,theScaleFactor);
+				
 				workspace.getBlockCanvas().getPageAt(0).getJComponent().paint(g);
 				try{
 					final JFileChooser fc = new JFileChooser();

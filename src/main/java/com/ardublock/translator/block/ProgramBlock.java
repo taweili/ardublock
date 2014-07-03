@@ -41,6 +41,12 @@ public class ProgramBlock extends TranslatorBlock
 			ret = ret + translatorBlock2.toCode();
 			translatorBlock2 = translatorBlock2.nextTranslatorBlock();
 		}
+		
+		if (translator.isScoopProgram())
+		{
+			ret += "yield();\n";
+		}
+		
 		ret = ret + "}\n\n";
 		return ret;
 	}

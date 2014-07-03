@@ -1,0 +1,85 @@
+SCoop V1.2 is out and brings lot of goodies :)
+
+Change log
+
+V1.2:
+- new rewritten yield() methods. Tasks are now registered on the "right hand side" of the list and timer+event on the "left hand side". when the Scheduler launches a tasks, the task might switch itself to the next one on its right hand without returning to scheduler, to save cpu resources.
+
+-the main Scheduler mySCoop.yield() has the same behaviour than SCoopTask::yield() and now runs a complete cycle, trying to launch each timer, event or task once, before returning in the main loop(). Therefore mySCoop.cycle() is useless and should not be used any more.
+
+-these 2 changes can be set off by changing the value of a predefined variable called SCoopYIELDCYCLE at the begining of the SCoop.h file to "0". Then yield() is always returning to the main loop() after one switch.
+
+-the value for SCoopDefaultStackSize for AVR has been modified and reduced to 150 bytes. this can be changed to any higher or lower value of course. This save memory for basic programs.
+
+-new macro introduced to make easier and quicker definition of event, timers and task ,  by directly including the myevent::run() or myTimer::run() or myTask::loop() in the macro name. declaring a task is now as simple as defineTaskLoop(myTask) { .. loop code ... }. Same for defineEventRun(myEvent) {...} or defineTimerRun(myTimer) { ... }
+
+-change in the defineTimer and defineEvent macro which now requires the definition of BOTH setup() and run() code so that the user program can create a myevent::setup() {...} ormyTimer::setup() { ...} in addtion to the usual myevent::run() {...} or myTimer::run() { ... } // NON BACKWARD COMPATIBLE please update your program //
+
+-New object class SCoopDelay and SCoopDelayus for easy and quick creation of timers counting down. see user guide for all the attached method and operator overload feature. This object is also used internally by the library methods.
+
+-sleepSync can now be used with a timeout parameter like if (sleepSync(var, 1000)) { ... } will return true if the var is set to true within the timeOut otherwise return false after time spent. see user guide.
+
+-new model and definitons for the tasks/timer/event "state". Paused is introduced
+-introduce pause() method. this set the state to SCoopPAUSED and the object will not be launched by the scheduler, until resuming.
+-introduce resume() method for clearing the pause flag and enabling further launch by the scheduler.
+-introduce paused() to retreive the paused status of the object 
+
+-new macro SCoopATOMIC { ... } (and yieldATOMIC) has been introduced, to create an atomic bock section of code where the yield() is disabled. mySCoop.Atomic++ is inserted at the begining of the code and mySCoop.Atomic-- is inserted at the end. (thanks to Dean Camera for the famous trick with the for (x,y,z) and __cleanup__ attribute.
+
+-new macro SCoopPROTECT() (and yieldPROTECT) has been introduced to provide a safe way to avoid re-entrance in libraries or function when the standard yield() is introduced in a library function that might be called by many task at a same time... this macro will generate a static flag and will check this flag at the begining of the function where the macro is used. if the flag is true then the macro wait by calling yield, otherwise the flag is set and thefunction proceed with its potential yield() call. flag is reseted at the end of the function bloc code. SCoopUNPROTECT() also introduced to reset the flag asap.
+
+-by default the variable defined at the beginign of the SCoop.h file named SCoopTIMEREPORT is now set to 0. Therefore no measurement is made for cycle time and task time. The coresponding variable are also not declared in memory. This brings a faster yield() and less memory footprint. it is still possible to set this variable between 1 and 4 for AVR or 1 and 7 for ARM, to provide average cycle and task time calculation. this is usefull for optimizing multitasking and time spread across tasks.
+
+-typically for AVR, the default size for the timer and counters used in SCoopDelay , SCoopTimer and in sleep() is declared at the begining of the SCoop.h file (SCDelay_t and and can be changed to 16bits if needed, to save memory and CPU time.
+
+-SCoopDefaultQuantum can be define to 0 by default at the begining of the SCoop.H file if needed. then the yield() will always switch to next task or timer, whatever is the time effectively spent in the task. similar to Android Arduino DUE Scheduler.
+
+-new mySCoop.start(xx) function, which corespond to mySCoop.start() but calculating first the global quantum time for each task, considering the number of tasks initialized. xx could be set to 0 to force yield() to systematically switch. by extension mySCoop.start(xx,yy) can also be used to setup a specif amount of time yy in the main Loop().
+
+-some global variables moved in the mySCoop object and renamed accordingly. SCoopAtomic becomes mySCoop.Atomic; SCoopTaskPtr becomes mySCoop.Task; SCoopCurrent becomes mySCoop.Current; SCoopNumberTask becomes mySCoop.NumberTasks. SCoopFirstItem remains.
+
+-possibility to rename "mySCoop" with whatever you like, like "Sch" or "Scheduler" by changing a variable in the header file :)
+
+-new method SCoopFifo::flushNonAtomic() which do the same as flush() but without touching interupts...
+
+-some bugs corrections in the code and in the macros, but difficult to remember.
+
+-All files now combined in a single SCoop.h (550 lines) and SCoop.cpp (850)... this simplifies also code distribution as the user can no include these 2 files in his/her own sketch folder without relying on a libray that might be of another version. there are pros and cons of course :)
+
+-a new embded SCoopMicros16() function has been created for the AVR platform in order to bring much faster performance (especially on Arduino UNO) as this method was called often by the yield() to check time spent in the task. This effort was possible by reusing piece of asm code writen for teensy core. see copyright information inside source code. Thanks to paul@pjrc for his clever devlopment.
+
+-new code for first initialization of a task, by copying whole stack context. this brings imediate compatibility with atmega2560 (3 bytes PC) - not tested :) -
+
+-internal function of the libray forcing or avoid inlining to optimize code or speed depending on context. code optimized during setup and speed optimized during object launch or switching;
+
+-code optimized if SCoopTIMERPORT == 0 or task quantumMicros == 0 in order to limit or avoid where possible useless calls to micros() or time spent for calculation.
+
+-code rewritten in sleep and sleepUntil to benefit from the generic SCoopDelay timer.
+
+-introduce new static method mySCoop.sleep(x) as a replacement for any delay(x) in the user code. especially important for arduino <150 where yield() is not systematically included in the standard delay()
+
+-SCoopFifo code cleaned up with smart use of new macro AVR_ATOMIC { }
+-introdcution of a new macro ASM_ATOMIC { } providing either ARM or AVR atomic code
+
+- name of example 2 switched with example 1 :) example 1 now provides a very easy/basic example for using a timer and 2 tasks.
+- example 2 (old example 1) still very useless, but brings most of the SCoop functions all together in a single file, as a tuto.
+- example 3, memory footprint. 
+- example 4 : not really changed : on AVR only use ISR to push values in fifo.
+- example 5 : not really changed : example of sampling and treatment in separate tasks
+- performance 1 : modified in order to self calculate the time taken by a yield() in the 2 scenarios (time spent below or over time quantum). 
+
+-user guide modified to reflect new program behaviour, and perfomances measured. now 20 pages
+
+-Arduino Scheduler library ported on AVR and included in the SCoop pack. see end of user guide.
+
+-new method startLoop and killMe in the SCoop libray, to create dynamic task using malloc, free, new and delete. COMPATIBLE with Arduino Scheduler. so you can choos SCoop instead :)
+
+huhhh
+
+V1.1.1 modify SCoopFifo to make code atomic on AVR, so that it can be used in ISR/Interupts
+
+V1.1 brings SCoopFifo and corect basic bugs. 17 pages user guide
+
+V1   first verions introducing SCoopTask, SCoopTimer, SCoopEvent. Includes extra libraries for Input, Outputs, InputFiltered, TimerUp & Timer Down. 14 pages user guide.
+
+V0.9 beta version

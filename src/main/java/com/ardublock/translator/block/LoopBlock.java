@@ -22,6 +22,10 @@ public class LoopBlock extends TranslatorBlock
 			ret = ret + translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 		}
+		if (translator.isScoopProgram())
+		{
+			ret += "yield();\n";
+		}
 		ret = ret + "}\n\n";
 		return ret;
 	}
