@@ -25,6 +25,10 @@ public class CreateVariableVectorBlock extends TranslatorBlock
 		if (!(name instanceof VariableFakeBlock)) {
 			throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.array_var_slot"));
 		}
+		if (!(size instanceof NumberBlock)) {
+			throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.array_size_slot"));
+		}
+		
 		varName+=name.toCode();
 		int foo = Integer.parseInt(size.toCode());
 		varName+="[";

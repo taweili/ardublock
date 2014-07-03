@@ -21,12 +21,13 @@ public class SetterVariableNumberUnsignedLongBlock extends TranslatorBlock
   {
     TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
     if (!(tb instanceof VariableNumberUnsignedLongBlock)) {
-      throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.number_var_slot"));
+      throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.long_number_var_slot"));
     }
     
     String ret = tb.toCode();
     tb = this.getRequiredTranslatorBlockAtSocket(1);
     ret = ret + " = " + tb.toCode() + " ;\n";
+    //ret = ret + " = " + "(unsigned long)" + tb.toCode() + " ;\n";
     return ret;
   }
 

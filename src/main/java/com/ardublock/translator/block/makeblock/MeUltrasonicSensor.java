@@ -18,6 +18,6 @@ public class MeUltrasonicSensor extends TranslatorBlock {
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		String ret = "MeUltrasonicSensor ultraSensor"+translatorBlock.toCode()+"(PORT_"+translatorBlock.toCode()+");";
 		translator.addDefinitionCommand(ret);
-		return "ultraSensor"+translatorBlock.toCode()+".distanceCm()";
+		return codePrefix + "ultraSensor"+translatorBlock.toCode()+".distanceCm()" + codeSuffix;
 	}
 }

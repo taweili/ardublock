@@ -1,0 +1,17 @@
+		<BlockGenus name="BLOCK_NAME" kind="data" color="93 13 125" initlabel="BLOCK_LABEL">
+			<description>
+				<text>BLOCK_DESC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/littlebits/BLOCK_IMAGE</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		

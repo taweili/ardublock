@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.swing.JOptionPane;
+
 import com.ardublock.translator.adaptor.BlockAdaptor;
 import com.ardublock.translator.adaptor.OpenBlocksAdaptor;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -17,6 +19,7 @@ import com.ardublock.translator.block.exception.SubroutineNameDuplicatedExceptio
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 import edu.mit.blocks.codeblocks.Block;
+import edu.mit.blocks.renderable.RenderableBlock;
 import edu.mit.blocks.workspace.Workspace;
 
 public class Translator
@@ -157,7 +160,10 @@ public class Translator
 	
 	public void addHeaderFile(String headerFile)
 	{
-		headerFileSet.add(headerFile);
+		if (!headerFileSet.contains(headerFile))
+		{
+			headerFileSet.add(headerFile);
+		}
 	}
 	
 	public void addSetupCommand(String command)
@@ -280,5 +286,90 @@ public class Translator
 
 	public void setScoopProgram(boolean isScoopProgram) {
 		this.isScoopProgram = isScoopProgram;
+	}
+	
+	public Set<RenderableBlock> findEntryBlocks()
+	{
+		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
+		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
+		
+		for (RenderableBlock renderableBlock:renderableBlocks)
+		{
+			Block block = renderableBlock.getBlock();
+			
+			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
+			{
+				if(block.getGenusName().equals("loop"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("loop1"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("loop2"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("loop3"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("program"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("setup"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+			}
+		}
+		
+		return loopBlockSet;
+	}
+	
+	public Set<RenderableBlock> findSubroutineBlocks() throws SubroutineNameDuplicatedException
+	{
+		Set<RenderableBlock> subroutineBlockSet = new HashSet<RenderableBlock>();
+		Iterable<RenderableBlock> renderableBlocks = workspace.getRenderableBlocks();
+		
+		for (RenderableBlock renderableBlock:renderableBlocks)
+		{
+			Block block = renderableBlock.getBlock();
+			
+			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
+			{
+				if (block.getGenusName().equals("subroutine"))
+				{
+					String functionName = block.getBlockLabel().trim();
+					this.addFunctionName(block.getBlockID(), functionName);
+					subroutineBlockSet.add(renderableBlock);
+				}
+				
+			}
+		}
+		
+		return subroutineBlockSet;
+	}
+	
+	public String translate(Set<RenderableBlock> loopBlocks, Set<RenderableBlock> subroutineBlocks) throws SocketNullException, SubroutineNotDeclaredException
+	{
+		StringBuilder code = new StringBuilder();
+		for (RenderableBlock renderableBlock : loopBlocks)
+		{
+			Block loopBlock = renderableBlock.getBlock();
+			code.append(translate(loopBlock.getBlockID()));
+		}
+		
+		for (RenderableBlock renderableBlock : subroutineBlocks)
+		{
+			Block subroutineBlock = renderableBlock.getBlock();
+			code.append(translate(subroutineBlock.getBlockID()));
+		}
+		beforeGenerateHeader();
+		code.insert(0, genreateHeaderCommand());
+		
+		return code.toString();
 	}
 }
