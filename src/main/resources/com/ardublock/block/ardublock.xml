@@ -1124,8 +1124,8 @@
 				<text>Servo Default</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number-single" label="5"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="5"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90" />
@@ -1162,8 +1162,8 @@
 				<text>Servo MG996R</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number-list" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number-single" label="5"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="5"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90" />
@@ -6428,17 +6428,6 @@
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="26 97 218" name="bd.scoop">
-			    <BlockGenusMember>scoop_task</BlockGenusMember>
-				<BlockGenusMember>scoop_loop</BlockGenusMember>
-				<BlockGenusMember>scoop_sleep</BlockGenusMember>
-				<BlockGenusMember>scoop_pin_event</BlockGenusMember>
-				<BlockGenusMember>scoop_event_low</BlockGenusMember>
-				<BlockGenusMember>scoop_event_high</BlockGenusMember>
-				<BlockGenusMember>scoop_event_falling</BlockGenusMember>
-				<BlockGenusMember>scoop_event_rising</BlockGenusMember>
-				<BlockGenusMember>scoop_event_change</BlockGenusMember>
-			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
@@ -6516,7 +6505,6 @@
 				<BlockGenusMember>LCD_PLL_Sainsmart_16by2</BlockGenusMember>
 				<BlockGenusMember>number-single-I2C-address</BlockGenusMember>
 				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
-
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_read</BlockGenusMember>
@@ -6531,6 +6519,17 @@
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="26 97 218" name="bd.scoop">
+			    <BlockGenusMember>scoop_task</BlockGenusMember>
+				<BlockGenusMember>scoop_loop</BlockGenusMember>
+				<BlockGenusMember>scoop_sleep</BlockGenusMember>
+				<BlockGenusMember>scoop_pin_event</BlockGenusMember>
+				<BlockGenusMember>scoop_event_low</BlockGenusMember>
+				<BlockGenusMember>scoop_event_high</BlockGenusMember>
+				<BlockGenusMember>scoop_event_falling</BlockGenusMember>
+				<BlockGenusMember>scoop_event_rising</BlockGenusMember>
+				<BlockGenusMember>scoop_event_change</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 50 45" name="bd.storage" type="factory">
 				<BlockGenusMember>eeprom_read_int</BlockGenusMember>
