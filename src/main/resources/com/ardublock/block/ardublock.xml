@@ -5904,7 +5904,566 @@
 					</Images>
 				</BlockGenus>
 		
+<BlockGenus name="ke-motor-run" kind="command" color="20 150 30"
+			initlabel="bg.ke-motor-run">
+			<description>
+				<text>set both left and right motor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-motor-run-leftspeed">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-motor-run-rightspeed">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_dianji.png</FileLocation>
+				</Image>
+			</Images>	
+		</BlockGenus>
 
+		<BlockGenus name="ke-motor-setmoto" kind="command" color="20 150 30"
+			initlabel="bg.ke-motor-setmoto">
+			<description>
+				<text>set left or right motor  &#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-motor-setmoto-motonumber">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-motor-setmoto-motospeed">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_dianji.png</FileLocation>
+				</Image>
+			</Images>			
+		</BlockGenus>
+				
+		<BlockGenus name="ke-motor-stop" kind="command" color="20 150 30"
+			initlabel="bg.ke-motor-stop">
+			<description>
+				<text>stop motor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_dianji.png</FileLocation>
+				</Image>
+			</Images>				
+		</BlockGenus>
+
+		<BlockGenus name="ke-tft-print" kind="command" color="20 150 30"
+			initlabel="bg.ke-tft-print">
+			<description>
+				<text>print string to TFT&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-tft-print-line">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="bc.ke-tft-print-string">
+					<DefaultArg genus-name="message" label="hello" />
+				</BlockConnector>										
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_tft.png</FileLocation>
+				</Image>
+			</Images>				
+		</BlockGenus>
+
+		<BlockGenus name="ke-tft-clear" kind="command" color="20 150 30"
+			initlabel="bg.ke-tft-clear">
+			<description>
+				<text>clear TFT&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_tft.png</FileLocation>
+				</Image>
+			</Images>				
+		</BlockGenus>
+
+		<BlockGenus name="ke-eye-minvalue" kind="data" color="20 150 30"
+			initlabel="bg.ke-eye-minvalue">
+			<description>
+				<text>get eye min value&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>	
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_fuyan.png</FileLocation>				
+				</Image>
+			</Images>							
+		</BlockGenus>
+
+		<BlockGenus name="ke-eye-minindex" kind="data" color="20 150 30"
+			initlabel="bg.ke-eye-minindex">
+			<description>
+				<text>get eye min index&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>	
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_fuyan.png</FileLocation>				
+				</Image>
+			</Images>				
+		</BlockGenus>
+		
+		<BlockGenus name="ke-eye-maxvalue" kind="data" color="20 150 30"
+			initlabel="bg.ke-eye-maxvalue">
+			<description>
+				<text>get eye max value&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_fuyan.png</FileLocation>				
+				</Image>
+			</Images>						
+		</BlockGenus>
+		
+		<BlockGenus name="ke-eye-maxindex" kind="data" color="20 150 30"
+			initlabel="bg.ke-eye-maxindex">
+			<description>
+				<text>get eye max index&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>	
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_fuyan.png</FileLocation>				
+				</Image>
+			</Images>							
+		</BlockGenus>				
+
+		<BlockGenus name="ke-eye-singlevalue" kind="data" color="20 150 30"
+			initlabel="bg.ke-eye-singlevalue">
+			<description>
+				<text>get eye on a channel&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-eye-singlevalue-numble">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />				
+			</BlockConnectors>
+		</BlockGenus>		
+			
+		<BlockGenus name="ke-button-getbutton" kind="data" color="20 150 30"
+			initlabel="bg.ke-button-getbutton">
+			<description>
+				<text>get button&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+			</BlockConnectors>				
+		</BlockGenus>	
+
+		<BlockGenus name="ke-encoder-clear" kind="command" color="20 150 30"
+			initlabel="bg.ke-encoder-clear">
+			<description>
+				<text>encoder clear&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-encoder-clear-index">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_bianmaqi.png</FileLocation>				
+				</Image>
+			</Images>			
+		</BlockGenus>	
+		
+		<BlockGenus name="ke-encoder-getencoder" kind="data" color="20 150 30"
+			initlabel="bg.ke-encoder-getencoder">
+			<description>
+				<text>get encoder&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-encoder-getencoder-index">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />				
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_bianmaqi.png</FileLocation>				
+				</Image>
+			</Images>			
+		</BlockGenus>			
+		
+		
+		<!-- 
+		TEST tft-msg
+				<BlockConnectors>
+				<BlockConnector label="" connector-kind="plug"
+					connector-type="number" position-type="mirror" />
+				<BlockConnector label="" connector-kind="socket"
+					connector-type="number" position-type="bottom" />
+				<BlockConnector label="" connector-kind="socket"
+					connector-type="number" position-type="bottom" />
+			</BlockConnectors>	
+			
+		<BlockGenus name="variable_number" kind="data"
+			initlabel="bg.variable_number" editable-label="yes" is-label-value="yes"
+			color="255 0 255">
+			<description>
+				<text>
+					Digital Var
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		
+		<BlockGenus name="tft-msg" kind="data" color="0 0 255"
+			initlabel="bg.tft-msg" editable-label="yes">
+			<description>
+				<text>string message</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="plug" />
+				<BlockConnector connector-type="string"
+					connector-kind="socket" />			
+			</BlockConnectors>
+		</BlockGenus>
+			 		-->
+		<BlockGenus name="ke-tft-add" kind="data" color="20 150 30"
+			initlabel="bg.ke-tft-add" editable-label="yes">
+			<description>
+				<text>tft add a variable&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="plug" />
+				<BlockConnector connector-type="string"
+					connector-kind="socket" />						
+											
+			</BlockConnectors>
+		</BlockGenus>				 		
+
+		<BlockGenus name="ke-compass" kind="data" color="20 150 30"
+			initlabel="bg.ke-compass" editable-label="yes">			
+			<description>
+				<text>get compass degree&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>	
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_compass.png</FileLocation>				
+				</Image>
+			</Images>	
+		</BlockGenus>
+		
+		<BlockGenus name="ke-buzzer" kind="command" color="20 150 30"
+			initlabel="bg.ke-buzzer" editable-label="yes">			
+			<description>
+				<text>buzzer&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.ke-digital-state">
+					<DefaultArg genus-name="digital-high" label="HIGH" />					
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_fengminqi.png</FileLocation>				
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="ke-ground-light" kind="data" color="20 150 30"
+			initlabel="bg.ke-ground-light" editable-label="yes">			
+			<description>
+				<text>ground light sensor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />						
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_dimianhuidu.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+
+		<BlockGenus name="ke-led-on-off" kind="command" color="20 150 30"
+			initlabel="bg.ke-led-on-off" editable-label="yes">			
+			<description>
+				<text>led on off&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.ke-digital-state">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>					
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_led.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+
+		<BlockGenus name="ke-led-pwm" kind="command" color="20 150 30"
+			initlabel="bg.ke-led-pwm" editable-label="yes">			
+			<description>
+				<text>led pwm&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.ke-led-pwm-Brightness">
+					<DefaultArg genus-name="number" label="255" />	
+				</BlockConnector>								
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_led.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+
+		<BlockGenus name="ke-light" kind="data" color="20 150 30"
+			initlabel="bg.ke-light" editable-label="yes">			
+			<description>
+				<text>light sensor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_guanggan.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ke-mic" kind="data" color="20 150 30"
+			initlabel="bg.ke-mic" editable-label="yes">			
+			<description>
+				<text>mic&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_fengminqi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ke-photo" kind="data" color="20 150 30"
+			initlabel="bg.ke-photo" editable-label="yes">			
+			<description>
+				<text>photo sensor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_guangdian.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+			
+		<BlockGenus name="ke-potentiometer" kind="data" color="20 150 30"
+			initlabel="bg.ke-potentiometer" editable-label="yes">			
+			<description>
+				<text>potentiometer sensor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_dianweiqi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ke-relays" kind="command" color="20 150 30"
+			initlabel="bg.ke-relays" editable-label="yes">			
+			<description>
+				<text>relays&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.ke-digital-state">
+					<DefaultArg genus-name="digital-high" label="HIGH" />					
+				</BlockConnector>				
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_jidianqi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ke-tempe" kind="data" color="20 150 30"
+			initlabel="bg.ke-tempe" editable-label="yes">			
+			<description>
+				<text>tempe sensor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_wendu.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+
+		<BlockGenus name="ke-psd" kind="data" color="20 150 30"
+			initlabel="bg.ke-psd" editable-label="yes">			
+			<description>
+				<text>sharp distance sensor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_psd.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+				
+		<BlockGenus name="ke-touch" kind="data" color="20 150 30"
+			initlabel="bg.ke-touch" editable-label="yes">			
+			<description>
+				<text>touch sensor&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean"
+					connector-kind="plug" />				
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_pengzhuang.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		  																		
+				 													
+		<BlockGenus name="ke-servo" kind="command" color="20 150 30"
+			initlabel="bg.ke-servo">
+			<description>
+				<text>set a pin to pwm&#x000A;&#x000D;Keenlon Robot&#x000A;&#x000D;上海擎朗智能</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>			
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keenlon/k_duoji.png</FileLocation>
+				</Image>
+			</Images>			
+		</BlockGenus>
 		<!-- *** iDrawing ***-->
 		<!-- **data** -->		
 
@@ -6805,7 +7364,35 @@
 						    <BlockGenusMember>little_bits_vibration_motor</BlockGenusMember>
 						    <BlockGenusMember>little_bits_synthspeaker</BlockGenusMember>
 						</BlockDrawer>
-			
+			<!-- keenlon -->			
+			<BlockDrawer button-color="20 150 30" name="bd.ke-keenlon">
+				<BlockGenusMember>ke-motor-run</BlockGenusMember>
+				<BlockGenusMember>ke-motor-setmoto</BlockGenusMember>	
+				<BlockGenusMember>ke-motor-stop</BlockGenusMember>				
+				<BlockGenusMember>ke-tft-print</BlockGenusMember>	
+				<BlockGenusMember>ke-tft-add</BlockGenusMember>
+				<BlockGenusMember>ke-tft-clear</BlockGenusMember>	
+				<BlockGenusMember>ke-eye-minvalue</BlockGenusMember>
+				<BlockGenusMember>ke-eye-minindex</BlockGenusMember>	
+				<BlockGenusMember>ke-eye-maxvalue</BlockGenusMember>				
+				<BlockGenusMember>ke-eye-maxindex</BlockGenusMember>					
+				<BlockGenusMember>ke-button-getbutton</BlockGenusMember>		
+				<BlockGenusMember>ke-encoder-clear</BlockGenusMember>
+				<BlockGenusMember>ke-encoder-getencoder</BlockGenusMember>	
+				<BlockGenusMember>ke-compass</BlockGenusMember>											
+				<BlockGenusMember>ke-buzzer</BlockGenusMember>
+				<BlockGenusMember>ke-relays</BlockGenusMember>				
+				<BlockGenusMember>ke-led-on-off</BlockGenusMember>
+				<BlockGenusMember>ke-led-pwm</BlockGenusMember>
+				<BlockGenusMember>ke-touch</BlockGenusMember>				
+				<BlockGenusMember>ke-ground-light</BlockGenusMember>				
+				<BlockGenusMember>ke-light</BlockGenusMember>
+				<BlockGenusMember>ke-photo</BlockGenusMember>
+				<BlockGenusMember>ke-potentiometer</BlockGenusMember>
+				<BlockGenusMember>ke-tempe</BlockGenusMember>	
+				<BlockGenusMember>ke-psd</BlockGenusMember>								
+				<BlockGenusMember>ke-servo</BlockGenusMember>																		
+			</BlockDrawer> 	
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
