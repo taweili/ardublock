@@ -3814,11 +3814,63 @@
 				<text>keyboard post</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
-				
+				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
 			</BlockConnectors>
-			
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keyboard.png</FileLocation>
+				</Image>
+			</Images>
 			</BlockGenus>
+			
+		
+			<BlockGenus name="DuinoEDU_Mouse_Xmove" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Mouse_Xmove">
+			<description>
+				<text>Mouse X Move </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/mouse.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+		
+			<BlockGenus name="DuinoEDU_Mouse_Ymove" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Mouse_Ymove">
+			<description>
+				<text>Mouse Y Move </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/mouse.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+				
+		
 		<BlockGenus name="DuinoEDU_Keypad_12_Button" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Keypad_12_Button">
 			<description>
 				<text>Keypad 12 or 16 Buttons</text>
@@ -4151,6 +4203,89 @@
 			</Images>
 		</BlockGenus>
 		
+			<BlockGenus name="DuinoEDU_Rfid_Write" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Write">
+			<description>
+				<text>DuinoEDU_Rfid_Write</text>
+			</description>			
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="poly" connector-kind="socket" label="Code">
+					<DefaultArg genus-name="char" label="12345678" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Rfid_Test" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Test">
+			<description>
+				<text>DuinoEDU_Rfid_Test</text>
+			</description>			
+			<BlockConnectors>
+			<BlockConnector connector-type="boolean" connector-kind="plug" />
+			
+			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="poly" connector-kind="socket" label="Code">
+					<DefaultArg genus-name="char" label="12345678" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Rfid_Read" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Read">
+			<description>
+				<text>DuinoEDU_Rfid_Read</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" />
+			
+			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		<BlockGenus name="DuinoEDU_Rfid_Clear" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Clear">
+			<description>
+				<text>DuinoEDU_Rfid_Clear</text>
+			</description>			
+			<BlockConnectors>			
+			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -5413,10 +5548,14 @@
 			<FamilyMember>DuinoEDU_On_digit3</FamilyMember>
 			<FamilyMember>DuinoEDU_On_digit4</FamilyMember>
 		</BlockFamily>	
-				<BlockFamily>
+		<BlockFamily>
 			<FamilyMember>DuinoEDU_setSerialInfosOn</FamilyMember>
 			<FamilyMember>DuinoEDU_setSerialInfosOff</FamilyMember>
 		</BlockFamily>	
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Mouse_Xmove</FamilyMember>
+			<FamilyMember>DuinoEDU_Mouse_Ymove</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -5665,6 +5804,9 @@
 			<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
+			<BlockGenusMember>keyboard_post</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_LCD_I2C_RGB</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
@@ -5678,12 +5820,13 @@
 			<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
-			<BlockGenusMember>keyboard</BlockGenusMember>
-			<BlockGenusMember>keyboard_post</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Rfid_Write</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Rfid_Test</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Rfid_Read</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Rfid_Clear</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>

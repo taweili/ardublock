@@ -28,7 +28,7 @@ public class LCD_I2C_RGB  extends TranslatorBlock {
 			translator.addSetupCommand("monRgb.branch();");
 			
 			
-			TranslatorBlock translatorBlock2 = this.getRequiredTranslatorBlockAtSocket(0, "monRgb.print(", " );\n");
+			TranslatorBlock translatorBlock2 = this.getRequiredTranslatorBlockAtSocket(0, "monRgb.ecrire(", " );\n");
 			
 			String ret =  "monRgb.placerCurseurEn("+ line_number +");\n" + translatorBlock2.toCode() ;
 			

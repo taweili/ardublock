@@ -19,9 +19,9 @@ public class Ultrasonic extends TranslatorBlock {
 
 		
 		translator.addHeaderFile("Ultrasonic.h");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nUltrasonic monUltrasonic("+Pin +");"	);
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nUltrasonic monUltrasonic_pin"+Pin+"("+Pin +");"	);
 		
-		String ret = "monUltrasonic.mesurer()";
+		String ret = "monUltrasonic_pin"+Pin+".mesurer()";
 		
 
 		return codePrefix + ret + codeSuffix;

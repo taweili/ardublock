@@ -18,10 +18,10 @@ public class Infrared extends TranslatorBlock {
 		Pin = translatorBlock.toCode();
 
 		translator.addHeaderFile("IRremote.h");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nIRrecv monRecepteur("+Pin +");"	);
-		translator.addSetupCommand("monRecepteur.enableIRIn(); ");
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nIRrecv monRecepteur_pin"+Pin+"("+Pin +");"	);
+		translator.addSetupCommand("monRecepteur_pin"+Pin+".enableIRIn(); ");
 
-		String ret = "monRecepteur.lireCodeIr() ";
+		String ret = "monRecepteur_pin"+Pin+".lireCodeIr() ";
 		return codePrefix + ret + codeSuffix;
 	}
 	

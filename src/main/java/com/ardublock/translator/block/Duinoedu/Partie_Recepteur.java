@@ -22,6 +22,6 @@ public class Partie_Recepteur  extends TranslatorBlock {
 			translator.addHeaderFile("VirtualWire.h");
 			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/");
 			translator.addSetupCommand("brancherRecepteur("+ Pin +");");
-			return "\"recevoirTexte()\"" ;	
+			return codePrefix +"\"recevoirTexte()\"" + codeSuffix;	
 		}
 }

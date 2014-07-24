@@ -5,33 +5,30 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Led_Bar extends TranslatorBlock {
-	public Led_Bar(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+public class Rfid_Write extends TranslatorBlock {
+	public Rfid_Write(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String Clk;
-		String Dio;
-		String Niveau;
+		String Pin1;
+		String Pin2;
+		String Code;
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		Dio = translatorBlock.toCode();
+		Pin1 = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		Clk = translatorBlock.toCode();
+		Pin2 = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-		Niveau = translatorBlock.toCode();
-		
-		
-		translator.addHeaderFile("LED_Bar.h");
-		
-		
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n// Pin Led Bar\n"
-				+ "LED_Bar mesLeds_pin"+Dio+Clk+"(" + Clk
-				+ "," + Dio + ");");
-		String ret = "mesLeds_pin"+Dio+Clk+".displayVoltage("+ Niveau +");\n";
-		
+		Code = translatorBlock.toCode();
+
+
+		translator.addHeaderFile("RFID125.h");
+		translator.addHeaderFile("SoftwareSerial.h");
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nRFID125 monRFID_pin"+Pin1+Pin2+";");
+		translator.addSetupCommand("monRFID_pin"+Pin1+Pin2+".brancher(" + Pin1+ "," + Pin2 + ");");
+		String ret = "monRFID_pin"+Pin1+Pin2+".ecrireCode("+Code+");\n";
 		return codePrefix + ret + codeSuffix;
 	}
 	

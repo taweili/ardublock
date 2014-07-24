@@ -5,42 +5,34 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Led_Bar extends TranslatorBlock {
-	public Led_Bar(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+public class Mouse_Ymove  extends TranslatorBlock {
+
+	public Mouse_Ymove(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
+		String DataPin;
 		String Clk;
-		String Dio;
-		String Niveau;
+		
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		Dio = translatorBlock.toCode();
+		DataPin = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		Clk = translatorBlock.toCode();
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-		Niveau = translatorBlock.toCode();
 		
 		
-		translator.addHeaderFile("LED_Bar.h");
+		translator.addHeaderFile("Mouse.h");
+		translator.addDefinitionCommand("Mouse mouse_pin"+DataPin+Clk+";");
+
 		
-		
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n// Pin Led Bar\n"
-				+ "LED_Bar mesLeds_pin"+Dio+Clk+"(" + Clk
-				+ "," + Dio + ");");
-		String ret = "mesLeds_pin"+Dio+Clk+".displayVoltage("+ Niveau +");\n";
-		
-		return codePrefix + ret + codeSuffix;
+		translator.addSetupCommand("//libraries at http://www.duinoedu.com/ \n"
+				+ "mouse_pin"+DataPin+Clk+".branch(" + DataPin
+				+ "," + Clk + ");");
+
+		return codePrefix + "mouse_pin"+DataPin+Clk+".read(\"y\")"+ codeSuffix;
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
