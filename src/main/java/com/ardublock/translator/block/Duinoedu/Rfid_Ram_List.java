@@ -5,8 +5,8 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Rfid_Write extends TranslatorBlock {
-	public Rfid_Write(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+public class Rfid_Ram_List extends TranslatorBlock {
+	public Rfid_Ram_List(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -27,9 +27,9 @@ public class Rfid_Write extends TranslatorBlock {
 		translator.addHeaderFile("RFID125.h");
 		translator.addHeaderFile("SoftwareSerial.h");
 		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nRFID125 monRFID;");
-		translator.addSetupCommand("monRFID.brancher(" + Pin1+ "," + Pin2 + ");");
-		String ret = "monRFID.ecrireCode("+Code+");\n";
-		return codePrefix + ret + codeSuffix;
+		translator.addSetupCommand("monRFID.brancher(" + Pin1+ "," + Pin2 + ");\n"+
+		"monRFID.RAMliste="+Code+" ;\n");
+		return "";
 	}
 	
 	

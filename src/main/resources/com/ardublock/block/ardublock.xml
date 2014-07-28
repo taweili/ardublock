@@ -669,6 +669,97 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="string_greater" kind="data" color="222 131 51" initlabel="bg.string_greater">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_less" kind="data" color="222 131 51" initlabel="bg.string_less">
+			<description>
+				<text>is upper string less then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_equal" kind="data" color="222 131 51" initlabel="bg.string_equal">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		<BlockGenus name="string_greater_equal" kind="data" color="222 131 51" initlabel="bg.string_greater_equal">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_less_equal" kind="data" color="222 131 51" initlabel="bg.string_less_equal">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_not_equal" kind="data" color="222 131 51" initlabel="bg.string_not_equal">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="and" kind="data" initlabel="bg.and" color="222 131 51">
 			<description>
 				<text>
@@ -723,6 +814,8 @@
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+
 
 		<BlockGenus name="not_equal_poly" kind="function" color="222 131 51" initlabel="bg.not_equal_poly">
 			<description>
@@ -737,6 +830,34 @@
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
 		</BlockGenus>
+
+				<BlockGenus name="equal_string" kind="function" color="222 131 51" initlabel="bg.equal_string">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>	
+		
+		<BlockGenus name="not_equal_string" kind="function" color="222 131 51" initlabel="bg.not_equal_string">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>	
 
 		<!--****************** Numbers/Constants *************** -->
 		<BlockGenus name="millis" kind="data" color="255 153 204" initlabel="bg.millis">
@@ -1026,7 +1147,31 @@
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-
+		
+	    <BlockGenus name="setter_variable_String" kind="command" color="245 245 245" initlabel="bg.setter_variable_String">
+	      <description>
+	        <text>set String variable</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_String" label="String variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="message" label="message" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+				
+	    <BlockGenus name="variable_String" kind="data" initlabel="bg.variable_String" editable-label="yes" is-label-value="yes" color="245 245 245">
+	      <description>
+	        <text>
+	          Variable String
+	        </text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+	      </BlockConnectors>
+	    </BlockGenus>
 		<!--****************** Utilities *************** -->		
 		<BlockGenus name="servo_default" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
 			<description>
@@ -3898,7 +4043,7 @@
 				<text>Keypad post</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
+				<BlockConnector connector-type="string" connector-kind="plug" label="letter" position-type="mirror"/>
 				
 			</BlockConnectors>
 			
@@ -4047,7 +4192,7 @@
 			</Images>
 		</BlockGenus>
 		
-						<BlockGenus name="DuinoEDU_Driver_I2C_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Back">
+		<BlockGenus name="DuinoEDU_Driver_I2C_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Back">
 			<description>
 				<text>Driver I2C back</text>
 			</description>
@@ -4063,7 +4208,7 @@
 			</Images>
 		</BlockGenus>
 		
-						<BlockGenus name="DuinoEDU_Driver_I2C_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Pivoter">
+		<BlockGenus name="DuinoEDU_Driver_I2C_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Pivoter">
 			<description>
 				<text>Driver I2C pivote</text>
 			</description>
@@ -4079,7 +4224,40 @@
 			</Images>
 		</BlockGenus>
 		
-						<BlockGenus name="DuinoEDU_right" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_right" editable-label="no">
+		<BlockGenus name="DuinoEDU_Driver_I2C_Speed_A_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Speed_A_Motor">
+			<description>
+				<text>Driver I2C Speed A Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="number" connector-kind="socket" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/I2CMotorDriver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+				<BlockGenus name="DuinoEDU_Driver_I2C_Speed_B_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Speed_B_Motor">
+			<description>
+				<text>Driver I2C Speed B Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="number" connector-kind="socket" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/I2CMotorDriver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		<BlockGenus name="DuinoEDU_right" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_right" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
@@ -4214,8 +4392,30 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="3" />
 				</BlockConnector>
-				<BlockConnector connector-type="poly" connector-kind="socket" label="Code">
-					<DefaultArg genus-name="char" label="12345678" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="Code">
+					<DefaultArg genus-name="message" label="12345678" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Rfid_Ram_List" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Ram_List">
+			<description>
+				<text>DuinoEDU_Rfid_Ram_List</text>
+			</description>			
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="Code">
+					<DefaultArg genus-name="message" label="12345678 23456789" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4232,14 +4432,8 @@
 			<BlockConnectors>
 			<BlockConnector connector-type="boolean" connector-kind="plug" />
 			
-			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
-				</BlockConnector>
-				<BlockConnector connector-type="poly" connector-kind="socket" label="Code">
-					<DefaultArg genus-name="char" label="12345678" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="Code">
+					<DefaultArg genus-name="message" label="12345678 23456789" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4253,14 +4447,9 @@
 				<text>DuinoEDU_Rfid_Read</text>
 			</description>			
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="string" connector-kind="plug"/>
 			
-			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
-				</BlockConnector>
+			
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -4273,12 +4462,7 @@
 				<text>DuinoEDU_Rfid_Clear</text>
 			</description>			
 			<BlockConnectors>			
-			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
-				</BlockConnector>
+			
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -5421,6 +5605,18 @@
 			<FamilyMember>not_equal_poly</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>string_greater</FamilyMember>
+			<FamilyMember>string_less</FamilyMember>
+			<FamilyMember>string_equal</FamilyMember>
+			<FamilyMember>string_greater_equal</FamilyMember>
+			<FamilyMember>string_less_equal</FamilyMember>
+			<FamilyMember>string_not_equal</FamilyMember>
+		</BlockFamily>
+				<BlockFamily>
+			<FamilyMember>equal_string</FamilyMember>
+			<FamilyMember>not_equal_string</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>sin</FamilyMember>
 			<FamilyMember>cos</FamilyMember>
 			<FamilyMember>tan</FamilyMember>
@@ -5527,6 +5723,10 @@
 			<FamilyMember>DuinoEDU_Driver_I2C_Back</FamilyMember>
 			<FamilyMember>DuinoEDU_Driver_I2C_Pivoter</FamilyMember>
 		</BlockFamily>
+				<BlockFamily>
+			<FamilyMember>DuinoEDU_Driver_I2C_Speed_A_Motor</FamilyMember>
+			<FamilyMember>DuinoEDU_Driver_I2C_Speed_B_Motor</FamilyMember>
+		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_Aix_Acc_mesurerX</FamilyMember>
 			<FamilyMember>DuinoEDU_Aix_Acc_mesurerY</FamilyMember>
@@ -5555,6 +5755,10 @@
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_Mouse_Xmove</FamilyMember>
 			<FamilyMember>DuinoEDU_Mouse_Ymove</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Rfid_Write</FamilyMember>
+			<FamilyMember>DuinoEDU_Rfid_Ram_List</FamilyMember>
 		</BlockFamily>
 	</BlockFamilies>
 
@@ -5596,9 +5800,12 @@
 				<BlockGenusMember>not_equal_digital</BlockGenusMember>
 				<BlockGenusMember>equal_poly</BlockGenusMember>
 				<BlockGenusMember>not_equal_poly</BlockGenusMember>
+				<BlockGenusMember>equal_string</BlockGenusMember>
+				<BlockGenusMember>not_equal_string</BlockGenusMember>
 				<BlockGenusMember>and</BlockGenusMember>
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
+				<BlockGenusMember>string_equal</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="114 147 71" name="bd.operators" type="factory">
 				<BlockGenusMember>addition</BlockGenusMember>
@@ -5643,6 +5850,9 @@
 				<BlockGenusMember>setter_variable_number_double</BlockGenusMember>
 				<BlockGenusMember>variable_number_double</BlockGenusMember>
 				<BlockGenusMember>number_double</BlockGenusMember>
+				<BlockGenusMember>setter_variable_String</BlockGenusMember>
+				<BlockGenusMember>variable_String</BlockGenusMember>
+				<BlockGenusMember>message</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>servo_default</BlockGenusMember>
@@ -5821,6 +6031,7 @@
 			<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Rfid_Write</BlockGenusMember>

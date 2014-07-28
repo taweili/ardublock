@@ -13,22 +13,15 @@ public class Rfid_Test extends TranslatorBlock {
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String Pin1;
-		String Pin2;
+
 		String Code;
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		Pin1 = translatorBlock.toCode();
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		Pin2 = translatorBlock.toCode();
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 		Code = translatorBlock.toCode();
-
 
 		translator.addHeaderFile("RFID125.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nRFID125 monRFID_pin"+Pin1+Pin2+";");
-		translator.addSetupCommand("monRFID_pin"+Pin1+Pin2+".brancher(" + Pin1+ "," + Pin2 + ");");
-		String ret = "monRFID_pin"+Pin1+Pin2+".testerCode("+Code+");";
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nRFID125 monRFID;");
+		String ret = "monRFID.testerCode("+Code+")";
 		return codePrefix + ret + codeSuffix;
 	}
 	

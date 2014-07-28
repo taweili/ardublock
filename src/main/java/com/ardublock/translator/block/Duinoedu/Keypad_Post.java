@@ -14,7 +14,7 @@ public class Keypad_Post  extends TranslatorBlock {
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		return codePrefix + "customKeypad.display()"+ codeSuffix;
+		return codePrefix + "keypad.read()"+ codeSuffix;
 	}
 	
 	
