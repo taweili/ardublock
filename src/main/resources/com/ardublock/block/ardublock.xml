@@ -759,7 +759,68 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
 
+		<BlockGenus name="string_equalsIgnoreCase" kind="data" color="222 131 51" initlabel="bg.string_equalsIgnoreCase">
+			<description>
+				<text>is equalsIgnoreCase then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="string_equals" kind="data" color="222 131 51" initlabel="bg.string_equals">
+			<description>
+				<text>is equals then ?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="string_compareTo" kind="data" color="222 131 51" initlabel="bg.string_compareTo">
+			<description>
+				<text>is compareTo ?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_toInt" kind="data" color="222 131 51" initlabel="bg.string_toInt">
+			<description>
+				<text>is a numeric string compared to the number it represents</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="and" kind="data" initlabel="bg.and" color="222 131 51">
 			<description>
 				<text>
@@ -4230,7 +4291,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="">
-					<DefaultArg genus-name="number" connector-kind="socket" label="1000" />
+					<DefaultArg genus-name="number"  label="1000" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -4246,7 +4307,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="">
-					<DefaultArg genus-name="number" connector-kind="socket" label="1000" />
+					<DefaultArg genus-name="number"  label="1000" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -5611,6 +5672,9 @@
 			<FamilyMember>string_greater_equal</FamilyMember>
 			<FamilyMember>string_less_equal</FamilyMember>
 			<FamilyMember>string_not_equal</FamilyMember>
+			<FamilyMember>string_equals</FamilyMember>
+			<FamilyMember>string_equalsIgnoreCase</FamilyMember>
+			<FamilyMember>string_compareTo</FamilyMember>
 		</BlockFamily>
 				<BlockFamily>
 			<FamilyMember>equal_string</FamilyMember>
@@ -5806,6 +5870,7 @@
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
 				<BlockGenusMember>string_equal</BlockGenusMember>
+				<BlockGenusMember>string_toInt</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="114 147 71" name="bd.operators" type="factory">
 				<BlockGenusMember>addition</BlockGenusMember>
