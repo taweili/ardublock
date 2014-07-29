@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -15,11 +15,8 @@ public class LCD_I2C_RGB  extends TranslatorBlock {
 	//@Override
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
-			String print;
 			String line_number;
-			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-			print = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			line_number = translatorBlock.toCode();
 			
 			translator.addHeaderFile("Wire.h");

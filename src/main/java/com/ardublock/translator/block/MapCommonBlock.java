@@ -17,7 +17,7 @@ public class MapCommonBlock extends TranslatorBlock
 		String ret = "map( ";
 		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + tb.toCode();
-		ret = ret + " , 0, 1024, 0, 255)";
+		ret = ret + " , 0, 1023, 0, 255)";
 		return codePrefix + ret + codeSuffix;
 	}
 	

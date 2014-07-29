@@ -41,8 +41,11 @@ public class Translator
 	
 	private Workspace workspace;
 	
-	private int variableCnt;
+	private String rootBlockName;
 	
+	private int variableCnt;
+	private boolean isScoopProgram;
+
 	public Translator(Workspace ws)
 	{
 		workspace = ws;
@@ -80,20 +83,26 @@ public class Translator
 			headerCommand.append("\n");
 		}
 		
-		headerCommand.append("void setup()\n{\n");
+		return headerCommand.toString() + generateSetupFunction();
+	}
+	
+	public String generateSetupFunction()
+	{
+		StringBuilder setupFunction = new StringBuilder();
+		setupFunction.append("void setup()\n{\n");
 		
 		if (!inputPinSet.isEmpty())
 		{
 			for (String pinNumber:inputPinSet)
 			{
-				headerCommand.append("pinMode( " + pinNumber + ", INPUT);\n");
+				setupFunction.append("pinMode( " + pinNumber + " , INPUT);\n");
 			}
 		}
 		if (!outputPinSet.isEmpty())
 		{
 			for (String pinNumber:outputPinSet)
 			{
-				headerCommand.append("pinMode( " + pinNumber + ", OUTPUT);\n");
+				setupFunction.append("pinMode( " + pinNumber + " , OUTPUT);\n");
 			}
 		}
 		
@@ -101,12 +110,13 @@ public class Translator
 		{
 			for (String command:setupCommand)
 			{
-				headerCommand.append(command + "\n");
+				setupFunction.append(command + "\n");
 			}
 		}
 		
-		headerCommand.append("}\n\n");
-		return headerCommand.toString();
+		setupFunction.append("}\n\n");
+		
+		return setupFunction.toString();
 	}
 	
 	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException
@@ -138,6 +148,9 @@ public class Translator
 		blockAdaptor = buildOpenBlocksAdaptor();
 		
 		variableCnt = 0;
+		
+		rootBlockName = null;
+		isScoopProgram = false;
 	}
 	
 	private BlockAdaptor buildOpenBlocksAdaptor()
@@ -257,6 +270,22 @@ public class Translator
 			translatorBlock.onTranslateBodyFinished();
 		}
 		
+	}
+
+	public String getRootBlockName() {
+		return rootBlockName;
+	}
+
+	public void setRootBlockName(String rootBlockName) {
+		this.rootBlockName = rootBlockName;
+	}
+
+	public boolean isScoopProgram() {
+		return isScoopProgram;
+	}
+
+	public void setScoopProgram(boolean isScoopProgram) {
+		this.isScoopProgram = isScoopProgram;
 	}
 	
 	public Set<RenderableBlock> findEntryBlocks()
