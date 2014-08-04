@@ -5,10 +5,6 @@ import java.awt.Cursor;
 import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-<<<<<<< HEAD
-=======
-import java.awt.Graphics;
->>>>>>> upstream/master
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

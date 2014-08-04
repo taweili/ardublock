@@ -5,9 +5,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Neopixel_show  extends TranslatorBlock {
+public class Neopixel_Brightness  extends TranslatorBlock {
 
-	public Neopixel_show (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public Neopixel_Brightness (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -16,12 +16,14 @@ public class Neopixel_show  extends TranslatorBlock {
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
 			String Pin ;
+			String Brightness;
 
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			Pin = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			Brightness = translatorBlock.toCode();
 			
-			
-			String ret = "strip_pin"+Pin+".show();\n";
+			String ret = "strip_pin"+Pin+".setBrightness("+Brightness +");\n";
 			
 			return codePrefix + ret + codeSuffix;
 				

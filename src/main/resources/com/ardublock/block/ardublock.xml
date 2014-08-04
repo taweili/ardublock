@@ -5211,7 +5211,26 @@
 				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>						
+		</BlockGenus>	
+		
+		<BlockGenus name="ada_neopixel_Brightness" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_Brightness">
+			<description>
+				<text>ada_neopixel_Brightness</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>					
 		<!--***Makeblock***-->
 		<BlockGenus name="me_ultrasonic_sensor" kind="data" color="0 177 236" initlabel="bg.me_ultrasonic_sensor">
 			<description>
@@ -7215,6 +7234,7 @@
 				<BlockGenusMember>ada_neopixel_init</BlockGenusMember>	
 				<BlockGenusMember>ada_neopixel_pixel_color</BlockGenusMember>
 				<BlockGenusMember>ada_neopixel_show</BlockGenusMember>	
+				<BlockGenusMember>ada_neopixel_Brightness</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 177 236" name="bd.makeblock" type="factory">
 				<BlockGenusMember>me_ultrasonic_sensor</BlockGenusMember>
