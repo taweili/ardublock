@@ -25,14 +25,14 @@ public class Neopixel_pixel_color  extends TranslatorBlock {
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			Pixel_Nb = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-			Red = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-			Blue = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
 			Green = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
+			Red = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
+			Blue = translatorBlock.toCode();
 			
 			
-			String ret = "strip_pin"+Pin+".setPixelColor("+Pixel_Nb+","+Red+" ,"+Blue+" ,"+Green+" );\n";
+			String ret = "strip_pin"+Pin+".setPixelColor("+Pixel_Nb+","+Green+" ,"+Red+" ,"+Blue+" );\n";
 			
 			return codePrefix + ret + codeSuffix;
 				

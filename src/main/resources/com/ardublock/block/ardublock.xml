@@ -5177,13 +5177,13 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
 					<DefaultArg genus-name="number" label="20" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Green">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Red">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Blue">
-					<DefaultArg genus-name="number" label="255" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Green">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
