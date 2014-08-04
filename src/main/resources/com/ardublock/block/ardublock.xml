@@ -4031,13 +4031,13 @@
 				<text>LCD_I2C_Backlight</text>
 			</description>			
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="R">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="G">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
-					<BlockConnector connector-type="number" connector-kind="socket" label="B">
+					<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -4621,7 +4621,121 @@
 					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>		
+		</BlockGenus>	
+		
+		<BlockGenus name="DuinoEDU_neopixel_init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_init">
+			<description>
+				<text>DuinoEDU_neopixel_init</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Nb Led">
+					<DefaultArg genus-name="number" label="60" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="ada_neopixel_NEO_KHZ800" label="NEO_KHZ800" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="ada_neopixel_NEO_RGB" label="NEO_RGB" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="DuinoEDU_neopixel_pixel_colorGRB" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_pixel_colorGRB">
+			<description>
+				<text>DuinoEDU_neopixel_pixel_colorGRB</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_neopixel_pixel_colorRGB" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_pixel_colorRGB">
+			<description>
+				<text>DuinoEDU_neopixel_pixel_colorRGB</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_neopixel_show" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_show">
+			<description>
+				<text>DuinoEDU_neopixel_show</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+	<BlockGenus name="DuinoEDU_neopixel_Brightness" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_Brightness">
+			<description>
+				<text>DuinoEDU_neopixel_Brightness</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>			
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -5155,8 +5269,11 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="Nb of Led">
 					<DefaultArg genus-name="number" label="60" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Type">
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
 					<DefaultArg genus-name="ada_neopixel_NEO_KHZ800" label="NEO_KHZ800" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="ada_neopixel_NEO_RGB" label="NEO_RGB" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -5166,9 +5283,9 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="ada_neopixel_pixel_color" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_pixel_color">
+		<BlockGenus name="ada_neopixel_pixel_colorGRB" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_pixel_colorGRB">
 			<description>
-				<text>ada_neopixel_pixel_color</text>
+				<text>ada_neopixel_pixel_colorGRB</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
@@ -5177,13 +5294,41 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
 					<DefaultArg genus-name="number" label="20" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Green">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Red">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Blue">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_pixel_colorRGB" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_pixel_colorRGB">
+			<description>
+				<text>ada_neopixel_pixel_colorRGB</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -6832,10 +6977,15 @@
 		<BlockFamily>
 			<FamilyMember>ada_neopixel_NEO_GRB</FamilyMember>
 			<FamilyMember>ada_neopixel_NEO_RGB</FamilyMember>
+		</BlockFamily>			
+		<BlockFamily>
 			<FamilyMember>ada_neopixel_NEO_KHZ400</FamilyMember>
 			<FamilyMember>ada_neopixel_NEO_KHZ800</FamilyMember>
 		</BlockFamily>			
-		
+		<BlockFamily>
+			<FamilyMember>ada_neopixel_pixel_colorRGB</FamilyMember>
+			<FamilyMember>ada_neopixel_pixel_colorGRB</FamilyMember>
+		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>me_port_1</FamilyMember>
 			<FamilyMember>me_port_2</FamilyMember>
@@ -6931,6 +7081,10 @@
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_Rfid_Write</FamilyMember>
 			<FamilyMember>DuinoEDU_Rfid_Ram_List</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_neopixel_pixel_colorGRB</FamilyMember>
+			<FamilyMember>DuinoEDU_neopixel_pixel_colorRGB</FamilyMember>
 		</BlockFamily>
 	</BlockFamilies>
 
@@ -7221,13 +7375,17 @@
 			<BlockGenusMember>DuinoEDU_Rfid_Test</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Rfid_Read</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Rfid_Clear</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_neopixel_init</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_neopixel_pixel_colorRGB</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_neopixel_show</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_neopixel_Brightness</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_release</BlockGenusMember>
 				<BlockGenusMember>ada_neopixel_init</BlockGenusMember>	
-				<BlockGenusMember>ada_neopixel_pixel_color</BlockGenusMember>
+				<BlockGenusMember>ada_neopixel_pixel_colorRGB</BlockGenusMember>
 				<BlockGenusMember>ada_neopixel_show</BlockGenusMember>	
 				<BlockGenusMember>ada_neopixel_Brightness</BlockGenusMember>
 			</BlockDrawer>

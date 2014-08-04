@@ -1,13 +1,13 @@
-package com.ardublock.translator.block.adafruit;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class ada_neopixel_init  extends TranslatorBlock {
+public class Neopixel_init  extends TranslatorBlock {
 
-	public ada_neopixel_init (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public Neopixel_init (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -29,9 +29,9 @@ public class ada_neopixel_init  extends TranslatorBlock {
 			NEO_RGB = translatorBlock.toCode();
 			
 			translator.addHeaderFile("Adafruit_NeoPixel.h");
-			translator.addDefinitionCommand("Adafruit_NeoPixel strip_pin"+Pin+" = Adafruit_NeoPixel("+NbLed+","+ Pin +", " +NEO_RGB+ " + "+NEO_KHZ800 +");");
-			translator.addSetupCommand("strip_pin"+Pin+".begin();\n" +
-			"strip_pin"+Pin+".show();");
+			translator.addDefinitionCommand("Adafruit_NeoPixel monRuban_pin"+Pin+" = Adafruit_NeoPixel("+NbLed+","+ Pin +", " +NEO_RGB+ " + "+NEO_KHZ800 +");");
+			translator.addSetupCommand("monRuban_pin"+Pin+".brancher();\n" +
+			"monRuban _pin"+Pin+".afficher();");
 			
 			
 			return "" ;	
