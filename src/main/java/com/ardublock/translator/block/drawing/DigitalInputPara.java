@@ -21,7 +21,11 @@ public class DigitalInputPara extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
+<<<<<<< HEAD
 		String ret;
+=======
+		String ret, pin;
+>>>>>>> upstream/master
 		TranslatorBlock childBlock;	
 
 		ret = "{";

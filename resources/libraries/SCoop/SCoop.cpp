@@ -966,4 +966,8 @@ uint16_t SCoopFifo::flushNonAtomic() {             // empty the fifo
      ptrOut = ptrMin;
   return (ptrMax-ptrMin); }
 
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> upstream/master
