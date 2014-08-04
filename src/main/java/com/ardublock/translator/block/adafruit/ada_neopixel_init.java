@@ -17,19 +17,16 @@ public class ada_neopixel_init  extends TranslatorBlock {
 		{
 			String Pin ;
 			String NbLed;
-			String KHhz;
 			String Type;
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			Pin = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			NbLed = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-			KHhz = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
 			Type = translatorBlock.toCode();
 			
 			translator.addHeaderFile("Adafruit_NeoPixel.h");
-			translator.addDefinitionCommand("Adafruit_NeoPixel strip_pin"+Pin+" = Adafruit_NeoPixel("+NbLed+","+ Pin +", " +Type+ KHhz+");");
+			translator.addDefinitionCommand("Adafruit_NeoPixel strip_pin"+Pin+" = Adafruit_NeoPixel("+NbLed+","+ Pin +", " +Type+");");
 			translator.addSetupCommand("strip_pin"+Pin+".begin();\n" +
 			"strip_pin"+Pin+".show();");
 			

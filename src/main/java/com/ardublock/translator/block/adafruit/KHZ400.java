@@ -13,7 +13,7 @@ public class KHZ400 extends TranslatorBlock
 
 	@Override
 	public String toCode() throws SocketNullException {
-		return codePrefix + "KHZ400" + codeSuffix;
+		return codePrefix + "NEO_KHZ400" + codeSuffix;
 	}
 
 }

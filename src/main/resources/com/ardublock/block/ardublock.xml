@@ -5155,11 +5155,8 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="Nb of Led">
 					<DefaultArg genus-name="number" label="60" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="EO_KHZ800">
-					<DefaultArg genus-name="ada_neopixel_NEO_KHZ800" label="EO_KHZ800" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="NEO_GRB">
-					<DefaultArg genus-name="ada_neopixel_NEO_GRB" label="NEO_GRB" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="Type">
+					<DefaultArg genus-name="ada_neopixel_NEO_KHZ800" label="NEO_KHZ800" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -6835,8 +6832,6 @@
 		<BlockFamily>
 			<FamilyMember>ada_neopixel_NEO_GRB</FamilyMember>
 			<FamilyMember>ada_neopixel_NEO_RGB</FamilyMember>
-		</BlockFamily>			
-		<BlockFamily>
 			<FamilyMember>ada_neopixel_NEO_KHZ400</FamilyMember>
 			<FamilyMember>ada_neopixel_NEO_KHZ800</FamilyMember>
 		</BlockFamily>			
