@@ -5119,6 +5119,99 @@
 				</Image> 
 			</Images> -->
 		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_NEO_KHZ800" kind="data" color="214 169 54" initlabel="bg.ada_neopixel_NEO_KHZ800" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_NEO_KHZ400" kind="data" color="214 169 54" initlabel="bg.ada_neopixel_NEO_KHZ400" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_NEO_GRB" kind="data" color="214 169 54" initlabel="bg.ada_neopixel_NEO_GRB" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_NEO_RGB" kind="data" color="214 169 54" initlabel="bg.ada_neopixel_NEO_RGB" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>	
+
+		<BlockGenus name="ada_neopixel_init" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_init">
+			<description>
+				<text>ada_neopixel_init</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Nb of Led">
+					<DefaultArg genus-name="number" label="60" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="EO_KHZ800">
+					<DefaultArg genus-name="ada_neopixel_NEO_KHZ800" label="EO_KHZ800" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="NEO_GRB">
+					<DefaultArg genus-name="ada_neopixel_NEO_GRB" label="NEO_GRB" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_pixel_color" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_pixel_color">
+			<description>
+				<text>ada_neopixel_pixel_color</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Red">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Blue">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Green">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_show" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_show">
+			<description>
+				<text>ada_neopixel_show</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>						
 		<!--***Makeblock***-->
 		<BlockGenus name="me_ultrasonic_sensor" kind="data" color="0 177 236" initlabel="bg.me_ultrasonic_sensor">
 			<description>
@@ -6721,6 +6814,15 @@
 			<FamilyMember>ada_dc_motor_release</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>ada_neopixel_NEO_GRB</FamilyMember>
+			<FamilyMember>ada_neopixel_NEO_RGB</FamilyMember>
+		</BlockFamily>			
+		<BlockFamily>
+			<FamilyMember>ada_neopixel_NEO_KHZ400</FamilyMember>
+			<FamilyMember>ada_neopixel_NEO_KHZ800</FamilyMember>
+		</BlockFamily>			
+		
+		<BlockFamily>
 			<FamilyMember>me_port_1</FamilyMember>
 			<FamilyMember>me_port_2</FamilyMember>
 			<FamilyMember>me_port_3</FamilyMember>
@@ -7110,6 +7212,9 @@
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_release</BlockGenusMember>
+				<BlockGenusMember>ada_neopixel_init</BlockGenusMember>	
+				<BlockGenusMember>ada_neopixel_pixel_color</BlockGenusMember>
+				<BlockGenusMember>ada_neopixel_show</BlockGenusMember>	
 			</BlockDrawer>
 			<BlockDrawer button-color="0 177 236" name="bd.makeblock" type="factory">
 				<BlockGenusMember>me_ultrasonic_sensor</BlockGenusMember>
