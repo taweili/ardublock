@@ -31,7 +31,7 @@ public class Neopixel_init  extends TranslatorBlock {
 			translator.addHeaderFile("Adafruit_NeoPixel.h");
 			translator.addDefinitionCommand("Adafruit_NeoPixel monRuban_pin"+Pin+" = Adafruit_NeoPixel("+NbLed+","+ Pin +", " +NEO_RGB+ " + "+NEO_KHZ800 +");");
 			translator.addSetupCommand("monRuban_pin"+Pin+".brancher();\n" +
-			"monRuban _pin"+Pin+".afficher();");
+			"monRuban_pin"+Pin+".afficher();");
 			
 			
 			return "" ;	
