@@ -4735,7 +4735,140 @@
 				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>			
+		</BlockGenus>	
+			
+		<BlockGenus name="DuinoEDU_stepper_step" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_stepper_step">
+			<description>
+				<text>DuinoEDU_stepper_step</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepperround">
+					<DefaultArg genus-name="number" label="48" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.step">
+					<DefaultArg genus-name="number" label="500" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/stepper.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		<BlockGenus name="DuinoEDU_stepper_setSpeed" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_stepper_setSpeed">
+			<description>
+				<text>DuinoEDU_stepper_setSpeed</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
+					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/stepper.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+			<BlockGenus name="DuinoEDU_matrice_write" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_matrice_write">
+			<description>
+				<text>DuinoEDU_stepper_setSpeed</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.DuinoEDU_Display_Point">
+					<DefaultArg genus-name="digital-on" label="Allumé" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/matrice-64-spi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_matrice_clear" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_matrice_clear">
+			<description>
+				<text>DuinoEDU_matrice_clear</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/matrice-64-spi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		<BlockGenus name="DuinoEDU_matrice_Brightness" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_matrice_Brightness">
+			<description>
+				<text>DuinoEDU_matrice_Brightness</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
+					<DefaultArg genus-name="number" label="15" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/matrice-64-spi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -7379,6 +7512,11 @@
 			<BlockGenusMember>DuinoEDU_neopixel_pixel_colorRGB</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_neopixel_show</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_neopixel_Brightness</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_stepper_step</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_stepper_setSpeed</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
