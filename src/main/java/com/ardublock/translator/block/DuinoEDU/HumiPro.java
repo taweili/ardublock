@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -19,10 +19,10 @@ public class HumiPro extends TranslatorBlock {
 
 		
 		translator.addHeaderFile("DHT.h");
-		translator.addSetupCommand("monDHTPRO_Humi.begin();");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nDHT monDHTPRO_Humi("+Pin +",DHT22);"	);
+		translator.addSetupCommand("monDHTPRO_Humi_pin"+Pin+".begin();");
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nDHT monDHTPRO_Humi_pin"+Pin+"("+Pin +",DHT22);"	);
 		
-		String ret = "monDHTPRO_Humi.readHumidity()";
+		String ret = "monDHTPRO_Humi_pin"+Pin+".readHumidity()";
 		
 
 		return codePrefix + ret + codeSuffix;

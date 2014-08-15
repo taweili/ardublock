@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -14,7 +14,7 @@ public class Keypad_Post  extends TranslatorBlock {
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		return codePrefix + "customKeypad.display()"+ codeSuffix;
+		return codePrefix + "keypad.read()"+ codeSuffix;
 	}
 	
 	

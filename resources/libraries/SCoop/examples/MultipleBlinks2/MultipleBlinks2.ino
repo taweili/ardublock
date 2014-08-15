@@ -99,4 +99,8 @@ defineTaskLoop(loop3) {
   // We must call 'yield' at a regular basis to pass
   // control to other tasks.
   // yield(); // not needed with SCoop, already included in the library , at the end of each loop
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/master

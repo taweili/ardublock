@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -15,11 +15,9 @@ public class Partie_Emetteur  extends TranslatorBlock {
 	//@Override
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
-			String print;
+			
 			String Pin;
-			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-			print = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			Pin = translatorBlock.toCode();
 			
 			translator.addHeaderFile("VirtualWire.h");

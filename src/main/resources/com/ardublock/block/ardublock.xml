@@ -760,6 +760,158 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="string_greater" kind="data" color="222 131 51" initlabel="bg.string_greater">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_less" kind="data" color="222 131 51" initlabel="bg.string_less">
+			<description>
+				<text>is upper string less then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_equal" kind="data" color="222 131 51" initlabel="bg.string_equal">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+
+		<BlockGenus name="string_greater_equal" kind="data" color="222 131 51" initlabel="bg.string_greater_equal">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_less_equal" kind="data" color="222 131 51" initlabel="bg.string_less_equal">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_not_equal" kind="data" color="222 131 51" initlabel="bg.string_not_equal">
+			<description>
+				<text>is upper string greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+
+		<BlockGenus name="string_equalsIgnoreCase" kind="data" color="222 131 51" initlabel="bg.string_equalsIgnoreCase">
+			<description>
+				<text>is equalsIgnoreCase then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="string_equals" kind="data" color="222 131 51" initlabel="bg.string_equals">
+			<description>
+				<text>is equals then ?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="string_compareTo" kind="data" color="222 131 51" initlabel="bg.string_compareTo">
+			<description>
+				<text>is compareTo ?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="string_toInt" kind="data" color="222 131 51" initlabel="bg.string_toInt">
+			<description>
+				<text>is a numeric string compared to the number it represents</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="and" kind="data" initlabel="bg.and" color="222 131 51">
 			<description>
 				<text>
@@ -814,6 +966,8 @@
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+
 
 		<BlockGenus name="not_equal_poly" kind="function" color="222 131 51" initlabel="bg.not_equal_poly">
 			<description>
@@ -828,6 +982,34 @@
 				<BlockConnector connector-type="poly" connector-kind="socket" position-type="bottom" />
 			</BlockConnectors>
 		</BlockGenus>
+
+				<BlockGenus name="equal_string" kind="function" color="222 131 51" initlabel="bg.equal_string">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>	
+		
+		<BlockGenus name="not_equal_string" kind="function" color="222 131 51" initlabel="bg.not_equal_string">
+			<description>
+				<text>is upper number greater then lower?</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" >
+					<!-- CLUDGE:: This apparently daft line enables 'clone' to work correctly on this BlockGenus -->
+					<DefaultArg genus-name="dummy" label="" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+				<BlockConnector connector-type="string" connector-kind="socket" position-type="bottom" />
+			</BlockConnectors>
+		</BlockGenus>	
 
 		<!--****************** Numbers/Constants *************** -->
 		<BlockGenus name="millis" kind="data" color="255 153 204" initlabel="bg.millis">
@@ -1117,7 +1299,31 @@
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-
+		
+	    <BlockGenus name="setter_variable_String" kind="command" color="245 245 245" initlabel="bg.setter_variable_String">
+	      <description>
+	        <text>set String variable</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_String" label="String variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="message" label="message" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+				
+	    <BlockGenus name="variable_String" kind="data" initlabel="bg.variable_String" editable-label="yes" is-label-value="yes" color="245 245 245">
+	      <description>
+	        <text>
+	          Variable String
+	        </text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+	      </BlockConnectors>
+	    </BlockGenus>
 		<!--****************** Utilities *************** -->		
 		<BlockGenus name="servo_default" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
 			<description>
@@ -3825,13 +4031,13 @@
 				<text>LCD_I2C_Backlight</text>
 			</description>			
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="R">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="G">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
-					<BlockConnector connector-type="number" connector-kind="socket" label="B">
+					<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -3905,11 +4111,63 @@
 				<text>keyboard post</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
-				
+				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
 			</BlockConnectors>
-			
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keyboard.png</FileLocation>
+				</Image>
+			</Images>
 			</BlockGenus>
+			
+		
+			<BlockGenus name="DuinoEDU_Mouse_Xmove" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Mouse_Xmove">
+			<description>
+				<text>Mouse X Move </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/mouse.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+		
+			<BlockGenus name="DuinoEDU_Mouse_Ymove" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Mouse_Ymove">
+			<description>
+				<text>Mouse Y Move </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/mouse.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+				
+		
 		<BlockGenus name="DuinoEDU_Keypad_12_Button" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Keypad_12_Button">
 			<description>
 				<text>Keypad 12 or 16 Buttons</text>
@@ -3937,7 +4195,7 @@
 				<text>Keypad post</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
+				<BlockConnector connector-type="string" connector-kind="plug" label="letter" position-type="mirror"/>
 				
 			</BlockConnectors>
 			
@@ -4076,7 +4334,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="">
-					<DefaultArg genus-name="DuinoEDU_right" label="tout_droit" />
+					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -4086,7 +4344,7 @@
 			</Images>
 		</BlockGenus>
 		
-						<BlockGenus name="DuinoEDU_Driver_I2C_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Back">
+		<BlockGenus name="DuinoEDU_Driver_I2C_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Back">
 			<description>
 				<text>Driver I2C back</text>
 			</description>
@@ -4102,7 +4360,7 @@
 			</Images>
 		</BlockGenus>
 		
-						<BlockGenus name="DuinoEDU_Driver_I2C_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Pivoter">
+		<BlockGenus name="DuinoEDU_Driver_I2C_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Pivoter">
 			<description>
 				<text>Driver I2C pivote</text>
 			</description>
@@ -4118,7 +4376,40 @@
 			</Images>
 		</BlockGenus>
 		
-						<BlockGenus name="DuinoEDU_right" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_right" editable-label="no">
+		<BlockGenus name="DuinoEDU_Driver_I2C_Speed_A_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Speed_A_Motor">
+			<description>
+				<text>Driver I2C Speed A Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/I2CMotorDriver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+				<BlockGenus name="DuinoEDU_Driver_I2C_Speed_B_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Speed_B_Motor">
+			<description>
+				<text>Driver I2C Speed B Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/I2CMotorDriver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		<BlockGenus name="DuinoEDU_right" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_right" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
@@ -4242,6 +4533,342 @@
 			</Images>
 		</BlockGenus>
 		
+			<BlockGenus name="DuinoEDU_Rfid_Write" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Write">
+			<description>
+				<text>DuinoEDU_Rfid_Write</text>
+			</description>			
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="Code">
+					<DefaultArg genus-name="message" label="12345678" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Rfid_Ram_List" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Ram_List">
+			<description>
+				<text>DuinoEDU_Rfid_Ram_List</text>
+			</description>			
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="Code">
+					<DefaultArg genus-name="message" label="12345678 23456789" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Rfid_Test" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Test">
+			<description>
+				<text>DuinoEDU_Rfid_Test</text>
+			</description>			
+			<BlockConnectors>
+			<BlockConnector connector-type="boolean" connector-kind="plug" />
+			
+				<BlockConnector connector-type="string" connector-kind="socket" label="Code">
+					<DefaultArg genus-name="message" label="12345678 23456789" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Rfid_Read" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Read">
+			<description>
+				<text>DuinoEDU_Rfid_Read</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug"/>
+			
+			
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		<BlockGenus name="DuinoEDU_Rfid_Clear" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Rfid_Clear">
+			<description>
+				<text>DuinoEDU_Rfid_Clear</text>
+			</description>			
+			<BlockConnectors>			
+			
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/rfid.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="DuinoEDU_neopixel_init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_init">
+			<description>
+				<text>DuinoEDU_neopixel_init</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Nb Led">
+					<DefaultArg genus-name="number" label="60" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="ada_neopixel_NEO_KHZ800" label="NEO_KHZ800" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="ada_neopixel_NEO_RGB" label="NEO_RGB" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="DuinoEDU_neopixel_pixel_colorGRB" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_pixel_colorGRB">
+			<description>
+				<text>DuinoEDU_neopixel_pixel_colorGRB</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_neopixel_pixel_colorRGB" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_pixel_colorRGB">
+			<description>
+				<text>DuinoEDU_neopixel_pixel_colorRGB</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_neopixel_show" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_show">
+			<description>
+				<text>DuinoEDU_neopixel_show</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+	<BlockGenus name="DuinoEDU_neopixel_Brightness" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_Brightness">
+			<description>
+				<text>DuinoEDU_neopixel_Brightness</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+			
+		<BlockGenus name="DuinoEDU_stepper_step" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_stepper_step">
+			<description>
+				<text>DuinoEDU_stepper_step</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepperround">
+					<DefaultArg genus-name="number" label="48" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.step">
+					<DefaultArg genus-name="number" label="500" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/stepper.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		<BlockGenus name="DuinoEDU_stepper_setSpeed" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_stepper_setSpeed">
+			<description>
+				<text>DuinoEDU_stepper_setSpeed</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
+					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/stepper.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+			<BlockGenus name="DuinoEDU_matrice_write" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_matrice_write">
+			<description>
+				<text>DuinoEDU_stepper_setSpeed</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.DuinoEDU_Display_Point">
+					<DefaultArg genus-name="digital-on" label="Allumé" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/matrice-64-spi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_matrice_clear" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_matrice_clear">
+			<description>
+				<text>DuinoEDU_matrice_clear</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/matrice-64-spi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		<BlockGenus name="DuinoEDU_matrice_Brightness" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_matrice_Brightness">
+			<description>
+				<text>DuinoEDU_matrice_Brightness</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
+					<DefaultArg genus-name="number" label="15" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/matrice-64-spi.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -4739,6 +5366,146 @@
 				</Image> 
 			</Images> -->
 		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_NEO_KHZ800" kind="data" color="214 169 54" initlabel="bg.ada_neopixel_NEO_KHZ800" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_NEO_KHZ400" kind="data" color="214 169 54" initlabel="bg.ada_neopixel_NEO_KHZ400" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_NEO_GRB" kind="data" color="214 169 54" initlabel="bg.ada_neopixel_NEO_GRB" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_NEO_RGB" kind="data" color="214 169 54" initlabel="bg.ada_neopixel_NEO_RGB" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>	
+
+		<BlockGenus name="ada_neopixel_init" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_init">
+			<description>
+				<text>ada_neopixel_init</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Nb of Led">
+					<DefaultArg genus-name="number" label="60" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="ada_neopixel_NEO_KHZ800" label="NEO_KHZ800" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="ada_neopixel_NEO_RGB" label="NEO_RGB" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_pixel_colorGRB" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_pixel_colorGRB">
+			<description>
+				<text>ada_neopixel_pixel_colorGRB</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_pixel_colorRGB" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_pixel_colorRGB">
+			<description>
+				<text>ada_neopixel_pixel_colorRGB</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+					<DefaultArg genus-name="number" label="20" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_show" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_show">
+			<description>
+				<text>ada_neopixel_show</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
+		
+		<BlockGenus name="ada_neopixel_Brightness" kind="command" color="216 5 10" initlabel="bg.ada_neopixel_Brightness">
+			<description>
+				<text>ada_neopixel_Brightness</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>					
 		<!--***Makeblock***-->
 		<BlockGenus name="me_ultrasonic_sensor" kind="data" color="0 177 236" initlabel="bg.me_ultrasonic_sensor">
 			<description>
@@ -6249,6 +7016,21 @@
 			<FamilyMember>not_equal_poly</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>string_greater</FamilyMember>
+			<FamilyMember>string_less</FamilyMember>
+			<FamilyMember>string_equal</FamilyMember>
+			<FamilyMember>string_greater_equal</FamilyMember>
+			<FamilyMember>string_less_equal</FamilyMember>
+			<FamilyMember>string_not_equal</FamilyMember>
+			<FamilyMember>string_equals</FamilyMember>
+			<FamilyMember>string_equalsIgnoreCase</FamilyMember>
+			<FamilyMember>string_compareTo</FamilyMember>
+		</BlockFamily>
+				<BlockFamily>
+			<FamilyMember>equal_string</FamilyMember>
+			<FamilyMember>not_equal_string</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>sin</FamilyMember>
 			<FamilyMember>cos</FamilyMember>
 			<FamilyMember>tan</FamilyMember>
@@ -6326,6 +7108,18 @@
 			<FamilyMember>ada_dc_motor_release</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>ada_neopixel_NEO_GRB</FamilyMember>
+			<FamilyMember>ada_neopixel_NEO_RGB</FamilyMember>
+		</BlockFamily>			
+		<BlockFamily>
+			<FamilyMember>ada_neopixel_NEO_KHZ400</FamilyMember>
+			<FamilyMember>ada_neopixel_NEO_KHZ800</FamilyMember>
+		</BlockFamily>			
+		<BlockFamily>
+			<FamilyMember>ada_neopixel_pixel_colorRGB</FamilyMember>
+			<FamilyMember>ada_neopixel_pixel_colorGRB</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>me_port_1</FamilyMember>
 			<FamilyMember>me_port_2</FamilyMember>
 			<FamilyMember>me_port_3</FamilyMember>
@@ -6384,6 +7178,10 @@
 			<FamilyMember>DuinoEDU_Driver_I2C_Back</FamilyMember>
 			<FamilyMember>DuinoEDU_Driver_I2C_Pivoter</FamilyMember>
 		</BlockFamily>
+				<BlockFamily>
+			<FamilyMember>DuinoEDU_Driver_I2C_Speed_A_Motor</FamilyMember>
+			<FamilyMember>DuinoEDU_Driver_I2C_Speed_B_Motor</FamilyMember>
+		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_Aix_Acc_mesurerX</FamilyMember>
 			<FamilyMember>DuinoEDU_Aix_Acc_mesurerY</FamilyMember>
@@ -6405,10 +7203,22 @@
 			<FamilyMember>DuinoEDU_On_digit3</FamilyMember>
 			<FamilyMember>DuinoEDU_On_digit4</FamilyMember>
 		</BlockFamily>	
-				<BlockFamily>
+		<BlockFamily>
 			<FamilyMember>DuinoEDU_setSerialInfosOn</FamilyMember>
 			<FamilyMember>DuinoEDU_setSerialInfosOff</FamilyMember>
 		</BlockFamily>	
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Mouse_Xmove</FamilyMember>
+			<FamilyMember>DuinoEDU_Mouse_Ymove</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Rfid_Write</FamilyMember>
+			<FamilyMember>DuinoEDU_Rfid_Ram_List</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_neopixel_pixel_colorGRB</FamilyMember>
+			<FamilyMember>DuinoEDU_neopixel_pixel_colorRGB</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -6449,9 +7259,13 @@
 				<BlockGenusMember>not_equal_digital</BlockGenusMember>
 				<BlockGenusMember>equal_poly</BlockGenusMember>
 				<BlockGenusMember>not_equal_poly</BlockGenusMember>
+				<BlockGenusMember>equal_string</BlockGenusMember>
+				<BlockGenusMember>not_equal_string</BlockGenusMember>
 				<BlockGenusMember>and</BlockGenusMember>
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
+				<BlockGenusMember>string_equal</BlockGenusMember>
+				<BlockGenusMember>string_toInt</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="114 147 71" name="bd.operators" type="factory">
 				<BlockGenusMember>addition</BlockGenusMember>
@@ -6496,6 +7310,9 @@
 				<BlockGenusMember>setter_variable_number_double</BlockGenusMember>
 				<BlockGenusMember>variable_number_double</BlockGenusMember>
 				<BlockGenusMember>number_double</BlockGenusMember>
+				<BlockGenusMember>setter_variable_String</BlockGenusMember>
+				<BlockGenusMember>variable_String</BlockGenusMember>
+				<BlockGenusMember>message</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>servo_default</BlockGenusMember>
@@ -6667,6 +7484,9 @@
 			<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
+			<BlockGenusMember>keyboard_post</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_LCD_I2C_RGB</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
@@ -6680,17 +7500,32 @@
 			<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
-			<BlockGenusMember>keyboard</BlockGenusMember>
-			<BlockGenusMember>keyboard_post</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
-			<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 			<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Rfid_Write</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Rfid_Test</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Rfid_Read</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_Rfid_Clear</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_neopixel_init</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_neopixel_pixel_colorRGB</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_neopixel_show</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_neopixel_Brightness</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_stepper_step</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_stepper_setSpeed</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
+			<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
 				<BlockGenusMember>ada_dc_motor_release</BlockGenusMember>
+				<BlockGenusMember>ada_neopixel_init</BlockGenusMember>	
+				<BlockGenusMember>ada_neopixel_pixel_colorRGB</BlockGenusMember>
+				<BlockGenusMember>ada_neopixel_show</BlockGenusMember>	
+				<BlockGenusMember>ada_neopixel_Brightness</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 177 236" name="bd.makeblock" type="factory">
 				<BlockGenusMember>me_ultrasonic_sensor</BlockGenusMember>

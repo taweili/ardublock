@@ -21,7 +21,7 @@ public class AnalogInputPara extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String ret, pin;
+		String ret;
 		TranslatorBlock childBlock;	
 
 		ret = "{";

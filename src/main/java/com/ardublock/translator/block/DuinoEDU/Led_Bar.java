@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -28,9 +28,9 @@ public class Led_Bar extends TranslatorBlock {
 		
 		
 		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n// Pin Led Bar\n"
-				+ "LED_Bar mesLeds(" + Clk
+				+ "LED_Bar mesLeds_pin"+Dio+Clk+"(" + Clk
 				+ "," + Dio + ");");
-		String ret = "mesLeds.displayVoltage("+ Niveau +");\n";
+		String ret = "mesLeds_pin"+Dio+Clk+".displayVoltage("+ Niveau +");\n";
 		
 		return codePrefix + ret + codeSuffix;
 	}
