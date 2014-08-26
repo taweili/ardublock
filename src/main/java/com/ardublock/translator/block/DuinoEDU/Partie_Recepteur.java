@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -22,6 +22,6 @@ public class Partie_Recepteur  extends TranslatorBlock {
 			translator.addHeaderFile("VirtualWire.h");
 			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/");
 			translator.addSetupCommand("brancherRecepteur("+ Pin +");");
-			return "\"recevoirTexte()\"" ;	
+			return codePrefix +"\"recevoirTexte()\"" + codeSuffix;	
 		}
 }

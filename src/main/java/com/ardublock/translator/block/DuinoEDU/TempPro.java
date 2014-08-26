@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -20,9 +20,9 @@ public class TempPro extends TranslatorBlock {
 		
 		translator.addHeaderFile("DHT.h");
 		
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \nDHT monDHTPRO_Temp("+Pin +",DHT22);"	);
-		translator.addSetupCommand("monDHTPRO_Temp.brancher();");
-		String ret = "monDHTPRO_Temp.readTemperature()";
+		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \nDHT monDHTPRO_Temp_pin"+Pin+"("+Pin +",DHT22);"	);
+		translator.addSetupCommand("monDHTPRO_Temp_pin"+Pin+".brancher();");
+		String ret = "monDHTPRO_Temp_pin"+Pin+".readTemperature()";
 		
 
 		return codePrefix + ret + codeSuffix;

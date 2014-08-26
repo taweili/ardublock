@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
@@ -15,12 +15,9 @@ public class Oled_I2C  extends TranslatorBlock {
 	//@Override
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
-			String print;
 			String line_number;
 			String brightness;
-			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-			print = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			line_number = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 			brightness = translatorBlock.toCode();

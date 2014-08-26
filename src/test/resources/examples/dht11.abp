@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1600">
+<PageBlocks>
+<Block genus-name="delay" id="303">
+<Location>
+<X>184</X>
+<Y>264</Y>
+</Location>
+<BeforeBlockId>297</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="304" connector-kind="socket" connector-type="number" init-type="number" label="milliseconds" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="304">
+<Label>1000</Label>
+<Location>
+<X>394</X>
+<Y>267</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="303" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="serial_println" id="299">
+<Location>
+<X>184</X>
+<Y>92</Y>
+</Location>
+<BeforeBlockId>145</BeforeBlockId>
+<AfterBlockId>297</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="300" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="serial_println" id="297">
+<Location>
+<X>184</X>
+<Y>178</Y>
+</Location>
+<BeforeBlockId>299</BeforeBlockId>
+<AfterBlockId>303</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="298" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="message" id="298">
+<Label>humidity:</Label>
+<Location>
+<X>318</X>
+<Y>181</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="297" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="302" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="glue_sn" id="302">
+<Location>
+<X>418</X>
+<Y>181</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="298" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="295" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="df_dht11_humidity" id="295">
+<Location>
+<X>478</X>
+<Y>181</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="302" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="296" connector-kind="socket" connector-type="number" init-type="number" label="pin#" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="296">
+<Label>2</Label>
+<Location>
+<X>654</X>
+<Y>181</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="295" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="message" id="300">
+<Label>temperature:</Label>
+<Location>
+<X>318</X>
+<Y>95</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="299" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="301" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="glue_sn" id="301">
+<Location>
+<X>442</X>
+<Y>95</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="300" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="293" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="df_dht11_temperature" id="293">
+<Location>
+<X>502</X>
+<Y>95</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="301" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="294" connector-kind="socket" connector-type="number" init-type="number" label="pin#" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="294">
+<Label>2</Label>
+<Location>
+<X>702</X>
+<Y>95</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="293" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="145">
+<Location>
+<X>111</X>
+<Y>84</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="299" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

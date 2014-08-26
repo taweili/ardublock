@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1600">
+<PageBlocks>
+<Block genus-name="ir_getcode" id="146">
+<Location>
+<X>118</X>
+<Y>116</Y>
+</Location>
+<BeforeBlockId>156</BeforeBlockId>
+<AfterBlockId>150</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="147" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="150">
+<Location>
+<X>118</X>
+<Y>146</Y>
+</Location>
+<BeforeBlockId>146</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="151" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="153" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="serial_println" id="153">
+<Location>
+<X>189</X>
+<Y>178</Y>
+</Location>
+<BeforeBlockId>150</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="155" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_string" id="155">
+<Label>ir code</Label>
+<Location>
+<X>323</X>
+<Y>181</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="153" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="not" id="151">
+<Location>
+<X>192</X>
+<Y>149</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="150" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="145" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="string_empty" id="145">
+<Location>
+<X>244</X>
+<Y>149</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="151" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="149" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_string" id="149">
+<Label>ir code</Label>
+<Location>
+<X>336</X>
+<Y>149</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="145" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="variable_string" id="147">
+<Label>ir code</Label>
+<Location>
+<X>228</X>
+<Y>119</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="146" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="ir_setport" id="156">
+<Location>
+<X>118</X>
+<Y>86</Y>
+</Location>
+<BeforeBlockId>148</BeforeBlockId>
+<AfterBlockId>146</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="157" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="157">
+<Label>10</Label>
+<Location>
+<X>228</X>
+<Y>89</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="156" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="148">
+<Location>
+<X>45</X>
+<Y>78</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="156" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

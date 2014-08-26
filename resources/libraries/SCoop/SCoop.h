@@ -641,5 +641,9 @@ type name##type##number [ number ]; \
 SCoopFifo name ( name##type##number , sizeof( type ), number );
 
 #endif
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> upstream/master
 

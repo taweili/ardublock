@@ -1,7 +1,6 @@
-package com.ardublock.translator.block.DuinoEDU;
+package com.ardublock.translator.block.Duinoedu;
 
 import com.ardublock.translator.Translator;
-import com.ardublock.translator.block.NumberBlock;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;

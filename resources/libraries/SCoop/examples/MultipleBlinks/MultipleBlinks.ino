@@ -97,4 +97,8 @@ void loop3() {
   // We must call 'yield' at a regular basis to pass
   // control to other tasks.
   yield(); // not really needed with scoop as there is already one yield() call in the library
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/master
