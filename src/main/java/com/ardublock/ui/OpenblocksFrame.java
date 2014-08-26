@@ -132,11 +132,11 @@ public class OpenblocksFrame extends JFrame
 				workspace.getBlockCanvas().getPageAt(0).getJComponent().paint(g);
 				try{
 					final JFileChooser fc = new JFileChooser();
-					fc.setSelectedFile(new File("ardublock.jpg"));
+					fc.setSelectedFile(new File("ardublock.png"));
 					int returnVal = fc.showSaveDialog(workspace.getBlockCanvas().getJComponent());
 			        if (returnVal == JFileChooser.APPROVE_OPTION) {
 			            File file = fc.getSelectedFile();
-						ImageIO.write(bi,"jpg",file);
+						ImageIO.write(bi,"png",file);
 			        }
 				} catch (Exception e1) {
 					
