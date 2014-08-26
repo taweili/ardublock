@@ -143,4 +143,8 @@ TimerUp   T4;                            // from 0 to 1 billion every ms
 #endif
 		 }
   mySCoop.yield();     // switch to next elligible task or event or timer
+<<<<<<< HEAD
   }                
+=======
+  }                
+>>>>>>> upstream/master

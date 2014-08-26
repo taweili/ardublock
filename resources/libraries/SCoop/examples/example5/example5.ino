@@ -67,4 +67,8 @@ void setup() {
 void loop() { 
   // nothing to do here then
 }
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> upstream/master

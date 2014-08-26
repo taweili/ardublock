@@ -12,7 +12,24 @@ public class Keyboard_PostBlock  extends TranslatorBlock {
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		return codePrefix + "keyboard.afficher()"+ codeSuffix;
+		String DataPin;
+		String IRQpin;
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		DataPin = translatorBlock.toCode();
+		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+		IRQpin = translatorBlock.toCode();
+		
+		translator.addHeaderFile("PS2Keyboard.h");
+		translator.addSetupCommand("delay(1000);"
+				+ "keyboard_pin"+DataPin+IRQpin+".brancher(DataPin, IRQpin);"
+
+				+ "Serial.begin(9600);");
+		
+		translator.addDefinitionCommand("// Pin keyboard\n"
+				+ "const int DataPin = " + DataPin +";\n"
+				+ "const int IRQpin =  " + IRQpin + ";\n"
+				+ "PS2Keyboard keyboard_pin"+DataPin+IRQpin+";\n"	);
+		return codePrefix + "keyboard_pin"+DataPin+IRQpin+".afficher()"+ codeSuffix;
 	}
 	
 
