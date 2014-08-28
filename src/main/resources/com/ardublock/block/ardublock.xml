@@ -8184,6 +8184,20 @@
 				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Rfid_Write</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Rfid_Test</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Rfid_Read</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Rfid_Clear</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_init</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_pixel_colorRGB</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_show</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_Brightness</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_stepper_step</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_stepper_setSpeed</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
+				
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
