@@ -8178,9 +8178,10 @@
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
-				<BlockGenusMember>keyboard</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
 				<BlockGenusMember>keyboard_post</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
