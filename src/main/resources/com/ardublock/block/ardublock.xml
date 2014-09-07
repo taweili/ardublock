@@ -5000,6 +5000,25 @@
 				</Image>
 			</Images>
 		</BlockGenus>	
+		
+		<BlockGenus name="DuinoEDU_Led" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Led">
+			<description>
+				<text>Write status to digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="Allumé" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/LED_BLANCHE_GROVE.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -8161,6 +8180,7 @@
 				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
+				<BlockGenusMember>DuinoEDU_Led</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
@@ -8178,9 +8198,10 @@
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
-				<BlockGenusMember>keyboard</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
 				<BlockGenusMember>keyboard_post</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
