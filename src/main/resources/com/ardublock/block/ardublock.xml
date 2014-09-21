@@ -3646,6 +3646,22 @@
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="seeed_light_sensor" kind="data" color="0 255 0" initlabel="bgseeed_light_sensor">
+		    <description>
+				<text>Read light</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Light_Sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<BlockGenus name="seeed_chest_heart_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_chest_heart_sensor">
 		    <description>
 				<text>Read digital from the pin</text>
@@ -4251,7 +4267,7 @@
 					<DefaultArg genus-name="number" label="3" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="">
-					<DefaultArg genus-name="DuinoEDU_equal" label="=" />
+					<DefaultArg genus-name="DuinoEDU_equal" label="==" />
 				</BlockConnector>
 				<BlockConnector connector-type="poly" connector-kind="socket" label="touche">
 					<DefaultArg genus-name="char" label="A" />
@@ -4904,10 +4920,7 @@
 					<DefaultArg genus-name="number" label="9" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepperround">
-					<DefaultArg genus-name="number" label="48" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.step">
-					<DefaultArg genus-name="number" label="500" />
+					<DefaultArg genus-name="number" label="3072" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -4935,6 +4948,9 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
 					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.step">
+					<DefaultArg genus-name="number" label="500" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -8173,6 +8189,7 @@
 				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_light_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
 				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_button</BlockGenusMember>

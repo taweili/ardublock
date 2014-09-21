@@ -20,8 +20,7 @@ public class Stepper_step  extends TranslatorBlock {
 			String Pin3 ;
 			String Pin4 ;
 			String Stepperround;
-			String Step;
-			
+						
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			Pin1 = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
@@ -32,16 +31,15 @@ public class Stepper_step  extends TranslatorBlock {
 			Pin4 = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
 			Stepperround = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(5);
-			Step = translatorBlock.toCode();
+			
 			
 			translator.addHeaderFile("Stepper.h");
-			translator.addDefinitionCommand("int nbrDePasParTour"+Pin1+" = "+Stepperround+"*64;\n"+
+			translator.addDefinitionCommand("int nbrDePasParTour"+Pin1+" = "+Stepperround+";\n"+
 			"Stepper monMoteur"+Pin1+Pin2+Pin3+Pin4+"(nbrDePasParTour"+Pin1+","+Pin1+","+Pin2+","+Pin3+","+Pin4+");");
 			
-			String ret = "monMoteur"+Pin1+Pin2+Pin3+Pin4+".step("+Step+");";
 			
-			return codePrefix + ret + codeSuffix;
+			
+			return "";
 			
 			
 		
