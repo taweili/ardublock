@@ -26,7 +26,7 @@ public class LCD_I2C_Backlight  extends TranslatorBlock {
 			B = translatorBlock.toCode();
 			
 			
-			String ret =  "monRgb.setRGB(" + R + ","+ G + "," + B + ");" ;
+			String ret =  "monRgb.retroeclairage(" + R + ","+ G + "," + B + ");" ;
 			
 			return ret ;	
 		}

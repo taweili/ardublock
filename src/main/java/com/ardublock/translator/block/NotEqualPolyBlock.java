@@ -4,9 +4,9 @@ import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class EqualPolyBlock extends TranslatorBlock
+public class NotEqualPolyBlock extends TranslatorBlock
 {
-	public EqualPolyBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public NotEqualPolyBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -17,7 +17,7 @@ public class EqualPolyBlock extends TranslatorBlock
 		String ret = "( ( ";
 		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + tb.toCode().replace("\"","\'");
-		ret = ret + " ) == (";
+		ret = ret + " ) != (";
 		tb = this.getRequiredTranslatorBlockAtSocket(1);
 		ret = ret + tb.toCode().replace("\"","\'");
 		ret = ret + ") )";

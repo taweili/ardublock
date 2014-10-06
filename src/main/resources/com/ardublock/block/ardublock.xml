@@ -3646,6 +3646,22 @@
 			</Images>
 		</BlockGenus>
 		
+		<BlockGenus name="seeed_light_sensor" kind="data" color="0 255 0" initlabel="bgseeed_light_sensor">
+		    <description>
+				<text>Read light</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Light_Sensor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<BlockGenus name="seeed_chest_heart_sensor" kind="data" color="0 255 0" initlabel="bg.seeed_chest_heart_sensor">
 		    <description>
 				<text>Read digital from the pin</text>
@@ -4163,13 +4179,13 @@
 			</description>			
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
-					<DefaultArg genus-name="number" label="255" />
+					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
-					<DefaultArg genus-name="number" label="255" />
+					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
 					<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
-					<DefaultArg genus-name="number" label="255" />
+					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4217,27 +4233,7 @@
 			</BlockConnectors>
 
 		</BlockGenus>
-
-		<BlockGenus name="keyboard" kind="command" color="0 255 0" initlabel="bg.keyboard">
-			<description>
-				<text>keyboard</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
-					<DefaultArg genus-name="number" label="2" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
-					<DefaultArg genus-name="number" label="3" />
-				</BlockConnector>
-			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/keyboard.png</FileLocation>
-				</Image>
-			</Images>
-			</BlockGenus>
-			
-				<BlockGenus name="keyboard_post" kind="data" color="0 255 0" initlabel="bg.keyboard_post">
+			<BlockGenus name="keyboard_post" kind="data" color="0 255 0" initlabel="bg.keyboard_post">
 			<description>
 				<text>keyboard post</text>
 			</description>
@@ -4256,7 +4252,45 @@
 				</Image>
 			</Images>
 			</BlockGenus>
+		
 			
+				<BlockGenus name="keyboard_compare" kind="function" color="0 255 0" initlabel="bg.keyboard_compare">
+			<description>
+				<text>keyboard post</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_equal" label="==" />
+				</BlockConnector>
+				<BlockConnector connector-type="poly" connector-kind="socket" label="touche">
+					<DefaultArg genus-name="char" label="A" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/keyboard.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+			
+			<BlockGenus name="DuinoEDU_equal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_equal" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_notequal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_notequal" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
 		
 			<BlockGenus name="DuinoEDU_Mouse_Xmove" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Mouse_Xmove">
 			<description>
@@ -4886,10 +4920,7 @@
 					<DefaultArg genus-name="number" label="9" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepperround">
-					<DefaultArg genus-name="number" label="48" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.step">
-					<DefaultArg genus-name="number" label="500" />
+					<DefaultArg genus-name="number" label="3072" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -4917,6 +4948,9 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
 					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.step">
+					<DefaultArg genus-name="number" label="500" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -7921,6 +7955,10 @@
 			<FamilyMember>DuinoEDU_Mouse_Ymove</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_equal</FamilyMember>
+			<FamilyMember>DuinoEDU_notequal</FamilyMember>
+		</BlockFamily>	
+		<BlockFamily>
 			<FamilyMember>DuinoEDU_Rfid_Write</FamilyMember>
 			<FamilyMember>DuinoEDU_Rfid_Ram_List</FamilyMember>
 		</BlockFamily>
@@ -8032,6 +8070,7 @@
 				<BlockGenusMember>serial_println</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
+				<BlockGenusMember>glue_poly</BlockGenusMember>
 				<BlockGenusMember>ir_setport</BlockGenusMember>
 				<BlockGenusMember>ir_getcode</BlockGenusMember>
 				<BlockGenusMember>wire_write</BlockGenusMember>
@@ -8150,6 +8189,7 @@
 				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_light_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
 				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_button</BlockGenusMember>
@@ -8200,6 +8240,7 @@
 				<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
 				<BlockGenusMember>keyboard_post</BlockGenusMember>
+				<BlockGenusMember>keyboard_compare</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
