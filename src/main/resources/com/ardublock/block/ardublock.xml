@@ -418,6 +418,74 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="DDRB" kind="command" color="77 191 169" initlabel="bg.DDRB">
+			<description>
+				<text>DDRB
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="DDRC" kind="command" color="77 191 169" initlabel="bg.DDRC">
+			<description>
+				<text>DDRC
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DDRD" kind="command" color="77 191 169" initlabel="bg.DDRD">
+			<description>
+				<text>DDRD
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PORTB" kind="command" color="77 191 169" initlabel="bg.PORTB">
+			<description>
+				<text>PORTB
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PORTC" kind="command" color="77 191 169" initlabel="bg.PORTC">
+			<description>
+				<text>PORTC
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PORTD" kind="command" color="77 191 169" initlabel="bg.PORTD">
+			<description>
+				<text>PORTD
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!--****************** Mathematical Operators *************** -->
 
@@ -4162,7 +4230,7 @@
 					<DefaultArg genus-name="message" label="LCD I2C RGB"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -7966,6 +8034,14 @@
 			<FamilyMember>DuinoEDU_neopixel_pixel_colorGRB</FamilyMember>
 			<FamilyMember>DuinoEDU_neopixel_pixel_colorRGB</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DDRB</FamilyMember>
+			<FamilyMember>DDRC</FamilyMember>
+			<FamilyMember>DDRD</FamilyMember>
+			<FamilyMember>PORTB</FamilyMember>
+			<FamilyMember>PORTC</FamilyMember>
+			<FamilyMember>PORTD</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -7997,6 +8073,7 @@
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
+				<BlockGenusMember>DDRB</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
