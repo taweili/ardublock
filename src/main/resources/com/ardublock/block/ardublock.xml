@@ -486,6 +486,30 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="PINB" kind="data" color="77 191 169" initlabel="bg.PINB">
+			<description>
+				<text>PINB</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PINC" kind="data" color="77 191 169" initlabel="bg.PINC">
+			<description>
+				<text>PINC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PIND" kind="data" color="77 191 169" initlabel="bg.PIND">
+			<description>
+				<text>PIND</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!--****************** Mathematical Operators *************** -->
 
@@ -8042,6 +8066,11 @@
 			<FamilyMember>PORTC</FamilyMember>
 			<FamilyMember>PORTD</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>PINB</FamilyMember>
+			<FamilyMember>PINC</FamilyMember>
+			<FamilyMember>PIND</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -8074,6 +8103,7 @@
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
 				<BlockGenusMember>DDRB</BlockGenusMember>
+				<BlockGenusMember>PINB</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
