@@ -4993,6 +4993,21 @@
 				</Image>
 			</Images>
 		</BlockGenus>	
+		<BlockGenus name="DuinoEDU_neopixel_Clear" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_neopixel_Clear">
+			<description>
+				<text>DuinoEDU_neopixel_Clear</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/adafruit/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
 			
 		<BlockGenus name="DuinoEDU_stepper_step" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_stepper_step">
 			<description>
@@ -8361,6 +8376,7 @@
 				<BlockGenusMember>DuinoEDU_neopixel_pixel_colorRGB</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_neopixel_show</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_neopixel_Brightness</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_Clear</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_stepper_step</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_stepper_setSpeed</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
