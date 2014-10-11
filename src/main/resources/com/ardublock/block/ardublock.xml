@@ -491,7 +491,7 @@
 				<text>PINB</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="PINC" kind="data" color="77 191 169" initlabel="bg.PINC">
@@ -499,7 +499,7 @@
 				<text>PINC</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="PIND" kind="data" color="77 191 169" initlabel="bg.PIND">
@@ -507,7 +507,7 @@
 				<text>PIND</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
 
