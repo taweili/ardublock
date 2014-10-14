@@ -27,7 +27,7 @@ public class Servo_Plus  extends TranslatorBlock {
 			
 			translator.addHeaderFile("Servo.h");
 			translator.addHeaderFile("ServoPlus.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n//"
+			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n"
 					+ "ServoPlus monServoPlus"+Pin+";");
 			translator.addSetupCommand("monServoPlus"+Pin+".brancher("+Pin+");\n");
 			
