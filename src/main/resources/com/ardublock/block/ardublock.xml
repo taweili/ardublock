@@ -5160,6 +5160,28 @@
 				</Image>
 			</Images>
 		</BlockGenus>	
+		
+		<BlockGenus name="DuinoEDU_Servo_Plus" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Servo_plus">
+			<description>
+				<text>Servo Plus</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/SERVO_SG90_DUPONT_ASSEMBLE.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -8382,7 +8404,7 @@
 				<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
-				
+				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>				
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
