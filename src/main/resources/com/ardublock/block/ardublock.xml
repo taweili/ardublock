@@ -5182,6 +5182,16 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_SerialOscillo" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_SerialOscillo">
+			<description>
+				<text>Serial Oscillo</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket"  >
+					
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -8324,6 +8334,7 @@
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_SerialOscillo</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
