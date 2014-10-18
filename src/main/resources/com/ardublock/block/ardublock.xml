@@ -430,7 +430,6 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		
 		<BlockGenus name="DDRC" kind="command" color="77 191 169" initlabel="bg.DDRC">
 			<description>
 				<text>DDRC
@@ -445,6 +444,50 @@
 		<BlockGenus name="DDRD" kind="command" color="77 191 169" initlabel="bg.DDRD">
 			<description>
 				<text>DDRD
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DDRE" kind="command" color="77 191 169" initlabel="bg.DDRE">
+			<description>
+				<text>DDRE
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DDRF" kind="command" color="77 191 169" initlabel="bg.DDRF">
+			<description>
+				<text>DDRF
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DDRG" kind="command" color="77 191 169" initlabel="bg.DDRG">
+			<description>
+				<text>DDRG
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DDRH" kind="command" color="77 191 169" initlabel="bg.DDRH">
+			<description>
+				<text>DDRH
 				</text>
 			</description>
 			<BlockConnectors>
@@ -486,6 +529,50 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="PORTE" kind="command" color="77 191 169" initlabel="bg.PORTE">
+			<description>
+				<text>PORTE
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PORTF" kind="command" color="77 191 169" initlabel="bg.PORTF">
+			<description>
+				<text>PORTF
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PORTG" kind="command" color="77 191 169" initlabel="bg.PORTG">
+			<description>
+				<text>PORTG
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PORTH" kind="command" color="77 191 169" initlabel="bg.PORTH">
+			<description>
+				<text>PORTH
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="11111111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<BlockGenus name="PINB" kind="data" color="77 191 169" initlabel="bg.PINB">
 			<description>
 				<text>PINB</text>
@@ -505,6 +592,38 @@
 		<BlockGenus name="PIND" kind="data" color="77 191 169" initlabel="bg.PIND">
 			<description>
 				<text>PIND</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PINE" kind="data" color="77 191 169" initlabel="bg.PINE">
+			<description>
+				<text>PINE</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PINF" kind="data" color="77 191 169" initlabel="bg.PINF">
+			<description>
+				<text>PINF</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PING" kind="data" color="77 191 169" initlabel="bg.PING">
+			<description>
+				<text>PING</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PINH" kind="data" color="77 191 169" initlabel="bg.PINH">
+			<description>
+				<text>PINH</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
@@ -8196,14 +8315,28 @@
 			<FamilyMember>DDRB</FamilyMember>
 			<FamilyMember>DDRC</FamilyMember>
 			<FamilyMember>DDRD</FamilyMember>
+			<FamilyMember>DDRE</FamilyMember>
+			<FamilyMember>DDRF</FamilyMember>
+			<FamilyMember>DDRG</FamilyMember>
+			<FamilyMember>DDRH</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>PORTB</FamilyMember>
 			<FamilyMember>PORTC</FamilyMember>
 			<FamilyMember>PORTD</FamilyMember>
+			<FamilyMember>PORTE</FamilyMember>
+			<FamilyMember>PORTF</FamilyMember>
+			<FamilyMember>PORTG</FamilyMember>
+			<FamilyMember>PORTH</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>PINB</FamilyMember>
 			<FamilyMember>PINC</FamilyMember>
 			<FamilyMember>PIND</FamilyMember>
+			<FamilyMember>PINE</FamilyMember>
+			<FamilyMember>PINF</FamilyMember>
+			<FamilyMember>PING</FamilyMember>
+			<FamilyMember>PINH</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
@@ -8252,6 +8385,7 @@
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
 				<BlockGenusMember>DDRB</BlockGenusMember>
+				<BlockGenusMember>PORTB</BlockGenusMember>
 				<BlockGenusMember>PINB</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">

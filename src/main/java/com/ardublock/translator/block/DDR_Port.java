@@ -4,9 +4,9 @@ import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class PINC extends TranslatorBlock
+public class DDR_Port extends TranslatorBlock
 {
-	public PINC(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public DDR_Port(Long blockId, Translator translator, String codePrefix,	String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -14,8 +14,8 @@ public class PINC extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		
-		return codePrefix + "PINC" + codeSuffix;
+		TranslatorBlock pinBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		String ret = label + " = B" + pinBlock.toCode() + ";\n";
+		return ret;
 	}
-
 }
