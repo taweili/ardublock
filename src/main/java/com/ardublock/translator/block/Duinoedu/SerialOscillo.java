@@ -16,19 +16,19 @@ public class SerialOscillo  extends TranslatorBlock {
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
 			String Code;
+			String Dial;
+			String Value;
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			Code = translatorBlock.toCode();
-			
-			
-			translator.addHeaderFile("SerialOSCILLO.h");
-			
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/");
-			translator.addSetupCommand("SerialOscillo.begin(9600);");
+			TranslatorBlock translatorBlock1 = this.getRequiredTranslatorBlockAtSocket(1);
+			Dial = translatorBlock1.toCode();
+			TranslatorBlock translatorBlock2 = this.getRequiredTranslatorBlockAtSocket(2);
+			Value = translatorBlock2.toCode();
 			
 			
 			
 			
-			String ret =  "SerialOscillo.analogWrite("+ Code +");";
+			String ret =  "SerialOscillo.analogWrite("+ Code +",SUR_CADRAN"+Dial +","+Value +");";
 			
 			return codePrefix +ret + codeSuffix;	
 		}
