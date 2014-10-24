@@ -5316,6 +5316,97 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>		
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Nunchuck_BoutonC" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Nunchuck_BoutonC">
+			<description>
+				<text>Nunchuck BoutonC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Nunchuck.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Nunchuck_BoutonZ" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Nunchuck_BoutonZ">
+			<description>
+				<text>Nunchuck BoutonZ</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Nunchuck.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Nunchuck_JoystickX" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Nunchuck_JoystickX">
+			<description>
+				<text>Nunchuck Joystick X</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Nunchuck.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Nunchuck_JoystickY" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Nunchuck_JoystickY">
+			<description>
+				<text>Nunchuck Joystick Y</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Nunchuck.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Nunchuck_AccelerationX" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Nunchuck_AccelerationX">
+			<description>
+				<text>Nunchuck Acceleration X</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Nunchuck.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Nunchuck_AccelerationY" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Nunchuck_AccelerationY">
+			<description>
+				<text>Nunchuck Acceleration Y</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Nunchuck.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Nunchuck_AccelerationZ" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Nunchuck_AccelerationZ">
+			<description>
+				<text>Nunchuck Acceleration Z</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Nunchuck.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -8347,6 +8438,15 @@
 			<FamilyMember>DuinoEDU_DEGRES</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_Nunchuck_BoutonC</FamilyMember>
+			<FamilyMember>DuinoEDU_Nunchuck_BoutonZ</FamilyMember>
+			<FamilyMember>DuinoEDU_Nunchuck_JoystickX</FamilyMember>
+			<FamilyMember>DuinoEDU_Nunchuck_JoystickY</FamilyMember>
+			<FamilyMember>DuinoEDU_Nunchuck_AccelerationX</FamilyMember>
+			<FamilyMember>DuinoEDU_Nunchuck_AccelerationY</FamilyMember>
+			<FamilyMember>DuinoEDU_Nunchuck_AccelerationZ</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -8662,7 +8762,8 @@
 				<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>				
+				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>			
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
