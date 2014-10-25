@@ -7715,6 +7715,93 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+	<!-- Jerusalab -->
+		<BlockGenus name="midi_command" kind="command" color="191 77 169" initlabel="bg.midi_command">
+			<description>
+				<text>Midi Command</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="note">
+					<DefaultArg genus-name="Midi_C" label="C"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="octave">
+					<DefaultArg genus-name="number" label="3"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="channel">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="velocity">
+					<DefaultArg genus-name="number" label="127"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/jerusalab/midi_command.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Midi_C" kind="data" color="255 255 255" initlabel="bg.Midi_C" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Midi_CS" kind="data" color="255 255 255" initlabel="bg.Midi_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_D" kind="data" color="255 255 255" initlabel="bg.Midi_D" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_DS" kind="data" color="255 255 255" initlabel="bg.Midi_DS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_E" kind="data" color="255 255 255" initlabel="bg.Midi_E" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_F" kind="data" color="255 255 255" initlabel="bg.Midi_F" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_FS" kind="data" color="255 255 255" initlabel="bg.Midi_FS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_G" kind="data" color="255 255 255" initlabel="bg.Midi_G" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_GS" kind="data" color="255 255 255" initlabel="bg.Midi_GS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_A" kind="data" color="255 255 255" initlabel="bg.Midi_A" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_AS" kind="data" color="255 255 255" initlabel="bg.Midi_AS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_B" kind="data" color="255 255 255" initlabel="bg.Midi_B" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
 
 	</BlockGenuses>
 
@@ -7966,6 +8053,21 @@
 			<FamilyMember>DuinoEDU_neopixel_pixel_colorGRB</FamilyMember>
 			<FamilyMember>DuinoEDU_neopixel_pixel_colorRGB</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Midi_C</FamilyMember>
+			<FamilyMember>Midi_CS</FamilyMember>
+			<FamilyMember>Midi_D</FamilyMember>
+			<FamilyMember>Midi_DS</FamilyMember>
+			<FamilyMember>Midi_E</FamilyMember>
+			<FamilyMember>Midi_F</FamilyMember>
+			<FamilyMember>Midi_FS</FamilyMember>
+			<FamilyMember>Midi_G</FamilyMember>
+			<FamilyMember>Midi_GS</FamilyMember>
+			<FamilyMember>Midi_A</FamilyMember>
+			<FamilyMember>Midi_AS</FamilyMember>
+			<FamilyMember>Midi_B</FamilyMember>
+		</BlockFamily>
+		
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -8422,6 +8524,11 @@
 				<BlockGenusMember>ke-psd</BlockGenusMember>								
 				<BlockGenusMember>ke-servo</BlockGenusMember>																		
 			</BlockDrawer> 	
+
+			<BlockDrawer button-color="152 29 155" name="bd.jerusalab" type="factory">
+				<BlockGenusMember>midi_command</BlockGenusMember>
+				<!-- <BlockGenusMember>midi_note</BlockGenusMember> -->
+			</BlockDrawer>
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
