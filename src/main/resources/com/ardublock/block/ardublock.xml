@@ -8052,6 +8052,11 @@
 				<BlockGenusMember>setter_variable_String</BlockGenusMember>
 				<BlockGenusMember>variable_String</BlockGenusMember>
 				<BlockGenusMember>message</BlockGenusMember>
+				<BlockGenusMember>create_variable_vector</BlockGenusMember>
+				<BlockGenusMember>variable_vector</BlockGenusMember>
+				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
+				<BlockGenusMember>setter_variable_char</BlockGenusMember>
+				<BlockGenusMember>variable_poly</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>delay</BlockGenusMember>
