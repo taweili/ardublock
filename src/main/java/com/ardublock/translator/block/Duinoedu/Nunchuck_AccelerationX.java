@@ -17,6 +17,7 @@ public class Nunchuck_AccelerationX  extends TranslatorBlock {
 		{		
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("Nunchuck.h");
+			translator.addDefinitionCommand("Nunchuck monNunchuck;");
 			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/");
 			translator.addSetupCommand("monNunchuck.brancher();");
 			
