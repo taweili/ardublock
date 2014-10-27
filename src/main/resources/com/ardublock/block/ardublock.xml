@@ -5407,6 +5407,45 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Barometer_Temperature" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Barometer_Temperature">
+			<description>
+				<text>Barometer Temperature</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Baro_sensor.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Barometer_Pression" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Barometer_Pression">
+			<description>
+				<text>Barometer Pression</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Baro_sensor.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Barometer_Altitude" kind="data" color="0 255 0" initlabel="DuinoEDU_Barometer_Altitude">
+			<description>
+				<text>Barometer Altitude</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Baro_sensor.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -8447,6 +8486,11 @@
 			<FamilyMember>DuinoEDU_Nunchuck_AccelerationZ</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_Barometer_Temperature</FamilyMember>
+			<FamilyMember>DuinoEDU_Barometer_Pression</FamilyMember>
+			<FamilyMember>DuinoEDU_Barometer_Altitude</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -8768,7 +8812,8 @@
 				<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>			
+				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Barometer_Temperature</BlockGenusMember>		
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
