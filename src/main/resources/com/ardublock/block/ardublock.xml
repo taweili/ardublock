@@ -4592,6 +4592,22 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Digital_Tube_Ecrire" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Digital_Tube_Ecrire">
+			<description>
+				<text>Didital Tube Ecrire</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="number" label="9999" />
+				</BlockConnector>
+				
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Didital_Tube.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		
 					<BlockGenus name="DuinoEDU_Display_Digital_Tube" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Display_Digital_Tube">
 			<description>
@@ -8786,6 +8802,7 @@
 				<BlockGenusMember>DuinoEDU_Keypad_Post</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Keypad_Pwd</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Digital_Tube</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Digital_Tube_Ecrire</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
@@ -8813,7 +8830,7 @@
 				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Barometer_Temperature</BlockGenusMember>		
+				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>		
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
