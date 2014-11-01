@@ -4597,7 +4597,16 @@
 				<text>Didital Tube Ecrire</text>
 			</description>			
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.DuinoEDU_Display">
 					<DefaultArg genus-name="number" label="9999" />
 				</BlockConnector>
 				
@@ -4684,9 +4693,12 @@
 				<text>Didital Tube Clear</text>
 			</description>			
 			<BlockConnectors>
-	
 			</BlockConnectors>
-
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Didital_Tube.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		
 		
