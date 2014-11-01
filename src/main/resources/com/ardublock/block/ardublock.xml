@@ -4811,7 +4811,7 @@
 				<text>Acc mesurer X</text>
 			</description>
 <BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" label="code" />
 			</BlockConnectors>
 				<Images>
 				<Image>
@@ -4825,7 +4825,7 @@
 				<text>Acc mesurer Y</text>
 			</description>
 <BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" label="code" />
 			</BlockConnectors>
 				<Images>
 				<Image>
@@ -4839,7 +4839,7 @@
 				<text>Acc mesurer Z</text>
 			</description>
 <BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" label="code" />
 				
 			</BlockConnectors>
 				<Images>
@@ -4854,7 +4854,7 @@
 				<text>Acc mesurer XYZ</text>
 			</description>
 <BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" label="code" />
 			</BlockConnectors>
 				<Images>
 				<Image>
@@ -4868,7 +4868,7 @@
 				<text>Acc mesurer Variation</text>
 			</description>
 <BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" label="code" />
 				
 			</BlockConnectors>
 				<Images>
