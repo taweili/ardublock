@@ -26,7 +26,7 @@ public class Mouse_Init extends TranslatorBlock {
 		translator.addDefinitionCommand("Mouse mouse;");
 
 		
-		translator.addSetupCommand("//libraries at http://www.duinoedu.com/ \n"
+		translator.addSetupCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_Mouse_Grove/ \n"
 				+ "mouse.branch(" + DataPin
 				+ "," + Clk + ");");
 

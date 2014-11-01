@@ -18,7 +18,7 @@ public class Infrared extends TranslatorBlock {
 		Pin = translatorBlock.toCode();
 
 		translator.addHeaderFile("IRremote.h");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nIRrecv monRecepteur_pin"+Pin+"("+Pin +");"	);
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_IRremote_GroveDupont/\nIRrecv monRecepteur_pin"+Pin+"("+Pin +");"	);
 		translator.addSetupCommand("monRecepteur_pin"+Pin+".enableIRIn(); ");
 
 		String ret = "monRecepteur_pin"+Pin+".lireCodeIr() ";

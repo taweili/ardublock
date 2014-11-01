@@ -27,7 +27,7 @@ public class Led_Bar extends TranslatorBlock {
 		translator.addHeaderFile("LED_Bar.h");
 		
 		
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n// Pin Led Bar\n"
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_LedBar_Grove/ \n// Pin Led Bar\n"
 				+ "LED_Bar mesLeds_pin"+Dio+Clk+"(" + Clk
 				+ "," + Dio + ");");
 		String ret = "mesLeds_pin"+Dio+Clk+".displayVoltage("+ Niveau +");\n";

@@ -24,7 +24,7 @@ public class Oled_I2C  extends TranslatorBlock {
 			
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("SeeedOLED.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/");
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_OLED_Display12864_Grove/ ");
 			translator.addSetupCommand("SeeedOled.brancher();\nSeeedOled.reglerLuminositeA("+ brightness +");\n ");
 			
 			

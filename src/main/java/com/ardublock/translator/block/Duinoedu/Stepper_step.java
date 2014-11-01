@@ -34,7 +34,7 @@ public class Stepper_step  extends TranslatorBlock {
 			
 			
 			translator.addHeaderFile("Stepper.h");
-			translator.addDefinitionCommand("int nbrDePasParTour"+Pin1+" = "+Stepperround+";\n"+
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/dupont/EDU_Stepper_Dupont/ \nint nbrDePasParTour"+Pin1+" = "+Stepperround+";\n"+
 			"Stepper monMoteur"+Pin1+Pin2+Pin3+Pin4+"(nbrDePasParTour"+Pin1+","+Pin1+","+Pin2+","+Pin3+","+Pin4+");");
 			
 			

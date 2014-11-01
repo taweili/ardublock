@@ -29,7 +29,7 @@ public class Digital_Tube_Ecrire  extends TranslatorBlock {
 			Display = translatorBlock.toCode();
 			
 			translator.addHeaderFile("TM1637.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n// Pin Led Bar\n"
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_DigitalTube_Grove/ \n// Pin Led Bar\n"
 					+ "TM1637 mesChiffres"+Clk+Dio+"(" + Clk
 					+ "," + Dio + ");");
 			translator.addSetupCommand("mesChiffres"+Clk+Dio+".brancher();\n"+

@@ -21,7 +21,7 @@ public class LCD_I2C_RGB  extends TranslatorBlock {
 			
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("rgb_lcd.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nrgb_lcd monRgb;");
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_LCD_RGB_Backlight_Grove/ \nrgb_lcd monRgb;");
 			translator.addSetupCommand("monRgb.branch();");
 			
 			

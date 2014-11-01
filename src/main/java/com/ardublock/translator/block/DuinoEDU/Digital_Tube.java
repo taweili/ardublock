@@ -26,7 +26,7 @@ public class Digital_Tube  extends TranslatorBlock {
 			Brightness = translatorBlock.toCode();
 			
 			translator.addHeaderFile("TM1637.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n// Pin Led Bar\n"
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_DigitalTube_Grove/ \n// Pin Led Bar\n"
 					+ "TM1637 mesChiffres(" + Clk
 					+ "," + Dio + ");");
 			translator.addSetupCommand("mesChiffres.brancher();\n"+

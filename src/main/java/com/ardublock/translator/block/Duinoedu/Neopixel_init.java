@@ -29,7 +29,7 @@ public class Neopixel_init  extends TranslatorBlock {
 			NEO_RGB = translatorBlock.toCode();
 			
 			translator.addHeaderFile("Adafruit_NeoPixel.h");
-			translator.addDefinitionCommand("Adafruit_NeoPixel monRuban_pin"+Pin+" = Adafruit_NeoPixel("+NbLed+","+ Pin +", " +NEO_RGB+ " + "+NEO_KHZ800 +");");
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_Adafruit_NeoPixel_FlexStrip_Grove/ \nAdafruit_NeoPixel monRuban_pin"+Pin+" = Adafruit_NeoPixel("+NbLed+","+ Pin +", " +NEO_RGB+ " + "+NEO_KHZ800 +");");
 			translator.addSetupCommand("monRuban_pin"+Pin+".brancher();\n" +
 			"monRuban_pin"+Pin+".afficher();");
 			

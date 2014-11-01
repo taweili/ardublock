@@ -4382,6 +4382,11 @@
 			</description>			
 			<BlockConnectors>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/LCD_Serial_RGB_Backlight.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		
 			<BlockGenus name="DuinoEDU_Oled_I2C" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Oled_I2C">
@@ -4410,9 +4415,11 @@
 			<description>
 				<text>Oled_Clear</text>
 			</description>			
-			<BlockConnectors>
-			</BlockConnectors>
-
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/Oled.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 			<BlockGenus name="keyboard_post" kind="data" color="0 255 0" initlabel="bg.keyboard_post">
 			<description>

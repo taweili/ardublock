@@ -18,7 +18,7 @@ public class Nunchuck_AccelerationY  extends TranslatorBlock {
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("Nunchuck.h");
 			translator.addDefinitionCommand("Nunchuck monNunchuck;");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/");
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_Nunchuck/");
 			translator.addSetupCommand("monNunchuck.brancher();");
 			
 			return codePrefix +"monNunchuck.lireAccelerationY()" + codeSuffix;	
