@@ -4592,6 +4592,9 @@
 					<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
 					<DefaultArg genus-name="number" label="7" />
 				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.DuinoEDU_Display_Point">
+					<DefaultArg genus-name="digital-on" label="Allumé" />
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -4610,9 +4613,6 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
 					<DefaultArg genus-name="number" label="3" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
-					<DefaultArg genus-name="number" label="7" />
-				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.DuinoEDU_Display">
 					<DefaultArg genus-name="number" label="9999" />
 				</BlockConnector>
@@ -4630,16 +4630,18 @@
 				<text>Display Didital Tube</text>
 			</description>			
 			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Display">
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_On_digit">
 					<DefaultArg genus-name="DuinoEDU_On_digit1" label="1" />
 				</BlockConnector>	
-				
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.DuinoEDU_Display_Point">
-					<DefaultArg genus-name="digital-on" label="Allumé" />
-				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -4700,6 +4702,12 @@
 				<text>Didital Tube Clear</text>
 			</description>			
 			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -8823,7 +8831,6 @@
 				<BlockGenusMember>DuinoEDU_Digital_Tube</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Digital_Tube_Ecrire</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Display_Digital_Tube2</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
 				<BlockGenusMember>keyboard_post</BlockGenusMember>

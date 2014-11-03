@@ -16,10 +16,21 @@ public class Digital_Clear extends TranslatorBlock {
 	//@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-				
+		String Clk;
+		String Dio;	
+		
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		Clk = translatorBlock.toCode();
+		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+		Dio = translatorBlock.toCode();
 		
 		
-		String ret = "mesChiffres.effacer();";
+		translator.addHeaderFile("TM1637.h");
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_DigitalTube_Grove/ \n// Pin Led Bar\n"
+				+ "TM1637 mesChiffres"+Clk+Dio+"(" + Clk
+				+ "," + Dio + ");");
+		translator.addSetupCommand("mesChiffres"+Clk+Dio+".brancher();\n");
+		String ret = "mesChiffres"+Clk+Dio+".effacer();";
 		
 
 		return  ret ;	
