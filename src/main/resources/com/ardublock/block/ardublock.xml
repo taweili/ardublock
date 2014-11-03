@@ -8620,9 +8620,9 @@
 			</BlockDrawer>
 			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
 				<BlockGenusMember>number</BlockGenusMember>
-				<BlockGenusMember>setter_variable_number</BlockGenusMember>
-				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number_unsigned_long</BlockGenusMember>
+				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
+				<BlockGenusMember>setter_variable_number</BlockGenusMember>
 				<BlockGenusMember>variable_number</BlockGenusMember>
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
 				<BlockGenusMember>variable_digital</BlockGenusMember>
