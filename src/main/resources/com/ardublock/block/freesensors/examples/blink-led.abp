@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1366">
+<PageBlocks>
+<Block genus-name="delay" id="419">
+<Location>
+<X>95</X>
+<Y>304</Y>
+</Location>
+<BeforeBlockId>415</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="420" connector-kind="socket" connector-type="number" init-type="number" label="milliseconds" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="420">
+<Label>500</Label>
+<Location>
+<X>303</X>
+<Y>307</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="419" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="fs_digitalOutput" id="415">
+<Location>
+<X>95</X>
+<Y>226</Y>
+</Location>
+<BeforeBlockId>413</BeforeBlockId>
+<AfterBlockId>419</AfterBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="416" connector-kind="socket" connector-type="string" init-type="string" label="PLACA" position-type="single"/>
+<BlockConnector con-block-id="417" connector-kind="socket" connector-type="number" init-type="number" label="PUERTO" position-type="single"/>
+<BlockConnector con-block-id="418" connector-kind="socket" connector-type="boolean" init-type="boolean" label="ESTADO" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-off" id="418">
+<Location>
+<X>321</X>
+<Y>277</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="415" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="fs_port01" id="417">
+<Location>
+<X>321</X>
+<Y>253</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="415" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="fs_shName" id="416">
+<Label>sh1</Label>
+<Location>
+<X>321</X>
+<Y>229</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="415" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="delay" id="413">
+<Location>
+<X>95</X>
+<Y>196</Y>
+</Location>
+<BeforeBlockId>408</BeforeBlockId>
+<AfterBlockId>415</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="414" connector-kind="socket" connector-type="number" init-type="number" label="milliseconds" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="414">
+<Label>500</Label>
+<Location>
+<X>303</X>
+<Y>199</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="413" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="fs_digitalOutput" id="408">
+<Location>
+<X>95</X>
+<Y>118</Y>
+</Location>
+<BeforeBlockId>406</BeforeBlockId>
+<AfterBlockId>413</AfterBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="409" connector-kind="socket" connector-type="string" init-type="string" label="PLACA" position-type="single"/>
+<BlockConnector con-block-id="410" connector-kind="socket" connector-type="number" init-type="number" label="PUERTO" position-type="single"/>
+<BlockConnector con-block-id="411" connector-kind="socket" connector-type="boolean" init-type="boolean" label="ESTADO" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-on" id="411">
+<Location>
+<X>321</X>
+<Y>169</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="408" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="fs_port01" id="410">
+<Location>
+<X>321</X>
+<Y>145</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="408" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="fs_shName" id="409">
+<Label>sh1</Label>
+<Location>
+<X>321</X>
+<Y>121</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="408" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="fs_shieldDirect" id="406">
+<Location>
+<X>95</X>
+<Y>28</Y>
+</Location>
+<BeforeBlockId>405</BeforeBlockId>
+<AfterBlockId>408</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="407" connector-kind="socket" connector-type="string" init-type="string" label="PLACA" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="fs_shName" id="407">
+<Label>sh1</Label>
+<Location>
+<X>293</X>
+<Y>31</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="406" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="405">
+<Location>
+<X>20</X>
+<Y>20</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="406" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
