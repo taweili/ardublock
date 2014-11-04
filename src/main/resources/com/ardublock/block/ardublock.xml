@@ -8156,7 +8156,358 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
+		<!--********************** FreeSensors ********************************************************************** -->
+		<BlockGenus name="fs_shieldDirect" kind="command" color="224 224 255" initlabel="bg.fs_shieldDirect">
+			<description> <text>Shield Direct</text> </description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_shieldDirect.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_shieldMotor" kind="command" color="224 224 255" initlabel="bg.fs_shieldMotor">
+			<description> <text>Shield Motor</text> </description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh2" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_addrLabel">
+					<DefaultArg genus-name="fs_addr02" label="010" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_shieldMotor.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_shieldServo" kind="command" color="224 224 255" initlabel="bg.fs_shieldServo">
+			<description> <text>Shield Servo</text> </description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh3" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_shieldServo.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_shieldAIport" kind="command" color="224 224 255" initlabel="bg.fs_shieldAIport">
+			<description> <text>Shield AIport</text> </description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh4" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_shieldAIport.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_shieldDIOport" kind="command" color="224 224 255" initlabel="bg.fs_shieldDIOport">
+			<description> <text>Shield DIOport</text> </description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh5" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_addrLabel">
+					<DefaultArg genus-name="fs_addr01" label="001" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_shieldDIOport.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_shieldSPIport" kind="command" color="224 224 255" initlabel="bg.fs_shieldSPIport">
+			<description> <text>Shield SPIport</text> </description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh6" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_shieldSPIport.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_shName" kind="data" color="224 224 255" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_command" kind="data" color="32 102 204" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_analogInput" kind="data" color="224 224 255" initlabel="bg.fs_analogInput">
+			<description> <text>Analog Input</text> </description>  
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.fs_portLabel">
+					<DefaultArg genus-name="fs_port01" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_analogInput.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_digitalInput" kind="data" color="224 224 255" initlabel="bg.fs_digitalInput">
+			<description> <text>Digital Input</text> </description>  
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.fs_portLabel">
+					<DefaultArg genus-name="fs_port01" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_digitalInput.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_digitalOutput" kind="command" color="224 224 255" initlabel="bg.fs_digitalOutput">
+			<description> <text>Digital Output</text> </description>  
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.fs_portLabel">
+					<DefaultArg genus-name="fs_port01" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.fs_statLabel">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_digitalOutput.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_dcMotor" kind="command" color="224 224 255" initlabel="bg.fs_dcMotor">
+			<description> <text>DC Motor</text> </description>  
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.fs_portLabel">
+					<DefaultArg genus-name="fs_port01" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_actionLabel">
+					<DefaultArg genus-name="fs_motorAct01" label="forward" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.fs_speedLabel">
+					<DefaultArg genus-name="number" label="200" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_dcMotor.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_servoMotor" kind="command" color="224 224 255" initlabel="bg.fs_servoMotor">
+			<description> <text>Servo Motor</text> </description>  
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_shieldLabel">
+					<DefaultArg genus-name="fs_shName" label="sh2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.fs_portLabel">
+					<DefaultArg genus-name="fs_port01" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.fs_angleLabel">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_servoMotor.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_commI2C" kind="command" color="224 224 255" initlabel="bg.fs_commI2C">
+			<description> <text>I2C Comms</text> </description>  
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_actionLabel">
+					<DefaultArg genus-name="fs_command" label="command" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_commI2C.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_commRXTX" kind="command" color="224 224 255" initlabel="bg.fs_commRXTX">
+			<description> <text>Serial Comms</text> </description>  
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_actionLabel">
+					<DefaultArg genus-name="fs_command" label="command" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_commRXTX.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_commSPI" kind="command" color="224 224 255" initlabel="bg.fs_commSPI">
+			<description> <text>SPI Comms</text> </description>  
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.fs_portLabel">
+					<DefaultArg genus-name="fs_port01" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.fs_actionLabel">
+					<DefaultArg genus-name="fs_command" label="command" />  
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image> <FileLocation>com/ardublock/block/freesensors/fs_commSPI.png</FileLocation> </Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="fs_port01" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_port02" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_port03" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>		
+		<BlockGenus name="fs_port04" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="4" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_port05" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_port06" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="6" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_port07" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="7" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_port08" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="8" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_port09" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="9" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_port10" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_addr00" kind="data" color="224 224 255" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="000" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_addr01" kind="data" color="224 224 255" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="001" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_addr02" kind="data" color="224 224 255" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="010" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_addr03" kind="data" color="224 224 255" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="011" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_addr04" kind="data" color="224 224 255" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_addr05" kind="data" color="224 224 255" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="101" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_addr06" kind="data" color="224 224 255" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="110" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_addr07" kind="data" color="224 224 255" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="111" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_motorAct01" kind="data" color="220 0 50" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="forward" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_motorAct02" kind="data" color="220 0 50" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="backward" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="fs_motorAct03" kind="data" color="220 0 50" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug">
+					<DefaultArg genus-name="string" label="stop" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -8460,7 +8811,33 @@
 			<FamilyMember>Midi_AS</FamilyMember>
 			<FamilyMember>Midi_B</FamilyMember>
 		</BlockFamily>
-		
+		<BlockFamily>
+			<FamilyMember>fs_port01</FamilyMember>
+			<FamilyMember>fs_port02</FamilyMember>
+			<FamilyMember>fs_port03</FamilyMember>
+			<FamilyMember>fs_port04</FamilyMember>
+			<FamilyMember>fs_port05</FamilyMember>
+			<FamilyMember>fs_port06</FamilyMember>
+			<FamilyMember>fs_port07</FamilyMember>
+			<FamilyMember>fs_port08</FamilyMember>
+			<FamilyMember>fs_port09</FamilyMember>
+			<FamilyMember>fs_port10</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>fs_addr00</FamilyMember>
+			<FamilyMember>fs_addr01</FamilyMember>
+			<FamilyMember>fs_addr02</FamilyMember>
+			<FamilyMember>fs_addr03</FamilyMember>
+			<FamilyMember>fs_addr04</FamilyMember>
+			<FamilyMember>fs_addr05</FamilyMember>
+			<FamilyMember>fs_addr06</FamilyMember>
+			<FamilyMember>fs_addr07</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>fs_motorAct01</FamilyMember>
+			<FamilyMember>fs_motorAct02</FamilyMember>
+			<FamilyMember>fs_motorAct03</FamilyMember>
+		</BlockFamily>
 	</BlockFamilies>
 
 	<BlockDrawerSets>
@@ -8931,6 +9308,24 @@
 				<BlockGenusMember>midi_command</BlockGenusMember>
 				<!-- <BlockGenusMember>midi_note</BlockGenusMember> -->
 			</BlockDrawer>
+
+			<BlockDrawer button-color="40 128 224" name="bd.freesensors" type="factory">
+				<BlockGenusMember>fs_shieldDirect</BlockGenusMember>
+				<BlockGenusMember>fs_shieldMotor</BlockGenusMember>
+				<BlockGenusMember>fs_digitalInput</BlockGenusMember>
+				<BlockGenusMember>fs_digitalOutput</BlockGenusMember>
+				<BlockGenusMember>fs_analogInput</BlockGenusMember>
+				<BlockGenusMember>fs_dcMotor</BlockGenusMember>
+				<BlockGenusMember>fs_servoMotor</BlockGenusMember>
+				<BlockGenusMember>fs_commI2C</BlockGenusMember>
+				<BlockGenusMember>fs_commRXTX</BlockGenusMember>
+				<BlockGenusMember>fs_commSPI</BlockGenusMember>
+				<BlockGenusMember>fs_shieldServo</BlockGenusMember>
+				<BlockGenusMember>fs_shieldAIport</BlockGenusMember>
+				<BlockGenusMember>fs_shieldDIOport</BlockGenusMember>
+				<BlockGenusMember>fs_shieldSPIport</BlockGenusMember>
+			</BlockDrawer>
+			
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
