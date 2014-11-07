@@ -20,6 +20,7 @@ public class Stepper_SetSpeed  extends TranslatorBlock {
 			String Pin3 ;
 			String Pin4 ;
 			String Speed;
+			String Step;
 			
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			Pin1 = translatorBlock.toCode();
@@ -31,10 +32,11 @@ public class Stepper_SetSpeed  extends TranslatorBlock {
 			Pin4 = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
 			Speed = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(5);
+			Step = translatorBlock.toCode();
 			
 			
-			
-			String ret = "monMoteur"+Pin1+Pin2+Pin3+Pin4+".setSpeed("+Speed+");";
+			String ret = "monMoteur"+Pin1+Pin2+Pin3+Pin4+".setSpeed("+Speed+");\n"+ "monMoteur"+Pin1+Pin2+Pin3+Pin4+".step("+Step+");";
 			
 			return codePrefix + ret + codeSuffix;
 			

@@ -5,9 +5,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class LCD_I2C_Backlight  extends TranslatorBlock {
+public class Neopixel_Clear  extends TranslatorBlock {
 
-	public LCD_I2C_Backlight (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public Neopixel_Clear (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -15,19 +15,15 @@ public class LCD_I2C_Backlight  extends TranslatorBlock {
 	//@Override
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
-			String R;
-			String G;
-			String B;
+			String Pin ;
+
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-			R = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-			G = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-			B = translatorBlock.toCode();
+			Pin = translatorBlock.toCode();
 			
 			
-			String ret =  "monRgb.retroeclairage(" + R + ","+ G + "," + B + ");" ;
+			String ret = "monRuban_pin"+Pin+".effacerTout()\n";
 			
-			return ret ;	
+			return codePrefix + ret + codeSuffix;
+				
 		}
 }

@@ -5,9 +5,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class LCD_I2C_Backlight  extends TranslatorBlock {
+public class Servo_Plus  extends TranslatorBlock {
 
-	public LCD_I2C_Backlight (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public Servo_Plus (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -15,19 +15,22 @@ public class LCD_I2C_Backlight  extends TranslatorBlock {
 	//@Override
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
-			String R;
-			String G;
-			String B;
+			String Pin;
+			String Angle;
+			String Speed;
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-			R = translatorBlock.toCode();
+			Pin = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-			G = translatorBlock.toCode();
+			Angle = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-			B = translatorBlock.toCode();
+			Speed = translatorBlock.toCode();
 			
+			translator.addHeaderFile("Servo.h");
+			translator.addHeaderFile("ServoPlus.h");
+			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \n"
+					+ "ServoPlus monServoPlus"+Pin+";");
+			translator.addSetupCommand("monServoPlus"+Pin+".brancher("+Pin+");\n");
 			
-			String ret =  "monRgb.retroeclairage(" + R + ","+ G + "," + B + ");" ;
-			
-			return ret ;	
+			return codePrefix +"monServoPlus"+Pin+".ecrireAngle("+Angle+","+Speed+");"+ codeSuffix;
 		}
 }
