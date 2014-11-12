@@ -5489,6 +5489,114 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_shildbot_Forward" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Forward">
+			<description>
+				<text>shildbot forward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_shildbot_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Back">
+			<description>
+				<text>shildbot back</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_shildbot_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Pivoter">
+			<description>
+				<text>shildbot pivote</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_shildbot_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Speed_Motor">
+			<description>
+				<text>shildbot Speed Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_leftspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_rightspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_S1" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_S1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_S2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_S2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_S3" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_S3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_S4" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_S4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_S5" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_S5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_shildbot_Read" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Read">
+			<description>
+				<text>DuinoEDU_shildbot_Read</text>
+			</description>			
+			<BlockConnectors>
+			<BlockConnector connector-type="boolean" connector-kind="plug" />
+			
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="DuinoEDU_S1" label="S1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -8444,7 +8552,19 @@
 			<FamilyMember>DuinoEDU_Driver_I2C_Back</FamilyMember>
 			<FamilyMember>DuinoEDU_Driver_I2C_Pivoter</FamilyMember>
 		</BlockFamily>
-				<BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_shildbot_Forward</FamilyMember>
+			<FamilyMember>DuinoEDU_shildbot_Back</FamilyMember>
+			<FamilyMember>DuinoEDU_shildbot_Pivoter</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_S1</FamilyMember>
+			<FamilyMember>DuinoEDU_S2</FamilyMember>
+			<FamilyMember>DuinoEDU_S3</FamilyMember>
+			<FamilyMember>DuinoEDU_S4</FamilyMember>
+			<FamilyMember>DuinoEDU_S5</FamilyMember>
+		</BlockFamily>	
+		<BlockFamily>
 			<FamilyMember>DuinoEDU_Driver_I2C_Speed_A_Motor</FamilyMember>
 			<FamilyMember>DuinoEDU_Driver_I2C_Speed_B_Motor</FamilyMember>
 		</BlockFamily>
@@ -8837,6 +8957,9 @@
 				<BlockGenusMember>keyboard_compare</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Speed_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Read</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
