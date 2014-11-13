@@ -27,7 +27,7 @@ public class Shildbot_Speed_Motor  extends TranslatorBlock {
 			translator.addSetupCommand("monBot.brancher();");
 			
 						
-			String ret =  "monBot.ecrireVitesseMoteurA("+ speed1 +","+ speed2+");\n";
+			String ret =  "monBot.ecrireVitesse("+ speed1 +","+ speed2+");\n";
 			
 			return ret ;	
 		}

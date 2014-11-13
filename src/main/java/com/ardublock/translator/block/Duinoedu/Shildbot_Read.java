@@ -24,7 +24,7 @@ public class Shildbot_Read  extends TranslatorBlock {
 			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_Shieldbot_Grove/ \nShieldbot monBot;");
 			translator.addSetupCommand("monBot.brancher();");
 						
-			String ret =  "monBot.lire(\""+ way +"\");\n";
+			String ret =  "monBot.lire(\""+ way +"\")\n";
 			
 			return codePrefix + ret + codeSuffix;	
 		}
