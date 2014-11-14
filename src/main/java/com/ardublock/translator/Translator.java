@@ -30,6 +30,7 @@ public class Translator
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
 	private List<String> setupCommand;
+	private List<String> guinoCommand;
 	private Set<String> functionNameSet;
 	private Set<TranslatorBlock> bodyTranslatreFinishCallbackSet;
 	private BlockAdaptor blockAdaptor;
@@ -86,7 +87,7 @@ public class Translator
 			headerCommand.append("\n");
 		}
 		
-		return headerCommand.toString() + generateSetupFunction();
+		return headerCommand.toString() + generateSetupFunction() +generateGuinoFunction();
 	}
 	
 	public String generateSetupFunction()
@@ -115,11 +116,32 @@ public class Translator
 			{
 				setupFunction.append(command + "\n");
 			}
+			
 		}
+
 		
 		setupFunction.append("}\n\n");
 		
 		return setupFunction.toString();
+	}
+	
+	public String generateGuinoFunction()
+	{
+		StringBuilder guinoFunction = new StringBuilder();
+		
+		
+		if (!guinoCommand.isEmpty())
+		{
+			guinoFunction.append("void guinoInit()\n{\n");
+			for (String command:guinoCommand)
+			{
+				guinoFunction.append(command + "\n");
+			}
+			guinoFunction.append("}\n\n");
+		}
+		
+		
+		return guinoFunction.toString();
 	}
 	
 	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException, BlockException
@@ -140,6 +162,7 @@ public class Translator
 		headerFileSet = new LinkedHashSet<String>();
 		definitionSet = new LinkedHashSet<String>();
 		setupCommand = new LinkedList<String>();
+		guinoCommand = new LinkedList<String>();
 		functionNameSet = new HashSet<String>();
 		inputPinSet = new HashSet<String>();
 		outputPinSet = new HashSet<String>();
@@ -182,6 +205,14 @@ public class Translator
 	public void addSetupCommandForced(String command)
 	{
 		setupCommand.add(command);
+	}
+	
+	public void addGuinoCommand(String command)
+	{
+		if (!guinoCommand.contains(command))
+		{
+			guinoCommand.add(command);
+		}
 	}
 	
 	public void addDefinitionCommand(String command)
@@ -231,7 +262,7 @@ public class Translator
 	
 	public void addFunctionName(Long blockId, String functionName) throws SubroutineNameDuplicatedException
 	{
-		if (functionName.equals("loop") ||functionName.equals("setup") || functionNameSet.contains(functionName))
+		if (functionName.equals("loop") ||functionName.equals("setup") ||functionName.equals("guino") || functionNameSet.contains(functionName))
 		{
 			throw new SubroutineNameDuplicatedException(blockId);
 		}
@@ -335,6 +366,10 @@ public class Translator
 					loopBlockSet.add(renderableBlock);
 				}
 				if(block.getGenusName().equals("setup"))
+				{
+					loopBlockSet.add(renderableBlock);
+				}
+				if(block.getGenusName().equals("guino"))
 				{
 					loopBlockSet.add(renderableBlock);
 				}
