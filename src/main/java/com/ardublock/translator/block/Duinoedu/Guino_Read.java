@@ -37,7 +37,7 @@ public class Guino_Read  extends TranslatorBlock {
 			translator.addGuinoCommand("GUINO_AFFICHER_GRAPH("+Title+","+Variable+","+Min+","+Max+");\nGUINO_AFFICHER_LIGNE(); ");
 			
 			
-			String ret =  " GUINO_GERER_INTERFACE(); \nGUINO_LIRE("+Variable+");";
+			String ret =  "GUINO_LIRE("+Variable+");";
 			return  ret ;
 			
 		}

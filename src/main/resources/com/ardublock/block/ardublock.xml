@@ -5597,6 +5597,12 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Guino_Init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_Init">
+			<description>
+				<text>Guino Init</text>
+			</description>
+			
+		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Guino_Read" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_Read">
 			<description>
 				<text>Guino Read</text>
@@ -8809,6 +8815,7 @@
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_SerialOscillo_Init</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_SerialOscillo</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Guino_Init</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
