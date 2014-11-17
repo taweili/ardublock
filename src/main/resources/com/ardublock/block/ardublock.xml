@@ -5597,6 +5597,25 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Guino_Read" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_Read">
+			<description>
+				<text>Guino Read</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="titre" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Variable">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Min">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Max">
+					<DefaultArg genus-name="number" label="1023" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -8790,6 +8809,7 @@
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_SerialOscillo_Init</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_SerialOscillo</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
