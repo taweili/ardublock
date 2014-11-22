@@ -5536,7 +5536,16 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		
+		<BlockGenus name="DuinoEDU_shildbot_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Stop">
+			<description>
+				<text>shildbot Stop</text>
+			</description>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<BlockGenus name="DuinoEDU_shildbot_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Speed_Motor">
 			<description>
 				<text>shildbot Speed Motor</text>
@@ -8996,6 +9005,7 @@
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Stop</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Speed_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Read</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
