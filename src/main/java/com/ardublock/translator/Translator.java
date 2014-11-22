@@ -132,7 +132,7 @@ public class Translator
 		
 		if (!guinoCommand.isEmpty())
 		{
-			guinoFunction.append("void GUINO_DEFINIR_INTERFACE()\n{\n");
+			guinoFunction.append("void GUINO_DEFINIR_INTERFACE()\n{\nGUINO_GERER_INTERFACE();\n");
 			for (String command:guinoCommand)
 			{
 				guinoFunction.append(command + "\n");
