@@ -24,9 +24,9 @@ public class Guino_Read  extends TranslatorBlock {
 			Title = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			Variable = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 			Min = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
 			Max = translatorBlock.toCode();
 			
 			translator.addHeaderFile("EasyTransfer.h");
