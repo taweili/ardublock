@@ -8468,9 +8468,6 @@
 			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="255 255 0">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>program</BlockGenusMember>
-				<BlockGenusMember>delay</BlockGenusMember>
-				<BlockGenusMember>delay_microseconds</BlockGenusMember>
-				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
@@ -8562,6 +8559,9 @@
 				<BlockGenusMember>variable_poly</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
+				<BlockGenusMember>delay</BlockGenusMember>
+				<BlockGenusMember>delay_microseconds</BlockGenusMember>
+				<BlockGenusMember>millis</BlockGenusMember>
 				<BlockGenusMember>servo_default</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Sainsmart_20by4</BlockGenusMember>
@@ -8679,12 +8679,6 @@
 				<BlockGenusMember>panda_i1</BlockGenusMember>
 				<BlockGenusMember>panda_o1</BlockGenusMember>
 				<BlockGenusMember>df_lcd_keypad</BlockGenusMember>
-				<BlockGenusMember>bluno_println</BlockGenusMember>
-				<BlockGenusMember>bluno_println_number</BlockGenusMember>
-				<BlockGenusMember>bluno_println_clear</BlockGenusMember>
-				<BlockGenusMember>df_romeo_motors</BlockGenusMember>
-				<BlockGenusMember>df_romeo_motor</BlockGenusMember>
-				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
 				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
@@ -8894,7 +8888,15 @@
 			    <BlockGenusMember>little_bits_vibration_motor</BlockGenusMember>
 			    <BlockGenusMember>little_bits_synthspeaker</BlockGenusMember>
 			</BlockDrawer>
-			
+			<!-- dbrobot bluno -->
+			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">
+				<BlockGenusMember>bluno_println</BlockGenusMember>
+				<BlockGenusMember>bluno_println_number</BlockGenusMember>
+				<BlockGenusMember>bluno_println_clear</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motors</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motor</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember>
+			</BlockDrawer> 	
 			<!-- keenlon -->			
 			<BlockDrawer button-color="20 150 30" name="bd.ke-keenlon">
 				<BlockGenusMember>ke-motor-run</BlockGenusMember>
