@@ -5630,6 +5630,11 @@
 					<DefaultArg genus-name="number" label="1023" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Guino_Read.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Guino_Title" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_Title">
 			<description>
