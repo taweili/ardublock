@@ -29,15 +29,25 @@ public class Guino_Read  extends TranslatorBlock {
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
 			Max = translatorBlock.toCode();
 			
+			String internalVariableName = translator.getNumberVariable(label);
+			if (internalVariableName == null)
+			{
+				internalVariableName = translator.buildVariableName(label);
+				translator.addNumberVariable(label, internalVariableName);
+				translator.addDefinitionCommand("int " + internalVariableName + " = 0 ;");
+//				translator.addSetupCommand(internalVariableName + " = 0;");
+			}
+			
 			translator.addHeaderFile("EasyTransfer.h");
 			translator.addHeaderFile("EEPROM.h");
 			translator.addHeaderFile("Guino.h");
 			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib");
 			translator.addSetupCommand("GUINO_BRANCHER();");
-			translator.addGuinoCommand("GUINO_AFFICHER_GRAPH("+Title+","+Variable+","+Min+","+Max+");\nGUINO_AFFICHER_LIGNE(); ");
+			translator.addGuinoCommand("GUINO_AFFICHER_GRAPH("+Title+","+internalVariableName+","+Min+","+Max+");\nGUINO_AFFICHER_LIGNE(); ");
 			
 			
-			String ret =  "GUINO_LIRE("+Variable+");";
+			String ret =  	internalVariableName+"="+Variable+";\n"+
+							"GUINO_LIRE("+internalVariableName+");\n";
 			return  ret ;
 			
 		}
