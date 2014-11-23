@@ -25,7 +25,7 @@ public class Guino_Title  extends TranslatorBlock {
 			translator.addHeaderFile("EasyTransfer.h");
 			translator.addHeaderFile("EEPROM.h");
 			translator.addHeaderFile("Guino.h");
-			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib");
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/dupont/EDU_Guino/");
 			translator.addSetupCommand("GUINO_BRANCHER();");
 			translator.addGuinoCommand("GUINO_AFFICHER_TITRE("+Title+");");
 			

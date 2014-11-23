@@ -5,9 +5,9 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Guino_Read  extends TranslatorBlock {
+public class Guino_Slider  extends TranslatorBlock {
 
-	public Guino_Read (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public Guino_Slider (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -43,12 +43,10 @@ public class Guino_Read  extends TranslatorBlock {
 			translator.addHeaderFile("Guino.h");
 			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/dupont/EDU_Guino/");
 			translator.addSetupCommand("GUINO_BRANCHER();");
-			translator.addGuinoCommand("GUINO_AFFICHER_GRAPH("+Title+","+internalVariableName+","+Min+","+Max+");\nGUINO_AFFICHER_LIGNE(); ");
+			translator.addGuinoCommand("GUINO_AFFICHER_POTENTIOMETRE("+Title+","+internalVariableName+","+Min+","+Max+");\nGUINO_AFFICHER_LIGNE(); ");
 			
-			
-			String ret =  	internalVariableName+"="+Variable+";\n"+
-							"GUINO_LIRE("+internalVariableName+");\n";
-			return  ret ;
+
+			return codePrefix + internalVariableName + codeSuffix;
 			
 		}
 }
