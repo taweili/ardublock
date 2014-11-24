@@ -17,16 +17,13 @@ public class Guino_Slider  extends TranslatorBlock {
 		{
 			
 			String Title;
-			String Variable;
 			String Min;
 			String Max;
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			Title = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-			Variable = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 			Min = translatorBlock.toCode();
-			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 			Max = translatorBlock.toCode();
 			
 			String internalVariableName = translator.getNumberVariable(label);
