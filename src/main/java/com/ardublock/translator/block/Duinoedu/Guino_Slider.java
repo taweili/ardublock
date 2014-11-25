@@ -26,11 +26,11 @@ public class Guino_Slider  extends TranslatorBlock {
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 			Max = translatorBlock.toCode();
 			
-			String internalVariableName = translator.getNumberVariable(label);
+			String internalVariableName = translator.getNumberVariable(Title);
 			if (internalVariableName == null)
 			{
-				internalVariableName = translator.buildVariableName(label);
-				translator.addNumberVariable(label, internalVariableName);
+				internalVariableName = translator.buildVariableName(Title);
+				translator.addNumberVariable(Title, internalVariableName);
 				translator.addDefinitionCommand("int " + internalVariableName + " = 0 ;");
 //				translator.addSetupCommand(internalVariableName + " = 0;");
 			}

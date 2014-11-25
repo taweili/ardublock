@@ -5655,9 +5655,6 @@
 				<BlockConnector connector-type="string" connector-kind="socket" >
 					<DefaultArg genus-name="message" label="titre" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Variable">
-					<DefaultArg genus-name="number" label="3" />
-				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Min">
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
@@ -8862,7 +8859,6 @@
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Guino_Init</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Slider</BlockGenusMember>

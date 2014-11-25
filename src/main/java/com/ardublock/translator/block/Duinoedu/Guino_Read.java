@@ -29,11 +29,11 @@ public class Guino_Read  extends TranslatorBlock {
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
 			Max = translatorBlock.toCode();
 			
-			String internalVariableName = translator.getNumberVariable(label);
+			String internalVariableName = translator.getNumberVariable(Variable);
 			if (internalVariableName == null)
 			{
-				internalVariableName = translator.buildVariableName(label);
-				translator.addNumberVariable(label, internalVariableName);
+				internalVariableName = translator.buildVariableName(Variable);
+				translator.addNumberVariable(Variable, internalVariableName);
 				translator.addDefinitionCommand("int " + internalVariableName + " = 0 ;");
 //				translator.addSetupCommand(internalVariableName + " = 0;");
 			}

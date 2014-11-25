@@ -49,6 +49,7 @@ public class Translator
 	
 	private int variableCnt;
 	private boolean isScoopProgram;
+	private boolean isGuinoProgram;
 
 	public Translator(Workspace ws)
 	{
@@ -179,6 +180,7 @@ public class Translator
 		
 		rootBlockName = null;
 		isScoopProgram = false;
+		isGuinoProgram = false;
 	}
 	
 	private BlockAdaptor buildOpenBlocksAdaptor()
@@ -262,7 +264,7 @@ public class Translator
 	
 	public void addFunctionName(Long blockId, String functionName) throws SubroutineNameDuplicatedException
 	{
-		if (functionName.equals("loop") ||functionName.equals("setup") ||functionName.equals("guino") || functionNameSet.contains(functionName))
+		if (functionName.equals("loop") ||functionName.equals("setup") || functionNameSet.contains(functionName))
 		{
 			throw new SubroutineNameDuplicatedException(blockId);
 		}
@@ -332,6 +334,13 @@ public class Translator
 
 	public void setScoopProgram(boolean isScoopProgram) {
 		this.isScoopProgram = isScoopProgram;
+	}
+	public boolean isGuinoProgram() {
+		return isGuinoProgram;
+	}
+
+	public void setGuinoProgram(boolean isGuinoProgram) {
+		this.isGuinoProgram = isGuinoProgram;
 	}
 	
 	public Set<RenderableBlock> findEntryBlocks()
