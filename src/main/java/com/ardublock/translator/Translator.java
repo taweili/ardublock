@@ -378,10 +378,6 @@ public class Translator
 				{
 					loopBlockSet.add(renderableBlock);
 				}
-				if(block.getGenusName().equals("guino"))
-				{
-					loopBlockSet.add(renderableBlock);
-				}
 			}
 		}
 		

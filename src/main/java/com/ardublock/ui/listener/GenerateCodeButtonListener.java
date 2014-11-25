@@ -56,21 +56,7 @@ public class GenerateCodeButtonListener implements ActionListener
 		{
 			Block block = renderableBlock.getBlock();
 			
-			if (block.getGenusName().equals("DuinoEDU_Guino_Read"))
-			{
-				translator.setGuinoProgram(true);
-				guinoBlockSet.add(renderableBlock);
-			}
-			if (block.getGenusName().equals("DuinoEDU_Guino_Title"))
-			{
-				translator.setGuinoProgram(true);
-				guinoBlockSet.add(renderableBlock);
-			}
-			if (block.getGenusName().equals("DuinoEDU_Guino_Slider"))
-			{
-				translator.setGuinoProgram(true);
-				guinoBlockSet.add(renderableBlock);
-			}
+			
 			
 			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{
@@ -130,7 +116,21 @@ public class GenerateCodeButtonListener implements ActionListener
 					translator.setScoopProgram(true);
 					scoopBlockSet.add(renderableBlock);
 				}
-				
+				if (block.getGenusName().equals("DuinoEDU_Guino_Read"))
+				{
+					translator.setGuinoProgram(true);
+					guinoBlockSet.add(renderableBlock);
+				}
+				if (block.getGenusName().equals("DuinoEDU_Guino_Title"))
+				{
+					translator.setGuinoProgram(true);
+					guinoBlockSet.add(renderableBlock);
+				}
+				if (block.getGenusName().equals("DuinoEDU_Guino_Slider"))
+				{
+					translator.setGuinoProgram(true);
+					guinoBlockSet.add(renderableBlock);
+				}
 			}
 		}
 		if (loopBlockSet.size() == 0) {
