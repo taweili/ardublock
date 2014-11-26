@@ -32,7 +32,7 @@ public class Guino_Read  extends TranslatorBlock {
 			String internalVariableName = translator.getNumberVariable(Variable);
 			if (internalVariableName == null)
 			{
-				internalVariableName = translator.buildVariableName(Variable);
+				internalVariableName =label.replace(" ","")+ translator.buildVariableName(Variable);
 				translator.addNumberVariable(Variable, internalVariableName);
 				translator.addDefinitionCommand("int " + internalVariableName + " = 0 ;");
 //				translator.addSetupCommand(internalVariableName + " = 0;");

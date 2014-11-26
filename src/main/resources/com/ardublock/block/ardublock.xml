@@ -5624,7 +5624,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" >
-					<DefaultArg genus-name="message" label="titre" />
+					<DefaultArg genus-name="message" label="graph1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Variable">
 					<DefaultArg genus-name="number" label="3" />
@@ -5638,7 +5638,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Guino_Read.png</FileLocation>
+				<FileLocation>com/ardublock/block/seeedstudio/Guino_Graphique.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -5659,7 +5659,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"  />
 				<BlockConnector connector-type="string" connector-kind="socket" >
-					<DefaultArg genus-name="message" label="titre" />
+					<DefaultArg genus-name="message" label="pot1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Min">
 					<DefaultArg genus-name="number" label="0" />
@@ -5670,7 +5670,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Guino_Slider.png</FileLocation>
+				<FileLocation>com/ardublock/block/seeedstudio/Guino_Potentiometre_virtuel.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -5681,9 +5681,14 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="string" connector-kind="socket" >
-					<DefaultArg genus-name="message" label="titre" />
+					<DefaultArg genus-name="message" label="inter1" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Guino_Interrupteur_virtuel.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
@@ -8877,9 +8882,9 @@
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Slider</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_switch</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_column</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">

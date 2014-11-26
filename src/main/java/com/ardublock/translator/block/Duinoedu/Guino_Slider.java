@@ -29,7 +29,7 @@ public class Guino_Slider  extends TranslatorBlock {
 			String internalVariableName = translator.getNumberVariable(Title);
 			if (internalVariableName == null)
 			{
-				internalVariableName = translator.buildVariableName(Title);
+				internalVariableName =label.replace(" ","")+ translator.buildVariableName(Title);
 				translator.addNumberVariable(Title, internalVariableName);
 				translator.addDefinitionCommand("int " + internalVariableName + " = 0 ;");
 //				translator.addSetupCommand(internalVariableName + " = 0;");
