@@ -5612,6 +5612,12 @@
 			</description>
 			
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Guino_column" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_column">
+			<description>
+				<text>Guino column</text>
+			</description>
+			
+		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Guino_Read" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_Read">
 			<description>
 				<text>Guino Read</text>
@@ -8862,6 +8868,7 @@
 				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Slider</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Guino_column</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
