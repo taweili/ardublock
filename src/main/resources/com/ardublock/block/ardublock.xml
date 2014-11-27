@@ -4473,8 +4473,27 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>		
 		</BlockGenus>
-		
-		<BlockGenus name="DuinoEDU_notequal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_notequal" editable-label="no">
+		<BlockGenus name="DuinoEDU_not_equal" kind="data" color="214 169 54" initlabel="DuinoEDU_not_equal" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_greater" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_greater" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_less" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_less" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_greater_equal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_greater_equal" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_less_equal" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_less_equal" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>		
@@ -6131,7 +6150,31 @@
 				<BlockConnector connector-type="poly" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
+		<BlockGenus name="bleshield_compare" kind="function" color="169 148 212" initlabel="bg.bleshield_compare">
+			<description>
+				<text>bleshield compare</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" label="letter" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_equal" label="==" />
+				</BlockConnector>
+				<BlockConnector connector-type="poly" connector-kind="socket" label="">
+					<DefaultArg genus-name="char" label="code" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/network/bleshield.jpg</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
 		<!--**************************************Adafruit*********************************** -->
 		<BlockGenus name="ada_dc_motor_fwd" kind="command" color="216 5 10" initlabel="bg.ada_dc_motor_fwd">
 			<description>
@@ -8692,7 +8735,11 @@
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_equal</FamilyMember>
-			<FamilyMember>DuinoEDU_notequal</FamilyMember>
+			<FamilyMember>DuinoEDU_not_equal</FamilyMember>
+			<FamilyMember>DuinoEDU_greater</FamilyMember>
+			<FamilyMember>DuinoEDU_less</FamilyMember>
+			<FamilyMember>DuinoEDU_greater_equal</FamilyMember>
+			<FamilyMember>DuinoEDU_less_equal</FamilyMember>
 		</BlockFamily>	
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_Rfid_Write</FamilyMember>
@@ -8913,7 +8960,8 @@
 			<BlockDrawer button-color="169 148 212" name="bd.network" type="factory">
 				<BlockGenusMember>bleshield</BlockGenusMember>
 				<BlockGenusMember>bleshield_available</BlockGenusMember>
-				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>	
+				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>
+				<BlockGenusMember>bleshield_compare</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>

@@ -20,10 +20,11 @@ public class Keyboard_Compare  extends TranslatorBlock {
 		DataPin = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		IRQpin = translatorBlock.toCode();
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-		Touche = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 		Compare = translatorBlock.toCode();
+		translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
+		Touche = translatorBlock.toCode();
+		
 		
 		translator.addHeaderFile("PS2Keyboard.h");
 		translator.addSetupCommand("delay(1000);"
