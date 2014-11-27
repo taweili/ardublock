@@ -211,10 +211,9 @@ public class Translator
 	
 	public void addGuinoCommand(String command)
 	{
-		if (!guinoCommand.contains(command))
-		{
+		
 			guinoCommand.add(command);
-		}
+		
 	}
 	
 	public void addDefinitionCommand(String command)
