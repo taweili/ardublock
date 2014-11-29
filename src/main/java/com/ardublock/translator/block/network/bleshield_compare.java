@@ -30,14 +30,16 @@ public class bleshield_compare extends TranslatorBlock {
 		translator.addDefinitionCommand(bleshieldFunctions);
 		translator.addSetupCommand("bleShield.begin(19200);");
 		
-		return codePrefix + "(String)"+Touche+Compare+"w"+ codeSuffix;
+		return codePrefix + "(word)"+Touche+Compare+"w"+ codeSuffix;
 
 	}
 
 	private static final String bleshieldFunctions = 
+			"word w;"+
 			"void recevoir(){\n" + 
 			"	 if (bleShield.available()) {\n" + 
 			"w=bleShield.read();" + 
+			"}\n\n"+
 			"}\n\n";	
 	
 }
