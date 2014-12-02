@@ -44,6 +44,7 @@ public class Guino_Read  extends TranslatorBlock {
 			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/dupont/EDU_Guino/");
 			translator.addSetupCommand("GUINO_BRANCHER();");
 			translator.addGuinoCommand("GUINO_AFFICHER_GRAPH("+Title+","+internalVariableName+","+Min+","+Max+");\nGUINO_AFFICHER_LIGNE(); ");
+			translator.addGuinoCommand("GUINO_AFFICHER_POTENTIOMETRE("+Title+","+internalVariableName+","+Min+","+Max+");\nGUINO_AFFICHER_LIGNE(); ");
 			
 			
 			String ret =  	internalVariableName+"="+Variable+";\n"+
