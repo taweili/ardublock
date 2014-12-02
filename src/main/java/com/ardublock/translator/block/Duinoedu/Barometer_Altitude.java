@@ -18,7 +18,7 @@ public class Barometer_Altitude  extends TranslatorBlock {
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("Barometer.h");
 			translator.addDefinitionCommand("Barometer monBarometre;");
-			translator.addDefinitionCommand("//http://duinoedu.com/dl/lib/grove/EDU_BarometerSensor_Grove/");
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_BarometerSensor_Grove/");
 			translator.addSetupCommand("monBarometre.brancher();");
 			
 			return codePrefix +"monBarometre.lireAltitude()" + codeSuffix;	
