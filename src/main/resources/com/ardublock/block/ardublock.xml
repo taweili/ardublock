@@ -4751,6 +4751,17 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Driver_I2C_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Stop">
+			<description>
+				<text>Driver I2C STOP</text>
+			</description>
+			
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/I2CMotorDriver.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_Driver_I2C_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Driver_I2C_Back">
 			<description>
@@ -9106,6 +9117,7 @@
 				<BlockGenusMember>keyboard_post</BlockGenusMember>
 				<BlockGenusMember>keyboard_compare</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Driver_I2C_Stop</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Stop</BlockGenusMember>
