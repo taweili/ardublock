@@ -16,6 +16,10 @@ public class LoopBlock extends TranslatorBlock
 	{
 		String ret;
 		ret = "void loop()\n{\n";
+		if (translator.isGuinoProgram())
+		{
+			ret += "GUINO_GERER_INTERFACE();\n";
+		}
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
 		while (translatorBlock != null)
 		{

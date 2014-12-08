@@ -18,7 +18,7 @@ public class Rfid_Read extends TranslatorBlock {
 
 		translator.addHeaderFile("RFID125.h");
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nRFID125 monRFID;");
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_RFID125_Grove/ \nRFID125 monRFID;");
 		String ret = "monRFID.lireCode()";
 		return codePrefix + ret + codeSuffix;
 	}

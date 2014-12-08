@@ -22,7 +22,7 @@ public class Driver_I2C_Pivoter  extends TranslatorBlock {
 			
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("MotorI2C.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nMotorI2C mesMoteurs;");
+			translator.addDefinitionCommand("//libraries athttp://duinoedu.com/dl/lib/grove/EDU_MotorI2C/ \nMotorI2C mesMoteurs;");
 			translator.addSetupCommand("mesMoteurs.brancher();");
 			
 						

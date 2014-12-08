@@ -30,6 +30,7 @@ public class Translator
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
 	private List<String> setupCommand;
+	private List<String> guinoCommand;
 	private Set<String> functionNameSet;
 	private Set<TranslatorBlock> bodyTranslatreFinishCallbackSet;
 	private BlockAdaptor blockAdaptor;
@@ -48,6 +49,7 @@ public class Translator
 	
 	private int variableCnt;
 	private boolean isScoopProgram;
+	private boolean isGuinoProgram;
 
 	public Translator(Workspace ws)
 	{
@@ -86,7 +88,7 @@ public class Translator
 			headerCommand.append("\n");
 		}
 		
-		return headerCommand.toString() + generateSetupFunction();
+		return headerCommand.toString() + generateSetupFunction() +generateGuinoFunction();
 	}
 	
 	public String generateSetupFunction()
@@ -115,11 +117,32 @@ public class Translator
 			{
 				setupFunction.append(command + "\n");
 			}
+			
 		}
+
 		
 		setupFunction.append("}\n\n");
 		
 		return setupFunction.toString();
+	}
+	
+	public String generateGuinoFunction()
+	{
+		StringBuilder guinoFunction = new StringBuilder();
+		
+		
+		if (!guinoCommand.isEmpty())
+		{
+			guinoFunction.append("void GUINO_DEFINIR_INTERFACE()\n{\n");
+			for (String command:guinoCommand)
+			{
+				guinoFunction.append(command + "\n");
+			}
+			guinoFunction.append("}\n\n");
+		}
+		
+		
+		return guinoFunction.toString();
 	}
 	
 	public String translate(Long blockId) throws SocketNullException, SubroutineNotDeclaredException, BlockException
@@ -140,6 +163,7 @@ public class Translator
 		headerFileSet = new LinkedHashSet<String>();
 		definitionSet = new LinkedHashSet<String>();
 		setupCommand = new LinkedList<String>();
+		guinoCommand = new LinkedList<String>();
 		functionNameSet = new HashSet<String>();
 		inputPinSet = new HashSet<String>();
 		outputPinSet = new HashSet<String>();
@@ -156,6 +180,7 @@ public class Translator
 		
 		rootBlockName = null;
 		isScoopProgram = false;
+		isGuinoProgram = false;
 	}
 	
 	private BlockAdaptor buildOpenBlocksAdaptor()
@@ -182,6 +207,13 @@ public class Translator
 	public void addSetupCommandForced(String command)
 	{
 		setupCommand.add(command);
+	}
+	
+	public void addGuinoCommand(String command)
+	{
+		
+			guinoCommand.add(command);
+		
 	}
 	
 	public void addDefinitionCommand(String command)
@@ -301,6 +333,13 @@ public class Translator
 
 	public void setScoopProgram(boolean isScoopProgram) {
 		this.isScoopProgram = isScoopProgram;
+	}
+	public boolean isGuinoProgram() {
+		return isGuinoProgram;
+	}
+
+	public void setGuinoProgram(boolean isGuinoProgram) {
+		this.isGuinoProgram = isGuinoProgram;
 	}
 	
 	public Set<RenderableBlock> findEntryBlocks()

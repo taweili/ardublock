@@ -18,7 +18,7 @@ public class Acc_mesurerY  extends TranslatorBlock {
 					
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("MMA7660.h");
-			translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nMMA7660 monAccelerometre;");
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_MMA7660_Grove/ \nMMA7660 monAccelerometre;");
 			translator.addSetupCommand("monAccelerometre.brancher();");
 			
 						
