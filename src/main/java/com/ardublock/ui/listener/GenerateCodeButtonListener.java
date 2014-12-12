@@ -61,7 +61,7 @@ public class GenerateCodeButtonListener implements ActionListener
 				translator.setGuinoProgram(true);
 				
 			}
-			if ((block.getGenusName().equals("DuinoEDU_Guino_Title")) || (block.getGenusName().equals("DuinoEDU_Guino_Slider")) || (block.getGenusName().equals("DuinoEDU_Guino_column")) || (block.getGenusName().equals("DuinoEDU_Guino_switch")) ) 
+			if ((block.getGenusName().equals("DuinoEDU_Guino_Title")) || (block.getGenusName().equals("DuinoEDU_Guino_Slider")) || (block.getGenusName().equals("DuinoEDU_Guino_column")) || (block.getGenusName().equals("DuinoEDU_Guino_switch"))|| (block.getGenusName().equals("DuinoEDU_Guino_pause")) ) 
 			{
 				translator.setGuinoProgram(true);
 				

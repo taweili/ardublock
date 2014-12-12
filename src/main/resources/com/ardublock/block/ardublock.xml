@@ -5648,6 +5648,16 @@
 			</description>
 			
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Guino_pause" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_pause">
+			<description>
+				<text>Guino column</text>
+			</description>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Guino_Pause.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>	
 		<BlockGenus name="DuinoEDU_Guino_Read" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_Read">
 			<description>
 				<text>Guino Read</text>
@@ -8942,6 +8952,7 @@
 				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Slider</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_switch</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Guino_pause</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_column</BlockGenusMember>
 			</BlockDrawer>
