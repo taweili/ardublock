@@ -20,7 +20,7 @@ public class TempPro extends TranslatorBlock {
 		
 		translator.addHeaderFile("DHT.h");
 		
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/ \nDHT monDHTPRO_Temp_pin"+Pin+"("+Pin +",DHT22);"	);
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_DHT_Grove/ \nDHT monDHTPRO_Temp_pin"+Pin+"("+Pin +",DHT22);"	);
 		translator.addSetupCommand("monDHTPRO_Temp_pin"+Pin+".brancher();");
 		String ret = "monDHTPRO_Temp_pin"+Pin+".readTemperature()";
 		

@@ -26,7 +26,7 @@ public class Keypad_12_Button extends TranslatorBlock  {
 		Diplay = translatorBlock.toCode();
 
 		translator.addHeaderFile("Keypad.h");
-		translator.addDefinitionCommand("//libraries at http://www.duinoedu.com/\nKeypad keypad;"	);
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_Keypad_Dupont/ \nKeypad keypad;"	);
 		translator.addSetupCommand("keypad.brancher("+StartPin +","+EndPin+");\n"+
 				Diplay );
 				

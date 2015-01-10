@@ -48,12 +48,25 @@ public class GenerateCodeButtonListener implements ActionListener
 		Set<RenderableBlock> loopBlockSet = new HashSet<RenderableBlock>();
 		Set<RenderableBlock> subroutineBlockSet = new HashSet<RenderableBlock>();
 		Set<RenderableBlock> scoopBlockSet = new HashSet<RenderableBlock>();
+		Set<RenderableBlock> guinoBlockSet = new HashSet<RenderableBlock>();
 		StringBuilder code = new StringBuilder();
 		
 		
 		for (RenderableBlock renderableBlock:renderableBlocks)
 		{
 			Block block = renderableBlock.getBlock();
+			
+			if (block.getGenusName().equals("DuinoEDU_Guino_Read"))
+			{
+				translator.setGuinoProgram(true);
+				
+			}
+			if ((block.getGenusName().equals("DuinoEDU_Guino_Title")) || (block.getGenusName().equals("DuinoEDU_Guino_Slider")) || (block.getGenusName().equals("DuinoEDU_Guino_column")) || (block.getGenusName().equals("DuinoEDU_Guino_switch"))|| (block.getGenusName().equals("DuinoEDU_Guino_pause")) ) 
+			{
+				translator.setGuinoProgram(true);
+				
+			}
+			
 			
 			if (!block.hasPlug() && (Block.NULL.equals(block.getBeforeBlockID())))
 			{
@@ -145,6 +158,13 @@ public class GenerateCodeButtonListener implements ActionListener
 				Block scoopBlock = renderableBlock.getBlock();
 				code.append(translator.translate(scoopBlock.getBlockID()));
 			}
+			for (RenderableBlock renderableBlock : guinoBlockSet)
+			{
+				translator.setRootBlockName("guino");
+				Block guinoBlock = renderableBlock.getBlock();
+				code.append(translator.translate(guinoBlock.getBlockID()));
+			}
+			
 			
 			for (RenderableBlock renderableBlock : subroutineBlockSet)
 			{

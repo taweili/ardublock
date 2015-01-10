@@ -13,8 +13,14 @@ public class BLEShield extends TranslatorBlock {
 
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException {
+		String DataPin;
+		String IRQpin;
+		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+		DataPin = translatorBlock.toCode();
+		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+		IRQpin = translatorBlock.toCode();
 		translator.addHeaderFile("SoftwareSerial.h");
-		translator.addDefinitionCommand("SoftwareSerial bleShield(2, 3);");
+		translator.addDefinitionCommand("SoftwareSerial bleShield("+DataPin+","+ IRQpin+");");
 		translator.addSetupCommand("bleShield.begin(19200);");
 		return "";
 	}
