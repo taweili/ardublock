@@ -2,139 +2,162 @@
 
 InsectBot::InsectBot(void)
 {
-  walkSpeed = 500; // How long to wait between steps in milliseconds (change this to increase (-) or decrease (+) the walking speed)
-  centerPos = 90;
-  frontRightUp = 70;
-  frontLeftUp = 110;
-  backRightForward = 70;
-  backLeftForward = 110;
-  centerTurnPos = 81;
-  frontTurnRightUp = 70;
-  frontTurnLeftUp = 110;
-  backTurnRightForward = 70;
-  backTurnLeftForward = 110;
-  sensorPin = A1;
+    delayWalk = 2; /* 2 milliseconds between 1° step (movement is from 50° to 120° for front and rear legs) */
+    delayTurn = 3; /* 3 milliseconds between 1° step */
+    frontAngle = 90;
+    rearAngle = 90;
+    midAngle = 90;
 
-  /* Danger distance */
-  dangerDistance = 350; 	// adjust the value + for decreasing the danger distance 
-  isSetup = false;
+    /* Danger distance, small distance == bigger number (300 ~= 20 cm, 500 ~= 10 cm) */
+    dangerDistance = 450;
+
+    isSetup = false;
 }
 
 void InsectBot::lazySetup()
 {
-  if (!isSetup)
-  {
-    setup();
-    isSetup = true;
-  }
+    if (!isSetup) {
+        setup();
+        isSetup = true;
+    }
 }
 
 void InsectBot::setup(void)
 {
-  frontServo.attach(9);
-  rearServo.attach(10);
-  pinMode(sensorPin, INPUT);
-  frontServo.write(centerPos);
-  rearServo.write(centerPos);
-}
+    frontLeg.attach(9);
+    rearLeg.attach(10);
+    midLeg.attach(11);
+    frontLeg.write(frontAngle);
+    rearLeg.write(rearAngle);
+    midLeg.write(midAngle);
 
-void InsectBot::updateDistance(void)
-{
-  lazySetup();
-  int i;
-  int distanceCollection[5];
-  int distanceCheck;
-
-  for (i=0; i<5; ++i)
-  {
-    distanceCheck = analogRead(sensorPin);
-    distanceCollection[i] = distanceCheck;
-
-  }
-
-  distance = (distanceCollection[0] + distanceCollection[1] + distanceCollection[2] + distanceCollection[3] + distanceCollection[4]) / 5;
-  delay(20);
-}
-
-int InsectBot::getDistance(void)
-{
-  lazySetup();
-  updateDistance();
-
-  return distance;
+    pinMode(distanceSensor, A1);
+    pinMode(lightSensorLeft, A2);
+    pinMode(lightSensorRight, A0);
 }
 
 bool InsectBot::isInDanger(void)
 {
-  lazySetup();
-  updateDistance();
-  return (distance > dangerDistance);
+    int i, count = 5, sum = 0;
+
+    lazySetup();
+
+    for (i = 0; i < count; i++) {
+        sum += analogRead(distanceSensor);
+    }
+
+    return (sum > count * dangerDistance); /* the bigger the number is, the nearer we are */
 }
 
 void InsectBot::goForward(void)
 {
-  lazySetup();
-  frontServo.write(frontRightUp);
-  rearServo.write(backLeftForward);
-  delay(110);
-  frontServo.write(centerPos);
-  rearServo.write(centerPos);
-  delay(90);
-  frontServo.write(frontLeftUp);
-  rearServo.write(backRightForward);
-  delay(110);
-  frontServo.write(centerPos);
-  rearServo.write(centerPos);
-  delay(90);
-  delay(walkSpeed);
+    lazySetup();
+
+    for (midAngle = 70; midAngle < 100; midAngle +=1) {
+        midLeg.write(midAngle);
+        delay(delayWalk);
+    }
+    for (frontAngle = 120; frontAngle > 50; frontAngle -= 1) {
+        frontLeg.write(frontAngle);
+        rearLeg.write(frontAngle);
+        delay(delayWalk);
+    }
+    for (midAngle = 100; midAngle > 70; midAngle -=1){
+        midLeg.write(midAngle);
+        delay(delayWalk);
+    }
+    for (frontAngle = 50; frontAngle < 120; frontAngle += 1) {
+        frontLeg.write(frontAngle);
+        rearLeg.write(frontAngle);
+        delay(delayWalk);
+    }
 }
 
-void InsectBot::goBackRight(void)
+void InsectBot::goBackward(void)
 {
-  lazySetup();
-  frontServo.write(frontRightUp);
-  rearServo.write(backRightForward-6);
-  delay(110);
-  frontServo.write(centerPos);
-  rearServo.write(centerPos-6);
-  delay(90);
-  frontServo.write(frontLeftUp+9);
-  rearServo.write(backLeftForward-6);
-  delay(110);
-  frontServo.write(centerPos);
-  rearServo.write(centerPos);
-  delay(90);
+    lazySetup();
+
+    for (midAngle = 70; midAngle < 100; midAngle +=1) {
+        midLeg.write(midAngle);
+        delay(delayWalk);
+    }
+    for (frontAngle = 50; frontAngle < 120; frontAngle += 1) {
+        frontLeg.write(frontAngle);
+        rearLeg.write(frontAngle);
+        delay(delayWalk);
+    }
+
+    for (midAngle = 100; midAngle > 70; midAngle -=1){
+        midLeg.write(midAngle);
+        delay(delayWalk);
+    }
+    for (frontAngle = 120; frontAngle > 50; frontAngle -= 1) {
+        frontLeg.write(frontAngle);
+        rearLeg.write(frontAngle);
+        delay(delayWalk);
+    }
 }
 
 void InsectBot::turnLeft(void)
 {
-  lazySetup();
-  frontServo.write(frontTurnRightUp);
-  rearServo.write(backTurnLeftForward);
-  delay(110);
-  frontServo.write(centerTurnPos);
-  rearServo.write(centerTurnPos);
-  delay(90);
-  frontServo.write(frontTurnLeftUp);
-  rearServo.write(backTurnRightForward);
-  delay(110);
-  frontServo.write(centerTurnPos);
-  rearServo.write(centerTurnPos);
-  delay(90);
+    lazySetup();
+
+    rearLeg.write(90);
+    for (midAngle = 70; midAngle < 110; midAngle += 1) {
+        midLeg.write(midAngle);
+        delay(delayTurn);
+    }
+    for (frontAngle = 70; frontAngle < 110; frontAngle +=1) {
+        frontLeg.write(frontAngle);
+        delay(delayTurn);
+    }
+    for (rearAngle = 110; rearAngle > 70; rearAngle -=1) {
+        rearLeg.write(rearAngle);
+        delay(delayTurn);
+    }
+    for (midAngle = 110; midAngle > 70; midAngle -= 1) {
+        midLeg.write(midAngle);
+        delay(delayTurn);
+    }
+    for (frontAngle = 110; frontAngle > 70; frontAngle -=1) {
+        frontLeg.write(frontAngle);
+        delay(delayTurn);
+    }
+    for (rearAngle = 70; rearAngle < 110; rearAngle +=1) {
+        rearLeg.write(rearAngle);
+        delay(delayTurn);
+    }
 }
 
-void InsectBot::blinkLed(void)
+void InsectBot::turnRight(void)
 {
-  lazySetup();
-  for (int i=0; i<5; ++i)
-  {
-    digitalWrite(13, HIGH);
-    delay(50);
-    digitalWrite(13, LOW);
-    delay(100);
-  }
+    lazySetup();
+
+    frontLeg.write(90);
+    for (midAngle = 70; midAngle < 110; midAngle += 1) {
+        midLeg.write(midAngle);
+        delay(delayTurn);
+    }
+    for (rearAngle = 70; rearAngle < 110; rearAngle +=1) {
+        rearLeg.write(rearAngle);
+        delay(delayTurn);
+    }
+    for (frontAngle = 110; frontAngle > 70; frontAngle -=1) {
+        frontLeg.write(frontAngle);
+        delay(delayTurn);
+    }
+    for (midAngle = 110; midAngle > 70; midAngle -= 1) {
+        midLeg.write(midAngle);
+        delay(delayTurn);
+    }
+    for (rearAngle = 110; rearAngle > 70; rearAngle -=1) {
+        rearLeg.write(rearAngle);
+        delay(delayTurn);
+    }
+    for (frontAngle = 70; frontAngle < 110; frontAngle +=1) {
+        frontLeg.write(frontAngle);
+        delay(delayTurn);
+    }
 }
 
-
-
-
+/* vi: set autoindent expandtab softtabstop=4 shiftwidth=4 : */

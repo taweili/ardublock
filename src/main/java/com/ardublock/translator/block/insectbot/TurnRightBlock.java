@@ -5,10 +5,10 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class BlinkLedBlock extends TranslatorBlock
+public class TurnRightBlock extends TranslatorBlock
 {
 
-	public BlinkLedBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public TurnRightBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -18,7 +18,7 @@ public class BlinkLedBlock extends TranslatorBlock
 	{
 		InsectBotUtil.setupEnv(translator);
 		
-		String ret = "insect.blinkLed();\n";
+		String ret = "insect.turnRight();\n";
 		
 		return codePrefix + ret + codeSuffix;
 	}
