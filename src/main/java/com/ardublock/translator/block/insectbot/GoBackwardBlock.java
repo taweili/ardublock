@@ -5,11 +5,10 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class GetDistanceBlock extends TranslatorBlock
+public class GoBackwardBlock extends TranslatorBlock
 {
 
-
-	public GetDistanceBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public GoBackwardBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -19,7 +18,7 @@ public class GetDistanceBlock extends TranslatorBlock
 	{
 		InsectBotUtil.setupEnv(translator);
 		
-		String ret = "insect.getDistance()";
+		String ret = "insect.goBackward();\n";
 		
 		return codePrefix + ret + codeSuffix;
 	}

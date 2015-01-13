@@ -8,54 +8,44 @@
 #include "WProgram.h"
 #endif
 
-
-
-
 #include <Servo.h>
 
 class InsectBot
 {
 private:
-  Servo frontServo;
-  Servo rearServo;
+    Servo frontLeg;
+    Servo rearLeg;
+    Servo midLeg;
 
-  /* Servo motors - global variables */
-  int walkSpeed; // How long to wait between steps in milliseconds (change this to increase (-) or decrease (+) the walking speed)
-  int centerPos;
-  int frontRightUp;
-  int frontLeftUp;
-  int backRightForward;
-  int backLeftForward;
-  int centerTurnPos;
-  int frontTurnRightUp;
-  int frontTurnLeftUp;
-  int backTurnRightForward;
-  int backTurnLeftForward;
-  int sensorPin;
-  /* Danger distance */
-  int dangerDistance; 	// adjust the value + for decreasing the danger distance 
+    int delayWalk;
+    int delayTurn;
 
-  int distance;
-  void updateDistance(void);
-  
-  bool isSetup;
-  void setup(void);
-  void lazySetup();
+    byte frontAngle;
+    byte rearAngle;
+    byte midAngle;
+
+    int dangerDistance;
+
+    /* Analog sensors */
+    int distanceSensor;
+    int lightSensorLeft;        /* not yet implemented */
+    int lightSensorRight;       /* not yet implemented */
+
+    bool isSetup;
+    void setup(void);
+    void lazySetup();
   
 public:
-  InsectBot(void);
+    InsectBot(void);
 
-  int getDistance(void);
+    bool isInDanger(void);
 
-  bool isInDanger(void);
-
-  void goForward(void);
-  void goBackRight(void);
-  void turnLeft(void);
-
-  void blinkLed(void);
+    void goForward(void);
+    void goBackward(void);
+    void turnLeft(void);
+    void turnRight(void);
 };
 
 #endif
 
-
+/* vi: set autoindent expandtab softtabstop=4 shiftwidth=4 : */

@@ -6914,20 +6914,6 @@
 		
 		<!-- InsectBot blocks -->
 		
-		<BlockGenus name="insectbot_get_distance" kind="data" color="64 109 0" initlabel="bg.insectbot_get_distance">
-			<description>
-				<text>workshop template</text>
-			</description>
-		    <BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" />
-			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/workshop/insectbot_distance.png</FileLocation>
-				</Image>
-			</Images>
-		</BlockGenus>
-		
 		<BlockGenus name="insectbot_is_indanger" kind="data" color="64 109 0" initlabel="bg.insectbot_is_indanger">
 			<description>
 				<text>workshop template</text>
@@ -6953,13 +6939,13 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="insectbot_go_backright" kind="command" color="64 109 0" initlabel="bg.insectbot_go_backright">
+		<BlockGenus name="insectbot_go_backward" kind="command" color="64 109 0" initlabel="bg.insectbot_go_backward">
 			<description>
 				<text>workshop template</text>
 			</description>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/workshop/insectbot_gobackright.png</FileLocation>
+					<FileLocation>com/ardublock/block/workshop/insectbot_gobackward.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6975,16 +6961,17 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="insectbot_blink_led" kind="command" color="64 109 0" initlabel="bg.insectbot_blink_led">
+		<BlockGenus name="insectbot_turn_right" kind="command" color="64 109 0" initlabel="bg.insectbot_turn_right">
 			<description>
 				<text>workshop template</text>
 			</description>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/workshop/insectbot_led.png</FileLocation>
+					<FileLocation>com/ardublock/block/workshop/insectbot_turnright.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
+		
 		<!-- littlebits -->
 				<BlockGenus name="little_bits_bendsensor" kind="data" color="93 13 125" initlabel="bg.little_bits_bendsensor">
 					<description>
@@ -9202,12 +9189,11 @@
 			</BlockDrawer>
 			 -->
 			<BlockDrawer button-color="64 109 0" name="bd.insectbot">
-			    <BlockGenusMember>insectbot_get_distance</BlockGenusMember>
 			    <BlockGenusMember>insectbot_is_indanger</BlockGenusMember>
 			    <BlockGenusMember>insectbot_go_forward</BlockGenusMember>
-			    <BlockGenusMember>insectbot_go_backright</BlockGenusMember>
+			    <BlockGenusMember>insectbot_go_backward</BlockGenusMember>
 			    <BlockGenusMember>insectbot_turn_left</BlockGenusMember>
-			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
+			    <BlockGenusMember>insectbot_turn_right</BlockGenusMember>
 			</BlockDrawer>
 			<!-- iDrawing -->
 			<BlockDrawer button-color="255 102 0" name="bd.iDrawing">
