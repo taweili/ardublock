@@ -34,6 +34,8 @@ void InsectBot::setup(void)
     pinMode(distanceSensor, A1);
     pinMode(lightSensorLeft, A2);
     pinMode(lightSensorRight, A0);
+
+    delay(2000);
 }
 
 bool InsectBot::isInDanger(void)
