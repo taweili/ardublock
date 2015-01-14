@@ -3458,7 +3458,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3475,7 +3475,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 			</BlockConnectors>
@@ -3492,7 +3492,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3508,7 +3508,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3524,7 +3524,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3540,7 +3540,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3556,7 +3556,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3572,7 +3572,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3588,7 +3588,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3604,7 +3604,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3620,7 +3620,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3636,7 +3636,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3652,7 +3652,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3668,7 +3668,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3684,7 +3684,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3700,7 +3700,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3716,7 +3716,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3834,7 +3834,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_A0" label="A0" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4215,7 +4215,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4232,7 +4232,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4249,7 +4249,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4266,7 +4266,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4283,7 +4283,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4299,7 +4299,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.sample">
 					<DefaultArg genus-name="number" label="1" />
@@ -4320,10 +4320,10 @@
 			<BlockConnectors>
 				
 				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 					<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
 					<DefaultArg genus-name="number" label="1000" />
@@ -4437,10 +4437,10 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4458,10 +4458,10 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" label="letter" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="IRQpin #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="">
 					<DefaultArg genus-name="DuinoEDU_equal" label="==" />
@@ -4515,10 +4515,10 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="letter" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4535,10 +4535,10 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="letter" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="DataPin #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D3" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4555,10 +4555,10 @@
 			</description>			
 			<BlockConnectors>
 							<BlockConnector connector-type="number" connector-kind="socket" label="StartPin #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="EndPin #">
-					<DefaultArg genus-name="number" label="8" />
+					<DefaultArg genus-name="DuinoEDU_D8" label="D8" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_serial_display">
 					<DefaultArg genus-name="DuinoEDU_setSerialInfosOn" label="activer" />
@@ -4612,10 +4612,10 @@
 			</description>			
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 					<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
 					<DefaultArg genus-name="number" label="7" />
@@ -4636,10 +4636,10 @@
 			</description>			
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket"  label="bc.DuinoEDU_Display">
 					<DefaultArg genus-name="number" label="9999" />
@@ -4659,10 +4659,10 @@
 			</description>			
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Display">
 					<DefaultArg genus-name="number" label="0" />
@@ -4731,10 +4731,10 @@
 			</description>			
 			<BlockConnectors>
 			<BlockConnector connector-type="number" connector-kind="socket" label="Clk #">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Dio #">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4934,7 +4934,7 @@
 					<DefaultArg genus-name="message" label="Emetteur"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4951,7 +4951,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4967,10 +4967,10 @@
 			</description>			
 			<BlockConnectors>
 			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D3" />
 				</BlockConnector>
 				<BlockConnector connector-type="string" connector-kind="socket" label="Code">
 					<DefaultArg genus-name="message" label="12345678" />
@@ -4989,10 +4989,10 @@
 			</description>			
 			<BlockConnectors>
 			<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 				<BlockConnector connector-type="string" connector-kind="socket" label="Code">
 					<DefaultArg genus-name="message" label="12345678 23456789" />
@@ -5057,7 +5057,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Nb Led">
 					<DefaultArg genus-name="number" label="60" />
@@ -5082,7 +5082,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
 					<DefaultArg genus-name="number" label="20" />
@@ -5125,7 +5125,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
 					<DefaultArg genus-name="number" label="20" />
@@ -5167,7 +5167,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -5182,7 +5182,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
 					<DefaultArg genus-name="number" label="1000" />
@@ -5200,7 +5200,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -5216,16 +5216,16 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="5" />
+					<DefaultArg genus-name="DuinoEDU_D5" label="D5" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="6" />
+					<DefaultArg genus-name="DuinoEDU_D6" label="D6" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="9" />
+					<DefaultArg genus-name="DuinoEDU_D9" label="D9" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepperround">
 					<DefaultArg genus-name="number" label="3072" />
@@ -5243,16 +5243,16 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="5" />
+					<DefaultArg genus-name="DuinoEDU_D5" label="D5" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="6" />
+					<DefaultArg genus-name="DuinoEDU_D6" label="D6" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="9" />
+					<DefaultArg genus-name="DuinoEDU_D9" label="D9" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
 					<DefaultArg genus-name="number" label="9" />
@@ -5273,13 +5273,13 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
-					<DefaultArg genus-name="number" label="5" />
+					<DefaultArg genus-name="DuinoEDU_D5" label="D5" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
-					<DefaultArg genus-name="number" label="6" />
+					<DefaultArg genus-name="DuinoEDU_D6" label="D6" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
-					<DefaultArg genus-name="number" label="7" />
+					<DefaultArg genus-name="DuinoEDU_D7" label="D7" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="X">
 					<DefaultArg genus-name="number" label="7" />
@@ -5303,13 +5303,13 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
-					<DefaultArg genus-name="number" label="5" />
+					<DefaultArg genus-name="DuinoEDU_D5" label="D5" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
-					<DefaultArg genus-name="number" label="6" />
+					<DefaultArg genus-name="DuinoEDU_D6" label="D6" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
-					<DefaultArg genus-name="number" label="7" />
+					<DefaultArg genus-name="DuinoEDU_D7" label="D7" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -5324,13 +5324,13 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Din #">
-					<DefaultArg genus-name="number" label="5" />
+					<DefaultArg genus-name="DuinoEDU_D5" label="D5" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="CS #">
-					<DefaultArg genus-name="number" label="6" />
+					<DefaultArg genus-name="DuinoEDU_D6" label="D6" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="CLK #">
-					<DefaultArg genus-name="number" label="7" />
+					<DefaultArg genus-name="DuinoEDU_D7" label="D7" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_Brightness">
 					<DefaultArg genus-name="number" label="15" />
@@ -5349,7 +5349,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="Allumé" />
@@ -5368,7 +5368,7 @@
 			</description>			
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90" />
@@ -5775,10 +5775,10 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number" >
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Volume">
 					<DefaultArg genus-name="number" label="1000" />
@@ -5799,10 +5799,10 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number" >
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="3" />
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -5811,6 +5811,186 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_D2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D3" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D4" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D5" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D6" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D7" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D7" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D8" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D8" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D9" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D9" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D10" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D10" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D11" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D11" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D12" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D12" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D13" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D13" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D14" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D14" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D15" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D15" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D16" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D16" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D17" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D17" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D18" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D18" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D19" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D19" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D20" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D20" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_D21" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_D21" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A0" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_A1" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A3" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A4" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A5" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A6" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A7" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A7" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A8" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A8" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A9" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A9" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A10" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A10" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A11" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A11" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A12" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A12" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A13" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A13" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A14" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A14" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+<BlockGenus name="DuinoEDU_A15" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_A15" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>		
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -8896,6 +9076,46 @@
 			<FamilyMember>DuinoEDU_Barometer_Altitude</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_D2</FamilyMember>
+			<FamilyMember>DuinoEDU_D3</FamilyMember>
+			<FamilyMember>DuinoEDU_D4</FamilyMember>
+			<FamilyMember>DuinoEDU_D5</FamilyMember>
+			<FamilyMember>DuinoEDU_D6</FamilyMember>
+			<FamilyMember>DuinoEDU_D7</FamilyMember>
+			<FamilyMember>DuinoEDU_D8</FamilyMember>
+			<FamilyMember>DuinoEDU_D9</FamilyMember>
+			<FamilyMember>DuinoEDU_D10</FamilyMember>
+			<FamilyMember>DuinoEDU_D11</FamilyMember>
+			<FamilyMember>DuinoEDU_D12</FamilyMember>
+			<FamilyMember>DuinoEDU_D13</FamilyMember>
+			<FamilyMember>DuinoEDU_D14</FamilyMember>
+			<FamilyMember>DuinoEDU_D15</FamilyMember>
+			<FamilyMember>DuinoEDU_D16</FamilyMember>
+			<FamilyMember>DuinoEDU_D17</FamilyMember>
+			<FamilyMember>DuinoEDU_D18</FamilyMember>
+			<FamilyMember>DuinoEDU_D19</FamilyMember>
+			<FamilyMember>DuinoEDU_D20</FamilyMember>
+			<FamilyMember>DuinoEDU_D21</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_A0</FamilyMember>
+			<FamilyMember>DuinoEDU_A1</FamilyMember>
+			<FamilyMember>DuinoEDU_A2</FamilyMember>
+			<FamilyMember>DuinoEDU_A3</FamilyMember>
+			<FamilyMember>DuinoEDU_A4</FamilyMember>
+			<FamilyMember>DuinoEDU_A5</FamilyMember>
+			<FamilyMember>DuinoEDU_A6</FamilyMember>
+			<FamilyMember>DuinoEDU_A7</FamilyMember>
+			<FamilyMember>DuinoEDU_A8</FamilyMember>
+			<FamilyMember>DuinoEDU_A9</FamilyMember>
+			<FamilyMember>DuinoEDU_A10</FamilyMember>
+			<FamilyMember>DuinoEDU_A11</FamilyMember>
+			<FamilyMember>DuinoEDU_A12</FamilyMember>
+			<FamilyMember>DuinoEDU_A13</FamilyMember>
+			<FamilyMember>DuinoEDU_A14</FamilyMember>
+			<FamilyMember>DuinoEDU_A15</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -9141,6 +9361,8 @@
 				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
+				<BlockGenusMember>seeed_button</BlockGenusMember>
+				<BlockGenusMember>seeed_led</BlockGenusMember>
 				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_uv_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_single_gyro</BlockGenusMember>
@@ -9159,7 +9381,6 @@
 				<BlockGenusMember>seeed_light_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
 				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_button</BlockGenusMember>
 				<BlockGenusMember>seeed_switch</BlockGenusMember>
 				<BlockGenusMember>seeed_ir_refl_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_heart_rate_sensor</BlockGenusMember>
@@ -9179,7 +9400,6 @@
 				<BlockGenusMember>seeed_solid_relay</BlockGenusMember>
 				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
 				<BlockGenusMember>seeed_led_strip</BlockGenusMember>
-				<BlockGenusMember>seeed_led</BlockGenusMember>
 				<BlockGenusMember>seeed_var_led</BlockGenusMember>
 				<BlockGenusMember>seeed_vib</BlockGenusMember>
 				<BlockGenusMember>seeed_relay</BlockGenusMember>
