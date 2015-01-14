@@ -4301,6 +4301,9 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="2" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.sample">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -4323,7 +4326,13 @@
 					<DefaultArg genus-name="number" label="3" />
 				</BlockConnector>
 					<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
-					<DefaultArg genus-name="number" label="1023" />
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+					<BlockConnector connector-type="number" connector-kind="socket" label="Min">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+					<BlockConnector connector-type="number" connector-kind="socket" label="Max">
+					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -5057,7 +5066,7 @@
 					<DefaultArg genus-name="ada_neopixel_NEO_KHZ800" label="NEO_KHZ800" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="">
-					<DefaultArg genus-name="ada_neopixel_NEO_RGB" label="NEO_RGB" />
+					<DefaultArg genus-name="ada_neopixel_NEO_GRB" label="NEO_GRB" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
@@ -5087,6 +5096,21 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
 					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Nb Led">
+					<DefaultArg genus-name="number" label="30" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.step2">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red_end">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green_end">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue_end">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
 			</BlockConnectors>
 				<Images>
 				<Image>
@@ -5113,6 +5137,21 @@
 					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Nb Led">
+					<DefaultArg genus-name="number" label="30" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.step2">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red_end">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green_end">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue_end">
 					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -5663,7 +5702,7 @@
 				<text>Guino Read</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="string" connector-kind="socket" >
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.name">
 					<DefaultArg genus-name="message" label="graph1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Variable">
@@ -5698,7 +5737,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"  />
-				<BlockConnector connector-type="string" connector-kind="socket" >
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.name" >
 					<DefaultArg genus-name="message" label="pot1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Min">
@@ -5720,13 +5759,55 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
-				<BlockConnector connector-type="string" connector-kind="socket" >
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.name">
 					<DefaultArg genus-name="message" label="inter1" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
 				<FileLocation>com/ardublock/block/seeedstudio/Guino_Interrupteur_virtuel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_MP3_Player" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_MP3_Player">
+			<description>
+				<text>MP3 Player</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number" >
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Volume">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.track">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Mp3Player.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_MP3_Pause" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_MP3_Pause">
+			<description>
+				<text>MP3 Player</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number" >
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="number" label="3" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Mp3Player.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6337,7 +6418,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="number" label="2" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+				<BlockConnector connector-type="number" connector-kind="socket" label="N° Led">
 					<DefaultArg genus-name="number" label="20" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
@@ -9153,7 +9234,9 @@
 				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>		
+				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_MP3_Player</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>		
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>

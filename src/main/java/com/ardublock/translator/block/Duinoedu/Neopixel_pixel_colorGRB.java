@@ -17,22 +17,38 @@ public class Neopixel_pixel_colorGRB  extends TranslatorBlock {
 		{
 			String Pin ;
 			String Pixel_Nb;
-			String Red;
-			String Blue;
-			String Green;
+			String Red_start;
+			String Blue_start;
+			String Green_start;
+			String Nb_Led;
+			String Step;
+			String Red_end;
+			String Blue_end;
+			String Green_end;
+			
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			Pin = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			Pixel_Nb = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-			Red = translatorBlock.toCode();
+			Red_start = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-			Green = translatorBlock.toCode();
+			Green_start = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
-			Blue = translatorBlock.toCode();
+			Blue_start = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(5);
+			Nb_Led = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(6);
+			Step = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(7);
+			Red_end = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(8);
+			Green_end = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(9);
+			Blue_end = translatorBlock.toCode();
 			
 			
-			String ret = "monRuban_pin"+Pin+".preparerPixel("+Pixel_Nb+","+Green+" ,"+Red+" ,"+Blue+" );\n";
+			String ret = "monRuban_pin"+Pin+".preparerPixel("+Pixel_Nb+","+Green_start+" ,"+Red_start+" ,"+Blue_start+" ,"+Nb_Led+" ,"+Step+" ,"+Green_end+" ,"+Red_end+" ,"+Blue_end+" );\n";
 			
 			return codePrefix + ret + codeSuffix;
 				
