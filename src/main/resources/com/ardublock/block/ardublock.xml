@@ -3734,7 +3734,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3751,7 +3751,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3768,7 +3768,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3784,7 +3784,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3800,7 +3800,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3817,7 +3817,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3850,7 +3850,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3867,7 +3867,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3884,7 +3884,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3901,7 +3901,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3918,7 +3918,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3935,7 +3935,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3952,7 +3952,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3969,7 +3969,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -3986,7 +3986,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4003,7 +4003,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -4019,7 +4019,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4038,7 +4038,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4057,7 +4057,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4076,7 +4076,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4095,7 +4095,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4114,7 +4114,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4133,7 +4133,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4152,7 +4152,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4171,7 +4171,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
@@ -4190,7 +4190,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="ON" />
