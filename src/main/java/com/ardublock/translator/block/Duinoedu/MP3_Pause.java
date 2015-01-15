@@ -5,28 +5,31 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Ultrasonic extends TranslatorBlock {
-	public Ultrasonic(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+public class MP3_Pause extends TranslatorBlock {
+	public MP3_Pause(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		String Pin;
-		String Sample;
+		String Clk;
+		String Dio;
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		Pin = translatorBlock.toCode();
+		Clk = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-		Sample = translatorBlock.toCode();
-
+		Dio = translatorBlock.toCode();
+				
+		translator.addHeaderFile("EduMp3.h");
+		translator.addHeaderFile("SoftwareSerial.h");
 		
-		translator.addHeaderFile("Ultrasonic.h");
-		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_Ultrasonic_Grove/ \nUltrasonic monUltrasonic_pin"+Pin+"("+Pin +");"	);
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/ \n"
+				+ "EduMp3 monMp3_"+Clk+Dio+"(" + Clk	+ "," + Dio + ");");
+		translator.addSetupCommand(" monMp3_"+Clk+Dio+".brancher();");
+				
 		
-		String ret = "monUltrasonic_pin"+Pin+".mesurer("+Sample+")";
+		String ret =  "monMp3_"+Clk+Dio+".mettreEnPause();";
 		
-
 		return codePrefix + ret + codeSuffix;
 	}
 	

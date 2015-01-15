@@ -5,8 +5,8 @@ import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class Led_Bar extends TranslatorBlock {
-	public Led_Bar(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+public class MP3_Player extends TranslatorBlock {
+	public MP3_Player(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -15,28 +15,27 @@ public class Led_Bar extends TranslatorBlock {
 	{
 		String Clk;
 		String Dio;
-		String Niveau;
-		String Min;
-		String Max;
+		String Volume;
+		String Track;
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		Dio = translatorBlock.toCode();
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		Clk = translatorBlock.toCode();
+		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+		Dio = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-		Niveau = translatorBlock.toCode();
+		Volume = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-		Min = translatorBlock.toCode();
-		translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
-		Max = translatorBlock.toCode();
+		Track = translatorBlock.toCode();		
 		
+		translator.addHeaderFile("EduMp3.h");
+		translator.addHeaderFile("SoftwareSerial.h");
 		
-		translator.addHeaderFile("LED_Bar.h");
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/ \n"
+				+ "EduMp3 monMp3_"+Clk+Dio+"(" + Clk	+ "," + Dio + ");");
+		translator.addSetupCommand(" monMp3_"+Clk+Dio+".brancher();");
+				
 		
-		
-		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_LedBar_Grove/ \n// Pin Led Bar\n"
-				+ "LED_Bar mesLeds_pin"+Dio+Clk+"(" + Clk
-				+ "," + Dio + ");");
-		String ret = "mesLeds_pin"+Dio+Clk+".afficherTension("+ Niveau +","+ Min+","+ Max+");\n";
+		String ret =  "monMp3_"+Clk+Dio+".lireMorceau(" + Track+ ");\n"
+				+"monMp3_"+Clk+Dio+".reglerVolume(" + Volume+ ");";
 		
 		return codePrefix + ret + codeSuffix;
 	}
