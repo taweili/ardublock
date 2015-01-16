@@ -4224,6 +4224,48 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_infrared_compare" kind="function" color="0 255 0" initlabel="bg.DuinoEDU_infrared_compare">
+			<description>
+				<text>DuinoEDU infrared compare</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
+				</BlockConnector>
+				<BlockConnector connector-type="poly" connector-kind="socket" label="==">
+					<DefaultArg genus-name="char" label="A" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="DuinoEDU_IRREMOTE_MEMORISER_TOUCHE" label="Touche Mem" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/infrared.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+			<BlockGenus name="DuinoEDU_IRREMOTE_MEMORISER_TOUCHE" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_IRREMOTE_MEMORISER_TOUCHE" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_IRREMOTE_MEMORISER_2000_MS" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_IRREMOTE_MEMORISER_2000_MS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_IRREMOTE_MEMORISER_200_MS" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_IRREMOTE_MEMORISER_200_MS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_IRREMOTE_NE_PAS_MEMORISER" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_IRREMOTE_NE_PAS_MEMORISER" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
 		
 						<BlockGenus name="DuinoEDU_temp" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_temp">
 			<description>
@@ -5990,7 +6032,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
-		</BlockGenus>		
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -9116,6 +9158,12 @@
 			<FamilyMember>DuinoEDU_A15</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_IRREMOTE_MEMORISER_TOUCHE</FamilyMember>
+			<FamilyMember>DuinoEDU_IRREMOTE_NE_PAS_MEMORISER</FamilyMember>
+			<FamilyMember>DuinoEDU_IRREMOTE_MEMORISER_200_MS</FamilyMember>
+			<FamilyMember>DuinoEDU_IRREMOTE_MEMORISER_2000_MS</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -9409,6 +9457,7 @@
 			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
 				<BlockGenusMember>DuinoEDU_Led</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_infrared_compare</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
@@ -9456,7 +9505,7 @@
 				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_MP3_Player</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>		
+				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
