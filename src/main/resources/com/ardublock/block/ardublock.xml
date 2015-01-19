@@ -551,6 +551,81 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="PORT_FIX" kind="command" color="77 191 169" initlabel="bg.PORT_FIX">
+			<description>
+				<text>PORTL
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number" >
+					<DefaultArg genus-name="PORTA2" label="PORTA" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="0">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="1">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="2">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="3">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="4">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="5">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="6">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="7">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LEVEL1" kind="data" color="214 169 54" initlabel="bg.LEVEL1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="LEVEL0" kind="data" color="214 169 54" initlabel="bg.LEVEL0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTA2" kind="data" color="77 191 169" initlabel="bg.PORTA2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTB2" kind="data" color="77 191 169" initlabel="bg.PORTB2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTC2" kind="data" color="77 191 169" initlabel="bg.PORTC2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTD2" kind="data" color="77 191 169" initlabel="bg.PORTD2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTH2" kind="data" color="77 191 169" initlabel="bg.PORTH2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTL2" kind="data" color="77 191 169" initlabel="bg.PORTL2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
 		<BlockGenus name="PINA" kind="data" color="77 191 169" initlabel="bg.PINA">
 			<description>
 				<text>PINA</text>
@@ -9090,6 +9165,18 @@
 			<FamilyMember>PORTL</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>PORTA2</FamilyMember>
+			<FamilyMember>PORTB2</FamilyMember>
+			<FamilyMember>PORTC2</FamilyMember>
+			<FamilyMember>PORTD2</FamilyMember>
+			<FamilyMember>PORTH2</FamilyMember>
+			<FamilyMember>PORTL2</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>LEVEL1</FamilyMember>
+			<FamilyMember>LEVEL0</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>PINA</FamilyMember>
 			<FamilyMember>PINB</FamilyMember>
 			<FamilyMember>PINC</FamilyMember>
@@ -9214,6 +9301,7 @@
 				<BlockGenusMember>no_tone</BlockGenusMember>
 				<BlockGenusMember>DDRA</BlockGenusMember>
 				<BlockGenusMember>PORTA</BlockGenusMember>
+				<BlockGenusMember>PORT_FIX</BlockGenusMember>
 				<BlockGenusMember>PINA</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
