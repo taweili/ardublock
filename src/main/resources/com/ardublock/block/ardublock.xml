@@ -371,6 +371,17 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="pin-toggle" kind="command" color="77 191 169" initlabel="bg.pin-toggle">
+			<description>
+				<text>toggle digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="tone" kind="command" color="77 191 169" initlabel="tone">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50%
@@ -9291,6 +9302,7 @@
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
+				<BlockGenusMember>pin-toggle</BlockGenusMember>
 				<BlockGenusMember>df_servo</BlockGenusMember>
 				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
