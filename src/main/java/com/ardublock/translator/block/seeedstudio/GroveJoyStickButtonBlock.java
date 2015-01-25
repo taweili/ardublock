@@ -19,15 +19,11 @@ public class GroveJoyStickButtonBlock extends TranslatorBlock
 	{
 		String ret = "analogRead(A";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		if (translatorBlock instanceof NumberBlock)
-		{
+		
 			ret = ret + translatorBlock.toCode();
 			ret = ret + ") > 1000";
 			return codePrefix + ret + codeSuffix;
-		}
-		else
-		{
-			throw new BlockException(blockId, "analog pin# must be a number");
-		}
+		
+		
 	}
 }
