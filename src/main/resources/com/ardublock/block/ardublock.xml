@@ -1633,7 +1633,7 @@
 	      </BlockConnectors>
 	    </BlockGenus>
 		<!--****************** Utilities *************** -->		
-		<BlockGenus name="servo_default" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_default" kind="command" color="205 133 63"  initlabel="bg.servo">
 			<description>
 				<text>Servo Default</text>
 			</description>
@@ -1645,9 +1645,14 @@
 					<DefaultArg genus-name="number" label="90" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/SG90.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="servo_sg90" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_sg90" kind="command" color="205 133 63"  initlabel="bg.servo">
 			<description>
 				<text>SG90</text>
 			</description>
@@ -1666,7 +1671,7 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="servo_mg996r" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_mg996r" kind="command" color="205 133 63"  initlabel="bg.servo">
 			<description>
 				<text>Servo MG996R</text>
 			</description>
@@ -5212,7 +5217,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel N°">
 					<DefaultArg genus-name="number" label="20" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
@@ -5255,7 +5260,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel N°">
 					<DefaultArg genus-name="number" label="20" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
