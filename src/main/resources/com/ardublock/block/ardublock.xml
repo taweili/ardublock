@@ -903,6 +903,17 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="toint" kind="function" color="149 193 31" initlabel="bg.toint">
+			<description>
+				<text>to int</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.value" />
+				
+			</BlockConnectors>
+		</BlockGenus>
 
 		<BlockGenus name="constrain" kind="function" color="149 193 31" initlabel="bg.constrain">
 			<description>
@@ -9355,6 +9366,7 @@
 				<BlockGenusMember>tan</BlockGenusMember>
 				<BlockGenusMember>random_range</BlockGenusMember>
 				<BlockGenusMember>map</BlockGenusMember>
+				<BlockGenusMember>toint</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
 				<BlockGenusMember>number</BlockGenusMember>
