@@ -5093,7 +5093,7 @@
 				<text>Partie Recepteur</text>
 			</description>			
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
+				<BlockConnector connector-type="string" connector-kind="plug" label="letter" position-type="mirror"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
@@ -6135,6 +6135,160 @@
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_leapmotion_init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_leapmotion_init">
+			<description>
+				<text>Leap motion init</text>
+			</description>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_hand_positionX" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_hand_positionX">
+			<description>
+				<text>DuinoEDU_hand_positionX</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_hand_positionY" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_hand_positionY">
+			<description>
+				<text>DuinoEDU_hand_positionY</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_hand_positionZ" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_hand_positionZ">
+			<description>
+				<text>DuinoEDU_hand_positionZ</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_handRotX" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_handRotX">
+			<description>
+				<text>DuinoEDU_handRotX</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_handRotY" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_handRotY">
+			<description>
+				<text>DuinoEDU_handRotY</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_handRotZ" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_handRotZ">
+			<description>
+				<text>DuinoEDU_handRotZ</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_pouce" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_pouce">
+			<description>
+				<text>DuinoEDU_angle_pouce</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_index" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_index">
+			<description>
+				<text>DuinoEDU_angle_index</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_majeur" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_majeur">
+			<description>
+				<text>DuinoEDU_angle_majeur</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_annulaire" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_annulaire">
+			<description>
+				<text>DuinoEDU_angle_annulaire</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_auriculaire" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_auriculaire">
+			<description>
+				<text>DuinoEDU_angle_auriculaire</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -9278,6 +9432,23 @@
 			<FamilyMember>DuinoEDU_IRREMOTE_MEMORISER_2000_MS</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_hand_positionX</FamilyMember>
+			<FamilyMember>DuinoEDU_hand_positionY</FamilyMember>
+			<FamilyMember>DuinoEDU_hand_positionZ</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_handRotX</FamilyMember>
+			<FamilyMember>DuinoEDU_handRotY</FamilyMember>
+			<FamilyMember>DuinoEDU_handRotZ</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_angle_pouce</FamilyMember>
+			<FamilyMember>DuinoEDU_angle_index</FamilyMember>
+			<FamilyMember>DuinoEDU_angle_majeur</FamilyMember>
+			<FamilyMember>DuinoEDU_angle_annulaire</FamilyMember>
+			<FamilyMember>DuinoEDU_angle_auriculaire</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -9450,6 +9621,10 @@
 				<BlockGenusMember>bleshield_available</BlockGenusMember>
 				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>
 				<BlockGenusMember>bleshield_compare</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_leapmotion_init</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_hand_positionX</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_handRotX</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_angle_pouce</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
