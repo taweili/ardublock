@@ -9592,6 +9592,10 @@
 				<BlockGenusMember>DuinoEDU_Guino_pause</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_column</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_leapmotion_init</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_hand_positionX</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_handRotX</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_angle_pouce</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
@@ -9621,10 +9625,6 @@
 				<BlockGenusMember>bleshield_available</BlockGenusMember>
 				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>
 				<BlockGenusMember>bleshield_compare</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_leapmotion_init</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_hand_positionX</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_handRotX</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_angle_pouce</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
 				<BlockGenusMember>code_head</BlockGenusMember>
