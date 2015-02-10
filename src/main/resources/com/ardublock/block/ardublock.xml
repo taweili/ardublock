@@ -1888,6 +1888,12 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="serial_parseInt" kind="data" color="245 245 245" initlabel="bg.serial_parseInt">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 
 		<BlockGenus name="serial_read_poly" kind="data" color="245 245 245" initlabel="bg.serial_read">
 			<BlockConnectors>
@@ -1897,7 +1903,7 @@
 
 		<BlockGenus name="serial_available" kind="data" color="245 245 245" initlabel="bg.serial_available">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -9576,7 +9582,9 @@
 				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
+				<BlockGenusMember>serial_available</BlockGenusMember>
 				<BlockGenusMember>serial_read</BlockGenusMember>
+				<BlockGenusMember>serial_parseInt</BlockGenusMember>
 				<BlockGenusMember>serial_print</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
