@@ -9550,6 +9550,7 @@
 				<BlockGenusMember>random_range</BlockGenusMember>
 				<BlockGenusMember>map</BlockGenusMember>
 				<BlockGenusMember>toint</BlockGenusMember>
+				<BlockGenusMember>constrain</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
 				<BlockGenusMember>number</BlockGenusMember>
