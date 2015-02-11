@@ -5526,6 +5526,12 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
 					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Min">
+					<DefaultArg genus-name="number" label="15" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Max">
+					<DefaultArg genus-name="number" label="165" />
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
