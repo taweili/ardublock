@@ -1906,6 +1906,12 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="serial_available2" kind="data" color="245 245 245" initlabel="bg.serial_available2">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 
 		<BlockGenus name="serial_print" kind="command" color="245 245 245" initlabel="bg.serial_print">
 			<description>
@@ -9590,6 +9596,7 @@
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_available</BlockGenusMember>
+				<BlockGenusMember>serial_available2</BlockGenusMember>
 				<BlockGenusMember>serial_read</BlockGenusMember>
 				<BlockGenusMember>serial_parseInt</BlockGenusMember>
 				<BlockGenusMember>serial_print</BlockGenusMember>
