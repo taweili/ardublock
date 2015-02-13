@@ -1912,6 +1912,17 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="serial_write" kind="command" color="245 245 245" initlabel="serial_write">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<BlockGenus name="serial_print" kind="command" color="245 245 245" initlabel="bg.serial_print">
 			<description>
@@ -9599,6 +9610,7 @@
 				<BlockGenusMember>serial_available2</BlockGenusMember>
 				<BlockGenusMember>serial_read</BlockGenusMember>
 				<BlockGenusMember>serial_parseInt</BlockGenusMember>
+				<BlockGenusMember>serial_write</BlockGenusMember>
 				<BlockGenusMember>serial_print</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
