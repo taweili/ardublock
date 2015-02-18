@@ -6317,7 +6317,114 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		
+		<BlockGenus name="DuinoEDU_RTC_Mem" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Mem">
+			<description>
+				<text>DuinoEDU RTC Mem</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.day">
+					<DefaultArg genus-name="number" label="18" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.month">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.year">
+					<DefaultArg genus-name="number" label="2015" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.hour">
+					<DefaultArg genus-name="number" label="18" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.minute">
+					<DefaultArg genus-name="number" label="45" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.second">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Day" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Day">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Month" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Month">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Year" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Year">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Hour" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Hour">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Minute" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Minute">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Second" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Second">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -9478,6 +9585,14 @@
 			<FamilyMember>DuinoEDU_angle_auriculaire</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_RTC_Day</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Month</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Year</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Hour</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Minute</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Second</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -9832,6 +9947,8 @@
 				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_MP3_Player</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_RTC_Mem</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_RTC_Day</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
