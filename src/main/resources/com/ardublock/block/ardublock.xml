@@ -4521,6 +4521,9 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.row_number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>

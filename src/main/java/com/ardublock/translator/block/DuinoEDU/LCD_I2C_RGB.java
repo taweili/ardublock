@@ -16,8 +16,11 @@ public class LCD_I2C_RGB  extends TranslatorBlock {
 		public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 		{
 			String line_number;
+			String row_number;
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			line_number = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
+			row_number = translatorBlock.toCode();
 			
 			translator.addHeaderFile("Wire.h");
 			translator.addHeaderFile("rgb_lcd.h");
@@ -27,7 +30,7 @@ public class LCD_I2C_RGB  extends TranslatorBlock {
 			
 			TranslatorBlock translatorBlock2 = this.getRequiredTranslatorBlockAtSocket(0, "monRgb.ecrire(", " );\n");
 			
-			String ret =  "monRgb.placerCurseurEn("+ line_number +");\n" + translatorBlock2.toCode() ;
+			String ret =  "monRgb.placerCurseurEn("+ line_number +","+row_number+");\n" + translatorBlock2.toCode() ;
 			
 			return ret ;	
 		}
