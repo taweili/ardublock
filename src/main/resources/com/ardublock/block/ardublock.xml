@@ -4508,9 +4508,27 @@
 				</Image>
 			</Images>
 			</BlockGenus>
-				
 		
 		<BlockGenus name="DuinoEDU_LCD_I2C_RGB" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_LCD_I2C_RGB">
+			<description>
+				<text>LCD_I2C_RG</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.print">
+					<DefaultArg genus-name="message" label="LCD I2C RGB"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/LCD_Serial_RGB_Backlight.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		
+		<BlockGenus name="DuinoEDU_LCD_I2C_RGB2" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_LCD_I2C_RGB2">
 			<description>
 				<text>LCD_I2C_RG</text>
 			</description>			
@@ -9906,7 +9924,7 @@
 				<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB2</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
 				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB_Clear</BlockGenusMember>	
 				<BlockGenusMember>DuinoEDU_Oled_I2C</BlockGenusMember>
