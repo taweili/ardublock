@@ -6446,6 +6446,36 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_code_head" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_code_head">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="glue_msg" label="HEAD_EN_CACHE0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_code_setup" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_code_setup">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="glue_msg" label="SETUP_EN_CACHE0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_code_loop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_code_loop">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="glue_msg" label="LOOP_EN_CACHE0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -9614,6 +9644,11 @@
 			<FamilyMember>DuinoEDU_RTC_Second</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_code_head</FamilyMember>
+			<FamilyMember>DuinoEDU_code_setup</FamilyMember>
+			<FamilyMember>DuinoEDU_code_loop</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -9800,6 +9835,9 @@
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
 				<BlockGenusMember>code_loop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_head</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_setup</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_loop</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="13 152 164" name="bd.tinkerkit" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
