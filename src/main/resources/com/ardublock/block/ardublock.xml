@@ -6476,6 +6476,156 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Forward" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Forward">
+			<description>
+				<text>Motor_shield forward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Motor_shield_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Back">
+			<description>
+				<text>Motor_shield back</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Motor_shield_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Pivoter">
+			<description>
+				<text>Motor_shield pivote</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Stop">
+			<description>
+				<text>Motor_shield Stop</text>
+			</description>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Speed_Motor">
+			<description>
+				<text>Motor_shield Speed Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_leftspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_rightspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Forward" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Forward">
+			<description>
+				<text>Motor_shield forward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Motor_shield_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Back">
+			<description>
+				<text>Motor_shield back</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Motor_shield_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Pivoter">
+			<description>
+				<text>Motor_shield pivote</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Stop">
+			<description>
+				<text>Motor_shield Stop</text>
+			</description>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Speed_Motor">
+			<description>
+				<text>Motor_shield Speed Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_leftspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_rightspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -9649,6 +9799,11 @@
 			<FamilyMember>DuinoEDU_code_loop</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_Motor_shield_Forward</FamilyMember>
+			<FamilyMember>DuinoEDU_Motor_shield_Back</FamilyMember>
+			<FamilyMember>DuinoEDU_Motor_shield_Pivoter</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10008,6 +10163,9 @@
 				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_RTC_Mem</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_RTC_Day</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Stop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
