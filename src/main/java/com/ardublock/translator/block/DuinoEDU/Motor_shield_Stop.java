@@ -17,7 +17,7 @@ public class Motor_shield_Stop  extends TranslatorBlock {
 		{
 			
 			
-			
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/dupont/EDU_MotorShield_Dupont/");
 			translator.addHeaderFile("MotorShieldDupont.h");
 			translator.addDefinitionCommand("MotorShieldDupont monMotorShield;");
 			translator.addSetupCommand("monMotorShield.brancher();");

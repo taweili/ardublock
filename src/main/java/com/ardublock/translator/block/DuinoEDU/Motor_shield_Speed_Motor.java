@@ -22,6 +22,7 @@ public class Motor_shield_Speed_Motor  extends TranslatorBlock {
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			speed2 = translatorBlock.toCode();
 			
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/dupont/EDU_MotorShield_Dupont/");
 			translator.addHeaderFile("MotorShieldDupont.h");
 			translator.addDefinitionCommand("MotorShieldDupont monMotorShield;");
 			translator.addSetupCommand("monMotorShield.brancher();");

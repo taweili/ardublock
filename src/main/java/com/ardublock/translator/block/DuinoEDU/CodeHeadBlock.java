@@ -15,7 +15,7 @@ public class CodeHeadBlock extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
-		
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/autre/EDU_CodeCache/");
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		translator.addHeaderFile("codeCache.h");
 		String ret = translatorBlock.toCode();

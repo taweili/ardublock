@@ -19,7 +19,7 @@ public class Motor_shield_Forward  extends TranslatorBlock {
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			way = translatorBlock.toCode();
 			
-			
+			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/dupont/EDU_MotorShield_Dupont/");
 			translator.addHeaderFile("MotorShieldDupont.h");
 			translator.addDefinitionCommand("MotorShieldDupont monMotorShield;");
 			translator.addSetupCommand("monMotorShield.brancher();");
