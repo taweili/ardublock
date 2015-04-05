@@ -6674,7 +6674,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6687,7 +6687,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6700,7 +6700,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6713,7 +6713,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6726,7 +6726,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6739,7 +6739,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6752,7 +6752,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6765,7 +6765,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6778,7 +6778,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6795,7 +6795,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6806,7 +6806,7 @@
 			</description>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6822,7 +6822,7 @@
 			</BlockConnectors>		
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6868,7 +6868,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -6884,7 +6884,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
