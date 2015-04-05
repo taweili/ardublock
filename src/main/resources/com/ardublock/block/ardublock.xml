@@ -6743,6 +6743,32 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="Esplora_Slider" kind="data" color="0 255 0" initlabel="bg.Esplora_Slider">
+			<description>
+				<text>Esplora Slider</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Microphone" kind="data" color="0 255 0" initlabel="bg.Esplora_Microphone">
+			<description>
+				<text>Esplora Microphone</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10296,9 +10322,11 @@
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
 			<BlockGenusMember>Esplora_Led</BlockGenusMember>
-			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
+			<BlockGenusMember>Esplora_Slider</BlockGenusMember>
+			<BlockGenusMember>Esplora_Microphone</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
+			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
