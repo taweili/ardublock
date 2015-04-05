@@ -6799,6 +6799,17 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="Esplora_notone" kind="command" color="0 255 0" initlabel="bg.Esplora_notone">
+			<description>
+				<text>Stops the generation of a square wave triggered by tone().
+				</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10353,6 +10364,7 @@
 			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
 			<BlockGenusMember>Esplora_Led</BlockGenusMember>
 			<BlockGenusMember>Esplora_tone</BlockGenusMember>
+			<BlockGenusMember>Esplora_notone</BlockGenusMember>
 			<BlockGenusMember>Esplora_Slider</BlockGenusMember>
 			<BlockGenusMember>Esplora_Microphone</BlockGenusMember>
 			<BlockGenusMember>Esplora_LightSensor</BlockGenusMember>
