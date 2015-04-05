@@ -6670,7 +6670,7 @@
 				<text>Esplora Acceleration X</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>		
 			<Images>
 				<Image>
@@ -6683,7 +6683,7 @@
 				<text>Esplora Acceleration Y</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>		
 			<Images>
 				<Image>
@@ -6696,8 +6696,47 @@
 				<text>Esplora Acceleration Z</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_JoystickX" kind="data" color="0 255 0" initlabel="bg.Esplora_JoystickX">
+			<description>
+				<text>Esplora Esplora_Joystick X</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_JoystickY" kind="data" color="0 255 0" initlabel="bg.Esplora_JoystickY">
+			<description>
+				<text>Esplora Esplora_Joystick Y</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_JoystickSwitch" kind="data" color="0 255 0" initlabel="bg.Esplora_JoystickSwitch">
+			<description>
+				<text>Esplora Joystick Switch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
 			<Images>
 				<Image>
 					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
@@ -9887,6 +9926,10 @@
 			<FamilyMember>Esplora_AccelerationZ</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>Esplora_JoystickX</FamilyMember>
+			<FamilyMember>Esplora_JoystickY</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10254,6 +10297,8 @@
 			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
 			<BlockGenusMember>Esplora_Led</BlockGenusMember>
 			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
