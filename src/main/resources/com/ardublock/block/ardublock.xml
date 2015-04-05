@@ -6626,6 +6626,21 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Drift_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Drift_Motor">
+			<description>
+				<text>Motor_shield Drift Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_drift">
+					<DefaultArg genus-name="number"  label="500" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10166,6 +10181,7 @@
 				<BlockGenusMember>DuinoEDU_Motor_shield_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Motor_shield_Stop</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
