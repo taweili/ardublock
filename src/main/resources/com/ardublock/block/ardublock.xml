@@ -6836,6 +6836,59 @@
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="Esplora_DOWN" kind="data" color="214 169 54" initlabel="bg.Esplora_DOWN">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_LEFT" kind="data" color="214 169 54" initlabel="bg.Esplora_LEFT">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_UP" kind="data" color="214 169 54" initlabel="bg.Esplora_UP">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_RIGHT" kind="data" color="214 169 54" initlabel="bg.Esplora_RIGHT">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_JoystickSwitch2" kind="data" color="0 255 0" initlabel="bg.Esplora_JoystickSwitch2">
+			<description>
+				<text>Esplora Joystick Switch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_DOWN" label="Bas" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Switch" kind="data" color="0 255 0" initlabel="bg.Esplora_Esplora_Switch">
+			<description>
+				<text>Esplora Switch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_DOWN" label="Bas" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10027,6 +10080,12 @@
 			<FamilyMember>Esplora_DEGREES_F</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>Esplora_DOWN</FamilyMember>
+			<FamilyMember>Esplora_LEFT</FamilyMember>
+			<FamilyMember>Esplora_UP</FamilyMember>
+			<FamilyMember>Esplora_RIGHT</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10399,6 +10458,8 @@
 			<BlockGenusMember>Esplora_Microphone</BlockGenusMember>
 			<BlockGenusMember>Esplora_LightSensor</BlockGenusMember>
 			<BlockGenusMember>Esplora_Temp</BlockGenusMember>
+			<BlockGenusMember>Esplora_Switch</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickSwitch2</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
 			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
