@@ -6642,6 +6642,69 @@
 			</Images>
 		</BlockGenus>
 		<!-- end of DuinoEDU -->
+		
+		<!--**** Esplora **** -->
+		<BlockGenus name="Esplora_Led" kind="command" color="0 255 0" initlabel="bg.Esplora_Led">
+			<description>
+				<text>Esplora Led</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_AccelerationX" kind="data" color="0 255 0" initlabel="bg.Esplora_AccelerationX">
+			<description>
+				<text>Esplora Acceleration X</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_AccelerationY" kind="data" color="0 255 0" initlabel="bg.Esplora_AccelerationY">
+			<description>
+				<text>Esplora Acceleration Y</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_AccelerationZ" kind="data" color="0 255 0" initlabel="bg.Esplora_AccelerationZ">
+			<description>
+				<text>Esplora Acceleration Z</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
 		<BlockGenus name="ls_10mmLEDModule" kind="command" color="135 206 235" initlabel="bg.ls_10mmLEDModule">
@@ -9819,6 +9882,11 @@
 			<FamilyMember>DuinoEDU_Motor_shield_Pivoter</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>Esplora_AccelerationX</FamilyMember>
+			<FamilyMember>Esplora_AccelerationY</FamilyMember>
+			<FamilyMember>Esplora_AccelerationZ</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10182,6 +10250,10 @@
 				<BlockGenusMember>DuinoEDU_Motor_shield_Stop</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
+			<BlockGenusMember>Esplora_Led</BlockGenusMember>
+			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
