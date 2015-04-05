@@ -6769,6 +6769,36 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="Esplora_LightSensor" kind="data" color="0 255 0" initlabel="bg.Esplora_LightSensor">
+			<description>
+				<text>Esplora Light Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_tone" kind="command" color="0 255 0" initlabel="bg.Esplora_tone">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50%
+					duty cycle) on a pin.
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10322,8 +10352,10 @@
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
 			<BlockGenusMember>Esplora_Led</BlockGenusMember>
+			<BlockGenusMember>Esplora_tone</BlockGenusMember>
 			<BlockGenusMember>Esplora_Slider</BlockGenusMember>
 			<BlockGenusMember>Esplora_Microphone</BlockGenusMember>
+			<BlockGenusMember>Esplora_LightSensor</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
 			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>

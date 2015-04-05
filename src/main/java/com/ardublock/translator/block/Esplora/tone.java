@@ -6,30 +6,25 @@ import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 
-public class Led extends TranslatorBlock {
+public class tone extends TranslatorBlock {
 
-	public Led (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public tone (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	//@Override
 			public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 			{
-				String Red;
-				String Green;
-				String Blue;
+				
+				String Tone;
 							
 				TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-				Red = translatorBlock.toCode();
-				translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-				Green = translatorBlock.toCode();
-				translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-				Blue = translatorBlock.toCode();
+				Tone = translatorBlock.toCode();
 				
 				translator.addHeaderFile("Esplora.h");
-				String ret = "Esplora.writeRGB("+Red+","+Green+","+Blue+");\n";
+				String ret = "Esplora.readMicrophone("+Tone+");\n";
 				
-				return  ret;
+				return ret;
 					
 			}
 	
