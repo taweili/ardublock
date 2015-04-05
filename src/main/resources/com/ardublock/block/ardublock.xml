@@ -6810,6 +6810,32 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="Esplora_Temp" kind="data" color="0 255 0" initlabel="bg.Esplora_Temp">
+			<description>
+				<text>Esplora temperature</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_DEGREES_C" label="Celsius" />
+				</BlockConnector>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_DEGREES_C" kind="data" color="214 169 54" initlabel="bg.Esplora_DEGREES_C">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_DEGREES_F" kind="data" color="214 169 54" initlabel="bg.Esplora_DEGREES_F">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -9997,6 +10023,10 @@
 			<FamilyMember>Esplora_JoystickY</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>Esplora_DEGREES_C</FamilyMember>
+			<FamilyMember>Esplora_DEGREES_F</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10368,6 +10398,7 @@
 			<BlockGenusMember>Esplora_Slider</BlockGenusMember>
 			<BlockGenusMember>Esplora_Microphone</BlockGenusMember>
 			<BlockGenusMember>Esplora_LightSensor</BlockGenusMember>
+			<BlockGenusMember>Esplora_Temp</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
 			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
