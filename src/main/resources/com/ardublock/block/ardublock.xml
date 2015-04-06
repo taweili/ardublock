@@ -7016,6 +7016,22 @@
 			<BlockConnectors>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Width" kind="data" color="0 255 0" initlabel="bg.Esplora_TFT_Width">
+			<description>
+				<text>Esplora_TFT_Width</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Height" kind="data" color="0 255 0" initlabel="bg.Esplora_TFT_Height">
+			<description>
+				<text>Esplora_TFT_Height</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10228,6 +10244,10 @@
 			<FamilyMember>Esplora_Keyboard_Release</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>Esplora_TFT_Height</FamilyMember>
+			<FamilyMember>Esplora_TFT_Width</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10611,6 +10631,7 @@
 			<BlockGenusMember>Esplora_Keyboard_Click</BlockGenusMember>
 			<BlockGenusMember>Esplora_Keyboard_ReleaseAll</BlockGenusMember>
 			<BlockGenusMember>Esplora_Keyboard_print</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Height</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
