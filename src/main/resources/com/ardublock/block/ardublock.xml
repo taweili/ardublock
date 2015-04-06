@@ -6962,6 +6962,60 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_print" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_print">
+			<description>
+				<text>Esplora_Keyboard_print</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.ln">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_Click" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_Click">
+			<description>
+				<text>Esplora_Keyboard_Click
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
+					<DefaultArg genus-name="message" label="A" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_Press" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_Press">
+			<description>
+				<text>Esplora_Keyboard_Press
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
+					<DefaultArg genus-name="message" label="A" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_Release" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_Release">
+			<description>
+				<text>Esplora_Keyboard_Release
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
+					<DefaultArg genus-name="message" label="A" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_ReleaseAll" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_ReleaseAll">
+			<description>
+				<text>Esplora_Keyboard_ReleaseAll
+				</text>
+			</description>
+			<BlockConnectors>
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10169,6 +10223,11 @@
 			<FamilyMember>Esplora_Mouse_Release</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>Esplora_Keyboard_Click</FamilyMember>
+			<FamilyMember>Esplora_Keyboard_Press</FamilyMember>
+			<FamilyMember>Esplora_Keyboard_Release</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10549,6 +10608,9 @@
 			<BlockGenusMember>Esplora_Mouse_Click</BlockGenusMember>
 			<BlockGenusMember>Esplora_Mouse_isPressed</BlockGenusMember>
 			<BlockGenusMember>Esplora_Mouse_move</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_Click</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_ReleaseAll</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_print</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
