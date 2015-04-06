@@ -6888,7 +6888,80 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		
+		<BlockGenus name="Esplora_RIGHT2" kind="data" color="214 169 54" initlabel="bg.Esplora_RIGHT2">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_LEFT2" kind="data" color="214 169 54" initlabel="bg.Esplora_LEFT2">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_MIDDLE" kind="data" color="214 169 54" initlabel="bg.Esplora_MIDDLE">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_Click" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_Click">
+			<description>
+				<text>Esplora_Mouse_Click
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_LEFT2" label="Gauche" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_Press" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_Press">
+			<description>
+				<text>Esplora_Mouse_Press
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_LEFT2" label="Gauche" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_Release" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_Release">
+			<description>
+				<text>Esplora_Mouse_Release
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_LEFT2" label="Gauche" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_isPressed" kind="data" color="0 255 0" initlabel="bg.Esplora_Mouse_isPressed">
+			<description>
+				<text>Esplora_Mouse_isPressed
+				</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_LEFT2" label="Gauche" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_move" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_move">
+			<description>
+				<text>Esplora_Mouse_move
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="# X">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="# Y">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10086,6 +10159,16 @@
 			<FamilyMember>Esplora_RIGHT</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>Esplora_LEFT2</FamilyMember>
+			<FamilyMember>Esplora_RIGHT2</FamilyMember>
+			<FamilyMember>Esplora_MIDDLE</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_Mouse_Click</FamilyMember>
+			<FamilyMember>Esplora_Mouse_Press</FamilyMember>
+			<FamilyMember>Esplora_Mouse_Release</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10463,6 +10546,9 @@
 			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
 			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_Click</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_isPressed</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_move</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
