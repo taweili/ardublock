@@ -20,7 +20,7 @@ public class Mouse_isPressed extends TranslatorBlock {
 				Click = translatorBlock.toCode();
 				
 				translator.addSetupCommand("Mouse.begin();");
-				String ret = "Mouse.isPressed(MOUSE_"+Click+");\n";
+				String ret = "Mouse.isPressed(MOUSE_"+Click+")";
 				
 				return codePrefix + ret + codeSuffix;
 					

@@ -23,7 +23,7 @@ public class Mouse_move extends TranslatorBlock {
 				Yaxis = translatorBlock.toCode();
 				
 				translator.addSetupCommand("Mouse.begin();");
-				String ret = "Mouse.move("+Xaxis+","+Yaxis+",O);\n";
+				String ret = "Mouse.move("+Xaxis+","+Yaxis+",0);\n";
 				
 				return ret;
 					
