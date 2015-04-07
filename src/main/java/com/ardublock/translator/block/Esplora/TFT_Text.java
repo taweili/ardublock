@@ -6,31 +6,31 @@ import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 
-public class TFT_Line extends TranslatorBlock {
+public class TFT_Text extends TranslatorBlock {
 
-	public TFT_Line (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public TFT_Text (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	//@Override
 			public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 			{
-				String XStart;
-				String YStart;
-				String XEnd;
-				String YEnd;
+				String Message;
+				String XPos;
+				String YPos;
+				String Height;
 				String Red;
 				String Green;
 				String Blue;
 							
 				TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-				XStart = translatorBlock.toCode();
+				Message = translatorBlock.toCode();
 				translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
-				YStart = translatorBlock.toCode();
+				XPos = translatorBlock.toCode();
 				translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
-				XEnd = translatorBlock.toCode();
+				YPos = translatorBlock.toCode();
 				translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
-				YEnd = translatorBlock.toCode();
+				Height = translatorBlock.toCode();
 				translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
 				Red = translatorBlock.toCode();
 				translatorBlock = this.getRequiredTranslatorBlockAtSocket(5);
@@ -46,7 +46,8 @@ public class TFT_Line extends TranslatorBlock {
 				
 				translator.addSetupCommand("EsploraTFT.begin();");
 				String ret = "EsploraTFT.stroke("+Red+","+Green+","+Blue+");\n"+
-				"EsploraTFT.line("+XStart+","+YStart+","+XEnd+","+YEnd+");";
+				"EsploraTFT.setTextSize("+Height+");"+
+				"EsploraTFT.text("+Message+","+XPos+","+YPos+");";
 				
 				return ret;
 					

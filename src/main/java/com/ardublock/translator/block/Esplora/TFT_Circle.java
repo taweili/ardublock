@@ -65,7 +65,7 @@ public class TFT_Circle extends TranslatorBlock {
 					ret += "EsploraTFT.noStroke();\n";
 				}
 				if (Fill.equals("true")) {
-					ret +="EsploraTFT.Fill("+Red_Fill+","+Green_Fill+","+Blue_Fill+");\n";
+					ret +="EsploraTFT.fill("+Red_Fill+","+Green_Fill+","+Blue_Fill+");\n";
 				}
 				else
 				{

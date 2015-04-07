@@ -7085,10 +7085,16 @@
 				<text>Esplora TFT Line</text>
 			</description>
 				<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.XStart">
 					<DefaultArg genus-name="number" label="10" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.YStart">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.XEnd">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.YEnd">
 					<DefaultArg genus-name="number" label="50" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
@@ -7195,6 +7201,39 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
 					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Text" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Text">
+			<description>
+				<text>Esplora TFT Text</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Message" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -10808,6 +10847,7 @@
 			<BlockGenusMember>Esplora_TFT_Line</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Circle</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Rect</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Text</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>

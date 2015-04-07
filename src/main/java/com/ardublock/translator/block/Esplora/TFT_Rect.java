@@ -68,13 +68,13 @@ public class TFT_Rect extends TranslatorBlock {
 					ret += "EsploraTFT.noStroke();\n";
 				}
 				if (Fill.equals("true")) {
-					ret +="EsploraTFT.Fill("+Red_Fill+","+Green_Fill+","+Blue_Fill+");\n";
+					ret +="EsploraTFT.fill("+Red_Fill+","+Green_Fill+","+Blue_Fill+");\n";
 				}
 				else
 				{
 					ret += "EsploraTFT.noFill();\n";
 				}
-				ret +="EsploraTFT.circle("+XPos+","+YPos+","+Width+","+Height+");";
+				ret +="EsploraTFT.rect("+XPos+","+YPos+","+Width+","+Height+");";
 				
 				return ret;
 					
