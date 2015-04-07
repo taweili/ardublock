@@ -7242,6 +7242,94 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="setter_variable_PImage" kind="command" color="32 102 204" initlabel="bg.setter_variable_PImage">
+	      <description>
+	        <text>set String PImage</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="message" label="message" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+		<BlockGenus name="variable_PImage" kind="data" color="32 102 204" initlabel="bg.variable_PImage" editable-label="yes">
+			<description>
+				<text>PImage</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Load_Image" kind="command" color="32 102 204" initlabel="Esplora_Load_Image">
+	      <description>
+	        <text>Esplora loadImage</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="message" label="Name.bmp" />
+	        </BlockConnector>
+			<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+	    <BlockGenus name="Esplora_Image_isValid" kind="data" color="32 102 204" initlabel="bg.Esplora_Image_isValid">
+			<description>
+				<text>Esplora_Image_isValid</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Image_Width" kind="data" color="32 102 204" initlabel="bg.Esplora_Image_Width">
+			<description>
+				<text>Esplora_Image_Width</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Image_Height" kind="data" color="32 102 204" initlabel="bg.Esplora_Image_Height">
+			<description>
+				<text>Esplora_Image_Height</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Display_Image" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_move">
+			<description>
+				<text>Esplora_TFT_Display_Image</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="# X">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="# Y">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10458,6 +10546,10 @@
 			<FamilyMember>Esplora_TFT_Width</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>Esplora_Image_Height</FamilyMember>
+			<FamilyMember>Esplora_Image_Width</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10848,6 +10940,12 @@
 			<BlockGenusMember>Esplora_TFT_Circle</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Rect</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Text</BlockGenusMember>
+			<BlockGenusMember>setter_variable_PImage</BlockGenusMember>
+			<BlockGenusMember>variable_PImage</BlockGenusMember>
+			<BlockGenusMember>Esplora_Image_Width</BlockGenusMember>
+			<BlockGenusMember>Esplora_Load_Image</BlockGenusMember>
+			<BlockGenusMember>Esplora_Image_isValid</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Display_Image</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
