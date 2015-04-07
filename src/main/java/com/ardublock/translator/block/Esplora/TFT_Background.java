@@ -6,24 +6,34 @@ import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
 
-public class TFT_Width extends TranslatorBlock {
+public class TFT_Background extends TranslatorBlock {
 
-	public TFT_Width (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public TFT_Background (Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
 	//@Override
 			public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 			{
-				
+				String Red;
+				String Green;
+				String Blue;
+							
+				TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+				Red = translatorBlock.toCode();
+				translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+				Green = translatorBlock.toCode();
+				translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
+				Blue = translatorBlock.toCode();
 				
 				translator.addHeaderFile("Esplora.h");
 				translator.addHeaderFile("TFT.h");
 				translator.addHeaderFile("SPI.h");
-				String ret = "EsploraTFT.width()";
 				
 				translator.addSetupCommand("EsploraTFT.begin();");
-				return codePrefix + ret + codeSuffix;
+				String ret = "EsploraTFT.background("+Red+","+Green+","+Blue+");";
+				
+				return ret;
 					
 			}
 	

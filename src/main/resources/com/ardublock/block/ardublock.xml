@@ -6649,13 +6649,13 @@
 				<text>Esplora Led</text>
 			</description>
 				<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -7031,6 +7031,177 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Background" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Background">
+			<description>
+				<text>Esplora TFT Background</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Point" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Point">
+			<description>
+				<text>Esplora TFT Point</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Line" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Line">
+			<description>
+				<text>Esplora TFT Line</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Circle" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Circle">
+			<description>
+				<text>Esplora TFT Circle</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="40" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Radius">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.Fill">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.Stroke">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Rect" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Rect">
+			<description>
+				<text>Esplora TFT Rect</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="40" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Width">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.Fill">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.Stroke">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<!-- end of Esplora -->
 
@@ -10631,7 +10802,12 @@
 			<BlockGenusMember>Esplora_Keyboard_Click</BlockGenusMember>
 			<BlockGenusMember>Esplora_Keyboard_ReleaseAll</BlockGenusMember>
 			<BlockGenusMember>Esplora_Keyboard_print</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Background</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Height</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Point</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Line</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Circle</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Rect</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
