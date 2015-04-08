@@ -1,13 +1,13 @@
-package com.ardublock.translator.block.storage;
+package com.ardublock.translator.block.Esplora;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 
-public class SDWrite2Block extends TranslatorBlock
+public class SD_Write extends TranslatorBlock
 {
-	public SDWrite2Block(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
+	public SD_Write(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
 	{
 		super(blockId, translator, codePrefix, codeSuffix, label);
 	}
@@ -15,8 +15,10 @@ public class SDWrite2Block extends TranslatorBlock
 	@Override
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
+		translator.addHeaderFile("Esplora.h");
+		translator.addHeaderFile("SPI.h");
 		translator.addHeaderFile("SD.h");
-	    translator.addSetupCommand("\tconst int chipSelect = 10;\n\tSD.begin(chipSelect);\n");
+	    translator.addSetupCommand("\tconst int chipSelect = 8;\n\tSD.begin(chipSelect);\n");
 		TranslatorBlock data = this.getRequiredTranslatorBlockAtSocket(0);
 		String ret="\tFile datafile = SD.open(\""+data.toCode()+"\", FILE_WRITE);\n";
 		ret+="\tif(datafile){\n";

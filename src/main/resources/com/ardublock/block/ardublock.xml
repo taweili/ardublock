@@ -2114,7 +2114,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
 		<!-- <BlockGenus name="sd_write" kind="command" color="0 100 90" -->
 		<!-- initlabel="bg.sd_write"> -->
 		<!-- <description> -->
@@ -7330,6 +7330,79 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="Espora_SD_Write" kind="command" color="0 100 90" initlabel="Espora_SD_Write">
+			<description>
+				<text>Write to SD card</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="File">
+					<DefaultArg genus-name="glue_msg" label="file.txt" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="Data">
+					<DefaultArg genus-name="message" label="Message" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.ln">
+					<DefaultArg genus-name="true" label="True" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Espora_SD_Begin" kind="data" color="0 100 90" initlabel="bg.Espora_SD_Begin">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Setter_Variable_File" kind="command" color="0 100 90" initlabel="bg.Esplora_Setter_Variable_File">
+	      <description>
+	        <text>Set Variable File</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="Esplora_Variable_File" label="File variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="message" label="file.txt" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+		<BlockGenus name="Esplora_Variable_File" kind="data" color="0 100 90" initlabel="bg.Esplora_Variable_File" editable-label="yes">
+			<description>
+				<text>Variable File</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Variable_File_Bool" kind="data" color="0 100 90" initlabel="bg.Esplora_Variable_File_Bool" editable-label="yes">
+			<description>
+				<text>Variable File Boolean</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_File_Available" kind="data" color="0 100 90" initlabel="bg.Esplora_File_Available">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="Esplora_Variable_File" label="File variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_File_Read" kind="data" color="0 100 90" initlabel="bg.Esplora_File_Available">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug"/>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="Esplora_Variable_File" label="File variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_File_Close" kind="command" color="0 100 90" initlabel="bg.Esplora_File_Close">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="Esplora_Variable_File" label="File variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10946,6 +11019,14 @@
 			<BlockGenusMember>Esplora_Load_Image</BlockGenusMember>
 			<BlockGenusMember>Esplora_Image_isValid</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Display_Image</BlockGenusMember>
+			<BlockGenusMember>Espora_SD_Write</BlockGenusMember>
+			<BlockGenusMember>Espora_SD_Begin</BlockGenusMember>
+			<BlockGenusMember>Esplora_Setter_Variable_File</BlockGenusMember>
+			<BlockGenusMember>Esplora_Variable_File</BlockGenusMember>
+			<BlockGenusMember>Esplora_Variable_File_Bool</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Available</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Read</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Close</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
