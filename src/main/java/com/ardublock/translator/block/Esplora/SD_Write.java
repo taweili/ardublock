@@ -18,8 +18,11 @@ public class SD_Write extends TranslatorBlock
 		translator.addHeaderFile("Esplora.h");
 		translator.addHeaderFile("SPI.h");
 		translator.addHeaderFile("SD.h");
-	    translator.addSetupCommand("\tconst int chipSelect = 8;\n\tSD.begin(chipSelect);\n");
-		TranslatorBlock data = this.getRequiredTranslatorBlockAtSocket(0);
+		translator.addHeaderFile("TFT.h");
+		translator.addDefinitionCommand("\tconst int chipSelect = 8;");
+	    translator.addSetupCommand("SD.begin(chipSelect);");
+	    
+	    TranslatorBlock data = this.getRequiredTranslatorBlockAtSocket(0);
 		String ret="\tFile datafile = SD.open(\""+data.toCode()+"\", FILE_WRITE);\n";
 		ret+="\tif(datafile){\n";
         data=this.getRequiredTranslatorBlockAtSocket(1, "\t\tdatafile.print( ", " );\n\t\tdatafile.print(\" \");\n");

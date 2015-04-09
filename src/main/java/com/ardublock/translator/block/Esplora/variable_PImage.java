@@ -13,12 +13,15 @@ public class variable_PImage extends TranslatorBlock
 	@Override
 	public String toCode()
 	{
+		translator.addHeaderFile("SD.h");
+		translator.addHeaderFile("TFT.h");
+		
 		String internalVariableName = translator.getNumberVariable(label);
 		if (internalVariableName == null)
 		{
 			internalVariableName = translator.buildVariableName(label);
 			translator.addNumberVariable(label, internalVariableName);
-			translator.addDefinitionCommand("PImage " + internalVariableName + " = \"\" ;");
+			translator.addDefinitionCommand("PImage " + internalVariableName + ";");
 //			translator.addSetupCommand(internalVariableName + " = \"\";");
 		}
 		return codePrefix + internalVariableName + codeSuffix;

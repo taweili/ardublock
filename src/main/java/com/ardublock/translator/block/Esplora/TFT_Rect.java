@@ -54,8 +54,9 @@ public class TFT_Rect extends TranslatorBlock {
 				Blue_Stroke = translatorBlock.toCode();
 				
 				translator.addHeaderFile("Esplora.h");
-				translator.addHeaderFile("TFT.h");
 				translator.addHeaderFile("SPI.h");
+				translator.addHeaderFile("SD.h");
+				translator.addHeaderFile("TFT.h");
 				
 				translator.addSetupCommand("EsploraTFT.begin();");
 				String ret ="";

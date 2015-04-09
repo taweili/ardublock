@@ -18,8 +18,10 @@ public class TFT_Height extends TranslatorBlock {
 				
 				
 				translator.addHeaderFile("Esplora.h");
-				translator.addHeaderFile("TFT.h");
 				translator.addHeaderFile("SPI.h");
+				translator.addHeaderFile("SD.h");
+				translator.addHeaderFile("TFT.h");
+				
 				String ret = "EsploraTFT.height()";
 				
 				translator.addSetupCommand("EsploraTFT.begin();");

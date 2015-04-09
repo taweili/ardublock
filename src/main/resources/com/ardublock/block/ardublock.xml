@@ -11013,10 +11013,9 @@
 			<BlockGenusMember>Esplora_TFT_Circle</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Rect</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Text</BlockGenusMember>
-			<BlockGenusMember>setter_variable_PImage</BlockGenusMember>
+			<BlockGenusMember>Esplora_Load_Image</BlockGenusMember>
 			<BlockGenusMember>variable_PImage</BlockGenusMember>
 			<BlockGenusMember>Esplora_Image_Width</BlockGenusMember>
-			<BlockGenusMember>Esplora_Load_Image</BlockGenusMember>
 			<BlockGenusMember>Esplora_Image_isValid</BlockGenusMember>
 			<BlockGenusMember>Esplora_TFT_Display_Image</BlockGenusMember>
 			<BlockGenusMember>Espora_SD_Write</BlockGenusMember>

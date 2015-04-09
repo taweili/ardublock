@@ -28,8 +28,10 @@ public class Setter_Variable_File extends TranslatorBlock
 		translator.addHeaderFile("Esplora.h");
 		translator.addHeaderFile("SPI.h");
 		translator.addHeaderFile("SD.h");
-	    translator.addSetupCommand("\tconst int chipSelect = 8;\n\tSD.begin(chipSelect);\n");
-		
+		translator.addHeaderFile("TFT.h");
+		translator.addDefinitionCommand("\tconst int chipSelect = 8;");
+	    translator.addSetupCommand("SD.begin(chipSelect);");
+	    
 		String ret = tb.toCode();
 		tb = this.getRequiredTranslatorBlockAtSocket(1);
 		ret = ret + " = SD.open(" + tb.toCode() + ");\n";

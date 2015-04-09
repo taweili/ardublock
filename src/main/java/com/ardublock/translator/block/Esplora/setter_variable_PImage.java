@@ -24,7 +24,8 @@ public class setter_variable_PImage extends TranslatorBlock
 		if (!(tb instanceof variable_PImage)) {
 			throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.string_var_slot"));
 		}
-		
+		translator.addHeaderFile("SD.h");
+		translator.addHeaderFile("TFT.h");
 		String ret = tb.toCode();
 		tb = this.getRequiredTranslatorBlockAtSocket(1);
 		ret = ret + " = " + tb.toCode() + " ;\n";

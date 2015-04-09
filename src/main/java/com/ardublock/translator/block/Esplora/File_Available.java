@@ -24,8 +24,10 @@ public class File_Available extends TranslatorBlock
 		translator.addHeaderFile("Esplora.h");
 		translator.addHeaderFile("SPI.h");
 		translator.addHeaderFile("SD.h");
-	    translator.addSetupCommand("\tconst int chipSelect = 8;\n\tSD.begin(chipSelect);\n");
-		String ret = Variable + ".available()";
+		translator.addDefinitionCommand("\tconst int chipSelect = 8;");
+	    translator.addSetupCommand("SD.begin(chipSelect);");
+	    
+	    String ret = Variable + ".available()";
 	    
 		return codePrefix + ret + codeSuffix;
 	}

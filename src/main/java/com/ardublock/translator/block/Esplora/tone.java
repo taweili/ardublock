@@ -22,7 +22,7 @@ public class tone extends TranslatorBlock {
 				Tone = translatorBlock.toCode();
 				
 				translator.addHeaderFile("Esplora.h");
-				String ret = "Esplora.readMicrophone("+Tone+");\n";
+				String ret = "Esplora.tone("+Tone+");\n";
 				
 				return ret;
 					
