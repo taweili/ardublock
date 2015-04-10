@@ -21,7 +21,7 @@ public class Neopixel_Clear  extends TranslatorBlock {
 			Pin = translatorBlock.toCode();
 			
 			
-			String ret = "monRuban_pin"+Pin+".effacerTout()\n";
+			String ret = "monRuban_pin"+Pin+".effacerTout();\n";
 			
 			return codePrefix + ret + codeSuffix;
 				

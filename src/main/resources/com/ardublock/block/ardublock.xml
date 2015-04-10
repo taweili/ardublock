@@ -7403,6 +7403,16 @@
 	        </BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="ESPLORA_OUTA" kind="data" color="214 169 54" initlabel="bg.ESPLORA_OUTA" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="ESPLORA_OUTB" kind="data" color="214 169 54" initlabel="bg.ESPLORA_OUTB" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
 		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
@@ -10623,6 +10633,10 @@
 			<FamilyMember>Esplora_Image_Width</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>ESPLORA_OUTA</FamilyMember>
+			<FamilyMember>ESPLORA_OUTB</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -11000,6 +11014,7 @@
 			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
 			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
 			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
+			<BlockGenusMember>ESPLORA_OUTA</BlockGenusMember>
 			<BlockGenusMember>Esplora_Mouse_Click</BlockGenusMember>
 			<BlockGenusMember>Esplora_Mouse_isPressed</BlockGenusMember>
 			<BlockGenusMember>Esplora_Mouse_move</BlockGenusMember>
