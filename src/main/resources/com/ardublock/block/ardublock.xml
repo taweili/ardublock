@@ -2018,6 +2018,60 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="Serialplus_send_variable_number" kind="command" color="232 156 149" initlabel="bg.Serialplus_send_variable_number">
+			<description>
+				<text>Send integer variable</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Variable">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_send_variable_digital" kind="command" color="204 153 255" initlabel="bg.Serialplus_send_variable_digital">
+			<description>
+				<text>Send digital </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="Variable">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_receive_number" kind="data" color="232 156 149" initlabel="bg.Serialplus_receive_number">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_receive_digital" kind="data" color="204 153 255" initlabel="bg.Serialplus_receive_digital">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!-- ******************** Storage *************** -->
 		<BlockGenus name="eeprom_read_int" kind="data" color="0 100 90" initlabel="bg.eeprom_read_int">
@@ -10819,6 +10873,10 @@
 				<BlockGenusMember>DuinoEDU_hand_positionX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_handRotX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_angle_pouce</BlockGenusMember>
+				<BlockGenusMember>Serialplus_send_variable_number</BlockGenusMember>
+				<BlockGenusMember>Serialplus_send_variable_digital</BlockGenusMember>
+				<BlockGenusMember>Serialplus_receive_number</BlockGenusMember>
+				<BlockGenusMember>Serialplus_receive_digital</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
