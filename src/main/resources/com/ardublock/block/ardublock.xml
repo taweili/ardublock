@@ -2023,7 +2023,7 @@
 				<text>Send integer variable</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Variable">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
@@ -2031,6 +2031,9 @@
 				</BlockConnector>
 				<BlockConnector connector-type="string" connector-kind="socket">
 					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.interval">
+					<DefaultArg genus-name="number" label="100" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2039,7 +2042,7 @@
 				<text>Send digital </text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="Variable">
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="digital-high" label="HIGH" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
@@ -2047,6 +2050,9 @@
 				</BlockConnector>
 				<BlockConnector connector-type="string" connector-kind="socket">
 					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.interval">
+					<DefaultArg genus-name="number" label="100" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>

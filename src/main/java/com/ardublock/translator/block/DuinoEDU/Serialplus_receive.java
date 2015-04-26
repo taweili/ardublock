@@ -21,10 +21,11 @@ public class Serialplus_receive extends TranslatorBlock {
 		Serial = translatorBlock.toCode();
 		
 		translator.addHeaderFile("SerialPlus.h");
-		translator.addDefinitionCommand("SerialPlus monSerialPlus;"	);
-		translator.addSetupCommand("monSerialPlus.branch(&"+Serial.replace("\"","")+"); \nmonSerialPlus.begin(9600);");
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/autre/EDU_SerialPlus/");
+		translator.addDefinitionCommand("SerialPlus mon"+Serial.replace("\"","")+"Plus;"	);
+		translator.addSetupCommand("mon"+Serial.replace("\"","")+"Plus.branch(&"+Serial.replace("\"","")+"); \nmon"+Serial.replace("\"","")+"Plus.begin(9600);");
 		
-		String ret = "monSerialPlus.readNbr(CANAL"+Canal+")";
+		String ret = "mon"+Serial.replace("\"","")+"Plus.readNbr(CANAL"+Canal+")";
 
 		return codePrefix + ret + codeSuffix;
 	}
