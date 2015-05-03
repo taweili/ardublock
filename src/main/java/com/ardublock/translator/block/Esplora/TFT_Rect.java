@@ -62,14 +62,14 @@ public class TFT_Rect extends TranslatorBlock {
 				String ret ="";
 				
 				if (Stroke.equals("true")) {
-					ret += "EsploraTFT.stroke("+Red_Stroke+","+Green_Stroke+","+Blue_Stroke+");\n";
+					ret += "EsploraTFT.stroke("+Blue_Stroke+","+Green_Stroke+","+Red_Stroke+");\n";
 				}
 				else
 				{
 					ret += "EsploraTFT.noStroke();\n";
 				}
 				if (Fill.equals("true")) {
-					ret +="EsploraTFT.fill("+Red_Fill+","+Green_Fill+","+Blue_Fill+");\n";
+					ret +="EsploraTFT.fill("+Blue_Fill+","+Green_Fill+","+Red_Fill+");\n";
 				}
 				else
 				{

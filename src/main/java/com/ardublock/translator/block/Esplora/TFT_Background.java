@@ -32,7 +32,7 @@ public class TFT_Background extends TranslatorBlock {
 				translator.addHeaderFile("TFT.h");
 				
 				translator.addSetupCommand("EsploraTFT.begin();");
-				String ret = "EsploraTFT.background("+Red+","+Green+","+Blue+");";
+				String ret = "EsploraTFT.background("+Blue+","+Green+","+Red+");";
 				
 				return ret;
 					

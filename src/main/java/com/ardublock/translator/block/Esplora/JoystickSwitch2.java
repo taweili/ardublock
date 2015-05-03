@@ -20,7 +20,7 @@ public class JoystickSwitch2 extends TranslatorBlock {
 				TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 				Switch = translatorBlock.toCode();
 				translator.addHeaderFile("Esplora.h");
-				String ret = "Esplora.readButton(JOYSTICK_"+Switch+")";
+				String ret = "!Esplora.readButton(JOYSTICK_"+Switch+")";
 				
 				return codePrefix + ret + codeSuffix;
 					

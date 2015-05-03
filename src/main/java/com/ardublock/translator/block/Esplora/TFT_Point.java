@@ -40,7 +40,7 @@ public class TFT_Point extends TranslatorBlock {
 				translator.addHeaderFile("TFT.h");
 				
 				translator.addSetupCommand("EsploraTFT.begin();");
-				String ret = "EsploraTFT.stroke("+Red+","+Green+","+Blue+");\n"+
+				String ret = "EsploraTFT.stroke("+Blue+","+Green+","+Red+");\n"+
 				"EsploraTFT.point("+XPos+","+YPos+");";
 				
 				return ret;

@@ -20,7 +20,7 @@ public class Switch extends TranslatorBlock {
 				TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 				Switch = translatorBlock.toCode();
 				translator.addHeaderFile("Esplora.h");
-				String ret = "Esplora.readButton(SWITCH_"+Switch+")";
+				String ret = "!Esplora.readButton(SWITCH_"+Switch+")";
 				
 				return codePrefix + ret + codeSuffix;
 					

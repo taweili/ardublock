@@ -46,7 +46,7 @@ public class TFT_Text extends TranslatorBlock {
 				translator.addHeaderFile("TFT.h");
 				
 				translator.addSetupCommand("EsploraTFT.begin();");
-				String ret = "EsploraTFT.stroke("+Red+","+Green+","+Blue+");\n"+
+				String ret = "EsploraTFT.stroke("+Blue+","+Green+","+Red+");\n"+
 				"EsploraTFT.setTextSize("+Height+");"+
 				"EsploraTFT.text("+Message+","+XPos+","+YPos+");";
 				

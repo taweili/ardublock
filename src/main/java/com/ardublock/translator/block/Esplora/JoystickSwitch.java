@@ -18,7 +18,7 @@ public class JoystickSwitch extends TranslatorBlock {
 				
 				
 				translator.addHeaderFile("Esplora.h");
-				String ret = "Esplora.readJoystickSwitch()";
+				String ret = "!Esplora.readJoystickSwitch()";
 				
 				return codePrefix + ret + codeSuffix;
 					

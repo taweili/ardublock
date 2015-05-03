@@ -7157,9 +7157,6 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.YEnd">
 					<DefaultArg genus-name="number" label="50" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
-					<DefaultArg genus-name="number" label="100" />
-				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
