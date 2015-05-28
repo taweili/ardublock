@@ -13,6 +13,10 @@ public class handRotY extends TranslatorBlock
 
 	@Override
 	public String toCode() throws SocketNullException {
+		translator.addHeaderFile("SerialPlus.h");
+		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/autre/EDU_SerialPlus/");
+		translator.addDefinitionCommand("SerialPlus monSerialLeap;");
+		translator.addSetupCommand("monSerialLeap.branch(&Serial); \nmonSerialLeap.begin(9600);");
 		return codePrefix + "handRotY" + codeSuffix;
 	}
 

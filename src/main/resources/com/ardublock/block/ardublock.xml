@@ -6245,16 +6245,6 @@
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="DuinoEDU_leapmotion_init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_leapmotion_init">
-			<description>
-				<text>Leap motion init</text>
-			</description>
-			<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
-				</Image>
-			</Images>
-		</BlockGenus>
 		<BlockGenus name="DuinoEDU_hand_positionX" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_hand_positionX">
 			<description>
 				<text>DuinoEDU_hand_positionX</text>
@@ -10872,7 +10862,6 @@
 				<BlockGenusMember>DuinoEDU_Guino_pause</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_column</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_leapmotion_init</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_hand_positionX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_handRotX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_angle_pouce</BlockGenusMember>

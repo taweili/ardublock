@@ -6,7 +6,7 @@ import java.util.List;
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.SocketNullException;
 import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
-import com.ardublock.translator.block.Duinoedu.Leapmotion_init;
+
 
 public class ProgramBlock extends TranslatorBlock
 {
@@ -24,14 +24,11 @@ public class ProgramBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 	    String ret="";
-	    Boolean leapmotion= false;
+	    
 		TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
 		while (translatorBlock != null)
 		{
-			if (translatorBlock instanceof Leapmotion_init)
-			{
-				leapmotion= true;;	
-			}
+			
 			ret = translatorBlock.toCode();
 			translatorBlock = translatorBlock.nextTranslatorBlock();
 			this.setupCommand.add(ret);
@@ -44,10 +41,7 @@ public class ProgramBlock extends TranslatorBlock
 		TranslatorBlock translatorBlock2 = getTranslatorBlockAtSocket(1);
 		while (translatorBlock2 != null)
 		{
-			if (translatorBlock instanceof Leapmotion_init)
-			{
-				leapmotion= true;
-			}
+			
 			ret = ret + translatorBlock2.toCode();
 			translatorBlock2 = translatorBlock2.nextTranslatorBlock();
 		}
@@ -56,10 +50,7 @@ public class ProgramBlock extends TranslatorBlock
 		{
 			ret += "yield();\n";
 		}
-		if (leapmotion)
-		{
-			ret = ret + "}\n";	
-		}
+		
 		ret = ret + "}\n\n";
 		return ret;
 	}
