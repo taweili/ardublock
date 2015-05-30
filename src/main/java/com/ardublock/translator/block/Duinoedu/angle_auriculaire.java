@@ -17,7 +17,8 @@ public class angle_auriculaire extends TranslatorBlock
 		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/autre/EDU_SerialPlus/");
 		translator.addDefinitionCommand("SerialPlus monSerialLeap;");
 		translator.addSetupCommand("monSerialLeap.branch(&Serial); \nmonSerialLeap.begin(9600);");
-		return codePrefix + "angle_auriculaire" + codeSuffix;
+		//return codePrefix + "angle_auriculaire" + codeSuffix;
+		return codePrefix + "monSerialLeap.readNbr(CANAL90)" + codeSuffix;
 	}
 
 }

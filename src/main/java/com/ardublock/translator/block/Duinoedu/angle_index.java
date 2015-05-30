@@ -17,7 +17,8 @@ public class angle_index extends TranslatorBlock
 		translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/autre/EDU_SerialPlus/");
 		translator.addDefinitionCommand("SerialPlus monSerialLeap;");
 		translator.addSetupCommand("monSerialLeap.branch(&Serial); \nmonSerialLeap.begin(9600);");
-		return codePrefix + "angle_index" + codeSuffix;
+		//return codePrefix + "angle_index" + codeSuffix;
+		return codePrefix + "monSerialLeap.readNbr(CANAL87)" + codeSuffix;
 	}
 
 }
