@@ -2172,6 +2172,9 @@
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.ln">
 					<DefaultArg genus-name="true" label="True" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -2252,6 +2255,56 @@
 		<!-- connector-kind="mirror" /> -->
 		<!-- </BlockConnectors> -->
 		<!-- </BlockGenus> -->
+		<BlockGenus name="MaSD_file" kind="command" color="0 255 0" initlabel="bg.MaSD_file">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.File">
+					<DefaultArg genus-name="glue_msg" label="file.txt" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_Write" kind="command" color="0 255 0" initlabel="bg.MaSD_Write">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="Data">
+					<DefaultArg genus-name="message" label="Message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_NewLine" kind="command" color="0 255 0" initlabel="bg.MaSD_NewLine">
+			<BlockConnectors>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="GROVE_CS" kind="data" color="214 169 54" initlabel="bg.GROVE_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DUPONT_CS" kind="data" color="214 169 54" initlabel="bg.DUPONT_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="ESPLORA_CS" kind="data" color="214 169 54" initlabel="bg.ESPLORA_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_Connect" kind="command" color="0 255 0" initlabel="bg.MaSD_Connect">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS">
+					<DefaultArg genus-name="GROVE_CS" label="GROVE_CS" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_separator" kind="command" color="0 255 0" initlabel="bg.MaSD_separator">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.space">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.tab">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!-- ******************** Especial Menu *************** -->
 
@@ -10714,6 +10767,11 @@
 			<FamilyMember>ESPLORA_INB</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>GROVE_CS</FamilyMember>
+			<FamilyMember>DUPONT_CS</FamilyMember>
+			<FamilyMember>ESPLORA_CS</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
 			<FamilyMember>Midi_CS</FamilyMember>
 			<FamilyMember>Midi_D</FamilyMember>
@@ -10889,6 +10947,11 @@
 				<BlockGenusMember>eeprom_read</BlockGenusMember>
 				<BlockGenusMember>eeprom_write</BlockGenusMember>
 				<BlockGenusMember>sd_write2</BlockGenusMember>
+				<BlockGenusMember>MaSD_Connect</BlockGenusMember>
+				<BlockGenusMember>MaSD_file</BlockGenusMember>
+				<BlockGenusMember>MaSD_Write</BlockGenusMember>
+				<BlockGenusMember>MaSD_NewLine</BlockGenusMember>
+				<BlockGenusMember>MaSD_separator</BlockGenusMember>
 				<!-- <BlockGenusMember>sd_write</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number_int</BlockGenusMember> -->
