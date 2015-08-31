@@ -6744,6 +6744,70 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Init">
+			<description>
+				<text>GPS Init</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_Uno" label="#4,5 UNO" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.jetlag">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/GPS.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Uno" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Uno" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Mega1" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Mega1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Mega2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Mega2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Mega3" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Mega3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Mega4" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Mega4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LatitudeNbr" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LatitudeNbr" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LongitudeNbr" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LongitudeNbr" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LatitudeDirection" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LatitudeDirection" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LongitudeDirection" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LongitudeDirection" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<!-- end of DuinoEDU -->
 		
 		<!--**** Esplora **** -->
@@ -10717,6 +10781,19 @@
 			<FamilyMember>DuinoEDU_Motor_shield_Pivoter</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_Uno</FamilyMember>
+			<FamilyMember>DuinoEDU_Mega1</FamilyMember>
+			<FamilyMember>DuinoEDU_Mega2</FamilyMember>
+			<FamilyMember>DuinoEDU_Mega3</FamilyMember>
+			<FamilyMember>DuinoEDU_Mega4</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_LatitudeNbr</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_LongitudeNbr</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_LatitudeDirection</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_LongitudeDirection</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>Esplora_AccelerationX</FamilyMember>
 			<FamilyMember>Esplora_AccelerationY</FamilyMember>
 			<FamilyMember>Esplora_AccelerationZ</FamilyMember>
@@ -11143,6 +11220,8 @@
 				<BlockGenusMember>DuinoEDU_Motor_shield_Stop</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Init</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_LatitudeNbr</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
 			<BlockGenusMember>Esplora_Led</BlockGenusMember>
