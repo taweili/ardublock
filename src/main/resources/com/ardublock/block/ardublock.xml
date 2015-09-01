@@ -6752,6 +6752,9 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="">
 					<DefaultArg genus-name="DuinoEDU_Uno" label="#4,5 UNO" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Interruption">
+					<DefaultArg genus-name="DuinoEDU_Gps_ActiverInterruption" label="Activé" />
+				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.jetlag">
 					<DefaultArg genus-name="number" label="2" />
 				</BlockConnector>
@@ -6822,43 +6825,66 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
 		<BlockGenus name="DuinoEDU_Gps_Month" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Month" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
 		<BlockGenus name="DuinoEDU_Gps_Year" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Year" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
 		<BlockGenus name="DuinoEDU_Gps_Hour" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Hour" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
 		<BlockGenus name="DuinoEDU_Gps_Minute" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Minute" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
 		<BlockGenus name="DuinoEDU_Gps_Seconde" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Seconde" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
 		<BlockGenus name="DuinoEDU_Gps_Milliseconde" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Milliseconde" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
-		
+		<BlockGenus name="DuinoEDU_Gps_Speed" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Speed" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Angle" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Angle" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_altitude" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_altitude" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Synchronise" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Synchronise" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_ActiverInterruption" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Gps_ActiverInterruption" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_DesactiverInterruption" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Gps_DesactiverInterruption" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
 		
 		<!--**** Esplora **** -->
@@ -10848,7 +10874,6 @@
 			<FamilyMember>DuinoEDU_Gps_LatitudeGoogleMaps</FamilyMember>
 			<FamilyMember>DuinoEDU_Gps_LongitudeGoogleMaps</FamilyMember>
 		</BlockFamily>
-		
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_Gps_Day</FamilyMember>
 			<FamilyMember>DuinoEDU_Gps_Month</FamilyMember>
@@ -10858,7 +10883,15 @@
 			<FamilyMember>DuinoEDU_Gps_Seconde</FamilyMember>
 			<FamilyMember>DuinoEDU_Gps_Milliseconde</FamilyMember>
 		</BlockFamily>
-		
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_Speed</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Angle</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_altitude</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_ActiverInterruption</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_DesactiverInterruption</FamilyMember>
+		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>Esplora_AccelerationX</FamilyMember>
 			<FamilyMember>Esplora_AccelerationY</FamilyMember>
@@ -11287,9 +11320,11 @@
 				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_Init</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Synchronise</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_LatitudeNbr</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_LatitudeGoogleMaps</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_Day</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Speed</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
 			<BlockGenusMember>Esplora_Led</BlockGenusMember>

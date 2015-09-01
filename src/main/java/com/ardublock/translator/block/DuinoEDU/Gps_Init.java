@@ -17,12 +17,14 @@ public class Gps_Init  extends TranslatorBlock {
 		{
 			String connect;
 			String jetlag;
+			String Interruption;
 			
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			connect = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+			Interruption = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 			jetlag = translatorBlock.toCode();
-			
 			
 			translator.addHeaderFile("Adafruit_GPS.h");
 			translator.addHeaderFile("SoftwareSerial.h");
@@ -32,7 +34,7 @@ public class Gps_Init  extends TranslatorBlock {
 					+ "EDUGPS_INTERRUPTION(HORLOGE_0_DEPASSE_VALEUR_A) {\n"
 					+ "  monGps.lireUnCaractere();\n"
 					+ "}\n");
-			translator.addSetupCommand(connect+"monGps.definirDecalageHoraire("+jetlag+");");
+			translator.addSetupCommand(connect+Interruption+"monGps.definirDecalageHoraire("+jetlag+");");
 			
 			String ret;
 			
