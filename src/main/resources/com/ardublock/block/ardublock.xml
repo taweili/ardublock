@@ -6749,7 +6749,7 @@
 				<text>GPS Init</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Pin">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="DuinoEDU_Uno23" label="D2,3 UNO" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="Interruption">
