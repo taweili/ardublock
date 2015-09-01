@@ -6807,6 +6807,57 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LatitudeGoogleMaps" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LatitudeGoogleMaps" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LongitudeGoogleMaps" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LongitudeGoogleMaps" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Day" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Day" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Gps_Month" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Month" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Gps_Year" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Year" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Gps_Hour" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Hour" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Gps_Minute" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Minute" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Gps_Seconde" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Seconde" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Gps_Milliseconde" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Milliseconde" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 		
 		<!-- end of DuinoEDU -->
 		
@@ -10794,6 +10845,21 @@
 			<FamilyMember>DuinoEDU_Gps_LongitudeDirection</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_LatitudeGoogleMaps</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_LongitudeGoogleMaps</FamilyMember>
+		</BlockFamily>
+		
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_Day</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Month</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Year</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Hour</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Minute</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Seconde</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Milliseconde</FamilyMember>
+		</BlockFamily>
+		
+		<BlockFamily>
 			<FamilyMember>Esplora_AccelerationX</FamilyMember>
 			<FamilyMember>Esplora_AccelerationY</FamilyMember>
 			<FamilyMember>Esplora_AccelerationZ</FamilyMember>
@@ -11222,6 +11288,8 @@
 				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_Init</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_LatitudeNbr</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_LatitudeGoogleMaps</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Day</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
 			<BlockGenusMember>Esplora_Led</BlockGenusMember>
