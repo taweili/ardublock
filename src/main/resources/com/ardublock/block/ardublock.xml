@@ -6758,12 +6758,58 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.jetlag">
 					<DefaultArg genus-name="number" label="2" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.QuantiteInformation">
+					<DefaultArg genus-name="DuinoEDU_Information1" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.FrequenceTrames">
+					<DefaultArg genus-name="EDUGPS_1HZ" label="1" />
+				</BlockConnector>
 			</BlockConnectors>
 				<Images>
 				<Image>
 				<FileLocation>com/ardublock/block/seeedstudio/GPS.png</FileLocation>
 				</Image>
 			</Images>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_1HZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_1HZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_5HZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_5HZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_10HZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_10HZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_100MLHZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_100MLHZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_200MLHZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_200MLHZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Information1" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Information1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Information2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Information2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Information3" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Information3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Uno23" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Uno23" editable-label="no">
 			<BlockConnectors>
@@ -10909,6 +10955,18 @@
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_Gps_ActiverInterruption</FamilyMember>
 			<FamilyMember>DuinoEDU_Gps_DesactiverInterruption</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Information1</FamilyMember>
+			<FamilyMember>DuinoEDU_Information2</FamilyMember>
+			<FamilyMember>DuinoEDU_Information3</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>EDUGPS_100MLHZ</FamilyMember>
+			<FamilyMember>EDUGPS_200MLHZ</FamilyMember>
+			<FamilyMember>EDUGPS_1HZ</FamilyMember>
+			<FamilyMember>EDUGPS_5HZ</FamilyMember>
+			<FamilyMember>EDUGPS_10HZ</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>Esplora_AccelerationX</FamilyMember>
