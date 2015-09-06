@@ -203,22 +203,22 @@
 				<text>invoke subroutine</text>
 			</description>
 		</BlockGenus>
-		<BlockGenus name="subroutine_var" kind="command" color="200 200 0" initlabel="bg.subroutine_var" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
+		<BlockGenus name="subroutine_var" kind="command" color="200 220 0" initlabel="bg.subroutine_var" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="">
-					<DefaultArg genus-name="ref_var" label="var" />
+					<DefaultArg genus-name="ref_var" label="variable_transmise" />
 				</BlockConnector>
 				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="subroutine-ref_var" kind="command" color="200 200 0" initlabel="bg.subroutine_var" editable-label="yes">
+		<BlockGenus name="subroutine-ref_var" kind="command" color="200 220 0" initlabel="bg.subroutine_var" editable-label="yes">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.transmit">
 					<DefaultArg genus-name="number" label="2" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="ref_var" kind="data" color="102 255 51" initlabel="bg.ref_var" editable-label="yes">
+		<BlockGenus name="ref_var" kind="data" color="232 156 149" initlabel="bg.ref_var" editable-label="yes">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
