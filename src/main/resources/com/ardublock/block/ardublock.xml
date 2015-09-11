@@ -4711,11 +4711,7 @@
 			</description>			
 			<BlockConnectors>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/seeedstudio/LCD_Serial_RGB_Backlight.png</FileLocation>
-				</Image>
-			</Images>
+			
 		</BlockGenus>
 		
 			<BlockGenus name="DuinoEDU_Oled_I2C" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Oled_I2C">
@@ -5893,11 +5889,7 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_shildbot_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Back">
@@ -5909,11 +5901,7 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_shildbot_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Pivoter">
@@ -5925,21 +5913,13 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_shildbot_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Stop">
 			<description>
 				<text>shildbot Stop</text>
 			</description>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_shildbot_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Speed_Motor">
 			<description>
@@ -5995,11 +5975,7 @@
 					<DefaultArg genus-name="DuinoEDU_S1" label="S1" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+			
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Guino_Init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_Init">
 			<description>
@@ -6607,11 +6583,7 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_Motor_shield_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Back">
@@ -6623,11 +6595,7 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_Motor_shield_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Pivoter">
@@ -6639,21 +6607,13 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Motor_shield_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Stop">
 			<description>
 				<text>Motor_shield Stop</text>
 			</description>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Motor_shield_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Speed_Motor">
 			<description>
@@ -6682,11 +6642,7 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_Motor_shield_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Back">
@@ -6698,11 +6654,7 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_Motor_shield_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Pivoter">
@@ -6714,21 +6666,13 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Motor_shield_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Stop">
 			<description>
 				<text>Motor_shield Stop</text>
 			</description>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Motor_shield_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Speed_Motor">
 			<description>
@@ -6757,11 +6701,7 @@
 					<DefaultArg genus-name="number"  label="500" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Gps_Init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Init">
 			<description>
@@ -11312,62 +11252,61 @@
 				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
-				<BlockGenusMember>seeed_button</BlockGenusMember>
 				<BlockGenusMember>seeed_led</BlockGenusMember>
-				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_button</BlockGenusMember>
+				<BlockGenusMember>seeed_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_angle_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_light_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_line_finder</BlockGenusMember>
+				<BlockGenusMember>seeed_pir_motion_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_tilt_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_water_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_touch_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_mag_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_dist_int</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_proximity_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_air_quality_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_vib</BlockGenusMember>
+				<BlockGenusMember>seeed_vib_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_dry_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_2coil_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_solid_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_joystick</BlockGenusMember>
+				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
+				<BlockGenusMember>seeed_diff_amp</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_electricity_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
+				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_refl_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_heart_rate_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_chest_heart_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
+				<BlockGenusMember>seeed_led_strip</BlockGenusMember>
+				<BlockGenusMember>seeed_var_led</BlockGenusMember>
 				<BlockGenusMember>seeed_uv_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_single_gyro</BlockGenusMember>
 				<BlockGenusMember>seeed_mq9_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_mp3_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_vib_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_loud_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_diff_amp</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_temp_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_proximity_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_electricity_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_angle_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_light_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
-				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_switch</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_refl_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_heart_rate_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_chest_heart_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_air_quality_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_line_finder</BlockGenusMember>
-				<BlockGenusMember>seeed_pir_motion_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_tilt_switch</BlockGenusMember>
-				<BlockGenusMember>seeed_push_button</BlockGenusMember>
-				<BlockGenusMember>seeed_water_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_touch_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_mag_switch</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_dist_int</BlockGenusMember>
-				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
-				<BlockGenusMember>seeed_2coil_relay</BlockGenusMember>
-				<BlockGenusMember>seeed_dry_relay</BlockGenusMember>
-				<BlockGenusMember>seeed_solid_relay</BlockGenusMember>
-				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
-				<BlockGenusMember>seeed_led_strip</BlockGenusMember>
-				<BlockGenusMember>seeed_var_led</BlockGenusMember>
-				<BlockGenusMember>seeed_vib</BlockGenusMember>
-				<BlockGenusMember>seeed_relay</BlockGenusMember>
-				<BlockGenusMember>seeed_joystick</BlockGenusMember>
-				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
+				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
 				<BlockGenusMember>DuinoEDU_Led</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB2</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
+				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB_Clear</BlockGenusMember>	
 				<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_infrared_compare</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB2</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
-				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB_Clear</BlockGenusMember>	
 				<BlockGenusMember>DuinoEDU_Oled_I2C</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Oled_Clear</BlockGenusMember>	
 				<BlockGenusMember>DuinoEDU_Keypad_12_Button</BlockGenusMember>
@@ -11377,16 +11316,17 @@
 				<BlockGenusMember>DuinoEDU_Digital_Tube_Ecrire</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
-				<BlockGenusMember>keyboard_post</BlockGenusMember>
-				<BlockGenusMember>keyboard_compare</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Stop</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Speed_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Stop</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_shildbot_Speed_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Read</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Stop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
@@ -11404,23 +11344,20 @@
 				<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_MP3_Player</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_RTC_Mem</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_RTC_Day</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Motor_shield_Forward</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Motor_shield_Stop</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_Init</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_Synchronise</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_LatitudeNbr</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_LatitudeGoogleMaps</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_Day</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Gps_Speed</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
+				<BlockGenusMember>keyboard_post</BlockGenusMember>
+				<BlockGenusMember>keyboard_compare</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
 			<BlockGenusMember>Esplora_Led</BlockGenusMember>
