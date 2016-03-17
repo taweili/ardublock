@@ -111,6 +111,22 @@ public class GenerateCodeButtonListener implements ActionListener
 					}
 					subroutineBlockSet.add(renderableBlock);
 				}
+				if (block.getGenusName().equals("subroutine_var"))
+				{
+					String functionName = block.getBlockLabel().trim();
+					try
+					{
+						translator.addFunctionName(block.getBlockID(), functionName);
+					}
+					catch (SubroutineNameDuplicatedException e1)
+					{
+						context.highlightBlock(renderableBlock);
+						//find the second subroutine whose name is defined, and make it highlight. though it cannot happen due to constraint of OpenBlocks -_-
+						JOptionPane.showMessageDialog(parentFrame, uiMessageBundle.getString("ardublock.translator.exception.subroutineNameDuplicated"), "Error", JOptionPane.ERROR_MESSAGE);
+						return ;
+					}
+					subroutineBlockSet.add(renderableBlock);
+				}
 				if (block.getGenusName().equals("scoop_task"))
 				{
 					translator.setScoopProgram(true);
