@@ -18,14 +18,11 @@ public class ServoBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
-		if (!(translatorBlock instanceof NumberBlock))
-		{
-			throw new BlockException(this.blockId, "the Pin# of Servo must a number");
-		}
 		
 		
-		NumberBlock pinNumberBlock = (NumberBlock)translatorBlock;
-		String pinNumber = pinNumberBlock.toCode();
+		
+		
+		String pinNumber = translatorBlock.toCode();
 		String servoName = "servo_pin_" + pinNumber;
 		
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);

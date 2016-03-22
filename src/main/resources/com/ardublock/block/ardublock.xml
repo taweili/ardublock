@@ -198,11 +198,30 @@
 				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-
 		<BlockGenus name="subroutine-ref" kind="command" color="200 200 0" initlabel="bg.subroutine" editable-label="yes">
 			<description>
 				<text>invoke subroutine</text>
 			</description>
+		</BlockGenus>
+		<BlockGenus name="subroutine_var" kind="command" color="200 220 0" initlabel="bg.subroutine_var" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="ref_var" label="variable_transmise" />
+				</BlockConnector>
+				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="subroutine-ref_var" kind="command" color="200 220 0" initlabel="bg.subroutine_var" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.transmit">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="ref_var" kind="data" color="232 156 149" initlabel="bg.ref_var" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
 		</BlockGenus>
 		<BlockGenus name="delay_microseconds" kind="command" color="255 221 0" initlabel="bg.delay_microseconds">
 			<description>
@@ -367,6 +386,17 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket">
 					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="pin-toggle" kind="command" color="77 191 169" initlabel="bg.pin-toggle">
+			<description>
+				<text>toggle digital pin</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="#">
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -550,6 +580,81 @@
 					<DefaultArg genus-name="number" label="11111111" />
 				</BlockConnector>
 			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PORT_FIX" kind="command" color="77 191 169" initlabel="bg.PORT_FIX">
+			<description>
+				<text>PORTL
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number" >
+					<DefaultArg genus-name="PORTA2" label="PORTA" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="0">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="1">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="2">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="3">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="4">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="5">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="6">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="7">
+					<DefaultArg genus-name="LEVEL1" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LEVEL1" kind="data" color="214 169 54" initlabel="bg.LEVEL1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="LEVEL0" kind="data" color="214 169 54" initlabel="bg.LEVEL0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTA2" kind="data" color="77 191 169" initlabel="bg.PORTA2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTB2" kind="data" color="77 191 169" initlabel="bg.PORTB2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTC2" kind="data" color="77 191 169" initlabel="bg.PORTC2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTD2" kind="data" color="77 191 169" initlabel="bg.PORTD2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTH2" kind="data" color="77 191 169" initlabel="bg.PORTH2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="PORTL2" kind="data" color="77 191 169" initlabel="bg.PORTL2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
 		</BlockGenus>
 		<BlockGenus name="PINA" kind="data" color="77 191 169" initlabel="bg.PINA">
 			<description>
@@ -815,6 +920,17 @@
 				<BlockConnector connector-type="number" connector-kind="socket">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="toint" kind="function" color="149 193 31" initlabel="bg.toint">
+			<description>
+				<text>to int</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.value" />
+				
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -1389,7 +1505,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="integer variable name" />
+					<DefaultArg genus-name="variable_number" label="Integer" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="number" label="0" />
@@ -1403,7 +1519,7 @@
 	      </description>
 	      <BlockConnectors>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_number_unsigned_long" label="Large integer variable name" />
+	          <DefaultArg genus-name="variable_number_unsigned_long" label="Unsigned_long" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 	          <DefaultArg genus-name="number_long" label="1000000" />
@@ -1417,7 +1533,7 @@
 	      </description>
 	      <BlockConnectors>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_number_double" label="Decimal variable name" />
+	          <DefaultArg genus-name="variable_number_double" label="Double" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 	          <DefaultArg genus-name="number_double" label="3.1415927" />
@@ -1431,7 +1547,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_digital" label="digital variable name" />
+					<DefaultArg genus-name="variable_digital" label="Bool" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="digital-high" label="HIGH" />
@@ -1458,8 +1574,8 @@
 				<text>create a vector of numbers</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_fake" label="array variable name" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.array">
+					<DefaultArg genus-name="variable_fake" label="Table" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.vecsize">
 					<DefaultArg genus-name="number" label="1" />
@@ -1473,8 +1589,8 @@
 				<text>Set a vector number</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_fake" label="array variable name" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.array">
+					<DefaultArg genus-name="variable_fake" label="Table" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.position">
 					<DefaultArg genus-name="number" label="1" />
@@ -1491,7 +1607,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="poly" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_poly" label="char variable name" />
+					<DefaultArg genus-name="variable_poly" label="Char" />
 				</BlockConnector>
 				<BlockConnector connector-type="poly" connector-kind="socket" label="char">
 					<DefaultArg genus-name="char" label="A" />
@@ -1528,7 +1644,7 @@
 	      </description>
 	      <BlockConnectors>
 	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_String" label="String variable name" />
+	          <DefaultArg genus-name="variable_String" label="STRING" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
 	          <DefaultArg genus-name="message" label="message" />
@@ -1547,7 +1663,7 @@
 	      </BlockConnectors>
 	    </BlockGenus>
 		<!--****************** Utilities *************** -->		
-		<BlockGenus name="servo_default" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_default" kind="command" color="205 133 63"  initlabel="bg.servo">
 			<description>
 				<text>Servo Default</text>
 			</description>
@@ -1559,9 +1675,14 @@
 					<DefaultArg genus-name="number" label="90" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/SG90.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="servo_sg90" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_sg90" kind="command" color="205 133 63"  initlabel="bg.servo">
 			<description>
 				<text>SG90</text>
 			</description>
@@ -1580,7 +1701,7 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="servo_mg996r" kind="command" color="205 133 63" label-prefix="Servo: " initlabel="bg.servo">
+		<BlockGenus name="servo_mg996r" kind="command" color="205 133 63"  initlabel="bg.servo">
 			<description>
 				<text>Servo MG996R</text>
 			</description>
@@ -1786,6 +1907,12 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<BlockGenus name="serial_parseInt" kind="data" color="245 245 245" initlabel="bg.serial_parseInt">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 
 		<BlockGenus name="serial_read_poly" kind="data" color="245 245 245" initlabel="bg.serial_read">
 			<BlockConnectors>
@@ -1795,7 +1922,24 @@
 
 		<BlockGenus name="serial_available" kind="data" color="245 245 245" initlabel="bg.serial_available">
 			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="serial_available2" kind="data" color="245 245 245" initlabel="bg.serial_available2">
+			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="serial_write" kind="command" color="245 245 245" initlabel="serial_write">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" >
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -1893,6 +2037,66 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="Serialplus_send_variable_number" kind="command" color="232 156 149" initlabel="bg.Serialplus_send_variable_number">
+			<description>
+				<text>Send integer variable</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.interval">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_send_variable_digital" kind="command" color="204 153 255" initlabel="bg.Serialplus_send_variable_digital">
+			<description>
+				<text>Send digital </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.value">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.interval">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_receive_number" kind="data" color="232 156 149" initlabel="bg.Serialplus_receive_number">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Serialplus_receive_digital" kind="data" color="204 153 255" initlabel="bg.Serialplus_receive_digital">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug"/>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Serial" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!-- ******************** Storage *************** -->
 		<BlockGenus name="eeprom_read_int" kind="data" color="0 100 90" initlabel="bg.eeprom_read_int">
@@ -1987,9 +2191,12 @@
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.ln">
 					<DefaultArg genus-name="true" label="True" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-
+		
 		<!-- <BlockGenus name="sd_write" kind="command" color="0 100 90" -->
 		<!-- initlabel="bg.sd_write"> -->
 		<!-- <description> -->
@@ -2067,6 +2274,56 @@
 		<!-- connector-kind="mirror" /> -->
 		<!-- </BlockConnectors> -->
 		<!-- </BlockGenus> -->
+		<BlockGenus name="MaSD_file" kind="command" color="0 255 0" initlabel="bg.MaSD_file">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.File">
+					<DefaultArg genus-name="glue_msg" label="file.txt" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_Write" kind="command" color="0 255 0" initlabel="bg.MaSD_Write">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="Data">
+					<DefaultArg genus-name="message" label="Message" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_NewLine" kind="command" color="0 255 0" initlabel="bg.MaSD_NewLine">
+			<BlockConnectors>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="GROVE_CS" kind="data" color="214 169 54" initlabel="bg.GROVE_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DUPONT_CS" kind="data" color="214 169 54" initlabel="bg.DUPONT_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="ESPLORA_CS" kind="data" color="214 169 54" initlabel="bg.ESPLORA_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_Connect" kind="command" color="0 255 0" initlabel="bg.MaSD_Connect">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="CS">
+					<DefaultArg genus-name="GROVE_CS" label="GROVE_CS" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="MaSD_separator" kind="command" color="0 255 0" initlabel="bg.MaSD_separator">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.space">
+					<DefaultArg genus-name="number" label="5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.tab">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 
 		<!-- ******************** Especial Menu *************** -->
 
@@ -3192,7 +3449,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="1" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="1" />
@@ -3220,7 +3477,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -3232,7 +3489,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="number" label="2" />
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -4224,6 +4481,48 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<BlockGenus name="DuinoEDU_infrared_compare" kind="function" color="0 255 0" initlabel="bg.DuinoEDU_infrared_compare">
+			<description>
+				<text>DuinoEDU infrared compare</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" label="code" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
+				</BlockConnector>
+				<BlockConnector connector-type="poly" connector-kind="socket" label="==">
+					<DefaultArg genus-name="char" label="A" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket">
+					<DefaultArg genus-name="DuinoEDU_IRREMOTE_MEMORISER_TOUCHE" label="Touche Mem" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/infrared.png</FileLocation>
+				</Image>
+			</Images>
+			</BlockGenus>
+			<BlockGenus name="DuinoEDU_IRREMOTE_MEMORISER_TOUCHE" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_IRREMOTE_MEMORISER_TOUCHE" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_IRREMOTE_MEMORISER_2000_MS" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_IRREMOTE_MEMORISER_2000_MS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_IRREMOTE_MEMORISER_200_MS" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_IRREMOTE_MEMORISER_200_MS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_IRREMOTE_NE_PAS_MEMORISER" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_IRREMOTE_NE_PAS_MEMORISER" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
 		
 						<BlockGenus name="DuinoEDU_temp" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_temp">
 			<description>
@@ -4341,7 +4640,6 @@
 				</Image>
 			</Images>
 			</BlockGenus>
-				
 		
 		<BlockGenus name="DuinoEDU_LCD_I2C_RGB" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_LCD_I2C_RGB">
 			<description>
@@ -4352,6 +4650,28 @@
 					<DefaultArg genus-name="message" label="LCD I2C RGB"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/LCD_Serial_RGB_Backlight.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>		
+		
+		<BlockGenus name="DuinoEDU_LCD_I2C_RGB2" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_LCD_I2C_RGB2">
+			<description>
+				<text>LCD_I2C_RG</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.print">
+					<DefaultArg genus-name="message" label="LCD I2C RGB"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.row_number">
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -4391,11 +4711,7 @@
 			</description>			
 			<BlockConnectors>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/seeedstudio/LCD_Serial_RGB_Backlight.png</FileLocation>
-				</Image>
-			</Images>
+			
 		</BlockGenus>
 		
 			<BlockGenus name="DuinoEDU_Oled_I2C" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Oled_I2C">
@@ -4949,7 +5265,7 @@
 				<text>Partie Recepteur</text>
 			</description>			
 			<BlockConnectors>
-				<BlockConnector connector-type="poly" connector-kind="plug" label="letter" position-type="mirror"/>
+				<BlockConnector connector-type="string" connector-kind="plug" label="letter" position-type="mirror"/>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
@@ -5084,7 +5400,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel N°">
 					<DefaultArg genus-name="number" label="20" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
@@ -5127,7 +5443,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel Nb">
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel N°">
 					<DefaultArg genus-name="number" label="20" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
@@ -5376,6 +5692,12 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
 					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Min">
+					<DefaultArg genus-name="number" label="15" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Max">
+					<DefaultArg genus-name="number" label="165" />
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -5567,11 +5889,7 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_shildbot_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Back">
@@ -5583,11 +5901,7 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		
 		<BlockGenus name="DuinoEDU_shildbot_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Pivoter">
@@ -5599,21 +5913,13 @@
 					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
 				</BlockConnector>
 			</BlockConnectors>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_shildbot_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Stop">
 			<description>
 				<text>shildbot Stop</text>
 			</description>
-				<Images>
-				<Image>
-				<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+				
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_shildbot_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_shildbot_Speed_Motor">
 			<description>
@@ -5669,11 +5975,7 @@
 					<DefaultArg genus-name="DuinoEDU_S1" label="S1" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/seeedstudio/shildbot.png</FileLocation>
-				</Image>
-			</Images>
+			
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_Guino_Init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Guino_Init">
 			<description>
@@ -5990,8 +6292,1399 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
-		</BlockGenus>		
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_hand_positionX" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_hand_positionX">
+			<description>
+				<text>DuinoEDU_hand_positionX</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_hand_positionY" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_hand_positionY">
+			<description>
+				<text>DuinoEDU_hand_positionY</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_hand_positionZ" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_hand_positionZ">
+			<description>
+				<text>DuinoEDU_hand_positionZ</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_handRotX" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_handRotX">
+			<description>
+				<text>DuinoEDU_handRotX</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_handRotY" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_handRotY">
+			<description>
+				<text>DuinoEDU_handRotY</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_handRotZ" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_handRotZ">
+			<description>
+				<text>DuinoEDU_handRotZ</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_pouce" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_pouce">
+			<description>
+				<text>DuinoEDU_angle_pouce</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_index" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_index">
+			<description>
+				<text>DuinoEDU_angle_index</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_majeur" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_majeur">
+			<description>
+				<text>DuinoEDU_angle_majeur</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_annulaire" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_annulaire">
+			<description>
+				<text>DuinoEDU_angle_annulaire</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_angle_auriculaire" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_angle_auriculaire">
+			<description>
+				<text>DuinoEDU_angle_auriculaire</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/arduino/leapmotion.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Mem" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Mem">
+			<description>
+				<text>DuinoEDU RTC Mem</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.day">
+					<DefaultArg genus-name="number" label="18" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.month">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.year">
+					<DefaultArg genus-name="number" label="2015" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.hour">
+					<DefaultArg genus-name="number" label="18" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.minute">
+					<DefaultArg genus-name="number" label="45" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.second">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Day" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Day">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Month" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Month">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Year" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Year">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Hour" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Hour">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Minute" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Minute">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_RTC_Second" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_RTC_Second">
+			<description>
+				<text>DuinoEDU_RTC</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/RTC.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_code_head" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_code_head">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="glue_msg" label="HEAD_EN_CACHE0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_code_setup" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_code_setup">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="glue_msg" label="SETUP_EN_CACHE0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_code_loop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_code_loop">
+			<description>
+				<text>send message via Serial port</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="glue_msg" label="LOOP_EN_CACHE0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Forward" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Forward">
+			<description>
+				<text>Motor_shield forward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
+				</BlockConnector>
+			</BlockConnectors>
+				
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Motor_shield_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Back">
+			<description>
+				<text>Motor_shield back</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Motor_shield_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Pivoter">
+			<description>
+				<text>Motor_shield pivote</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Stop">
+			<description>
+				<text>Motor_shield Stop</text>
+			</description>
+				
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Speed_Motor">
+			<description>
+				<text>Motor_shield Speed Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_leftspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_rightspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Forward" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Forward">
+			<description>
+				<text>Motor_shield forward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="droite" />
+				</BlockConnector>
+			</BlockConnectors>
+				
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Motor_shield_Back" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Back">
+			<description>
+				<text>Motor_shield back</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				
+		</BlockGenus>
+		
+		<BlockGenus name="DuinoEDU_Motor_shield_Pivoter" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Pivoter">
+			<description>
+				<text>Motor_shield pivote</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="DuinoEDU_right" label="Right" />
+				</BlockConnector>
+			</BlockConnectors>
+				
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Stop" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Stop">
+			<description>
+				<text>Motor_shield Stop</text>
+			</description>
+				
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Speed_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Speed_Motor">
+			<description>
+				<text>Motor_shield Speed Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_leftspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_run_rightspeed">
+					<DefaultArg genus-name="number"  label="1000" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/Motor_shield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Motor_shield_Drift_Motor" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Motor_shield_Drift_Motor">
+			<description>
+				<text>Motor_shield Drift Motor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.DuinoEDU_motor_drift">
+					<DefaultArg genus-name="number"  label="500" />
+				</BlockConnector>
+			</BlockConnectors>
+				
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Init" kind="command" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Init">
+			<description>
+				<text>GPS Init</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="DuinoEDU_Uno23" label="D2,3 UNO" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Interruption">
+					<DefaultArg genus-name="DuinoEDU_Gps_ActiverInterruption" label="Activé" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.jetlag">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.QuantiteInformation">
+					<DefaultArg genus-name="DuinoEDU_Information1" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.FrequenceTrames">
+					<DefaultArg genus-name="EDUGPS_1HZ" label="1" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/seeedstudio/GPS.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_1HZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_1HZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_5HZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_5HZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_10HZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_10HZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_100MLHZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_100MLHZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EDUGPS_200MLHZ" kind="data" color="214 169 54" initlabel="bg.EDUGPS_200MLHZ" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Information1" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Information1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Information2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Information2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Information3" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Information3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Uno23" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Uno23" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Uno45" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Uno45" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Uno67" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Uno67" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Uno89" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Uno89" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Mega1" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Mega1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Mega2" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Mega2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Mega3" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Mega3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Mega4" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Mega4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LatitudeNbr" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LatitudeNbr" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LongitudeNbr" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LongitudeNbr" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LatitudeDirection" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LatitudeDirection" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LongitudeDirection" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LongitudeDirection" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LatitudeGoogleMaps" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LatitudeGoogleMaps" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_LongitudeGoogleMaps" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_LongitudeGoogleMaps" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Day" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Day" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Month" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Month" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Year" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Year" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Hour" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Hour" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Minute" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Minute" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Seconde" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Seconde" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Milliseconde" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Milliseconde" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Speed" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Speed" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Angle" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Angle" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_altitude" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_altitude" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_Synchronise" kind="data" color="0 255 0" initlabel="bg.DuinoEDU_Gps_Synchronise" editable-label="yes">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_ActiverInterruption" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Gps_ActiverInterruption" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="DuinoEDU_Gps_DesactiverInterruption" kind="data" color="214 169 54" initlabel="bg.DuinoEDU_Gps_DesactiverInterruption" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
 		<!-- end of DuinoEDU -->
+		
+		<!--**** Esplora **** -->
+		<BlockGenus name="Esplora_Led" kind="command" color="0 255 0" initlabel="bg.Esplora_Led">
+			<description>
+				<text>Esplora Led</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_AccelerationX" kind="data" color="0 255 0" initlabel="bg.Esplora_AccelerationX">
+			<description>
+				<text>Esplora Acceleration X</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_AccelerationY" kind="data" color="0 255 0" initlabel="bg.Esplora_AccelerationY">
+			<description>
+				<text>Esplora Acceleration Y</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_AccelerationZ" kind="data" color="0 255 0" initlabel="bg.Esplora_AccelerationZ">
+			<description>
+				<text>Esplora Acceleration Z</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_JoystickX" kind="data" color="0 255 0" initlabel="bg.Esplora_JoystickX">
+			<description>
+				<text>Esplora Esplora_Joystick X</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_JoystickY" kind="data" color="0 255 0" initlabel="bg.Esplora_JoystickY">
+			<description>
+				<text>Esplora Esplora_Joystick Y</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_JoystickSwitch" kind="data" color="0 255 0" initlabel="bg.Esplora_JoystickSwitch">
+			<description>
+				<text>Esplora Joystick Switch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Slider" kind="data" color="0 255 0" initlabel="bg.Esplora_Slider">
+			<description>
+				<text>Esplora Slider</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Microphone" kind="data" color="0 255 0" initlabel="bg.Esplora_Microphone">
+			<description>
+				<text>Esplora Microphone</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_LightSensor" kind="data" color="0 255 0" initlabel="bg.Esplora_LightSensor">
+			<description>
+				<text>Esplora Light Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_tone" kind="command" color="0 255 0" initlabel="bg.Esplora_tone">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50%
+					duty cycle) on a pin.
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_notone" kind="command" color="0 255 0" initlabel="bg.Esplora_notone">
+			<description>
+				<text>Stops the generation of a square wave triggered by tone().
+				</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Temp" kind="data" color="0 255 0" initlabel="bg.Esplora_Temp">
+			<description>
+				<text>Esplora temperature</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_DEGREES_C" label="Celsius" />
+				</BlockConnector>
+			</BlockConnectors>		
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_DEGREES_C" kind="data" color="214 169 54" initlabel="bg.Esplora_DEGREES_C">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_DEGREES_F" kind="data" color="214 169 54" initlabel="bg.Esplora_DEGREES_F">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_DOWN" kind="data" color="214 169 54" initlabel="bg.Esplora_DOWN">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_LEFT" kind="data" color="214 169 54" initlabel="bg.Esplora_LEFT">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_UP" kind="data" color="214 169 54" initlabel="bg.Esplora_UP">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_RIGHT" kind="data" color="214 169 54" initlabel="bg.Esplora_RIGHT">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_JoystickSwitch2" kind="data" color="0 255 0" initlabel="bg.Esplora_JoystickSwitch2">
+			<description>
+				<text>Esplora Joystick Switch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_DOWN" label="Bas" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Switch" kind="data" color="0 255 0" initlabel="bg.Esplora_Esplora_Switch">
+			<description>
+				<text>Esplora Switch</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_DOWN" label="Bas" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/esplora/Esplora.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_RIGHT2" kind="data" color="214 169 54" initlabel="bg.Esplora_RIGHT2">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_LEFT2" kind="data" color="214 169 54" initlabel="bg.Esplora_LEFT2">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_MIDDLE" kind="data" color="214 169 54" initlabel="bg.Esplora_MIDDLE">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_Click" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_Click">
+			<description>
+				<text>Esplora_Mouse_Click
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_LEFT2" label="Gauche" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_Press" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_Press">
+			<description>
+				<text>Esplora_Mouse_Press
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_LEFT2" label="Gauche" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_Release" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_Release">
+			<description>
+				<text>Esplora_Mouse_Release
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_LEFT2" label="Gauche" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_isPressed" kind="data" color="0 255 0" initlabel="bg.Esplora_Mouse_isPressed">
+			<description>
+				<text>Esplora_Mouse_isPressed
+				</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="">
+					<DefaultArg genus-name="Esplora_LEFT2" label="Gauche" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Mouse_move" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_move">
+			<description>
+				<text>Esplora_Mouse_move
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="# X">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="# Y">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_print" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_print">
+			<description>
+				<text>Esplora_Keyboard_print</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
+					<DefaultArg genus-name="message" label="message" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.ln">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_Click" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_Click">
+			<description>
+				<text>Esplora_Keyboard_Click
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
+					<DefaultArg genus-name="message" label="A" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_Press" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_Press">
+			<description>
+				<text>Esplora_Keyboard_Press
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
+					<DefaultArg genus-name="message" label="A" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_Release" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_Release">
+			<description>
+				<text>Esplora_Keyboard_Release
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
+					<DefaultArg genus-name="message" label="A" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Keyboard_ReleaseAll" kind="command" color="0 255 0" initlabel="bg.Esplora_Keyboard_ReleaseAll">
+			<description>
+				<text>Esplora_Keyboard_ReleaseAll
+				</text>
+			</description>
+			<BlockConnectors>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Width" kind="data" color="0 255 0" initlabel="bg.Esplora_TFT_Width">
+			<description>
+				<text>Esplora_TFT_Width</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Height" kind="data" color="0 255 0" initlabel="bg.Esplora_TFT_Height">
+			<description>
+				<text>Esplora_TFT_Height</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Background" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Background">
+			<description>
+				<text>Esplora TFT Background</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Point" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Point">
+			<description>
+				<text>Esplora TFT Point</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Line" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Line">
+			<description>
+				<text>Esplora TFT Line</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.XStart">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.YStart">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.XEnd">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.YEnd">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Circle" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Circle">
+			<description>
+				<text>Esplora TFT Circle</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="40" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Radius">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.Fill">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.Stroke">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Rect" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Rect">
+			<description>
+				<text>Esplora TFT Rect</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="40" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Width">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
+					<DefaultArg genus-name="number" label="50" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.Fill">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.Stroke">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Text" kind="command" color="0 255 0" initlabel="bg.Esplora_TFT_Text">
+			<description>
+				<text>Esplora TFT Text</text>
+			</description>
+				<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket">
+					<DefaultArg genus-name="message" label="Message" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="X Pos">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Y Pos">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.Height">
+					<DefaultArg genus-name="number" label="2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue2">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="setter_variable_PImage" kind="command" color="32 102 204" initlabel="bg.setter_variable_PImage">
+	      <description>
+	        <text>set String PImage</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="message" label="message" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+		<BlockGenus name="variable_PImage" kind="data" color="32 102 204" initlabel="bg.variable_PImage" editable-label="yes">
+			<description>
+				<text>PImage</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Load_Image" kind="command" color="32 102 204" initlabel="Esplora_Load_Image">
+	      <description>
+	        <text>Esplora loadImage</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="message" label="Name.bmp" />
+	        </BlockConnector>
+			<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+	    <BlockGenus name="Esplora_Image_isValid" kind="data" color="32 102 204" initlabel="bg.Esplora_Image_isValid">
+			<description>
+				<text>Esplora_Image_isValid</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Image_Width" kind="data" color="32 102 204" initlabel="bg.Esplora_Image_Width">
+			<description>
+				<text>Esplora_Image_Width</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Image_Height" kind="data" color="32 102 204" initlabel="bg.Esplora_Image_Height">
+			<description>
+				<text>Esplora_Image_Height</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_TFT_Display_Image" kind="command" color="0 255 0" initlabel="bg.Esplora_Mouse_move">
+			<description>
+				<text>Esplora_TFT_Display_Image</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="variable_PImage" label="PImage variable name" />
+	        </BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="# X">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="# Y">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/esplora/TFT.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="Espora_SD_Write" kind="command" color="0 100 90" initlabel="Espora_SD_Write">
+			<description>
+				<text>Write to SD card</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="File">
+					<DefaultArg genus-name="glue_msg" label="file.txt" />
+				</BlockConnector>
+				<BlockConnector connector-type="string" connector-kind="socket" label="Data">
+					<DefaultArg genus-name="message" label="Message" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.ln">
+					<DefaultArg genus-name="true" label="True" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Espora_SD_Begin" kind="data" color="0 100 90" initlabel="bg.Espora_SD_Begin">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Setter_Variable_File" kind="command" color="0 100 90" initlabel="bg.Esplora_Setter_Variable_File">
+	      <description>
+	        <text>Set Variable File</text>
+	      </description>
+	      <BlockConnectors>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="Esplora_Variable_File" label="File variable name" />
+	        </BlockConnector>
+	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
+	          <DefaultArg genus-name="message" label="file.txt" />
+	        </BlockConnector>
+	      </BlockConnectors>
+	    </BlockGenus>
+		<BlockGenus name="Esplora_Variable_File" kind="data" color="0 100 90" initlabel="bg.Esplora_Variable_File" editable-label="yes">
+			<description>
+				<text>Variable File</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_Variable_File_Bool" kind="data" color="0 100 90" initlabel="bg.Esplora_Variable_File_Bool" editable-label="yes">
+			<description>
+				<text>Variable File Boolean</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_File_Available" kind="data" color="0 100 90" initlabel="bg.Esplora_File_Available">
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="Esplora_Variable_File" label="File variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_File_Read" kind="data" color="0 100 90" initlabel="bg.Esplora_File_Available">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug"/>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="Esplora_Variable_File" label="File variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Esplora_File_Close" kind="command" color="0 100 90" initlabel="bg.Esplora_File_Close">
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.variable">
+	          <DefaultArg genus-name="Esplora_Variable_File" label="File variable name" />
+	        </BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="ESPLORA_OUTA" kind="data" color="214 169 54" initlabel="bg.ESPLORA_OUTA" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="ESPLORA_OUTB" kind="data" color="214 169 54" initlabel="bg.ESPLORA_OUTB" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="ESPLORA_INA" kind="data" color="214 169 54" initlabel="bg.ESPLORA_INB" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<BlockGenus name="ESPLORA_INB" kind="data" color="214 169 54" initlabel="bg.ESPLORA_INB" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"/>
+			</BlockConnectors>		
+		</BlockGenus>
+		<!-- end of Esplora -->
 
 		<!--**** linksprite_LinkerKit **** -->
 		<BlockGenus name="ls_10mmLEDModule" kind="command" color="135 206 235" initlabel="bg.ls_10mmLEDModule">
@@ -9048,6 +10741,18 @@
 			<FamilyMember>PORTL</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
+			<FamilyMember>PORTA2</FamilyMember>
+			<FamilyMember>PORTB2</FamilyMember>
+			<FamilyMember>PORTC2</FamilyMember>
+			<FamilyMember>PORTD2</FamilyMember>
+			<FamilyMember>PORTH2</FamilyMember>
+			<FamilyMember>PORTL2</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>LEVEL1</FamilyMember>
+			<FamilyMember>LEVEL0</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
 			<FamilyMember>PINA</FamilyMember>
 			<FamilyMember>PINB</FamilyMember>
 			<FamilyMember>PINC</FamilyMember>
@@ -9096,6 +10801,22 @@
 			<FamilyMember>DuinoEDU_D19</FamilyMember>
 			<FamilyMember>DuinoEDU_D20</FamilyMember>
 			<FamilyMember>DuinoEDU_D21</FamilyMember>
+			<FamilyMember>DuinoEDU_A0</FamilyMember>
+			<FamilyMember>DuinoEDU_A1</FamilyMember>
+			<FamilyMember>DuinoEDU_A2</FamilyMember>
+			<FamilyMember>DuinoEDU_A3</FamilyMember>
+			<FamilyMember>DuinoEDU_A4</FamilyMember>
+			<FamilyMember>DuinoEDU_A5</FamilyMember>
+			<FamilyMember>DuinoEDU_A6</FamilyMember>
+			<FamilyMember>DuinoEDU_A7</FamilyMember>
+			<FamilyMember>DuinoEDU_A8</FamilyMember>
+			<FamilyMember>DuinoEDU_A9</FamilyMember>
+			<FamilyMember>DuinoEDU_A10</FamilyMember>
+			<FamilyMember>DuinoEDU_A11</FamilyMember>
+			<FamilyMember>DuinoEDU_A12</FamilyMember>
+			<FamilyMember>DuinoEDU_A13</FamilyMember>
+			<FamilyMember>DuinoEDU_A14</FamilyMember>
+			<FamilyMember>DuinoEDU_A15</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>DuinoEDU_A0</FamilyMember>
@@ -9114,6 +10835,152 @@
 			<FamilyMember>DuinoEDU_A13</FamilyMember>
 			<FamilyMember>DuinoEDU_A14</FamilyMember>
 			<FamilyMember>DuinoEDU_A15</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_IRREMOTE_MEMORISER_TOUCHE</FamilyMember>
+			<FamilyMember>DuinoEDU_IRREMOTE_NE_PAS_MEMORISER</FamilyMember>
+			<FamilyMember>DuinoEDU_IRREMOTE_MEMORISER_200_MS</FamilyMember>
+			<FamilyMember>DuinoEDU_IRREMOTE_MEMORISER_2000_MS</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_hand_positionX</FamilyMember>
+			<FamilyMember>DuinoEDU_hand_positionY</FamilyMember>
+			<FamilyMember>DuinoEDU_hand_positionZ</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_handRotX</FamilyMember>
+			<FamilyMember>DuinoEDU_handRotY</FamilyMember>
+			<FamilyMember>DuinoEDU_handRotZ</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_angle_pouce</FamilyMember>
+			<FamilyMember>DuinoEDU_angle_index</FamilyMember>
+			<FamilyMember>DuinoEDU_angle_majeur</FamilyMember>
+			<FamilyMember>DuinoEDU_angle_annulaire</FamilyMember>
+			<FamilyMember>DuinoEDU_angle_auriculaire</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_RTC_Day</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Month</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Year</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Hour</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Minute</FamilyMember>
+			<FamilyMember>DuinoEDU_RTC_Second</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_code_head</FamilyMember>
+			<FamilyMember>DuinoEDU_code_setup</FamilyMember>
+			<FamilyMember>DuinoEDU_code_loop</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Motor_shield_Forward</FamilyMember>
+			<FamilyMember>DuinoEDU_Motor_shield_Back</FamilyMember>
+			<FamilyMember>DuinoEDU_Motor_shield_Pivoter</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Uno23</FamilyMember>
+			<FamilyMember>DuinoEDU_Uno45</FamilyMember>
+			<FamilyMember>DuinoEDU_Uno67</FamilyMember>
+			<FamilyMember>DuinoEDU_Uno89</FamilyMember>
+			<FamilyMember>DuinoEDU_Mega1</FamilyMember>
+			<FamilyMember>DuinoEDU_Mega2</FamilyMember>
+			<FamilyMember>DuinoEDU_Mega3</FamilyMember>
+			<FamilyMember>DuinoEDU_Mega4</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_LatitudeNbr</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_LongitudeNbr</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_LatitudeDirection</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_LongitudeDirection</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_LatitudeGoogleMaps</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_LongitudeGoogleMaps</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_Day</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Month</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Year</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Hour</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Minute</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Seconde</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Milliseconde</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_Speed</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_Angle</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_altitude</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Gps_ActiverInterruption</FamilyMember>
+			<FamilyMember>DuinoEDU_Gps_DesactiverInterruption</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>DuinoEDU_Information1</FamilyMember>
+			<FamilyMember>DuinoEDU_Information2</FamilyMember>
+			<FamilyMember>DuinoEDU_Information3</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>EDUGPS_100MLHZ</FamilyMember>
+			<FamilyMember>EDUGPS_200MLHZ</FamilyMember>
+			<FamilyMember>EDUGPS_1HZ</FamilyMember>
+			<FamilyMember>EDUGPS_5HZ</FamilyMember>
+			<FamilyMember>EDUGPS_10HZ</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_AccelerationX</FamilyMember>
+			<FamilyMember>Esplora_AccelerationY</FamilyMember>
+			<FamilyMember>Esplora_AccelerationZ</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_JoystickX</FamilyMember>
+			<FamilyMember>Esplora_JoystickY</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_DEGREES_C</FamilyMember>
+			<FamilyMember>Esplora_DEGREES_F</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_DOWN</FamilyMember>
+			<FamilyMember>Esplora_LEFT</FamilyMember>
+			<FamilyMember>Esplora_UP</FamilyMember>
+			<FamilyMember>Esplora_RIGHT</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_LEFT2</FamilyMember>
+			<FamilyMember>Esplora_RIGHT2</FamilyMember>
+			<FamilyMember>Esplora_MIDDLE</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_Mouse_Click</FamilyMember>
+			<FamilyMember>Esplora_Mouse_Press</FamilyMember>
+			<FamilyMember>Esplora_Mouse_Release</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_Keyboard_Click</FamilyMember>
+			<FamilyMember>Esplora_Keyboard_Press</FamilyMember>
+			<FamilyMember>Esplora_Keyboard_Release</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_TFT_Height</FamilyMember>
+			<FamilyMember>Esplora_TFT_Width</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Esplora_Image_Height</FamilyMember>
+			<FamilyMember>Esplora_Image_Width</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>ESPLORA_OUTA</FamilyMember>
+			<FamilyMember>ESPLORA_OUTB</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>ESPLORA_INA</FamilyMember>
+			<FamilyMember>ESPLORA_INB</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>GROVE_CS</FamilyMember>
+			<FamilyMember>DUPONT_CS</FamilyMember>
+			<FamilyMember>ESPLORA_CS</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>Midi_C</FamilyMember>
@@ -9147,12 +11014,16 @@
 				<BlockGenusMember>break</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
+				<BlockGenusMember>subroutine_var</BlockGenusMember>
+				<BlockGenusMember>subroutine-ref_var</BlockGenusMember>
+				<BlockGenusMember>ref_var</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
+				<BlockGenusMember>pin-toggle</BlockGenusMember>
 				<BlockGenusMember>df_servo</BlockGenusMember>
 				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
@@ -9163,6 +11034,7 @@
 				<BlockGenusMember>no_tone</BlockGenusMember>
 				<BlockGenusMember>DDRA</BlockGenusMember>
 				<BlockGenusMember>PORTA</BlockGenusMember>
+				<BlockGenusMember>PORT_FIX</BlockGenusMember>
 				<BlockGenusMember>PINA</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
@@ -9199,13 +11071,15 @@
 				<BlockGenusMember>tan</BlockGenusMember>
 				<BlockGenusMember>random_range</BlockGenusMember>
 				<BlockGenusMember>map</BlockGenusMember>
+				<BlockGenusMember>toint</BlockGenusMember>
+				<BlockGenusMember>constrain</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="232 156 149" name="bd.number" type="factory">
 				<BlockGenusMember>number</BlockGenusMember>
-				<BlockGenusMember>setter_variable_number_unsigned_long</BlockGenusMember>
-				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
 				<BlockGenusMember>setter_variable_number</BlockGenusMember>
 				<BlockGenusMember>variable_number</BlockGenusMember>
+				<BlockGenusMember>setter_variable_number_unsigned_long</BlockGenusMember>
+				<BlockGenusMember>variable_number_unsigned_long</BlockGenusMember>
 				<BlockGenusMember>setter_variable_digital</BlockGenusMember>
 				<BlockGenusMember>variable_digital</BlockGenusMember>
 				<BlockGenusMember>digital-low</BlockGenusMember>
@@ -9216,16 +11090,14 @@
 				<BlockGenusMember>variable_number_double</BlockGenusMember>
 				<BlockGenusMember>number_double</BlockGenusMember>
 				<BlockGenusMember>setter_variable_char</BlockGenusMember>
+				<BlockGenusMember>variable_poly</BlockGenusMember>
 				<BlockGenusMember>char</BlockGenusMember>
-				<BlockGenusMember>variable_string</BlockGenusMember>
 				<BlockGenusMember>setter_variable_String</BlockGenusMember>
 				<BlockGenusMember>variable_String</BlockGenusMember>
 				<BlockGenusMember>message</BlockGenusMember>
 				<BlockGenusMember>create_variable_vector</BlockGenusMember>
 				<BlockGenusMember>variable_vector</BlockGenusMember>
 				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
-				<BlockGenusMember>setter_variable_char</BlockGenusMember>
-				<BlockGenusMember>variable_poly</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>delay</BlockGenusMember>
@@ -9240,7 +11112,11 @@
 				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
+				<BlockGenusMember>serial_available</BlockGenusMember>
+				<BlockGenusMember>serial_available2</BlockGenusMember>
 				<BlockGenusMember>serial_read</BlockGenusMember>
+				<BlockGenusMember>serial_parseInt</BlockGenusMember>
+				<BlockGenusMember>serial_write</BlockGenusMember>
 				<BlockGenusMember>serial_print</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
 				<BlockGenusMember>glue_sb</BlockGenusMember>
@@ -9256,6 +11132,13 @@
 				<BlockGenusMember>DuinoEDU_Guino_pause</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Title</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_column</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_hand_positionX</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_handRotX</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_angle_pouce</BlockGenusMember>
+				<BlockGenusMember>Serialplus_send_variable_number</BlockGenusMember>
+				<BlockGenusMember>Serialplus_send_variable_digital</BlockGenusMember>
+				<BlockGenusMember>Serialplus_receive_number</BlockGenusMember>
+				<BlockGenusMember>Serialplus_receive_digital</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="26 97 218" name="bd.scoop">
 			    <BlockGenusMember>scoop_task</BlockGenusMember>
@@ -9276,6 +11159,11 @@
 				<BlockGenusMember>eeprom_read</BlockGenusMember>
 				<BlockGenusMember>eeprom_write</BlockGenusMember>
 				<BlockGenusMember>sd_write2</BlockGenusMember>
+				<BlockGenusMember>MaSD_Connect</BlockGenusMember>
+				<BlockGenusMember>MaSD_file</BlockGenusMember>
+				<BlockGenusMember>MaSD_Write</BlockGenusMember>
+				<BlockGenusMember>MaSD_NewLine</BlockGenusMember>
+				<BlockGenusMember>MaSD_separator</BlockGenusMember>
 				<!-- <BlockGenusMember>sd_write</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
 				<!-- <BlockGenusMember>sd_write_number_int</BlockGenusMember> -->
@@ -9290,6 +11178,9 @@
 				<BlockGenusMember>code_head</BlockGenusMember>
 				<BlockGenusMember>code_setup</BlockGenusMember>
 				<BlockGenusMember>code_loop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_head</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_setup</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_loop</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="13 152 164" name="bd.tinkerkit" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
@@ -9355,61 +11246,61 @@
 				<BlockGenusMember>df_lcd_keypad</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
-				<BlockGenusMember>seeed_button</BlockGenusMember>
 				<BlockGenusMember>seeed_led</BlockGenusMember>
-				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_button</BlockGenusMember>
+				<BlockGenusMember>seeed_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_angle_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_light_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_line_finder</BlockGenusMember>
+				<BlockGenusMember>seeed_pir_motion_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_tilt_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_water_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_touch_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_mag_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_dist_int</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_proximity_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_air_quality_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_vib</BlockGenusMember>
+				<BlockGenusMember>seeed_vib_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_dry_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_2coil_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_solid_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_joystick</BlockGenusMember>
+				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
+				<BlockGenusMember>seeed_diff_amp</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_electricity_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
+				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_refl_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_heart_rate_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_chest_heart_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
+				<BlockGenusMember>seeed_led_strip</BlockGenusMember>
+				<BlockGenusMember>seeed_var_led</BlockGenusMember>
 				<BlockGenusMember>seeed_uv_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_single_gyro</BlockGenusMember>
 				<BlockGenusMember>seeed_mq9_sensor</BlockGenusMember>
 				<BlockGenusMember>seeed_mp3_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_vib_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_loud_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_diff_amp</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_temp_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_proximity_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_electricity_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_angle_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_light_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
-				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_switch</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_refl_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_heart_rate_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_chest_heart_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_air_quality_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_line_finder</BlockGenusMember>
-				<BlockGenusMember>seeed_pir_motion_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_tilt_switch</BlockGenusMember>
-				<BlockGenusMember>seeed_push_button</BlockGenusMember>
-				<BlockGenusMember>seeed_water_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_touch_sensor</BlockGenusMember>
-				<BlockGenusMember>seeed_mag_switch</BlockGenusMember>
-				<BlockGenusMember>seeed_ir_dist_int</BlockGenusMember>
-				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
-				<BlockGenusMember>seeed_2coil_relay</BlockGenusMember>
-				<BlockGenusMember>seeed_dry_relay</BlockGenusMember>
-				<BlockGenusMember>seeed_solid_relay</BlockGenusMember>
-				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
-				<BlockGenusMember>seeed_led_strip</BlockGenusMember>
-				<BlockGenusMember>seeed_var_led</BlockGenusMember>
-				<BlockGenusMember>seeed_vib</BlockGenusMember>
-				<BlockGenusMember>seeed_relay</BlockGenusMember>
-				<BlockGenusMember>seeed_joystick</BlockGenusMember>
-				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
+				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
 				<BlockGenusMember>DuinoEDU_Led</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB2</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
 				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB_Clear</BlockGenusMember>	
+				<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_infrared_compare</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Oled_I2C</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Oled_Clear</BlockGenusMember>	
 				<BlockGenusMember>DuinoEDU_Keypad_12_Button</BlockGenusMember>
@@ -9419,16 +11310,17 @@
 				<BlockGenusMember>DuinoEDU_Digital_Tube_Ecrire</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
-				<BlockGenusMember>keyboard_post</BlockGenusMember>
-				<BlockGenusMember>keyboard_compare</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Driver_I2C_Stop</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Speed_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Forward</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Stop</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_shildbot_Speed_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_shildbot_Read</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Stop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
@@ -9446,11 +11338,62 @@
 				<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_MP3_Player</BlockGenusMember>
-				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>		
+				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_RTC_Mem</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_RTC_Day</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Init</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Synchronise</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_LatitudeNbr</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_LatitudeGoogleMaps</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Day</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Speed</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
+				<BlockGenusMember>keyboard_post</BlockGenusMember>
+				<BlockGenusMember>keyboard_compare</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
+			<BlockGenusMember>Esplora_Led</BlockGenusMember>
+			<BlockGenusMember>Esplora_tone</BlockGenusMember>
+			<BlockGenusMember>Esplora_notone</BlockGenusMember>
+			<BlockGenusMember>Esplora_Slider</BlockGenusMember>
+			<BlockGenusMember>Esplora_Microphone</BlockGenusMember>
+			<BlockGenusMember>Esplora_LightSensor</BlockGenusMember>
+			<BlockGenusMember>Esplora_Temp</BlockGenusMember>
+			<BlockGenusMember>Esplora_Switch</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickSwitch2</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
+			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
+			<BlockGenusMember>ESPLORA_INA</BlockGenusMember>
+			<BlockGenusMember>ESPLORA_OUTA</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_Click</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_isPressed</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_move</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_Click</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_ReleaseAll</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_print</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Background</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Height</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Point</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Line</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Circle</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Rect</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Text</BlockGenusMember>
+			<BlockGenusMember>Esplora_Load_Image</BlockGenusMember>
+			<BlockGenusMember>variable_PImage</BlockGenusMember>
+			<BlockGenusMember>Esplora_Image_Width</BlockGenusMember>
+			<BlockGenusMember>Esplora_Image_isValid</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Display_Image</BlockGenusMember>
+			<BlockGenusMember>Espora_SD_Write</BlockGenusMember>
+			<BlockGenusMember>Espora_SD_Begin</BlockGenusMember>
+			<BlockGenusMember>Esplora_Setter_Variable_File</BlockGenusMember>
+			<BlockGenusMember>Esplora_Variable_File</BlockGenusMember>
+			<BlockGenusMember>Esplora_Variable_File_Bool</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Available</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Read</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Close</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
 				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>

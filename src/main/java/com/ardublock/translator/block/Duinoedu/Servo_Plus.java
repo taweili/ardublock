@@ -18,18 +18,24 @@ public class Servo_Plus  extends TranslatorBlock {
 			String Pin;
 			String Angle;
 			String Speed;
+			String Min;
+			String Max;
 			TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 			Pin = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 			Angle = translatorBlock.toCode();
 			translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 			Speed = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
+			Min = translatorBlock.toCode();
+			translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
+			Max = translatorBlock.toCode();
 			
 			translator.addHeaderFile("Servo.h");
 			translator.addHeaderFile("ServoPlus.h");
 			translator.addDefinitionCommand("//libraries at http://duinoedu.com/dl/lib/grove/EDU_ServoPlus_GroveDupont/ \n"
 					+ "ServoPlus monServoPlus"+Pin+";");
-			translator.addSetupCommand("monServoPlus"+Pin+".brancher("+Pin+");\n");
+			translator.addSetupCommand("monServoPlus"+Pin+".brancher("+Pin+","+Min+","+Max+");\n");
 			
 			return codePrefix +"monServoPlus"+Pin+".ecrireAngle("+Angle+","+Speed+");"+ codeSuffix;
 		}

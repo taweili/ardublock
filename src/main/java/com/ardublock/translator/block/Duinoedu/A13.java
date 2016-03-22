@@ -13,7 +13,7 @@ public class A13 extends TranslatorBlock
 
 	@Override
 	public String toCode() throws SocketNullException {
-		return codePrefix + "13" + codeSuffix;
+		return codePrefix + "A13" + codeSuffix;
 	}
 
 }
