@@ -1882,6 +1882,17 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
+		<BlockGenus name="pinListDigital_D6" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D6" editable-label="yes">
+			<description>
+				<text>
+					Digital Pin Constant
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"  />
+			</BlockConnectors>
+		</BlockGenus>
+		
 		<BlockGenus name="pinListDigital_D8" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D8" editable-label="yes">
 			<description>
 				<text>
