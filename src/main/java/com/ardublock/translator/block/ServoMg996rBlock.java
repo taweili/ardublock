@@ -3,8 +3,6 @@ package com.ardublock.translator.block;
 
 import java.util.ResourceBundle;
 
-import java.util.ResourceBundle;
-
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.exception.BlockException;
 import com.ardublock.translator.block.exception.SocketNullException;
