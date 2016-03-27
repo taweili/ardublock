@@ -881,79 +881,79 @@
 		</BlockGenus>		
 
 		<!--****************** 'Analog' PWM pins on All Arduino Boards *************** -->
-		<BlockGenus name="pinListAnalogWrite_D3" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D3" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D3" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D3" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D5" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D5" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D5" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D5" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D6" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D6" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D6" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D6" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D9" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D9" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D9" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D9" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D10" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D10" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D10" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D10" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D11" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_11" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D11" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_11" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
 		
 		<!--****************** Extra 'Analog' PWM pins on Mega Boards*************** -->
-		<BlockGenus name="pinListAnalogWrite_D2" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D2" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D2" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D2" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D4" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D4" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D4" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D4" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D7" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D7" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D7" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D7" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D8" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D8" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D8" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D8" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D12" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D12" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D12" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D12" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D13" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D13" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D13" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D13" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D44" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D44" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D44" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D44" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D45" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D45" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D45" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D45" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D46" kind="data" color="214 169 54" initlabel="bg.pinListAnalogWrite_D46" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D46" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D46" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
