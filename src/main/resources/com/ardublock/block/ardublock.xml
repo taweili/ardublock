@@ -2329,6 +2329,11 @@
 					<DefaultArg genus-name="pinListDigital_D12" label="D12" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/ultrasonic.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 
 		<BlockGenus name="LCD_I2C_Sainsmart_20by4" kind="command" color="205 133 63" initlabel="bg.LCD_I2C_Sainsmart_20by4">
