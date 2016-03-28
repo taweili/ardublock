@@ -674,6 +674,14 @@
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
+		
+		<!--****************** Digital pins on Arduino MEGA boards *************** -->
+		<!--** In fact the following 6 pins are available as digital on Arduino UNO, et al 		** -->
+		<!--** but if used reduce the number of analog in's available and are best avoided. 	** -->
+		<!--** On the UNO  pins marked A0 -  A5 map to D14 - D19 and can be referenced both ways** -->
+		<!--** NOTE ** -->
+		<!--** On the MEGA pins marked A0 - A15 map to D54 - D69 and so code using 'A(x)'   	** -->
+		<!--** referencing can have unintended consequences when uploaded to different boards.  ** -->
 		<BlockGenus name="pinListDigital_D14" kind="data" color="214 169 54" initlabel="bg.pinListDigital_D14" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -705,7 +713,7 @@
 			</BlockConnectors>		
 		</BlockGenus>
 		
-		<!--****************** Extra Digital pins on Mega Boards *************** -->
+		<!--****************** Extra Digital pins on Mega Boards only *************** -->
 				<BlockGenus name="pinListDigital_D20" kind="data" color="214 169 54" initlabel="bg.pinListDigital_D20" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
@@ -11247,7 +11255,16 @@
 			<FamilyMember>pinListDigital_D50</FamilyMember>
 			<FamilyMember>pinListDigital_D51</FamilyMember>
 			<FamilyMember>pinListDigital_D52</FamilyMember>
-			<FamilyMember>pinListDigital_D53</FamilyMember>			
+			<FamilyMember>pinListDigital_D53</FamilyMember>
+			<FamilyMember>pinListDigital_D53</FamilyMember>
+			<!--****************** Analog pins that can be used as digital pins. *************** -->
+			<!--****************** In practice only used with UNO boards    *************** -->
+			<FamilyMember>pinListAnalog_A0</FamilyMember>
+			<FamilyMember>pinListAnalog_A1</FamilyMember>
+			<FamilyMember>pinListAnalog_A2</FamilyMember>
+			<FamilyMember>pinListAnalog_A3</FamilyMember>
+			<FamilyMember>pinListAnalog_A4</FamilyMember>
+			<FamilyMember>pinListAnalog_A5</FamilyMember>		
 		</BlockFamily>
 		
 		<BlockFamily>
