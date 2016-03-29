@@ -4095,7 +4095,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
+					<DefaultArg genus-name="pinListDigital_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -4107,7 +4107,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
+					<DefaultArg genus-name="pinListDigital_D2" label="D2" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -11835,6 +11835,8 @@
 			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
 				<BlockGenusMember>servo_sg90</BlockGenusMember>
 				<BlockGenusMember>ultrasonic</BlockGenusMember>
+				<BlockGenusMember>df_dht11_temperature</BlockGenusMember>
+				<BlockGenusMember>df_dht11_humidity</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Sainsmart_20by4</BlockGenusMember>
 				<BlockGenusMember>LCD_command_lightOff</BlockGenusMember>
 				<BlockGenusMember>LCD_PLL_Sainsmart_16by2</BlockGenusMember>
