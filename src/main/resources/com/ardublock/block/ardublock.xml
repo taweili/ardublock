@@ -12320,9 +12320,6 @@
 	
 <!-- End of Ardublock Standard UI layout -->
 
-<!-- Start of Ardublock Callear UI layout -->
-<!-- End   of Ardublock Callear UI layout -->
-
 	<Pages drawer-with-page="yes">
 		<Page page-name="Main" page-width="400" page-color="128 128 128"/>
 	</Pages>
