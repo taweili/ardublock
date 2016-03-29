@@ -11069,6 +11069,7 @@
 
 	</BlockGenuses>
 
+<!-- Start of Ardublock Standard UI layout -->
 	<BlockFamilies>
 		<BlockFamily>
 			<FamilyMember>digital-high</FamilyMember>
@@ -12316,6 +12317,11 @@
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
 		</BlockDrawerSet>
 	</BlockDrawerSets>
+	
+<!-- End of Ardublock Standard UI layout -->
+
+<!-- Start of Ardublock Callear UI layout -->
+<!-- End   of Ardublock Callear UI layout -->
 
 	<Pages drawer-with-page="yes">
 		<Page page-name="Main" page-width="400" page-color="128 128 128"/>
