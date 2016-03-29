@@ -11752,6 +11752,10 @@
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
+				<BlockGenusMember>DDRA</BlockGenusMember>
+				<BlockGenusMember>PORTA</BlockGenusMember>
+				<BlockGenusMember>PORT_FIX</BlockGenusMember>
+				<BlockGenusMember>PINA</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
@@ -12007,10 +12011,6 @@
 				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
-				<BlockGenusMember>DDRA</BlockGenusMember>
-				<BlockGenusMember>PORTA</BlockGenusMember>
-				<BlockGenusMember>PORT_FIX</BlockGenusMember>
-				<BlockGenusMember>PINA</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Led</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
