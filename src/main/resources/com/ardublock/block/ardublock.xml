@@ -499,7 +499,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pin-toggle" kind="command" color="77 191 169" initlabel="bg.pin-toggle">
+		<BlockGenus name="pin-toggle" kind="command" color="213 0 0" initlabel="bg.pin-toggle">
 			<description>
 				<text>toggle digital pin</text>
 			</description>
@@ -2141,7 +2141,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="integer variable name" />
+					<DefaultArg genus-name="variable_number" label="Integer Variable Name" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 					<DefaultArg genus-name="number" label="0" />
@@ -2155,7 +2155,7 @@
 	      </description>
 	      <BlockConnectors>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-	          <DefaultArg genus-name="variable_number_unsigned_long" label="Large integer variable name" />
+	          <DefaultArg genus-name="variable_number_unsigned_long" label="Large Integer Variable Name" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
 	          <DefaultArg genus-name="number_long" label="1000000" />
@@ -11762,6 +11762,7 @@
 			</BlockDrawer>
 			<BlockDrawer button-color="183 28 28" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-read-digital</BlockGenusMember>
+				<BlockGenusMember>pin-toggle</BlockGenusMember>
 				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
