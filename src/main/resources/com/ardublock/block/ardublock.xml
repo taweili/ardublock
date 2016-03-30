@@ -1921,7 +1921,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListDigital_D0" kind="data" color="213 0 0 " initlabel="bg." editable-label="yes">
+		<BlockGenus name="pinListDigital_D0" kind="data" color="213 0 0 " initlabel="bg." editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1932,7 +1932,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-				<BlockGenus name="pinListDigital_D8" kind="data" color="213 0 0 " initlabel="bg.pinListDigital_D8" editable-label="yes">
+				<BlockGenus name="pinListDigital_D8" kind="data" color="213 0 0 " initlabel="bg.pinListDigital_D8" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1943,7 +1943,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListDigital_D11" kind="data" color="213 0 0 " initlabel="bg.pinListDigital_D11" editable-label="yes">
+		<BlockGenus name="pinListDigital_D11" kind="data" color="213 0 0 " initlabel="bg.pinListDigital_D11" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1953,18 +1953,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug"  />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="pinListDigital_D12" kind="data" color="213 0 0 " initlabel="bg.pinListDigital_D12" editable-label="yes">
-			<description>
-				<text>
-					Digital Pin Constant
-				</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug"  />
-			</BlockConnectors>
-		</BlockGenus>
-		
-		<BlockGenus name="pinListDigital_D13" kind="data" color="213 0 0 " initlabel="bg.pinListDigital_D13" editable-label="yes">
+		<BlockGenus name="pinListDigital_D12" kind="data" color="213 0 0 " initlabel="bg.pinListDigital_D12" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1975,7 +1964,18 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListAnalog_A0" kind="data" color="244 67 54 " initlabel="bg." editable-label="yes">
+		<BlockGenus name="pinListDigital_D13" kind="data" color="213 0 0 " initlabel="bg.pinListDigital_D13" editable-label="no">
+			<description>
+				<text>
+					Digital Pin Constant
+				</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"  />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="pinListAnalog_A0" kind="data" color="244 67 54 " initlabel="bg." editable-label="no">
 			<description>
 				<text>
 					Analog Pin Constant
@@ -1986,7 +1986,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListAnalogWrite_D3" kind="data" color="229 115 115" initlabel="bg." editable-label="yes">
+		<BlockGenus name="pinListAnalogWrite_D3" kind="data" color="229 115 115" initlabel="bg." editable-label="no">
 			<description>
 				<text>
 					PWM Pin Constant
