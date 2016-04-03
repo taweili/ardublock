@@ -7,9 +7,13 @@ import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 public class DigitalInputBlock extends TranslatorBlock
 {
 	public static final String ARDUBLOCK_DIGITAL_READ_DEFINE =
+			/* The charge left on the pin if it was previously OUTPUT does affect
+			 *  the likely result of digitalRead **if the pin is floating**.
+			 * I can find nothing to justify a need for a 'settling period' delay
+			 *  if the pin mode has been changed.
+			 *  and delay 5ms if the pinMode has changed */
 			"boolean __ardublockDigitalRead(int pinNumber)\n" + 
 			"{\n" +
-			"digitalWrite(pinNumber, LOW);\n" + 
 			"pinMode(pinNumber, INPUT);\n" + 
 			"return digitalRead(pinNumber);\n" + 
 			"}\n\n";
