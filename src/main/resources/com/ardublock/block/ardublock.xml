@@ -449,7 +449,7 @@
 		</BlockGenus>
 
 
-		<BlockGenus name="pin-read-digital-pullup" kind="command" color="213 0 0" initlabel="bg.pin-write-digital">
+		<BlockGenus name="pin-read-digital-pullup" kind="data" color="244 67 54" initlabel="bc.pin_number">
 			<description>
 				<text>Read digital from the pin. Default High</text>
 			</description>
@@ -457,9 +457,10 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="pinListDigital_D6" label="D6" />
 				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
-
+				
 		<BlockGenus name="pin-read-analog" kind="data" color="244 67 54" initlabel="bg.pin-read-analog">
 			<description>
 				<text>Read analog value from pin</text>
@@ -11084,6 +11085,12 @@
 			<FamilyMember>digital-high</FamilyMember>
 			<FamilyMember>digital-low</FamilyMember>
 		</BlockFamily>
+		 
+		<BlockFamily>
+			<FamilyMember>pin-read-digital-pullup</FamilyMember>
+			<FamilyMember>pin-read-digital</FamilyMember>	
+		</BlockFamily>
+		
 		<BlockFamily>
 			<FamilyMember>and</FamilyMember>
 			<FamilyMember>or</FamilyMember>
