@@ -486,7 +486,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="pin-write-analog" kind="command" color="229 115 115" initlabel="bg.pin-write-analog">
+		<BlockGenus name="pin-write-analog" kind="command" color="213 0 0" initlabel="bg.pin-write-analog">
 			<description>
 				<text>write analog to pin</text>
 			</description>
@@ -11768,12 +11768,12 @@
 				<BlockGenusMember>repeat_control</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="183 28 28" name="bd.pins" type="factory">
-				<BlockGenusMember>pin-read-digital</BlockGenusMember>
-				<BlockGenusMember>pin-toggle</BlockGenusMember>
-				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
-				<BlockGenusMember>pin-write-analog</BlockGenusMember>
+				<BlockGenusMember>pin-toggle</BlockGenusMember>
+				<BlockGenusMember>pin-read-digital</BlockGenusMember>
 				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>
+				<BlockGenusMember>pin-read-analog</BlockGenusMember>
+				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>

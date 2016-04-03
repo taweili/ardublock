@@ -7,9 +7,12 @@ import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
 public class DigitalInputPullBlock extends TranslatorBlock
 {
 	public static final String ARDUBLOCK_DIGITAL_READ_PULLUP_DEFINE =
+			/* The charge left on the pin if it was previously OUTPUT does not affect
+			 *  the likely result of digitalRead with PULLUP resistors.
+			 * If this changes then implement https://github.com/arduino/Arduino/issues/4606
+			 *  and delay 5ms if the pinMode has changed */
 			"boolean __ardublockDigitalReadPullup(int pinNumber)\n" + 
 			"{\n" +
-			//"digitalWrite(pinNumber, LOW);\n" + 
 			"pinMode(pinNumber, INPUT_PULLUP);\n" + 
 			"return digitalRead(pinNumber);\n" + 
 			"}\n\n";
