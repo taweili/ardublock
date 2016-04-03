@@ -11,6 +11,7 @@ public class DigitalInputBlock extends TranslatorBlock
 			 *  the likely result of digitalRead **if the pin is floating**.
 			 * I can find nothing to justify a need for a 'settling period' delay
 			 *  if the pin mode has been changed.
+			 * If it is needed then implement https://github.com/arduino/Arduino/issues/4606
 			 *  and delay 5ms if the pinMode has changed */
 			"boolean __ardublockDigitalRead(int pinNumber)\n" + 
 			"{\n" +
