@@ -444,7 +444,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="pin-write-analog" kind="command" color="77 191 169" initlabel="bg.pin-write-analog">
+		<BlockGenus name="pin-write-analog" kind="command" color="160 0 0" initlabel="bg.pin-write-analog">
 			<description>
 				<text>write analog to pin</text>
 			</description>
@@ -458,7 +458,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pin-toggle" kind="command" color="77 191 169" initlabel="bg.pin-toggle">
+		<BlockGenus name="pin-toggle" kind="command" color="213 0 0" initlabel="bg.pin-toggle">
 			<description>
 				<text>toggle digital pin</text>
 			</description>
@@ -889,79 +889,79 @@
 		</BlockGenus>		
 
 		<!--****************** 'Analog' PWM pins on All Arduino Boards *************** -->
-		<BlockGenus name="pinListAnalogWrite_D3" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D3" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D3" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D3" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D5" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D5" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D5" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D5" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D6" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D6" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D6" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D6" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D9" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D9" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D9" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D9" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D10" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D10" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D10" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D10" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D11" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_11" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D11" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_11" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
 		
 		<!--****************** Extra 'Analog' PWM pins on Mega Boards*************** -->
-		<BlockGenus name="pinListAnalogWrite_D2" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D2" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D2" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D2" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D4" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D4" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D4" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D4" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D7" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D7" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D7" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D7" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D8" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D8" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D8" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D8" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D12" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D12" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D12" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D12" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D13" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D13" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D13" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D13" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D44" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D44" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D44" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D44" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D45" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D45" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D45" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D45" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
 		</BlockGenus>
-		<BlockGenus name="pinListAnalogWrite_D46" kind="data" color="165 100 0" initlabel="bg.pinListAnalogWrite_D46" editable-label="no">
+		<BlockGenus name="pinListAnalogWrite_D46" kind="data" color="160 0 0" initlabel="bg.pinListAnalogWrite_D46" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug"/>
 			</BlockConnectors>		
@@ -1864,7 +1864,7 @@
 				<text>Time in milliseconds</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="single" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -1879,7 +1879,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListDigital_D0" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D0" editable-label="yes">
+		<BlockGenus name="pinListDigital_D0" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D0" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1890,7 +1890,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListDigital_D6" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D6" editable-label="yes">
+		<BlockGenus name="pinListDigital_D6" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D6" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1901,7 +1901,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListDigital_D8" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D8" editable-label="yes">
+		<BlockGenus name="pinListDigital_D8" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D8" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1912,7 +1912,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListDigital_D11" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D11" editable-label="yes">
+		<BlockGenus name="pinListDigital_D11" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D11" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1922,7 +1922,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug"  />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="pinListDigital_D12" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D12" editable-label="yes">
+		<BlockGenus name="pinListDigital_D12" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D12" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1933,7 +1933,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListDigital_D13" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D13" editable-label="yes">
+		<BlockGenus name="pinListDigital_D13" kind="data" color="214 169 54 " initlabel="bg.pinListDigital_D13" editable-label="no">
 			<description>
 				<text>
 					Digital Pin Constant
@@ -1943,7 +1943,7 @@
 				<BlockConnector connector-type="number" connector-kind="plug"  />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="pinListAnalog_A0" kind="data" color="195 130 0 " initlabel="bg.pinListAnalog_D0" editable-label="yes">
+		<BlockGenus name="pinListAnalog_A0" kind="data" color="195 130 0 " initlabel="bg.pinListAnalog_D0" editable-label="no">
 			<description>
 				<text>
 					Analog Pin Constant
@@ -1954,7 +1954,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pinListAnalogWrite_D3" kind="data" color="165 100 0 " initlabel="bg." editable-label="yes">
+		<BlockGenus name="pinListAnalogWrite_D3" kind="data" color="160 0 0 " initlabel="bg." editable-label="no">
 			<description>
 				<text>
 					PWM Pin Constant
@@ -2251,7 +2251,7 @@
 	          <DefaultArg genus-name="variable_String" label="STRING" />
 	        </BlockConnector>
 	        <BlockConnector connector-type="string" connector-kind="socket" label="bc.value">
-	          <DefaultArg genus-name="message" label="message" />
+	          <DefaultArg genus-name="message" label="Edit message text" />
 	        </BlockConnector>
 	      </BlockConnectors>
 	    </BlockGenus>
@@ -11792,10 +11792,9 @@
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
 				<BlockGenusMember>no_tone</BlockGenusMember>
-				<BlockGenusMember>DDRA</BlockGenusMember>
-				<BlockGenusMember>PORTA</BlockGenusMember>
-				<BlockGenusMember>PORT_FIX</BlockGenusMember>
-				<BlockGenusMember>PINA</BlockGenusMember>
+				<BlockGenusMember>pinListDigital_D0</BlockGenusMember>
+				<BlockGenusMember>pinListAnalog_A0</BlockGenusMember>
+				<BlockGenusMember>pinListAnalogWrite_D3</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
@@ -11874,10 +11873,6 @@
 				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
-				<BlockGenusMember>serial_available</BlockGenusMember>
-				<BlockGenusMember>serial_available2</BlockGenusMember>
-				<BlockGenusMember>serial_read</BlockGenusMember>
-				<BlockGenusMember>serial_parseInt</BlockGenusMember>
 				<BlockGenusMember>serial_write</BlockGenusMember>
 				<BlockGenusMember>serial_print</BlockGenusMember>
 				<BlockGenusMember>glue_sn</BlockGenusMember>
@@ -11888,6 +11883,10 @@
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
+				<BlockGenusMember>serial_available</BlockGenusMember>
+				<BlockGenusMember>serial_available2</BlockGenusMember>
+				<BlockGenusMember>serial_read</BlockGenusMember>
+				<BlockGenusMember>serial_parseInt</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Slider</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_switch</BlockGenusMember>
@@ -12051,6 +12050,10 @@
 				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
+				<BlockGenusMember>DDRA</BlockGenusMember>
+				<BlockGenusMember>PORTA</BlockGenusMember>
+				<BlockGenusMember>PORT_FIX</BlockGenusMember>
+				<BlockGenusMember>PINA</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Led</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
