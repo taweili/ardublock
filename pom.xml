@@ -61,7 +61,23 @@
 							<repositoryLayout>default</repositoryLayout>
 							<groupId>arduino</groupId>
 							<artifactId>pde</artifactId>
-							<version>1.0</version>
+							<version>1.1</version>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>install-arduino-core</id>
+						<phase>validate</phase>
+						<configuration>
+							<file>${basedir}/lib/arduino-core.jar</file>
+							<repositoryLayout>default</repositoryLayout>
+							<groupId>arduino</groupId>
+							<artifactId>arduino-core</artifactId>
+							<version>1.6.12</version>
 							<packaging>jar</packaging>
 							<generatePom>true</generatePom>
 						</configuration>
@@ -89,7 +105,13 @@
 			<groupId>arduino</groupId>
 			<artifactId>pde</artifactId>
 			<scope>provided</scope>
-			<version>1.0</version>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>arduino</groupId>
+			<artifactId>arduino-core</artifactId>
+			<scope>provided</scope>
+			<version>1.6.12</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
