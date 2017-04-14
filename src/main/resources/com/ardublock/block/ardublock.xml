@@ -11218,7 +11218,6 @@
 			<FamilyMember>pinListDigital_D51</FamilyMember>
 			<FamilyMember>pinListDigital_D52</FamilyMember>
 			<FamilyMember>pinListDigital_D53</FamilyMember>
-			<FamilyMember>pinListDigital_D53</FamilyMember>
 			<!--****************** Analog pins that can be used as digital pins. *************** -->
 			<!--****************** In practice only used with UNO boards    *************** -->
 			<FamilyMember>pinListAnalog_A0</FamilyMember>
