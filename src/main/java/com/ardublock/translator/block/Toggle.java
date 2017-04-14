@@ -22,29 +22,29 @@ public class Toggle extends TranslatorBlock
 		// What is special about NumberBlocks?
 		// Should check for "is a simple number" not "instanceof NumberBlock" now that pinLists constants exist 
 		// Not sure first part of 'if' should EVER run
-		if (translatorBlock instanceof NumberBlock)
-		{
-			String number = translatorBlock.toCode();
-			String setupCode = "pinMode( " + number + " , OUTPUT);";
-			translator.addSetupCommand(setupCode);
-			
-			String ret = "digitalWrite( ";
-			ret = ret + number;
-			ret = ret + ", !digitalRead(";
-			ret = ret + number;
-			ret = ret + ") );";
-			
-			return ret;
-		}
-		else
-		{
+//		if (translatorBlock instanceof NumberBlock)
+//		{
+//			String number = translatorBlock.toCode();
+//			String setupCode = "pinMode( " + number + " , OUTPUT);";
+//			translator.addSetupCommand(setupCode);
+//			
+//			String ret = "digitalWrite( ";
+//			ret = ret + number;
+//			ret = ret + ", !digitalRead(";
+//			ret = ret + number;
+//			ret = ret + ") );";
+//			
+//			return ret;
+//		}
+//		else
+//		{
 			translator.addDefinitionCommand(ARDUBLOCK_DIGITAL_TOGGLE_DEFINE);
 			String ret = "__ardublockDigitalToggle(";
 			
 			ret = ret + translatorBlock.toCode();
 			ret = ret + ");\n";
 			return ret;
-		}
+//		}
 		
 		
 	}

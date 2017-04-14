@@ -416,6 +416,7 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="#">
 					<DefaultArg genus-name="pinListDigital_D6" label="D6" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -444,7 +445,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="pin-write-analog" kind="command" color="160 0 0" initlabel="bg.pin-write-analog">
+		<BlockGenus name="pin-write-analog" kind="command" color="213 0 0" initlabel="bg.pin-write-analog">
 			<description>
 				<text>write analog to pin</text>
 			</description>
@@ -458,7 +459,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="pin-toggle" kind="command" color="213 0 0" initlabel="bg.pin-toggle">
+		<BlockGenus name="pin-toggle" kind="command" color="77 191 169" initlabel="bg.pin-toggle">
 			<description>
 				<text>toggle digital pin</text>
 			</description>
@@ -11784,10 +11785,11 @@
 				<BlockGenusMember>ref_var</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
-				<BlockGenusMember>pin-read-digital</BlockGenusMember>
-				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-toggle</BlockGenusMember>
+				<BlockGenusMember>pin-read-digital</BlockGenusMember>
+				<BlockGenusMember>pin-read-digital-pullup</BlockGenusMember>
+				<BlockGenusMember>pin-read-analog</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 				<BlockGenusMember>tone</BlockGenusMember>
 				<BlockGenusMember>tone_time</BlockGenusMember>
