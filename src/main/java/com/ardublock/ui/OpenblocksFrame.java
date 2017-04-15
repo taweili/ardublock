@@ -336,18 +336,51 @@ public class OpenblocksFrame extends JFrame
 		if (context.isWorkspaceChanged())
 		{
 			int optionValue = JOptionPane.showOptionDialog(this, uiMessageBundle.getString("message.question.newfile_on_workspace_changed"), uiMessageBundle.getString("message.title.question"), JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, JOptionPane.YES_OPTION);
-			if (optionValue != JOptionPane.YES_OPTION)
+			
+			switch (optionValue)
 			{
-				return ;
+            	case JOptionPane.YES_OPTION:
+            		doSaveArduBlockFile();
+                    //break;
+            	case JOptionPane.NO_OPTION:
+            		this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+            		context.resetWorksapce();
+            		context.setWorkspaceChanged(false);
+            		this.setTitle(this.makeFrameTitle());
+            		this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+            		break;
+            	case JOptionPane.CANCEL_OPTION:
+                    break;
 			}
 		}
-		this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-		context.resetWorksapce();
-		context.setWorkspaceChanged(false);
-		this.setTitle(this.makeFrameTitle());
-		this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		
 	}
 	
+	public void doCloseArduBlockFile()
+	{
+		if (context.isWorkspaceChanged())
+		{
+			int optionValue = JOptionPane.showOptionDialog(this, uiMessageBundle.getString("message.question.close_on_workspace_changed"), uiMessageBundle.getString("message.title.question"), JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, JOptionPane.YES_OPTION);
+			switch (optionValue)
+			{
+            	case JOptionPane.YES_OPTION:
+            		doSaveArduBlockFile();
+            		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    break;
+            	case JOptionPane.NO_OPTION:
+            		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            		break;
+            	case JOptionPane.CANCEL_OPTION:
+            		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    //break;
+			}
+		}
+		else
+		{
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		}
+			
+	}
 	
 	
 	private File checkFileSuffix(File saveFile)

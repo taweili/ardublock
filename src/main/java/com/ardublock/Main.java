@@ -1,9 +1,11 @@
 package com.ardublock;
 
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
@@ -31,7 +33,16 @@ public class Main
 	private void startOpenblocksFrame() throws SAXException, IOException, ParserConfigurationException
 	{
 		openblocksFrame = new OpenblocksFrame();
-		openblocksFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//openblocksFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				
+		openblocksFrame.addWindowListener( new WindowAdapter()
+		{
+		    public void windowClosing(WindowEvent e)
+		    {		        
+		        openblocksFrame.doCloseArduBlockFile();		        
+		    }
+		});
+			
 		Context context = Context.getContext();
 		context.setInArduino(false);
 		openblocksFrame.setVisible(true);
