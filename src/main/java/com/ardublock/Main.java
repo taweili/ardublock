@@ -33,7 +33,7 @@ public class Main
 	private void startOpenblocksFrame() throws SAXException, IOException, ParserConfigurationException
 	{
 		openblocksFrame = new OpenblocksFrame();
-		//openblocksFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		openblocksFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				
 		openblocksFrame.addWindowListener( new WindowAdapter()
 		{
