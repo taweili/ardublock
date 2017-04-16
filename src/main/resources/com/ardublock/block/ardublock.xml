@@ -5093,7 +5093,7 @@
 		</BlockGenus>
 		<BlockGenus name="DuinoEDU_infrared_compare" kind="function" color="0 255 0" initlabel="bg.DuinoEDU_infrared_compare">
 			<description>
-				<text>DuinoEDU infrared compare</text>
+				<text>infrared compare</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" label="code" />
@@ -11067,7 +11067,47 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
 			</BlockConnectors>
 		</BlockGenus>
-
+        
+        <!-- ArduinoToGraph e-Mole tests -->
+        <BlockGenus name="arduinotoserial_default" kind="command" color="0 67 189"  initlabel="bg.arduinotoserial_default">
+			<description>
+				<text>ArduinoToSerial Default</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel-1">
+					<DefaultArg genus-name="number_double" label="0.0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel-2">
+					<DefaultArg genus-name="number_double" label="0.0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel-3">
+					<DefaultArg genus-name="number_double" label="0.0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel-4">
+					<DefaultArg genus-name="number_double" label="0.0" />
+				</BlockConnector>	
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel-5">
+					<DefaultArg genus-name="number_double" label="0.0" />
+				</BlockConnector>	
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel-6">
+					<DefaultArg genus-name="number_double" label="0.0" />
+				</BlockConnector>	
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel-7">
+					<DefaultArg genus-name="number_double" label="0.0" />
+				</BlockConnector>	
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.channel-8">
+					<DefaultArg genus-name="number_double" label="0.0" />
+				</BlockConnector>																									
+			</BlockConnectors>
+			<!--
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/SG90.png</FileLocation>
+				</Image>
+			</Images>
+			-->
+		</BlockGenus>
+        
 	</BlockGenuses>
 
 <!-- Start of Ardublock Standard UI layout -->
@@ -12282,6 +12322,12 @@
 				<BlockGenusMember>midi_command</BlockGenusMember>
 				<!-- <BlockGenusMember>midi_note</BlockGenusMember> -->
 			</BlockDrawer>
+			
+			<!-- ArduinoToSerial e-Moel test -->
+			<BlockDrawer button-color="0 67 189" name="bd.molegraph" type="factory">
+				<BlockGenusMember>arduinotoserial_default</BlockGenusMember>
+			</BlockDrawer>
+						
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
