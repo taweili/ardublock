@@ -1,5 +1,7 @@
 package com.ardublock;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,6 +13,7 @@ import java.io.UnsupportedEncodingException;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import javax.swing.JFrame;
 
 import processing.app.Editor;
 import processing.app.EditorTab;
@@ -38,6 +41,19 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 			context.setArduinoVersionString(arduinoVersion);
 			context.setEditor(editor);
 			System.out.println("Arduino Version: " + arduinoVersion);
+			
+			// Don't just "close" Ardublock, see if there's something to save first.
+			// Note to self: Code here only affects behaviour when we're an Arduino Tool,
+			// not when run directly - See Main.java for that.
+			// Closing the Arduino IDE itself will still lose work!
+			//ArduBlockTool.openblocksFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+			ArduBlockTool.openblocksFrame.addWindowListener( new WindowAdapter()
+			{
+			    public void windowClosing(WindowEvent e)
+			    {		        
+			    	ArduBlockTool.openblocksFrame.doCloseArduBlockFile();		        
+			    }
+			});
 		}
 	}
 
@@ -46,6 +62,7 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 			ArduBlockTool.editor.toFront();
 			ArduBlockTool.openblocksFrame.setVisible(true);
 			ArduBlockTool.openblocksFrame.toFront();
+			ArduBlockTool.openblocksFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		} catch (Exception e) {
 			
 		}
