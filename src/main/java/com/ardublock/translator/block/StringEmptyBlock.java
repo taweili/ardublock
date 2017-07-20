@@ -15,10 +15,10 @@ public class StringEmptyBlock extends TranslatorBlock
 	public String toCode() throws SocketNullException, SubroutineNotDeclaredException
 	{
 		StringBuilder ret = new StringBuilder();
-		ret.append("strlen(");
+		ret.append("");
 		TranslatorBlock tb = this.getRequiredTranslatorBlockAtSocket(0);
 		ret.append(tb.toCode());
-		ret.append(") == 0");
+		ret.append(".length() == 0");
 		return codePrefix + ret + codeSuffix;
 	}
 }
