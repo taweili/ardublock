@@ -45,7 +45,6 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 			// Don't just "close" Ardublock, see if there's something to save first.
 			// Note to self: Code here only affects behaviour when we're an Arduino Tool,
 			// not when run directly - See Main.java for that.
-			// Closing the Arduino IDE itself will still lose work!
 			//ArduBlockTool.openblocksFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 			ArduBlockTool.openblocksFrame.addWindowListener( new WindowAdapter()
 			{
