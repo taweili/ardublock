@@ -23,27 +23,18 @@ public class IrGetCodeBlock extends TranslatorBlock
 			"  __ab_irrecv.enableIRIn();\n" + 
 			"  __ab_irrecv.resume();\n" + 
 			"}\n" +
-			"void charsToUpper(char *str)\n" + 
-			"{\n" + 
-			"  int p=0;\n" + 
-			"  while(str[p] != 0)\n" + 
-			"  {\n" + 
-			"    str[p] = toupper(str[p]);\n" + 
-			"    ++p;\n" + 
-			"  }\n" + 
-			"}\n" + 
-			"void __ab_getIrCommand(char *receivedCommand)\n" + 
+			"void __ab_getIrCommand(String &receivedCommand)\n" + 
 			"{\n" + 
 			"  decode_results result;\n" + 
 			"  if (__ab_irrecv.decode(&result))\n" + 
 			"  {\n" + 
-			"    ltoa(result.value, receivedCommand, 16);\n" + 
-			"    charsToUpper(receivedCommand);\n" + 
+                        "    receivedCommand = String(result.value, HEX);\n" + 
+			"    receivedCommand.toUpperCase();\n" + 
 			"    __ab_irrecv.resume();\n" + 
 			"  }\n" + 
 			"  else\n" + 
 			"  {\n" + 
-			"    receivedCommand[0] = '\\0';\n" + 
+			"    receivedCommand = \"\";\n" + 
 			"  }\n" + 
 			"}";
 	
