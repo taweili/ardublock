@@ -11068,6 +11068,199 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+		<BlockGenus name="u8x2display-oled-096inch-128x64-ssd1306-noname-hw-i2c" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-oled-096inch-128x64-ssd1306-noname-hw-i2c">
+			<description>
+				<text>OLED 0.96 inch 128x64 SSD1306 NONAME HW I2C setup</text>
+			</description>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/u8x2display/oled-096inch-128x64-ssd1306-i2c.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-clear-display" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-clear-display">
+			<description>
+				<text>Clear whole display</text>
+			</description>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-clear-line" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-clear-line">
+			<description>
+				<text>Clear a single line on display</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-clear-line-row">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-set-inverse-font" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-set-inverse-font">
+			<description>
+				<text>Inverse font drawing</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.u8x2display-set-inverse-font-enable">
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-set-flip-mode" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-set-flip-mode">
+			<description>
+				<text>Set flip mode of display</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean"
+					connector-kind="socket" label="bc.u8x2display-set-flip-mode-enable">
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-set-font" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-set-font">
+			<description>
+				<text>Set font</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="bc.u8x2display-set-font-name">
+					<DefaultArg genus-name="message" label="u8x8_font_pressstart2p_f" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-draw-string" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-draw-string">
+			<description>
+				<text>Draw string on display</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-x">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-y">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="bc.u8x2display-draw-string-string">
+					<DefaultArg genus-name="message" label="hello" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-draw-number" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-draw-number">
+			<description>
+				<text>Draw number on display</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-x">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-y">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-number-number">
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-draw-2x2-number" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-draw-2x2-number">
+			<description>
+				<text>Draw double sized number on display</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-x">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-y">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-number-number">
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-draw-2x2-string" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-draw-2x2-string">
+			<description>
+				<text>Draw double sized string on display</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-x">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-y">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="bc.u8x2display-draw-string-string">
+					<DefaultArg genus-name="message" label="hello" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-draw-utf8" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-draw-utf8">
+			<description>
+				<text>Draw UTF8 string on display</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-x">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-y">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="bc.u8x2display-draw-string-string">
+					<DefaultArg genus-name="message" label="hello" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="u8x2display-draw-2x2-utf8" kind="command" color="20 150 30"
+			initlabel="bg.u8x2display-draw-2x2-utf8">
+			<description>
+				<text>Draw double sized UTF8 string on display</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-x">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.u8x2display-draw-string-y">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="string"
+					connector-kind="socket" label="bc.u8x2display-draw-string-string">
+					<DefaultArg genus-name="message" label="hello" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
 	</BlockGenuses>
 
 <!-- Start of Ardublock Standard UI layout -->
@@ -12282,6 +12475,22 @@
 				<BlockGenusMember>midi_command</BlockGenusMember>
 				<!-- <BlockGenusMember>midi_note</BlockGenusMember> -->
 			</BlockDrawer>
+
+                        <BlockDrawer button-color="20 150 30" name="bd.u8x2display">
+                                <BlockGenusMember>u8x2display-oled-096inch-128x64-ssd1306-noname-hw-i2c</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-clear-display</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-clear-line</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-set-font</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-set-inverse-font</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-set-flip-mode</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-draw-string</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-draw-number</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-draw-utf8</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-draw-2x2-string</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-draw-2x2-number</BlockGenusMember>
+                                <BlockGenusMember>u8x2display-draw-2x2-utf8</BlockGenusMember>
+                        </BlockDrawer>
+
 			<!--
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
