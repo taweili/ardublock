@@ -22,8 +22,9 @@ public class DrawNumberBlock extends TranslatorBlock
 		String y = translatorBlock.toCode();
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
 		String num = translatorBlock.toCode();
+		translator.addDefinitionCommand("char u8x8_number_buffer[30];");
 
-		return "char s[30];\nitoa(" + num + ",s,10);\nu8x8." + getCommand() + "(" + x + "," + y + ",s);\n";
+		return "itoa(" + num + ",u8x8_number_buffer,10);\nu8x8." + getCommand() + "(" + x + "," + y + ",u8x8_number_buffer);\n";
 	}
 
 	protected String getCommand()
