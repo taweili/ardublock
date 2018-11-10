@@ -16,7 +16,7 @@ Usage
 
 Development
 ----
-Change the /src/main/resources/com/ardublock/block/ardublock_def.xml to add new blocks to ArduBlock
+Change the /src/main/resources/com/ardublock/block/ardublock.xml to add new blocks to ArduBlock
 
 	$ mvn clean package
 
